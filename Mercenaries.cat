@@ -717,12 +717,30 @@
                 <condition type="atLeast" value="1" field="selections" scope="self" childId="68d9-a653-9765-d3e7" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="3564-70ed-8e9e-6ee8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="2a4f-c258-5d70-a3c5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </profile>
         <profile name="Sworn Sword" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ccc4-bcd4-9e37-39db">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">Mamluks can form a FIRETEAM with any one ELITE model in the Warband they are part of. This FIRETEAM is always in addition to any other FIRETEAM(s) the Warband is allowed to form. If a Mamluk joins a New Antioch FIRETEAM, the model benefits from the Co-ordinated Fireteam special rules.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="Mamluks can form a FIRETEAM with any one ELITE model in the Warband they are part of. This FIRETEAM is always in addition to any other FIRETEAM(s) the Warband is allowed to form. If a Mamluk joins a New Antioch FIRETEAM, the model benefits from the Co-ordinated Fireteam special rules.
+(Note: for legibility&apos;s sake, this feature has been phased out from the base Mamluk: the ability to promote the Sipahi makes it far too cluttered. Please simply add the ELITE ally separately to your roster.)" field="4834-43a9-1c93-9062">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="3be1-c0c4-cbaf-8665" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Martial Prowess" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8651-f216-a441-3fe2">
           <characteristics>
@@ -734,14 +752,32 @@
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">Unless the scenario prohibits use of the special deployment of INFILTRATORS, you may deploy the Mamluk on any table edge as long as they are at least 8” away from any enemy model after INFILTRATORS are deployed. Mamluks can also be deployed in your own deployment zone as standard.</characteristic>
           </characteristics>
         </profile>
+        <profile name="Alchemical Jezzail" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="9353-c8d6-219d-55ef">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">18&quot;</characteristic>
+            <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Hit</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
+            <characteristic name="Rules" typeId="6e95-3480-ad33-b345">-</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="increment" value="6" field="31a7-b5e8-41dc-5fd1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model" childId="4467-39c5-0252-1b2d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model" childId="6ffb-5ac2-a05a-8c44" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Combat Helmet" id="c9d1-d419-4d29-6a14" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
         <infoLink name="Reinforced Armour" id="f5a6-8bb6-17f6-6bd9" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
       </infoLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2542-4e2d-678a-ee48" includeChildSelections="true"/>
-      </constraints>
       <categoryLinks>
         <categoryLink name="Mercenary" hidden="false" id="30d6-409c-e273-7875" targetId="3dfb-701d-e89c-eba2" primary="true"/>
       </categoryLinks>
@@ -753,11 +789,26 @@
                 <infoLink name="Trench Shield" id="1924-1c4c-bd2c-1d81" hidden="false" type="profile" targetId="c2a5-72b6-355d-0356"/>
                 <infoLink name="Trench Polearm" id="97e6-2ef3-a6ad-3afa" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
               </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="6ffb-5ac2-a05a-8c44" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Sword and Pistol" hidden="false" id="8574-a583-8009-ce6d">
               <infoLinks>
                 <infoLink name="Sword/Axe" id="419d-eda3-fbc5-4574" hidden="false" type="profile" targetId="e938-b0dc-418c-0924"/>
-                <infoLink name="Pistol" id="735e-dd55-89e8-6ac3" hidden="false" type="profile" targetId="ae18-4990-fc3c-78ce"/>
+                <infoLink name="Pistol" id="735e-dd55-89e8-6ac3" hidden="false" type="profile" targetId="ae18-4990-fc3c-78ce">
+                  <modifiers>
+                    <modifier type="increment" value="6" field="31a7-b5e8-41dc-5fd1">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="4467-39c5-0252-1b2d" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Greatsword" hidden="false" id="71c7-f896-d812-77c5">
@@ -772,6 +823,25 @@
                   </characteristics>
                 </profile>
               </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="6ffb-5ac2-a05a-8c44" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Just a Shield..." hidden="true" id="0942-d113-d5c5-47b5">
+              <infoLinks>
+                <infoLink name="Trench Shield" id="6351-e6d7-3276-03ec" hidden="false" type="profile" targetId="c2a5-72b6-355d-0356"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="6ffb-5ac2-a05a-8c44" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -779,25 +849,6 @@
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Alchemical Jezzail" hidden="false" id="73f8-b37b-e1c7-6441">
-          <profiles>
-            <profile name="Alchemical Jezzail" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="9353-c8d6-219d-55ef">
-              <characteristics>
-                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">18&quot;</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Hit</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">-</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8258-9542-7b70-40b1-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8258-9542-7b70-40b1-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>

@@ -1338,7 +1338,6 @@
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
                   </conditions>
                   <conditionGroups>
                     <conditionGroup type="or">
@@ -2440,15 +2439,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="60b5-ee85-3103-d42e" includeChildSelections="false"/>
       </constraints>
       <entryLinks>
-        <entryLink import="true" name="Grenades" hidden="true" id="4d9b-247a-c381-78a4" type="selectionEntryGroup" targetId="9c37-58de-3fa2-bfd2" sortIndex="3">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model" childId="6a47-d2b0-de08-8ab8" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
         <entryLink import="true" name="Equipment" hidden="true" id="c2ff-f47f-854c-a527" type="selectionEntryGroup" targetId="d5c6-bf28-709b-7286">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3713,6 +3703,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="414f-d9cb-0f92-955c" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7e5e-1444-77e6-7e54" includeChildSelections="true"/>
       </constraints>
       <selectionEntryGroups>
         <selectionEntryGroup name="Elite Ally" id="3f45-7074-d35b-9022" hidden="false">

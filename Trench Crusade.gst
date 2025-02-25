@@ -23,6 +23,7 @@
     <categoryEntry name="Bull" id="0934-cc68-ca08-7e2b" hidden="false"/>
     <categoryEntry name="Mercenary" id="3dfb-701d-e89c-eba2" hidden="false"/>
     <categoryEntry name="Limited Potential" id="71f8-ee29-0f90-59ec" hidden="true"/>
+    <categoryEntry name="Stationary" id="d18f-b919-ecdf-be4a" hidden="false"/>
   </categoryEntries>
   <costTypes>
     <costType name="Ducats" id="8d43-33fd-332d-17a6" defaultCostLimit="-1"/>
@@ -139,7 +140,7 @@ INFECTION MARKERS can be used to modify dice rolls exactly like BLOOD MARKERS. U
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;/Melee</characteristic>
         <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-1D to injury, 2 attacks</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
         <characteristic name="Rules" typeId="6e95-3480-ad33-b345">A model armed with an automatic pistol can use it in melee as well as ranged combat (using Ranged Characteristic), including as an off-hand weapon to execute an additional melee attack. You can make two Attack ACTIONS with the automatic pistol instead of one if used as a ranged weapon. They can be against the same target or two different ones.</characteristic>
       </characteristics>
     </profile>
