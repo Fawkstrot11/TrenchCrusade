@@ -28,9 +28,14 @@
           </constraints>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -141,6 +146,13 @@
           <constraints>
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="6686-299c-96a6-940f" includeChildSelections="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Binoculars" hidden="true" id="00d1-c230-ef2d-8d48" sortIndex="11">
           <costs>
@@ -208,7 +220,7 @@ Keywords: CONSUMABLE.</characteristic>
             <constraint type="max" value="4" field="selections" scope="roster" shared="true" id="015d-4cb5-9047-ea3f" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Elixer of Al-Khidr" hidden="true" id="e4a9-be6a-c7fe-9d16" sortIndex="13">
+        <selectionEntry type="upgrade" import="true" name="Elixer of Al-Khidr" hidden="true" id="e4a9-be6a-c7fe-9d16" sortIndex="15">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -262,6 +274,47 @@ Keywords: CONSUMABLE</characteristic>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9ac6-fe18-ef71-64f8" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Explosive Charges" hidden="true" id="b535-89b0-70c0-a86f" sortIndex="13">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="35"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ca9f-eeea-54c6-064f" includeChildSelections="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Explosive Charges" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9902-c422-18ce-ab2b">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">After deployment but before the battle starts select one piece of terrain that is not a Scenario Objective granting Victory Points and no model is touching outside of the enemy Deployment Zone. Write on a piece of paper which terrain piece it is. It can be no bigger than 8” x 8” (an 8” section of trench, a wall, a tree, a building etc). The Sappers have placed explosive charges here before the battle. Whenever you Activate one of your models you can declare you are detonating the charges by revealing the name of the terrain piece. Roll on the Injury Chart to see what happens to any model that is placed touching or on top of this terrain piece. The mine has the Keyword SHRAPNEL. After this, the terrain piece is removed from the game. If any model(s) are standing on top of the terrain piece when it explodes they will have to roll on the Injury Chart immediately. If they are on top of the terrain piece and are more than 2” high, they suffer Falling damage as per standard rules. Remove this terrain piece permanently from the play.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="e874-ea2b-96ed-0f9a" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="9c5a-601e-6b16-320d" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Headgear" id="5986-4ea2-d618-1a0b" hidden="false" sortIndex="1">
@@ -282,13 +335,43 @@ Keywords: CONSUMABLE</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Knighthood" hidden="false" id="ad38-0de3-a57a-ea91" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="15"/>
-        <entryLink import="true" name="Sniper Scope" hidden="false" id="4509-3ae3-feeb-4383" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="14"/>
-        <entryLink import="true" name="Field Hospital" hidden="false" id="5219-3d98-1ede-39ea" type="selectionEntry" targetId="eb62-f33b-0d57-cd92" sortIndex="16"/>
+        <entryLink import="true" name="Knighthood" hidden="false" id="ad38-0de3-a57a-ea91" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="17"/>
+        <entryLink import="true" name="Sniper Scope" hidden="false" id="4509-3ae3-feeb-4383" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="16"/>
+        <entryLink import="true" name="Field Hospital" hidden="false" id="5219-3d98-1ede-39ea" type="selectionEntry" targetId="eb62-f33b-0d57-cd92" sortIndex="18"/>
         <entryLink import="true" name="Blasphemous Banner" hidden="true" id="5369-0d51-2680-964c" type="selectionEntry" targetId="ac5b-0ae8-e0cd-5fda"/>
         <entryLink import="true" name="Curative Fluids" hidden="true" id="928d-45ba-596e-7bda" type="selectionEntry" targetId="0e49-dfa5-4190-ee69"/>
         <entryLink import="true" name="Lock of Samson&apos;s Hair" hidden="false" id="2a72-9776-8f00-2aaa" type="selectionEntry" targetId="9b61-d0a4-dd30-2d32"/>
         <entryLink import="true" name="Saints Reliquary" hidden="true" id="a1bd-acc5-5a74-0431" type="selectionEntry" targetId="cf19-f306-c26c-1537"/>
+        <entryLink import="true" name="Anqā Guard" hidden="false" id="6efd-509d-9c19-6426" type="selectionEntry" targetId="20ec-9e12-6cdf-abe2" sortIndex="14">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="e874-ea2b-96ed-0f9a" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="9c5a-601e-6b16-320d" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2a4-5514-5559-42c0" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Grenades" id="52e3-49c7-5f3b-d5c9" hidden="false">
@@ -815,7 +898,7 @@ Keywords: CONSUMABLE</characteristic>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="31b6-7d34-f24d-25f1" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Flame Cannon" hidden="true" id="f2de-aa0a-6254-2e20" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Flame Cannon" hidden="true" id="f2de-aa0a-6254-2e20" collective="false" sortIndex="4">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="60"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -902,7 +985,28 @@ Keywords: CONSUMABLE</characteristic>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Sultanate Grand Cannon" hidden="false" id="bdbc-7944-e0d0-2e0a" type="selectionEntry" targetId="d9f1-b37e-ff7c-cffe"/>
+        <entryLink import="true" name="Sultanate Grand Cannon" hidden="false" id="bdbc-7944-e0d0-2e0a" type="selectionEntry" targetId="d9f1-b37e-ff7c-cffe" sortIndex="6"/>
+        <entryLink import="true" name=" Sultanate Grand Cannon" hidden="true" id="3170-6b1d-e2ce-2be6" type="selectionEntry" targetId="bf03-e9ef-b9e7-b490" sortIndex="5">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="e62d-c06e-ce35-428b" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="6603-2315-97b5-d845" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Ranged (Two-Handed)" id="3e28-4330-b057-c175" hidden="false">
@@ -1466,9 +1570,21 @@ Keywords: CONSUMABLE</characteristic>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="e874-ea2b-96ed-0f9a" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="e874-ea2b-96ed-0f9a" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="9c5a-601e-6b16-320d" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <profiles>
@@ -1807,6 +1923,34 @@ Keywords: CONSUMABLE</characteristic>
             </modifier>
           </modifiers>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Banner of Desert Wind" hidden="false" id="becf-a3fd-2983-1510">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a76a-6032-b55b-e76d" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="2f82-e47f-c162-9152" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="e77a-39f7-7264-9008" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Banner of Desert Wind" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a92a-fa8e-15f9-f2f2">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This banner occupies one hand at all times and acts as Troop Flag. In addition, as long as the model carrying this banner is not Down or Out of Action, all enemies with 24” have to reduce their Movement Characteristic of by 1”.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Shields" id="99ce-8e70-94c9-35c4" hidden="false" sortIndex="1">
@@ -1860,6 +2004,41 @@ Keywords: CONSUMABLE</characteristic>
                       </conditionGroups>
                       <conditions>
                         <condition type="lessThan" value="1" field="selections" scope="model" childId="c1fa-c327-3411-9462" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Iron Wall Kalkan" hidden="false" id="b246-355b-f3ba-f72e">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <profiles>
+                <profile name="Iron Wall Kalkan" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bfda-ea24-3f37-828d">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Takes always one hand to use in both melee and in ranged combat and cannot be switched out. The target is always considered to be in Cover when shot, and counts as fighting behind a defended obstacle when an enemy charges them. In addition, when the Brazen bull is Activated and it is in combat with only 1 model on a 40mm or smaller base, the Bull can Move normally (though not Charge or Dash), pushing its opponent in the same direction as the Bull is moving and travelling the same distance as the Bull moves if it moves directly towards the enemy that is in front half of its base. This can push the enemies so they fall as per Falling rules), and if the Bull pushes the opponent against a terrain piece higher than 2”, both models stop and the opponent immediately rolls on the injury table.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5f11-c216-833a-904f" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="e62d-c06e-ce35-428b" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="6603-2315-97b5-d845" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -2332,6 +2511,47 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Deployables" id="0435-ac47-7c9f-bb4c" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name=" Sultanate Grand Cannon" hidden="true" id="bf03-e9ef-b9e7-b490">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="60"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="08d2-a5ca-b4ae-fc38" includeChildSelections="true"/>
+          </constraints>
+          <profiles>
+            <profile name=" Sultanate Grand Cannon" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="13ba-447f-38db-4b1a">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">48&quot;</characteristic>
+                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+2D Injury, Ignores Armour</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
+                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Add +2 DICE to all Injury rolls and ignore all armour. If this attack hits its target, but does not take it Out of Action, the target is pushed 1d6” directly away from the attacker, stopping if they hit another model or solid piece of terrain.
+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink targetId="70c9-988d-71a7-7654" id="3b70-8a7b-8528-71fc" primary="false" name="Heavy"/>
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Anqā Guard" hidden="true" id="20ec-9e12-6cdf-abe2">
+          <profiles>
+            <profile name="Anqā Guard" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dbf1-479d-1dfa-29e2">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This transportable fortification is represented by a 1” high standing shield on 40mm base. They can either be placed anywhere within your own deployment zone after all other models are deployed. Alternatively, a sapper may carry one on their back, and then deploy it with a +2 DICE RISKY ACTION during their Activation as long as the Sapper is not in Melee combat. In this case, it must be placed within 1” of the Sapper. In either case, they count as both Cover and a Defended Obstacle once deployed.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
@@ -3003,15 +3223,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Grenades" hidden="true" id="86a0-2ca0-c40b-551e" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="3">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model" childId="c251-4b5c-2ba0-82e0" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="2aee-0c22-9e87-ddda" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
       </entryLinks>
     </selectionEntry>
@@ -3022,6 +3233,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink name="Configuration" hidden="false" id="5f00-8e46-9e31-fa62" targetId="705b-e23f-e9c2-58ab"/>
         <categoryLink name="Elite" hidden="false" id="ed50-43fe-47b5-b249" targetId="3de0-192c-3ec2-51be"/>
         <categoryLink name="Troop" hidden="false" id="e5af-81b4-2fb0-db02" targetId="bd43-ddb1-262d-4489"/>
+        <categoryLink name="Stationary" hidden="false" id="d7df-7b6b-10ae-0e05" targetId="d18f-b919-ecdf-be4a" type="categoryEntry"/>
         <categoryLink name="Mercenary" hidden="false" id="64e9-e73a-3150-6086" targetId="3dfb-701d-e89c-eba2"/>
       </categoryLinks>
     </forceEntry>
@@ -3129,6 +3341,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <repeats>
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="ae07-a946-e287-a918" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
+        </modifier>
+        <modifier type="increment" value="2" field="b58f-20a0-c247-b933">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -3357,11 +3574,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
       </profiles>
       <modifiers>
-        <modifier type="set" value="4" field="a33e-7153-a9b3-e446">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cd91-f171-98d6-423e" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
         <modifier type="increment" value="1" field="a33e-7153-a9b3-e446">
           <repeats>
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="f152-90f8-6adb-7087" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
@@ -3387,11 +3599,26 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <modifiers>
             <modifier type="set" value="Dervishes" field="name"/>
             <modifier type="remove" value="afcc-5f24-1c7c-63c4" field="category"/>
+            <modifier type="set" value="4" field="a33e-7153-a9b3-e446"/>
           </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="cd91-f171-98d6-423e" shared="true" includeChildSelections="true"/>
           </conditions>
           <comment>Cabal of Assassins</comment>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="2" field="a33e-7153-a9b3-e446"/>
+            <modifier type="add" value="3de0-192c-3ec2-51be" field="category"/>
+            <modifier type="set-primary" value="3de0-192c-3ec2-51be" field="category"/>
+            <modifier type="remove" value="bd43-ddb1-262d-4489" field="category"/>
+            <modifier type="set" value="Officier Janissary" field="name"/>
+            <modifier type="set" value="Officier Janissary" field="name" affects="profiles.Unit"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <comment>Iron Wall</comment>
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
@@ -3419,9 +3646,21 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <modifierGroup type="and">
               <modifiers>
                 <modifier type="decrement" value="1" field="5de9-d70e-9021-6f71">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="self" childId="99ce-8e70-94c9-35c4" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="self" childId="b246-355b-f3ba-f72e" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="self" childId="99ce-8e70-94c9-35c4" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <conditions>
+                        <condition type="atLeast" value="2" field="selections" scope="self" childId="99ce-8e70-94c9-35c4" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
                 <modifier type="set" value="-1" field="5de9-d70e-9021-6f71">
                   <conditions>
@@ -3633,9 +3872,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </conditions>
         </modifier>
         <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c2b1-d49e-937b-2f87" shared="true" includeChildSelections="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c2b1-d49e-937b-2f87" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntries>
@@ -3721,6 +3965,13 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">Yüzbaşı is expected to face the mightiest of their enemies in personal combat, inspiring the troops to victory with their personal prowess. Yüzbaşı are immune to the effects of the Keyword FEAR and add +1 DICE to injury rolls against TOUGH opponents.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <entryLinks>
@@ -3738,6 +3989,15 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </categoryLinks>
       <infoLinks>
         <infoLink name="Tough" id="933f-f858-b8f9-2bcc" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
+        <infoLink name="Strong" id="900a-9494-0743-50e7" hidden="true" type="rule" targetId="6297-d0e0-1935-5cfd">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="70"/>
@@ -3759,6 +4019,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </conditionGroups>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="Silahdar" field="name"/>
+            <modifier type="set" value="Silahdar" field="name" affects="profiles.Unit"/>
+            <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <comment>Iron Wall</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Azeb" hidden="false" id="0e7e-9167-f044-9493">
       <entryLinks>
@@ -4031,9 +4304,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cd91-f171-98d6-423e" shared="true" includeChildSelections="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cd91-f171-98d6-423e" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="increment" value="1" field="c80f-b5eb-7a75-4bae">
           <conditions>
@@ -4274,6 +4552,40 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Defenders of the Iron Wall" hidden="false" id="6032-5543-8548-b9ac">
+              <profiles>
+                <profile name="Far from the Sublime Gate" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3fac-45a0-f3f8-b759">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Warband may not include any Lions of Jabir, Yüzbaşi or Assassins. They cannot buy the Cloak of Alamut or the Wind Amulet.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Marksmanship of the Iron Wall" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8994-ad0b-49d3-01b5">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">All the members of the Warband practice marksmanship from the dizzying heights of the Iron Wall against targets on the ground below. The Elevated position Ranged bonus for this Warband is +2 DICE instead of the usual +1 DICE.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Siege Jezzail Teams" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d153-7f3f-41c6-d3b9">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">All the members of the Warband are trained to use the Siege Jezzails in pairs. When any model of this Warband shoots a Siege Jezzail and they are within 1” of another member of the Warband, they add +1 DICE to their Ranged Attack to hit roll with the Siege Jezzai.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Sapper Corps" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b1c7-e723-e5f9-9cc6">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The standard divisions assigned to the Iron wall have double-strength Sapper detachment. This Warband may include up to 4 Sappers.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Janissary Officers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c0e9-c5f5-44f9-a07b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Warband may include up to 2 Janissaries acting as officers. They have Keyword ELITE. The Warband may not have any other Janissaries.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Sipahi" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="73bb-505e-f430-bf27">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Sipahi Automaton Cavalry often serves as infantry in the Iron Wall units to reinforce areas under severe pressure. They use characteristics of Mamluk Faris Mercenary. They cost 110 ducats. You cannot modify their equipment in any way. You can have up to 1 Sipahi. Note that this does not stop you from recruiting a Mamluk as a mercenary as well. Sipahi can be promoted as any other non-ELITE model.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -4432,9 +4744,87 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Takwin Homunculus" hidden="false" id="8891-b3fa-58ca-f1fc" type="selectionEntry" targetId="2f82-e47f-c162-9152"/>
       </entryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Emplaced Grand Cannon" hidden="true" id="822b-60fe-7f4e-1ecf">
+      <profiles>
+        <profile name="Stationary Turret" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6fdf-d846-089e-c199">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the Cannon is placed as a Stationary object on the battlefield, it is deployed separately as one of your standard units on a 50mm base in your own Deployment Zone or Table Edge. It is immobile and cannot be damaged. Any model in the Defenders of the Iron Wall warband can shoot it during their Activation as long as they are not in Melee combat, are within 1” of the Cannon, and do not move in any way during their Activation. Alchemist Ability Mastery of the Elements does apply to the Cannon. As with any other Ranged Weapon, each Grand Cannon can only be fired once per Turn. The Cannon cannot be lost as a casuality unless carried by a Brazen Bull.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name=" Sultanate Grand Cannon" hidden="false" id="1a8b-6564-7ed2-5c1e" type="selectionEntry" targetId="bf03-e9ef-b9e7-b490">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1ff2-bd6e-5915-d682-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1ff2-bd6e-5915-d682-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <categoryLinks>
+        <categoryLink targetId="d18f-b919-ecdf-be4a" id="6e82-e34a-32e4-5814" primary="true" name="Stationary"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </selectionEntries>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Mercenaries" id="047e-1f20-4b8d-17b8" targetId="f569-e9dd-327a-5735" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="Campaign Rules" id="47ab-95d0-9e7b-5a8c" targetId="ba52-3616-d7f9-8d0c" importRootEntries="true"/>
   </catalogueLinks>
+  <entryLinks>
+    <entryLink import="true" name="Mamluk Faris" hidden="true" id="3be1-c0c4-cbaf-8665" type="selectionEntry" targetId="22b8-dc59-428d-87cd">
+      <entryLinks>
+        <entryLink import="true" name="Advancement" hidden="false" id="61f3-a91d-d3ce-0547" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="Sipahi Captain" field="name" affects="profiles.Unit"/>
+            <modifier type="set" value="0" field="f3bb-a7e6-d476-f60b"/>
+            <modifier type="set" value="Sipahi Captain" field="name"/>
+            <modifier type="set" value="110" field="8d43-33fd-332d-17a6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <categoryLinks>
+        <categoryLink name="Troop" hidden="false" id="4fc9-282c-d78d-86a0" targetId="bd43-ddb1-262d-4489" primary="true"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1475-2b45-f97c-a258" includeChildSelections="true"/>
+      </constraints>
+      <comment>Sipahi</comment>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="1475-2b45-f97c-a258">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="b02e-aa07-8eb7-5b66" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Anqā Guard" hidden="true" id="376b-2707-6940-87bb" type="selectionEntry" targetId="20ec-9e12-6cdf-abe2">
+      <categoryLinks>
+        <categoryLink targetId="d18f-b919-ecdf-be4a" id="8a35-45c9-88cf-7e31" primary="true" name="Stationary"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+  </entryLinks>
 </catalogue>
