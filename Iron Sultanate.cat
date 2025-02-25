@@ -1934,10 +1934,17 @@ Keywords: CONSUMABLE</characteristic>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="2f82-e47f-c162-9152" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="model" childId="e77a-39f7-7264-9008" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="2f82-e47f-c162-9152" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="e77a-39f7-7264-9008" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2073,7 +2080,7 @@ Keywords: CONSUMABLE</characteristic>
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Weapons" id="66f4-68d9-e3c5-f1f2" hidden="false" collapsible="true">
+    <selectionEntryGroup name="Weapons" id="66f4-68d9-e3c5-f1f2" hidden="false" collapsible="false">
       <constraints>
         <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="f0c6-a08a-99cd-9a47" includeChildSelections="false"/>
       </constraints>
