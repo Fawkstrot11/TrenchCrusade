@@ -831,10 +831,6 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
       </profiles>
       <selectionEntryGroups>
         <selectionEntryGroup name="Weapons" id="d790-768c-fc52-8b1b" hidden="false" sortIndex="2">
-          <entryLinks>
-            <entryLink import="true" name="Troop Flag" hidden="false" id="7472-20fc-dfdf-a42d" type="selectionEntry" targetId="1e8d-e5ce-d1e5-4ab0" sortIndex="2"/>
-            <entryLink import="true" name="Shields" hidden="false" id="ab85-ed9c-ce16-9431" type="selectionEntryGroup" targetId="4a0e-6f55-3bac-71b1"/>
-          </entryLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Melee Weapons" id="302d-1482-6d32-4767" hidden="false" sortIndex="1">
               <entryLinks>
@@ -875,17 +871,16 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="7472-20fc-dfdf-a42d" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="6f68-afc3-a4af-e943" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="bba6-0d3f-8601-725e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
                 <modifier type="decrement" value="1" field="f748-23ee-1e76-ec13">
                   <conditionGroups>
-                    <conditionGroup type="or">
+                    <conditionGroup type="and">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="7472-20fc-dfdf-a42d" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="ab85-ed9c-ce16-9431" shared="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="parent" childId="6f68-afc3-a4af-e943" shared="true"/>
                       </conditions>
                     </conditionGroup>
@@ -894,9 +889,15 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
               </modifiers>
               <constraints>
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f748-23ee-1e76-ec13" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1dc7-3926-03fb-0cb1" includeChildSelections="false"/>
               </constraints>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Utility Hands" id="bba6-0d3f-8601-725e" hidden="false"/>
+            <selectionEntryGroup name="Utility Hands" id="bba6-0d3f-8601-725e" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Shields" hidden="false" id="ab85-ed9c-ce16-9431" type="selectionEntryGroup" targetId="4a0e-6f55-3bac-71b1"/>
+                <entryLink import="true" name="Troop Flag" hidden="false" id="7472-20fc-dfdf-a42d" type="selectionEntry" targetId="1e8d-e5ce-d1e5-4ab0" sortIndex="1"/>
+              </entryLinks>
+            </selectionEntryGroup>
           </selectionEntryGroups>
           <modifiers>
             <modifier type="add" value="Max 1 Heavy item on Non-Strong Unit" field="error">
@@ -912,12 +913,6 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
             </modifier>
           </modifiers>
           <comment>its best not to touch this, as is.</comment>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Grenades" id="da5f-63c0-0d66-cf7d" hidden="false" sortIndex="3">
-          <entryLinks>
-            <entryLink import="true" name="Grenades" hidden="false" id="1e4d-094d-70c4-a931" type="selectionEntry" targetId="fb15-88c1-763c-81a1" sortIndex="1"/>
-            <entryLink import="true" name="Gas Grenades" hidden="false" id="1ad6-8afa-b13e-d97f" type="selectionEntry" targetId="3e61-384a-10f0-3ade"/>
-          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup name="Equipment" id="bf1a-16c0-f260-9448" hidden="false">
           <entryLinks>
@@ -3604,7 +3599,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cce4-c826-ee03-0148" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Reinforced Armor" hidden="true" id="7070-bb46-c76d-9c48" defaultAmount="" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Reinforced Armor" hidden="true" id="7070-bb46-c76d-9c48" sortIndex="2">
           <infoLinks>
             <infoLink name="Reinforced Armour" id="b61c-376c-4230-e711" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
           </infoLinks>
@@ -3634,7 +3629,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Standard Armor" hidden="false" id="05b8-022c-d235-e358" defaultAmount="" sortIndex="1">
+        <selectionEntry type="upgrade" import="true" name="Standard Armor" hidden="false" id="05b8-022c-d235-e358" sortIndex="1">
           <infoLinks>
             <infoLink name="Standard Armour" id="37aa-fcfa-de48-6501" hidden="false" type="profile" targetId="6fa6-650d-4136-bc70"/>
           </infoLinks>
@@ -3782,6 +3777,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
       </modifiers>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="bf3a-1583-bf9b-c960" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="88f4-9725-a702-974d" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Homunculus" hidden="false" id="e6f9-0f05-aa5b-06cd">

@@ -1589,7 +1589,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <modifiers>
             <modifier type="set" value="The Executor" field="name">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model" childId="b044-cbf6-a7c5-e2b3" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="b044-cbf6-a7c5-e2b3" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
             <modifier type="set" value="The Lamentor" field="name">
@@ -1599,7 +1599,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
             <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model" childId="b044-cbf6-a7c5-e2b3" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="b044-cbf6-a7c5-e2b3" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
             <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200">
@@ -1718,6 +1718,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <modifier type="set" value="3" field="f025-ee7a-4125-ce80">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="The Executor" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="b044-cbf6-a7c5-e2b3" shared="true" includeChildSelections="false"/>
           </conditions>
         </modifier>
       </modifiers>

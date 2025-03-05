@@ -268,7 +268,7 @@ Injuries are rolled with -1 DICE at long range.</characteristic>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">GRENADE</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">6&quot;</characteristic>
         <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D Injury</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, BLAST 2&quot;, CONSUMABLE</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, BLAST 3&quot;, CONSUMABLE</characteristic>
         <characteristic name="Rules" typeId="6e95-3480-ad33-b345">You can aim the Satchel Charge at either a 1mm x 1mm point on the ground or an enemy model within range. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bombard shot lands 2” away, as 7-5=2). The direction is decided by your opponent. Additionally, if the Satchel Charge lands directly on top of a model, it ignores that model’s armour.</characteristic>
       </characteristics>
     </profile>
@@ -870,7 +870,7 @@ Keyword: CONSUMABLE.</characteristic>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Marid Shovel has the Keyword HEAVY which allows a Brazen Bull to use it. Otherwise, it works exactly like a normal shovel.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Gavel of Justice" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="ddce-0973-220d-51e0" page="">
+    <profile name="Gavel of Justice" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="ddce-0973-220d-51e0">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>

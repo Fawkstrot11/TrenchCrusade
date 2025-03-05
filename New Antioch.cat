@@ -3974,9 +3974,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               </profiles>
               <modifiers>
                 <modifier type="add" value="Mobile Warfare: Too many Heavy Ranged Weapons!" field="error">
-                  <conditions>
-                    <condition type="greaterThan" value="3" field="selections" scope="roster" childId="18c9-01d7-6be9-0859" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="greaterThan" value="3" field="selections" scope="roster" childId="18c9-01d7-6be9-0859" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
