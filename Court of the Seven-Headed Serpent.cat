@@ -3877,6 +3877,13 @@ The Hunter can do this multiple times during its chosen move, though it has to p
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="decrement" value="1" field="5de9-d70e-9021-6f71">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="64ea-216e-161f-7584" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Law of Hell" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2c22-2f87-93e9-7507">
           <characteristics>
