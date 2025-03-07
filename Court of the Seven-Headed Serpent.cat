@@ -108,11 +108,17 @@
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="bf89-44f3-36a0-c7b4" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="a957-7766-e2fa-f4b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="edab-d409-975f-bf55" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="667c-c2ec-b859-5424" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="3f0b-203c-e0b5-70bc" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="7e7d-82f7-5f9f-d356" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="e366-d9c6-ce77-a783" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="2f90-6201-f141-1426" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="e2e6-fb40-05e9-b0e5" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="a730-386c-6e54-fab6" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="5d98-e97f-9486-21b7" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
