@@ -291,7 +291,6 @@
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="-3" field="5de9-d70e-9021-6f71"/>
               </modifiers>
               <comment>armour adjustments</comment>
             </modifierGroup>
@@ -812,6 +811,13 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="decrement" value="1" field="5de9-d70e-9021-6f71">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="4a0e-6f55-3bac-71b1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Dark Blessing" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2a4a-1cd3-c412-997e">
           <characteristics>
@@ -1599,9 +1605,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="857c-758b-aa00-2cf6" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Pilfered: Musket" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="da4c-40b8-a166-dc7c">
+                            <profile name="Pilfered: Medi-kits" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="da4c-40b8-a166-dc7c">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Muskets as though they were from Iron Sultanate</characteristic>
+                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Medi-kits as though they were from Iron Sultanate</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
