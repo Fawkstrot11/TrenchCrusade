@@ -291,7 +291,6 @@
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="-3" field="5de9-d70e-9021-6f71"/>
               </modifiers>
               <comment>armour adjustments</comment>
             </modifierGroup>
@@ -819,6 +818,13 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="decrement" value="1" field="5de9-d70e-9021-6f71">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="4a0e-6f55-3bac-71b1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Dark Blessing" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2a4a-1cd3-c412-997e">
           <characteristics>
@@ -838,10 +844,6 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
       </profiles>
       <selectionEntryGroups>
         <selectionEntryGroup name="Weapons" id="d790-768c-fc52-8b1b" hidden="false" sortIndex="2">
-          <entryLinks>
-            <entryLink import="true" name="Troop Flag" hidden="false" id="7472-20fc-dfdf-a42d" type="selectionEntry" targetId="1e8d-e5ce-d1e5-4ab0" sortIndex="2"/>
-            <entryLink import="true" name="Shields" hidden="false" id="ab85-ed9c-ce16-9431" type="selectionEntryGroup" targetId="4a0e-6f55-3bac-71b1"/>
-          </entryLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Melee Weapons" id="302d-1482-6d32-4767" hidden="false" sortIndex="1">
               <entryLinks>
@@ -882,17 +884,16 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="7472-20fc-dfdf-a42d" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="6f68-afc3-a4af-e943" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="bba6-0d3f-8601-725e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
                 <modifier type="decrement" value="1" field="f748-23ee-1e76-ec13">
                   <conditionGroups>
-                    <conditionGroup type="or">
+                    <conditionGroup type="and">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="7472-20fc-dfdf-a42d" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="ab85-ed9c-ce16-9431" shared="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="parent" childId="6f68-afc3-a4af-e943" shared="true"/>
                       </conditions>
                     </conditionGroup>
@@ -901,9 +902,15 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
               </modifiers>
               <constraints>
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f748-23ee-1e76-ec13" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1dc7-3926-03fb-0cb1" includeChildSelections="false"/>
               </constraints>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Utility Hands" id="bba6-0d3f-8601-725e" hidden="false"/>
+            <selectionEntryGroup name="Utility Hands" id="bba6-0d3f-8601-725e" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Shields" hidden="false" id="ab85-ed9c-ce16-9431" type="selectionEntryGroup" targetId="4a0e-6f55-3bac-71b1"/>
+                <entryLink import="true" name="Troop Flag" hidden="false" id="7472-20fc-dfdf-a42d" type="selectionEntry" targetId="1e8d-e5ce-d1e5-4ab0" sortIndex="1"/>
+              </entryLinks>
+            </selectionEntryGroup>
           </selectionEntryGroups>
           <modifiers>
             <modifier type="add" value="Max 1 Heavy item on Non-Strong Unit" field="error">
@@ -919,12 +926,6 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
             </modifier>
           </modifiers>
           <comment>its best not to touch this, as is.</comment>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Grenades" id="da5f-63c0-0d66-cf7d" hidden="false" sortIndex="3">
-          <entryLinks>
-            <entryLink import="true" name="Grenades" hidden="false" id="1e4d-094d-70c4-a931" type="selectionEntry" targetId="fb15-88c1-763c-81a1" sortIndex="1"/>
-            <entryLink import="true" name="Gas Grenades" hidden="false" id="1ad6-8afa-b13e-d97f" type="selectionEntry" targetId="3e61-384a-10f0-3ade"/>
-          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup name="Equipment" id="bf1a-16c0-f260-9448" hidden="false">
           <entryLinks>
@@ -1615,9 +1616,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="857c-758b-aa00-2cf6" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Pilfered: Musket" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="da4c-40b8-a166-dc7c">
+                            <profile name="Pilfered: Medi-kits" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="da4c-40b8-a166-dc7c">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Muskets as though they were from Iron Sultanate</characteristic>
+                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Medi-kits as though they were from Iron Sultanate</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -3793,6 +3794,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
       </modifiers>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="bf3a-1583-bf9b-c960" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="88f4-9725-a702-974d" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Homunculus" hidden="false" id="e6f9-0f05-aa5b-06cd">
