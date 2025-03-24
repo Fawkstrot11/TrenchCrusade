@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue library="false" id="44b9-e92b-2dc0-6820" name="Court of the Seven-Headed Serpent" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="6" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="Weapons" id="a774-f5b9-3fd9-7a0b" hidden="false" collapsible="true">
+    <selectionEntryGroup name="Weapons" id="a774-f5b9-3fd9-7a0b" hidden="false" collapsible="false">
       <constraints>
         <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="5b3a-8fb3-c7ce-fd3f" includeChildSelections="false"/>
       </constraints>
@@ -3433,6 +3433,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="914f-0020-0d97-e217" id="021c-fcaa-367c-3277" primary="false" name="Tough"/>
         <categoryLink targetId="4f5c-027d-253c-ffa3" id="a1a5-ee60-a764-8ec2" primary="false" name="Fear"/>
         <categoryLink targetId="50ae-a540-4d66-0d43" id="a424-1c18-eeb2-e822" primary="false" name="The Court"/>
+        <categoryLink targetId="afb9-39f5-82d9-46ed" id="393e-c23c-5863-db30" primary="false" name="Leader"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Weapons" hidden="false" id="9032-210a-fe3d-aeb9" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="2"/>
@@ -3525,6 +3526,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </infoLink>
+        <infoLink name="Leader" id="9e60-80ef-efac-f462" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
       </infoLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="115"/>

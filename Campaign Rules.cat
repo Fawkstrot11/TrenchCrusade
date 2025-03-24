@@ -362,6 +362,9 @@ The saint guides your troops before each battle. The model with the skull gains 
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Warchest of Ducats" hidden="false" id="f192-897d-59d9-7a91"/>
+              </selectionEntries>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -4523,11 +4526,11 @@ If a Hunter of the Left-hand path wears this Cloak, it cannot wear its Oracle Be
     </selectionEntryGroup>
     <selectionEntryGroup name="Skills" id="e01c-f1e9-f8ca-e6c9" hidden="true">
       <entryLinks>
-        <entryLink import="true" name="Patron Skills" hidden="false" id="118d-7e92-3b4a-aad0" type="selectionEntryGroup" targetId="46d0-96e4-5ed8-b147" sortIndex="5"/>
-        <entryLink import="true" name="Ranged Skills" hidden="false" id="3975-b072-1fad-b151" type="selectionEntryGroup" targetId="e0c1-7f5b-4309-4b3f" sortIndex="2"/>
-        <entryLink import="true" name="Stealth &amp; Speed Skills" hidden="false" id="81fa-702c-d302-985e" type="selectionEntryGroup" targetId="733a-cb63-2e8a-acdb" sortIndex="3"/>
-        <entryLink import="true" name="Wildcard Skills" hidden="false" id="2745-5445-8558-9d07" type="selectionEntryGroup" targetId="1c98-e985-326d-501c" sortIndex="4"/>
-        <entryLink import="true" name="Melee &amp; Strength Skills" hidden="false" id="9827-bca7-e042-bf84" type="selectionEntryGroup" targetId="f04b-40da-ca56-b233" sortIndex="1"/>
+        <entryLink import="true" name="Patron Skills" hidden="false" id="118d-7e92-3b4a-aad0" type="selectionEntryGroup" targetId="46d0-96e4-5ed8-b147" sortIndex="6"/>
+        <entryLink import="true" name="Ranged Skills" hidden="false" id="3975-b072-1fad-b151" type="selectionEntryGroup" targetId="e0c1-7f5b-4309-4b3f" sortIndex="3"/>
+        <entryLink import="true" name="Stealth &amp; Speed Skills" hidden="false" id="81fa-702c-d302-985e" type="selectionEntryGroup" targetId="733a-cb63-2e8a-acdb" sortIndex="4"/>
+        <entryLink import="true" name="Wildcard Skills" hidden="false" id="2745-5445-8558-9d07" type="selectionEntryGroup" targetId="1c98-e985-326d-501c" sortIndex="5"/>
+        <entryLink import="true" name="Melee &amp; Strength Skills" hidden="false" id="9827-bca7-e042-bf84" type="selectionEntryGroup" targetId="f04b-40da-ca56-b233" sortIndex="2"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="4fc4-898c-c087-c2ea" includeChildSelections="false"/>
@@ -4549,6 +4552,20 @@ If a Hunter of the Left-hand path wears this Cloak, it cannot wear its Oracle Be
           </conditions>
         </modifier>
       </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Experience Points" hidden="false" id="4565-9206-896a-4241" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="18" field="selections" scope="parent" shared="true" id="213b-8c69-8187-c8d8" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="7" field="213b-8c69-8187-c8d8">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="71f8-ee29-0f90-59ec" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Exploration Upgrades" id="6aaa-88b6-f64b-4776" hidden="false">
       <entryLinks>
