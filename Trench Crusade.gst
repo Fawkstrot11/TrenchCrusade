@@ -24,6 +24,8 @@
     <categoryEntry name="Mercenary" id="3dfb-701d-e89c-eba2" hidden="false"/>
     <categoryEntry name="Limited Potential" id="71f8-ee29-0f90-59ec" hidden="true"/>
     <categoryEntry name="Stationary" id="d18f-b919-ecdf-be4a" hidden="false"/>
+    <categoryEntry name="Golem" id="c15a-8839-8c4e-c312" hidden="false" publicationId="c658-4a10-e1fe-befc" page="12"/>
+    <categoryEntry name="Leader" id="afb9-39f5-82d9-46ed" hidden="false"/>
   </categoryEntries>
   <costTypes>
     <costType name="Ducats" id="8d43-33fd-332d-17a6" defaultCostLimit="-1"/>
@@ -110,7 +112,14 @@ INFECTION MARKERS can be used to modify dice rolls exactly like BLOOD MARKERS. U
       <description>Heralds are fast and elusive, and thus have the Keyword SKIRMISHER. Unless engaged in melee, when an enemy model declares a charge against a Herald, it can immediately move D3” in any direction (except within 1”of any enemy). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter into Melee.</description>
     </rule>
     <rule name="Demonic" id="e1d1-9534-0d38-b1e8" hidden="false" publicationId="c658-4a10-e1fe-befc" page="12">
-      <description>Due to their infernal origins, models with the Keyword DEMONIC negate additional BLOOD MARKERS caused by the Keyword FIRE.</description>
+      <description>Due to their infernal origins, a model with this Keyword ignores any additional BLOOD
+MARKERS caused by the Keyword FIRE.</description>
+    </rule>
+    <rule name="Golem" id="d70f-081c-259b-6cb6" hidden="false" publicationId="c658-4a10-e1fe-befc" page="12-13">
+      <description>This model is a Golem, constructed from lost Kabbalistic knowledge – and it is exceedingly hard to destroy. It treats Out of Action injury results as Down unless the attack is made using the Bloodbath rule, in which case an Out of Action result removes the model from play as standard. It does not suffer additional BLOOD MARKERS from weapons with the Keyword GAS and is not affected by the Keyword FEAR. The controlling player cannot remove BLOOD MARKERS from the Golem by any means, though the opponent can use them as standard.</description>
+    </rule>
+    <rule name="Leader" id="9130-09e0-3351-8c4c" hidden="false" publicationId="c658-4a10-e1fe-befc" page="12-13">
+      <description>As long as this model is not taken Out of Action, add +1 DICE to any Morale tests the warband has to take.</description>
     </rule>
   </sharedRules>
   <publications>
@@ -616,14 +625,14 @@ Keyword: CONSUMABLE.</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">18&quot;</characteristic>
         <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Reduces the injury roll penalty from armour and shields by 1.</characteristic>
+        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">When resolving injuries for this weapon, the total modifier to injuries from a model’s armour (including shields) is reduced by 1. Thus Reinforced Armour, for example, only offers a -1 modifier to injury rolls this weapon causes.</characteristic>
       </characteristics>
     </profile>
     <profile name="Putrid Shotgun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="f342-1a5a-726e-8782" publicationId="c658-4a10-e1fe-befc" page="76">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to hit</characteristic>
+        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Hit</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
         <characteristic name="Rules" typeId="6e95-3480-ad33-b345">This weapon causes INFECTION MARKERS instead of BLOOD MARKERS.</characteristic>
       </characteristics>
@@ -643,7 +652,7 @@ Keyword: CONSUMABLE.</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">24&quot;</characteristic>
         <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+2D to hit</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">If the Viscera Cannon hits the enemy, roll to injure as standard. After rolling for injuries, you can boost the damage by up to three additional INFECTION MARKERS per hit by taking the same number of BLOOD MARKERS on the shooter itself.</characteristic>
+        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">After resolving an injury caused by this weapon, this model may choose to suffer up to three BLOOD MARKERS to inflict the same number of additional BLOOD MARKERS upon the target of the attack.</characteristic>
       </characteristics>
     </profile>
     <profile name="Plague Blade" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="c403-778c-1c4f-ec6e" publicationId="c658-4a10-e1fe-befc" page="76">
@@ -657,7 +666,7 @@ Keyword: CONSUMABLE.</characteristic>
     </profile>
     <profile name="Black Grail Shield" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bfc1-5172-0c42-138f" publicationId="c658-4a10-e1fe-befc" page="77">
       <characteristics>
-        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Works exactly as a trench shield, including Shield Combo capability. In addition, if a model carrying a Black Grail Shield is targeted by a ranged attack, before rolling to hit it can immediately take an ACTION without an Activation. If successful, the ranged attack suffers -2 DICE to the roll determining whether the attack hits, as the power of the Black Grail disturbs the flow of reality. If the roll is a critical, the attack misses automatically.</characteristic>
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This counts as a Trench Shield. In addition, when this model is targeted by a ranged attack, it can draw on the power of the Black Grail to disturb the flow of reality as an ACTION. If successful, the ranged attack is rolled with -2 DICE. If this ACTION is a Critical, the ranged attack automatically misses. This can be done outside of the model&apos;s Activation and can be done each time the model is targeted by a ranged attack.</characteristic>
       </characteristics>
     </profile>
     <profile name="Parasite Grenades" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="ddce-6e00-e451-7281" publicationId="c658-4a10-e1fe-befc" page="111">
@@ -666,7 +675,7 @@ Keyword: CONSUMABLE.</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
         <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">If a Parasite Grenade hits a model, the Black Grail player can move this model up 3” in any direction they wish. This can be used to move the model out of cover, to fall from a high position or even into melee with their enemies. This additional effect does not work on models with the Keyword FEAR or ones not affected by FEAR.</characteristic>
+        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">If this weapon hits a model, the target is moved up to 3&quot; in a single direction of the attacker&apos;s choosing. This can be used to move the model out of cover, to fall from a high position or even into Melee Combat with their enemies. Models that are immune to FEAR cannot be moved by this weapon.</characteristic>
       </characteristics>
     </profile>
     <profile name="Corruption Belcher" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="801f-50a4-1ea2-7b92" publicationId="c658-4a10-e1fe-befc" page="113">
@@ -675,7 +684,7 @@ Keyword: CONSUMABLE.</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
         <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">GAS</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">A Corruption Belcher hits one model within range automatically with its ranged attack ACTION. It ignores armour.</characteristic>
+        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">This weapon automatically hits and it ignores armour.</characteristic>
       </characteristics>
     </profile>
     <profile name="Torture Instrument" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="6f4c-3af9-620f-9988" publicationId="c658-4a10-e1fe-befc" page="116">
@@ -684,7 +693,7 @@ Keyword: CONSUMABLE.</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
         <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">When rolling on the Injury Table for this weapon, roll one D6 instead of 2D6. If you trigger Bloodbath with this weapon, roll 2D6 instead of 3D6. This weapon causes an additional BLOOD MARKER for each BLOOD MARKER it inflicts from an injury result.</characteristic>
+        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">This weapon rolls D6 on the Injury Chart, or 2D6 on a BLOODBATH. This weapon causes an additional BLOOD MARKER for each BLOOD MARKER it inflicts from an injury result.</characteristic>
       </characteristics>
     </profile>
     <profile name="Arquebus" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="39a3-6b2f-e1cf-8775" publicationId="c658-4a10-e1fe-befc" page="116">
@@ -702,7 +711,7 @@ Keyword: CONSUMABLE.</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">30&quot;</characteristic>
         <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Ranged attacks with the Ophidian rifle do not suffer Long Range or Cover penalties and instead gain +1 DICE bonus to hit at long range and +1 DICE to hit against enemies in Cover.</characteristic>
+        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">This weapon ignores the penalties for Cover and Long Range, and rolls attacks against models at Long Range or in Cover with +1 DICE. These bonuses stack for a possible total of +2 DICE.</characteristic>
       </characteristics>
     </profile>
     <profile name="Serpent Assault Gun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="651a-d454-07bf-a7fa" publicationId="c658-4a10-e1fe-befc" page="89">
@@ -759,9 +768,9 @@ Keyword: CONSUMABLE.</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">24&quot;</characteristic>
         <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">When shooting the Bow of Lethe, choose one of the following effects:
-- Ignore the target’s armour
-- Add +2 DICE to the injury roll</characteristic>
+        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Before rolling an injury for this weapon, choose one of the following effects to apply to that roll:
+● The injury ignores armour
+● Roll the injury with +2 DICE</characteristic>
       </characteristics>
     </profile>
     <profile name="Punt Gun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="77ea-665d-7ac6-58ef" publicationId="c658-4a10-e1fe-befc" page="109">
@@ -870,7 +879,7 @@ Keyword: CONSUMABLE.</characteristic>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Marid Shovel has the Keyword HEAVY which allows a Brazen Bull to use it. Otherwise, it works exactly like a normal shovel.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Gavel of Justice" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="ddce-0973-220d-51e0" page="">
+    <profile name="Gavel of Justice" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="ddce-0973-220d-51e0">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>

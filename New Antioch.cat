@@ -2968,9 +2968,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="3" field="c9d7-477f-d64d-c542">
-                  <conditions>
-                    <condition type="atLeast" value="1000" field="8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="greaterThan" value="1000" field="limit::8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true"/>
+                        <condition type="greaterThan" value="1000" field="8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
                 <modifier type="set" value="true" field="hidden">
                   <conditionGroups>
@@ -2989,7 +2994,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Vanguard" hidden="false" id="013a-7a38-4f50-bd44">
+            <selectionEntry type="upgrade" import="true" name="Vanguard" hidden="true" id="013a-7a38-4f50-bd44">
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -3005,6 +3010,17 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                   </characteristics>
                 </profile>
               </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -3659,7 +3675,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <entryLink import="true" name="Combat Engineer" hidden="false" id="4e53-f2a3-7163-5635" type="selectionEntry" targetId="50d8-f63e-e01d-2698" collapsible="true"/>
             <entryLink import="true" name="Lieutenant" hidden="false" id="9887-124b-06ad-84d7" type="selectionEntry" targetId="e578-1122-47cb-10ad" collapsible="true"/>
             <entryLink import="true" name="Shocktrooper" hidden="false" id="ab9f-0050-afb8-82a6" type="selectionEntry" targetId="579e-2810-d1cf-454b" collapsible="true"/>
-            <entryLink import="true" name="Mechanized Heavy Infantry" hidden="false" id="d7de-8b90-bce0-e704" type="selectionEntry" targetId="3133-240a-a0cc-9cb4" collapsible="true"/>
+            <entryLink import="true" name="Mechanized Heavy Infantry" hidden="false" id="d7de-8b90-bce0-e704" type="selectionEntry" targetId="3133-240a-a0cc-9cb4" collapsible="true">
+              <categoryLinks>
+                <categoryLink targetId="bd43-ddb1-262d-4489" id="ac32-9ca3-335c-e2f0" primary="false" name="Troop"/>
+              </categoryLinks>
+            </entryLink>
             <entryLink import="true" name="Sniper Priests" hidden="false" id="56d6-2116-0dca-8881" type="selectionEntry" targetId="dd59-a783-dbb5-242f" collapsible="true"/>
             <entryLink import="true" name="Trench Cleric" hidden="false" id="3401-dc21-faf0-48d7" type="selectionEntry" targetId="f8bc-5df8-1768-a72a" collapsible="true"/>
             <entryLink import="true" name="Yeoman" hidden="false" id="453b-b4ca-41be-a430" type="selectionEntry" targetId="f2c3-86d1-5924-093f" collapsible="true"/>

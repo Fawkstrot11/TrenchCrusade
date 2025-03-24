@@ -211,7 +211,7 @@
           <entryLinks>
             <entryLink import="true" name="Cruel Helmet" hidden="false" id="13ad-8a9b-c8b1-44cb" type="selectionEntry" targetId="2d7d-d9ed-a9c1-2ab1" sortIndex="2">
               <entryLinks>
-                <entryLink import="true" name="Goetic Powers" hidden="false" id="4726-3270-3f0e-294e" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
+                <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="4726-3270-3f0e-294e" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f92-cdb3-c9ba-0905" includeChildSelections="true"/>
                   </constraints>
@@ -224,7 +224,7 @@
       <entryLinks>
         <entryLink import="true" name="Bestial Skin Cloak" hidden="false" id="ac26-2ac0-9884-b229" type="selectionEntry" targetId="58a3-64fb-8c2d-5105" sortIndex="9">
           <entryLinks>
-            <entryLink import="true" name="Goetic Powers" hidden="false" id="81df-6f32-379d-36aa" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
+            <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="81df-6f32-379d-36aa" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3492-4e95-f08e-9574" includeChildSelections="true"/>
               </constraints>
@@ -233,16 +233,20 @@
         </entryLink>
         <entryLink import="true" name="Restraining Muzzle" hidden="false" id="a805-292c-3b37-bc40" type="selectionEntry" targetId="1a9c-7660-b193-7734" sortIndex="8">
           <entryLinks>
-            <entryLink import="true" name="Goetic Powers" hidden="false" id="a793-ebb0-5387-5930" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
+            <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="a793-ebb0-5387-5930" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="17fa-72b8-2684-642b" includeChildSelections="true"/>
               </constraints>
             </entryLink>
           </entryLinks>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
         </entryLink>
         <entryLink import="true" name="Piece of Silver" hidden="false" id="06ad-fd9c-5945-ac6b" type="selectionEntry" targetId="9e76-7d20-071d-c8cd" sortIndex="12">
           <entryLinks>
-            <entryLink import="true" name="Goetic Powers" hidden="false" id="5e87-1567-03f8-92a4" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
+            <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="5e87-1567-03f8-92a4" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="56a4-2ae4-7f80-9cbf" includeChildSelections="true"/>
               </constraints>
@@ -251,7 +255,7 @@
         </entryLink>
         <entryLink import="true" name="Koraktor, the Great Tome of Hell" hidden="false" id="6ac5-de6b-b5c7-a25b" type="selectionEntry" targetId="d88a-78c6-8e31-75be" sortIndex="10">
           <entryLinks>
-            <entryLink import="true" name="Goetic Powers" hidden="false" id="8eb6-ca2a-4162-f4f3" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
+            <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="8eb6-ca2a-4162-f4f3" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aedc-9a86-3aa6-e948" includeChildSelections="true"/>
               </constraints>
@@ -260,7 +264,7 @@
         </entryLink>
         <entryLink import="true" name="Lordship of this World" hidden="false" id="925c-240e-80ad-e280" type="selectionEntry" targetId="9ab3-2522-a7dd-e902" sortIndex="11">
           <entryLinks>
-            <entryLink import="true" name="Goetic Powers" hidden="false" id="4d97-ace1-c70c-b9aa" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
+            <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="4d97-ace1-c70c-b9aa" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b9d7-6a2d-5d20-96f1" includeChildSelections="true"/>
               </constraints>
@@ -1538,15 +1542,15 @@
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Goetic Powers" id="a863-9b82-2217-87ee" hidden="false">
+    <selectionEntryGroup name="Goetic Powers and Spells" id="a863-9b82-2217-87ee" hidden="false">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Pride" id="837d-9374-b56b-8b55" hidden="true" sortIndex="5">
+        <selectionEntryGroup name="Pride" id="837d-9374-b56b-8b55" hidden="true" sortIndex="7">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Proud Defiance" hidden="true" id="62e8-2201-bf47-9ce4" sortIndex="1">
               <profiles>
                 <profile name="Proud Defiance" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dfb0-d9a0-c918-44a6">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The warband with this model automatically succeeds when it has to make Morale Tests, as long as this model remains on the battlefield.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">While this model is on the battlefield, its Warband automatically succeeds Morale Tests.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1569,7 +1573,7 @@
               <profiles>
                 <profile name="Too Proud to Fall" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="acb9-b7e1-1db0-86b2">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Using this GOETIC (2) spell allows the model to negate a Down state (but not the BLOOD MARKER) or ignore any Injury, attack or power that would have caused the model to fall Down. Note that a TOUGH model suffers Out of Action result which is then convered into Down, this power can be used, but the TOUGH ability is considered to have been used.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a GOETIC (2) Spell, when this model would otherwise fall Down for any reason, it instead doesn’t. If used to negate a Down result, this model still suffers any BLOOD MARKER as normal. This Spell can be cast outside of this model’s Activation. Note that if a TOUGH model suffers an Out of Action result, which is then converted into Down, this Spell can be used, but TOUGH is considered to have been used.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1593,11 +1597,11 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Light of the Morning Star" hidden="true" id="332e-325f-e1cb-d0ac" sortIndex="3">
+            <selectionEntry type="upgrade" import="true" name="Light of Samael" hidden="true" id="332e-325f-e1cb-d0ac" sortIndex="3">
               <profiles>
-                <profile name="Light of the Morning Star" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="46ac-67c1-bb50-8196">
+                <profile name="Light of Samael" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="46ac-67c1-bb50-8196">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Using this GOETIC (2) spell hits any enemy the model sees within 24”. The target must immediately roll on the Injury Chart. If this does not take it Out of Action, the target is pushed back 1D6” directly away from the user of this power if it is on a 32mm or smaller base. If they hit another model or a solid object, they stop. They also stop if they would enter Impassable Terrain or if they would be pushed out of the battlefield.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a GOETIC (2) Spell, when this model would otherwise fall Down for any reason, it instead doesn’t. If used to negate a Down result, this model still suffers any BLOOD MARKER as normal. This Spell can be cast outside of this model’s Activation. Note that if a TOUGH model suffers an Out of Action result, which is then converted into Down, this Spell can be used, but TOUGH is considered to have been used.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1635,13 +1639,14 @@
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Envy" id="ed52-68d5-131f-5a07" hidden="true" sortIndex="3">
+        <selectionEntryGroup name="Envy" id="ed52-68d5-131f-5a07" hidden="true" sortIndex="5">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Envious Eyes" hidden="true" id="4d5b-7911-9dd5-c162" sortIndex="1">
               <profiles>
                 <profile name="Envious Eyes" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a88f-3312-e953-2b75">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can be equipped with one weapon or suit of armour (excluding shields) from Trench Pilgrim, New Antioch or Iron Sultanate warband armouries. You must pay the cost of this item as standard and, if it is lost, it must be purchased again as soon as you have the funds. This item follows the normal limitations. The model will never willingly trade this item away or allow it to be removed</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can be equipped with one weapon or suit of armour (excluding shields) from Trench Pilgrim, New Antioch or Iron Sultanate warband armouries. You must pay the cost of this item as standard and, if it is lost, it must be purchased again as soon as you have the funds. This item follows the normal limitations. The model will never willingly trade this item away or allow it to be removed.  A Sorcerer with this Power can be equipped with a ranged weapon purchased in
+this way, even though they can normally only equip melee weapons.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2076,7 +2081,7 @@
               <profiles>
                 <profile name="Coveted Position" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8d72-52c6-08af-34b5">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Using this GOETIC (2) spell allows the model using this spell to change positions with any model it sees within 12”. This cannot be done if either model engaged is in melee combat.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a GOETIC (2) Spell, this model changes positions with any other model it can see within 12”, as long as the bases of the models fit into their positions. This cannot be done if either model is engaged in Melee Combat.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2104,7 +2109,7 @@
               <profiles>
                 <profile name="What is Yours is Mine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="02a0-968e-d2e1-09c6">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Using this GOETIC (1) spell allows the model with this power to take one BLOOD or BLESSING MARKER from any model on the battlefield that it can see, removing it from the target and gaining that kind of marker for itself. This can even come from a model with a Keyword BLACK GRAIL or DEMONIC. The cost of the spell must still be paid as normal and it is separate from the MARKER it moves.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a GOETIC (1) Spell, this model can remove a BLOOD MARKER or BLESSING MARKER from any model that it can see. This model then gains a marker of that type. This marker can come from models regardless of their Keywords and is separate from the BLOOD MARKER used to cast this spell.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2137,13 +2142,13 @@
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Gluttony" id="4438-3cb3-0e7b-b7f9" hidden="true" sortIndex="2">
+        <selectionEntryGroup name="Gluttony" id="4438-3cb3-0e7b-b7f9" hidden="true" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Belly of the Beast" hidden="true" id="4259-ef97-260c-09fd" sortIndex="1">
               <profiles>
                 <profile name="Belly of the Beast" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5976-ff11-d2d8-06e7">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">All the Yoke Fiends of the Warband ignore the Hateful rule.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Whenever an enemy model inflicts one or more BLOOD MARKERS on this model with a melee attack, that model suffers one BLOOD MARKER.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2161,7 +2166,6 @@
               </modifiers>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c17-41a9-0313-f127" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="782e-c3ca-6394-276d" includeChildSelections="true"/>
               </constraints>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
@@ -2172,7 +2176,7 @@
               <profiles>
                 <profile name="Uncaring Gluttony" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7b6f-566f-3690-6a06">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This GOETIC (2) Spell can be cast at any enemy model that has not yet been Activated in the battle at all. Pick any one equipment item the model is carrying. This item is discarded for the duration of the battle as the model has been chewing on it before the battle, rendering the item temporarily unusable.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a GOETIC (2) Spell, this model can curse any enemy model that has not been Activated during the Battle with ravenous hunger. Pick any one equipment item (i.e. not weapon or armour) the model is carrying. This item is discarded for the duration of the battle as the model has been chewing on it, rendering the item temporarily unusable.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2196,7 +2200,7 @@
               <profiles>
                 <profile name="Eater of the Flesh" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="17dd-a4f8-030e-69ce">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Whenever a model without a keyword DEMONIC or BLACK GRAIL suffers one or more BLOOD MARKERS in melee combat against this model, you can remove those markers and heal the equal number of BLOOD MARKERS from this model. This model may charge and engage friendly models in melee combat.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Whenever a model without the keyword DEMONIC or BLACK GRAIL suffers one or more BLOOD MARKERS in melee combat from the model with this power, you can remove any number of those markers and heal an equal number of BLOOD MARKERS from the model with the Eater of the Flesh power.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2235,13 +2239,13 @@
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Lust" id="5bae-61ce-f8be-14e3" hidden="true" sortIndex="4">
+        <selectionEntryGroup name="Lust" id="5bae-61ce-f8be-14e3" hidden="true" sortIndex="6">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Forbidden Pleasures" hidden="true" id="041a-6dec-d0f5-112f" sortIndex="1">
               <profiles>
                 <profile name="Forbidden Pleasures" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bab7-f552-bd8e-ba33">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before the battle begins, select one model in your warband without the Keyword DEMONIC. It starts the battle with three BLOOD MARKERS.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before the Battle begins, select one model in your warband without the Keyword DEMONIC. It starts the Battle with three BLOOD MARKERS.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2269,7 +2273,7 @@
               <profiles>
                 <profile name="Exquisite Pain" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3a38-b172-9d70-ee94">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Using this GOETIC (1-2) spell allows you to give any one enemy model you can see a BLOOD MARKER for each BLOOD MARKER used to power this spell (up to a maximum of two)</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a GOETIC (1-2) Spell, this model inflicts X BLOOD MARKERS on an enemy model that it can see, where X is the amount of BLOOD MARKERS spent.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2292,7 +2296,7 @@
               <profiles>
                 <profile name="Call of Flesh" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f957-a6db-7309-b93f">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Using this GOETIC (2) spell ends the activation of the model using it. The model the enemy activates next this turn must take its move as its first ACTION and move as directly towards the user of this power as it can through any passable terrain, including dangerous terrain, jumping down etc, taking applicable damage on the way. It can then act normally but cannot target the user of this spell during this Activation with ranged or melee attacks.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a GOETIC (2) Spell that ends this model’s Activation, beckoning magic fills the air. When the enemy next Activates a model during this Turn, that model must Move as its first ACTION. This Move must be a Retreat if the model started its Activation in Melee Combat with a model other than the caster of this Spell. If that model is Down, it instead Stands and then Moves. During this movement, it moves in a direct path toward the caster of this Spell through any passable terrain, including Dangerous Terrain, Jumping Down etc. The model suffers injuries as normal. It can act normally after taking the prescribed ACTION(S), or attempting to take the prescribed ACTION(S) if it couldn’t, but cannot target the caster of this Spell during this Activation with ranged or melee attacks.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2330,13 +2334,13 @@
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Sloth" id="8a00-2467-15d1-f4de" hidden="true" sortIndex="6">
+        <selectionEntryGroup name="Sloth" id="8a00-2467-15d1-f4de" hidden="true" sortIndex="8">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Morphean Mind" hidden="true" id="6563-3cee-7f89-8d1e" sortIndex="1">
               <profiles>
                 <profile name="Morphean Mind" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b1e9-f895-8cab-5c0b">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model takes an ACTION or causes an injury, it can choose to wait until after the roll is made to modify it with BLOOD/BLESSING MARKERS. If it chooses to do so, the opponent commits whether or not they will apply BLOOD/BLESSING MARKERS and how many. Then, the model rolls an unmodified roll, typically 2D6. After seeing the result, the model may choose to apply BLOOD/BLESSING MARKERS, including to trigger Bloodbath. Roll additional dice so that the dice roll reflects all appropriate bonuses/penalties, including BLOOD/BLESSING MARKERS, any modifiers to the ACTION or to injure that the model might have etc.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">No more than one BLOOD MARKER at a time can be used to negatively affect an ACTION or RISKY ACTION this model takes.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2354,9 +2358,10 @@
               </modifiers>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e52d-5ccb-aad8-992f" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="3e47-8a3d-ebc0-71dc" includeChildSelections="true"/>
               </constraints>
               <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
             </selectionEntry>
@@ -2387,7 +2392,7 @@
               <profiles>
                 <profile name="Daemonium Meridianum" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7cbe-aaa1-8d58-dd69">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The 6” area around this model is considered Difficult Terrain for any enemy model.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Open Terrain within 6” of this model is considered Difficult Terrain for enemy models. Dangerous Terrain within 6” of this model is considered both Dangerous Terrain and Difficult Terrain for enemy models</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2421,13 +2426,13 @@
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Wrath" id="4477-f7ae-277b-183e" hidden="true" sortIndex="2">
+        <selectionEntryGroup name="Greed" id="4477-f7ae-277b-183e" hidden="true" sortIndex="4">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Charge of Hatred" hidden="true" id="2ba1-8469-e3dc-4a0a" sortIndex="1">
+            <selectionEntry type="upgrade" import="true" name="Body of Gold" hidden="true" id="2ba1-8469-e3dc-4a0a" sortIndex="1">
               <profiles>
-                <profile name="Charge of Hatred" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a418-90fb-397f-0e0d">
+                <profile name="Body of Gold" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a418-90fb-397f-0e0d">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model’s Charge move is always the maximum of 12”, though it still suffers penalties to this movement as standard (Difficult Terrain, Stand etc.). If this model does not Charge the closest target, it must first pass a RISKY ACTION test.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model gains the Keyword GOLEM. If the model has the Keyword TOUGH it loses it.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2437,21 +2442,26 @@
                     <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="remove" value="914f-0020-0d97-e217" field="category" scope="model"/>
+                <modifier type="add" value="c15a-8839-8c4e-c312" field="category" scope="model"/>
               </modifiers>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b500-1d3a-7832-f43c" includeChildSelections="false"/>
                 <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="96dd-3ff7-f98a-fa28" includeChildSelections="true"/>
               </constraints>
               <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Golem" id="c656-b799-2f59-14c3" hidden="false" type="rule" targetId="d70f-081c-259b-6cb6"/>
+              </infoLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Lesser Mark of Cain" hidden="true" id="38c0-d3a4-a30a-d43b" sortIndex="2">
+            <selectionEntry type="upgrade" import="true" name="Black Heart" hidden="true" id="38c0-d3a4-a30a-d43b" sortIndex="2">
               <profiles>
-                <profile name="Lesser Mark of Cain" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="684d-fb32-d817-7a19">
+                <profile name="Black Heart" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="684d-fb32-d817-7a19">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Injuries against this model are rolled with -1 DICE.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This GOETIC (1) power allows the model to add +1 DICE to any ACTION it takes. Can be used multiple times per activation, but only once per ACTION.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2464,18 +2474,18 @@
               </modifiers>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2370-53b9-8594-069c" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6daa-cc1d-d2b7-3e63" includeChildSelections="true"/>
+                <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="6daa-cc1d-d2b7-3e63" includeChildSelections="true"/>
               </constraints>
               <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Blind Rage" hidden="true" id="c266-b78b-c656-aca7" sortIndex="3">
+            <selectionEntry type="upgrade" import="true" name="Universal Greed" hidden="true" id="c266-b78b-c656-aca7" sortIndex="3">
               <profiles>
-                <profile name="Blind Rage" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a406-a134-08b6-b9d1">
+                <profile name="Universal Greed" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a406-a134-08b6-b9d1">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model rolls to Dash with +1 DICE.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">For every model in the opposing force that is worth 150 ducats or more, this model gains +1 BLESSING DICE at the start of the battle.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2489,6 +2499,94 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb10-31b3-40c7-9f54" includeChildSelections="false"/>
                 <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="8541-dccf-a495-4044" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d88a-78c6-8e31-75be" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3a0b-d655-c557-84c1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Wrath" id="3b97-3d1b-5daa-ed39" hidden="true" sortIndex="4">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Charge of Hatred" hidden="true" id="c456-4e7d-3c7a-50cc" sortIndex="1">
+              <profiles>
+                <profile name="Charge of Hatred" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="92c7-67e1-2864-ce84">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model Charges, it can always move the maximum distance of 12”, although it suffers penalties to this movement as standard (Difficult Terrain, Standing etc.). Additionally, it must make a RISKY ACTION to Charge an enemy model other than the closest one.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c566-35f9-959d-af0e" includeChildSelections="false"/>
+                <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="a754-16fe-b555-57f8" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Lesser Mark of Cain" hidden="true" id="647a-a5b2-f767-2c3d" sortIndex="2">
+              <profiles>
+                <profile name="Lesser Mark of Cain" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c14a-132c-4527-0318">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Injuries against this model are rolled with -1 DICE.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1565-112b-555a-2aaf" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0cb2-79d3-6068-2460" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Blind Rage" hidden="true" id="2603-c881-7cca-44d9" sortIndex="3">
+              <profiles>
+                <profile name="Blind Rage" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6e0c-74b8-b932-4a49">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model rolls to Dash with +1 DICE.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="058e-4401-b033-7496" includeChildSelections="false"/>
+                <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="07ca-ae17-1468-32b9" includeChildSelections="true"/>
               </constraints>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
@@ -2515,7 +2613,7 @@
           <profiles>
             <profile name="Burning Inferno" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5eef-c619-168b-fec6">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Using this GOETIC (1-3) spell the Sorcerer opens a portal to the Lake of Fire and draws forth a great screaming ball of infernal lava mixed with damned souls. Select a 1x1mm point within 36” that the Sorcerer can see. Next, take a ranged attack ACTION: this attack suffers penalties for range but not for Cover. If the roll fails (i.e. you roll 6 or less), the fireball lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the fireball lands 2” away, as 7-5=2). The direction is decided by your opponent. For each BLOOD MARKER used, the Burning Inferno adds +1” BLAST to the attack. Additionally, if the Burning Inferno lands directly on top of a model, it ignores that model’s armour. This attack has the Keyword FIRE.</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a Ranged Attack ACTION with GOETIC (1-3) spell the Sorcerer opens a portal to the Lake of Fire and draws forth a great screaming ball of infernal lava mixed with damned souls. Select a 1x1mm point within 36” that the Sorcerer can see. Next, make a ranged attack ACTION: this attack suffers penalties for Long Range but not for Cover. If the roll fails (i.e. you roll 6 or less), the fireball lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the fireball lands 2” away, as 7-5=2). The direction is decided by your opponent. The Burning Inferno has the Keyword BLAST X”, where X is the amount of BLOOD MARKERS spent. Additionally, if the Burning Inferno lands directly on top of a model, it ignores that model’s armour. This attack has the Keyword FIRE.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2536,6 +2634,34 @@
           <infoLinks>
             <infoLink name="Fire" id="7abf-cd09-7078-9336" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
           </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Slavemaster" hidden="true" id="2e3f-096e-2668-9f4e" sortIndex="2">
+          <profiles>
+            <profile name="Slavemaster" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="662c-894d-16fb-3b8c">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a GOETIC (1) spell, this model can command any friendly Yoke Fiend within 12” to do one of the following:
+- Move: The Yoke Fiend takes a Standard Move ACTION of up to 6”.
+- Ranged Attack: The Yoke Fiend takes a Ranged Attack ACTION with any Ranged weapon it has.
+- Melee Attack: The Yoke Fiend takes a Melee Attack ACTION.
+- Sacrifice: The Yoke Fiend kills itself (it is removed from the board immediately as a casualty)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="299f-b90f-a7a1-0e81" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c349-ffd1-7ef7-f1a9" includeChildSelections="true"/>
+          </constraints>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -3312,7 +3438,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Weapons" hidden="false" id="9032-210a-fe3d-aeb9" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="2"/>
         <entryLink import="true" name="Equipment" hidden="false" id="02e3-c057-a452-141c" type="selectionEntryGroup" targetId="1434-ae99-841b-041e" sortIndex="6"/>
         <entryLink import="true" name="Armour" hidden="false" id="d493-1f4b-068c-9511" type="selectionEntryGroup" targetId="a7de-6b4b-be33-277c" sortIndex="5"/>
-        <entryLink import="true" name="Goetic Powers" hidden="false" id="8da9-ec34-84d0-ab66" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee" sortIndex="4">
+        <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="8da9-ec34-84d0-ab66" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee" sortIndex="4">
           <constraints>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="2a1e-e823-29c1-7b64" includeChildSelections="false"/>
           </constraints>
@@ -3390,7 +3516,15 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <infoLinks>
         <infoLink name="Strong" id="ccf3-d919-1999-1621" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
         <infoLink name="Fear" id="4b58-7d5a-732f-5709" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
-        <infoLink name="Tough" id="4bb7-b7fa-473d-1270" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
+        <infoLink name="Tough" id="4bb7-b7fa-473d-1270" hidden="false" type="rule" targetId="3c75-701d-e708-1438">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c15a-8839-8c4e-c312" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="115"/>
@@ -3406,7 +3540,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Weapons" hidden="false" id="9ad6-c56a-eb6a-5e46" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="2"/>
-        <entryLink import="true" name="Goetic Powers" hidden="false" id="827f-2b7b-9417-fa24" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee" sortIndex="3">
+        <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="827f-2b7b-9417-fa24" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee" sortIndex="3">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f5cf-bb4e-a901-75ca" includeChildSelections="false"/>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="42db-b7ac-458a-e06e" includeChildSelections="false"/>
@@ -3477,7 +3611,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Blessing of the Serpent Moon" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1ead-a287-0d10-eac8">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">GOETIC (2-6) power: Before an injury roll is made against the Sorcerer, you may use this Goetic power to deduct one from that injury roll per two BLOOD MARKERS used.</characteristic>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">This GOETIC (2/4/6) Spell can be cast immediately before an injury is rolled for the Sorcerer. If it is, deduct 1 from the injury result for every two BLOOD MARKERS spent. This Spell can be cast outside of this model’s Activation.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3528,6 +3662,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <selectionEntry type="upgrade" import="true" name="Gluttony" hidden="false" id="f1b5-ce92-42bc-2469">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f41a-c2ae-e49a-12de" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Greed" hidden="false" id="3a0b-d655-c557-84c1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4790-3a94-2111-2de1" includeChildSelections="false"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
@@ -3623,15 +3762,12 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Left-Hand Path" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8393-ece2-0750-7df7">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Once per Activation, as part of any single movement that the Hunter takes during its Activation (Standard Move, Retreat, Charge, Dash etc.), it can use a GOETIC (1) power to walk the path between Hell and Creation. The Hunter must be touching a piece of terrain when it uses this power. When it does, it is immediately placed in contact with any other piece of terrain on the battlefield, including on top of or inside terrain, if legal positions exist. Its movement then continues as normal. All usual movement rules persist for this movement (moving into or out of Melee Combat, for example)
-
-
-The Hunter can do this multiple times during its chosen move, though it has to pay the BLOOD MARKER cost for each such jump between terrain pieces. If the Hunter uses this ability during a Charge, it does not need to take the most direct route possible toward its target, but it still selects its target as normal (i.e. it can see the target when declaring a Charge).</characteristic>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Once during its Activation, when the Hunter moves into contact with a piece of scenery at least 2” wide, it can cast this GOETIC (2) Spell to walk the path between Hell and Creation. Remove the Hunter and immediately place it into contact with any other piece of scenery over 2” wide on the battlefield, including on top of or inside it. The Hunter then continues its movement as normal. It can cast this Spell again as part of the same movement, spending a BLOOD MARKER each time, but it cannot cast it later as part of a different movement during the same Activation. This spell can be cast as part of any movement the Hunter takes during its Activation (Standard Move, Retreat, Charge, Dash etc.). If it is cast as part of a Charge, it does not need to take the most direct route possible, but it still selects the target as normal (Line of Sight, within 12” etc.).</characteristic>
           </characteristics>
         </profile>
         <profile name="Shadow Walker" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c65a-d1b7-59d9-9d95">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Using GOETIC (1), the Hunter can retreat from melee combat without any of its opponents getting the chance to make attacks against it.</characteristic>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a Retreat ACTION with GOETIC (2), the Hunter Retreats from Melee Combat without enemy models getting any free attacks against it.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3665,7 +3801,7 @@ The Hunter can do this multiple times during its chosen move, though it has to p
       <entryLinks>
         <entryLink import="true" name="Weapons" hidden="false" id="51b4-58c9-5148-95b0" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="2"/>
         <entryLink import="true" name="Equipment" hidden="false" id="ea6d-4f0f-95e9-21a6" type="selectionEntryGroup" targetId="1434-ae99-841b-041e" sortIndex="5"/>
-        <entryLink import="true" name="Goetic Powers" hidden="false" id="6d48-76b3-b94c-7b85" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee" sortIndex="4">
+        <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="6d48-76b3-b94c-7b85" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee" sortIndex="4">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a732-cc1e-fd1c-c933" includeChildSelections="false"/>
           </constraints>
@@ -3706,7 +3842,7 @@ The Hunter can do this multiple times during its chosen move, though it has to p
         </profile>
         <profile name="Blood Magic" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="96cc-bbc5-3019-cf3b">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before rolling an injury caused by the Hell Knight’s melee or ranged attack, it can use this GOETIC(1) power to roll that injury with +1 DICE. When this power is used on an injury caused by a BLAST weapon, it applies to every injury caused by that attack ACTION.</characteristic>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before rolling an injury caused by the Hell Knight’s melee or ranged attack, it can cast this GOETIC (1) Spell to roll that injury with +1 DICE. When this Spell is used on an injury caused by a BLAST weapon, it applies to every injury caused by that Attack ACTION</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3797,7 +3933,7 @@ The Hunter can do this multiple times during its chosen move, though it has to p
         </profile>
         <profile name="Torturer" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="055b-99d9-d536-ce9d">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The yoke fiend can make melee attacks against friendly models within 1” that don’t have the Keyword DEMONIC. When doing so, they can only make a single attack.</characteristic>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Yoke Fiend can target friendly non-DEMONIC models within 1” with melee attacks. When it does, it can only make a single melee attack during its Activation.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3922,7 +4058,7 @@ The Hunter can do this multiple times during its chosen move, though it has to p
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Desecrated Saint" hidden="false" id="0447-09f8-8cc2-64da">
       <costs>
-        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="145"/>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="140"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <profiles>
@@ -3949,7 +4085,7 @@ The Hunter can do this multiple times during its chosen move, though it has to p
         </profile>
         <profile name="Many-Armed Monstrosity" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8de3-e9e8-dfde-a7f7">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When the Desecrated Saint makes a melee attack, it can make an attack ACTION with each arm. It does not suffer Off-Hand penalties.</characteristic>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Desecrated Saint can make a Melee Attack ACTION once per Activation with each melee weapon it is equipped with. None of its weapons are off-hand weapons</characteristic>
           </characteristics>
         </profile>
         <profile name="Aura of Sloth" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="true" id="f4c3-3158-9771-3159">
@@ -4020,6 +4156,18 @@ The Hunter can do this multiple times during its chosen move, though it has to p
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="2fbd-2ebe-b0e5-8708" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Aura of Greed" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="true" id="b97b-ed62-c510-0ef8">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">All friendly models within 8” of the Saint (including the Saint) roll melee attacks and to Dash with +1 DICE.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="3a0b-d655-c557-84c1" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
