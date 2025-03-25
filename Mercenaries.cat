@@ -852,5 +852,54 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Scripture Guardian" hidden="false" id="08cc-f1b9-e991-e191">
+      <categoryLinks>
+        <categoryLink name="Mercenary" hidden="false" id="2128-ffcd-0b95-93ba" targetId="3dfb-701d-e89c-eba2" primary="true"/>
+        <categoryLink name="Golem" hidden="false" id="930e-66d1-33c7-9813" targetId="c15a-8839-8c4e-c312" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6e44-7b89-6f05-d44e" includeChildSelections="false"/>
+      </constraints>
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="7"/>
+      </costs>
+      <profiles>
+        <profile name="Scripture Guardian" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="3fe9-1530-6fcd-1855">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 Dice</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 Dice</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-2</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">40mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Slow" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0f36-c292-faa5-8041">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Scripture Guardian has a half Dash distance (i.e. 3”).</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Vengeful Scripture" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c2eb-07dc-8c93-93a6">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Scripture Guardian reads words from the holy (or unholy!) text it carries. This is an attack ACTION with 18” range, and it can be used in either Melee or as a Ranged attack (though not both during the same Activation). Use Ranged and Melee Characteristics as appropriate. This attack ignores armour and cover. For each BLOOD MARKER the target has, add +1 to the Injury roll. Note that if armed with a melee weapon, both the Melee attack and the use of the Vengeageful Scripture can be used simultaneously.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="eee9-35a4-9eda-70e9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink name="Golem" id="fad7-90e0-f1c8-36df" hidden="false" type="rule" targetId="d70f-081c-259b-6cb6"/>
+        <infoLink name="Combat Helmet" id="3d9a-69c2-083a-2444" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>

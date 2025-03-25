@@ -785,6 +785,29 @@
             </modifier>
           </modifiers>
         </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="1d98-dac9-12f0-e194">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="1d98-dac9-12f0-e194">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="196d-0066-9adb-ef69" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <comment>Scripture Guardian Exceptions</comment>
+        </modifierGroup>
       </modifierGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Ranged (One-Handed)" id="3411-73dc-01fa-1c73" hidden="false" collective="false">
@@ -4104,4 +4127,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
   <categoryEntries>
     <categoryEntry name="Immobile" id="18c9-01d7-6be9-0859" hidden="true"/>
   </categoryEntries>
+  <entryLinks>
+    <entryLink import="true" name="Scripture Guardian" hidden="false" id="bbfa-0440-2fd3-da01" type="selectionEntry" targetId="08cc-f1b9-e991-e191">
+      <entryLinks>
+        <entryLink import="true" name="Melee Weapons" hidden="false" id="a4e7-c020-3ce1-7c55" type="selectionEntryGroup" targetId="20db-0edb-9d5e-17c9"/>
+      </entryLinks>
+    </entryLink>
+  </entryLinks>
 </catalogue>

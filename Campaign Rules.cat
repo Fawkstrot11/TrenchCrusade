@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue library="true" id="ba52-3616-d7f9-8d0c" name="Campaign Rules" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="13" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Campaign Rules" hidden="false" id="7346-84e3-dbbb-296d">
+    <selectionEntry type="upgrade" import="true" name="Campaign Rules" hidden="false" id="7346-84e3-dbbb-296d" defaultAmount="1">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3818-d0e9-d926-6897" includeChildSelections="true"/>
       </constraints>
@@ -4520,8 +4520,8 @@ If a Hunter of the Left-hand path wears this Cloak, it cannot wear its Oracle Be
         </modifier>
       </modifiers>
       <entryLinks>
-        <entryLink import="true" name="Injuries" hidden="false" id="5dc0-3402-bf77-2cac" type="selectionEntryGroup" targetId="5bde-8a8f-302c-1431" sortIndex="3"/>
-        <entryLink import="true" name="Skills" hidden="false" id="621c-e24e-7182-f1ba" type="selectionEntryGroup" targetId="e01c-f1e9-f8ca-e6c9" sortIndex="2"/>
+        <entryLink import="true" name="Injuries" hidden="false" id="5dc0-3402-bf77-2cac" type="selectionEntryGroup" targetId="5bde-8a8f-302c-1431" sortIndex="4"/>
+        <entryLink import="true" name="Skills" hidden="false" id="621c-e24e-7182-f1ba" type="selectionEntryGroup" targetId="e01c-f1e9-f8ca-e6c9" sortIndex="3"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Skills" id="e01c-f1e9-f8ca-e6c9" hidden="true">
@@ -4552,20 +4552,6 @@ If a Hunter of the Left-hand path wears this Cloak, it cannot wear its Oracle Be
           </conditions>
         </modifier>
       </modifiers>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Experience Points" hidden="false" id="4565-9206-896a-4241" sortIndex="1">
-          <constraints>
-            <constraint type="max" value="18" field="selections" scope="parent" shared="true" id="213b-8c69-8187-c8d8" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="7" field="213b-8c69-8187-c8d8">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="71f8-ee29-0f90-59ec" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Exploration Upgrades" id="6aaa-88b6-f64b-4776" hidden="false">
       <entryLinks>

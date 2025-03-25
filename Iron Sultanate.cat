@@ -2520,6 +2520,29 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
             </modifier>
           </modifiers>
         </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="ca90-da83-6c3a-9ab9">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="ca90-da83-6c3a-9ab9">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="3861-4ca2-4902-276a" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <comment>Scripture Guardian Exceptions</comment>
+        </modifierGroup>
       </modifierGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Deployables" id="0435-ac47-7c9f-bb4c" hidden="false">
@@ -4836,6 +4859,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </conditions>
         </modifier>
       </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Scripture Guardian" hidden="false" id="4007-c677-b43c-2e82" type="selectionEntry" targetId="08cc-f1b9-e991-e191">
+      <entryLinks>
+        <entryLink import="true" name="Melee Weapons" hidden="false" id="e09b-916a-a34d-4f10" type="selectionEntryGroup" targetId="bfe3-326a-87ad-256f"/>
+      </entryLinks>
     </entryLink>
   </entryLinks>
 </catalogue>
