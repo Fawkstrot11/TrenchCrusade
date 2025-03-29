@@ -1935,6 +1935,29 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             </modifier>
           </modifiers>
         </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="5b33-3827-aee2-220e">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="5b33-3827-aee2-220e">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="8824-d240-893c-36dc" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <comment>Scripture Guardian Exceptions</comment>
+        </modifierGroup>
       </modifierGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Melee (One-Handed)" id="2316-99d3-0e3a-3771" hidden="false" collective="false">
@@ -2076,6 +2099,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <modifier type="set" value="true" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3528,7 +3556,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Weapons" id="e24e-229d-3831-76f4" hidden="false" collapsible="true">
+    <selectionEntryGroup name="Weapons" id="e24e-229d-3831-76f4" hidden="false" collapsible="false">
       <constraints>
         <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="0d4c-1598-a474-ab6a" includeChildSelections="false"/>
       </constraints>
@@ -4373,4 +4401,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
     <catalogueLink type="catalogue" name="Mercenaries" id="6469-1d60-9fe0-5c22" targetId="f569-e9dd-327a-5735" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="Campaign Rules" id="91ed-0a15-c41d-4398" targetId="ba52-3616-d7f9-8d0c" importRootEntries="true"/>
   </catalogueLinks>
+  <entryLinks>
+    <entryLink import="true" name="Scripture Guardian" hidden="false" id="f61d-450d-fe02-2c8b" type="selectionEntry" targetId="08cc-f1b9-e991-e191">
+      <entryLinks>
+        <entryLink import="true" name="Melee Weapons" hidden="false" id="2d2e-c6b1-86bc-4dc5" type="selectionEntryGroup" targetId="d2cb-f99a-d244-0f6d"/>
+      </entryLinks>
+    </entryLink>
+  </entryLinks>
 </catalogue>

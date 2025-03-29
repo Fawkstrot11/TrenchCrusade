@@ -391,6 +391,11 @@ Keywords: CONSUMABLE</characteristic>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="1f05-f210-d29a-9f3c" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Flail" hidden="false" id="f2b9-4126-9882-089d" sortIndex="4" collective="false">
@@ -610,6 +615,29 @@ Keywords: CONSUMABLE</characteristic>
               </conditions>
             </modifier>
           </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="5f1d-42a2-c43a-3671">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="5f1d-42a2-c43a-3671">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ee98-f0b3-e38b-4228" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <comment>Scripture Guardian Exceptions</comment>
         </modifierGroup>
       </modifierGroups>
     </selectionEntryGroup>
@@ -3216,4 +3244,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
     <catalogueLink type="catalogue" name="Campaign Rules" id="9692-49d4-d04d-4cfb" targetId="ba52-3616-d7f9-8d0c" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="Mercenaries" id="4afa-b04d-ee69-cb4f" targetId="f569-e9dd-327a-5735" importRootEntries="true"/>
   </catalogueLinks>
+  <entryLinks>
+    <entryLink import="true" name="Scripture Guardian" hidden="false" id="c808-489d-d7ea-7186" type="selectionEntry" targetId="08cc-f1b9-e991-e191">
+      <entryLinks>
+        <entryLink import="true" name="Melee Weapons" hidden="false" id="4e78-af8d-5531-df78" type="selectionEntryGroup" targetId="62f4-69da-ce54-3b68"/>
+      </entryLinks>
+    </entryLink>
+  </entryLinks>
 </catalogue>

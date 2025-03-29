@@ -7,15 +7,7 @@
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Melee Weapons" hidden="false" id="6354-0407-0c17-84a5" type="selectionEntryGroup" targetId="085e-a0e2-7ba3-9d9c" collapsible="false"/>
-        <entryLink import="true" name="Ranged Weapons" hidden="false" id="304f-6271-343c-ddc9" type="selectionEntryGroup" targetId="c9e2-5728-f485-e683" sortIndex="1" collapsible="false">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="Ranged Weapons" hidden="false" id="304f-6271-343c-ddc9" type="selectionEntryGroup" targetId="c9e2-5728-f485-e683" sortIndex="1" collapsible="false"/>
         <entryLink import="true" name="Utility Hand" hidden="false" id="4869-272e-b534-21f6" type="selectionEntryGroup" targetId="2c66-b5c4-72e2-82ed" collapsible="true">
           <constraints>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="036c-23e8-f06e-9539" includeChildSelections="false"/>
@@ -116,11 +108,17 @@
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="bf89-44f3-36a0-c7b4" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="a957-7766-e2fa-f4b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="a730-386c-6e54-fab6" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="5d98-e97f-9486-21b7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="667c-c2ec-b859-5424" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="e2e6-fb40-05e9-b0e5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="7e7d-82f7-5f9f-d356" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="edab-d409-975f-bf55" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="3f0b-203c-e0b5-70bc" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="e366-d9c6-ce77-a783" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="2f90-6201-f141-1426" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -435,6 +433,11 @@
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="a957-7766-e2fa-f4b3" shared="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Misericordia" hidden="true" id="b93d-023b-c4ed-8ceb" collective="false" sortIndex="5">
@@ -527,6 +530,11 @@
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="a957-7766-e2fa-f4b3" shared="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Malebranche Sword" hidden="false" id="6677-a038-5ffb-c6c2" sortIndex="7">
@@ -545,6 +553,11 @@
             <modifier type="set" value="true" field="hidden">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="a957-7766-e2fa-f4b3" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -763,6 +776,29 @@
             </modifier>
           </modifiers>
         </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="7ce1-a420-e615-a5cb">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="7ce1-a420-e615-a5cb">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="d604-bc3a-680b-cbd8" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <comment>Scripture Guardian Exceptions</comment>
+        </modifierGroup>
       </modifierGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Ranged (One-Handed)" id="cd2d-89be-32a4-afa5" hidden="false" collective="false">
@@ -783,6 +819,13 @@
               </modifiers>
             </infoLink>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Automatic Pistol" hidden="true" id="5d98-e97f-9486-21b7" collective="false" sortIndex="2">
           <costs>
@@ -848,6 +891,13 @@
           <infoLinks>
             <infoLink name="Arquebus" id="84fd-2b8c-f21a-fc4f" hidden="false" type="profile" targetId="39a3-6b2f-e1cf-8775"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Serpent Assault Gun" hidden="false" id="606a-58a8-4fe9-59ef" sortIndex="14">
           <costs>
@@ -877,6 +927,11 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Flamethrower" hidden="false" id="db57-7f16-6d5d-4241" sortIndex="10">
@@ -895,6 +950,11 @@
             <modifier type="set" value="true" field="hidden">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="a957-7766-e2fa-f4b3" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -926,6 +986,11 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Ophidian Rifle" hidden="true" id="7e7d-82f7-5f9f-d356" sortIndex="7">
@@ -955,6 +1020,11 @@
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1282,6 +1352,13 @@
                 <infoLink name="Blunderbuss" id="b0e2-8123-53fd-296d" hidden="false" type="profile" targetId="2540-a186-5024-be0a"/>
                 <infoLink name="Shrapnel" id="6b76-997e-91ed-694b" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
               </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Shotgun" hidden="false" id="a735-6fb4-a9bf-ef15" sortIndex="2">
               <costs>
@@ -1290,6 +1367,13 @@
               <infoLinks>
                 <infoLink name="Shotgun" id="4ac6-0777-ee2d-06dd" hidden="false" type="profile" targetId="0924-0647-1366-9d85"/>
               </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Sub-Machine Gun" hidden="true" id="85a5-ae83-0aa2-10f5" sortIndex="6">
               <costs>
@@ -4306,4 +4390,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
     <catalogueLink type="catalogue" name="Campaign Rules" id="e0ad-af74-7023-7568" targetId="ba52-3616-d7f9-8d0c" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="Mercenaries" id="3118-c17d-a890-59b2" targetId="f569-e9dd-327a-5735" importRootEntries="true"/>
   </catalogueLinks>
+  <entryLinks>
+    <entryLink import="true" name="Scripture Guardian" hidden="false" id="9f59-cf33-b701-71f6" type="selectionEntry" targetId="08cc-f1b9-e991-e191">
+      <entryLinks>
+        <entryLink import="true" name="Melee Weapons" hidden="false" id="90ce-00fc-1d49-5244" type="selectionEntryGroup" targetId="085e-a0e2-7ba3-9d9c"/>
+      </entryLinks>
+    </entryLink>
+  </entryLinks>
 </catalogue>

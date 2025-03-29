@@ -517,6 +517,29 @@
             </modifier>
           </modifiers>
         </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="177f-a178-7493-1958">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="49df-7901-867a-c267" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="177f-a178-7493-1958">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="49df-7901-867a-c267" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="49df-7901-867a-c267" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="f4c1-28c9-773f-c192" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <comment>Scripture Guardian Exceptions</comment>
+        </modifierGroup>
       </modifierGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Ranged (One-Handed)" id="8eec-e5d4-cdfb-ea1e" hidden="false" collective="false">
@@ -2716,10 +2739,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c2b0-2e5d-5661-49ab-max" includeChildSelections="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="The Executor" hidden="false" id="b044-cbf6-a7c5-e2b3">
+            <selectionEntry type="upgrade" import="true" name="The Executor" hidden="false" id="b044-cbf6-a7c5-e2b3" defaultAmount="0">
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6db3-d95f-9901-2048" includeChildSelections="true"/>
-                <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="7183-a597-40be-7e13" includeChildSelections="true"/>
+                <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="6db3-d95f-9901-2048-min" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6db3-d95f-9901-2048-max" includeChildSelections="true"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Tough" id="459f-7da9-e4f6-fbbd" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
@@ -2728,15 +2751,8 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
-              <modifiers>
-                <modifier type="set" value="1" field="7183-a597-40be-7e13">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Lamenters" hidden="false" id="dc04-f8df-606f-f06c">
+            <selectionEntry type="upgrade" import="true" name="The Lamenter" hidden="false" id="dc04-f8df-606f-f06c" defaultAmount="1">
               <constraints>
                 <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="f25d-f1cc-96c2-159d" includeChildSelections="true"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2560-c158-103b-afe1" includeChildSelections="false"/>
@@ -3466,7 +3482,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <modifiers>
         <modifier type="set" value="0" field="14da-6cb8-f66e-7ad6">
           <conditions>
-            <condition type="atLeast" value="2" field="selections" scope="parent" childId="fdaf-1b5e-0348-3ad9" shared="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="fdaf-1b5e-0348-3ad9" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
         <modifier type="set" value="true" field="hidden">
@@ -3758,4 +3774,11 @@ During its Activation, a Plague Knight in this Warband can remove an INFECTION M
     <catalogueLink type="catalogue" name="Campaign Rules" id="3d00-75b6-5ee5-efe1" targetId="ba52-3616-d7f9-8d0c" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="Mercenaries" id="c1ee-b1f8-5b7a-b666" targetId="f569-e9dd-327a-5735" importRootEntries="true"/>
   </catalogueLinks>
+  <entryLinks>
+    <entryLink import="true" name="Scripture Guardian" hidden="false" id="49df-7901-867a-c267" type="selectionEntry" targetId="08cc-f1b9-e991-e191">
+      <entryLinks>
+        <entryLink import="true" name="Melee Weapons" hidden="false" id="a009-94cc-985a-8bd3" type="selectionEntryGroup" targetId="9912-b634-058b-aa2d"/>
+      </entryLinks>
+    </entryLink>
+  </entryLinks>
 </catalogue>
