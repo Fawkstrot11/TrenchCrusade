@@ -1275,7 +1275,8 @@
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Blunderbuss" hidden="false" id="07e6-c49e-4797-231e" sortIndex="1">
               <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <infoLinks>
                 <infoLink name="Blunderbuss" id="b0e2-8123-53fd-296d" hidden="false" type="profile" targetId="2540-a186-5024-be0a"/>
@@ -1428,6 +1429,7 @@
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Troop Flag" hidden="false" id="7273-0162-4be2-7de7" sortIndex="2">
           <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="1"/>
           </costs>
           <constraints>
@@ -2447,7 +2449,7 @@ this way, even though they can normally only equip melee weapons.</characteristi
               </modifiers>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b500-1d3a-7832-f43c" includeChildSelections="false"/>
-                <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="96dd-3ff7-f98a-fa28" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="96dd-3ff7-f98a-fa28" includeChildSelections="true"/>
               </constraints>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
