@@ -655,9 +655,6 @@
               </modifiers>
             </infoLink>
           </infoLinks>
-          <categoryLinks>
-            <categoryLink name="Heavy" hidden="false" id="9b6a-887b-4550-d69a" targetId="70c9-988d-71a7-7654" primary="false"/>
-          </categoryLinks>
           <entryLinks>
             <entryLink import="true" name="Bayonet Lug" hidden="false" id="31d7-aa0d-a13c-c605" type="selectionEntry" targetId="f603-fb7b-cb6f-f1a4"/>
           </entryLinks>
@@ -708,9 +705,6 @@
             <infoLink name="Corruption Belcher" id="e746-f7e5-b427-0a40" hidden="false" type="profile" targetId="801f-50a4-1ea2-7b92"/>
             <infoLink name="Gas" id="0b4d-9009-6cae-c9ac" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
           </infoLinks>
-          <categoryLinks>
-            <categoryLink name="Heavy" hidden="false" id="9058-f0e8-21d5-0703" targetId="70c9-988d-71a7-7654" primary="false"/>
-          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bolt-Action Rifle" hidden="false" id="466c-9e50-b09a-4746" sortIndex="2">
           <costs>
@@ -874,6 +868,9 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="70c9-988d-71a7-7654" id="d119-29f9-4a58-7792" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Heavy Flamethrower" hidden="false" id="62a8-6930-0f1e-6b99" sortIndex="13">
           <costs>
@@ -1674,21 +1671,50 @@
     <selectionEntryGroup name="Plague Knight Rank" id="8ae8-ab71-98de-451a" hidden="false">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Knight Companion of the Fly" hidden="false" id="fca4-6b9c-88ed-09eb">
-          <profiles>
-            <profile name="Knight Companion of the Fly" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="54ac-2422-34c4-3bad">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add +1 DICE to Ranged or Melee.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
-          <modifiers>
-            <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5" scope="model" affects="profiles.Unit"/>
-            <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200" scope="model" affects="profiles.Unit"/>
-          </modifiers>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Skill Selection" id="8b2a-5e8a-bb87-fae0" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Melee" hidden="false" id="3e58-4098-275d-dfce">
+                  <profiles>
+                    <profile name="Knight Companion of the Bladed Fly" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b064-784f-a535-ca37">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add +1 DICE to Melee.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5" scope="model" affects="profiles.Unit"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b47b-b3e4-5655-02b5" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Ranged" hidden="false" id="126e-560a-c85d-fb2e">
+                  <profiles>
+                    <profile name="Knight Companion of the Distant Fly" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="54ac-2422-34c4-3bad">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add +1 DICE to Ranged.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b847-eb3f-31b3-23b5" includeChildSelections="false"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200" scope="model" affects="profiles.Unit"/>
+                  </modifiers>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="self" shared="true" id="b0e0-6152-5484-e3ca-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="self" shared="true" id="b0e0-6152-5484-e3ca-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Knight of the Rotten Cross" hidden="false" id="dd64-8133-3b6e-724e">
           <profiles>
@@ -2005,7 +2031,7 @@
                       <profiles>
                         <profile name="Claimed: Sacrificial Blade" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a591-57b1-8abb-3426">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use an Anti-Materiel Rifle as though it were from the Heretic Legions.</characteristic>
+                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Sacrificial Blade as though it were from the Heretic Legions.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -2741,7 +2767,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="The Executor" hidden="false" id="b044-cbf6-a7c5-e2b3" defaultAmount="0">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="6db3-d95f-9901-2048-min" includeChildSelections="true"/>
+                <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="6db3-d95f-9901-2048-min" includeChildSelections="true"/>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6db3-d95f-9901-2048-max" includeChildSelections="true"/>
               </constraints>
               <infoLinks>
@@ -2751,10 +2777,17 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="1" field="6db3-d95f-9901-2048-min">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="The Lamenter" hidden="false" id="dc04-f8df-606f-f06c" defaultAmount="1">
               <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="f25d-f1cc-96c2-159d" includeChildSelections="true"/>
+                <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="f25d-f1cc-96c2-159d" includeChildSelections="true"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2560-c158-103b-afe1" includeChildSelections="false"/>
               </constraints>
               <costs>
@@ -2794,7 +2827,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <infoLink name="Strong" id="aab6-a319-05b7-89dd" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
       </infoLinks>
       <modifiers>
-        <modifier type="set" value="2" field="f025-ee7a-4125-ce80">
+        <modifier type="set" value="3" field="f025-ee7a-4125-ce80">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="fdaf-1b5e-0348-3ad9" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -2816,7 +2849,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </modifier>
       </modifiers>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f025-ee7a-4125-ce80" includeChildSelections="true"/>
+        <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="f025-ee7a-4125-ce80" includeChildSelections="true"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Hounds of the Black Grail" hidden="false" id="5df2-ef54-85ea-adfe">
@@ -3217,7 +3250,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Amalgam" hidden="false" id="036b-eb9f-9b58-fa7e">
       <costs>
-        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="150"/>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="140"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <selectionEntryGroups>
@@ -3308,11 +3341,17 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="ee80-c780-9aa9-1e4d" shared="true" roundUp="false" includeChildSelections="true"/>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="5f0e-464a-bdaf-d5bd" shared="true" roundUp="false" includeChildSelections="true"/>
               </repeats>
+              <comment>They dont take 2 hands anymore I guess?</comment>
             </modifier>
             <modifier type="add" value="Max 2 Heavy Weapons" field="error">
               <conditions>
                 <condition type="greaterThan" value="2" field="selections" scope="model" childId="70c9-988d-71a7-7654" shared="true" includeChildSelections="true"/>
               </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="56e7-b524-24b3-c6d7">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="70c9-988d-71a7-7654" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
