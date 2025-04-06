@@ -2673,22 +2673,20 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <selectionEntryGroups>
         <selectionEntryGroup name="Weapons" id="3cc8-c8f6-d1fe-0093" hidden="false">
           <entryLinks>
-            <entryLink import="true" name="Melee (Two-Handed)" hidden="false" id="801f-1b75-28db-2971" type="selectionEntryGroup" targetId="9a78-862f-67eb-f06b" collapsible="true"/>
-            <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="c950-a93e-a5d1-6134" type="selectionEntryGroup" targetId="8118-278a-73e1-1cd0" collapsible="true"/>
-            <entryLink import="true" name="Ranged (One-Handed)" hidden="false" id="afdf-019f-364b-aaab" type="selectionEntryGroup" targetId="3411-73dc-01fa-1c73" collapsible="true"/>
-            <entryLink import="true" name="Ranged (Two-Handed)" hidden="false" id="ae63-3fd2-0d27-91c9" type="selectionEntryGroup" targetId="c9b2-e724-2130-02d8"/>
+            <entryLink import="true" name="Melee (Two-Handed)" hidden="false" id="801f-1b75-28db-2971" type="selectionEntryGroup" targetId="9a78-862f-67eb-f06b" collapsible="true" sortIndex="3"/>
+            <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="c950-a93e-a5d1-6134" type="selectionEntryGroup" targetId="8118-278a-73e1-1cd0" collapsible="true" sortIndex="2"/>
+            <entryLink import="true" name="Ranged (One-Handed)" hidden="false" id="afdf-019f-364b-aaab" type="selectionEntryGroup" targetId="3411-73dc-01fa-1c73" collapsible="true" sortIndex="4"/>
+            <entryLink import="true" name="Ranged (Two-Handed)" hidden="false" id="ae63-3fd2-0d27-91c9" type="selectionEntryGroup" targetId="c9b2-e724-2130-02d8" sortIndex="5"/>
           </entryLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Utility Storage" id="d48e-8c28-e01b-a02b" hidden="false">
-              <entryLinks>
-                <entryLink import="true" name="Utility Hand" hidden="false" id="d4bb-6ceb-ce17-193d" type="selectionEntryGroup" targetId="8b4c-c5f4-f53b-fe48"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Grenade Storage" hidden="false" id="435c-26fe-3759-fbbf" collapsible="true">
+            <selectionEntry type="upgrade" import="true" name="Grenade Storage" hidden="false" id="435c-26fe-3759-fbbf" collapsible="true" sortIndex="1">
               <entryLinks>
                 <entryLink import="true" name="Grenades" hidden="false" id="875f-0db3-db4e-b460" type="selectionEntryGroup" targetId="9c37-58de-3fa2-bfd2"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Utility Storage" hidden="false" id="992c-45b2-f87a-7041" sortIndex="6">
+              <entryLinks>
+                <entryLink import="true" name="Utility Hand" hidden="false" id="895a-a1f9-97bf-8f5f" type="selectionEntryGroup" targetId="8b4c-c5f4-f53b-fe48"/>
               </entryLinks>
             </selectionEntry>
           </selectionEntries>

@@ -3376,22 +3376,20 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <selectionEntryGroups>
         <selectionEntryGroup name="Weapons" id="ada3-13e8-696c-768f" hidden="false" sortIndex="4">
           <entryLinks>
-            <entryLink import="true" name="Melee (Two-Handed)" hidden="false" id="ddc3-cec8-644c-6c63" type="selectionEntryGroup" targetId="af54-cab2-68ba-5a8d" collapsible="true"/>
-            <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="30c8-c7d7-ccff-986e" type="selectionEntryGroup" targetId="067f-c13c-72cb-6d1c" collapsible="true"/>
-            <entryLink import="true" name="Ranged (One-Handed)" hidden="false" id="9e9e-e016-4469-6b4f" type="selectionEntryGroup" targetId="12b2-a2c1-dcf8-980c" collapsible="true"/>
-            <entryLink import="true" name="Ranged (Two-Handed)" hidden="false" id="07ab-e718-8346-1938" type="selectionEntryGroup" targetId="3e28-4330-b057-c175"/>
+            <entryLink import="true" name="Melee (Two-Handed)" hidden="false" id="ddc3-cec8-644c-6c63" type="selectionEntryGroup" targetId="af54-cab2-68ba-5a8d" collapsible="true" sortIndex="3"/>
+            <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="30c8-c7d7-ccff-986e" type="selectionEntryGroup" targetId="067f-c13c-72cb-6d1c" collapsible="true" sortIndex="2"/>
+            <entryLink import="true" name="Ranged (One-Handed)" hidden="false" id="9e9e-e016-4469-6b4f" type="selectionEntryGroup" targetId="12b2-a2c1-dcf8-980c" collapsible="true" sortIndex="4"/>
+            <entryLink import="true" name="Ranged (Two-Handed)" hidden="false" id="07ab-e718-8346-1938" type="selectionEntryGroup" targetId="3e28-4330-b057-c175" sortIndex="5"/>
           </entryLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Utility Storage" id="a6fe-0e62-a869-b19b" hidden="false">
-              <entryLinks>
-                <entryLink import="true" name="Utility Hand" hidden="false" id="d7e0-0f5c-bb51-3e5e" type="selectionEntryGroup" targetId="41a5-7586-9820-990b"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Grenade Storage" hidden="false" id="a19e-a4cd-69a4-89f0" collapsible="true">
+            <selectionEntry type="upgrade" import="true" name="Grenade Storage" hidden="false" id="a19e-a4cd-69a4-89f0" collapsible="true" sortIndex="1">
               <entryLinks>
                 <entryLink import="true" name="Grenades" hidden="false" id="1990-f7d3-8c4e-61fc" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Utility Storage" hidden="false" id="7b7a-7a50-9efa-1182" sortIndex="6">
+              <entryLinks>
+                <entryLink import="true" name="Utility Hand" hidden="false" id="6f25-f154-507b-20e5" type="selectionEntryGroup" targetId="41a5-7586-9820-990b"/>
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
@@ -3452,39 +3450,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink name="Pile" hidden="false" id="c53d-707a-fbc3-d116" targetId="ce28-ad9a-bbc1-f1dc" primary="false"/>
         <categoryLink targetId="0934-cc68-ca08-7e2b" id="d5ea-d8a6-88d8-85a8" primary="false" name="Bull"/>
       </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Fireteam: Mamluk-Guarded" hidden="false" id="0328-aed5-81e1-a45e">
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Assigned Sword" hidden="false" id="ef1c-e02d-07b6-e84c">
-          <profiles>
-            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="aeda-e939-e97b-2ade">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Assigned Sword" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dbd7-c2e4-cb9a-8407">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enables the &quot;Mamluk-Guarded&quot; Fireteam option for Elites.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="be76-072f-cdc6-dc13" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="80f0-b0dc-e20d-7ce0" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <forceEntries>
