@@ -28,7 +28,7 @@
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Enabled" hidden="false" id="afdf-43aa-a03d-918b" sortIndex="3">
               <selectionEntryGroups>
-                <selectionEntryGroup name="Patron Selection" id="e10f-3251-be80-f32f" hidden="false" sortIndex="3">
+                <selectionEntryGroup name="Patron Selection" id="e10f-3251-be80-f32f" hidden="false" sortIndex="2">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="self" shared="true" id="fcfb-6a71-12cb-16b3-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="self" shared="true" id="fcfb-6a71-12cb-16b3-max" includeChildSelections="false"/>
@@ -343,27 +343,52 @@ The saint guides your troops before each battle. The model with the skull gains 
               <modifiers>
                 <modifier type="add" value="Max Six Elites!" field="error">
                   <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="eda3-efab-e4be-450c" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="greaterThan" value="6" field="selections" scope="roster" childId="3de0-192c-3ec2-51be" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="eda3-efab-e4be-450c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="greaterThan" value="6" field="selections" scope="roster" childId="3de0-192c-3ec2-51be" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="ce28-ad9a-bbc1-f1dc" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="eda3-efab-e4be-450c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="greaterThan" value="7" field="selections" scope="roster" childId="3de0-192c-3ec2-51be" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ce28-ad9a-bbc1-f1dc" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
                 <modifier type="add" value="Max Seven Elites!" field="error">
                   <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="eda3-efab-e4be-450c" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="greaterThan" value="7" field="selections" scope="roster" childId="3de0-192c-3ec2-51be" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="eda3-efab-e4be-450c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="greaterThan" value="7" field="selections" scope="roster" childId="3de0-192c-3ec2-51be" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="ce28-ad9a-bbc1-f1dc" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="eda3-efab-e4be-450c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="greaterThan" value="7" field="selections" scope="roster" childId="3de0-192c-3ec2-51be" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ce28-ad9a-bbc1-f1dc" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Warchest of Ducats" hidden="false" id="f192-897d-59d9-7a91"/>
+                <selectionEntry type="upgrade" import="true" name="Warchest of Ducats" hidden="false" id="f192-897d-59d9-7a91" sortIndex="3"/>
+                <selectionEntry type="upgrade" import="true" name="Unleveraged Glory" hidden="false" id="98e2-3145-70b3-fe07" sortIndex="4"/>
               </selectionEntries>
             </selectionEntry>
           </selectionEntries>
@@ -1644,6 +1669,23 @@ The saint guides your troops before each battle. The model with the skull gains 
                   </characteristics>
                 </profile>
               </profiles>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Sadistic" hidden="false" id="fc04-0bff-1661-1431">
+                  <profiles>
+                    <profile name="Sadistic" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="03cd-9a41-3bf7-ec1f">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">You gain +1 BONUS DICE for all injury rolls and to-hit rolls against opponents that are Down.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af0d-b702-522b-b8eb" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a433-6c8e-3902-1297" includeChildSelections="false"/>
+              </constraints>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="30 Pieces of Silver" hidden="false" id="4d31-4116-ddc3-f556" sortIndex="4">
               <profiles>
@@ -1653,6 +1695,9 @@ The saint guides your troops before each battle. The model with the skull gains 
                   </characteristics>
                 </profile>
               </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eaac-c762-8d54-7377" includeChildSelections="false"/>
+              </constraints>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Blood Sacrifice" hidden="false" id="f527-23ce-b71a-9e3c" sortIndex="5">
               <profiles>
@@ -1662,6 +1707,23 @@ The saint guides your troops before each battle. The model with the skull gains 
                   </characteristics>
                 </profile>
               </profiles>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Sadistic" hidden="false" id="1517-25cd-e64f-fdc6">
+                  <profiles>
+                    <profile name="Sadistic" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="777f-3c74-22ce-170e">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">You gain +1 BONUS DICE for all injury rolls and to-hit rolls against opponents that are Down.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="079c-1955-b4f0-599e" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5f7f-2a1a-136b-4672" includeChildSelections="false"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -4637,5 +4699,6 @@ If a Hunter of the Left-hand path wears this Cloak, it cannot wear its Oracle Be
         <entryLink import="true" name="Consume the Fruit from the Tree of Knowledge of Good and Evil" hidden="false" id="4634-567a-1b14-7bcb" type="selectionEntry" targetId="f6fb-8677-c747-229e"/>
       </entryLinks>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Pile of Stuff" id="14de-d84a-4613-6714" hidden="false"/>
   </sharedSelectionEntryGroups>
 </catalogue>

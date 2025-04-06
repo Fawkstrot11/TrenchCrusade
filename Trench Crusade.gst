@@ -26,6 +26,7 @@
     <categoryEntry name="Stationary" id="d18f-b919-ecdf-be4a" hidden="false"/>
     <categoryEntry name="Golem" id="c15a-8839-8c4e-c312" hidden="false" publicationId="c658-4a10-e1fe-befc" page="12"/>
     <categoryEntry name="Leader" id="afb9-39f5-82d9-46ed" hidden="false"/>
+    <categoryEntry name="Pile" id="ce28-ad9a-bbc1-f1dc" hidden="true"/>
   </categoryEntries>
   <costTypes>
     <costType name="Ducats" id="8d43-33fd-332d-17a6" defaultCostLimit="-1"/>

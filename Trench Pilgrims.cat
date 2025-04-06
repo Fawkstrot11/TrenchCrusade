@@ -1444,7 +1444,6 @@ Keywords: CONSUMABLE</characteristic>
         </selectionEntry>
       </selectionEntries>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="self" shared="true" id="feed-75ec-d0ed-56a2-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="self" shared="true" id="feed-75ec-d0ed-56a2-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntryGroup>
@@ -2207,6 +2206,100 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </entryLink>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="0240-83f1-8c86-e484" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
       </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Pile of Stuff" hidden="true" id="320f-1c55-4059-3ef1">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapons" id="f84e-f74c-753e-7bae" hidden="false" sortIndex="4">
+          <entryLinks>
+            <entryLink import="true" name="Melee (Two-Handed)" hidden="false" id="a20e-fb1b-b83a-f70f" type="selectionEntryGroup" targetId="9748-bc4f-a372-e2a2" collapsible="true"/>
+            <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="dd3d-6e2e-52ef-728e" type="selectionEntryGroup" targetId="393e-923b-83c6-dd5d" collapsible="true"/>
+            <entryLink import="true" name="Ranged (One-Handed)" hidden="false" id="de0e-8014-f00d-7d6b" type="selectionEntryGroup" targetId="1075-a027-6dbc-b4dd" collapsible="true"/>
+            <entryLink import="true" name="Ranged (Two-Handed)" hidden="false" id="90d5-c83b-b0b9-0a76" type="selectionEntryGroup" targetId="8f05-2ca1-a241-fd39"/>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Utility Storage" id="ca29-eb82-7d5c-967f" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Utility Hand" hidden="false" id="beb2-09c9-f9c9-543f" type="selectionEntryGroup" targetId="a77d-7d78-27b2-13b0"/>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Grenade Storage" hidden="false" id="1c4f-deb9-6c54-d5be" collapsible="true">
+              <entryLinks>
+                <entryLink import="true" name="Throwables" hidden="false" id="9c90-e11c-126b-0b34" type="selectionEntryGroup" targetId="70c8-b7ed-f20b-8bd6"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Disclaimer" id="f3b7-d007-c569-86b1" hidden="false" sortIndex="1">
+          <modifiers>
+            <modifier type="add" value="The Pile of Stuff shows all things your army could ever buy by brute-force unhiding all of its content stuff. Not all of it can be bought at once, and some of it cannot even be stored (such as items stolen with Envious Eyes). Just because something is visible here, does not mean you can put it on your units! This is intended only as a convenience tool." field="info">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="bbdb-7cdb-4475-ef7b" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="I Understand 👍" hidden="false" id="bbdb-7cdb-4475-ef7b">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d86d-740e-89dd-3671" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Anchorite Garage" id="81fc-844a-593f-0974" hidden="false" sortIndex="5">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Anchorite Equipment" hidden="false" id="c33a-40d7-2487-bedb">
+              <entryLinks>
+                <entryLink import="true" name="Anchorite Equipment" hidden="false" id="962e-bcd2-55f5-82c0" type="selectionEntryGroup" targetId="5f36-eace-cfe2-36c0"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Anchorite Weaponry" hidden="false" id="a38b-5193-d87c-36d8">
+              <entryLinks>
+                <entryLink import="true" name="Anchorite Weapons" hidden="false" id="5fc8-373a-8440-c4ab" type="selectionEntryGroup" targetId="8f22-e430-3511-a3f9"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Armour Storage" hidden="false" id="095e-b705-4afe-c1fa" sortIndex="2">
+          <entryLinks>
+            <entryLink import="true" name="Armour" hidden="false" id="36d9-ec05-9e18-7b91" type="selectionEntryGroup" targetId="664d-b970-6eef-b2d5"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Equipment Storage" hidden="false" id="b61f-4f63-f1ab-9167" sortIndex="3">
+          <entryLinks>
+            <entryLink import="true" name="Equipment" hidden="false" id="bfbe-4b89-d596-50f7" type="selectionEntryGroup" targetId="8a14-be13-d97b-2a39"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="27a1-ab15-e254-5ddc" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="afdf-43aa-a03d-918b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" value="1" field="8d43-33fd-332d-17a6">
+          <repeats>
+            <repeat value="1" repeats="1" field="8d43-33fd-332d-17a6" scope="self" childId="any" shared="true" roundUp="false" includeChildSelections="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="decrement" value="1" field="f3bb-a7e6-d476-f60b">
+          <repeats>
+            <repeat value="1" repeats="1" field="f3bb-a7e6-d476-f60b" scope="self" childId="any" shared="true" roundUp="false" includeChildSelections="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="false" field="hidden" affects="self.entries.recursive"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="c72e-b406-cc67-dc1c" targetId="705b-e23f-e9c2-58ab" primary="true"/>
+        <categoryLink name="Elite" hidden="false" id="ce5a-b509-1532-e058" targetId="3de0-192c-3ec2-51be" primary="false"/>
+        <categoryLink name="Pile" hidden="false" id="36fb-d016-1bf4-854a" targetId="ce28-ad9a-bbc1-f1dc" primary="false"/>
+      </categoryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
@@ -3028,7 +3121,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Sacrificial Lamb" hidden="false" id="2563-e20f-3b22-8e09" type="selectionEntry" targetId="4c11-ec67-eaa0-fbdd" sortIndex="2"/>
-        <entryLink import="true" name="Anchorite Weapons" hidden="false" id="9de3-782c-4b80-a313" type="selectionEntryGroup" targetId="8f22-e430-3511-a3f9" sortIndex="3"/>
+        <entryLink import="true" name="Anchorite Weapons" hidden="false" id="9de3-782c-4b80-a313" type="selectionEntryGroup" targetId="8f22-e430-3511-a3f9" sortIndex="3">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="self" shared="true" id="feed-75ec-d0ed-56a2-min" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
         <entryLink import="true" name="Anchorite Equipment" hidden="false" id="dfd4-a553-e885-ecc0" type="selectionEntryGroup" targetId="5f36-eace-cfe2-36c0" sortIndex="4"/>
         <entryLink import="true" name="Advancement" hidden="true" id="99d0-c4fa-7e56-346a" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1">
           <modifiers>
@@ -3258,5 +3355,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Melee Weapons" hidden="false" id="4e78-af8d-5531-df78" type="selectionEntryGroup" targetId="62f4-69da-ce54-3b68"/>
       </entryLinks>
     </entryLink>
+    <entryLink import="true" name="Pile of Stuff" hidden="false" id="6fdd-7a1e-290a-3494" type="selectionEntry" targetId="320f-1c55-4059-3ef1"/>
   </entryLinks>
 </catalogue>

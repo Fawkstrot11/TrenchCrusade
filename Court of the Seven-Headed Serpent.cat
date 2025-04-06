@@ -3503,6 +3503,86 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="54e8-98b3-94f6-e3d9" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
       </entryLinks>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Pile of Stuff" hidden="true" id="1d87-ef77-69ca-eb3f">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapons" id="e751-0066-4268-f2c4" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Melee (Two-Handed)" hidden="false" id="7d5b-b358-d3e2-d16c" type="selectionEntryGroup" targetId="4f68-d195-3b2a-2bf8" collapsible="true"/>
+            <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="58cd-3788-b10e-c8c4" type="selectionEntryGroup" targetId="02d4-0537-9a27-5baa" collapsible="true"/>
+            <entryLink import="true" name="Ranged (One-Handed)" hidden="false" id="25b9-5f2f-05d7-44b6" type="selectionEntryGroup" targetId="cd2d-89be-32a4-afa5" collapsible="true"/>
+            <entryLink import="true" name="Ranged (Two-Handed)" hidden="false" id="1eea-2565-0396-ef48" type="selectionEntryGroup" targetId="ead5-7f94-20dd-c3c2"/>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Utility Storage" id="69f6-a7f0-b19c-cce5" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Utility Hand" hidden="false" id="cd7e-a04a-fc78-3a8d" type="selectionEntryGroup" targetId="2c66-b5c4-72e2-82ed"/>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Grenade Storage" hidden="false" id="c724-cbfd-d735-8015" collapsible="true">
+              <entryLinks>
+                <entryLink import="true" name="Grenades" hidden="false" id="1620-abe3-5939-56d1" type="selectionEntryGroup" targetId="3dce-3062-9abb-c1de"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Disclaimer" id="d17d-4528-e96c-3882" hidden="false" sortIndex="1">
+          <modifiers>
+            <modifier type="add" value="The Pile of Stuff shows all things your army could ever buy by brute-force unhiding all of its content stuff. Not all of it can be bought at once, and some of it cannot even be stored (such as items stolen with Envious Eyes). Just because something is visible here, does not mean you can put it on your units! This is intended only as a convenience tool." field="info">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="44e6-679e-0236-3a20" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="I Understand 👍" hidden="false" id="44e6-679e-0236-3a20">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d43e-fa08-5c72-d239" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Armour Storage" hidden="false" id="acb3-9d02-3458-fc6b">
+          <entryLinks>
+            <entryLink import="true" name="Armour" hidden="false" id="c07d-5cf8-5f9c-b7ee" type="selectionEntryGroup" targetId="a7de-6b4b-be33-277c"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Equipment Storage" hidden="false" id="0bb4-bbe7-21b4-6d43">
+          <entryLinks>
+            <entryLink import="true" name="Equipment" hidden="false" id="512e-7780-2f52-72b6" type="selectionEntryGroup" targetId="1434-ae99-841b-041e"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4c83-fea3-ea45-6079" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="afdf-43aa-a03d-918b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" value="1" field="8d43-33fd-332d-17a6">
+          <repeats>
+            <repeat value="1" repeats="1" field="8d43-33fd-332d-17a6" scope="self" childId="any" shared="true" roundUp="false" includeChildSelections="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="decrement" value="1" field="f3bb-a7e6-d476-f60b">
+          <repeats>
+            <repeat value="1" repeats="1" field="f3bb-a7e6-d476-f60b" scope="self" childId="any" shared="true" roundUp="false" includeChildSelections="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="false" field="hidden" affects="self.entries.recursive"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="5edd-3537-045b-f3c1" targetId="705b-e23f-e9c2-58ab" primary="true"/>
+        <categoryLink targetId="3de0-192c-3ec2-51be" id="8528-e477-74fb-402c" primary="false" name="Elite"/>
+        <categoryLink targetId="ce28-ad9a-bbc1-f1dc" id="5664-5cb5-40d6-fd06" primary="false" name="Pile"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
     <selectionEntry type="model" import="true" name="Praetor" hidden="false" id="68a4-5af6-6f09-aeab">
@@ -4389,6 +4469,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <entryLinks>
         <entryLink import="true" name="Melee Weapons" hidden="false" id="90ce-00fc-1d49-5244" type="selectionEntryGroup" targetId="085e-a0e2-7ba3-9d9c"/>
       </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Pile of Stuff" hidden="false" id="015f-82da-ae66-1fd3" type="selectionEntry" targetId="1d87-ef77-69ca-eb3f">
+      <categoryLinks>
+        <categoryLink targetId="3de0-192c-3ec2-51be" id="6d3c-49f3-581a-9e35" primary="false" name="Elite"/>
+      </categoryLinks>
     </entryLink>
   </entryLinks>
 </catalogue>

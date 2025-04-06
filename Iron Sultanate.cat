@@ -2585,6 +2585,120 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Fireteam" id="09f8-fd32-af0a-a131" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Fireteam: Mamluk-Guarded" hidden="true" id="5782-5d13-1025-abdb">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="80f0-b0dc-e20d-7ce0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3157-68bd-e41d-6e44" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Mamluk-Guarded" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d8ef-4597-49bd-8c2f">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with its Mamluk Faris bodyguard.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Fireteam: Killing Squad" hidden="true" id="d309-00e2-6fe8-a939">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cd91-f171-98d6-423e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="01a1-4333-21e4-0a6c" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Killing Squad" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="21f1-4a29-ae87-7cf2">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This member is part of the Killing Squad fireteam.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Fireteam: Sipahi-Guarded" hidden="true" id="f035-115c-4a4d-62ad">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="0ef5-5146-4d29-b5c1" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2f07-ef69-320d-33ef" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Sipahi-Guarded" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e412-732c-30a6-9790">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with its Sipahi bodyguard.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Fireteam: Mind-Linked" hidden="true" id="29e8-f9d5-9bb1-7137">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d832-e6aa-7c93-32e4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="increment" value="1" field="8e15-1ef2-f3cb-8f9e">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="d832-e6aa-7c93-32e4" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="8e15-1ef2-f3cb-8f9e" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Mind-Linked" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7e5c-ba89-c669-191a">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with its Mind-Linked Homunculus.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b12d-f138-c557-e74d">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="e494-4b66-ba7a-4c44" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0bdf-ebb5-a785-fe43" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Bayonet Lug" hidden="false" id="0abf-e83d-51c2-9235">
@@ -3258,6 +3372,120 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="2aee-0c22-9e87-ddda" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
       </entryLinks>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Pile of Stuff" hidden="true" id="c0cb-8f53-98d4-abc9">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapons" id="ada3-13e8-696c-768f" hidden="false" sortIndex="4">
+          <entryLinks>
+            <entryLink import="true" name="Melee (Two-Handed)" hidden="false" id="ddc3-cec8-644c-6c63" type="selectionEntryGroup" targetId="af54-cab2-68ba-5a8d" collapsible="true"/>
+            <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="30c8-c7d7-ccff-986e" type="selectionEntryGroup" targetId="067f-c13c-72cb-6d1c" collapsible="true"/>
+            <entryLink import="true" name="Ranged (One-Handed)" hidden="false" id="9e9e-e016-4469-6b4f" type="selectionEntryGroup" targetId="12b2-a2c1-dcf8-980c" collapsible="true"/>
+            <entryLink import="true" name="Ranged (Two-Handed)" hidden="false" id="07ab-e718-8346-1938" type="selectionEntryGroup" targetId="3e28-4330-b057-c175"/>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Utility Storage" id="a6fe-0e62-a869-b19b" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Utility Hand" hidden="false" id="d7e0-0f5c-bb51-3e5e" type="selectionEntryGroup" targetId="41a5-7586-9820-990b"/>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Grenade Storage" hidden="false" id="a19e-a4cd-69a4-89f0" collapsible="true">
+              <entryLinks>
+                <entryLink import="true" name="Grenades" hidden="false" id="1990-f7d3-8c4e-61fc" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Disclaimer" id="7b22-6bc6-9e16-b479" hidden="false" sortIndex="1">
+          <modifiers>
+            <modifier type="add" value="The Pile of Stuff shows all things your army could ever buy by brute-force unhiding all of its content stuff. Not all of it can be bought at once, and some of it cannot even be stored (such as items stolen with Envious Eyes). Just because something is visible here, does not mean you can put it on your units! This is intended only as a convenience tool." field="info">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="cdb1-5e3c-7977-ee7e" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="I Understand 👍" hidden="false" id="cdb1-5e3c-7977-ee7e">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d86f-0f67-e24c-4a7f" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Armour Storage" hidden="false" id="b420-d20f-f859-1d4e" sortIndex="2">
+          <entryLinks>
+            <entryLink import="true" name="Armour" hidden="false" id="3414-3fe8-defb-848e" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Equipment Storage" hidden="false" id="17cd-c61e-498a-873c" sortIndex="3">
+          <entryLinks>
+            <entryLink import="true" name="Equipment" hidden="false" id="fabf-2f26-95c7-0c5f" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d86c-8e18-66de-98f5" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="afdf-43aa-a03d-918b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" value="1" field="8d43-33fd-332d-17a6">
+          <repeats>
+            <repeat value="1" repeats="1" field="8d43-33fd-332d-17a6" scope="self" childId="any" shared="true" roundUp="false" includeChildSelections="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="decrement" value="1" field="f3bb-a7e6-d476-f60b">
+          <repeats>
+            <repeat value="1" repeats="1" field="f3bb-a7e6-d476-f60b" scope="self" childId="any" shared="true" roundUp="false" includeChildSelections="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="false" field="hidden" affects="self.entries.recursive"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="7d08-b6e0-109a-4e11" targetId="705b-e23f-e9c2-58ab" primary="true"/>
+        <categoryLink name="Elite" hidden="false" id="77d1-ec1a-4493-a2b5" targetId="3de0-192c-3ec2-51be" primary="false"/>
+        <categoryLink name="Pile" hidden="false" id="c53d-707a-fbc3-d116" targetId="ce28-ad9a-bbc1-f1dc" primary="false"/>
+        <categoryLink targetId="0934-cc68-ca08-7e2b" id="d5ea-d8a6-88d8-85a8" primary="false" name="Bull"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Fireteam: Mamluk-Guarded" hidden="false" id="0328-aed5-81e1-a45e">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Assigned Sword" hidden="false" id="ef1c-e02d-07b6-e84c">
+          <profiles>
+            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="aeda-e939-e97b-2ade">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Assigned Sword" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dbd7-c2e4-cb9a-8407">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enables the &quot;Mamluk-Guarded&quot; Fireteam option for Elites.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="be76-072f-cdc6-dc13" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="80f0-b0dc-e20d-7ce0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <forceEntries>
     <forceEntry name="Warband" id="98e5-edfc-8e10-0865" hidden="false">
@@ -3273,12 +3501,13 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
   <selectionEntries>
     <selectionEntry type="model" import="true" name="Sapper" hidden="false" id="e874-ea2b-96ed-0f9a">
       <entryLinks>
-        <entryLink import="true" name="Weapons" hidden="false" id="6f17-83fd-34be-044f" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="2"/>
-        <entryLink import="true" name="Grenades" hidden="false" id="7060-0360-6812-14b0" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="3"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="6f17-83fd-34be-044f" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="3"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="7060-0360-6812-14b0" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="4"/>
         <entryLink import="true" name="Armour" hidden="false" id="9ea3-46f1-d3f2-385d" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365"/>
         <entryLink import="true" name="Equipment" hidden="false" id="3d29-5720-a6e8-a224" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2"/>
         <entryLink import="true" name="Advancement" hidden="false" id="1354-64de-c38e-bf9c" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="37e8-e3d3-9014-e8fd" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteam" hidden="false" id="5a51-7acd-54dd-b10f" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="2"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink targetId="fd8d-e9e0-2540-a257" id="3257-cce8-8a8b-b4f6" primary="false" name="Sultanate"/>
@@ -3383,11 +3612,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Alchemist" hidden="false" id="7c17-5f75-6fd9-73cf">
       <entryLinks>
-        <entryLink import="true" name="Weapons" hidden="false" id="85cf-e5f2-188a-0511" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="3"/>
-        <entryLink import="true" name="Grenades" hidden="false" id="ed14-1fd8-9d84-e35d" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="4"/>
-        <entryLink import="true" name="Armour" hidden="false" id="9794-b588-71a2-6bd8" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365" sortIndex="5"/>
-        <entryLink import="true" name="Equipment" hidden="false" id="39cf-b015-ea06-7431" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="6"/>
-        <entryLink import="true" name="Secrets of the House of Wisdom" hidden="true" id="5af8-34a9-a9f9-d4c1" type="selectionEntryGroup" targetId="6fcb-5cc4-5e39-beec" sortIndex="2">
+        <entryLink import="true" name="Weapons" hidden="false" id="85cf-e5f2-188a-0511" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="4"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="ed14-1fd8-9d84-e35d" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="5"/>
+        <entryLink import="true" name="Armour" hidden="false" id="9794-b588-71a2-6bd8" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365" sortIndex="6"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="39cf-b015-ea06-7431" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="7"/>
+        <entryLink import="true" name="Secrets of the House of Wisdom" hidden="true" id="5af8-34a9-a9f9-d4c1" type="selectionEntryGroup" targetId="6fcb-5cc4-5e39-beec" sortIndex="3">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -3398,6 +3627,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </entryLink>
         <entryLink import="true" name="Advancement" hidden="false" id="4342-c34e-23e0-5482" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="ace3-1444-1075-9631" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteam" hidden="false" id="8c4a-e696-800f-1095" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="2"/>
       </entryLinks>
       <profiles>
         <profile name="Alchemist" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="8aa4-2bfe-6a85-595c">
@@ -3499,12 +3729,13 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <constraint type="max" value="6" field="selections" scope="roster" shared="true" id="a33e-7153-a9b3-e446" includeChildSelections="true"/>
       </constraints>
       <entryLinks>
-        <entryLink import="true" name="Weapons" hidden="false" id="2791-4f94-bcaa-8438" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="2"/>
-        <entryLink import="true" name="Grenades" hidden="false" id="248f-ca43-c3be-5657" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="3"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="2791-4f94-bcaa-8438" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="3"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="248f-ca43-c3be-5657" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="4"/>
         <entryLink import="true" name="Armour" hidden="false" id="916f-39f1-a96d-3c9d" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365"/>
         <entryLink import="true" name="Equipment" hidden="false" id="1521-dd92-0d1c-b9fa" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2"/>
         <entryLink import="true" name="Advancement" hidden="false" id="a845-878e-fc67-0e6f" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="3558-de09-e705-eea5" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteam" hidden="false" id="738d-f6fc-3921-1fd9" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="2"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink targetId="afcc-5f24-1c7c-63c4" id="0702-a029-90e8-cf43" primary="false" name="Strong"/>
@@ -3746,12 +3977,13 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="71f8-ee29-0f90-59ec" id="26bc-2e4e-b7fe-5555" primary="false" name="Limited Potential"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Weapons" hidden="false" id="f296-3d61-534b-857f" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="2"/>
-        <entryLink import="true" name="Armour" hidden="false" id="a778-33f3-d059-837c" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365" sortIndex="4"/>
-        <entryLink import="true" name="Equipment" hidden="false" id="172c-2450-9eb6-9f04" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="5"/>
-        <entryLink import="true" name="Satchel Charge" hidden="false" id="411f-9a6c-a076-6d48" type="selectionEntry" targetId="ead9-f457-17c2-ad48" sortIndex="3"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="f296-3d61-534b-857f" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="3"/>
+        <entryLink import="true" name="Armour" hidden="false" id="a778-33f3-d059-837c" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365" sortIndex="5"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="172c-2450-9eb6-9f04" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="6"/>
+        <entryLink import="true" name="Satchel Charge" hidden="false" id="411f-9a6c-a076-6d48" type="selectionEntry" targetId="ead9-f457-17c2-ad48" sortIndex="4"/>
         <entryLink import="true" name="Advancement" hidden="false" id="fa41-3f87-c3ba-7714" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="4cab-4fd2-d7ec-257f" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteam" hidden="false" id="5dab-5e25-6f08-5c3b" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="2"/>
       </entryLinks>
       <modifiers>
         <modifier type="add" value="Max 2 Bull Weapons" field="error">
@@ -3780,11 +4012,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Assassin" hidden="false" id="62d4-d89a-f7e2-7d3b">
       <entryLinks>
-        <entryLink import="true" name="Armour" hidden="false" id="b226-2cff-1864-09c1" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365" sortIndex="6"/>
-        <entryLink import="true" name="Equipment" hidden="false" id="84de-886f-a719-e585" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="7"/>
-        <entryLink import="true" name="Grenades" hidden="false" id="1392-855a-cd63-38b7" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="5"/>
-        <entryLink import="true" name="Weapons" hidden="false" id="6a5a-db17-ad1b-996e" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="4"/>
-        <entryLink import="true" name="Arts of Assassination" hidden="true" id="579f-39db-d4af-491a" type="selectionEntryGroup" targetId="10c9-aab8-b0a9-1ec8" sortIndex="3">
+        <entryLink import="true" name="Armour" hidden="false" id="b226-2cff-1864-09c1" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365" sortIndex="7"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="84de-886f-a719-e585" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="8"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="1392-855a-cd63-38b7" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="6"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="6a5a-db17-ad1b-996e" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="5"/>
+        <entryLink import="true" name="Arts of Assassination" hidden="true" id="579f-39db-d4af-491a" type="selectionEntryGroup" targetId="10c9-aab8-b0a9-1ec8" sortIndex="4">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -3795,6 +4027,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </entryLink>
         <entryLink import="true" name="Advancement" hidden="false" id="dc76-6504-cc70-981d" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="57a8-07b7-f365-8b96" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteam" hidden="false" id="0608-376a-3f9d-b614" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="2"/>
       </entryLinks>
       <profiles>
         <profile name="Assassin" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="2e2a-409a-cf05-c437">
@@ -3915,7 +4148,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </modifier>
       </modifiers>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Master Assassin" hidden="true" id="411a-f356-8c9d-7224" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Master Assassin" hidden="true" id="411a-f356-8c9d-7224" sortIndex="3">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -4007,12 +4240,13 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Weapons" hidden="false" id="0a18-7804-1854-e937" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="2"/>
-        <entryLink import="true" name="Grenades" hidden="false" id="ae03-0356-e69d-fa29" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="3"/>
-        <entryLink import="true" name="Equipment" hidden="false" id="b3eb-1be4-adb4-8e56" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="5"/>
-        <entryLink import="true" name="Armour" hidden="false" id="7403-344d-1862-a354" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365" sortIndex="4"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="0a18-7804-1854-e937" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="3"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="ae03-0356-e69d-fa29" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="4"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="b3eb-1be4-adb4-8e56" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="6"/>
+        <entryLink import="true" name="Armour" hidden="false" id="7403-344d-1862-a354" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365" sortIndex="5"/>
         <entryLink import="true" name="Advancement" hidden="false" id="c7e5-a4b4-936a-a75d" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="781e-fad2-ceda-fb76" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteam" hidden="false" id="4162-3964-17b8-ebca" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="2"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink targetId="914f-0020-0d97-e217" id="b4a0-46be-89d8-bb9b" primary="false" name="Tough"/>
@@ -4069,12 +4303,13 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Azeb" hidden="false" id="0e7e-9167-f044-9493">
       <entryLinks>
-        <entryLink import="true" name="Weapons" hidden="false" id="661a-86b4-4508-5b8a" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="3"/>
-        <entryLink import="true" name="Grenades" hidden="false" id="b1ec-f7fb-cfd2-4382" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="4"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="661a-86b4-4508-5b8a" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="4"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="b1ec-f7fb-cfd2-4382" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="5"/>
         <entryLink import="true" name="Armour" hidden="false" id="1445-8fb2-53dd-a8c1" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365"/>
         <entryLink import="true" name="Equipment" hidden="false" id="ee9d-8f65-c819-16e0" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2"/>
         <entryLink import="true" name="Advancement" hidden="false" id="857b-363b-5849-c0ff" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="c107-908a-d486-cae0" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteam" hidden="false" id="7d19-cd4f-e734-3f03" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="2"/>
       </entryLinks>
       <profiles>
         <profile name="Azeb" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="16d8-5d2d-abc1-4bfc">
@@ -4183,7 +4418,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </modifier>
       </modifiers>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Upgrades" id="d7e5-65b7-ba51-8bd3" hidden="false" sortIndex="2">
+        <selectionEntryGroup name="Upgrades" id="d7e5-65b7-ba51-8bd3" hidden="false" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Skirmisher" hidden="false" id="bcd1-1771-9c7f-413c">
               <costs>
@@ -4204,7 +4439,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Assassin Acolytes" hidden="true" id="924d-92b1-8ca4-980a">
+            <selectionEntry type="upgrade" import="true" name="Assassin Acolyte" hidden="true" id="924d-92b1-8ca4-980a">
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -4222,6 +4457,13 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                   </conditions>
                 </modifier>
               </modifiers>
+              <profiles>
+                <profile name="Assassin Acolyte" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9f4c-121e-dc65-05a1">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit has the INFILTRATOR Keyword.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Studied Blade" hidden="true" id="2bad-28de-8cb2-398d">
               <constraints>
@@ -4257,8 +4499,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Armour" hidden="false" id="1374-b153-d240-f4ed" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365"/>
-        <entryLink import="true" name="Wind Amulet" hidden="false" id="3fd1-e13c-728e-51a2" type="selectionEntry" targetId="f9dd-df87-c671-55e5" sortIndex="1"/>
+        <entryLink import="true" name="Wind Amulet" hidden="false" id="3fd1-e13c-728e-51a2" type="selectionEntry" targetId="f9dd-df87-c671-55e5" sortIndex="2"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="45d5-0f29-64e0-22cc" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteam" hidden="false" id="6a89-79a5-2e61-4b71" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="1"/>
       </entryLinks>
       <profiles>
         <profile name="Lion of Jabir" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="2ce6-a5e6-fd5e-9b11">
@@ -4384,6 +4627,25 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6971-fc15-9b36-aede-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6971-fc15-9b36-aede-max" includeChildSelections="false"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Assigned Sword" hidden="false" id="80f0-b0dc-e20d-7ce0">
+              <profiles>
+                <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4038-bef2-1da5-b69b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Assigned Sword" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2342-ecab-9e48-b848">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enables the &quot;Mamluk-Guarded&quot; Fireteam option for Elites.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9dd6-a553-5336-a922" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </entryLink>
       </entryLinks>
       <constraints>
@@ -4406,6 +4668,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1b3-e09c-c7a1-faba" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="add" value="As with normal Fireteams, this method of Fireteam selection is being phased out for being really, really janky. Please use the Assigned Sword feature and the &quot;Mamluk-Guarded&quot; Fireteam instead." field="warning"/>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="b475-de34-e00c-b14f" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
@@ -4627,46 +4897,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="705b-e23f-e9c2-58ab" id="22dc-1771-9ebb-5e41" primary="true" name="Configuration"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Fireteam" hidden="true" id="51fb-61a3-88be-2382">
-      <profiles>
-        <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8c9f-356f-41c9-1f8b">
-          <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Fireteam Members" id="73c5-0953-6a97-4a07" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Assassin" hidden="false" id="013b-2ad6-2e9c-e6b4" type="selectionEntry" targetId="62d4-d89a-f7e2-7d3b" collapsible="true"/>
-            <entryLink import="true" name="Alchemist" hidden="false" id="f80b-d1a7-57bf-9a32" type="selectionEntry" targetId="7c17-5f75-6fd9-73cf" collapsible="true"/>
-            <entryLink import="true" name="Azeb" hidden="false" id="0433-ebca-4132-f4c3" type="selectionEntry" targetId="0e7e-9167-f044-9493" collapsible="true"/>
-            <entryLink import="true" name="Janissaries" hidden="false" id="549f-58d3-8111-e87c" type="selectionEntry" targetId="58c8-0815-71a7-27fb" collapsible="true"/>
-            <entryLink import="true" name="Brazen Bull" hidden="false" id="38e4-e4c7-631c-8e04" type="selectionEntry" targetId="e62d-c06e-ce35-428b" collapsible="true"/>
-            <entryLink import="true" name="Lion of Jabir" hidden="false" id="a004-991e-a031-0824" type="selectionEntry" targetId="f63f-ac9a-639b-b7ba" collapsible="true"/>
-            <entryLink import="true" name="Sapper" hidden="false" id="6122-805a-7ae0-4960" type="selectionEntry" targetId="e874-ea2b-96ed-0f9a" collapsible="true"/>
-            <entryLink import="true" name="Yüzbaşı Captain" hidden="false" id="0c99-0d7b-55fe-3201" type="selectionEntry" targetId="9c5a-601e-6b16-320d" collapsible="true"/>
-          </entryLinks>
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="66a0-ecad-870d-edbc" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1e4f-0c8c-db2b-4cfb" includeChildSelections="true"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink name="Fireteam" hidden="false" id="c825-5884-41a8-ff0a" targetId="83c8-b351-cb96-119e" primary="true"/>
-        <categoryLink targetId="fd8d-e9e0-2540-a257" id="d8bd-d1be-381d-a23a" primary="false" name="Sultanate"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cd91-f171-98d6-423e" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
     <selectionEntry type="unit" import="true" name="Takwin Homunculus" hidden="true" id="e630-83ec-432c-7137">
       <selectionEntryGroups>
         <selectionEntryGroup name="Mind-Linked Ally" id="cd29-601b-58d8-a520" hidden="true">
@@ -4674,6 +4904,12 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="unit" childId="d832-e6aa-7c93-32e4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="add" value="Due to being extremely jank and introducing many bugs, this iteration of Fireteams is being phased out. I won&apos;t delete them, as to not disrupt existing lists, but it is advised to use the new Fireteam selection. Further Fireteams cannot be to lists without Fireteams, and removing all Fireteams from your list will prevent them from being re-added. If you have strong negative opinions on this, please contact me on the Discord or via Report Data Issue- I am open to alternatives." field="warning"/>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="cd29-601b-58d8-a520" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4847,6 +5083,25 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </repeats>
         </modifier>
       </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Assigned Sword" hidden="false" id="0ef5-5146-4d29-b5c1">
+          <profiles>
+            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2843-d7c2-29ba-03db">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Assigned Sword" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8a1c-023a-d19f-0e9f">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enables the &quot;Mamluk-Guarded&quot; Fireteam option for Elites.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a84c-ed17-cfa5-806e" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </entryLink>
     <entryLink import="true" name="Anqā Guard" hidden="true" id="376b-2707-6940-87bb" type="selectionEntry" targetId="20ec-9e12-6cdf-abe2">
       <categoryLinks>
@@ -4865,5 +5120,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Melee Weapons" hidden="false" id="e09b-916a-a34d-4f10" type="selectionEntryGroup" targetId="bfe3-326a-87ad-256f"/>
       </entryLinks>
     </entryLink>
+    <entryLink import="true" name="Pile of Stuff" hidden="false" id="c0f8-5012-5416-763a" type="selectionEntry" targetId="c0cb-8f53-98d4-abc9"/>
   </entryLinks>
 </catalogue>
