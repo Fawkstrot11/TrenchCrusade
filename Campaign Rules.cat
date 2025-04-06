@@ -4511,6 +4511,30 @@ If a Hunter of the Left-hand path wears this Cloak, it cannot wear its Oracle Be
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1feb-86cf-e5ed-6721" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Experience" hidden="true" id="d8b6-6041-9e3b-7adc" sortIndex="2">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="7" field="82ed-905d-e8f3-91ae">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="71f8-ee29-0f90-59ec" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="18" field="selections" scope="parent" shared="true" id="82ed-905d-e8f3-91ae" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Experience" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c755-7cc0-778c-8a88">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model has accumulated experience. This does not effect your skill access in NewRecruit, and is solely for convenience of tracking.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
