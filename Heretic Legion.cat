@@ -2015,6 +2015,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="3ff6-3412-b7f3-b0a4" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="increment" value="1" field="c3ba-a27c-b5cb-93e2">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="c7fe-69f0-1ac0-f61a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="c3ba-a27c-b5cb-93e2" includeChildSelections="true"/>
@@ -2106,15 +2111,17 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
               </conditions>
             </modifier>
+            <modifier type="increment" value="1" field="ae04-d3d5-cf30-f686">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="8ac1-169a-17b8-8e10" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Tartarus Claws" hidden="true" id="af47-33c1-b1fc-f2bd" sortIndex="6">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
           </costs>
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="0bea-138c-b3e9-b630" includeChildSelections="true"/>
-          </constraints>
           <infoLinks>
             <infoLink name="Tartarus Claws" id="69a7-509e-e8a3-2ccc" hidden="false" type="profile" targetId="0999-4c6b-539f-d1b2"/>
           </infoLinks>
@@ -2165,6 +2172,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="20f6-68af-9eae-0e73" shared="true" includeChildSelections="true"/>
               </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="293d-6315-40d8-6b11">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="cfac-603e-607e-58f1" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
             </modifier>
           </modifiers>
           <categoryLinks>
@@ -2367,6 +2379,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="ad7e-8af4-357c-b8ef" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="increment" value="1" field="d679-6e95-5438-300a">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="39f8-37bc-f857-ca21" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Grenade Launcher" hidden="false" id="7f5a-869c-fe6b-82dd" sortIndex="6">
@@ -2406,6 +2423,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="5530-8135-2df1-4b67" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="increment" value="1" field="cd27-b4cb-862c-a11f">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="637c-4134-8734-152e" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Machine Gun" hidden="false" id="5c4c-5169-0e5e-b35b" sortIndex="11">
@@ -2418,7 +2440,6 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           </constraints>
           <infoLinks>
             <infoLink name="Machine Gun" id="c2ab-d898-5266-d1c5" hidden="false" type="profile" targetId="517c-652f-100e-71d6"/>
-            <infoLink name="Heavy" id="f6f4-84af-4588-3c2d" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="70c9-988d-71a7-7654" id="75b8-da92-445e-d47e" primary="false" name="Heavy"/>
@@ -2433,6 +2454,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="7698-8d7d-b9d0-d110" shared="true" includeChildSelections="true"/>
               </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="48bd-a19e-19b2-49bd">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="8de0-69a6-1628-25e3" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -2463,6 +2489,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="7a2b-8955-0ed6-426c" shared="true" includeChildSelections="true"/>
               </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="11a6-d064-f34d-ab29">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="2407-821b-3a79-20e8" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -2498,6 +2529,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="4bea-b5e2-2b9d-fcd3" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="increment" value="1" field="ddd8-1f58-fe65-4b30">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="2faa-0945-7b24-2282" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Automatic Rifle" hidden="false" id="8292-a94f-828f-955e" sortIndex="13">
@@ -2507,7 +2543,6 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           </costs>
           <entryLinks>
             <entryLink import="true" name="Bayonet Lug" hidden="false" id="8bb1-c798-f950-5036" type="selectionEntry" targetId="3348-ed1b-adf7-af00"/>
-            <entryLink import="true" name="Assault" hidden="false" id="8f81-5a16-0e2e-4afe" type="rule" targetId="3136-7aab-4bde-9583"/>
           </entryLinks>
           <constraints>
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="939e-912c-de97-4fcf" includeChildSelections="true"/>
@@ -2522,6 +2557,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Assault" id="f6f4-84af-4588-3c2d" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
           </infoLinks>
           <modifiers>
             <modifier type="increment" value="1" field="939e-912c-de97-4fcf">
@@ -2533,6 +2569,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="b3b1-2e89-19e9-624d" shared="true" includeChildSelections="true"/>
               </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="939e-912c-de97-4fcf">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="f7c8-82d1-a9cc-36d4" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -2568,6 +2609,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="5530-8135-2df1-4b67" shared="true" includeChildSelections="true"/>
               </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="b23f-86c6-233b-5452">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="637c-4134-8734-152e" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -3381,6 +3427,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" value="1" field="1a5b-1f57-733e-f61a">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="809e-1185-2bed-7b24" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Standard of Mammon" hidden="true" id="d703-b13e-c546-327c" sortIndex="4">
@@ -3427,6 +3478,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1e71-efda-21d5-4e59" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f75-8a5f-1e00-aa2c" includeChildSelections="false"/>
           </constraints>
           <infoLinks>
             <infoLink name="Musical Instrument" id="d022-d616-34d0-99b9" hidden="false" type="profile" targetId="dd0c-c62d-46f1-64f8"/>
@@ -3448,6 +3500,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="increment" value="1" field="1e71-efda-21d5-4e59">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="2f0a-69a9-39ce-1a7d" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -3735,6 +3792,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="94fd-1ae4-a167-310c" shared="true" includeChildSelections="true"/>
               </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="6e3c-32f6-4f8d-7f49">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="6468-c8ce-b731-fb2d" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
             </modifier>
           </modifiers>
         </selectionEntry>

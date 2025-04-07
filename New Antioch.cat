@@ -1208,9 +1208,6 @@
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
-              <entryLinks>
-                <entryLink import="true" name="Bayonet Lug" hidden="false" id="958a-a9e3-9235-f3e4" type="selectionEntry" targetId="1abf-9449-4b03-2761"/>
-              </entryLinks>
               <infoLinks>
                 <infoLink name="Heavy Shotgun" id="ad64-cd0b-1a44-d987" hidden="false" type="profile" targetId="c5ac-8d24-4060-8655"/>
                 <infoLink name="Heavy" id="5291-8566-b38e-e403" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
@@ -4618,7 +4615,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9164-d39a-b49c-c129" includeChildSelections="true"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Trench Dogs of the Red Brigade" hidden="true" id="e558-982e-ccda-bbe7">
+    <selectionEntry type="model" import="true" name="Trench Dogs of the Red Brigade" hidden="true" id="e558-982e-ccda-bbe7">
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="35"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -4705,7 +4702,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <constraints>
-        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8ad8-a1f0-ebd3-34ff" includeChildSelections="false"/>
+        <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="8ad8-a1f0-ebd3-34ff" includeChildSelections="false"/>
       </constraints>
       <profiles>
         <profile name="Bite" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="a413-643f-2229-c0cc">
@@ -4765,6 +4762,17 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="self" childId="ad89-2d46-a3ae-2cd6" shared="true"/>
           </conditions>
+        </modifier>
+        <modifier type="decrement" value="1" field="8ad8-a1f0-ebd3-34ff">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="52e5-2006-85e1-a7c7" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="e558-982e-ccda-bbe7" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="increment" value="1" field="8ad8-a1f0-ebd3-34ff">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="model" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
         </modifier>
       </modifiers>
       <categoryLinks>
