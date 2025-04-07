@@ -171,7 +171,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Holy Water of Lalibela" hidden="true" id="b4d4-3da2-7157-f15b" sortIndex="10">
+        <selectionEntry type="upgrade" import="true" name="Holy Water of Lalibela" hidden="true" id="b4d4-3da2-7157-f15b" sortIndex="11">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="3"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -195,7 +195,7 @@
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Tabot" hidden="true" id="ffda-4bec-1b59-f267" sortIndex="11">
+        <selectionEntry type="upgrade" import="true" name="Tabot" hidden="true" id="ffda-4bec-1b59-f267" sortIndex="12">
           <costs>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="4"/>
           </costs>
@@ -236,6 +236,34 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d582-d348-4185-a36f" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4636-7ceb-9779-a535" includeChildSelections="true"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Blood Cloak" hidden="true" id="114b-97a7-6011-55c2" sortIndex="9">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Blood Cloak" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4f6a-a92d-d7a7-d512">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">A model wearing a Blood Cloak gains the Keyword SKIRMISHER</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea95-2310-99f0-6e97" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="add" value="73cd-d90d-7e4f-8e86" field="category" scope="model"/>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Skirmisher" id="b28b-6e64-f937-76e4" hidden="false" type="rule" targetId="6ed7-68e8-34f7-393b"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e85-4ae0-e3bc-b882" includeChildSelections="false"/>
+            <constraint type="max" value="4" field="selections" scope="roster" shared="true" id="7809-6d02-08eb-ea33" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -293,14 +321,14 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Sniper Scope" hidden="true" id="ff38-50c0-2451-836c" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="9"/>
-        <entryLink import="true" name="Battlefield Title" hidden="true" id="f5cf-f56e-1756-e867" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="15"/>
-        <entryLink import="true" name="Resurrection Engine" hidden="true" id="c6da-3d4a-3dae-8e8a" type="selectionEntry" targetId="28c1-351c-12d0-1f26" sortIndex="18"/>
-        <entryLink import="true" name="Book of Battle Prayers" hidden="true" id="1ae8-3911-e885-b448" type="selectionEntry" targetId="2958-0f21-a1a5-74fb" sortIndex="16"/>
-        <entryLink import="true" name="Salvage Golem" hidden="true" id="1c98-df0a-2814-f1b1" type="selectionEntry" targetId="a9ef-f6d0-107c-2441" sortIndex="12"/>
-        <entryLink import="true" name="Field Hospital" hidden="true" id="2ffa-83b2-4c28-d014" type="selectionEntry" targetId="eb62-f33b-0d57-cd92" sortIndex="17"/>
-        <entryLink import="true" name="Smoke Screen" hidden="true" id="acc4-e923-3870-52de" type="selectionEntry" targetId="6db3-6176-dc20-c6b8" sortIndex="14"/>
-        <entryLink import="true" name="Knighthood" hidden="true" id="3c71-bc76-c2da-6589" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="13"/>
+        <entryLink import="true" name="Sniper Scope" hidden="true" id="ff38-50c0-2451-836c" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="10"/>
+        <entryLink import="true" name="Battlefield Title" hidden="true" id="f5cf-f56e-1756-e867" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="16"/>
+        <entryLink import="true" name="Resurrection Engine" hidden="true" id="c6da-3d4a-3dae-8e8a" type="selectionEntry" targetId="28c1-351c-12d0-1f26" sortIndex="19"/>
+        <entryLink import="true" name="Book of Battle Prayers" hidden="true" id="1ae8-3911-e885-b448" type="selectionEntry" targetId="2958-0f21-a1a5-74fb" sortIndex="17"/>
+        <entryLink import="true" name="Salvage Golem" hidden="true" id="1c98-df0a-2814-f1b1" type="selectionEntry" targetId="a9ef-f6d0-107c-2441" sortIndex="13"/>
+        <entryLink import="true" name="Field Hospital" hidden="true" id="2ffa-83b2-4c28-d014" type="selectionEntry" targetId="eb62-f33b-0d57-cd92" sortIndex="18"/>
+        <entryLink import="true" name="Smoke Screen" hidden="true" id="acc4-e923-3870-52de" type="selectionEntry" targetId="6db3-6176-dc20-c6b8" sortIndex="15"/>
+        <entryLink import="true" name="Knighthood" hidden="true" id="3c71-bc76-c2da-6589" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="14"/>
         <entryLink import="true" name="Curative Fluids" hidden="true" id="c53b-797a-a746-74ed" type="selectionEntry" targetId="0e49-dfa5-4190-ee69"/>
         <entryLink import="true" name="Lock of Samson&apos;s Hair" hidden="false" id="8ed1-2abd-94fe-13be" type="selectionEntry" targetId="9b61-d0a4-dd30-2d32"/>
         <entryLink import="true" name="Blasphemous Banner" hidden="true" id="8a3a-c966-249a-7019" type="selectionEntry" targetId="ac5b-0ae8-e0cd-5fda"/>
@@ -1342,11 +1370,18 @@
             </modifier>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="2d0c-00e9-7897-83d7" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="820b-8856-fb9c-e9d9" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea95-2310-99f0-6e97" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="2d0c-00e9-7897-83d7" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="model" childId="820b-8856-fb9c-e9d9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -1482,6 +1517,54 @@
               </repeats>
             </modifier>
           </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Atonement Bell" hidden="true" id="0de4-111f-503c-60f9">
+          <profiles>
+            <profile name="Atonement Bell" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a7b5-4e6d-1d0e-de50">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This bell always takes the use of one hand of the Communicant. The Communicant can make an off-hand attack with the Bell. It causes no damage, but any enemy on a 40mm base or smaller hit with an Atonenment Bell can be moved D3 inches from the Communicant into any direction the Communicant chooses. This can break them out of melee combat (allowing free attacks), falling down, into hazardous terrain etc. It cannot be made to move the model into another Melee combat, however.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b39d-517f-0718-b0b2" includeChildSelections="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="bb79-627f-17cf-1ec5" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08ba-0a4d-5ba4-dff6" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="bb79-627f-17cf-1ec5">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08ba-0a4d-5ba4-dff6" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Red Banner" hidden="true" id="7151-74bd-c678-4c41">
+          <profiles>
+            <profile name="Red Banner" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1818-099d-77ef-0ad7">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This is the only banner the Red Brigade Warband can buy. As long as the model carrying this banner is not taken Out of Action, the Red Brigade will never retreat from combat. If they lose a Morale test, they will become Shaken instead. If the Standard bearer is taken Out of Action, the Warband takes Morale tests as normal.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dae7-f13d-aa51-1aba" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea95-2310-99f0-6e97" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1727,7 +1810,7 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Fireteams" id="ef6c-46c2-70ec-568e" hidden="false" collapsible="true" flatten="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Fireteam Alpha" hidden="false" id="5469-6e40-43ff-924e">
+        <selectionEntry type="upgrade" import="true" name="Fireteam Alpha" hidden="false" id="5469-6e40-43ff-924e" sortIndex="1">
           <profiles>
             <profile name="Fireteam Alpha" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a114-2461-5520-9cdb">
               <characteristics>
@@ -1739,7 +1822,7 @@
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="f316-4a48-fab8-b6b9" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Fireteam Beta" hidden="false" id="ae80-5f88-3724-f083">
+        <selectionEntry type="upgrade" import="true" name="Fireteam Beta" hidden="false" id="ae80-5f88-3724-f083" sortIndex="2">
           <profiles>
             <profile name="Fireteam Beta" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3ae4-3e37-6540-e2c8">
               <characteristics>
@@ -1758,7 +1841,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Fireteam Charlie" hidden="true" id="df86-048e-5b6c-fb1f">
+        <selectionEntry type="upgrade" import="true" name="Fireteam Charlie" hidden="true" id="df86-048e-5b6c-fb1f" sortIndex="3">
           <profiles>
             <profile name="Fireteam Charlie" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5153-8b77-2941-daa3">
               <characteristics>
@@ -1777,7 +1860,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Mamluk-Guarded" hidden="true" id="9569-393f-f2d2-252b">
+        <selectionEntry type="upgrade" import="true" name="Mamluk-Guarded" hidden="true" id="9569-393f-f2d2-252b" sortIndex="4">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3920-fd68-943e-9f5e" includeChildSelections="true"/>
           </constraints>
@@ -1800,6 +1883,44 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="First Friend of Dog" hidden="true" id="4da7-e087-f7ab-b89b" sortIndex="5">
+          <profiles>
+            <profile name="First Friend of Dog" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="04ff-1014-c632-3867">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with its dog friend.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b629-dd71-c863-5db4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1ba4-19c6-9493-2983" includeChildSelections="true"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Second Friend of Dog" hidden="true" id="c5ee-6047-898f-a5de" sortIndex="6">
+          <profiles>
+            <profile name="Second Friend of Dog" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f10d-341e-5e15-05ec">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with the other dog friend.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="roster" childId="b629-dd71-c863-5db4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ac8a-b977-6e81-c0a6" includeChildSelections="true"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -2833,6 +2954,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Equipment" hidden="false" id="1c8f-6cb9-16ad-5bb7" type="selectionEntryGroup" targetId="d5c6-bf28-709b-7286" sortIndex="7"/>
         <entryLink import="true" name="Advancement" hidden="true" id="2a4a-167b-633f-e0b4" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="8253-0883-437c-4e98" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="e434-8626-1d0c-dae6" type="selectionEntryGroup" targetId="ef6c-46c2-70ec-568e" sortIndex="2"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink targetId="3de0-192c-3ec2-51be" id="4e47-9a9b-86b2-92cb" primary="true" name="Elite"/>
@@ -2910,101 +3032,27 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 </profile>
               </profiles>
             </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Fireteams" id="cc7f-72d4-1fbd-56aa" hidden="false" sortIndex="2">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Alpha" hidden="false" id="9a92-f522-1264-fcd0">
-              <profiles>
-                <profile name="Fireteam Alpha" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="977c-fb8e-8e7d-5338">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Alpha.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="f185-9da9-895e-f58d" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Beta" hidden="false" id="5648-1907-52fa-a48e">
-              <profiles>
-                <profile name="Fireteam Beta" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="abad-65bc-9c25-6e36">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Beta.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="089e-f517-3ae2-129d" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Charlie" hidden="true" id="5678-dd91-ebb2-1b3f">
-              <profiles>
-                <profile name="Fireteam Charlie" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5145-a47c-d048-1b9c">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Charlie.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="4cc4-b785-e4dc-476b" includeChildSelections="true"/>
-              </constraints>
+            <selectionEntry type="upgrade" import="true" name="Gunslinger" hidden="true" id="766c-ab11-eda6-22d2">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea95-2310-99f0-6e97" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mamluk-Guarded" hidden="true" id="a493-a694-3452-fe50">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2a47-b554-b9f7-a53c" includeChildSelections="true"/>
-              </constraints>
               <profiles>
-                <profile name="Mamluk-Guarded" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ed7d-d85e-ec05-a2c3">
+                <profile name="Gunslinger" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6096-b9bf-a81f-b08e">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with its Mamluk Faris bodyguard.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">If armed with two pistols, this model can make ranged attack ACTIONS with both of them when making a ranged attack. In addition, this model suffers no penalty when using a pistol as an Off-Hand weapon.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="30f6-07a5-f70d-8794" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
             </selectionEntry>
           </selectionEntries>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="aac5-d69b-043f-6412" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b660-f3e4-5e5a-1c72" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Concerted Attack" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a93f-6cba-fe00-fa29">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a model in the FIRETEAM makes any kind of Attack ACTION (ranged or melee) against an opponent, where the other member of their FIRETEAM has already hit it with an attack ACTION during the same activation, the cost of a Bloodbath is reduced to three BLOOD MARKERS against this opponent, whether the model is standing or Down.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0fa3-dac8-c507-1862">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -3085,10 +3133,12 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Equipment" hidden="false" id="ede5-41b4-df7a-dd60" type="selectionEntryGroup" targetId="d5c6-bf28-709b-7286"/>
         <entryLink import="true" name="Advancement" hidden="true" id="5567-ad3b-9a76-5f69" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="8a2c-186d-6db9-bfe6" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="fdb6-c5c9-a846-59e0" type="selectionEntryGroup" targetId="ef6c-46c2-70ec-568e" sortIndex="2"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink targetId="3de0-192c-3ec2-51be" id="6e79-070e-d330-f323" primary="true" name="Elite"/>
         <categoryLink targetId="2cfb-73f8-0df3-30e8" id="1ef7-76a8-4ee1-6913" primary="false" name="New Antioch"/>
+        <categoryLink targetId="65d9-9d4b-c697-c9ef" id="bb09-4f22-01db-95dc" primary="false" name="Clergy"/>
       </categoryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="60"/>
@@ -3240,100 +3290,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <entryLink import="true" name="Chewa" hidden="false" id="b1d7-b973-c226-bdd0" type="selectionEntry" targetId="f5cc-8e5a-445d-bc09"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Fireteams" id="44a9-09d8-5488-c68a" hidden="false" sortIndex="2">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Alpha" hidden="false" id="059e-ddf3-daff-301a">
-              <profiles>
-                <profile name="Fireteam Alpha" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="90fd-4ed9-482f-9c7a">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Alpha.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="0300-a839-9e38-debb" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Beta" hidden="false" id="d0d7-0af2-9c22-df44">
-              <profiles>
-                <profile name="Fireteam Beta" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7fe8-9b74-a77a-141b">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Beta.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="6e1f-b537-004d-b4ad" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Charlie" hidden="true" id="e2b6-46bd-7452-14c4">
-              <profiles>
-                <profile name="Fireteam Charlie" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a5f1-c1e5-a1c3-6e14">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Charlie.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="6c18-e48f-3488-d4bf" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mamluk-Guarded" hidden="true" id="f849-f296-4186-3d72">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cb83-60ed-65ec-525d" includeChildSelections="true"/>
-              </constraints>
-              <profiles>
-                <profile name="Mamluk-Guarded" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2715-e5ab-4c06-9ab0">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with its Mamluk Faris bodyguard.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="30f6-07a5-f70d-8794" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="2890-2e4a-48b1-728d" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="100e-9f01-a44c-5cd4" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Concerted Attack" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5f9e-9b2a-8b9c-6cda">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a model in the FIRETEAM makes any kind of Attack ACTION (ranged or melee) against an opponent, where the other member of their FIRETEAM has already hit it with an attack ACTION during the same activation, the cost of a Bloodbath is reduced to three BLOOD MARKERS against this opponent, whether the model is standing or Down.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4a71-a6ff-87d2-d010">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Yeoman" hidden="false" id="f2c3-86d1-5924-093f">
@@ -3413,6 +3369,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Equipment" hidden="false" id="9bba-9a7d-3c8a-7ad9" type="selectionEntryGroup" targetId="d5c6-bf28-709b-7286"/>
         <entryLink import="true" name="Advancement" hidden="true" id="2bbe-4c1f-54b3-de54" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="b3cb-da2f-a0fe-0db9" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="fe3e-7703-ac96-dea8" type="selectionEntryGroup" targetId="ef6c-46c2-70ec-568e" sortIndex="2"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink targetId="2cfb-73f8-0df3-30e8" id="a6e1-faa0-a034-81c5" primary="false" name="New Antioch"/>
@@ -3507,100 +3464,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Fireteams" id="1d59-fbdf-d4ab-c0a0" hidden="false" sortIndex="2">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Alpha" hidden="false" id="d485-ae46-dc59-2334">
-              <profiles>
-                <profile name="Fireteam Alpha" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5c5e-aa9b-6e19-5f44">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Alpha.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="7432-addc-51d4-5652" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Beta" hidden="false" id="ce08-1f72-4454-b842">
-              <profiles>
-                <profile name="Fireteam Beta" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ce24-7651-83fa-949a">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Beta.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="0d80-a289-fb3c-4915" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Charlie" hidden="true" id="5710-d490-0898-98c1">
-              <profiles>
-                <profile name="Fireteam Charlie" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1f22-eade-7588-e814">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Charlie.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="aedb-67c2-ca61-9fa2" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mamluk-Guarded" hidden="true" id="a9c3-6195-700b-5914">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c7f1-e917-8257-888e" includeChildSelections="true"/>
-              </constraints>
-              <profiles>
-                <profile name="Mamluk-Guarded" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="304f-b2bb-4fa2-3819">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with its Mamluk Faris bodyguard.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="30f6-07a5-f70d-8794" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="8608-a453-5be0-0257" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6cd7-00f0-b17b-b00d" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Concerted Attack" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3389-ebd4-0ec0-ed03">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a model in the FIRETEAM makes any kind of Attack ACTION (ranged or melee) against an opponent, where the other member of their FIRETEAM has already hit it with an attack ACTION during the same activation, the cost of a Bloodbath is reduced to three BLOOD MARKERS against this opponent, whether the model is standing or Down.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e71b-bd4c-9c32-7a9f">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Sniper Priests" hidden="false" id="dd59-a783-dbb5-242f">
@@ -3685,10 +3548,12 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Equipment" hidden="false" id="4720-b974-1bbd-1680" type="selectionEntryGroup" targetId="d5c6-bf28-709b-7286"/>
         <entryLink import="true" name="Advancement" hidden="true" id="7d93-5b53-3283-3975" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="09d7-3a2e-aa88-9d1e" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="5619-8efd-7391-f6fd" type="selectionEntryGroup" targetId="ef6c-46c2-70ec-568e" sortIndex="2"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink targetId="3de0-192c-3ec2-51be" id="5994-7a77-128a-858e" primary="true" name="Elite"/>
         <categoryLink targetId="2cfb-73f8-0df3-30e8" id="4fef-45a2-9e20-0911" primary="false" name="New Antioch"/>
+        <categoryLink targetId="65d9-9d4b-c697-c9ef" id="d4e7-1519-44f7-f2a1" primary="false" name="Clergy"/>
       </categoryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
@@ -3702,100 +3567,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <entryLinks>
             <entryLink import="true" name="Supreme Blessing" hidden="false" id="d36c-1c60-83a7-2e5c" type="selectionEntry" targetId="856b-ba44-04c5-fdf5"/>
           </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Fireteams" id="e8d5-0428-6609-9a37" hidden="false" sortIndex="2">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Alpha" hidden="false" id="94ff-1a08-c585-5e26">
-              <profiles>
-                <profile name="Fireteam Alpha" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fecf-ecd7-97b2-406e">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Alpha.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="4aaf-d9ac-3343-1b06" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Beta" hidden="false" id="657c-4548-96cf-85de">
-              <profiles>
-                <profile name="Fireteam Beta" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="541a-de50-40fa-53ed">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Beta.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="a2c1-531a-3cf9-8afb" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Charlie" hidden="true" id="0544-298b-2312-c3a7">
-              <profiles>
-                <profile name="Fireteam Charlie" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6ee6-9411-82dd-76b7">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Charlie.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="94cb-304c-5106-9330" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mamluk-Guarded" hidden="true" id="7005-893e-6467-8b42">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7603-51ec-e672-80b3" includeChildSelections="true"/>
-              </constraints>
-              <profiles>
-                <profile name="Mamluk-Guarded" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5c6c-2f03-6ce9-80af">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with its Mamluk Faris bodyguard.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="30f6-07a5-f70d-8794" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="caa4-5a02-2a3e-42c0" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f79e-5775-69fe-6edd" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Concerted Attack" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2dcc-5ff3-15a1-48fc">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a model in the FIRETEAM makes any kind of Attack ACTION (ranged or melee) against an opponent, where the other member of their FIRETEAM has already hit it with an attack ACTION during the same activation, the cost of a Bloodbath is reduced to three BLOOD MARKERS against this opponent, whether the model is standing or Down.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cba0-7220-0896-8ae5">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
@@ -3904,6 +3675,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="bbaf-ae7c-9d0b-7315" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="becf-47ee-d1cd-e0de" type="selectionEntryGroup" targetId="ef6c-46c2-70ec-568e" sortIndex="2"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink targetId="2cfb-73f8-0df3-30e8" id="0bb4-c4a2-4738-99c5" primary="false" name="New Antioch"/>
@@ -3971,100 +3743,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               </profiles>
             </selectionEntry>
           </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Fireteams" id="5ac4-1889-8760-fe01" hidden="false" sortIndex="2">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Alpha" hidden="false" id="6f8c-62ab-3b0f-5548">
-              <profiles>
-                <profile name="Fireteam Alpha" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ee6c-b048-71b0-9ae0">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Alpha.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="cb7d-610e-2fd9-eeb9" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Beta" hidden="false" id="577c-8b49-12c4-344a">
-              <profiles>
-                <profile name="Fireteam Beta" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8ebf-eef8-5b2b-f827">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Beta.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="7c13-ca05-01c9-2873" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Charlie" hidden="true" id="db0d-c01b-11c2-d204">
-              <profiles>
-                <profile name="Fireteam Charlie" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7363-7b36-19f1-56c1">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Charlie.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="c31a-b02c-1478-f8f7" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mamluk-Guarded" hidden="true" id="fe79-600c-f9db-a1c6">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1f67-f24d-3a99-7328" includeChildSelections="true"/>
-              </constraints>
-              <profiles>
-                <profile name="Mamluk-Guarded" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="616f-9051-91e2-85b0">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with its Mamluk Faris bodyguard.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="30f6-07a5-f70d-8794" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="f214-5617-cb47-ddd9" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9819-012f-cd65-27ba" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Concerted Attack" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="396d-e874-f641-a698">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a model in the FIRETEAM makes any kind of Attack ACTION (ranged or melee) against an opponent, where the other member of their FIRETEAM has already hit it with an attack ACTION during the same activation, the cost of a Bloodbath is reduced to three BLOOD MARKERS against this opponent, whether the model is standing or Down.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="90a8-b821-c1da-c93c">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
@@ -4166,11 +3844,12 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Grenades" hidden="false" id="a44f-a7e7-8977-bfbf" type="selectionEntryGroup" targetId="9c37-58de-3fa2-bfd2" sortIndex="5"/>
-        <entryLink import="true" name="Weapons" hidden="false" id="47e8-1638-32b4-c5b3" type="selectionEntryGroup" targetId="24ae-224b-0680-a9bd" sortIndex="4"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="a44f-a7e7-8977-bfbf" type="selectionEntryGroup" targetId="9c37-58de-3fa2-bfd2" sortIndex="6"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="47e8-1638-32b4-c5b3" type="selectionEntryGroup" targetId="24ae-224b-0680-a9bd" sortIndex="5"/>
         <entryLink import="true" name="Equipment" hidden="false" id="88ab-3198-1620-4be6" type="selectionEntryGroup" targetId="d5c6-bf28-709b-7286"/>
         <entryLink import="true" name="Advancement" hidden="true" id="f77a-c54b-19ca-0efc" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="678a-1fdc-61b1-9f08" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="fc2f-9812-5772-b84d" type="selectionEntryGroup" targetId="ef6c-46c2-70ec-568e" sortIndex="2"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink targetId="2cfb-73f8-0df3-30e8" id="38f4-e719-e0a4-4f8b" primary="false" name="New Antioch"/>
@@ -4199,105 +3878,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Upgrades" id="98ce-071a-d3dd-cec5" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Upgrades" id="98ce-071a-d3dd-cec5" hidden="false" sortIndex="4">
           <entryLinks>
             <entryLink import="true" name="Supreme Blessing" hidden="false" id="eeb7-46d7-024d-94aa" type="selectionEntry" targetId="856b-ba44-04c5-fdf5"/>
             <entryLink import="true" name="Swiss Guard" hidden="false" id="5b34-fd2a-8764-c9ef" type="selectionEntry" targetId="c35e-c172-3e6b-1bda"/>
           </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Fireteams" id="ca40-2223-032f-ba26" hidden="false" sortIndex="2">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Alpha" hidden="false" id="1cff-b614-9aac-ed3b">
-              <profiles>
-                <profile name="Fireteam Alpha" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6c8f-7b00-c3a2-161b">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Alpha.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="5da4-5945-5a56-7b16" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Beta" hidden="false" id="02ee-859a-ae31-609a">
-              <profiles>
-                <profile name="Fireteam Beta" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="af17-a8ce-33ee-4431">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Beta.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="f2a2-63d6-2bf7-e029" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Charlie" hidden="true" id="9da9-fab1-d4af-e1f0">
-              <profiles>
-                <profile name="Fireteam Charlie" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="abbb-48b9-0120-facc">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Charlie.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="5eb2-cfb6-136a-1854" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mamluk-Guarded" hidden="true" id="ebe1-c665-f876-8d79">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="359a-dab9-4fe6-28f7" includeChildSelections="true"/>
-              </constraints>
-              <profiles>
-                <profile name="Mamluk-Guarded" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f8c7-7f9d-2737-e4d3">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with its Mamluk Faris bodyguard.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="30f6-07a5-f70d-8794" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="65e6-1639-1f00-2e4e" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="114b-f770-ddfe-a83c" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Concerted Attack" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3d12-2a12-40a3-2d67">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a model in the FIRETEAM makes any kind of Attack ACTION (ranged or melee) against an opponent, where the other member of their FIRETEAM has already hit it with an attack ACTION during the same activation, the cost of a Bloodbath is reduced to three BLOOD MARKERS against this opponent, whether the model is standing or Down.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="73ae-e7c2-a039-63d3">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
@@ -4359,105 +3944,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="697d-8353-cd4d-2999" includeChildSelections="true"/>
       </constraints>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Upgrades" id="f89b-b5e2-83d1-1aa9" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Upgrades" id="f89b-b5e2-83d1-1aa9" hidden="false" sortIndex="4">
           <entryLinks>
             <entryLink import="true" name="Supreme Blessing" hidden="false" id="5de5-4df3-caed-168a" type="selectionEntry" targetId="856b-ba44-04c5-fdf5"/>
             <entryLink import="true" name="Swiss Guard" hidden="false" id="c6c6-01de-71ee-390b" type="selectionEntry" targetId="c35e-c172-3e6b-1bda"/>
           </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Fireteams" id="611b-ed19-47e7-1991" hidden="false" sortIndex="2">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Alpha" hidden="false" id="5a45-61f8-9c53-8fef">
-              <profiles>
-                <profile name="Fireteam Alpha" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="da43-c232-acde-0ced">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Alpha.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="f995-5632-baea-e323" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Beta" hidden="false" id="f3d7-e4bf-7d86-b7c2">
-              <profiles>
-                <profile name="Fireteam Beta" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a6ca-858c-4c3c-4ec8">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Beta.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="0413-2f73-95d2-057d" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Charlie" hidden="true" id="a6a0-d2fa-8de7-1808">
-              <profiles>
-                <profile name="Fireteam Charlie" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2da9-7d5b-9b26-7e4e">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Charlie.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="5d00-f4bb-7d55-0583" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mamluk-Guarded" hidden="true" id="f398-00b5-3b86-2683">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="32da-0cde-f268-b249" includeChildSelections="true"/>
-              </constraints>
-              <profiles>
-                <profile name="Mamluk-Guarded" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0658-8073-c0b6-34cd">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with its Mamluk Faris bodyguard.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="30f6-07a5-f70d-8794" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="80e6-d897-8f9d-aa58" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cabf-1eb2-d566-870f" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Concerted Attack" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2d97-6db1-0abe-f2ac">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a model in the FIRETEAM makes any kind of Attack ACTION (ranged or melee) against an opponent, where the other member of their FIRETEAM has already hit it with an attack ACTION during the same activation, the cost of a Bloodbath is reduced to three BLOOD MARKERS against this opponent, whether the model is standing or Down.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c8df-de9c-2216-658f">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
@@ -4475,6 +3966,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <entryLinks>
         <entryLink import="true" name="Advancement" hidden="true" id="7d3d-35f5-4699-7992" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="080a-b497-4884-9ce9" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="d7e4-6880-ad30-6188" type="selectionEntryGroup" targetId="ef6c-46c2-70ec-568e" sortIndex="2"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Gas Mask" id="4ef0-fbb6-c122-d867" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
@@ -4490,6 +3982,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Equipment" hidden="false" id="5d62-27c4-ee31-e3d0" type="selectionEntryGroup" targetId="d5c6-bf28-709b-7286"/>
         <entryLink import="true" name="Advancement" hidden="true" id="0e84-e27e-39dc-bc6a" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="13f5-4bc7-9766-087f" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="32f2-9298-d972-93e6" type="selectionEntryGroup" targetId="ef6c-46c2-70ec-568e" sortIndex="2"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink targetId="2cfb-73f8-0df3-30e8" id="a6e6-8bb0-cf69-fba0" primary="false" name="New Antioch"/>
@@ -4550,100 +4043,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <entryLink import="true" name="Supreme Blessing" hidden="false" id="495b-7b85-44d6-1348" type="selectionEntry" targetId="856b-ba44-04c5-fdf5"/>
             <entryLink import="true" name="Swiss Guard" hidden="false" id="5df0-1a93-5c12-595a" type="selectionEntry" targetId="c35e-c172-3e6b-1bda"/>
           </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Fireteams" id="cfcd-c75a-3aa1-aef4" hidden="false" sortIndex="2">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Alpha" hidden="false" id="392e-5f85-af21-353c">
-              <profiles>
-                <profile name="Fireteam Alpha" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3358-091e-89f6-3b21">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Alpha.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="2f7b-7eaa-25cd-8207" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Beta" hidden="false" id="776d-ce03-f2bf-07d2">
-              <profiles>
-                <profile name="Fireteam Beta" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5e1c-1bca-7c4c-9efd">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Beta.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="0b3a-0b4f-df32-6c43" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fireteam Charlie" hidden="true" id="2f23-b9cf-3d18-af43">
-              <profiles>
-                <profile name="Fireteam Charlie" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6b6f-86e2-648e-829c">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Charlie.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="b27e-d1cf-8de5-1fa8" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mamluk-Guarded" hidden="true" id="cd3d-38ea-0cd8-8ddf">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="af1e-987d-293b-59dc" includeChildSelections="true"/>
-              </constraints>
-              <profiles>
-                <profile name="Mamluk-Guarded" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="aea7-40ca-6443-2a17">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with its Mamluk Faris bodyguard.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="30f6-07a5-f70d-8794" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="ab23-be84-85e1-7984" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6557-2173-4755-21d2" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Concerted Attack" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a222-fb83-54e7-0ad8">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a model in the FIRETEAM makes any kind of Attack ACTION (ranged or melee) against an opponent, where the other member of their FIRETEAM has already hit it with an attack ACTION during the same activation, the cost of a Bloodbath is reduced to three BLOOD MARKERS against this opponent, whether the model is standing or Down.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3af3-0d66-433e-3264">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <profiles>
@@ -5090,6 +4489,62 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 </modifier>
               </modifiers>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Red Brigade" hidden="false" id="ea95-2310-99f0-6e97">
+              <profiles>
+                <profile name="Wear and Tear" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9fb5-a8fc-0b91-acac">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Red Brigade Warband starts every game with 1 BLOOD MARKER for each 200 full ducats of the total Warband cost. Your opponent can distribute these between your troops, but not can only give 1 BLOOD MARKER per model as long as there are troops with no BLOOD MARKERs left. Max BLOOD MARKERs per model is 2.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="No Retreat" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f5d3-dd47-0e32-c9a7">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">No member of this Warband can ever leave melee combat voluntarily, except Mercy Dogs and those who they drag along them (see below).</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Trench Dogs" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f65c-42a1-f89f-cc00">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Red Brigade may buy several different types of Trench Dogs as detailed below.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Glory Hounds" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f293-ff40-03f9-3485">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Soldiers of New Antioch love heroic stories and improbable tall tales. Any dog that is part of the Red Brigade earns 2 Glory Points instead of 1 when they perform any Glorious Deed.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Remember the Fallen" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="980b-6ba6-daad-222c">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">After the battle, instead of taking the Exploration option of Reinforcement Option, the Red Brigade may recover all the weapons, armour and equipment of all the warriors of their own Warband who died in the battle. This does not include Allies &amp; Mercenaries since they are not Blood Pledges.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Live off the Land" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e43c-488e-c0d8-a80a">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Most of the time the Red Brigade operates deep within hostile territory. When playing campaigns, the Red Brigade cannot call for Reinforcements if it did so after their last game. Instead they must choose the Exploration or Rememeber the Fallen option.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Guns Blazing" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2513-5bb0-3625-f737">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">It is the tradition of the Brigade officers to pratice the two-pistol fighting style of St. Ernest. Lieutenant of the Warband can buy Gunslinger Skill (see Campaign rules) for the cost of +5 ducats.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Displeasure of the Church" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="af12-1ba2-d5da-0249">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Only few members of the clergy are willing to serve in the unit due the disregard of their lives they show. Your warband can have a maximum of two such characters, so you can have either 1 Trench Cleric and 1 Sniper Priest, or 2 Sniper Priests but no Trench Cleric.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="add" value="Displeasure of the Church: too many clergy characters (Sniper Priests/Trench Clerics); max 2 total." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="greaterThan" value="2" field="selections" scope="roster" childId="65d9-9d4b-c697-c9ef" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea95-2310-99f0-6e97" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
           </selectionEntries>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="self" shared="true" id="71df-c644-2dd0-276c-min" includeChildSelections="false"/>
@@ -5163,6 +4618,311 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9164-d39a-b49c-c129" includeChildSelections="true"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Trench Dogs of the Red Brigade" hidden="true" id="e558-982e-ccda-bbe7">
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="35"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Specialization" id="5165-30c7-d39e-e66b" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Guard Dog" hidden="false" id="4f32-2acd-646e-b2c5">
+              <profiles>
+                <profile name="Warning Howl" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7a63-cb40-df95-b9e9">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">No infiltrator can be placed within 12” of a Guard Dog, and you can charge any enemy within 4” of this dog even if it is out of sight.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Guard Dog" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="d52f-86b4-bf67-37b5">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">8&quot;/Infantry</characteristic>
+                    <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">0</characteristic>
+                    <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">0</characteristic>
+                    <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
+                    <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7244-54b5-9984-9f85" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mercy Dog" hidden="false" id="3fc9-edd8-0283-187b">
+              <profiles>
+                <profile name="Rescue Operation" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5c53-c576-7840-b408">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Mercy dogs can also drag any model within 1” that is Down at ½ speed with them, both with normal movement or when dashing.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Mercy Dog" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="028d-42bd-5416-a4df">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">8&quot;/Infantry</characteristic>
+                    <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">0</characteristic>
+                    <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">0</characteristic>
+                    <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
+                    <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Guardian Angel" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a73a-b0cf-21dd-a38a">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Mercy dogs carry a Medi-Kit which can be used by any friendly model on themselves within 1” of the dog</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="b098-d485-a286-ba4e" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Attack Dog" hidden="false" id="ad89-2d46-a3ae-2cd6">
+              <profiles>
+                <profile name="Attack Dog" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="e193-81ee-658c-bbc8">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">8&quot;/Infantry</characteristic>
+                    <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">N/A</characteristic>
+                    <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 Dice</characteristic>
+                    <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
+                    <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f8b-5b8f-742b-a71c" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <constraints>
+        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8ad8-a1f0-ebd3-34ff" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Bite" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="a413-643f-2229-c0cc">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
+            <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Dogs do not suffer penalties for fighting unarmed.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Four Paws" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="81b5-2b0d-8857-0631">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Dogs may take any Dash ACTION or jump/Diving Charge ACTION with bonus +1 DICE. They cannot climb sheer surfaces.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Trench Dog" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="e023-b74f-24ed-98b8">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">8&quot;/Infantry</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">0</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">0</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="3fc9-edd8-0283-187b" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="4f32-2acd-646e-b2c5" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="ad89-2d46-a3ae-2cd6" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea95-2310-99f0-6e97" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="Mercy Dog" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="3fc9-edd8-0283-187b" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="Guard Dog" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="4f32-2acd-646e-b2c5" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="Attack Dog" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="ad89-2d46-a3ae-2cd6" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="bd43-ddb1-262d-4489" id="d98a-fb86-340a-76a7" primary="true" name="Troop"/>
+        <categoryLink targetId="2cfb-73f8-0df3-30e8" id="0a9c-c632-bb40-c707" primary="false" name="New Antioch"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Grenade Carrier" hidden="false" id="5589-fa94-48a5-1d7f">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Shrapnel" id="e03b-a525-6f8c-c9f1" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+            <infoLink name="Assault" id="3af7-82f6-d8cf-63f7" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Blast" id="15c0-4ec2-c441-85db" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+            <infoLink name="Grenade" id="070b-096f-14e7-7eaa" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a036-eeeb-e581-92c6" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Carried Grenades" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="f580-8b00-a18a-0d48">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">GRENADE</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
+                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, SHRAPNEL, BLAST 2&quot;</characteristic>
+                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Models other than the original target roll Injuries with -1 DICE. 
+This dog cannot attack with this weapon, but any other model in the Warband (though not Allies &amp; Mercenaries, or a Combat Medic or other dogs) may use the grenades if they are within 1” of the dog at any point during their Activation.
+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Man&apos;s Best Friend" hidden="false" id="b629-dd71-c863-5db4">
+          <profiles>
+            <profile name="Man&apos;s Best Friend" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="109e-695b-e73d-e9f5">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This dog can form a fireteam with another model in your Warband.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="9b7f-21f4-1ff8-d931" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="16c0-ed65-44ba-15f1" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Crimson Communicant" hidden="true" id="08ba-0a4d-5ba4-dff6">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea95-2310-99f0-6e97" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Crimson Communicant" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="4fca-7401-fc43-e298">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">-1 Dice</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 Dice</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">40mm</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="3564-70ed-8e9e-6ee8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="2a4f-c258-5d70-a3c5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="decrement" value="1" field="5de9-d70e-9021-6f71">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="self" childId="b287-2326-e785-fe67" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="self" childId="e16d-0563-0aca-babe" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="-1" field="5de9-d70e-9021-6f71">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="e8e7-1db2-6be3-d1b7" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="-2" field="5de9-d70e-9021-6f71">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="self" childId="7ab3-49d1-4294-3f83" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="-3" field="5de9-d70e-9021-6f71">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="self" childId="e6ac-8562-3982-4bfc" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="self" childId="03eb-5358-03ae-8046" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <comment>armour adjustments</comment>
+            </modifierGroup>
+          </modifierGroups>
+        </profile>
+        <profile name="Strength through Pain" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f4c5-9d3c-ca75-7b30">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Crimson Communicant adds +1 DICE to its Melee characteristics for each 1 BLOOD MARKER it currently has.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink targetId="2cfb-73f8-0df3-30e8" id="89db-5234-0ffd-faf1" primary="false" name="New Antioch"/>
+        <categoryLink targetId="3de0-192c-3ec2-51be" id="da71-0f69-6473-ad8d" primary="true" name="Elite"/>
+        <categoryLink targetId="afcc-5f24-1c7c-63c4" id="9b07-c07b-cbdd-81db" primary="false" name="Strong"/>
+        <categoryLink targetId="914f-0020-0d97-e217" id="ac3d-8e73-a94b-0e6c" primary="false" name="Tough"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Advancement" hidden="true" id="55a4-91d8-86b3-b282" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="ba16-2673-6d94-5ac1" type="selectionEntryGroup" targetId="ef6c-46c2-70ec-568e" sortIndex="2"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="712f-fc20-8ae5-0b5f" type="selectionEntryGroup" targetId="24ae-224b-0680-a9bd" sortIndex="3"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="b3e1-04c2-fa21-6e01" type="selectionEntryGroup" targetId="9c37-58de-3fa2-bfd2" sortIndex="4"/>
+        <entryLink import="true" name="Armour" hidden="false" id="867f-1170-79a4-3838" type="selectionEntryGroup" targetId="8132-2c2e-56dc-14a6" sortIndex="5"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="58f0-2de0-1839-b65c" type="selectionEntryGroup" targetId="d5c6-bf28-709b-7286" sortIndex="6"/>
+        <entryLink import="true" name="Exploration Upgrades" hidden="false" id="8fd4-45b2-ff4b-f06c" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776" sortIndex="7"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Tough" id="acf3-26a0-78db-c299" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
+        <infoLink name="Strong" id="bb02-25f1-31e6-30c5" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6b28-6340-4a94-d517" includeChildSelections="true"/>
+      </constraints>
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="65"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <forceEntries>
     <forceEntry name="Warband" id="2e09-580e-e00b-d33d" hidden="false">
@@ -5181,6 +4941,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
   </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="Immobile" id="18c9-01d7-6be9-0859" hidden="true"/>
+    <categoryEntry name="Clergy" id="65d9-9d4b-c697-c9ef" hidden="true"/>
   </categoryEntries>
   <entryLinks>
     <entryLink import="true" name="Scripture Guardian" hidden="false" id="bbfa-0440-2fd3-da01" type="selectionEntry" targetId="08cc-f1b9-e991-e191">
