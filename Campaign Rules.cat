@@ -142,6 +142,15 @@
                         <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="fa2d-51f3-c793-e15f" includeChildSelections="true"/>
                       </constraints>
                     </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Anti-Pope of Avignon" hidden="false" id="3646-8192-6e5c-3253">
+                      <modifiers>
+                        <modifier type="set" value="false" field="hidden">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0b26-15c1-cebd-0077" shared="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
                 <selectionEntryGroup name="Exploration Rewards" id="6de0-2f63-f1b6-1824" hidden="false" sortIndex="1">
@@ -2628,6 +2637,92 @@ The saint guides your troops before each battle. The model with the skull gains 
             </modifier>
           </modifiers>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Anti-Pope of Avignon" id="d31b-7f13-ecad-5990" hidden="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Infect the Mind" hidden="false" id="24c5-495b-e996-ee93">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7c14-bd7f-dc96-6956" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Infect the Mind" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="41e6-a1f8-591e-1257">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the start of the battle, after the deployment, select one enemy model. You can move this model up to 6” in any direction you wish, though not into Melee combat, into impassable terrain or out of the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Eye of Beelzebub" hidden="false" id="9ac8-dffa-47f6-61b8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4307-4b37-5901-c715" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Eye of Beelzebub" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3e32-0114-1984-60e1">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The overwhelming mental pressure of this emissary of Beelzebub overwhelms any mind. With a successful ACTION this model can force any single enemy model with 24” that is in cover (but not in Melee combat) to move 1”to leave the cover. This model is moved by your opponent, and cannot take the model into Melee combat or into another cover.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Silvered Tongue" hidden="false" id="f32b-9aed-6387-c6b0">
+              <profiles>
+                <profile name="Silvered Tongue" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c5e5-de88-1fbe-868d">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">With a successful ACTION this model can force any opponent it is melee combat with to make one of its own Melee attacks against itself. You can choose which weapon to use.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1181-a575-ca26-7487" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Swine Hybrid" hidden="false" id="dc8c-e230-0ad3-81ff">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b84c-c801-7b6d-ae71" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Swine Hybrid" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8bdf-ca0e-2f66-cd03">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Movement Characteristic of this model is increased by 2”.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="increment" value="2" field="b725-e0a4-16ae-8df2" affects="profiles.Unit" scope="model"/>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Beelzebub&apos;s Wisdom" hidden="false" id="66e3-b616-ebc7-a878">
+              <profiles>
+                <profile name="Beelzebub&apos;s Wisdom" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e502-1151-67d4-c5c1">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Infested with the Black Grail, the head of this model is distended and liquid matter oozes out of its many trepanned holes. So great is the sheer willpower of this model that any enemy Charging it can only use their base Movment characteristics and not add D6 to determine if they reach the model or not.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a434-d146-667a-5084" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Special Assault Training" hidden="false" id="1f13-01ab-a17a-a527">
+              <profiles>
+                <profile name="Special Assault Training" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3e9a-70a7-c033-9ae2">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">As long as the target has at least 1 INFECTION MARKER when the attack is mad, alll attacks of this model need 1 less BLOOD MARKER/INFECTION MARKER to cause a Bloodbath.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6fe6-12ce-5315-bc61" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="3646-8192-6e5c-3253" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Melee &amp; Strength Skills" id="f04b-40da-ca56-b233" hidden="false">
@@ -3120,25 +3215,19 @@ The saint guides your troops before each battle. The model with the skull gains 
           </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Cup of Filth" hidden="true" id="9837-88e7-12ef-1be6">
-          <infoLinks>
-            <infoLink name="Consumable" id="3665-c971-4b05-0854" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
-          </infoLinks>
           <profiles>
             <profile name="Cup of Filth" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fe6e-1c07-510c-52ea">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before the battle begins, the model equipped with the cup may allow either an ELITE or up to four Thralls to drink
-from it. A model that drank from the cup gains +1 DICE to Dash until the end of the battle.
-
-Keywords: CONSUMABLE.</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062"> Before the battle begins, the model equipped with the cup may allow either one an ELITE or up to 4 Thralls to drink from it. A model that drank from the cup gains +1 DICE to Dash until the end of the battle. The Cup fills itself again after each battle.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="4"/>
           </costs>
           <constraints>
-            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="9e74-89fe-a358-4b84" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9e74-89fe-a358-4b84" includeChildSelections="true"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5696-c174-2891-cce1" includeChildSelections="false"/>
           </constraints>
           <modifiers>

@@ -668,7 +668,35 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Melee Weapons" id="20db-0edb-9d5e-17c9" hidden="false">
       <entryLinks>
-        <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="f078-5931-0a72-6dcc" type="selectionEntryGroup" targetId="8118-278a-73e1-1cd0" collective="false" collapsible="true"/>
+        <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="f078-5931-0a72-6dcc" type="selectionEntryGroup" targetId="8118-278a-73e1-1cd0" collective="false" collapsible="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Atonement Bell" hidden="true" id="0de4-111f-503c-60f9">
+              <profiles>
+                <profile name="Atonement Bell" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a7b5-4e6d-1d0e-de50">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This bell always takes the use of one hand of the Communicant. The Communicant can make an off-hand attack with the Bell. It causes no damage, but any enemy on a 40mm base or smaller hit with an Atonenment Bell can be moved D3 inches from the Communicant into any direction the Communicant chooses. This can break them out of melee combat (allowing free attacks), falling down, into hazardous terrain etc. It cannot be made to move the model into another Melee combat, however.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b39d-517f-0718-b0b2" includeChildSelections="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="bb79-627f-17cf-1ec5" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="08ba-0a4d-5ba4-dff6" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="1" field="bb79-627f-17cf-1ec5">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="08ba-0a4d-5ba4-dff6" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
         <entryLink import="true" name="Melee (Two-Handed)" hidden="false" id="196d-0066-9adb-ef69" type="selectionEntryGroup" targetId="9a78-862f-67eb-f06b" collapsible="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1c9c-0112-cb28-7e0e" includeChildSelections="false"/>
@@ -1512,31 +1540,6 @@
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="cdfd-1155-85af-7e8a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Atonement Bell" hidden="true" id="0de4-111f-503c-60f9">
-          <profiles>
-            <profile name="Atonement Bell" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a7b5-4e6d-1d0e-de50">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This bell always takes the use of one hand of the Communicant. The Communicant can make an off-hand attack with the Bell. It causes no damage, but any enemy on a 40mm base or smaller hit with an Atonenment Bell can be moved D3 inches from the Communicant into any direction the Communicant chooses. This can break them out of melee combat (allowing free attacks), falling down, into hazardous terrain etc. It cannot be made to move the model into another Melee combat, however.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b39d-517f-0718-b0b2" includeChildSelections="false"/>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="bb79-627f-17cf-1ec5" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08ba-0a4d-5ba4-dff6" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="1" field="bb79-627f-17cf-1ec5">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08ba-0a4d-5ba4-dff6" shared="true"/>
-              </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -4802,8 +4805,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, SHRAPNEL, BLAST 2&quot;</characteristic>
                 <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Models other than the original target roll Injuries with -1 DICE. 
-This dog cannot attack with this weapon, but any other model in the Warband (though not Allies &amp; Mercenaries, or a Combat Medic or other dogs) may use the grenades if they are within 1” of the dog at any point during their Activation.
-</characteristic>
+This dog cannot attack with this weapon, but any other model in the Warband (though not Allies &amp; Mercenaries, or a Combat Medic or other dogs) may use the grenades if they are within 1” of the dog at any point during their Activation.</characteristic>
               </characteristics>
             </profile>
           </profiles>
