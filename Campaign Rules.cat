@@ -2830,7 +2830,7 @@ The saint guides your troops before each battle. The model with the skull gains 
           <profiles>
             <profile name="Surgical Strike" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ea3b-49cf-c7f4-e1ae">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">One of the melee attacks of this model ignores all armour once per Activation.</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">One of the Melee Attacks of this model ignores all Armour per each Activation.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2918,7 +2918,7 @@ The saint guides your troops before each battle. The model with the skull gains 
           <profiles>
             <profile name="Point Blank" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d5b7-c00d-d1fa-7f37">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model makes a melee attack, it may make a ranged attack ACTION with a ranged weapon instead. This is instead of making any melee attack ACTIONS.</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model Makes a Melee Attack, it may make a Melee Attack ACTION with a Ranged Weapon it is equipped with instead of making any Melee Attack ACTIONS. This attack uses the model’s ranged characteristic. It can still use its Ranged Attack normally outside of Melee.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4234,7 +4234,7 @@ Keywords: CONSUMABLE</characteristic>
         <selectionEntry type="upgrade" import="true" name="Executioner&apos;s Axe" hidden="true" id="b3a8-7dea-49be-d447">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="7"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="6"/>
           </costs>
           <profiles>
             <profile name="Executioner&apos;s Axe" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="34bd-94d9-7eac-2499">
@@ -4243,7 +4243,7 @@ Keywords: CONSUMABLE</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
                 <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+2D to Injury Rolls</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">If the axe hits an enemy in melee, the model armed with it can take a second melee attack ACTION after resolving the damage from the first strike. This attack can be against the same or a different target</characteristic>
+                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">If the axe hits an enemy in melee, the model armed with it can take a second melee attack ACTION after resolving the damage from the first strike. This attack can be against the same or a different target. You can never make more than 2 attacks per Activation with this weapon, even if other bonuses would allow it.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4336,7 +4336,7 @@ Keywords: CONSUMABLE</characteristic>
           </constraints>
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="11"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="7"/>
           </costs>
           <comment>Elite only!</comment>
           <modifiers>
@@ -4601,7 +4601,7 @@ Keywords: CONSUMABLES</characteristic>
           </profiles>
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="12"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="10"/>
           </costs>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -4632,7 +4632,7 @@ Keywords: CONSUMABLES</characteristic>
         <selectionEntry type="upgrade" import="true" name="Beelzebub&apos;s Embrace" hidden="true" id="46b5-59af-5d44-2cb0">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="20"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="15"/>
           </costs>
           <profiles>
             <profile name="Beelzebub&apos;s Embrace" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0172-5d62-14d9-7627">
@@ -4953,7 +4953,7 @@ Keywords: CONSUMABLES</characteristic>
           <profiles>
             <profile name="Lordship of this World" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7735-5567-9b74-b8f2">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model carries a mark such as a living tattoo or painted rune carved by the hand of its infernal patron. After both sides have completely finished their deployment but before starting the battle, you may select one piece of terrain without any of your own models placed on it. It can be no bigger than 8” x 8” (an 8” section of trench, a wall, a tree, a building etc). You can move this piece of terrain, and any enemy models set upon it up to 6” in any direction, though it cannot be moved out of the battlefield even partially. If it touches any models when you move it the models it touches are set aside and the player controlling them can redeploy them as if they had not been deployed at all thus far.</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">In the beginning of each Battle, take 3 six-sided dice, set them at 6, and set them aside. During the battle whenever any other D6 roll is taken (save for Injury rolls), you can replace any one dice with one of the 6s before rolling the rest. Only one dice can be used to influence a single dice roll. Note that if the model in possession of this item is takein Out of Action, discard these dice immediately.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4961,7 +4961,7 @@ Keywords: CONSUMABLES</characteristic>
         <selectionEntry type="upgrade" import="true" name="Restraining Muzzle" hidden="true" id="1a9c-7660-b193-7734">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="1"/>
           </costs>
           <constraints>
             <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="de28-a93d-4813-0547" includeChildSelections="true"/>

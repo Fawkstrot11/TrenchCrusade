@@ -1553,6 +1553,18 @@
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <modifiers>
+        <modifier type="add" value="Max 1 Ranged Weapon on Yoke Fiend" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="model" childId="c9e2-5728-f485-e683" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="2" field="selections" scope="model" childId="658a-8247-8e8a-8f85" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Utility Hand" id="2c66-b5c4-72e2-82ed" hidden="false">
       <selectionEntries>

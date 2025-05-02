@@ -539,7 +539,6 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0b26-15c1-cebd-0077" shared="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="eee9-35a4-9eda-70e9" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
@@ -569,7 +568,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Specialization" id="eef4-f47a-3aa7-e393" hidden="false">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Guard Dog" hidden="false" id="4d84-784e-a2c6-53c0">
+            <selectionEntry type="upgrade" import="true" name="Guard Dog" hidden="false" id="4d84-784e-a2c6-53c0" sortIndex="2">
               <profiles>
                 <profile name="Warning Howl" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="13c9-c695-ecd5-08a5">
                   <characteristics>
@@ -590,8 +589,20 @@
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="1"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="44b9-e92b-2dc0-6820" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0b26-15c1-cebd-0077" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Martyrdom Dog" hidden="true" id="d196-34d1-a003-da6f">
+            <selectionEntry type="upgrade" import="true" name="Martyrdom Dog" hidden="true" id="d196-34d1-a003-da6f" sortIndex="4">
               <profiles>
                 <profile name="Martyrdom Dog" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="a7bd-81f7-6908-8080">
                   <characteristics>
@@ -620,7 +631,7 @@
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mercy Dog" hidden="false" id="6871-d12d-d7fc-bb03">
+            <selectionEntry type="upgrade" import="true" name="Mercy Dog" hidden="true" id="6871-d12d-d7fc-bb03" sortIndex="3">
               <profiles>
                 <profile name="Rescue Operation" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8965-7c21-d9eb-7a0e">
                   <characteristics>
@@ -646,8 +657,19 @@
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="1"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Hellhound" hidden="true" id="b990-d914-9dce-66af">
+            <selectionEntry type="upgrade" import="true" name="Hellhound" hidden="true" id="b990-d914-9dce-66af" sortIndex="5">
               <profiles>
                 <profile name="Hellhound" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="35df-a599-1589-8c23">
                   <characteristics>
@@ -684,6 +706,7 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="44b9-e92b-2dc0-6820" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0b26-15c1-cebd-0077" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -692,7 +715,8 @@
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b4d4-3f4a-f7ed-98c4" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b4d4-3f4a-f7ed-98c4-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b4d4-3f4a-f7ed-98c4-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>

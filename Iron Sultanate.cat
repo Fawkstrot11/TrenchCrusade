@@ -2775,6 +2775,16 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
                 <condition type="atLeast" value="1" field="selections" scope="self" childId="6603-2315-97b5-d845" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="2a4f-c258-5d70-a3c5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="3564-70ed-8e9e-6ee8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <modifierGroups>
             <modifierGroup type="and">
@@ -2816,7 +2826,7 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Alchemical Formulae" id="8f94-1e35-3499-7de7" hidden="false" sortIndex="1">
+        <selectionEntryGroup name="Alchemical Formulae" id="8f94-1e35-3499-7de7" hidden="false" sortIndex="2">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Wings" hidden="false" id="f5d7-6c47-430c-2666" sortIndex="1">
               <costs>
@@ -3137,7 +3147,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Weapons" id="a51a-917a-e4aa-987c" hidden="true" sortIndex="2">
+        <selectionEntryGroup name="Weapons" id="a51a-917a-e4aa-987c" hidden="true" sortIndex="3">
           <selectionEntryGroups>
             <selectionEntryGroup name="Ranged Weapons" id="4b28-56a0-0687-8294" hidden="false" sortIndex="1">
               <entryLinks>
@@ -3312,6 +3322,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <condition type="atLeast" value="1" field="selections" scope="model" childId="5dc9-f57b-d3e0-5003" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="add" value="Max 1 Shield!" field="error">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="parent" childId="99ce-8e70-94c9-35c4" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -3351,6 +3366,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Sultanate" hidden="false" id="1ba9-dfde-3196-03ce" targetId="fd8d-e9e0-2540-a257" primary="false"/>
+        <categoryLink targetId="71f8-ee29-0f90-59ec" id="4031-e719-ff12-a353" primary="false" name="Limited Potential"/>
       </categoryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="40"/>
@@ -3371,6 +3387,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="2aee-0c22-9e87-ddda" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Advancement" hidden="false" id="8df0-9666-4b98-f41b" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" sortIndex="1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Pile of Stuff" hidden="true" id="c0cb-8f53-98d4-abc9">
@@ -4465,9 +4482,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Armour" hidden="false" id="1374-b153-d240-f4ed" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365"/>
-        <entryLink import="true" name="Wind Amulet" hidden="false" id="3fd1-e13c-728e-51a2" type="selectionEntry" targetId="f9dd-df87-c671-55e5" sortIndex="2"/>
+        <entryLink import="true" name="Wind Amulet" hidden="false" id="3fd1-e13c-728e-51a2" type="selectionEntry" targetId="f9dd-df87-c671-55e5" sortIndex="3"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="45d5-0f29-64e0-22cc" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
-        <entryLink import="true" name="Fireteam" hidden="false" id="6a89-79a5-2e61-4b71" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="1"/>
+        <entryLink import="true" name="Fireteam" hidden="false" id="6a89-79a5-2e61-4b71" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="2"/>
+        <entryLink import="true" name="Advancement" hidden="false" id="18b7-2453-fabe-c0c1" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" sortIndex="1"/>
       </entryLinks>
       <profiles>
         <profile name="Lion of Jabir" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="2ce6-a5e6-fd5e-9b11">
@@ -4511,6 +4529,13 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <comment>armour adjustments</comment>
             </modifierGroup>
           </modifierGroups>
+          <modifiers>
+            <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="2a4f-c258-5d70-a3c5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Artificial Body" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c57a-8333-1d35-ae34">
           <characteristics>
@@ -4540,6 +4565,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <categoryLinks>
         <categoryLink targetId="bd43-ddb1-262d-4489" id="5129-9180-a7e3-500c" primary="true" name="Troop"/>
         <categoryLink targetId="fd8d-e9e0-2540-a257" id="b45e-f95a-490e-dd75" primary="false" name="Sultanate"/>
+        <categoryLink targetId="71f8-ee29-0f90-59ec" id="31e6-190b-07cd-3b20" primary="false" name="Limited Potential"/>
       </categoryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="60"/>
