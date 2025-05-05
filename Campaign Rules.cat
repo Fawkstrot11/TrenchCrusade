@@ -151,6 +151,15 @@
                         </modifier>
                       </modifiers>
                     </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Temporal Lord" hidden="true" id="d457-01c7-0edd-c7b6">
+                      <modifiers>
+                        <modifier type="set" value="false" field="hidden">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
                 <selectionEntryGroup name="Exploration Rewards" id="6de0-2f63-f1b6-1824" hidden="false" sortIndex="1">
@@ -2775,6 +2784,89 @@ The saint guides your troops before each battle. The model with the skull gains 
               </conditions>
             </modifier>
           </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Temporal Lord" id="268b-10db-0a46-0fab" hidden="false">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d457-01c7-0edd-c7b6" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Firearm Procurement" hidden="false" id="c2f2-d6ba-3f54-d80c">
+              <profiles>
+                <profile name="Firearm Procurement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dad1-665f-c7fe-e582">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The cost of any ranged weapon worth 20 ducats or more is reduced by 5 ducats.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0098-086a-fd23-f6ec" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mendelist Chemicals" hidden="false" id="6c4c-b633-2f4e-bc05">
+              <profiles>
+                <profile name="Mendelist Chemicals" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4efa-4ea0-1d4a-64e3">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">BLOOD MARKERS of this model cannot be added to the Injury rolls against this model. Other bonuses to the Injury rolls apply, and Bloodbath against this model works as normal.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3aa4-4d5e-c5a3-ab61" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Armour &amp; Equipment Procurement" hidden="false" id="42b0-5239-0e23-6203">
+              <profiles>
+                <profile name="Armour &amp; Equipment Procurement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="acfc-36d6-c2eb-ec26">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The cost of any suit of armour or equipment worth 20 ducats or more is reduced by 5 ducats.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7f92-23b4-a52a-038d" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Melee Weapon Procurement" hidden="false" id="e572-8027-080a-b6d8">
+              <profiles>
+                <profile name="Melee Weapon Procurement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ebb4-41e8-2920-dbc6">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The cost of any melee weapon worth 20 ducats or more is reduced by 5 ducats. (Note: This currently does nothing.)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="50aa-9501-07b3-24b5" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sniper School" hidden="false" id="ce06-4e8b-79d8-779d">
+              <profiles>
+                <profile name="Sniper School" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="30b3-2e76-f66a-e874">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">All Ranged attacks of this model need 1 less BLOOD MARKER to cause a Bloodbath.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3efc-7a36-0f2e-f3be" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Special Assault Training" hidden="false" id="3325-14ce-ea1f-2e76">
+              <profiles>
+                <profile name="Special Assault Training" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="57c7-f691-cd5f-27a4">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062"> All Melee attacks of this model need 1 less BLOOD MARKER to cause a Bloodbath.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ff1e-a89b-2dab-9529" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
