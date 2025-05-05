@@ -236,6 +236,22 @@ Keywords: CONSUMABLE</characteristic>
             <infoLink name="Field Shrine" id="b283-1481-8991-c61c" hidden="false" type="profile" targetId="76e2-0e5b-972a-0f69"/>
           </infoLinks>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Sniper Scope (Found)" hidden="true" id="3246-08a1-0e81-2409">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7e01-24e1-a63d-b901" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9bdf-c012-bc96-efb9" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Sniper Scope" id="2484-a18b-d985-5880" hidden="false" type="profile" targetId="5a48-9735-499f-e394"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2986-1070-2fb0-de35" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Headgear" id="72b4-7141-542a-db35" hidden="false" sortIndex="1">

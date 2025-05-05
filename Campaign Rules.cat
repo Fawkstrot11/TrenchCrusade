@@ -28,7 +28,7 @@
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Enabled" hidden="false" id="afdf-43aa-a03d-918b" sortIndex="3">
               <selectionEntryGroups>
-                <selectionEntryGroup name="Patron Selection" id="e10f-3251-be80-f32f" hidden="false" sortIndex="2">
+                <selectionEntryGroup name="Patron Selection" id="e10f-3251-be80-f32f" hidden="false" sortIndex="3">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="self" shared="true" id="fcfb-6a71-12cb-16b3-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="self" shared="true" id="fcfb-6a71-12cb-16b3-max" includeChildSelections="false"/>
@@ -366,9 +366,39 @@ The saint guides your troops before each battle. The model with the skull gains 
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5e6e-94c3-526e-5c57" includeChildSelections="false"/>
                       </constraints>
                     </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Sniper Nest: Scope" hidden="true" id="2986-1070-2fb0-de35">
+                      <profiles>
+                        <profile name="Found a Sniper Scope" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8c06-3e5e-14ee-2494">
+                          <characteristics>
+                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">You have found a single Sniper Scope for use.</characteristic>
+                          </characteristics>
+                          <modifiers>
+                            <modifier type="set" value="At the start of each battle, select any one model (friend or foe). That model starts the battle with +1 INFECTION MARKER." field="4834-43a9-1c93-9062">
+                              <conditions>
+                                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0b26-15c1-cebd-0077" shared="true"/>
+                              </conditions>
+                            </modifier>
+                          </modifiers>
+                        </profile>
+                      </profiles>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="645d-be48-328f-dd88" includeChildSelections="false"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="false" field="hidden">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d54d-055d-bbc0-a20f" shared="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
-                <selectionEntryGroup name="Exploration Skills" id="ce06-c033-5a6b-c1d4" hidden="false">
+                <selectionEntryGroup name="Exploration Skills" id="ce06-c033-5a6b-c1d4" hidden="false" sortIndex="6">
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Extra Dice" hidden="false" id="fa3c-8a72-aaf6-2687">
                       <profiles>
@@ -508,8 +538,8 @@ The saint guides your troops before each battle. The model with the skull gains 
                 </modifier>
               </modifiers>
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Warchest of Ducats" hidden="false" id="f192-897d-59d9-7a91" sortIndex="3"/>
-                <selectionEntry type="upgrade" import="true" name="Unleveraged Glory" hidden="false" id="98e2-3145-70b3-fe07" sortIndex="4"/>
+                <selectionEntry type="upgrade" import="true" name="Warchest of Ducats" hidden="false" id="f192-897d-59d9-7a91" sortIndex="4"/>
+                <selectionEntry type="upgrade" import="true" name="Unleveraged Glory" hidden="false" id="98e2-3145-70b3-fe07" sortIndex="5"/>
               </selectionEntries>
             </selectionEntry>
           </selectionEntries>
