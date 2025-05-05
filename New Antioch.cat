@@ -640,6 +640,11 @@
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="increment" value="1" field="db3e-7b72-f006-1491">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="a163-1321-9e47-eb08" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="db3e-7b72-f006-1491" includeChildSelections="true"/>

@@ -1564,6 +1564,29 @@ The saint guides your troops before each battle. The model with the skull gains 
                         </modifier>
                       </modifiers>
                     </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Knowledge of the Tank-Splitter Sword" hidden="false" id="a163-1321-9e47-eb08">
+                      <profiles>
+                        <profile name="Knowledge of the Tank-Splitter Sword" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8259-863c-5f9e-12d5">
+                          <characteristics>
+                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband may take an additional Tank-Splitter Sword.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d7d-de71-a6e8-b0c3" includeChildSelections="false"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
