@@ -601,6 +601,9 @@
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3932-e824-7713-45b8" includeChildSelections="true"/>
+              </constraints>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Martyrdom Dog" hidden="true" id="d196-34d1-a003-da6f" sortIndex="4">
               <profiles>
@@ -630,6 +633,9 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7123-6d69-2b7a-aefa" includeChildSelections="true"/>
+              </constraints>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Mercy Dog" hidden="true" id="6871-d12d-d7fc-bb03" sortIndex="3">
               <profiles>
@@ -668,6 +674,9 @@
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e5e6-d539-4d10-1cb4" includeChildSelections="true"/>
+              </constraints>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Hellhound" hidden="true" id="b990-d914-9dce-66af" sortIndex="5">
               <profiles>
@@ -712,11 +721,19 @@
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ee60-7b0a-3bed-63a3" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="None" hidden="false" id="24d0-3e5b-6567-9318" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="03fa-8782-adc9-aa97" includeChildSelections="true"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b4d4-3f4a-f7ed-98c4-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b4d4-3f4a-f7ed-98c4-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b4d4-3f4a-f7ed-98c4-max-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b4d4-3f4a-f7ed-98c4-max-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
