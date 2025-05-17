@@ -268,6 +268,18 @@
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-2</characteristic>
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">40mm</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="3564-70ed-8e9e-6ee8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="2a4f-c258-5d70-a3c5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Barbed Embrace" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fa62-4d41-74e9-b543">
           <characteristics>
@@ -291,7 +303,7 @@
         <infoLink name="Fear" id="97e7-67ff-2e43-bf76" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Reaping Claws" hidden="false" id="36b3-8741-24f6-75da">
+        <selectionEntry type="upgrade" import="true" name="Reaping Claws" hidden="false" id="36b3-8741-24f6-75da" sortIndex="2">
           <profiles>
             <profile name="Repaing Claws" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="7d25-fae7-c629-94ef">
               <characteristics>
@@ -337,7 +349,28 @@
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set-primary" value="bd43-ddb1-262d-4489" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="remove" value="3dfb-701d-e89c-eba2" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Advancement" hidden="true" id="e858-99d7-d563-0eb2" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Sin Eater" hidden="true" id="4703-d968-d52d-46b5">
       <categoryLinks>
@@ -940,4 +973,7 @@
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
+  <catalogueLinks>
+    <catalogueLink type="catalogue" name="Campaign Rules" id="328d-52d6-aeeb-4d02" targetId="ba52-3616-d7f9-8d0c"/>
+  </catalogueLinks>
 </catalogue>

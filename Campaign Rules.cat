@@ -779,31 +779,19 @@ The saint guides your troops before each battle. The model with the skull gains 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c31-b33c-aa4f-473b" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Muscle Damage" hidden="false" id="4845-23cb-4415-852e" sortIndex="14">
+        <selectionEntry type="upgrade" import="true" name="Minor Wound" hidden="false" id="4845-23cb-4415-852e" sortIndex="15">
           <profiles>
-            <profile name="Muscle Damage" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="26c9-35d7-274b-3fd8">
+            <profile name="Minor Wound" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="26c9-35d7-274b-3fd8">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model cannot carry HEAVY weapons.</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">After receiving this injury, this model cannot be fielded next battle. It maintains a wound.</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <modifiers>
-            <modifier type="add" value="Muscle Damage: No Heavy weapons!" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model" childId="70c9-988d-71a7-7654" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="model" childId="4845-23cb-4415-852e" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="250d-ace7-38f7-3866" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Hardened" hidden="false" id="ba58-7252-8cee-bc76" sortIndex="15">
+        <selectionEntry type="upgrade" import="true" name="Hardened" hidden="false" id="ba58-7252-8cee-bc76" sortIndex="16">
           <profiles>
             <profile name="Hardened" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1edf-844c-2ff1-c326">
               <characteristics>
@@ -815,16 +803,104 @@ The saint guides your troops before each battle. The model with the skull gains 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e887-ab98-f729-7862" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Facial Scar" hidden="false" id="b9a1-e5b7-03d7-2063" sortIndex="16">
+        <selectionEntry type="upgrade" import="true" name="Facial Scar" hidden="false" id="b9a1-e5b7-03d7-2063" sortIndex="17">
           <profiles>
             <profile name="Facial Scar" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="039f-ea9e-d91a-8c8c">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Due to a grudge, his model gains +1 DICE for all melee attack ACTIONS against all enemies with the same Faction Keyword that took this character Out of Action. No Battle Scar is suffered.</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Due to a grudge, this model gains +1 DICE for all melee attack ACTIONS against all enemies with the same Faction Keyword that took this character Out of Action. No Battle Scar is suffered.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b1fc-ffcc-5477-d6e6" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Target of Ire" id="a302-6b31-d9d6-4098" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Scarred by the Grail" hidden="false" id="47a8-1ec3-906d-c4b0">
+                  <profiles>
+                    <profile name="Scarred by the Grail" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5524-ece8-862b-08af">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model gains +1 DICE for all melee attack ACTIONS against all enemies with the Faction Keyword &quot;Black Grail&quot;</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Scarred by the Court" hidden="false" id="dbae-1a8a-f072-4a17">
+                  <profiles>
+                    <profile name="Scarred by the Court" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8a2f-c5c7-0d6c-7a58">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model gains +1 DICE for all melee attack ACTIONS against all enemies with the Faction Keyword &quot;The Court&quot;</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Scarred by the Heretics" hidden="false" id="7754-da24-d5aa-37ca">
+                  <profiles>
+                    <profile name="Scarred by the Heretics" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fcca-5efb-2f2f-b181">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model gains +1 DICE for all melee attack ACTIONS against all enemies with the Faction Keyword &quot;Heretic&quot;</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Scarred by the Sultanate" hidden="false" id="48fb-c178-f2c6-fd03">
+                  <profiles>
+                    <profile name="Scarred by the Sultanate" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d077-722d-5f8d-9817">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model gains +1 DICE for all melee attack ACTIONS against all enemies with the Faction Keyword &quot;Sultanate&quot;</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Scarred by the Antiochians" hidden="false" id="dc5a-970a-3d95-cab6">
+                  <profiles>
+                    <profile name="Scarred by the Antiochians" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a374-26cc-69d2-f083">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model gains +1 DICE for all melee attack ACTIONS against all enemies with the Faction Keyword &quot;New Antioch&quot;</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Scarred by the Pilgrims" hidden="false" id="9cfc-db10-0f04-7d47">
+                  <profiles>
+                    <profile name="Scarred by Pilgrims" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="409e-5caa-c259-c670">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model gains +1 DICE for all melee attack ACTIONS against all enemies with the Faction Keyword &quot;Pilgrim&quot;</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="self" shared="true" id="ed20-5d3f-9942-2b74-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="self" shared="true" id="ed20-5d3f-9942-2b74-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Muscle Damage" hidden="false" id="e7ec-ef3c-adb0-566a" sortIndex="14">
+          <profiles>
+            <profile name="Muscle Damage" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cb08-b5c8-1bdb-e16a">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model cannot carry HEAVY weapons.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="add" value="Muscle Damage: No Heavy weapons!" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="70c9-988d-71a7-7654" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="e7ec-ef3c-adb0-566a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e552-13ca-f434-ec3a" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -3012,7 +3088,7 @@ The saint guides your troops before each battle. The model with the skull gains 
           <profiles>
             <profile name="Champion" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="93c1-3860-2560-b0f2">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model makes a melee attack, it can make an additional melee attack ACTION with a -1 DICE penalty to hit, using a single melee weapon it is equipped with.</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model makes a Melee Attack, it can make a single additional Melee Attack ACTION with a -1 DICE penalty to hit using a single melee weapon it’s equipped with. For example, an Observer could make 3 Attacks using this skill.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3052,7 +3128,7 @@ The saint guides your troops before each battle. The model with the skull gains 
           <profiles>
             <profile name="Gunslinger" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ff45-2e53-f79a-9c54">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If armed with two pistols, this model can make ranged attack ACTIONS with both of them when making a ranged attack. In addition, this model suffers no penalty when using a pistol as an Off-Hand weapon.</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If armed with two “pistols”, this model can make Ranged Attack ACTIONS with each of them and still use them in Melee. These are two separate ACTIONS. In addition, this model suffers no penalty when using a “pistol” as an Off-Hand weapon. It gives normal “pistols” the character uses the Keyword ASSAULT.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3112,7 +3188,7 @@ The saint guides your troops before each battle. The model with the skull gains 
           <profiles>
             <profile name="Point Blank" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d5b7-c00d-d1fa-7f37">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model Makes a Melee Attack, it may make a Melee Attack ACTION with a Ranged Weapon it is equipped with instead of making any Melee Attack ACTIONS. This attack uses the model’s ranged characteristic. It can still use its Ranged Attack normally outside of Melee.</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model Makes a Melee Attack, it may make a Melee Attack ACTION with a Ranged Weapon (using its Ranged characteristic) instead of making any Melee Attack ACTIONS using the model’s ranged characteristic. It can still use its Ranged Attack normally outside of Melee.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3847,8 +3923,7 @@ The saint guides your troops before each battle. The model with the skull gains 
           <profiles>
             <profile name="Smoke Screen" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b24b-1f30-3ef1-00cb">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the beginning of the battle, the model equipped with this smoke screen may deploy it. If they do, one quarter of the battlefield becomes covered in a thick layer of smoke. All ranged attacks that pass through any part of it suffer -1 DICE to hit.
-Keywords: CONSUMABLE</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the beginning of the battle, the model equipped with this smokescreen may deploy it. If they do, one quarter (top left or right or bottom left or right) of the battlefield becomes covered in a thick layer of smoke. All Ranged Attacks that pass through any part of it suffer -1 DICE to hit.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3934,7 +4009,7 @@ Keywords: CONSUMABLE</characteristic>
           </constraints>
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="5"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="4"/>
           </costs>
           <comment>Elite only!</comment>
           <modifiers>
@@ -3993,437 +4068,6 @@ Keywords: CONSUMABLE</characteristic>
               </conditionGroups>
             </modifier>
           </modifiers>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Chosen Title" id="fa10-d3de-5f56-04ba" hidden="false">
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Heavy Flamethrowers" hidden="true" id="4bea-b5e2-2b9d-fcd3">
-                  <profiles>
-                    <profile name="Entitled to Heavy Flamethrowers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="61e9-7a36-04f0-8582">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Heavy Flamethrower.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b50d-4459-67f5-3114" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Automatic Pistols" hidden="true" id="0330-4e75-a7be-2db6">
-                  <profiles>
-                    <profile name="Entitled to Automatic Pistols" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5e70-9ebd-b81a-cb5c">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Automatic Pistol.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c9c5-de34-2fb1-6a6f" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Submachine Guns" hidden="true" id="4cf3-bdfa-9260-a828">
-                  <profiles>
-                    <profile name="Entitled to Submachine Guns" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8fa3-b53f-c08c-702f">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Submachine Gun.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d35-594f-1ad7-dd6e" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Automatic Rifles" hidden="true" id="b3b1-2e89-19e9-624d">
-                  <profiles>
-                    <profile name="Entitled to Automatic Rifles" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2e46-7b20-fcf1-73f7">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Automatic Rifle.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc1b-f3dd-29ae-ca75" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Automatic Shotguns" hidden="true" id="6ef1-51b6-9a26-cc36">
-                  <profiles>
-                    <profile name="Entitled to Automatic Shotguns" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7c07-1a59-04ab-7d66">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Automatic Shotgun.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c0da-9099-e820-2bd9" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Machine Armour" hidden="true" id="e6ef-68d4-a0e4-379d">
-                  <profiles>
-                    <profile name="Entitled to Machine Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5611-1109-e379-83a2">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Machine Armour.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab36-e9ec-eac5-a659" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Sniper Rifles" hidden="true" id="a252-0110-1823-e0f9">
-                  <profiles>
-                    <profile name="Entitled to Sniper Rifles" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="eb2a-463b-9c4a-e20e">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Sniper Rifle.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f47-770f-bc56-bc32" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Grenade Launchers" hidden="true" id="edfb-8199-6bb5-7556">
-                  <profiles>
-                    <profile name="Entitled to Grenade Launchers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="323b-8d17-a5b8-869b">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Grenade Launcher.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="152d-a68b-0dc2-c8c5" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Incendiary Grenades" hidden="true" id="c8f3-1e8b-6a3c-b453">
-                  <profiles>
-                    <profile name="Entitled to Incendiary Grenades" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7b3c-21f9-dc69-42cb">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Incendiary Grenade.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1500-d7d5-76c2-2d7b" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Machine Guns" hidden="true" id="c15a-6239-aeb2-3229">
-                  <profiles>
-                    <profile name="Entitled to Machine Guns" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7768-e960-5313-055c">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Machine Gun.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acec-1f52-74bc-1c97" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Flamethrowers" hidden="true" id="7a2b-8955-0ed6-426c">
-                  <profiles>
-                    <profile name="Entitled to Flamethrowers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="735d-318e-5f35-3aa3">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Flamethrower.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6ce1-1884-2ff6-fec1" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Heavy Shotguns" hidden="true" id="d523-deea-cb75-403e">
-                  <profiles>
-                    <profile name="Entitled to Heavy Shotguns" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8aea-2a61-9ad6-1c32">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Heavy Shotgun.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c8de-4d04-22fd-f427" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Satchel Charges" hidden="true" id="b39d-c158-fd2d-7f3d">
-                  <profiles>
-                    <profile name="Entitled to Satchel Charges" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3dd8-da69-6ac5-bdca">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Satchel Charge.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de18-6fa5-2f89-3c09" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Hellblades" hidden="true" id="8802-f3e8-dd87-f06e">
-                  <profiles>
-                    <profile name="Entitled to Hellblades" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="da9e-6d24-6c55-f45c">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Hellblade.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="989f-ab10-5a70-1144" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Anti-Material Rifles" hidden="true" id="ad7e-8af4-357c-b8ef">
-                  <profiles>
-                    <profile name="Entitled to Anti-Material Rifles" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="176a-1759-a80c-ea2d">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Anti-Material Rifle.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7507-7098-f555-7463" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Tarnished Armour" hidden="true" id="94fd-1ae4-a167-310c">
-                  <profiles>
-                    <profile name="Entitled to Tarnished Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="405f-d81b-3d6f-2074">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Tarnished Armour.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="248d-537f-568e-1818" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Sacrificial Blades" hidden="true" id="e9ef-e201-bd31-38c6">
-                  <profiles>
-                    <profile name="Entitled to Sacrificial Blades" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b666-f7eb-ac6f-ac41">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Sacrificial Blade.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58ca-1201-1c6c-0986" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Entitled to Coin Hammers" hidden="true" id="20f6-68af-9eae-0e73">
-                  <profiles>
-                    <profile name="Entitled to Coin Hammers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f750-d97a-5fcf-b22d">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Coin Hammer.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="56d9-beb3-d430-3eb7" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-              </selectionEntries>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3498-483b-77cd-b565-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3498-483b-77cd-b565-max" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Executioner&apos;s Axe" hidden="true" id="b3a8-7dea-49be-d447">
           <costs>
@@ -5589,4 +5233,474 @@ If a Hunter of the Left-hand path wears this Cloak, it cannot wear its Oracle Be
     </selectionEntryGroup>
     <selectionEntryGroup name="Pile of Stuff" id="14de-d84a-4613-6714" hidden="false"/>
   </sharedSelectionEntryGroups>
+  <sharedSelectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Battlefield Title" hidden="true" id="74e6-0563-729c-5a06">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Chosen Title" id="fa10-d3de-5f56-04ba" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Heavy Flamethrowers" hidden="true" id="4bea-b5e2-2b9d-fcd3">
+              <profiles>
+                <profile name="Entitled to Heavy Flamethrowers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="61e9-7a36-04f0-8582">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Heavy Flamethrower.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b50d-4459-67f5-3114" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Automatic Pistols" hidden="true" id="0330-4e75-a7be-2db6">
+              <profiles>
+                <profile name="Entitled to Automatic Pistols" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5e70-9ebd-b81a-cb5c">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Automatic Pistol.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c9c5-de34-2fb1-6a6f" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Submachine Guns" hidden="true" id="4cf3-bdfa-9260-a828">
+              <profiles>
+                <profile name="Entitled to Submachine Guns" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8fa3-b53f-c08c-702f">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Submachine Gun.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d35-594f-1ad7-dd6e" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Automatic Rifles" hidden="true" id="b3b1-2e89-19e9-624d">
+              <profiles>
+                <profile name="Entitled to Automatic Rifles" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2e46-7b20-fcf1-73f7">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Automatic Rifle.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc1b-f3dd-29ae-ca75" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Automatic Shotguns" hidden="true" id="6ef1-51b6-9a26-cc36">
+              <profiles>
+                <profile name="Entitled to Automatic Shotguns" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7c07-1a59-04ab-7d66">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Automatic Shotgun.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c0da-9099-e820-2bd9" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Machine Armour" hidden="true" id="e6ef-68d4-a0e4-379d">
+              <profiles>
+                <profile name="Entitled to Machine Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5611-1109-e379-83a2">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Machine Armour.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab36-e9ec-eac5-a659" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Sniper Rifles" hidden="true" id="a252-0110-1823-e0f9">
+              <profiles>
+                <profile name="Entitled to Sniper Rifles" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="eb2a-463b-9c4a-e20e">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Sniper Rifle.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f47-770f-bc56-bc32" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Grenade Launchers" hidden="true" id="edfb-8199-6bb5-7556">
+              <profiles>
+                <profile name="Entitled to Grenade Launchers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="323b-8d17-a5b8-869b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Grenade Launcher.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="152d-a68b-0dc2-c8c5" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Incendiary Grenades" hidden="true" id="c8f3-1e8b-6a3c-b453">
+              <profiles>
+                <profile name="Entitled to Incendiary Grenades" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7b3c-21f9-dc69-42cb">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Incendiary Grenade.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1500-d7d5-76c2-2d7b" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Machine Guns" hidden="true" id="c15a-6239-aeb2-3229">
+              <profiles>
+                <profile name="Entitled to Machine Guns" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7768-e960-5313-055c">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Machine Gun.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acec-1f52-74bc-1c97" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Flamethrowers" hidden="true" id="7a2b-8955-0ed6-426c">
+              <profiles>
+                <profile name="Entitled to Flamethrowers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="735d-318e-5f35-3aa3">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Flamethrower.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6ce1-1884-2ff6-fec1" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Heavy Shotguns" hidden="true" id="d523-deea-cb75-403e">
+              <profiles>
+                <profile name="Entitled to Heavy Shotguns" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8aea-2a61-9ad6-1c32">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Heavy Shotgun.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c8de-4d04-22fd-f427" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Satchel Charges" hidden="true" id="b39d-c158-fd2d-7f3d">
+              <profiles>
+                <profile name="Entitled to Satchel Charges" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3dd8-da69-6ac5-bdca">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Satchel Charge.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de18-6fa5-2f89-3c09" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Hellblades" hidden="true" id="8802-f3e8-dd87-f06e">
+              <profiles>
+                <profile name="Entitled to Hellblades" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="da9e-6d24-6c55-f45c">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Hellblade.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="989f-ab10-5a70-1144" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Anti-Material Rifles" hidden="true" id="ad7e-8af4-357c-b8ef">
+              <profiles>
+                <profile name="Entitled to Anti-Material Rifles" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="176a-1759-a80c-ea2d">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Anti-Material Rifle.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7507-7098-f555-7463" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Tarnished Armour" hidden="true" id="94fd-1ae4-a167-310c">
+              <profiles>
+                <profile name="Entitled to Tarnished Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="405f-d81b-3d6f-2074">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Tarnished Armour.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="248d-537f-568e-1818" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Sacrificial Blades" hidden="true" id="e9ef-e201-bd31-38c6">
+              <profiles>
+                <profile name="Entitled to Sacrificial Blades" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b666-f7eb-ac6f-ac41">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Sacrificial Blade.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58ca-1201-1c6c-0986" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled to Coin Hammers" hidden="true" id="20f6-68af-9eae-0e73">
+              <profiles>
+                <profile name="Entitled to Coin Hammers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f750-d97a-5fcf-b22d">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your warband can take an additional Coin Hammer.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="56d9-beb3-d430-3eb7" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3498-483b-77cd-b565-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3498-483b-77cd-b565-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4b44-1936-aedd-0605" includeChildSelections="true"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="af5c-1593-00ee-e7a2" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="74e6-0563-729c-5a06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8beb-299d-e303-63c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="1" field="af5c-1593-00ee-e7a2">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="74e6-0563-729c-5a06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8beb-299d-e303-63c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="prepend" value="Legacy" field="name" join=" ">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="8beb-299d-e303-63c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="705b-e23f-e9c2-58ab" id="98cd-2e35-fb95-4b49" primary="true" name="Configuration"/>
+      </categoryLinks>
+      <comment>NA/Pilgrims. Lazy copy paste solution.</comment>
+    </selectionEntry>
+  </sharedSelectionEntries>
 </catalogue>

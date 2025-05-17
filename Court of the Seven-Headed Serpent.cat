@@ -153,6 +153,29 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile name="Weaponized Shovel" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="4fd8-d6c5-5837-d2e0">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
+                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Usable only with both hands otherwise free.</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="085e-a0e2-7ba3-9d9c" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="2c66-b5c4-72e2-82ed" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Crown of Hellfire" hidden="true" id="1234-6514-2ff2-5b93" sortIndex="6">
           <costs>
@@ -225,7 +248,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Bestial Skin Cloak" hidden="false" id="ac26-2ac0-9884-b229" type="selectionEntry" targetId="58a3-64fb-8c2d-5105" sortIndex="9">
+        <entryLink import="true" name="Bestial Skin Cloak" hidden="false" id="ac26-2ac0-9884-b229" type="selectionEntry" targetId="58a3-64fb-8c2d-5105" sortIndex="11">
           <entryLinks>
             <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="81df-6f32-379d-36aa" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
               <constraints>
@@ -247,7 +270,7 @@
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Piece of Silver" hidden="false" id="06ad-fd9c-5945-ac6b" type="selectionEntry" targetId="9e76-7d20-071d-c8cd" sortIndex="12">
+        <entryLink import="true" name="Piece of Silver" hidden="false" id="06ad-fd9c-5945-ac6b" type="selectionEntry" targetId="9e76-7d20-071d-c8cd" sortIndex="14">
           <entryLinks>
             <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="5e87-1567-03f8-92a4" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
               <constraints>
@@ -256,7 +279,7 @@
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="Koraktor, the Great Tome of Hell" hidden="false" id="6ac5-de6b-b5c7-a25b" type="selectionEntry" targetId="d88a-78c6-8e31-75be" sortIndex="10">
+        <entryLink import="true" name="Koraktor, the Great Tome of Hell" hidden="false" id="6ac5-de6b-b5c7-a25b" type="selectionEntry" targetId="d88a-78c6-8e31-75be" sortIndex="12">
           <entryLinks>
             <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="8eb6-ca2a-4162-f4f3" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
               <constraints>
@@ -265,7 +288,7 @@
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="Lordship of this World" hidden="false" id="925c-240e-80ad-e280" type="selectionEntry" targetId="9ab3-2522-a7dd-e902" sortIndex="11">
+        <entryLink import="true" name="Lordship of this World" hidden="false" id="925c-240e-80ad-e280" type="selectionEntry" targetId="9ab3-2522-a7dd-e902" sortIndex="13">
           <entryLinks>
             <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="4d97-ace1-c70c-b9aa" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
               <constraints>
@@ -277,6 +300,8 @@
         <entryLink import="true" name="Curative Fluids" hidden="true" id="adbc-5b1a-27df-6f08" type="selectionEntry" targetId="0e49-dfa5-4190-ee69"/>
         <entryLink import="true" name="Lock of Samson&apos;s Hair" hidden="false" id="d112-9626-7938-7e4f" type="selectionEntry" targetId="9b61-d0a4-dd30-2d32"/>
         <entryLink import="true" name="Saints Reliquary" hidden="true" id="642c-8ec9-5277-7b04" type="selectionEntry" targetId="cf19-f306-c26c-1537"/>
+        <entryLink import="true" name="Battlefield Title" hidden="false" id="fe00-56b6-79c9-0a03" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="10"/>
+        <entryLink import="true" name="Knighthood" hidden="false" id="6c55-3b2a-ba53-b958" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="9"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Grenades" id="3dce-3062-9abb-c1de" hidden="false">
@@ -317,6 +342,11 @@
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="a957-7766-e2fa-f4b3" shared="true"/>
               </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="02ab-c5ed-c802-94de">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="ae6f-c9b4-4538-b473" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
             </modifier>
             <modifier type="increment" value="1" field="02ab-c5ed-c802-94de">
               <repeats>
@@ -450,6 +480,11 @@
             </modifier>
             <modifier type="increment" value="1" field="7aaa-940f-7ced-2136">
               <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="8eb2-70c4-2670-7153" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="7aaa-940f-7ced-2136">
+              <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="a921-a7f5-3cd4-2872" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
@@ -552,6 +587,11 @@
             </modifier>
             <modifier type="increment" value="1" field="7e55-9e0c-6108-d0f9">
               <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="3213-5109-f987-c4cd" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="7e55-9e0c-6108-d0f9">
+              <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="a7cd-804c-c67d-7e3c" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
@@ -579,6 +619,11 @@
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
               </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="da21-de39-7b1b-b40d">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="78ac-5951-4971-8272" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
             </modifier>
             <modifier type="increment" value="1" field="da21-de39-7b1b-b40d">
               <repeats>
@@ -959,6 +1004,11 @@
             </modifier>
             <modifier type="increment" value="1" field="c104-74b7-d530-9b74">
               <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="6e7a-ea5d-14be-d309" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="c104-74b7-d530-9b74">
+              <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="babc-902b-00ba-4789" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
@@ -986,6 +1036,11 @@
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
               </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="e22a-37de-6a81-a9e9">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="0c6e-e250-4ed5-90d4" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
             </modifier>
             <modifier type="increment" value="1" field="e22a-37de-6a81-a9e9">
               <repeats>
@@ -1028,6 +1083,11 @@
             </modifier>
             <modifier type="increment" value="1" field="5421-57e4-6bcb-f13a">
               <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="2c3d-7002-9a7a-4600" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="5421-57e4-6bcb-f13a">
+              <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="3efa-35fa-3b4b-6328" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
@@ -1066,6 +1126,11 @@
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
               </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="6665-823d-9789-5bbe">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="957a-7a31-9700-9191" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
             </modifier>
             <modifier type="increment" value="1" field="6665-823d-9789-5bbe">
               <repeats>
@@ -3650,6 +3715,136 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="ce28-ad9a-bbc1-f1dc" id="5664-5cb5-40d6-fd06" primary="false" name="Pile"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Battlefield Title" hidden="true" id="ad45-51d8-8f85-419a">
+      <categoryLinks>
+        <categoryLink targetId="705b-e23f-e9c2-58ab" id="10cf-2d6b-f649-9417" primary="true" name="Configuration"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Chosen Title" id="26de-54d6-bda0-2e06" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Entitled To Ophidian Rifles" hidden="false" id="957a-7a31-9700-9191">
+              <profiles>
+                <profile name="Entitled To Ophidian Rifles" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1c27-5a6d-1a8b-bf04">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled To Incendiary Grenades" hidden="false" id="ae6f-c9b4-4538-b473">
+              <profiles>
+                <profile name="Entitled To Incendiary Grenades" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a502-8362-06be-59a2">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Incendiary Grenade.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled To Serpent Assault Guns" hidden="false" id="6e7a-ea5d-14be-d309">
+              <profiles>
+                <profile name="Entitled To Serpent Assault Guns" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="506d-7eec-ee56-fe93">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Serpent Assault Gun.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled To Heavy Flamethrowers" hidden="false" id="2c3d-7002-9a7a-4600">
+              <profiles>
+                <profile name="Entitled To Heavy Flamethrowers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2d97-93c1-37b4-de43">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Heavy Flamethrower.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled To Headtakers" hidden="false" id="8eb2-70c4-2670-7153">
+              <profiles>
+                <profile name="Entitled To Headtakers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5555-a81b-b83c-cb4e">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Headtaker.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled To Flamethrowers" hidden="false" id="0c6e-e250-4ed5-90d4">
+              <profiles>
+                <profile name="Entitled To Flamethrowers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0cc4-dd59-6e01-3301">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Flamethrower.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled To Hellblades" hidden="false" id="3213-5109-f987-c4cd">
+              <profiles>
+                <profile name="Entitled To Hellblades" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2786-e606-cad9-3180">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Hellblade.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled To Malebranche Swords" hidden="false" id="78ac-5951-4971-8272">
+              <profiles>
+                <profile name="Entitled To Malebranche Swords" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7964-09b3-0b61-b008">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Malebranche Sword.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="4337-20bd-624d-5d28" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="self" shared="true" id="1ad5-b056-d03e-e859" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="1ad5-b056-d03e-e859">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ad45-51d8-8f85-419a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8beb-299d-e303-63c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ad45-51d8-8f85-419a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8beb-299d-e303-63c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="1" field="2533-df49-7b2b-bc69">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ad45-51d8-8f85-419a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8beb-299d-e303-63c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="prepend" value="Legacy" field="name" join=" ">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="8beb-299d-e303-63c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="91b0-e90d-08fb-ca40" includeChildSelections="true"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="2533-df49-7b2b-bc69" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
     <selectionEntry type="model" import="true" name="Praetor" hidden="false" id="68a4-5af6-6f09-aeab">
@@ -4542,5 +4737,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="3de0-192c-3ec2-51be" id="6d3c-49f3-581a-9e35" primary="false" name="Elite"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Battlefield Title" hidden="false" id="ac57-9095-3bad-2a09" type="selectionEntry" targetId="ad45-51d8-8f85-419a"/>
   </entryLinks>
 </catalogue>

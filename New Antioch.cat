@@ -83,6 +83,29 @@
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile name="Weaponized Shovel" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="6710-9a15-f39d-2063">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
+                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Usable only with both hands otherwise free.</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="20db-0edb-9d5e-17c9" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="8b4c-c5f4-f53b-fe48" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Mountaineer Kit" hidden="false" id="4b93-17b7-dbd2-0ca3" sortIndex="7">
           <costs>
@@ -5025,5 +5048,6 @@ This dog cannot attack with this weapon, but any other model in the Warband (tho
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Pile of Stuff" hidden="false" id="aeb4-9446-e91c-0b8f" type="selectionEntry" targetId="366e-e078-0a43-c7e8"/>
+    <entryLink import="true" name="Battlefield Title" hidden="false" id="5cf4-12c6-c2d1-f10f" type="selectionEntry" targetId="74e6-0563-729c-5a06"/>
   </entryLinks>
 </catalogue>

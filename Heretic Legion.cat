@@ -3072,6 +3072,29 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="51fe-888d-77d2-0e51" includeChildSelections="false"/>
           </constraints>
+          <profiles>
+            <profile name="Weaponized Shovel" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="bacd-d8b3-519c-fbd6">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
+                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Usable only with both hands otherwise free.</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="d2cb-f99a-d244-0f6d" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="3676-db5e-8076-8b90" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Hellbound Brand Contract" hidden="true" id="095e-7a3d-0538-1d4a" sortIndex="16">
           <costs>
@@ -3352,6 +3375,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </conditionGroups>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Consumable" id="00bf-aa89-b801-20b4" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+            <infoLink name="Heavy" id="cd11-48d1-0b5a-d066" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Trench Shrine" hidden="true" id="de31-881e-fc7e-2bf4">
           <infoLinks>
@@ -4299,7 +4326,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                       <conditionGroups>
                         <conditionGroup type="and">
                           <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="5e22-7282-592c-3f4d" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="497c-93f9-b8d1-0ad9" shared="true" includeChildSelections="false"/>
                             <condition type="lessThan" value="1" field="selections" scope="model" childId="6a11-3bd5-d303-dc2b" shared="true" includeChildSelections="true"/>
                           </conditions>
                           <conditionGroups>
@@ -4545,5 +4572,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Pile of Stuff" hidden="false" id="ba15-40f8-a6c5-f6f1" type="selectionEntry" targetId="afbe-4010-1921-03ae"/>
+    <entryLink import="true" name="Battlefield Title" hidden="false" id="3c5a-f449-7acc-19cb" type="selectionEntry" targetId="74e6-0563-729c-5a06">
+      <categoryLinks>
+        <categoryLink targetId="705b-e23f-e9c2-58ab" id="f9f7-0e17-09fc-7acd" primary="true" name="Configuration"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
 </catalogue>

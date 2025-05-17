@@ -222,6 +222,11 @@
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="increment" value="1" field="258d-bdbe-189e-18a0">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7be-2afb-dd87-9cd5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="258d-bdbe-189e-18a0" includeChildSelections="true"/>
@@ -330,6 +335,11 @@
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="increment" value="1" field="c248-58c9-6743-832f">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ce2b-3df0-f2a1-8005" shared="true" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <categoryLinks>
@@ -688,6 +698,11 @@
             </modifier>
             <modifier type="increment" value="1" field="9f83-fd6a-7331-7444">
               <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71bc-496d-162c-3816" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="9f83-fd6a-7331-7444">
+              <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
@@ -705,6 +720,13 @@
             <infoLink name="Corruption Belcher" id="e746-f7e5-b427-0a40" hidden="false" type="profile" targetId="801f-50a4-1ea2-7b92"/>
             <infoLink name="Gas" id="0b4d-9009-6cae-c9ac" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="increment" value="1" field="0b3d-9c8c-5946-779a">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="feda-5057-a3f1-a3a5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bolt-Action Rifle" hidden="false" id="466c-9e50-b09a-4746" sortIndex="2">
           <costs>
@@ -750,6 +772,11 @@
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="increment" value="1" field="a54f-a833-b795-7ebd">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="720a-243e-936f-7bc4" shared="true" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -1061,6 +1088,11 @@
                 <modifier type="increment" value="1" field="afe2-81ea-b376-d164">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="afe2-81ea-b376-d164">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="f86a-6dfe-0ae6-352d" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1626,10 +1658,11 @@
       <entryLinks>
         <entryLink import="true" name="Cup of Filth" hidden="false" id="7ee8-c9ed-244a-386e" type="selectionEntry" targetId="9837-88e7-12ef-1be6" sortIndex="8"/>
         <entryLink import="true" name="Knighthood" hidden="false" id="1c8b-48bb-acb4-fe0d" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="9"/>
-        <entryLink import="true" name="Beelzebub&apos;s Embrace" hidden="false" id="5a8b-e6cb-7713-fa0e" type="selectionEntry" targetId="46b5-59af-5d44-2cb0" sortIndex="10"/>
+        <entryLink import="true" name="Beelzebub&apos;s Embrace" hidden="false" id="5a8b-e6cb-7713-fa0e" type="selectionEntry" targetId="46b5-59af-5d44-2cb0" sortIndex="12"/>
         <entryLink import="true" name="Curative Fluids" hidden="true" id="ba75-d88c-b16d-326a" type="selectionEntry" targetId="0e49-dfa5-4190-ee69"/>
         <entryLink import="true" name="Lock of Samson&apos;s Hair" hidden="false" id="c854-1259-173e-1f35" type="selectionEntry" targetId="9b61-d0a4-dd30-2d32"/>
         <entryLink import="true" name="Saints Reliquary" hidden="true" id="6413-c78b-fe08-a35f" type="selectionEntry" targetId="cf19-f306-c26c-1537"/>
+        <entryLink import="true" name="Battlefield Title" hidden="false" id="0e9a-26bb-1d5d-3139" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="11"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Armour" id="e8c4-5c09-11b6-1e3f" hidden="false">
@@ -2753,6 +2786,118 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="3de0-192c-3ec2-51be" id="8331-88f0-4617-3050" primary="false" name="Elite"/>
         <categoryLink targetId="ce28-ad9a-bbc1-f1dc" id="bdd2-d2ba-6f12-4afe" primary="false" name="Pile"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Battlefield Title" hidden="true" id="0175-e39b-7bab-aaaa">
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="1764-29d9-f328-e5ef" targetId="705b-e23f-e9c2-58ab" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Chosen Title" id="cb61-5339-c8bc-d06e" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Entitled To Corruption Belchers" hidden="false" id="feda-5057-a3f1-a3a5">
+              <profiles>
+                <profile name="Entitled To Corruption Belchers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7cc3-5efe-ed8e-574e">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Corruption Belcher.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled To Machine Guns" hidden="false" id="720a-243e-936f-7bc4">
+              <profiles>
+                <profile name="Entitled To Machine Guns" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="46a3-73b3-8c4b-c65e">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Machine Gun.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled To Putrid Shotguns" hidden="false" id="f86a-6dfe-0ae6-352d">
+              <profiles>
+                <profile name="Entitled To Putrid Shotguns" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="802e-98a7-30b5-551b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Putrid Shotgun</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled To Viscera Cannons" hidden="false" id="71bc-496d-162c-3816">
+              <profiles>
+                <profile name="Entitled To Viscera Cannons" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7e1b-68ce-f927-2410">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Viscera Cannon.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled To Plague Blades" hidden="false" id="a7be-2afb-dd87-9cd5">
+              <profiles>
+                <profile name="Entitled To Plague Blades" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f414-efa5-ad21-edf7">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Plague Blade.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Entitled To Beelzebub&apos;s Axe" hidden="false" id="ce2b-3df0-f2a1-8005">
+              <profiles>
+                <profile name="Entitled To Beelzebub&apos;s Axe" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5f11-5881-a15c-9100">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Beelzebub&apos;s Axe.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="06cf-4614-aeba-f308" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="self" shared="true" id="621e-d5ec-91bb-3a07" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="621e-d5ec-91bb-3a07">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8beb-299d-e303-63c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="0175-e39b-7bab-aaaa" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8beb-299d-e303-63c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0175-e39b-7bab-aaaa" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="1" field="6af1-a74c-1d28-5137">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8beb-299d-e303-63c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0175-e39b-7bab-aaaa" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="prepend" value="Legacy" field="name" join=" ">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="8beb-299d-e303-63c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b8b3-63ab-b46e-7ee2" includeChildSelections="true"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="6af1-a74c-1d28-5137" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
@@ -3895,5 +4040,6 @@ During its Activation, a Plague Knight in this Warband can remove an INFECTION M
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Pile of Stuff" hidden="false" id="6043-1c6c-c7ff-9d8d" type="selectionEntry" targetId="97ad-20f9-1e4c-c96c"/>
+    <entryLink import="true" name="Battlefield Title" hidden="false" id="f0cf-ddcc-51b6-b18a" type="selectionEntry" targetId="0175-e39b-7bab-aaaa"/>
   </entryLinks>
 </catalogue>
