@@ -40,12 +40,13 @@
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Grenades" hidden="false" id="0b18-18b1-58f2-2d15" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" sortIndex="4" collapsible="true"/>
-        <entryLink import="true" name="Equipment" hidden="false" id="8267-73be-3903-8067" type="selectionEntryGroup" targetId="5adc-fb98-76b8-c105" collapsible="true" sortIndex="5"/>
-        <entryLink import="true" name="Weapons" hidden="false" id="3104-500f-a1df-d5c0" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="3"/>
-        <entryLink import="true" name="Unseen Infiltrator" hidden="false" id="8024-508c-cad2-74e3" type="selectionEntry" targetId="7b92-190b-f8c3-531a" sortIndex="2"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="0b18-18b1-58f2-2d15" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" sortIndex="5" collapsible="true"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="8267-73be-3903-8067" type="selectionEntryGroup" targetId="5adc-fb98-76b8-c105" collapsible="true" sortIndex="6"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="3104-500f-a1df-d5c0" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="4"/>
+        <entryLink import="true" name="Unseen Infiltrator" hidden="false" id="8024-508c-cad2-74e3" type="selectionEntry" targetId="7b92-190b-f8c3-531a" sortIndex="3"/>
         <entryLink import="true" name="Advancement" hidden="true" id="6acf-33ac-df3b-e1d6" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="ab5d-1b44-36ce-6e75" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="0238-9b91-d433-3d1f" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="2daf-dded-85a2-f21a"/>
@@ -141,7 +142,7 @@
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Goetic Power" id="313a-7f25-cc7e-920c" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Goetic Power" id="313a-7f25-cc7e-920c" hidden="false" sortIndex="4">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9a62-abe5-e0a5-8b6d-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a62-abe5-e0a5-8b6d-max" includeChildSelections="false"/>
@@ -182,9 +183,9 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Grenades" hidden="false" id="4286-540c-2fee-9525" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" sortIndex="5" collapsible="true"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="4286-540c-2fee-9525" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" sortIndex="6" collapsible="true"/>
         <entryLink import="true" name="Equipment" hidden="false" id="0f51-e51b-67fc-6868" type="selectionEntryGroup" targetId="5adc-fb98-76b8-c105" collapsible="true"/>
-        <entryLink import="true" name="Weapons" hidden="false" id="80bd-768e-721c-a113" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="4"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="80bd-768e-721c-a113" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="5"/>
         <entryLink import="true" name="Armour" hidden="false" id="7a5b-e868-bc9c-ea71" type="selectionEntryGroup" targetId="d8da-8812-463a-5a3a">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -196,6 +197,7 @@
         </entryLink>
         <entryLink import="true" name="Advancement" hidden="true" id="19ee-1b7e-6a83-5ba4" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="9202-d14d-0c83-e2cb" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="9620-c67c-bd46-ba6a" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="3"/>
       </entryLinks>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="e878-a54e-5461-5f68-min" includeChildSelections="true"/>
@@ -322,7 +324,7 @@
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Commando Weapons" id="2db8-004d-db23-2df1" hidden="false" sortIndex="2">
+        <selectionEntryGroup name="Commando Weapons" id="2db8-004d-db23-2df1" hidden="false" sortIndex="3">
           <entryLinks>
             <entryLink import="true" name="Melee Weapons" hidden="false" id="77b7-8e6e-cf87-a487" type="selectionEntryGroup" targetId="d2cb-f99a-d244-0f6d"/>
             <entryLink import="true" name="Utility Hand" hidden="false" id="5e22-7282-592c-3f4d" type="selectionEntryGroup" targetId="3676-db5e-8076-8b90"/>
@@ -380,10 +382,11 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Equipment" hidden="false" id="8178-a6cf-7ddc-d03b" type="selectionEntryGroup" targetId="5adc-fb98-76b8-c105" collapsible="true"/>
-        <entryLink import="true" name="Gas Grenades" hidden="false" id="2c4e-d12c-555f-d0b7" type="selectionEntry" targetId="3e61-384a-10f0-3ade" sortIndex="3"/>
+        <entryLink import="true" name="Gas Grenades" hidden="false" id="2c4e-d12c-555f-d0b7" type="selectionEntry" targetId="3e61-384a-10f0-3ade" sortIndex="4"/>
         <entryLink import="true" name="Armour" hidden="false" id="c743-5acb-1e2d-8c53" type="selectionEntryGroup" targetId="d8da-8812-463a-5a3a"/>
         <entryLink import="true" name="Advancement" hidden="true" id="c2ad-257d-a1ec-5864" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="5e84-4087-a63c-e936" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="872a-892a-26b1-2dff" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="154a-1d9d-959e-d915" includeChildSelections="true"/>
@@ -488,12 +491,13 @@
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Grenades" hidden="false" id="d698-b0ea-7831-ea45" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" sortIndex="4" collapsible="true"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="d698-b0ea-7831-ea45" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" sortIndex="5" collapsible="true"/>
         <entryLink import="true" name="Equipment" hidden="false" id="6b85-2b40-edb3-e9a4" type="selectionEntryGroup" targetId="5adc-fb98-76b8-c105" collapsible="true"/>
-        <entryLink import="true" name="Weapons" hidden="false" id="454e-b570-692d-acf0" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="3"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="454e-b570-692d-acf0" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="4"/>
         <entryLink import="true" name="Armour" hidden="false" id="9392-df8d-73c0-c5f7" type="selectionEntryGroup" targetId="d8da-8812-463a-5a3a"/>
         <entryLink import="true" name="Advancement" hidden="true" id="b539-592d-199e-2cbe" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="2153-c68c-2ae0-686f" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="2ac9-9a09-7d4e-b4f5" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="3"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a315-a1b6-dd13-ba1c" includeChildSelections="true"/>
@@ -616,8 +620,9 @@
         </modifier>
       </modifiers>
       <entryLinks>
-        <entryLink import="true" name="Advancement" hidden="true" id="fcc1-b53a-b6f3-bc32" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true"/>
+        <entryLink import="true" name="Advancement" hidden="true" id="fcc1-b53a-b6f3-bc32" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="7484-ab7d-0652-dfb7" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="d9b7-c390-c59d-8663" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Artillery Witch" hidden="false" id="f2d9-0f99-61a1-fce5" publicationId="c658-4a10-e1fe-befc" page="24">
@@ -735,7 +740,7 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Weapons" id="7050-8ef1-0699-ced0" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Weapons" id="7050-8ef1-0699-ced0" hidden="false" sortIndex="4">
           <entryLinks>
             <entryLink import="true" name="Melee Weapons" hidden="false" id="19b2-3fff-cd64-345f" type="selectionEntryGroup" targetId="d2cb-f99a-d244-0f6d"/>
             <entryLink import="true" name="Utility Hand" hidden="false" id="2a07-235b-ec1f-ab51" type="selectionEntryGroup" targetId="3676-db5e-8076-8b90">
@@ -749,9 +754,10 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
       <entryLinks>
         <entryLink import="true" name="Equipment" hidden="false" id="347a-bdcf-fe18-3744" type="selectionEntryGroup" targetId="5adc-fb98-76b8-c105" collapsible="true"/>
         <entryLink import="true" name="Armour" hidden="false" id="0ed8-7eee-2ab4-05fb" type="selectionEntryGroup" targetId="d8da-8812-463a-5a3a"/>
-        <entryLink import="true" name="Unseen Infiltrator" hidden="false" id="c8c6-a4c5-b20a-84be" type="selectionEntry" targetId="7b92-190b-f8c3-531a" sortIndex="2"/>
+        <entryLink import="true" name="Unseen Infiltrator" hidden="false" id="c8c6-a4c5-b20a-84be" type="selectionEntry" targetId="7b92-190b-f8c3-531a" sortIndex="3"/>
         <entryLink import="true" name="Advancement" hidden="true" id="d882-8dc1-efe9-75ed" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="c26e-fa0c-fc47-e885" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="3853-0b0d-cfd3-6564" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ceb2-bf00-2a24-aa1d" includeChildSelections="true"/>
@@ -845,7 +851,7 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Weapons" id="d790-768c-fc52-8b1b" hidden="false" sortIndex="2">
+        <selectionEntryGroup name="Weapons" id="d790-768c-fc52-8b1b" hidden="false" sortIndex="3">
           <selectionEntryGroups>
             <selectionEntryGroup name="Melee Weapons" id="302d-1482-6d32-4767" hidden="false" sortIndex="1">
               <entryLinks>
@@ -978,8 +984,9 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
         </modifier>
       </modifiers>
       <entryLinks>
-        <entryLink import="true" name="Unseen Infiltrator" hidden="false" id="6261-b217-6eba-7048" type="selectionEntry" targetId="7b92-190b-f8c3-531a" sortIndex="1"/>
+        <entryLink import="true" name="Unseen Infiltrator" hidden="false" id="6261-b217-6eba-7048" type="selectionEntry" targetId="7b92-190b-f8c3-531a" sortIndex="2"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="71bf-0c2b-8f27-640e" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="880f-3d04-e7a6-e385" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Heretic Trooper" hidden="false" id="3844-b41c-9ecc-85b9" publicationId="c658-4a10-e1fe-befc" page="22">
@@ -1079,7 +1086,7 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Grenades" hidden="false" id="7f8c-7ce1-9287-96f2" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" sortIndex="4" collapsible="true">
+        <entryLink import="true" name="Grenades" hidden="false" id="7f8c-7ce1-9287-96f2" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" sortIndex="5" collapsible="true">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -1088,7 +1095,7 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Equipment" hidden="false" id="76f2-185b-6af3-13a9" type="selectionEntryGroup" targetId="5adc-fb98-76b8-c105" sortIndex="6" collapsible="true">
+        <entryLink import="true" name="Equipment" hidden="false" id="76f2-185b-6af3-13a9" type="selectionEntryGroup" targetId="5adc-fb98-76b8-c105" sortIndex="7" collapsible="true">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -1097,7 +1104,7 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Weapons" hidden="false" id="2729-18d7-401d-092f" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="3">
+        <entryLink import="true" name="Weapons" hidden="false" id="2729-18d7-401d-092f" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="4">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -1106,7 +1113,7 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Armour" hidden="false" id="1eeb-ff0b-2b86-7667" type="selectionEntryGroup" targetId="d8da-8812-463a-5a3a" sortIndex="5">
+        <entryLink import="true" name="Armour" hidden="false" id="1eeb-ff0b-2b86-7667" type="selectionEntryGroup" targetId="d8da-8812-463a-5a3a" sortIndex="6">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -1139,6 +1146,7 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
         <selectionEntryGroup name="Upgrades" id="c5b8-a737-3f24-eb36" hidden="false" sortIndex="2">
           <entryLinks>
             <entryLink import="true" name="Unseen Infiltrator" hidden="false" id="2353-8642-8dde-809d" type="selectionEntry" targetId="7b92-190b-f8c3-531a"/>
+            <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="d240-afe0-5593-8080" type="selectionEntry" targetId="1f47-9c34-ef9b-914b"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Legionnaire" hidden="false" id="f606-4316-044d-4503">
@@ -3996,7 +4004,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Alchemical Formulae" id="bd6e-95af-4267-9b44" hidden="false" sortIndex="1">
+        <selectionEntryGroup name="Alchemical Formulae" id="bd6e-95af-4267-9b44" hidden="false" sortIndex="2">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Wings" hidden="false" id="fb6e-4676-0313-a505" sortIndex="1">
               <costs>
@@ -4297,7 +4305,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <constraint type="max" value="60" field="8d43-33fd-332d-17a6" scope="parent" shared="true" id="ba74-80ee-148e-7db8" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Weapons" id="69b5-38a8-7a6e-517d" hidden="true" sortIndex="2">
+        <selectionEntryGroup name="Weapons" id="69b5-38a8-7a6e-517d" hidden="true" sortIndex="3">
           <entryLinks>
             <entryLink import="true" name="Ranged Weapons" hidden="false" id="7677-96fb-d1c2-71c8" type="selectionEntryGroup" targetId="1eee-c39c-0ea0-4c58" collapsible="false" sortIndex="1"/>
             <entryLink import="true" name="Utility Hand" hidden="false" id="497c-93f9-b8d1-0ad9" type="selectionEntryGroup" targetId="3676-db5e-8076-8b90" collapsible="true">
@@ -4480,6 +4488,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="aae0-91c8-476b-f917" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="ee8b-f180-a30d-b4f5" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Pile of Stuff" hidden="true" id="afbe-4010-1921-03ae">

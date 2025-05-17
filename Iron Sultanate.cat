@@ -2710,6 +2710,24 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Fireteam: Dog&apos;s Friend" hidden="true" id="aea2-b18b-a9ed-a38e">
+          <modifiers>
+            <modifier type="increment" value="1" field="427c-75ac-0a14-bdbd">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="5f45-ffc2-6635-0f8c" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5f45-ffc2-6635-0f8c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="427c-75ac-0a14-bdbd" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="model" shared="true" id="22ec-b1ad-b5e9-04ea" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
       </selectionEntries>
       <profiles>
         <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b12d-f138-c557-e74d">
@@ -2849,7 +2867,7 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Alchemical Formulae" id="8f94-1e35-3499-7de7" hidden="false" sortIndex="2">
+        <selectionEntryGroup name="Alchemical Formulae" id="8f94-1e35-3499-7de7" hidden="false" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Wings" hidden="false" id="f5d7-6c47-430c-2666" sortIndex="1">
               <costs>
@@ -3170,7 +3188,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Weapons" id="a51a-917a-e4aa-987c" hidden="true" sortIndex="3">
+        <selectionEntryGroup name="Weapons" id="a51a-917a-e4aa-987c" hidden="true" sortIndex="4">
           <selectionEntryGroups>
             <selectionEntryGroup name="Ranged Weapons" id="4b28-56a0-0687-8294" hidden="false" sortIndex="1">
               <entryLinks>
@@ -3400,7 +3418,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d34d-90a8-e90b-33f2" includeChildSelections="false"/>
       </constraints>
       <entryLinks>
-        <entryLink import="true" name="Equipment" hidden="true" id="8a08-7237-0661-8ab2" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="4">
+        <entryLink import="true" name="Equipment" hidden="true" id="8a08-7237-0661-8ab2" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="5">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -3410,7 +3428,16 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="2aee-0c22-9e87-ddda" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
-        <entryLink import="true" name="Advancement" hidden="false" id="8df0-9666-4b98-f41b" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" sortIndex="1"/>
+        <entryLink import="true" name="Advancement" hidden="false" id="8df0-9666-4b98-f41b" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" sortIndex="1">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="unit" childId="3e00-1abf-44f5-2cd9" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="6da5-228f-3284-b607" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Pile of Stuff" hidden="true" id="c0cb-8f53-98d4-abc9">
@@ -3618,11 +3645,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Alchemist" hidden="false" id="7c17-5f75-6fd9-73cf">
       <entryLinks>
-        <entryLink import="true" name="Weapons" hidden="false" id="85cf-e5f2-188a-0511" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="4"/>
-        <entryLink import="true" name="Grenades" hidden="false" id="ed14-1fd8-9d84-e35d" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="5"/>
-        <entryLink import="true" name="Armour" hidden="false" id="9794-b588-71a2-6bd8" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365" sortIndex="6"/>
-        <entryLink import="true" name="Equipment" hidden="false" id="39cf-b015-ea06-7431" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="7"/>
-        <entryLink import="true" name="Secrets of the House of Wisdom" hidden="true" id="5af8-34a9-a9f9-d4c1" type="selectionEntryGroup" targetId="6fcb-5cc4-5e39-beec" sortIndex="3">
+        <entryLink import="true" name="Weapons" hidden="false" id="85cf-e5f2-188a-0511" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="5"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="ed14-1fd8-9d84-e35d" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="6"/>
+        <entryLink import="true" name="Armour" hidden="false" id="9794-b588-71a2-6bd8" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365" sortIndex="7"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="39cf-b015-ea06-7431" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="8"/>
+        <entryLink import="true" name="Secrets of the House of Wisdom" hidden="true" id="5af8-34a9-a9f9-d4c1" type="selectionEntryGroup" targetId="6fcb-5cc4-5e39-beec" sortIndex="4">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>

@@ -1972,7 +1972,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="First Friend of Dog" hidden="true" id="4da7-e087-f7ab-b89b" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="First Friend of the Brigade&apos;s Dogs" hidden="true" id="4da7-e087-f7ab-b89b" sortIndex="6">
           <profiles>
             <profile name="First Friend of Dog" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="04ff-1014-c632-3867">
               <characteristics>
@@ -1991,7 +1991,7 @@
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1ba4-19c6-9493-2983" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Second Friend of Dog" hidden="true" id="c5ee-6047-898f-a5de" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Second Friend of the Brigade&apos;s Dogs" hidden="true" id="c5ee-6047-898f-a5de" sortIndex="7">
           <profiles>
             <profile name="Second Friend of Dog" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f10d-341e-5e15-05ec">
               <characteristics>
@@ -2008,6 +2008,24 @@
           </modifiers>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ac8a-b977-6e81-c0a6" includeChildSelections="true"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Dog&apos;s Friend" hidden="true" id="2daa-3efe-5398-4d5a" sortIndex="5">
+          <modifiers>
+            <modifier type="increment" value="1" field="627a-4275-a64e-2b4b">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="5f45-ffc2-6635-0f8c" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5f45-ffc2-6635-0f8c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="627a-4275-a64e-2b4b" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="model" shared="true" id="0291-3756-8072-9e34" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>

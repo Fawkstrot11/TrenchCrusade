@@ -3413,7 +3413,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <constraint type="max" value="60" field="8d43-33fd-332d-17a6" scope="parent" shared="true" id="636d-83a7-1be8-3160" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Weapons" id="b6ef-3226-16f7-3def" hidden="true" sortIndex="2">
+        <selectionEntryGroup name="Weapons" id="b6ef-3226-16f7-3def" hidden="true" sortIndex="3">
           <entryLinks>
             <entryLink import="true" name="Ranged Weapons" hidden="false" id="f7fc-b5c9-0c08-dadf" type="selectionEntryGroup" targetId="c9e2-5728-f485-e683" collapsible="false" sortIndex="1"/>
             <entryLink import="true" name="Utility Hand" hidden="false" id="0af8-610c-71a0-ce8c" type="selectionEntryGroup" targetId="2c66-b5c4-72e2-82ed" collapsible="true">
@@ -3635,6 +3635,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="54e8-98b3-94f6-e3d9" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="3901-b673-ad38-1d03" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Pile of Stuff" hidden="true" id="1d87-ef77-69ca-eb3f">
@@ -3858,10 +3859,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="afb9-39f5-82d9-46ed" id="393e-c23c-5863-db30" primary="false" name="Leader"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Weapons" hidden="false" id="9032-210a-fe3d-aeb9" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="2"/>
-        <entryLink import="true" name="Equipment" hidden="false" id="02e3-c057-a452-141c" type="selectionEntryGroup" targetId="1434-ae99-841b-041e" sortIndex="6"/>
-        <entryLink import="true" name="Armour" hidden="false" id="d493-1f4b-068c-9511" type="selectionEntryGroup" targetId="a7de-6b4b-be33-277c" sortIndex="5"/>
-        <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="8da9-ec34-84d0-ab66" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee" sortIndex="4">
+        <entryLink import="true" name="Weapons" hidden="false" id="9032-210a-fe3d-aeb9" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="4"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="02e3-c057-a452-141c" type="selectionEntryGroup" targetId="1434-ae99-841b-041e" sortIndex="7"/>
+        <entryLink import="true" name="Armour" hidden="false" id="d493-1f4b-068c-9511" type="selectionEntryGroup" targetId="a7de-6b4b-be33-277c" sortIndex="6"/>
+        <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="8da9-ec34-84d0-ab66" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee" sortIndex="3">
           <constraints>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="2a1e-e823-29c1-7b64" includeChildSelections="false"/>
           </constraints>
@@ -3873,9 +3874,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Grenades" hidden="false" id="f4e0-9006-0ee0-87af" type="selectionEntryGroup" targetId="3dce-3062-9abb-c1de" sortIndex="3"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="f4e0-9006-0ee0-87af" type="selectionEntryGroup" targetId="3dce-3062-9abb-c1de" sortIndex="5"/>
         <entryLink import="true" name="Advancement" hidden="true" id="17df-aec5-58b3-6a10" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
-        <entryLink import="true" name="Exploration Upgrades" hidden="false" id="956a-58fe-17f5-3d77" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Exploration Upgrades" hidden="false" id="956a-58fe-17f5-3d77" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776" sortIndex="8"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="3975-3c6d-6040-c892" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5da1-9568-2d09-2030" includeChildSelections="true"/>
@@ -3963,7 +3965,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="50ae-a540-4d66-0d43" id="33d4-4a99-2510-8c0f" primary="false" name="The Court"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Weapons" hidden="false" id="9ad6-c56a-eb6a-5e46" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="2"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="9ad6-c56a-eb6a-5e46" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="4"/>
         <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="827f-2b7b-9417-fa24" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee" sortIndex="3">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f5cf-bb4e-a901-75ca" includeChildSelections="false"/>
@@ -3974,6 +3976,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Equipment" hidden="false" id="003c-7fcf-a9e8-9bd9" type="selectionEntryGroup" targetId="1434-ae99-841b-041e"/>
         <entryLink import="true" name="Advancement" hidden="true" id="3d78-e991-505a-1e5c" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="2b37-d505-cbf5-2e4e" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="76c4-e021-33aa-93f2" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fbca-352e-df39-8dd7" includeChildSelections="true"/>
@@ -4113,6 +4116,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Equipment" hidden="false" id="167b-b394-5f23-b785" type="selectionEntryGroup" targetId="1434-ae99-841b-041e"/>
         <entryLink import="true" name="Advancement" hidden="true" id="a64a-1996-862a-093c" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="e53f-59c4-defe-acca" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="788e-84f6-8f33-a45c" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3ddf-9a2c-9351-f29c" includeChildSelections="true"/>
@@ -4204,7 +4208,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Weapons" id="26f0-d9f3-8451-e41c" hidden="false" sortIndex="2">
+        <selectionEntryGroup name="Weapons" id="26f0-d9f3-8451-e41c" hidden="false" sortIndex="3">
           <entryLinks>
             <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="f3b9-7230-693b-dda1" type="selectionEntryGroup" targetId="02d4-0537-9a27-5baa" collective="false" collapsible="true"/>
             <entryLink import="true" name="Utility Hand" hidden="false" id="8122-3c3b-f8dd-785a" type="selectionEntryGroup" targetId="2c66-b5c4-72e2-82ed"/>
@@ -4223,16 +4227,17 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="afcc-5f24-1c7c-63c4" id="ea52-90d8-fa3b-787f" primary="false" name="Strong"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Weapons" hidden="false" id="51b4-58c9-5148-95b0" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="2"/>
-        <entryLink import="true" name="Equipment" hidden="false" id="ea6d-4f0f-95e9-21a6" type="selectionEntryGroup" targetId="1434-ae99-841b-041e" sortIndex="5"/>
-        <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="6d48-76b3-b94c-7b85" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee" sortIndex="4">
+        <entryLink import="true" name="Weapons" hidden="false" id="51b4-58c9-5148-95b0" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="4"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="ea6d-4f0f-95e9-21a6" type="selectionEntryGroup" targetId="1434-ae99-841b-041e" sortIndex="6"/>
+        <entryLink import="true" name="Goetic Powers and Spells" hidden="false" id="6d48-76b3-b94c-7b85" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee" sortIndex="3">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a732-cc1e-fd1c-c933" includeChildSelections="false"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Grenades" hidden="false" id="80a9-ed13-2da6-8f52" type="selectionEntryGroup" targetId="3dce-3062-9abb-c1de" sortIndex="3"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="80a9-ed13-2da6-8f52" type="selectionEntryGroup" targetId="3dce-3062-9abb-c1de" sortIndex="5"/>
         <entryLink import="true" name="Advancement" hidden="true" id="6d68-9636-c671-1e88" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="4660-4592-ae58-0cb5" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="b818-d574-bad8-7617" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="a095-835e-9689-f1ed" includeChildSelections="true"/>
@@ -4290,8 +4295,8 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Weapons" hidden="false" id="2c39-2b8e-7dc1-1bfb" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="1"/>
-        <entryLink import="true" name="Grenades" hidden="false" id="9d44-5e38-8bf9-2967" type="selectionEntryGroup" targetId="3dce-3062-9abb-c1de" sortIndex="2">
+        <entryLink import="true" name="Weapons" hidden="false" id="2c39-2b8e-7dc1-1bfb" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="2"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="9d44-5e38-8bf9-2967" type="selectionEntryGroup" targetId="3dce-3062-9abb-c1de" sortIndex="3">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c8fa-c6d0-5c1c-7d13" includeChildSelections="false"/>
           </constraints>
@@ -4303,9 +4308,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Armour" hidden="false" id="20ee-a72f-e2e1-65bf" type="selectionEntryGroup" targetId="a7de-6b4b-be33-277c" sortIndex="3"/>
-        <entryLink import="true" name="Equipment" hidden="false" id="4b2e-ef91-026c-72a8" type="selectionEntryGroup" targetId="1434-ae99-841b-041e" sortIndex="4"/>
+        <entryLink import="true" name="Armour" hidden="false" id="20ee-a72f-e2e1-65bf" type="selectionEntryGroup" targetId="a7de-6b4b-be33-277c" sortIndex="4"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="4b2e-ef91-026c-72a8" type="selectionEntryGroup" targetId="1434-ae99-841b-041e" sortIndex="5"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="83b2-bdbd-7ede-4bf1" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="22dd-3046-4d8b-26a0" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="1"/>
       </entryLinks>
       <profiles>
         <profile name="Yoke Fiend" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="f16c-02fc-f6ad-4562">
@@ -4374,6 +4380,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <entryLinks>
         <entryLink import="true" name="Equipment" hidden="false" id="6f50-a596-751e-e3e7" type="selectionEntryGroup" targetId="1434-ae99-841b-041e"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="e7d6-fe06-e83b-c791" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="71dc-0c64-49ec-a6cc" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="1"/>
       </entryLinks>
       <profiles>
         <profile name="Wretched" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="b2dd-8727-aaa1-e504">
@@ -4407,7 +4414,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </modifier>
       </modifiers>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Weapons" id="5870-3dfa-f8b8-4c0a" hidden="false" sortIndex="1">
+        <selectionEntryGroup name="Weapons" id="5870-3dfa-f8b8-4c0a" hidden="false" sortIndex="2">
           <entryLinks>
             <entryLink import="true" name="Melee Weapons" hidden="false" id="ebd4-9668-a66c-d8f6" type="selectionEntryGroup" targetId="085e-a0e2-7ba3-9d9c" sortIndex="1"/>
             <entryLink import="true" name="Utility Hand" hidden="false" id="c8d1-b684-1b31-80c2" type="selectionEntryGroup" targetId="2c66-b5c4-72e2-82ed"/>
@@ -4475,9 +4482,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <infoLink name="Shrapnel" id="20f6-cae2-0807-0f60" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="Crown of Hellfire" hidden="false" id="2ebf-d4d5-a86a-4f13" type="selectionEntry" targetId="1234-6514-2ff2-5b93" sortIndex="2"/>
+        <entryLink import="true" name="Crown of Hellfire" hidden="false" id="2ebf-d4d5-a86a-4f13" type="selectionEntry" targetId="1234-6514-2ff2-5b93" sortIndex="3"/>
         <entryLink import="true" name="Advancement" hidden="true" id="883a-7ad9-c1c4-00a2" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="60ff-8877-82d3-c203" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="8758-8020-905d-0343" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Desecrated Saint" hidden="false" id="0447-09f8-8cc2-64da">
@@ -4613,7 +4621,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <infoLink name="Demonic" id="c06a-9c5b-a809-f92b" hidden="false" type="rule" targetId="e1d1-9534-0d38-b1e8"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Weapons" id="b239-d0f2-1b34-28ef" hidden="false" sortIndex="2">
+        <selectionEntryGroup name="Weapons" id="b239-d0f2-1b34-28ef" hidden="false" sortIndex="3">
           <selectionEntryGroups>
             <selectionEntryGroup name="Primary Arm" id="7e22-c009-65de-bc49" hidden="false">
               <entryLinks>
@@ -4652,7 +4660,8 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Advancement" hidden="true" id="ee3d-9303-b161-adf1" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
-        <entryLink import="true" name="Exploration Upgrades" hidden="false" id="95e6-1bc5-0fe3-b75a" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776" sortIndex="3"/>
+        <entryLink import="true" name="Exploration Upgrades" hidden="false" id="95e6-1bc5-0fe3-b75a" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776" sortIndex="4"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="7710-6465-c4b4-6f50" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Homunculus" hidden="true" id="eb2e-9a11-3faa-625b">
