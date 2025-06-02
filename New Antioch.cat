@@ -338,6 +338,7 @@
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5" affects="profiles.Unit" scope="model"/>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
@@ -360,7 +361,7 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Grenades" id="9c37-58de-3fa2-bfd2" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Grenades" hidden="false" id="9e42-776c-6fed-5cdc" sortIndex="1">
+        <selectionEntry type="upgrade" import="true" name="Grenades" hidden="false" id="9e42-776c-6fed-5cdc" sortIndex="2">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="7"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -410,6 +411,7 @@
           <modifiers>
             <modifier type="increment" value="1" field="42fa-5fdb-58e5-5dc6">
               <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="c8f3-1e8b-6a3c-b453" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="a32d-ebfc-2926-aa1e" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
@@ -461,8 +463,31 @@
             </modifier>
             <modifier type="increment" value="1" field="29bb-27d2-20de-cdc2">
               <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="b39d-c158-fd2d-7f3d" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="6cc5-aa3d-59be-374f" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Molotov Cocktail" hidden="true" id="638d-8d90-8b78-22af" sortIndex="1">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Molotov Cocktail" id="60c7-cff1-cf1a-cb70" hidden="false" type="profile" targetId="b16a-e1fa-433f-efc0"/>
+            <infoLink name="Assault" id="a386-1126-f387-4cca" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Fire" id="5501-dfef-851d-93a6" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+            <infoLink name="Grenade" id="fbe2-9f06-7a60-a9ce" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="35e8-486e-5c97-7eed" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea95-2310-99f0-6e97" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -699,35 +724,7 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Melee Weapons" id="20db-0edb-9d5e-17c9" hidden="false">
       <entryLinks>
-        <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="f078-5931-0a72-6dcc" type="selectionEntryGroup" targetId="8118-278a-73e1-1cd0" collective="false" collapsible="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Atonement Bell" hidden="true" id="0de4-111f-503c-60f9">
-              <profiles>
-                <profile name="Atonement Bell" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a7b5-4e6d-1d0e-de50">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This bell always takes the use of one hand of the Communicant. The Communicant can make an off-hand attack with the Bell. It causes no damage, but any enemy on a 40mm base or smaller hit with an Atonenment Bell can be moved D3 inches from the Communicant into any direction the Communicant chooses. This can break them out of melee combat (allowing free attacks), falling down, into hazardous terrain etc. It cannot be made to move the model into another Melee combat, however.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b39d-517f-0718-b0b2" includeChildSelections="false"/>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="bb79-627f-17cf-1ec5" includeChildSelections="false"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="08ba-0a4d-5ba4-dff6" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="1" field="bb79-627f-17cf-1ec5">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="08ba-0a4d-5ba4-dff6" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-        </entryLink>
+        <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="f078-5931-0a72-6dcc" type="selectionEntryGroup" targetId="8118-278a-73e1-1cd0" collective="false" collapsible="true"/>
         <entryLink import="true" name="Melee (Two-Handed)" hidden="false" id="196d-0066-9adb-ef69" type="selectionEntryGroup" targetId="9a78-862f-67eb-f06b" collapsible="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1c9c-0112-cb28-7e0e" includeChildSelections="false"/>
@@ -1452,7 +1449,7 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Utility Hand" id="8b4c-c5f4-f53b-fe48" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Troop Flag" hidden="false" id="b6ec-fe59-ac2a-5d00" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Troop Flag" hidden="false" id="b6ec-fe59-ac2a-5d00" sortIndex="7">
           <costs>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="1"/>
           </costs>
@@ -1488,7 +1485,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Carnyx " hidden="true" id="2b13-5e5c-b810-c791" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Carnyx " hidden="true" id="2b13-5e5c-b810-c791" sortIndex="6">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -1533,7 +1530,7 @@
             <infoLink name="Fear" id="6e65-5f02-af1f-bbb4" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Bagpipes" hidden="true" id="831d-0f3f-be36-9b1d" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Bagpipes" hidden="true" id="831d-0f3f-be36-9b1d" sortIndex="5">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -1579,7 +1576,7 @@
             <infoLink name="Fear" id="ae73-8108-76a3-b082" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Musical Instrument" hidden="false" id="0cf1-5804-71ad-78ed" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Musical Instrument" hidden="false" id="0cf1-5804-71ad-78ed" sortIndex="4">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -1646,6 +1643,31 @@
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Atonement Bell" hidden="true" id="0de4-111f-503c-60f9" sortIndex="2">
+          <profiles>
+            <profile name="Atonement Bell" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a7b5-4e6d-1d0e-de50">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This bell always takes the use of one hand of the Communicant. The Communicant can make an off-hand attack with the Bell. It causes no damage, but any enemy on a 40mm base or smaller hit with an Atonenment Bell can be moved D3 inches from the Communicant into any direction the Communicant chooses. This can break them out of melee combat (allowing free attacks), falling down, into hazardous terrain etc. It cannot be made to move the model into another Melee combat, however.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b39d-517f-0718-b0b2" includeChildSelections="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="bb79-627f-17cf-1ec5" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08ba-0a4d-5ba4-dff6" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="bb79-627f-17cf-1ec5">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08ba-0a4d-5ba4-dff6" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1758,7 +1780,7 @@
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Angelic Instrument" hidden="false" id="ad4d-4ba3-4a2a-00cf" type="selectionEntry" targetId="a26c-4afe-ca98-962c" sortIndex="2">
+        <entryLink import="true" name="Angelic Instrument" hidden="false" id="ad4d-4ba3-4a2a-00cf" type="selectionEntry" targetId="a26c-4afe-ca98-962c" sortIndex="3">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
@@ -2973,7 +2995,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </modifiers>
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="33cc-28f6-a901-ed62" targetId="705b-e23f-e9c2-58ab" primary="true"/>
-        <categoryLink name="Elite" hidden="false" id="b16a-7bdb-910a-402a" targetId="3de0-192c-3ec2-51be" primary="false"/>
         <categoryLink name="Pile" hidden="false" id="256a-c855-4380-1217" targetId="ce28-ad9a-bbc1-f1dc" primary="false"/>
       </categoryLinks>
     </selectionEntry>
@@ -5038,7 +5059,7 @@ This dog cannot attack with this weapon, but any other model in the Warband (tho
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6b28-6340-4a94-d517" includeChildSelections="true"/>
       </constraints>
       <costs>
-        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="65"/>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="75"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
     </selectionEntry>

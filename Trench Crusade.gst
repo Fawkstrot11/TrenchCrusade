@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-4f3d-c5c9-7df1-ad01" name="Trench Crusade" battleScribeVersion="2.03" authorName="Fawkstrot" authorUrl="https://github.com/Fawkstrot11" revision="15" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-4f3d-c5c9-7df1-ad01" name="Trench Crusade" battleScribeVersion="2.03" authorName="Fawkstrot" authorUrl="https://github.com/Fawkstrot11" revision="16" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Artificial" id="4180-5377-2d83-48ba" hidden="false" publicationId="c658-4a10-e1fe-befc"/>
     <categoryEntry name="Elite" id="3de0-192c-3ec2-51be" hidden="false" publicationId="c658-4a10-e1fe-befc"/>
@@ -546,7 +546,7 @@ Keywords: CONSUMABLE.</characteristic>
     </profile>
     <profile name="Sniper Scope" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5a48-9735-499f-e394" publicationId="c658-4a10-e1fe-befc" page="119">
       <characteristics>
-        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Negates the penalty for Long Range if the model has not moved during this Activation. Only usable with rifles (i.e. weapons which have the Keyword rifle in their name)</characteristic>
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This piece of equipment can be used with any “rifle”. Ranged attacks with the weapon ignore the penalties for Long Range.</characteristic>
       </characteristics>
     </profile>
     <profile name="Shovel" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d829-4d67-52aa-baaf" publicationId="c658-4a10-e1fe-befc" page="119">

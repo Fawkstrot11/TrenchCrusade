@@ -2377,14 +2377,9 @@ this way, even though they can normally only equip melee weapons.</characteristi
               </profiles>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="68a4-5af6-6f09-aeab" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
@@ -3715,7 +3710,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </modifiers>
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="5edd-3537-045b-f3c1" targetId="705b-e23f-e9c2-58ab" primary="true"/>
-        <categoryLink targetId="3de0-192c-3ec2-51be" id="8528-e477-74fb-402c" primary="false" name="Elite"/>
         <categoryLink targetId="ce28-ad9a-bbc1-f1dc" id="5664-5cb5-40d6-fd06" primary="false" name="Pile"/>
       </categoryLinks>
     </selectionEntry>
