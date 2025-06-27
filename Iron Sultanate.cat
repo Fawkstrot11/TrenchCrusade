@@ -3264,7 +3264,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <modifiers>
             <modifier type="set" value="60" field="12f0-0d1e-c382-60c6">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="unit" childId="3e00-1abf-44f5-2cd9" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="8891-b3fa-58ca-f1fc" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3494,10 +3494,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="40"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1d43-1a4e-5d79-f4c2" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d34d-90a8-e90b-33f2" includeChildSelections="false"/>
-      </constraints>
       <entryLinks>
         <entryLink import="true" name="Equipment" hidden="true" id="8a08-7237-0661-8ab2" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="5">
           <modifiers>
@@ -3513,7 +3509,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="unit" childId="3e00-1abf-44f5-2cd9" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="8891-b3fa-58ca-f1fc" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5014,123 +5010,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="705b-e23f-e9c2-58ab" id="22dc-1771-9ebb-5e41" primary="true" name="Configuration"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Takwin Homunculus" hidden="true" id="e630-83ec-432c-7137">
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Mind-Linked Ally" id="cd29-601b-58d8-a520" hidden="true">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="unit" childId="d832-e6aa-7c93-32e4" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="add" value="Due to being extremely jank and introducing many bugs, this iteration of Fireteams is being phased out. I won&apos;t delete them, as to not disrupt existing lists, but it is advised to use the new Fireteam selection. Further Fireteams cannot be to lists without Fireteams, and removing all Fireteams from your list will prevent them from being re-added. If you have strong negative opinions on this, please contact me on the Discord or via Report Data Issue- I am open to alternatives." field="warning"/>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="cd29-601b-58d8-a520" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cd61-56dc-31a8-9231">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <entryLinks>
-            <entryLink import="true" name="Alchemist" hidden="false" id="c75e-8db2-ee66-838d" type="selectionEntry" targetId="7c17-5f75-6fd9-73cf" collapsible="true"/>
-            <entryLink import="true" name="Assassin" hidden="false" id="7db1-2176-f4d6-eb7e" type="selectionEntry" targetId="62d4-d89a-f7e2-7d3b" collapsible="true"/>
-            <entryLink import="true" name="Azeb" hidden="false" id="0d30-bb33-95a4-fa5f" type="selectionEntry" targetId="0e7e-9167-f044-9493" collapsible="true"/>
-            <entryLink import="true" name="Brazen Bull" hidden="false" id="5c12-bf98-2ef2-0e6b" type="selectionEntry" targetId="e62d-c06e-ce35-428b" collapsible="true"/>
-            <entryLink import="true" name="Janissaries" hidden="false" id="8142-9518-2ec3-5f81" type="selectionEntry" targetId="58c8-0815-71a7-27fb" collapsible="true"/>
-            <entryLink import="true" name="Lion of Jabir" hidden="false" id="0315-1709-0eff-e86b" type="selectionEntry" targetId="f63f-ac9a-639b-b7ba" collapsible="true"/>
-            <entryLink import="true" name="Sapper" hidden="false" id="14d4-a0c3-bf14-05c5" type="selectionEntry" targetId="e874-ea2b-96ed-0f9a" collapsible="true"/>
-            <entryLink import="true" name="Yüzbaşı Captain" hidden="false" id="d89e-7113-7b20-f578" type="selectionEntry" targetId="9c5a-601e-6b16-320d" collapsible="true"/>
-          </entryLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4470-e73c-10df-34cc" includeChildSelections="false"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink targetId="83c8-b351-cb96-119e" id="4ca3-5943-d691-30a0" primary="false" name="Fireteam"/>
-          </categoryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink targetId="bd43-ddb1-262d-4489" id="f07b-d921-b03b-29c7" primary="true" name="Troop"/>
-        <categoryLink targetId="fd8d-e9e0-2540-a257" id="c48d-5134-cd48-bf9a" primary="false" name="Sultanate"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c2b1-d49e-937b-2f87" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="increment" value="1" field="9210-fe94-fee8-81b1">
-          <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="roster" childId="7c17-5f75-6fd9-73cf" shared="true" roundUp="false" includeChildSelections="true"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="9210-fe94-fee8-81b1" includeChildSelections="true"/>
-      </constraints>
-      <entryLinks>
-        <entryLink import="true" name="Takwin Homunculus" hidden="false" id="da5c-280f-9d08-42b4" type="selectionEntry" targetId="2f82-e47f-c162-9152"/>
-      </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Homunculus" hidden="true" id="3e00-1abf-44f5-2cd9">
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Mind-Linked Ally" id="8f0c-be1f-7948-cddb" hidden="true">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="unit" childId="d832-e6aa-7c93-32e4" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="23e9-a23d-07d9-610f">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <entryLinks>
-            <entryLink import="true" name="Alchemist" hidden="false" id="7133-902a-5a68-b76b" type="selectionEntry" targetId="7c17-5f75-6fd9-73cf" collapsible="true"/>
-            <entryLink import="true" name="Assassin" hidden="false" id="5097-2c2a-3d85-a400" type="selectionEntry" targetId="62d4-d89a-f7e2-7d3b" collapsible="true"/>
-            <entryLink import="true" name="Azeb" hidden="false" id="8c63-79b4-c1ba-b8b1" type="selectionEntry" targetId="0e7e-9167-f044-9493" collapsible="true"/>
-            <entryLink import="true" name="Brazen Bull" hidden="false" id="af73-90ca-4d24-a216" type="selectionEntry" targetId="e62d-c06e-ce35-428b" collapsible="true"/>
-            <entryLink import="true" name="Janissaries" hidden="false" id="080a-8eca-c3ea-70f9" type="selectionEntry" targetId="58c8-0815-71a7-27fb" collapsible="true"/>
-            <entryLink import="true" name="Lion of Jabir" hidden="false" id="dd4e-b855-f296-baa2" type="selectionEntry" targetId="f63f-ac9a-639b-b7ba" collapsible="true"/>
-            <entryLink import="true" name="Sapper" hidden="false" id="33fc-4531-3896-1440" type="selectionEntry" targetId="e874-ea2b-96ed-0f9a" collapsible="true"/>
-            <entryLink import="true" name="Yüzbaşı Captain" hidden="false" id="8fa2-b325-24b4-8ada" type="selectionEntry" targetId="9c5a-601e-6b16-320d" collapsible="true"/>
-          </entryLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="93d6-4ef9-9c54-1375" includeChildSelections="false"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink targetId="83c8-b351-cb96-119e" id="6696-615c-a1e2-46c8" primary="false" name="Fireteam"/>
-          </categoryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink targetId="bd43-ddb1-262d-4489" id="148f-dc09-bc40-57e8" primary="true" name="Troop"/>
-        <categoryLink targetId="fd8d-e9e0-2540-a257" id="171b-3007-055a-6a78" primary="false" name="Sultanate"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f73c-0f08-e6c3-e9fd" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a4ea-6388-e9e9-8f3b" includeChildSelections="true"/>
-      </constraints>
-      <entryLinks>
-        <entryLink import="true" name="Takwin Homunculus" hidden="false" id="8891-b3fa-58ca-f1fc" type="selectionEntry" targetId="2f82-e47f-c162-9152"/>
-      </entryLinks>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Emplaced Grand Cannon" hidden="true" id="822b-60fe-7f4e-1ecf">
       <profiles>
         <profile name="Stationary Turret" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6fdf-d846-089e-c199">
@@ -5238,5 +5117,47 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Pile of Stuff" hidden="false" id="c0f8-5012-5416-763a" type="selectionEntry" targetId="c0cb-8f53-98d4-abc9"/>
+    <entryLink import="true" name="Homunculus" hidden="true" id="8891-b3fa-58ca-f1fc" type="selectionEntry" targetId="2f82-e47f-c162-9152">
+      <comment>Golem From Book</comment>
+      <modifiers>
+        <modifier type="set" value="Homunculus" field="name"/>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="f73c-0f08-e6c3-e9fd" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="bd43-ddb1-262d-4489" id="9b60-50ab-95c2-efce" primary="true" name="Troop"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="806d-48da-a7e4-168b" includeChildSelections="false"/>
+      </constraints>
+    </entryLink>
+    <entryLink import="true" name="Takwin Homunculus" hidden="true" id="da5c-280f-9d08-42b4" type="selectionEntry" targetId="2f82-e47f-c162-9152">
+      <comment>Wisdom One</comment>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="false" id="9210-fe94-fee8-81b1" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c2b1-d49e-937b-2f87" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="9210-fe94-fee8-81b1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="7c17-5f75-6fd9-73cf" shared="true" roundUp="false" includeChildSelections="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="bd43-ddb1-262d-4489" id="bf7a-6fa0-48c6-4966" primary="true" name="Troop"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
 </catalogue>

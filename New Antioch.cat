@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="707d-5bdf-586e-f704" name="New Antioch" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="10" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="707d-5bdf-586e-f704" name="New Antioch" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="10" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Weapons" id="24ae-224b-0680-a9bd" hidden="false" collapsible="false">
       <constraints>
@@ -2053,6 +2053,25 @@
             <constraint type="max" value="1" field="selections" scope="model" shared="true" id="0291-3756-8072-9e34" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Mind Linked" hidden="true" id="1846-bfb6-9551-a3e6">
+          <profiles>
+            <profile name="Mind Linked" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f592-a9ac-af5c-4a17">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model has formed a Fireteam with a Homunculus.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0bf2-9e1d-a8e3-9fcf" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="155f-9854-c740-da37" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="self" shared="true" id="cc79-3822-ea41-8606" includeChildSelections="false"/>
@@ -2905,7 +2924,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6ea7-558a-a6e1-e075" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="60b5-ee85-3103-d42e" includeChildSelections="false"/>
       </constraints>
       <entryLinks>
@@ -4689,65 +4707,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="705b-e23f-e9c2-58ab" id="62c4-a728-2505-1e3b" primary="true" name="Configuration"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Homunculus" hidden="true" id="06c5-7f97-3c0f-00be">
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f73c-0f08-e6c3-e9fd" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Mind-Linked Ally" id="21ab-9ac4-d6a4-1544" hidden="true">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="unit" childId="155f-9854-c740-da37" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bc53-6b06-0008-12ee">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c57d-25c4-84c0-9f94" includeChildSelections="false"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink name="Fireteam" hidden="false" id="dcca-20ad-31a4-0f9c" targetId="83c8-b351-cb96-119e" primary="false"/>
-          </categoryLinks>
-          <entryLinks>
-            <entryLink import="true" name="Yeoman" hidden="false" id="0582-02b1-730b-4728" type="selectionEntry" targetId="f2c3-86d1-5924-093f"/>
-            <entryLink import="true" name="Combat Engineer" hidden="false" id="22f6-4c0a-68d8-ca52" type="selectionEntry" targetId="50d8-f63e-e01d-2698"/>
-            <entryLink import="true" name="Combat Medic" hidden="false" id="c1f2-8083-6d64-5050" type="selectionEntry" targetId="3523-c775-3603-dbeb"/>
-            <entryLink import="true" name="Communicant Anti-Tank Hunter" hidden="false" id="6435-e1df-7c0c-00ef" type="selectionEntry" targetId="f1b3-1797-9928-0a6f"/>
-            <entryLink import="true" name="Mamluk Faris" hidden="false" id="ac75-7174-ea36-c9bf" type="selectionEntry" targetId="22b8-dc59-428d-87cd"/>
-            <entryLink import="true" name="Lieutenant" hidden="false" id="1ee4-f123-cac5-6b51" type="selectionEntry" targetId="e578-1122-47cb-10ad"/>
-            <entryLink import="true" name="Mechanized Heavy Infantry" hidden="false" id="15b3-f276-9acd-b8cb" type="selectionEntry" targetId="3133-240a-a0cc-9cb4"/>
-            <entryLink import="true" name="Mendelist Ammo Monk " hidden="false" id="af9f-e3ae-cebb-8f74" type="selectionEntry" targetId="0923-5700-c9f0-2ef6"/>
-            <entryLink import="true" name="Observer" hidden="false" id="c085-658e-4a56-6a9f" type="selectionEntry" targetId="886c-6e17-ab87-8c9c"/>
-            <entryLink import="true" name="Shocktrooper" hidden="false" id="b406-9fbf-015f-7c69" type="selectionEntry" targetId="579e-2810-d1cf-454b"/>
-            <entryLink import="true" name="Sniper Priests" hidden="false" id="9646-499f-bf8f-6352" type="selectionEntry" targetId="dd59-a783-dbb5-242f"/>
-            <entryLink import="true" name="Trench Cleric" hidden="false" id="1ff4-888b-fb51-74d9" type="selectionEntry" targetId="f8bc-5df8-1768-a72a"/>
-            <entryLink import="true" name="Trench Dog" hidden="false" id="6938-3447-3786-07a9" type="selectionEntry" targetId="52e5-2006-85e1-a7c7"/>
-            <entryLink import="true" name="Witchburner" hidden="false" id="0af7-005a-2667-f337" type="selectionEntry" targetId="fb45-9c9c-7cf1-6745"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Homunculus" hidden="false" id="3eca-b269-4679-637d" type="selectionEntry" targetId="2d0c-00e9-7897-83d7"/>
-      </entryLinks>
-      <categoryLinks>
-        <categoryLink targetId="2cfb-73f8-0df3-30e8" id="30da-e79a-f26e-44d4" primary="false" name="New Antioch"/>
-        <categoryLink targetId="bd43-ddb1-262d-4489" id="c6ef-878a-da27-2e18" primary="true" name="Troop"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9164-d39a-b49c-c129" includeChildSelections="true"/>
-      </constraints>
-    </selectionEntry>
     <selectionEntry type="model" import="true" name="Trench Dogs of the Red Brigade" hidden="true" id="e558-982e-ccda-bbe7">
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="35"/>
@@ -5091,5 +5050,17 @@ This dog cannot attack with this weapon, but any other model in the Warband (tho
     </entryLink>
     <entryLink import="true" name="Pile of Stuff" hidden="false" id="aeb4-9446-e91c-0b8f" type="selectionEntry" targetId="366e-e078-0a43-c7e8"/>
     <entryLink import="true" name="Battlefield Title" hidden="false" id="5cf4-12c6-c2d1-f10f" type="selectionEntry" targetId="74e6-0563-729c-5a06"/>
+    <entryLink import="true" name="Homunculus" hidden="true" id="3eca-b269-4679-637d" type="selectionEntry" targetId="2d0c-00e9-7897-83d7">
+      <categoryLinks>
+        <categoryLink targetId="bd43-ddb1-262d-4489" id="a9c4-3c7d-2c28-039e" primary="true" name="Troop"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f73c-0f08-e6c3-e9fd" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
 </catalogue>

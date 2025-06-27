@@ -2107,6 +2107,32 @@
         <constraint type="max" value="1" field="selections" scope="self" shared="true" id="15b3-1fd6-cc55-cb5a" includeChildSelections="false"/>
       </constraints>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Fireteams" id="1ede-384e-2abd-0c45" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Mind Linked" hidden="true" id="8858-f2cf-be66-80ce">
+          <profiles>
+            <profile name="Mind Linked" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7fd0-a83c-445b-40ff">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is in a fireteam with a Homunculus.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dda6-b2a1-8a75-aa0e" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ea3-6096-0664-a4e6" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="true" id="89ff-6802-1ec4-c89b" type="selectionEntry" targetId="1f47-9c34-ef9b-914b"/>
+      </entryLinks>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Bayonet Lug" hidden="false" id="f603-fb7b-cb6f-f1a4">
@@ -2697,7 +2723,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="524a-2ddd-4576-a886" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0b9d-5ab7-7abc-891d" includeChildSelections="false"/>
       </constraints>
       <entryLinks>
@@ -2983,7 +3008,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Role" id="8024-8d21-6dec-fac0" hidden="true" sortIndex="3">
+        <selectionEntryGroup name="Role" id="8024-8d21-6dec-fac0" hidden="true" sortIndex="4">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c2b0-2e5d-5661-49ab-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c2b0-2e5d-5661-49ab-max" includeChildSelections="false"/>
@@ -3030,8 +3055,8 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Weapons" hidden="false" id="c047-141f-afb7-ba34" type="selectionEntryGroup" targetId="4f10-6941-6de8-d8a6" sortIndex="5"/>
-        <entryLink import="true" name="Grenades" hidden="false" id="6788-0e06-f9fb-fd4c" type="selectionEntryGroup" targetId="25fc-648e-83c5-0411" sortIndex="6"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="c047-141f-afb7-ba34" type="selectionEntryGroup" targetId="4f10-6941-6de8-d8a6" sortIndex="6"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="6788-0e06-f9fb-fd4c" type="selectionEntryGroup" targetId="25fc-648e-83c5-0411" sortIndex="7"/>
         <entryLink import="true" name="Equipment" hidden="false" id="ccc3-dc53-ab03-1abd" type="selectionEntryGroup" targetId="4e14-77e1-ca51-7dc6"/>
         <entryLink import="true" name="Advancement" hidden="true" id="dd18-b62d-e293-0b54" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Armour" hidden="false" id="0879-2cfc-656d-455d" type="selectionEntryGroup" targetId="e8c4-5c09-11b6-1e3f">
@@ -3040,8 +3065,8 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </constraints>
         </entryLink>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="413c-4b3f-249a-616d" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
-        <entryLink import="true" name="Plague Knight Rank" hidden="false" id="28bd-6fcd-3add-96d1" type="selectionEntryGroup" targetId="8ae8-ab71-98de-451a" sortIndex="4"/>
-        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="cfc0-2893-5456-2864" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
+        <entryLink import="true" name="Plague Knight Rank" hidden="false" id="28bd-6fcd-3add-96d1" type="selectionEntryGroup" targetId="8ae8-ab71-98de-451a" sortIndex="5"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="cfc0-2893-5456-2864" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
       </entryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="60"/>
@@ -3076,6 +3101,40 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <constraints>
         <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="f025-ee7a-4125-ce80" includeChildSelections="true"/>
       </constraints>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Leader" hidden="true" id="0526-f0b0-ecbe-7893" sortIndex="3">
+          <profiles>
+            <profile name="Leader" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ad78-80b9-dee7-9bf2">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Plague Knight is the leader of the Warband.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="add" value="afb9-39f5-82d9-46ed" field="category" scope="model"/>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="fdaf-1b5e-0348-3ad9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="8a3d-651b-7bac-c391">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="b044-cbf6-a7c5-e2b3" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="73a3-5983-5994-27c6">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="fdaf-1b5e-0348-3ad9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cd64-1128-ac9f-abf7" includeChildSelections="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8a3d-651b-7bac-c391" includeChildSelections="false" includeChildForces="true"/>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="73a3-5983-5994-27c6" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Hounds of the Black Grail" hidden="false" id="5df2-ef54-85ea-adfe">
       <profiles>
@@ -3194,12 +3253,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="ea30-8361-ba0b-65f5" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776" sortIndex="3"/>
-        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="88c2-b376-ccbb-6918" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="1">
+        <entryLink import="true" name="Fireteams" hidden="false" id="88c2-b376-ccbb-6918" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="1">
           <profiles>
-            <profile name="Double Dog" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f1f4-ad6d-1a6e-d822">
+            <profile name="Double Dog" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="true" id="f1f4-ad6d-1a6e-d822">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This dog is friends with another dog. Isn&apos;t that lovely?</characteristic>
               </characteristics>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="89ff-6802-1ec4-c89b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
         </entryLink>
@@ -3365,7 +3431,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="a2e7-fa4e-fe98-575d" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
-        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="8b6e-3b4c-8b7c-eb03" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="8b6e-3b4c-8b7c-eb03" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Heralds of Beelzebub" hidden="false" id="8f23-4665-3322-ca92">
@@ -3466,7 +3532,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="38bb-aa00-4284-e173" includeChildSelections="false"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="b661-b35c-9c74-06f0" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="b661-b35c-9c74-06f0" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="4" field="selections" scope="roster" shared="true" id="904b-6f39-0451-bd48" includeChildSelections="true"/>
@@ -3662,7 +3728,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="2e49-56db-5bee-cec3" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776" sortIndex="3"/>
-        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="f7f8-8f17-e129-eaba" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="1"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="f7f8-8f17-e129-eaba" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Lord of Tumours" hidden="false" id="80e3-313d-1c13-05a0">
@@ -3738,10 +3804,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Weapons" hidden="false" id="2e76-f13c-bb27-fb56" type="selectionEntryGroup" targetId="4f10-6941-6de8-d8a6" sortIndex="3"/>
         <entryLink import="true" name="Grenades" hidden="false" id="1ec1-88c0-96db-ff36" type="selectionEntryGroup" targetId="25fc-648e-83c5-0411" sortIndex="4"/>
         <entryLink import="true" name="Equipment" hidden="false" id="bded-d76e-f6f2-9edd" type="selectionEntryGroup" targetId="4e14-77e1-ca51-7dc6"/>
-        <entryLink import="true" name="Advancement" hidden="true" id="4077-81f4-0d3c-947a" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="2"/>
+        <entryLink import="true" name="Advancement" hidden="true" id="4077-81f4-0d3c-947a" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Armour" hidden="false" id="d9fd-47a7-8c46-2d03" type="selectionEntryGroup" targetId="e8c4-5c09-11b6-1e3f"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="9ad0-0e5b-e9ae-e0a8" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
-        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="0164-27c6-1afd-b9e1" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="1"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="0164-27c6-1afd-b9e1" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
       </entryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="130"/>
@@ -3847,7 +3913,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Advancement" hidden="true" id="e2fa-3447-1fdd-a56a" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Armour" hidden="false" id="2efa-13c4-0f96-8fda" type="selectionEntryGroup" targetId="e8c4-5c09-11b6-1e3f"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="040d-5896-eda2-8a3d" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
-        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="4577-e012-64ff-4196" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="4577-e012-64ff-4196" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
       </entryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="55"/>
@@ -3935,59 +4001,6 @@ During its Activation, a Plague Knight in this Warband can remove an INFECTION M
         <categoryLink targetId="705b-e23f-e9c2-58ab" id="0f1c-ce96-001e-af7a" primary="true" name="Configuration"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Homunculus" hidden="true" id="28ff-b789-21e9-cc99">
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f73c-0f08-e6c3-e9fd" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Mind-Linked Ally" id="3864-e489-3d6f-209f" hidden="true">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="unit" childId="4ea3-6096-0664-a4e6" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4e80-4490-4a57-93ca">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f056-9cc6-ebb6-4d26" includeChildSelections="false"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink name="Fireteam" hidden="false" id="5e5e-46c1-03e9-5ae4" targetId="83c8-b351-cb96-119e" primary="false"/>
-          </categoryLinks>
-          <entryLinks>
-            <entryLink import="true" name="Sin Eater" hidden="false" id="2a33-af3d-4c0f-06e1" type="selectionEntry" targetId="4703-d968-d52d-46b5"/>
-            <entryLink import="true" name="Corpse Guard" hidden="false" id="9349-f6f1-7c51-0635" type="selectionEntry" targetId="7e0b-de14-f14c-8ea0"/>
-            <entryLink import="true" name="Lord of Tumours" hidden="false" id="b1a9-6807-52d1-c82b" type="selectionEntry" targetId="80e3-313d-1c13-05a0"/>
-            <entryLink import="true" name="Plague Knight" hidden="false" id="d690-ec94-7b15-7ff6" type="selectionEntry" targetId="43b9-c7fd-4680-3e7a"/>
-            <entryLink import="true" name="Amalgam" hidden="false" id="c531-dbea-9fe7-d43e" type="selectionEntry" targetId="036b-eb9f-9b58-fa7e"/>
-            <entryLink import="true" name="Grail Thrall" hidden="false" id="0098-d27e-b721-174d" type="selectionEntry" targetId="ec39-f328-bad6-a586"/>
-            <entryLink import="true" name="Heralds of Beelzebub" hidden="false" id="4395-dde3-f123-4b5b" type="selectionEntry" targetId="8f23-4665-3322-ca92"/>
-            <entryLink import="true" name="Hounds of the Black Grail" hidden="false" id="24a5-41b2-1cc6-a933" type="selectionEntry" targetId="5df2-ef54-85ea-adfe"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Homunculus" hidden="false" id="cc97-8441-8799-50ec" type="selectionEntry" targetId="feab-369d-5285-ea19"/>
-      </entryLinks>
-      <categoryLinks>
-        <categoryLink name="New Antioch" hidden="false" id="9f49-fbcf-296a-c520" targetId="2cfb-73f8-0df3-30e8" primary="false"/>
-        <categoryLink name="Troop" hidden="false" id="243a-5f6e-9bb7-ffbe" targetId="bd43-ddb1-262d-4489" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1ab4-a404-b022-cd1d" includeChildSelections="true"/>
-      </constraints>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Noble Hierarchy" hidden="false" id="a889-723f-f818-0867" defaultAmount="1">
       <categoryLinks>
         <categoryLink targetId="705b-e23f-e9c2-58ab" id="372b-42c1-c196-58ef" primary="true" name="Configuration"/>
@@ -4056,9 +4069,19 @@ During its Activation, a Plague Knight in this Warband can remove an INFECTION M
     <entryLink import="true" name="Scripture Guardian" hidden="false" id="49df-7901-867a-c267" type="selectionEntry" targetId="08cc-f1b9-e991-e191">
       <entryLinks>
         <entryLink import="true" name="Melee Weapons" hidden="false" id="a009-94cc-985a-8bd3" type="selectionEntryGroup" targetId="9912-b634-058b-aa2d"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="bdc1-2fc7-8b72-3d0f" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Pile of Stuff" hidden="false" id="6043-1c6c-c7ff-9d8d" type="selectionEntry" targetId="97ad-20f9-1e4c-c96c"/>
     <entryLink import="true" name="Battlefield Title" hidden="false" id="f0cf-ddcc-51b6-b18a" type="selectionEntry" targetId="0175-e39b-7bab-aaaa"/>
+    <entryLink import="true" name="Homunculus" hidden="true" id="cc97-8441-8799-50ec" type="selectionEntry" targetId="feab-369d-5285-ea19">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f73c-0f08-e6c3-e9fd" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
 </catalogue>
