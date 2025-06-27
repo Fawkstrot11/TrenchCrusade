@@ -2965,19 +2965,6 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1674-62f2-c48d-e189" includeChildSelections="false"/>
               </constraints>
-              <modifiers>
-                <modifier type="decrement" value="5" field="8d43-33fd-332d-17a6">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="374c-9b11-8530-d0af" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="c2b1-d49e-937b-2f87" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="3e00-1abf-44f5-2cd9" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Elemental Resistance" hidden="false" id="f500-e61c-b740-703c" sortIndex="2">
               <costs>

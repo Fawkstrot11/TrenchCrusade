@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="ba52-3616-d7f9-8d0c" name="Campaign Rules" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="13" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="ba52-3616-d7f9-8d0c" name="Campaign Rules" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="13" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Campaign Rules" hidden="false" id="7346-84e3-dbbb-296d" defaultAmount="1">
       <constraints>
@@ -1376,7 +1376,7 @@ The saint guides your troops before each battle. The model with the skull gains 
           <profiles>
             <profile name="Insomniac" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="59f9-befb-280e-7895">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This character must always be deployed as the first model on your side in any battle  it takes part in. It cannot use the Keyword INFILTRATOR if it has it.</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This character must always be deployed as the first model on your side in any battle it takes part in. It cannot use the Keyword INFILTRATOR if it has it.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1419,6 +1419,70 @@ The saint guides your troops before each battle. The model with the skull gains 
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5541-600b-32b6-c652" includeChildSelections="false"/>
           </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Source of Fear" id="c099-7ef0-92a8-c811" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Haunted by the Pilgrims" hidden="false" id="2045-994d-0db2-998d">
+                  <profiles>
+                    <profile name="Haunted by the Pilgrims" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9de5-0cec-2063-1d3d">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model FEARS all enemy models if playing against a Trench Pilgrims warband, including all ranged and melee attacks.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Haunted by the Antiochians" hidden="false" id="8998-5b63-101b-80b1">
+                  <profiles>
+                    <profile name="Haunted by the Antiochians" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="495d-9434-7f8a-ad06">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model FEARS all enemy models if playing against a New Antioch warband, including all ranged and melee attacks.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Haunted by the Court" hidden="false" id="453f-2b9e-b8bb-adac">
+                  <profiles>
+                    <profile name="Haunted by the Court" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b152-2212-7d4d-b787">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model FEARS all enemy models if playing against a Court of the Seven Headed Serpent warband, including all ranged and melee attacks.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Haunted by the Grail" hidden="false" id="8a47-0b71-1420-8084">
+                  <profiles>
+                    <profile name="Haunted by the Grail" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3989-2f9f-97fe-38c0">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model FEARS all enemy models if playing against a Black Grail warband, including all ranged and melee attacks.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Haunted by the Heretics" hidden="false" id="41fc-b80a-0165-40c8">
+                  <profiles>
+                    <profile name="Haunted by the Heretics" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="811f-bd5e-464a-80e5">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model FEARS all enemy models if playing against a Heretic Legions warband, including all ranged and melee attacks.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Haunted by the Sultanate" hidden="false" id="274a-6420-8549-7b2e">
+                  <profiles>
+                    <profile name="Haunted by the Sultanate" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fee7-48d3-f330-7e2c">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model FEARS all enemy models if playing against an Iron Sultanate warband, including all ranged and melee attacks.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="self" shared="true" id="9db8-2bf9-94cd-c498" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="self" shared="true" id="6385-2b3a-c5a9-1804" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Paranoid" hidden="false" id="4f6d-b0d7-c343-0109" sortIndex="9">
           <profiles>
