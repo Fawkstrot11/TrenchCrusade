@@ -616,8 +616,8 @@ The saint guides your troops before each battle. The model with the skull gains 
       <selectionEntryGroups>
         <selectionEntryGroup name="Limit Increase" id="dfaa-1946-de73-a0f2" hidden="false">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d53d-d6d6-dceb-151a-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d53d-d6d6-dceb-151a-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d53d-d6d6-dceb-151a-min-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d53d-d6d6-dceb-151a-min-max" includeChildSelections="false"/>
           </constraints>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Organized Combat Medics" hidden="false" id="328f-3496-3c6c-4033">
@@ -848,14 +848,28 @@ The saint guides your troops before each battle. The model with the skull gains 
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b625-a4ca-b687-dd0f" includeChildSelections="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b625-a4ca-b687-dd0f" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="b625-a4ca-b687-dd0f">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="e2e1-032f-f240-4aab" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Residual Favour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="275e-c54a-05cb-070f">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">You are able to select more Favoured Units than you have instances of Sultan&apos;s Favour. This is because Sultan&apos;s Favour is not lost when the associated model dies. Please do not use this to cheat. That would be uncouth.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
         <modifier type="prepend" value="Residual" field="name">
           <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="9ca5-5cff-d382-8821" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="e2e1-032f-f240-4aab" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
         <modifier type="set" value="1" field="fb4c-78c6-0e51-96b7">
@@ -883,25 +897,20 @@ The saint guides your troops before each battle. The model with the skull gains 
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ac10-ea8c-b558-3fe5" includeChildSelections="true"/>
         <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="fb4c-78c6-0e51-96b7" includeChildSelections="true"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink targetId="705b-e23f-e9c2-58ab" id="0850-81e3-ee6c-d186" primary="true" name="Configuration"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Money can buy Anything" hidden="true" id="a632-593c-63b3-de75">
       <selectionEntryGroups>
         <selectionEntryGroup name="Wealthy Acquisition" id="e667-ca2f-f8a1-647c" hidden="false" flatten="false">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="self" shared="true" id="e9b2-fafe-a992-5786-min-min" includeChildSelections="false"/>
-            <constraint type="max" value="0" field="selections" scope="self" shared="true" id="e9b2-fafe-a992-5786-min-max" includeChildSelections="false"/>
           </constraints>
           <modifiers>
             <modifier type="increment" value="1" field="e9b2-fafe-a992-5786-min-min">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="aa37-58a9-6f8e-cafc" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-                <repeat value="1" repeats="1" field="selections" scope="roster" childId="7591-0a91-d011-82ce" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" value="1" field="e9b2-fafe-a992-5786-min-max">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="roster" childId="aa37-58a9-6f8e-cafc" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-                <repeat value="1" repeats="1" field="selections" scope="roster" childId="7591-0a91-d011-82ce" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -1296,17 +1305,13 @@ The saint guides your troops before each battle. The model with the skull gains 
       <categoryLinks>
         <categoryLink targetId="705b-e23f-e9c2-58ab" id="fc4a-95f7-76c1-0f8e" primary="true" name="Configuration"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Legacy Inventory" hidden="false" id="7591-0a91-d011-82ce">
-          <profiles>
-            <profile name="Legacy Inventory" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7884-d070-ef44-b45b">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Select this once for each model who has died with this skill to allow you to keep their selection.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-      </selectionEntries>
+      <profiles>
+        <profile name="Legacy Inventory" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7884-d070-ef44-b45b">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">You are able to select more Wealthy Acquisitions than you have instances of Money can buy Anything. This is because Money can buy Anything is not lost when the associated model dies. Please do not use this to cheat. That would be uncouth.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
@@ -2454,7 +2459,7 @@ The saint guides your troops before each battle. The model with the skull gains 
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6954-73bd-4777-c69a" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6954-73bd-4777-c69a" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Healing Arts" hidden="false" id="597d-ddc5-d1fa-8cd2" sortIndex="6">

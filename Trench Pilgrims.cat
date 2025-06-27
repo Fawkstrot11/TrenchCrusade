@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d54d-055d-bbc0-a20f" name="Trench Pilgrims" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="8" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d54d-055d-bbc0-a20f" name="Trench Pilgrims" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="8" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <forceEntries>
     <forceEntry name="Warband" id="eef8-974d-98a4-8d2e" hidden="false">
       <categoryLinks>
@@ -646,7 +646,7 @@ Keywords: CONSUMABLE</characteristic>
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
               </conditions>
             </modifier>
-            <modifier type="set" value="1" field="5f1d-42a2-c43a-3671">
+            <modifier type="increment" value="1" field="5f1d-42a2-c43a-3671">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
               </conditions>
@@ -3144,6 +3144,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <infoLink name="Tough" id="7635-dccd-d817-bbfe" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
         <infoLink name="Heavy" id="9ffb-4b7a-5cef-ebea" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
         <infoLink name="Risky" id="ee6e-981b-19ef-ebd4" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+        <infoLink name="Combat Helmet" id="3497-e2ad-060e-0562" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Sacrificial Lamb" hidden="false" id="2563-e20f-3b22-8e09" type="selectionEntry" targetId="4c11-ec67-eaa0-fbdd" sortIndex="3"/>
