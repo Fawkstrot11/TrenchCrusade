@@ -2083,6 +2083,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </conditions>
             </modifier>
           </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="f87d-5ea3-e505-6a9f" id="8d6a-6466-7c52-6ec4" primary="false" name="Cumbersome"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Halberd-Gun" hidden="true" id="a6cc-f2e2-5c16-0990" sortIndex="5">
           <costs>
@@ -2096,9 +2099,14 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="41ea-0e5d-eebb-a8dc" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="41ea-0e5d-eebb-a8dc" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <categoryLinks>
