@@ -194,7 +194,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Holy Water of Lalibela" hidden="true" id="b4d4-3da2-7157-f15b" sortIndex="11">
+        <selectionEntry type="upgrade" import="true" name="Holy Water of Lalibela" hidden="true" id="b4d4-3da2-7157-f15b" sortIndex="12">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="3"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -218,7 +218,7 @@
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Tabot" hidden="true" id="ffda-4bec-1b59-f267" sortIndex="12">
+        <selectionEntry type="upgrade" import="true" name="Tabot" hidden="true" id="ffda-4bec-1b59-f267" sortIndex="13">
           <costs>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="4"/>
           </costs>
@@ -261,7 +261,7 @@
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4636-7ceb-9779-a535" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Blood Cloak" hidden="true" id="114b-97a7-6011-55c2" sortIndex="9">
+        <selectionEntry type="upgrade" import="true" name="Blood Cloak" hidden="true" id="114b-97a7-6011-55c2" sortIndex="10">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -288,6 +288,33 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e85-4ae0-e3bc-b882" includeChildSelections="false"/>
             <constraint type="max" value="4" field="selections" scope="roster" shared="true" id="7809-6d02-08eb-ea33" includeChildSelections="true"/>
           </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Phosphorous Rounds" hidden="true" id="95a5-9e57-57dc-d63a" sortIndex="9">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Fire" id="5df0-5d98-0d7e-ecd0" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+            <infoLink name="Consumable" id="c87e-69c7-f5a4-fe40" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Phosphorous Rounds" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8bd6-c237-de4c-2e9a">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before the battle begins, a model may use this item to grant a shotgun that they are equipped with the FIRE keyword until the end of the battle.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="8639-a295-a97c-4997" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -345,14 +372,14 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Sniper Scope" hidden="true" id="ff38-50c0-2451-836c" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="10"/>
-        <entryLink import="true" name="Battlefield Title" hidden="true" id="f5cf-f56e-1756-e867" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="16"/>
-        <entryLink import="true" name="Resurrection Engine" hidden="true" id="c6da-3d4a-3dae-8e8a" type="selectionEntry" targetId="28c1-351c-12d0-1f26" sortIndex="19"/>
-        <entryLink import="true" name="Book of Battle Prayers" hidden="true" id="1ae8-3911-e885-b448" type="selectionEntry" targetId="2958-0f21-a1a5-74fb" sortIndex="17"/>
-        <entryLink import="true" name="Salvage Golem" hidden="true" id="1c98-df0a-2814-f1b1" type="selectionEntry" targetId="a9ef-f6d0-107c-2441" sortIndex="13"/>
-        <entryLink import="true" name="Field Hospital" hidden="true" id="2ffa-83b2-4c28-d014" type="selectionEntry" targetId="eb62-f33b-0d57-cd92" sortIndex="18"/>
-        <entryLink import="true" name="Smoke Screen" hidden="true" id="acc4-e923-3870-52de" type="selectionEntry" targetId="6db3-6176-dc20-c6b8" sortIndex="15"/>
-        <entryLink import="true" name="Knighthood" hidden="true" id="3c71-bc76-c2da-6589" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="14"/>
+        <entryLink import="true" name="Sniper Scope" hidden="true" id="ff38-50c0-2451-836c" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="11"/>
+        <entryLink import="true" name="Battlefield Title" hidden="true" id="f5cf-f56e-1756-e867" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="17"/>
+        <entryLink import="true" name="Resurrection Engine" hidden="true" id="c6da-3d4a-3dae-8e8a" type="selectionEntry" targetId="28c1-351c-12d0-1f26" sortIndex="20"/>
+        <entryLink import="true" name="Book of Battle Prayers" hidden="true" id="1ae8-3911-e885-b448" type="selectionEntry" targetId="2958-0f21-a1a5-74fb" sortIndex="18"/>
+        <entryLink import="true" name="Salvage Golem" hidden="true" id="1c98-df0a-2814-f1b1" type="selectionEntry" targetId="a9ef-f6d0-107c-2441" sortIndex="14"/>
+        <entryLink import="true" name="Field Hospital" hidden="true" id="2ffa-83b2-4c28-d014" type="selectionEntry" targetId="eb62-f33b-0d57-cd92" sortIndex="19"/>
+        <entryLink import="true" name="Smoke Screen" hidden="true" id="acc4-e923-3870-52de" type="selectionEntry" targetId="6db3-6176-dc20-c6b8" sortIndex="16"/>
+        <entryLink import="true" name="Knighthood" hidden="true" id="3c71-bc76-c2da-6589" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="15"/>
         <entryLink import="true" name="Curative Fluids" hidden="true" id="c53b-797a-a746-74ed" type="selectionEntry" targetId="0e49-dfa5-4190-ee69"/>
         <entryLink import="true" name="Lock of Samson&apos;s Hair" hidden="false" id="8ed1-2abd-94fe-13be" type="selectionEntry" targetId="9b61-d0a4-dd30-2d32"/>
         <entryLink import="true" name="Blasphemous Banner" hidden="true" id="8a3a-c966-249a-7019" type="selectionEntry" targetId="ac5b-0ae8-e0cd-5fda"/>
@@ -384,6 +411,18 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="abad-acfc-9a8e-7e7e" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="add" value="Max 2 Grenades with Byzantine" field="error" scope="parent">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9e42-776c-6fed-5cdc" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Incendiary Grenades" hidden="false" id="f3ac-a787-de81-9bc9">
           <costs>
@@ -414,6 +453,11 @@
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="c8f3-1e8b-6a3c-b453" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="a32d-ebfc-2926-aa1e" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -485,11 +529,59 @@
           </constraints>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea95-2310-99f0-6e97" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Greek Fire" hidden="true" id="b15e-e3c1-f53b-dedc">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea95-2310-99f0-6e97" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="70c9-988d-71a7-7654" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="50d8-f63e-e01d-2698" shared="true" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile name="Greek Fire" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="3a61-396b-8340-2ce3">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">GRENADE</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">6&quot;</characteristic>
+                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1 DICE to injury </characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, BLAST 3&quot;, FIRE, CONSUMABLE</characteristic>
+                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">You can throw the Greek Fire at either a 1mm x 1mm point on the ground or at an enemy model within range, with a ranged attack ACTION. If the roll fails, it scatters in a direction is decided by your opponent. The distance is equal to 7&quot;, subtracting the result of your roll (e.g. 7&quot;-5&quot;= 2&quot;). If it lands directly atop a model, roll injuries with 3D6 instead of 2D6, and add them together.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink targetId="70c9-988d-71a7-7654" id="619a-0a20-5f16-2507" primary="false" name="Heavy"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="42a3-96f2-8cac-97d6" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b386-014c-dd9b-6a67" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Blast" id="5e37-ddf9-0172-5a7d" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+            <infoLink name="Fire" id="100b-b764-9ea4-1d51" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+            <infoLink name="Grenade" id="c69d-bf8f-72ed-8cbe" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+            <infoLink name="Heavy" id="a7c5-226b-99b2-ceb5" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Consumable" id="65a1-ca87-4929-8cd8" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -580,7 +672,7 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Melee (Two-Handed)" id="9a78-862f-67eb-f06b" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Great Hammer/Maul" hidden="false" id="37a4-91c9-df9a-c5bd">
+        <selectionEntry type="upgrade" import="true" name="Great Hammer/Maul" hidden="false" id="37a4-91c9-df9a-c5bd" sortIndex="1">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -605,7 +697,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Great Sword/Axe" hidden="false" id="db8d-f0cf-9959-273f">
+        <selectionEntry type="upgrade" import="true" name="Great Sword/Axe" hidden="false" id="db8d-f0cf-9959-273f" sortIndex="2">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="12"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -636,7 +728,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lochaber Axe" hidden="true" id="adba-b7f8-83fd-a35c">
+        <selectionEntry type="upgrade" import="true" name="Lochaber Axe" hidden="true" id="adba-b7f8-83fd-a35c" sortIndex="3">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -665,7 +757,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Tank-Splitter Sword" hidden="true" id="2c09-3968-682f-af03">
+        <selectionEntry type="upgrade" import="true" name="Tank-Splitter Sword" hidden="true" id="2c09-3968-682f-af03" sortIndex="4">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -699,6 +791,40 @@
           </modifiers>
           <constraints>
             <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="db3e-7b72-f006-1491" includeChildSelections="true"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Dane Axe" hidden="false" id="0084-2122-f8c1-537a" sortIndex="5">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Dane Axe" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="b984-ef6c-1b2a-6c68">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Injury Rolls</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, CRITICAL</characteristic>
+                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Add +1 to the injury result if the target has -1 armour or better.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="70c9-988d-71a7-7654" id="33e3-faa9-4b3c-b87f" primary="false" name="Heavy"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Critical" id="fafc-e5ac-fe24-1c5b" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+            <infoLink name="Heavy" id="a6b3-4590-0cdc-4886" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="b097-ea28-5739-2393" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -766,8 +892,18 @@
                     <conditionGroup type="or">
                       <conditions>
                         <condition type="notEqualTo" value="1" field="selections" scope="parent" childId="e16d-0563-0aca-babe" shared="true"/>
-                        <condition type="notEqualTo" value="1" field="selections" scope="parent" childId="bb5a-15df-dd97-52cb" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="notEqualTo" value="1" field="selections" scope="parent" childId="bb5a-15df-dd97-52cb" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="0084-2122-f8c1-537a" shared="true" includeChildSelections="false"/>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="db8d-f0cf-9959-273f" shared="true" includeChildSelections="false"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="579e-2810-d1cf-454b" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                     <conditionGroup type="or">
                       <conditions>
@@ -814,8 +950,31 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="e16d-0563-0aca-babe" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb5a-15df-dd97-52cb" shared="true"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb5a-15df-dd97-52cb" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <comment>fuckin hell, homebrew</comment>
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="579e-2810-d1cf-454b" shared="true"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="atLeast" value="1" field="selections" scope="parent" childId="db8d-f0cf-9959-273f" shared="true" includeChildSelections="false"/>
+                                <condition type="atLeast" value="1" field="selections" scope="parent" childId="0084-2122-f8c1-537a" shared="true" includeChildSelections="false"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <comment>shield combo refun</comment>
@@ -932,10 +1091,17 @@
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1047,9 +1213,14 @@
               </conditions>
             </modifier>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="increment" value="1" field="a26f-8c3d-3c85-60a5">
               <repeats>
@@ -1073,7 +1244,20 @@
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="7a52-4209-49c7-e28b" includeChildSelections="true"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Machine Gun" id="90ce-abf6-be84-5dd5" hidden="false" type="profile" targetId="517c-652f-100e-71d6"/>
+            <infoLink name="Machine Gun" id="90ce-abf6-be84-5dd5" hidden="false" type="profile" targetId="517c-652f-100e-71d6">
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="15ee-f66c-def4-a014" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" value="Machine Guns can make three Attack Actions instead of one. They can target separate models with each attack, as long as all targets are within 6” of each other." field="description"/>
+                    <modifier type="set" value="24&quot;" field="31a7-b5e8-41dc-5fd1"/>
+                  </modifiers>
+                  <comment>Fire Support Config</comment>
+                </modifierGroup>
+              </modifierGroups>
+            </infoLink>
             <infoLink name="Heavy" id="88eb-9f01-840e-664a" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <categoryLinks>
@@ -1213,6 +1397,11 @@
             <modifier type="decrement" value="5" field="8d43-33fd-332d-17a6">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="c2f2-d6ba-3f54-d80c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="f637-3855-63ea-598c">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1365,6 +1554,11 @@
                     <repeat value="1" repeats="1" field="selections" scope="roster" childId="6ef1-51b6-9a26-cc36" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
                   </repeats>
                 </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Shotgun" hidden="false" id="ff3d-b1b4-9d3c-855c" sortIndex="1">
@@ -1449,7 +1643,7 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Utility Hand" id="8b4c-c5f4-f53b-fe48" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Troop Flag" hidden="false" id="b6ec-fe59-ac2a-5d00" sortIndex="7">
+        <selectionEntry type="upgrade" import="true" name="Troop Flag" hidden="false" id="b6ec-fe59-ac2a-5d00" sortIndex="8">
           <costs>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="1"/>
           </costs>
@@ -1485,142 +1679,6 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Carnyx " hidden="true" id="2b13-5e5c-b810-c791" sortIndex="6">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="448d-1c46-ffe1-2586" includeChildSelections="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="78ed-e0ab-fce3-388e" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="2d0c-00e9-7897-83d7" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="model" childId="820b-8856-fb9c-e9d9" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="increment" value="1" field="448d-1c46-ffe1-2586">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="roster" childId="a9b8-3287-ee3b-34bc" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile name="Carnyx " typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bf4f-e324-29c3-1527">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model causes FEAR. Any friendly models within 4” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Carnyces take one hand to use at all times as if it were a weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Fear" id="6e65-5f02-af1f-bbb4" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
-          </infoLinks>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Bagpipes" hidden="true" id="831d-0f3f-be36-9b1d" sortIndex="5">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="48ff-24b3-dea9-60e8" includeChildSelections="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7098-7417-d3e4-8fa6" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="2d0c-00e9-7897-83d7" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="model" childId="820b-8856-fb9c-e9d9" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="increment" value="1" field="48ff-24b3-dea9-60e8">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="roster" childId="623f-4304-7ce7-65ef" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile name="Bagpipes" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d777-d95f-f173-9c07">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Any friendly models within 4” of the musician are immune to fear, and those who are not Down can add +1 DICE to their Dash ACTIONS. Bagpipes take one hand to use at all times as if it were a weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Fear" id="ae73-8108-76a3-b082" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
-          </infoLinks>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Musical Instrument" hidden="false" id="0cf1-5804-71ad-78ed" sortIndex="4">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ed07-ff79-c112-3dab" includeChildSelections="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c8ee-dcf5-2bdf-b406" includeChildSelections="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Musical Instrument" id="aa3f-b7a3-d2a7-a3e5" hidden="false" type="profile" targetId="dd0c-c62d-46f1-64f8"/>
-          </infoLinks>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="2d0c-00e9-7897-83d7" shared="true"/>
-                        <condition type="lessThan" value="1" field="selections" scope="model" childId="820b-8856-fb9c-e9d9" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="increment" value="1" field="ed07-ff79-c112-3dab">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="roster" childId="cdfd-1155-85af-7e8a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-              </repeats>
-            </modifier>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="366e-e078-0a43-c7e8" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Red Banner" hidden="true" id="7151-74bd-c678-4c41">
           <profiles>
             <profile name="Red Banner" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1818-099d-77ef-0ad7">
@@ -1644,7 +1702,7 @@
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Atonement Bell" hidden="true" id="0de4-111f-503c-60f9" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Atonement Bell" hidden="true" id="0de4-111f-503c-60f9" sortIndex="3">
           <profiles>
             <profile name="Atonement Bell" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a7b5-4e6d-1d0e-de50">
               <characteristics>
@@ -1764,6 +1822,217 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Instruments" id="f174-8b91-6985-87e8" hidden="false" sortIndex="2">
+          <entryLinks>
+            <entryLink import="true" name="Angelic Instrument" hidden="false" id="ad4d-4ba3-4a2a-00cf" type="selectionEntry" targetId="a26c-4afe-ca98-962c">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="2d0c-00e9-7897-83d7" shared="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="model" childId="820b-8856-fb9c-e9d9" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Musical Instrument" hidden="false" id="0cf1-5804-71ad-78ed">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ed07-ff79-c112-3dab" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c8ee-dcf5-2bdf-b406" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Musical Instrument" id="aa3f-b7a3-d2a7-a3e5" hidden="false" type="profile" targetId="dd0c-c62d-46f1-64f8"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="2d0c-00e9-7897-83d7" shared="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="model" childId="820b-8856-fb9c-e9d9" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" value="1" field="ed07-ff79-c112-3dab">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="roster" childId="cdfd-1155-85af-7e8a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="366e-e078-0a43-c7e8" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Bagpipes" hidden="true" id="831d-0f3f-be36-9b1d">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="48ff-24b3-dea9-60e8" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7098-7417-d3e4-8fa6" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="2d0c-00e9-7897-83d7" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="820b-8856-fb9c-e9d9" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" value="1" field="48ff-24b3-dea9-60e8">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="roster" childId="623f-4304-7ce7-65ef" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Bagpipes" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d777-d95f-f173-9c07">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Any friendly models within 4” of the musician are immune to fear, and those who are not Down can add +1 DICE to their Dash ACTIONS. Bagpipes take one hand to use at all times as if it were a weapon.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Fear" id="ae73-8108-76a3-b082" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="War Horn" hidden="true" id="2b13-5e5c-b810-c791">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="448d-1c46-ffe1-2586" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="78ed-e0ab-fce3-388e" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="579e-2810-d1cf-454b" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="2d0c-00e9-7897-83d7" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="820b-8856-fb9c-e9d9" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" value="1" field="448d-1c46-ffe1-2586">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="roster" childId="a9b8-3287-ee3b-34bc" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="War Horn" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bf4f-e324-29c3-1527">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model causes FEAR. Any friendly models within 4” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. War Horns take one hand to use at all times as if it were a weapon.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Fear" id="6e65-5f02-af1f-bbb4" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Carnyx " hidden="true" id="54c8-6df8-9942-13b8">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="843a-d715-6ad3-a921" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8062-b1e9-f764-669b" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="2d0c-00e9-7897-83d7" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="820b-8856-fb9c-e9d9" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" value="1" field="843a-d715-6ad3-a921">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="roster" childId="a9b8-3287-ee3b-34bc" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Carnyx " typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2ddb-f3e4-5ad4-7d7e">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model causes FEAR. Any friendly models within 4” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Carnyces take one hand to use at all times as if it were a weapon.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Fear" id="6e0e-d684-76e8-3465" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Great Banner of New Antioch" hidden="true" id="6c09-a24d-8992-57eb" type="selectionEntry" targetId="53fc-b3e3-e7f6-6ce5">
@@ -1775,28 +2044,6 @@
                     <condition type="instanceOf" value="1" field="selections" scope="model" childId="2d0c-00e9-7897-83d7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="model" childId="820b-8856-fb9c-e9d9" shared="true" includeChildSelections="true"/>
                   </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Angelic Instrument" hidden="false" id="ad4d-4ba3-4a2a-00cf" type="selectionEntry" targetId="a26c-4afe-ca98-962c" sortIndex="3">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="2d0c-00e9-7897-83d7" shared="true"/>
-                        <condition type="lessThan" value="1" field="selections" scope="model" childId="820b-8856-fb9c-e9d9" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -1835,8 +2082,9 @@
                       <conditionGroups>
                         <conditionGroup type="and">
                           <conditions>
-                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
                             <condition type="lessThan" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -1876,8 +2124,9 @@
                       <conditionGroups>
                         <conditionGroup type="and">
                           <conditions>
-                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
                             <condition type="lessThan" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -1912,9 +2161,14 @@
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="model" childId="92b0-1321-7484-08c0" shared="true" includeChildSelections="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model" childId="7e92-a9c9-240d-6179" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="model" childId="92b0-1321-7484-08c0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <entryLinks>
@@ -1997,7 +2251,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="First Friend of the Brigade&apos;s Dogs" hidden="true" id="4da7-e087-f7ab-b89b" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="First Friend of the Brigade&apos;s Dogs" hidden="true" id="4da7-e087-f7ab-b89b" sortIndex="8">
           <profiles>
             <profile name="First Friend of Dog" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="04ff-1014-c632-3867">
               <characteristics>
@@ -2016,7 +2270,7 @@
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1ba4-19c6-9493-2983" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Second Friend of the Brigade&apos;s Dogs" hidden="true" id="c5ee-6047-898f-a5de" sortIndex="7">
+        <selectionEntry type="upgrade" import="true" name="Second Friend of the Brigade&apos;s Dogs" hidden="true" id="c5ee-6047-898f-a5de" sortIndex="9">
           <profiles>
             <profile name="Second Friend of Dog" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f10d-341e-5e15-05ec">
               <characteristics>
@@ -2035,7 +2289,7 @@
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ac8a-b977-6e81-c0a6" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Dog&apos;s Friend" hidden="true" id="2daa-3efe-5398-4d5a" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Dog&apos;s Friend" hidden="true" id="2daa-3efe-5398-4d5a" sortIndex="7">
           <modifiers>
             <modifier type="increment" value="1" field="627a-4275-a64e-2b4b">
               <repeats>
@@ -2069,6 +2323,74 @@
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="155f-9854-c740-da37" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Cataphract Formation Alpha" hidden="true" id="2f44-24c6-beb8-a457" sortIndex="5">
+          <profiles>
+            <profile name="Catphract Formation Alpha" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b51c-b117-6a6c-d98f">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Catphract Formation Alpha.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="30a2-4037-a456-9284" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="7e92-a9c9-240d-6179" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3133-240a-a0cc-9cb4" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Cataphract Formation Beta" hidden="true" id="0c98-5f09-1094-7c57" sortIndex="6">
+          <profiles>
+            <profile name="Catphract Formation Beta" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f36e-dddb-8a6f-e34b">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is a member of Catphract Formation Beta.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="f10d-45c3-7beb-dce9" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="7e92-a9c9-240d-6179" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3133-240a-a0cc-9cb4" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1200" field="limit::8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1200" field="8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -3026,9 +3348,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </profile>
@@ -3092,14 +3419,44 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <condition type="atLeast" value="1" field="selections" scope="self" childId="2a4f-c258-5d70-a3c5" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="decrement" value="1" field="12e8-ff8c-c933-9eb5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="d27d-b034-cb18-f3ae" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="1a4f-d2cd-c405-6200">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="7e92-a9c9-240d-6179" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="7e92-a9c9-240d-6179" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="5de9-d70e-9021-6f71">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="7e92-a9c9-240d-6179" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Menaulatoi Princeps" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="d27d-b034-cb18-f3ae" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Varangian Warlord" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="7e92-a9c9-240d-6179" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Armour" hidden="false" id="7d69-40d2-595d-45ec" type="selectionEntryGroup" targetId="8132-2c2e-56dc-14a6" sortIndex="6"/>
-        <entryLink import="true" name="Grenades" hidden="false" id="4b7e-f6e9-9441-07a0" type="selectionEntryGroup" targetId="9c37-58de-3fa2-bfd2" sortIndex="5"/>
-        <entryLink import="true" name="Weapons" hidden="false" id="fe98-2c76-abee-13dd" type="selectionEntryGroup" targetId="24ae-224b-0680-a9bd" sortIndex="4"/>
-        <entryLink import="true" name="Equipment" hidden="false" id="1c8f-6cb9-16ad-5bb7" type="selectionEntryGroup" targetId="d5c6-bf28-709b-7286" sortIndex="7"/>
+        <entryLink import="true" name="Armour" hidden="false" id="7d69-40d2-595d-45ec" type="selectionEntryGroup" targetId="8132-2c2e-56dc-14a6" sortIndex="7"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="4b7e-f6e9-9441-07a0" type="selectionEntryGroup" targetId="9c37-58de-3fa2-bfd2" sortIndex="6"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="fe98-2c76-abee-13dd" type="selectionEntryGroup" targetId="24ae-224b-0680-a9bd" sortIndex="5"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="1c8f-6cb9-16ad-5bb7" type="selectionEntryGroup" targetId="d5c6-bf28-709b-7286" sortIndex="8"/>
         <entryLink import="true" name="Advancement" hidden="true" id="2a4a-167b-633f-e0b4" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="8253-0883-437c-4e98" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="e434-8626-1d0c-dae6" type="selectionEntryGroup" targetId="ef6c-46c2-70ec-568e" sortIndex="2"/>
@@ -3149,7 +3506,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </modifier>
       </modifiers>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Upgrades" id="0f8f-f9db-a584-0cd6" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Upgrades" id="0f8f-f9db-a584-0cd6" hidden="false" sortIndex="4">
           <entryLinks>
             <entryLink import="true" name="Supreme Blessing" hidden="false" id="6056-46ad-95f6-3c73" type="selectionEntry" targetId="856b-ba44-04c5-fdf5"/>
             <entryLink import="true" name="Berserker" hidden="false" id="18fb-c0e5-9fb3-d51e" type="selectionEntry" targetId="92b0-1321-7484-08c0"/>
@@ -3199,6 +3556,89 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                   </characteristics>
                 </profile>
               </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Variable Leader" id="9e2a-c6a3-e028-b0cf" hidden="true" sortIndex="3">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="a652-87a3-2dde-3f45-min">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="a652-87a3-2dde-3f45-max">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="self" shared="true" id="a652-87a3-2dde-3f45-min" includeChildSelections="false"/>
+            <constraint type="max" value="0" field="selections" scope="self" shared="true" id="a652-87a3-2dde-3f45-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Menaulatoi Princeps" hidden="false" id="d27d-b034-cb18-f3ae">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <profiles>
+                <profile name="Menaulatoi" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1546-e8f0-cbfd-f2b1">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a seasoned leader of Longspear formations, the Princeps gains +1 DICE to their ranged attack ACTIONS when fight­ing within 4&quot; of another Menaulatoi. This does not apply to GRENADE weapons.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Vanguard" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c931-d8d8-497d-d497">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">As an agile strategist, this leader can be deployed on any board edge, as long as they are at least 8&quot; away from enemies. This only applies if INFILTRATORS are allowed in the battle. As a Vanguard, they are deployed after them. They can also be placed in your own deployment area as per usual.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Longspear Doctrine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="53d0-3231-931f-d7a1">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Like the regular line infantry, a Princeps treats Short Range of any ranged weapon as +4&quot; longer than usual.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="Menaulatoi Princeps" field="name" scope="model"/>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Varangian Warlord" hidden="false" id="7e92-a9c9-240d-6179">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <profiles>
+                <profile name="Piston Reconfiguration" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f11c-fa32-df03-b98a">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Warlord gains the keyword AS­SAULT to ranged weapons with the Shield Combo indicator when used with a Trench Shield.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Axe Mastery" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ba8a-6d25-4842-123c">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">On a successful charge, the Warlord may immediately make a melee attack ACTION with one equipped axe. This is in addition to any other melee attack ACTIONS during this activation.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Shield Bash" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2f38-3778-4b83-a125">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Varangian Guards may use any Shield as an off-hand weapon with -1 DICE to injury. It functions otherwise like a Trench Club.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Indomitable" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="aac6-410b-8a02-3bb9">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Warlird is immune to FEAR.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category" scope="model"/>
+                <modifier type="set" value="Varangian Warlord" field="name" scope="model"/>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -3569,9 +4009,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="7dda-8f8f-2120-65de" shared="true" includeChildSelections="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -3603,7 +4044,36 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Menaulatoi" hidden="true" id="6812-cbad-1fd5-761c">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="47d9-b0a7-786a-5b21" includeChildSelections="false"/>
+                <constraint type="max" value="4" field="selections" scope="roster" shared="true" id="c9df-ede4-2cc3-4e11" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Menaulatoi" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d159-b6be-960c-3985">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Up to four Yeomen in a Byzantine war­band may be made a member of the Menaulatoi, the first line to welcome advancing enemy. This costs +5 ducats per model and can be done after the model has been recruited. These models gain +1 DICE to their ranged attack ACTIONS when fight­ing within 4&quot; of another Menaulatoi. This does not apply to GRENADE weapons.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -3719,9 +4189,22 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </selectionEntryGroups>
       <modifiers>
         <modifier type="set" value="1" field="15b5-28fb-d0b3-9f5b">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1200" field="8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1200" field="limit::8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditions>
@@ -3782,6 +4265,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifierGroup>
           </modifierGroups>
           <modifiers>
+            <modifier type="set" value="-1 Dice" field="1a4f-d2cd-c405-6200">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
             <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="self" childId="2a4f-c258-5d70-a3c5" shared="true" includeChildSelections="true"/>
@@ -3792,12 +4280,24 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <condition type="atLeast" value="1" field="selections" scope="self" childId="3564-70ed-8e9e-6ee8" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="Varangian Guard" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </profile>
         <profile name="Shock Charge" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c258-3050-2e8f-c05a">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">When a Shocktrooper charges, roll 2D6 instead of 1D6 and then add the highest of the two dice to their charge move.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="append" value="This ability does not function if the model is equipped with a 2-handed axe and a shield." field="4834-43a9-1c93-9062">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Assault Drill" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="767a-8a41-50ae-1621">
           <characteristics>
@@ -3805,8 +4305,37 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Axe Mastery" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="true" id="1d6a-335b-09ab-0d3a">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Varangian Guards ignore the keyword HEAVY on all axes, and treat two-handed axes as having the Shield Combo indicator. These fierce warriors often lead their charges with a wild swing, before smashing into their opponents for a bloody brawl. On a successful charge, they may immediately make a melee attack with one equipped axe. This is in addition to any other attacks.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Shield Bash" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="true" id="c2f7-dd44-cc90-5d72">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Varangian Guards may use any Shield as an off-hand weapon with -1 DICE to injury. It functions otherwise like a Trench Club.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3910,6 +4439,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </repeats>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="Varangian Guard" field="name"/>
+            <modifier type="increment" value="5" field="8d43-33fd-332d-17a6"/>
+            <modifier type="decrement" value="1" field="6995-3472-87b9-2803"/>
+          </modifiers>
+          <comment>Byzantine</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Combat Engineer" hidden="false" id="50d8-f63e-e01d-2698">
       <profiles>
@@ -4180,9 +4722,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               </constraints>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -4191,6 +4738,55 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <entryLink import="true" name="Supreme Blessing" hidden="false" id="495b-7b85-44d6-1348" type="selectionEntry" targetId="856b-ba44-04c5-fdf5"/>
             <entryLink import="true" name="Swiss Guard" hidden="false" id="5df0-1a93-5c12-595a" type="selectionEntry" targetId="c35e-c172-3e6b-1bda"/>
           </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Reconfigurations" id="d79f-3a17-799b-3550" hidden="true">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Fire Support Reconfiguration" hidden="false" id="15ee-f66c-def4-a014">
+                  <profiles>
+                    <profile name="Fire Support Reconfiguration" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9738-ded5-a2b7-3247">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">For an additional cost of +5 ducats, the armour of Cataphracti can be reconfigured for sustained fire support. With this upgrade, firing a Machine Gun does not end the turn of the model, however doing so lowers the Machine Gun&apos;s range to 24&quot; and prohibits equipping any melee weapons. This upgrade can be reversed whenever you update your roster.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                    <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4840-bb58-a4e2-70a9" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Piston Reconfiguration" hidden="false" id="b7fd-a5d3-3873-dcd2">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e4d3-cbba-f579-df0f" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Piston Reconfiguration" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2dba-a286-9e20-ff59">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">These models may be reconfigured to gain +1 to their melee characteristic, at the cost of -1 to their ranged characteristic. This upgrade gives the keyword AS­SAULT to ranged weapons with the Shield Combo indicator when used with a Trench Shield. This upgrade can be reversed whenever you update your roster.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5" scope="model" affects="profiles.Unit"/>
+                        <modifier type="decrement" value="1" field="1a4f-d2cd-c405-6200" scope="model" affects="profiles.Unit"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <profiles>
@@ -4248,6 +4844,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </modifiers>
         </profile>
       </profiles>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="increment" value="1" field="80cb-0666-30a3-5540"/>
+            <modifier type="set" value="-1" field="5de9-d70e-9021-6f71" affects="profiles.Unit"/>
+            <modifier type="set" value="Cataphract Mechanized Infantry" field="name"/>
+            <modifier type="set" value="Cataphract Mechanized Infantry" field="name" affects="profiles.Unit"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Fireteam" hidden="false" id="441f-8640-cfed-8e78">
       <profiles>
@@ -4695,9 +5304,71 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="self" shared="true" id="71df-c644-2dd0-276c-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="71df-c644-2dd0-276c-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="self" shared="true" id="71df-c644-2dd0-276c-min" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="71df-c644-2dd0-276c-max" includeChildSelections="true"/>
           </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Third Party" id="9b5f-0ad1-f219-b825" hidden="false" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Remnants of Byzantium" hidden="false" id="a911-0ba3-a9f7-17b7">
+                  <profiles>
+                    <profile name="Variable Leadership" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="501c-974c-c93f-1be7">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Warband does not have a regular Lieutenant as a leader. You may choose either a Menaulatoi Princeps or a Varangian Warlord to lead your soldiers. Your roster can never contain both at the same time. Should your current leader have died, you may recruit a replacement and choose between the two again.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Orthodox Patriarch" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2092-3a45-c439-9204">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Only one Sniper Priest can join the warband at first, but this limit rises to two in games with a threshold of 1200 or more.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Byzantine Battle Order" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="94ef-3265-6af8-798b">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This warband may neither buy Machine Armour, nor field any Mechanized Heavy Infantry or Shock Troopers, nor promote Yeoman to Trench Moles.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Cataphract Formations" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0a55-ca85-bf84-f3d2">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Two Cataphracti may form one additional FIRETEAM with each other, beyond the two regular ones. A second FIRETEAM between two other Cataphracti may be formed in games with a threshold of 1200 or more.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Lightly Armoured" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="91df-03cb-7045-706d">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Apart from a Menaulatoi Princeps, no model in the Warband can be equipped with Reinforced Armour.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Disciplined Fighting Force" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dbc4-0286-58b2-1e45">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">When failing a Morale Test and choosing to stay in the fight, the onset of Shaken is delayed by one turn. The Remnants do not roll for Morale the following turn and become Shaken instead. If they fail the next Morale Test, they flee as normal.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Divergent Armoury" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="728d-7b05-1cb8-7573">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Grenades are LIMIT:2. Incendiary Grenades are replaced by Molotovs for 5 ducats. The warband has no access to Automatic Shotguns, Automatic Pistols, Satchel Charges, or Grenade Launchers, but looting after Heretic assaults raised Automatic Rifles to LIMIT:2.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="On the Move" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="892d-7b46-de44-4684">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">For +5 ducats per model, up to four Yeomen or Varangian Guards may be promoted to Vanguards, at any point during the campaign. They can be deployed on any board edge, as long as they are at least 8&quot; away from enemies. This only applies if INFILTRATORS are allowed in the battle. Vanguards are deployed after them. They can also be placed in your own deployment area as per usual.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Longspear Doctrine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="05a8-d636-2a06-6bce">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Menaulatoi Princeps and Yeomen treat Short Range as +4&quot; longer than usual.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+              <profiles>
+                <profile name="Third Party Subfactions" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ef92-4c10-4b69-05e3">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">These subfactions are not fully official, and are licensed under the TCC. They are officially condoned by Factory Forge, but no assurances are made to balance or consistency with rules. They are included here for the benefit of the community. Please only use these factions with permission from all involved players.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <constraints>
