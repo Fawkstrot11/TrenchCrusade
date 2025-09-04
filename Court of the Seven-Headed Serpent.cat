@@ -430,15 +430,7 @@
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Satchel Charge" id="6c83-52d4-876a-b8d3" hidden="false" type="profile" targetId="744d-f4d2-f8d5-064a">
-              <modifiers>
-                <modifier type="increment" value="4" field="31a7-b5e8-41dc-5fd1">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink name="Satchel Charge" id="6c83-52d4-876a-b8d3" hidden="false" type="profile" targetId="744d-f4d2-f8d5-064a"/>
             <infoLink name="Heavy" id="a1cd-9e8f-ee31-39ac" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
             <infoLink name="Blast" id="1252-7be2-acb5-ed42" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Grenade" id="90dd-fde6-f406-b99b" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
@@ -4014,7 +4006,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Sorceror" hidden="false" id="2a14-1d21-3b35-86a8">
+    <selectionEntry type="model" import="true" name="Sorcerer" hidden="false" id="2a14-1d21-3b35-86a8">
       <categoryLinks>
         <categoryLink targetId="3de0-192c-3ec2-51be" id="8699-893e-5dbd-2718" primary="true" name="Elite"/>
         <categoryLink targetId="420c-0871-4283-b95b" id="3af0-eb8c-bafc-1e98" primary="false" name="Demonic"/>
@@ -4039,7 +4031,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fbca-352e-df39-8dd7" includeChildSelections="true"/>
       </constraints>
       <profiles>
-        <profile name="Sorceror" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="67ea-6a29-5c38-05b8">
+        <profile name="Sorcerer" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="67ea-6a29-5c38-05b8">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Flying</characteristic>
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 Dice</characteristic>
