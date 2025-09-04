@@ -1875,7 +1875,6 @@
                         <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
                       </conditions>
                       <conditionGroups>
@@ -1883,6 +1882,12 @@
                           <conditions>
                             <condition type="instanceOf" value="1" field="selections" scope="model" childId="2d0c-00e9-7897-83d7" shared="true"/>
                             <condition type="lessThan" value="1" field="selections" scope="model" childId="820b-8856-fb9c-e9d9" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="579e-2810-d1cf-454b" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -2039,6 +2044,9 @@
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b930-e662-fd8e-bc87" includeChildSelections="true"/>
+          </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
