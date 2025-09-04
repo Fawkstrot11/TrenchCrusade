@@ -496,11 +496,18 @@
             </modifier>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="3133-240a-a0cc-9cb4" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="50d8-f63e-e01d-2698" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="3133-240a-a0cc-9cb4" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="50d8-f63e-e01d-2698" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3338,6 +3345,23 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink name="Pile" hidden="false" id="256a-c855-4380-1217" targetId="ce28-ad9a-bbc1-f1dc" primary="false"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Vanguard" hidden="true" id="d47d-8d87-58a5-4c67">
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="4" field="selections" scope="roster" shared="true" id="8e4e-6792-4e8d-cf7d" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a6e-1583-a4ec-9e4a" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Vanguard" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="05e3-4ac8-ee01-36fd">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Unless the scenario prohibits use of the special deployment of INFILTRATORS, you may deploy the Vanguard on any table edge as long as they are at least 8” away from any enemy model after INFILTRATORS are deployed. Vanguard can also be deployed in your own deployment zone as standard.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
     <selectionEntry type="model" import="true" name="Lieutenant" hidden="false" id="e578-1122-47cb-10ad">
@@ -3434,7 +3458,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <condition type="atLeast" value="1" field="selections" scope="self" childId="7e92-a9c9-240d-6179" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
-            <modifier type="set" value="1" field="5de9-d70e-9021-6f71">
+            <modifier type="set" value="-1" field="5de9-d70e-9021-6f71">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="self" childId="7e92-a9c9-240d-6179" shared="true" includeChildSelections="true"/>
               </conditions>
@@ -3984,6 +4008,20 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <entryLinks>
             <entryLink import="true" name="Supreme Blessing" hidden="false" id="79fd-a0da-8e10-a52a" type="selectionEntry" targetId="856b-ba44-04c5-fdf5"/>
             <entryLink import="true" name="Swiss Guard" hidden="false" id="6dde-9bcc-7c33-803f" type="selectionEntry" targetId="c35e-c172-3e6b-1bda"/>
+            <entryLink import="true" name="Vanguard" hidden="true" id="2697-232f-e433-1c9d" type="selectionEntry" targetId="d47d-8d87-58a5-4c67">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Trench Mole" hidden="false" id="9886-5b15-fa46-8d84">
@@ -4022,35 +4060,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Vanguard" hidden="true" id="013a-7a38-4f50-bd44">
-              <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="4" field="selections" scope="roster" shared="true" id="e957-f457-dde6-1cee" includeChildSelections="true"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="92d2-63db-c81b-e441" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Vanguard" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c471-8d45-daea-6514">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Unless the scenario prohibits use of the special deployment of INFILTRATORS, you may deploy the Vanguard on any table edge as long as they are at least 8” away from any enemy model after INFILTRATORS are deployed. Vanguard can also be deployed in your own deployment zone as standard.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Menaulatoi" hidden="true" id="6812-cbad-1fd5-761c">
               <costs>
@@ -4373,6 +4382,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <entryLink import="true" name="Fianna" hidden="false" id="b5cf-65af-297b-59b2" type="selectionEntry" targetId="9928-b9f7-857a-a849"/>
             <entryLink import="true" name="Supreme Blessing" hidden="false" id="adc1-7446-57a2-cc7f" type="selectionEntry" targetId="856b-ba44-04c5-fdf5"/>
             <entryLink import="true" name="Chewa" hidden="false" id="280d-49a6-085a-5eca" type="selectionEntry" targetId="f5cc-8e5a-445d-bc09"/>
+            <entryLink import="true" name="Vanguard" hidden="false" id="d248-a61d-0b1b-db44" type="selectionEntry" targetId="d47d-8d87-58a5-4c67">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Forward Positions" hidden="true" id="c619-967d-d6fb-fbf7">
