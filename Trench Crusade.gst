@@ -134,6 +134,12 @@ MARKERS caused by the Keyword FIRE.</description>
     <rule name="Block" id="895b-5ca8-f2e0-35cf" hidden="false">
       <description>Add -1 DICE for Melee Attacks targeting this model if the attacker made a Charge ACTION before making the attack this round.</description>
     </rule>
+    <rule name="Bodyguard" id="e5ba-0eb0-08d7-3d8e" hidden="false">
+      <description>If a model with the same faction keyword as this model within 1&quot; is hit, this model can redirect the hit to itself. The injury and any additional effects of the attack are resolved against this model instead of the original target. This ability cannot be used against BLAST weapons</description>
+    </rule>
+    <rule name="Ravenous Infection" id="2abe-5f25-4bcc-e4aa" hidden="false">
+      <description>Some infected with The Great Hunger care only to proliferate their Special Rules agonizing disease. A model with the Ravenous Infection Ability may make a RISKY ACTION to spread the virus. On a success, the model may place an INFECTION MARKER on any other model within 1”, as the Great Hunger virus burns through the battlefield. A model’s Activation ends immediately after using this Ability</description>
+    </rule>
   </sharedRules>
   <publications>
     <publication name="Playtest Rules 1.5" id="c658-4a10-e1fe-befc" hidden="false" shortName="PT1.5" publisherUrl="https://static1.squarespace.com/static/637c0a5adafeb04f70309b99/t/6738d89f383e092b140a808f/1731778725409/Trench+Crusade+Rules+v1.5+%283%29.pdf"/>
