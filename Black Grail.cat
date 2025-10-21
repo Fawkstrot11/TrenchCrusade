@@ -4079,7 +4079,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <modifiers>
         <modifier type="set" value="0" field="14da-6cb8-f66e-7ad6">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="fdaf-1b5e-0348-3ad9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4752-7d52-b5b4-b3f2" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
         <modifier type="set" value="true" field="hidden">
@@ -4371,6 +4371,15 @@ In addition, Grail and Fly Thralls may have the Unending Starvation and Graspin
                 </modifier>
               </modifiers>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Led by a Matagot Hag" hidden="false" id="2d86-754d-4c9f-9d70">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
           </selectionEntries>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0643-2988-c501-a840-min" includeChildSelections="false"/>
@@ -4450,6 +4459,11 @@ In addition, Grail and Fly Thralls may have the Unending Starvation and Graspin
             <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="0" field="3cba-25db-dd3b-3b37">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="80e3-313d-1c13-05a0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </selectionEntry>
   </selectionEntries>
@@ -4465,6 +4479,7 @@ In addition, Grail and Fly Thralls may have the Unending Starvation and Graspin
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="parent" childId="43b9-c7fd-4680-3e7a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="parent" childId="80e3-313d-1c13-05a0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="4752-7d52-b5b4-b3f2" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
