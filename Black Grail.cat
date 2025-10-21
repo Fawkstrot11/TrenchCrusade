@@ -909,11 +909,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
           </modifiers>
           <entryLinks>
             <entryLink import="true" name="Bayonet Lug" hidden="false" id="c2da-240f-bd23-89d5" type="selectionEntry" targetId="f603-fb7b-cb6f-f1a4"/>
@@ -942,11 +937,6 @@
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
             </modifier>
           </modifiers>
           <categoryLinks>
@@ -1358,11 +1348,6 @@
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </modifier>
               </modifiers>
               <comment>heretic</comment>
             </selectionEntry>
@@ -1429,15 +1414,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Locust Spitter" hidden="false" id="1eee-6bf1-ef5b-23b1" type="selectionEntry" targetId="85ba-f5ac-54dd-1aa5" sortIndex="16">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="Locust Spitter" hidden="false" id="1eee-6bf1-ef5b-23b1" type="selectionEntry" targetId="85ba-f5ac-54dd-1aa5" sortIndex="16"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Ranged Weapons" id="29cb-dd9c-3c66-7188" hidden="false">
@@ -1937,6 +1914,11 @@
                   </conditionGroups>
                 </modifier>
                 <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200" scope="model" affects="profiles.Unit"/>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="64d0-ecf3-15d5-9ae8" includeChildSelections="true"/>
@@ -4613,9 +4595,9 @@ In addition, Grail and Fly Thralls may have the Unending Starvation and Graspin
         </profile>
       </profiles>
       <modifiers>
-        <modifier type="set" value="false" field="hidden">
+        <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="notEqualTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
         <modifier type="set" value="0" field="3cba-25db-dd3b-3b37">
