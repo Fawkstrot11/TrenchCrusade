@@ -3548,6 +3548,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Amalgam" hidden="false" id="036b-eb9f-9b58-fa7e">
@@ -3723,6 +3728,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3895,11 +3901,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">Non-FIRE injuries against the Plague Knight are rolled with -1 DICE. Additionally, this model ignores any additional BLOOD MARKERS caused by the Keyword GAS.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Bodyguard" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="77fd-38d3-3b6c-4a77">
-          <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a BLACK GRAIL model within 1&quot; of the Corpse Guard is hit, the Corpse Guard can redirect the hit to itself. The injury and any additional effects of the attack are resolved against the Corpse Guard instead of the original target. This ability cannot be used against BLAST weapons</characteristic>
-          </characteristics>
-        </profile>
         <profile name="Parasitic Tick" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="45af-c659-4300-106e">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the Corpse Guard inflicts one or more BLOOD or INFECTION MARKERS with a melee attack on a non-BLACK GRAIL model, it can remove one of its own BLOOD or INFECTION MARKERS.</characteristic>
@@ -3921,10 +3922,41 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </costs>
       <infoLinks>
         <infoLink name="Fear" id="5fbe-25bb-47d0-f6b8" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
+        <infoLink name="Bodyguard" id="a3b4-a266-f8c0-f579" hidden="false" type="rule" targetId="e5ba-0eb0-08d7-3d8e">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="d823-e8a8-3761-c40e" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="Dessiccated Husks" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="2" field="d823-e8a8-3761-c40e">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden" affects="category.profiles.Ability">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Warband Variant" hidden="false" id="8f8d-e167-36d5-dcdf">
       <constraints>
@@ -3994,6 +4026,63 @@ During its Activation, a Plague Knight in this Warband can remove an INFECTION M
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0aed-3db3-3686-878f"/>
               </constraints>
+              <profiles>
+                <profile name="Butcher Knights" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6072-b47d-774d-9c24">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Plague Knights of the warband are called Butcher Knights. They have the Ravenous Infection rule and are mounted on 32mm or 40mm bases. They may only be equipped with one of the following Butcher Knight Ranks:
+• Butcher King (10 ducats): If at the end of a game, this Butcher Knight is not Out of Action and it has taken at least one enemy model Out of Action with a Melee Attack, gain 1 Glory.
+• Knight Companion of the Feast (5 ducats): This Butcher Knight and any models within 3” of them add +1 DICE to Ravenous Infection ACTIONS.
+• Knight of Twin Cleavers (5 ducats): Melee Attacks made by this Butcher Knight gain the SHRAPNEL Keyword, and always ignore the Off-Hand special rule (-1 DICE to attacks with an off-hand weapon).</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Cradle of Filth" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f1b0-283b-2f8f-5b9a">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">There are those thralls who have become the vanguard of the Great Hunger, and where others seek the comfort of their matron, these thralls push forward in search of fresh meat. A Great Hunger Warband may recruit up to 3 Grail or Fly Thralls equipped with Blighted Claws to your Warband for 2 Glory each instead of their regular cost. Thralls recruited in this way are known as Cradle Thralls. If you are playing a campaign, after deployment, you may deploy up to three Cradle Thralls in reserve onto the battlefield. Cradle Thralls do not count towards your Maximum Field Strength, but do count for the purposes of Morale. In addition, if the scenario you are playing allows Infiltrators to use their special deployment rules, after any Infiltrators have deployed, you can deploy these Cradle Thralls within 1” of any edge of the battlefield and more than 8” away from any enemy models.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Dessiccated Husks" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0ec7-035e-8fb4-e93e">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Great Hunger Warband may include 0-2 Dessicated Husks. Dessicated Husks use the Corpse Guard Warband Entry, but replace the Bodyguard rule with the STRONG Keyword at no additional cost.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Equipment Restrictions" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7115-96b1-be9a-21dd">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Great Hunger often forgoes weapons in order to rend and bite the foe with bare hands and teeth. They cannot be trusted with treasured relics that are Beelzebub’s pride. In addition to this, The Great Hunger functions more like a ravenous horde than a disciplined force, and they prioritize close range combat over long ranged weapons. They do not have access to the following:
+• Beelzebub’s Axe
+• Black Grail Shields
+• Troop Standards
+• Musical Instruments
+• Compound Eyes Helmets
+• Any Ranged Weapons except for Shotguns, Black Spot Rifles, Parasite Grenades, and Putrid Shotguns. This restriction does not apply to Glory Items.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Grail Thralls &amp; Fly Thralls" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cda7-3bad-3aa7-e80f">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Grail and Fly Thralls in a Great Hunger Warband cost 35 ducats, and gain the Ravenous Infection Ability and the Blighted Claws equipment. They may be based on 25mm or 32mm bases, but all Thralls of the same type (Grail or Fly) must be on the same sized base.
+In addition, Grail and Fly Thralls may have the Unending Starvation and Grasping Maw equipment</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Prowlers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9f57-a517-2b2a-0adc">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Hounds of the Black Grail of the warband are called Prowlers and may be equipped with a Grasping Maw.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Ravenous Infection" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3e23-83d2-625b-8584">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Some infected with The Great Hunger care only to proliferate their Special Rules agonizing disease. A model with the Ravenous Infection Ability may make a RISKY ACTION to spread the virus. On a success, the model may place an INFECTION MARKER on any other model within 1”, as the Great Hunger virus burns through the battlefield. A model’s Activation ends immediately after using this Ability.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Spawn of Gluttony" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2d2e-ce27-e8eb-e3b0">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Great Hunger Warband must inclde either One (1) Matagot Hag or One (1) Lord of Tumours. It may not include both in a warband. It may include 0-2 Plague Knights (known as Butcher Knights).</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Waste no Flesh" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0d4d-09f0-54dd-79d2">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Great Hunger Warband cannot include any Corpse Guard, Heralds of Beelzebub or an Amalgam, as all flesh left on the battleground is consumed before it can manifest.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
           </selectionEntries>
           <constraints>
