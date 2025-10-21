@@ -2288,6 +2288,38 @@
         <entryLink import="true" name="Dog&apos;s Friend" hidden="true" id="89ff-6802-1ec4-c89b" type="selectionEntry" targetId="1f47-9c34-ef9b-914b"/>
       </entryLinks>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Butcher Knight Rank" id="1fa6-2d23-a525-1534" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Butcher King " hidden="false" id="e3a2-dcb4-1fdb-7aeb" sortIndex="1">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Knight Companion of the Feast" hidden="false" id="c9e8-dee7-d9f8-6998" sortIndex="2">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Knight of Twin Cleavers " hidden="false" id="af43-2185-97cb-61dc" sortIndex="3">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="notEqualTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="8d0a-3d1c-117c-d883"/>
+      </constraints>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Bayonet Lug" hidden="false" id="f603-fb7b-cb6f-f1a4">
@@ -3236,38 +3268,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Butcher Knight Rank" id="1fa6-2d23-a525-1534" hidden="false" sortIndex="6">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Butcher King " hidden="false" id="e3a2-dcb4-1fdb-7aeb" sortIndex="1">
-              <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Knight Companion of the Feast" hidden="false" id="c9e8-dee7-d9f8-6998" sortIndex="2">
-              <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Knight of Twin Cleavers " hidden="false" id="af43-2185-97cb-61dc" sortIndex="3">
-              <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notEqualTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="8d0a-3d1c-117c-d883"/>
-          </constraints>
-        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Weapons" hidden="false" id="c047-141f-afb7-ba34" type="selectionEntryGroup" targetId="4f10-6941-6de8-d8a6" sortIndex="7"/>
@@ -3290,6 +3290,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Fireteams" hidden="false" id="cfc0-2893-5456-2864" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
+        <entryLink import="true" name="Butcher Knight Rank" hidden="false" id="1b33-ee99-86f1-1c02" type="selectionEntryGroup" targetId="1fa6-2d23-a525-1534" sortIndex="5"/>
       </entryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="60"/>
@@ -3319,14 +3320,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="The Executor" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="b044-cbf6-a7c5-e2b3" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="The Lamentor" field="name">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="self" childId="dc04-f8df-606f-f06c" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="The Executor" field="name">
+        <modifier type="set" value="Butcher Knight" field="name">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="b044-cbf6-a7c5-e2b3" shared="true" includeChildSelections="true"/>
+            <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4185,17 +4191,17 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <modifiers>
         <modifier type="set" value="Dessiccated Husks" field="name">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
+            <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
         </modifier>
         <modifier type="set" value="2" field="d823-e8a8-3761-c40e">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
+            <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
         </modifier>
         <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
+            <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4231,3 +4237,266 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 </profile>
                 <profile name="The Lamenters" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="83c6-8b6b-a6d3-7d11">
                   <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Warband can include up to three Plague Knights (including the Executor), known as the Lamenters.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Dishonoured" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="174b-4b95-aed0-2823">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">No model in the warband may carry the Black Grail Shield or Beelzebub’s Axe. The Lord of the Flies does not suffer failed knights to carry his device.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="The Bereaved" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ae4d-6c6a-1159-e1b2">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Grail Thralls and Fly Thralls of the Warband are called the Bereaved. Bereaved have a Ranged characteristic of +0 DICE and cost 30 ducats each. Grail Tralls (but not Fly Thralls) can be equipped with Ranged weapons, Standards and Musical Instruments from the Black Grail Armoury</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Hegemon&apos;s Will" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="93cb-bfcb-e75d-a470">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Using the remnants of the lingering power of a fallen Hegemon, a Plague Knight of the Warband can directly
+command a nearby Thrall.
+
+
+During its Activation, a Plague Knight in this Warband can remove an INFECTION MARKER from any model in play to enable a friendly Thrall within 18&quot; to use any one of the Actions detailed below. Each Thrall can only be affected by Hegemon’s Will once per Turn, but one Plague Knight may issue commands to multiple Thralls (though not multiple commands to the same Thrall) during a single Activation, if all conditions are met.
+
+
+● Move: The Thrall takes a Standard Move ACTION.
+● Ranged Attack: The Thrall takes a Ranged Attack ACTION with any Ranged weapon it has.
+● Charge: The Thrall takes a Charge ACTION.
+● Melee Attack: The Thrall takes a Melee Attack ACTION.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fbee-018d-3c7f-3687" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Great Hunger" hidden="false" id="1291-a1ae-7eb0-bdc4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0aed-3db3-3686-878f"/>
+              </constraints>
+              <profiles>
+                <profile name="Butcher Knights" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6072-b47d-774d-9c24">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Plague Knights of the warband are called Butcher Knights. They have the Ravenous Infection rule and are mounted on 32mm or 40mm bases. They may only be equipped with one of the following Butcher Knight Ranks:
+• Butcher King (10 ducats): If at the end of a game, this Butcher Knight is not Out of Action and it has taken at least one enemy model Out of Action with a Melee Attack, gain 1 Glory.
+• Knight Companion of the Feast (5 ducats): This Butcher Knight and any models within 3” of them add +1 DICE to Ravenous Infection ACTIONS.
+• Knight of Twin Cleavers (5 ducats): Melee Attacks made by this Butcher Knight gain the SHRAPNEL Keyword, and always ignore the Off-Hand special rule (-1 DICE to attacks with an off-hand weapon).</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Cradle of Filth" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f1b0-283b-2f8f-5b9a">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">There are those thralls who have become the vanguard of the Great Hunger, and where others seek the comfort of their matron, these thralls push forward in search of fresh meat. A Great Hunger Warband may recruit up to 3 Grail or Fly Thralls equipped with Blighted Claws to your Warband for 2 Glory each instead of their regular cost. Thralls recruited in this way are known as Cradle Thralls. If you are playing a campaign, after deployment, you may deploy up to three Cradle Thralls in reserve onto the battlefield. Cradle Thralls do not count towards your Maximum Field Strength, but do count for the purposes of Morale. In addition, if the scenario you are playing allows Infiltrators to use their special deployment rules, after any Infiltrators have deployed, you can deploy these Cradle Thralls within 1” of any edge of the battlefield and more than 8” away from any enemy models.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Dessiccated Husks" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0ec7-035e-8fb4-e93e">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Great Hunger Warband may include 0-2 Dessicated Husks. Dessicated Husks use the Corpse Guard Warband Entry, but replace the Bodyguard rule with the STRONG Keyword at no additional cost.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Equipment Restrictions" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7115-96b1-be9a-21dd">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Great Hunger often forgoes weapons in order to rend and bite the foe with bare hands and teeth. They cannot be trusted with treasured relics that are Beelzebub’s pride. In addition to this, The Great Hunger functions more like a ravenous horde than a disciplined force, and they prioritize close range combat over long ranged weapons. They do not have access to the following:
+• Beelzebub’s Axe
+• Black Grail Shields
+• Troop Standards
+• Musical Instruments
+• Compound Eyes Helmets
+• Any Ranged Weapons except for Shotguns, Black Spot Rifles, Parasite Grenades, and Putrid Shotguns. This restriction does not apply to Glory Items.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Grail Thralls &amp; Fly Thralls" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cda7-3bad-3aa7-e80f">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Grail and Fly Thralls in a Great Hunger Warband cost 35 ducats, and gain the Ravenous Infection Ability and the Blighted Claws equipment. They may be based on 25mm or 32mm bases, but all Thralls of the same type (Grail or Fly) must be on the same sized base.
+In addition, Grail and Fly Thralls may have the Unending Starvation and Grasping Maw equipment</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Prowlers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9f57-a517-2b2a-0adc">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Hounds of the Black Grail of the warband are called Prowlers and may be equipped with a Grasping Maw.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Ravenous Infection" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3e23-83d2-625b-8584">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Some infected with The Great Hunger care only to proliferate their Special Rules agonizing disease. A model with the Ravenous Infection Ability may make a RISKY ACTION to spread the virus. On a success, the model may place an INFECTION MARKER on any other model within 1”, as the Great Hunger virus burns through the battlefield. A model’s Activation ends immediately after using this Ability.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Spawn of Gluttony" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2d2e-ce27-e8eb-e3b0">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Great Hunger Warband must inclde either One (1) Matagot Hag or One (1) Lord of Tumours. It may not include both in a warband. It may include 0-2 Plague Knights (known as Butcher Knights).</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Waste no Flesh" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0d4d-09f0-54dd-79d2">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Great Hunger Warband cannot include any Corpse Guard, Heralds of Beelzebub or an Amalgam, as all flesh left on the battleground is consumed before it can manifest.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="self" shared="true" id="4c2f-5af2-df07-f5d3-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="4c2f-5af2-df07-f5d3-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="705b-e23f-e9c2-58ab" id="0f1c-ce96-001e-af7a" primary="true" name="Configuration"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Noble Hierarchy" hidden="false" id="a889-723f-f818-0867" defaultAmount="1">
+      <categoryLinks>
+        <categoryLink targetId="705b-e23f-e9c2-58ab" id="372b-42c1-c196-58ef" primary="true" name="Configuration"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="495e-0cf8-8f45-d3c7-min" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="495e-0cf8-8f45-d3c7-max" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Special Rule: Morale" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6138-06ef-9465-b870">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enemy Warbands roll Morale Tests with -1 DICE when fighting a Black Grail Warband. The Court Warbands and other Black Grail Warbands ignore this penalty.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Leader Choice" id="663a-bdc1-dab8-ef03" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Led by a Plague Knight" hidden="false" id="fdaf-1b5e-0348-3ad9"/>
+            <selectionEntry type="upgrade" import="true" name="Led by a Lord of Tumours" hidden="false" id="bd82-c719-4abf-c104">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0643-2988-c501-a840-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0643-2988-c501-a840-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Matagot Hag" hidden="false" id="4752-7d52-b5b4-b3f2">
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="135"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="c5a0-e794-7661-ebb7" id="4fa9-5ddc-683d-a6db" primary="false" name="Black Grail"/>
+        <categoryLink targetId="3de0-192c-3ec2-51be" id="10a9-f2d7-1d5a-d375" primary="false" name="Elite"/>
+        <categoryLink targetId="914f-0020-0d97-e217" id="5c48-e9b2-7fce-4025" primary="false" name="Tough"/>
+        <categoryLink targetId="4f5c-027d-253c-ffa3" id="b7ac-1e9b-dd0a-7e56" primary="false" name="Fear"/>
+        <categoryLink targetId="afb9-39f5-82d9-46ed" id="1384-67c0-b492-a7a3" primary="false" name="Leader"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Advancement" hidden="true" id="bef0-e6cb-1a46-9855" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="2173-0e9d-6ae3-5c4e" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="3d59-06ad-0bc0-e7eb" type="selectionEntryGroup" targetId="4f10-6941-6de8-d8a6" sortIndex="3"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="42bf-01ce-4500-b45a" type="selectionEntryGroup" targetId="25fc-648e-83c5-0411" sortIndex="4"/>
+        <entryLink import="true" name="Armour" hidden="false" id="650a-356a-b238-ad5a" type="selectionEntryGroup" targetId="e8c4-5c09-11b6-1e3f"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="abd0-b14d-1d28-b5af" type="selectionEntryGroup" targetId="4e14-77e1-ca51-7dc6"/>
+        <entryLink import="true" name="Exploration Upgrades" hidden="false" id="1e95-46c6-aab3-b32e" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3cba-25db-dd3b-3b37" includeChildSelections="true"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Fear" id="9738-7cdf-3d65-686d" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
+        <infoLink name="Tough" id="0cbf-c875-5031-0b74" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
+        <infoLink name="Leader" id="969c-b34d-8dd5-1342" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Matagot Hag" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="9f6e-ddb1-4c46-1d5b">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+3</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">50mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Pestilent" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="952a-efa3-8dab-efb2">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Melee Attacks made by the Matagot Hag inflict INFECTION MARKERS instead of BLOOD MARKERS. When a Matagot Hag inflicts an INFECTION MARKER from a Melee Attack, inflict an additional INFECTION MARKER on the target</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Frenzied Followers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="797b-44e3-8320-90a4">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">All friendly models within 8” of the MATAGOT HAG gain +1 DICE when attempting to dash, except for herself. It requires all of the hag’s concentration to reign in the hungry fruit of her loins.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Cadre of Flesh" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cccc-d27f-7c98-9388">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When a MATAGOT HAG is forced to roll on the Injury Table, any THRALL within 4” of her may have the result resolved against them instead. This includes any other effects being wounded may cause (such as FIRE, INFECTION, SHRAPNEL, etc). This ability cannot be used against BLAST weapons.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Arcana Putrescere" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ff0b-dc71-b969-e3a8">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Matagot Hag may purchase up to three ARCANA PUTRESCERE Powers or Spells.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5fa1-b345-e66b-3f57">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Non-FIRE injuries against the Lord of Tumours are rolled with -1 DICE. Additionally, this model ignores any additional BLOOD MARKERS caused by the Keyword GAS.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+  </selectionEntries>
+  <forceEntries>
+    <forceEntry name="Warband" id="c331-f7cb-4f93-d861" hidden="false">
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="f0b8-91e3-6b03-fbdc" targetId="705b-e23f-e9c2-58ab"/>
+        <categoryLink name="Elite" hidden="false" id="b233-bc4d-0af6-9b47" targetId="3de0-192c-3ec2-51be">
+          <modifiers>
+            <modifier type="add" value="Minimum 1 Leader" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="43b9-c7fd-4680-3e7a" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="80e3-313d-1c13-05a0" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink name="Troop" hidden="false" id="6ee3-420f-48cb-91c2" targetId="bd43-ddb1-262d-4489"/>
+        <categoryLink name="Mercenary" hidden="false" id="d202-90cd-2d6b-660a" targetId="3dfb-701d-e89c-eba2"/>
+      </categoryLinks>
+    </forceEntry>
+  </forceEntries>
+  <catalogueLinks>
+    <catalogueLink type="catalogue" name="Campaign Rules" id="3d00-75b6-5ee5-efe1" targetId="ba52-3616-d7f9-8d0c" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="Mercenaries" id="c1ee-b1f8-5b7a-b666" targetId="f569-e9dd-327a-5735" importRootEntries="true"/>
+  </catalogueLinks>
+  <entryLinks>
+    <entryLink import="true" name="Scripture Guardian" hidden="false" id="49df-7901-867a-c267" type="selectionEntry" targetId="08cc-f1b9-e991-e191">
+      <entryLinks>
+        <entryLink import="true" name="Melee Weapons" hidden="false" id="a009-94cc-985a-8bd3" type="selectionEntryGroup" targetId="9912-b634-058b-aa2d"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="bdc1-2fc7-8b72-3d0f" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Pile of Stuff" hidden="false" id="6043-1c6c-c7ff-9d8d" type="selectionEntry" targetId="97ad-20f9-1e4c-c96c"/>
+    <entryLink import="true" name="Battlefield Title" hidden="false" id="f0cf-ddcc-51b6-b18a" type="selectionEntry" targetId="0175-e39b-7bab-aaaa"/>
+    <entryLink import="true" name="Homunculus" hidden="true" id="cc97-8441-8799-50ec" type="selectionEntry" targetId="feab-369d-5285-ea19">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f73c-0f08-e6c3-e9fd" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+  </entryLinks>
+</catalogue>
