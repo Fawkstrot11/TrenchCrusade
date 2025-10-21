@@ -4003,7 +4003,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7b-960a-493e-c880" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="roster" childId="2a7b-960a-493e-c880" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4016,7 +4016,12 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <modifiers>
         <modifier type="remove" value="afb9-39f5-82d9-46ed" field="category">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7b-960a-493e-c880" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="equalTo" value="1" field="selections" scope="roster" childId="2a7b-960a-493e-c880" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="afb9-39f5-82d9-46ed" field="category">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="roster" childId="7d6d-f973-d822-6ecd" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4112,7 +4117,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7d6d-f973-d822-6ecd" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="roster" childId="7d6d-f973-d822-6ecd" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4125,7 +4130,12 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <modifiers>
         <modifier type="remove" value="afb9-39f5-82d9-46ed" field="category">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="7d6d-f973-d822-6ecd" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="equalTo" value="1" field="selections" scope="roster" childId="7d6d-f973-d822-6ecd" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="afb9-39f5-82d9-46ed" field="category">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="roster" childId="2a7b-960a-493e-c880" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
