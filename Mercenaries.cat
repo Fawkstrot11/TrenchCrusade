@@ -812,6 +812,49 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Combat Biologist" hidden="true" id="84af-87f6-cbe6-c3eb">
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="3"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="3dfb-701d-e89c-eba2" id="b8c8-d4fd-24d3-bebe" primary="true" name="Mercenary"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Prize Specimens " typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="68a7-ebce-ccf2-4b09">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When a Combat Biologist takes any enemy model with the Keyword DEMONIC or BLACK GRAIL Out of Action with a Melee attack, place 1 BLESSING MARKER beside the Combat Biologist.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Combat Biologist" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="f97e-7c81-e577-b350">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">0</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">1</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-1</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">32mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Battlefield Vivisection" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c190-941c-e4d6-b527">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Whenever a Combat Biologist is part of your Warband, you can add the following Glorious Deed in addition to those normally available in each Scenario you play: If a total of 3 or more enemy models engaged in melee combat with the Combat Biologist are taken Out of Action during the Battle, add +1 Glory Point to your total earned at the end of the game.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Gas Mask" id="9664-9401-cbc4-22f8" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
+        <infoLink name="Standard Armour" id="d340-46d5-0617-cd5f" hidden="false" type="profile" targetId="6fa6-650d-4136-bc70"/>
+        <infoLink name="Vivisector" id="2477-dea8-c7ca-c4bc" hidden="false" type="profile" targetId="d907-6aef-cf23-b54c"/>
+        <infoLink name="Negate Fear" id="1690-8259-41a5-f62f" hidden="false" type="rule" targetId="eafa-4d2e-4493-23b6"/>
+        <infoLink name="Block" id="5bfb-aaf6-72aa-34d1" hidden="false" type="rule" targetId="895b-5ca8-f2e0-35cf"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d686-4f93-1a9f-422e" includeChildSelections="true" includeChildForces="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden"/>
+      </modifiers>
+    </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Mamluk Faris" hidden="false" id="22b8-dc59-428d-87cd">
