@@ -5589,17 +5589,24 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a036-eeeb-e581-92c6" includeChildSelections="false"/>
           </constraints>
           <profiles>
-            <profile name="Carried Grenades" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="f580-8b00-a18a-0d48">
+            <profile name="Grenade Carrier" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e615-a01d-4135-0161">
               <characteristics>
-                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">GRENADE</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, SHRAPNEL, BLAST 2&quot;</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Models other than the original target roll Injuries with -1 DICE. 
-This dog cannot attack with this weapon, but any other model in the Warband (though not Allies &amp; Mercenaries, or a Combat Medic or other dogs) may use the grenades if they are within 1” of the dog at any point during their Activation.</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This dog cannot attack with this weapon, but any other model in the Warband (though not Allies &amp; Mercenaries, or a Combat Medic or other dogs) may use the grenades if they are within 1” of the dog at any point during their Activation.</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Grenades" hidden="false" id="f4ba-14a9-2f87-650c">
+              <infoLinks>
+                <infoLink name="Grenades" id="fe39-69c5-e3c4-0d5a" hidden="false" type="profile" targetId="cc34-0630-85e1-2583"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Molotov Cocktail" hidden="false" id="0b34-5a7f-8f7d-6553">
+              <infoLinks>
+                <infoLink name="Molotov Cocktail" id="4d1f-e38e-b690-66ee" hidden="false" type="profile" targetId="b16a-e1fa-433f-efc0"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Man&apos;s Best Friend" hidden="false" id="b629-dd71-c863-5db4">
           <profiles>
