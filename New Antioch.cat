@@ -5595,18 +5595,25 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               </characteristics>
             </profile>
           </profiles>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Grenades" hidden="false" id="f4ba-14a9-2f87-650c">
-              <infoLinks>
-                <infoLink name="Grenades" id="fe39-69c5-e3c4-0d5a" hidden="false" type="profile" targetId="cc34-0630-85e1-2583"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Molotov Cocktail" hidden="false" id="0b34-5a7f-8f7d-6553">
-              <infoLinks>
-                <infoLink name="Molotov Cocktail" id="4d1f-e38e-b690-66ee" hidden="false" type="profile" targetId="b16a-e1fa-433f-efc0"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="New Group" id="a48e-3ea0-acbd-df54" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Molotov Cocktail" hidden="false" id="0b34-5a7f-8f7d-6553">
+                  <infoLinks>
+                    <infoLink name="Molotov Cocktail" id="4d1f-e38e-b690-66ee" hidden="false" type="profile" targetId="b16a-e1fa-433f-efc0"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Grenades" hidden="false" id="f4ba-14a9-2f87-650c">
+                  <infoLinks>
+                    <infoLink name="Grenades" id="fe39-69c5-e3c4-0d5a" hidden="false" type="profile" targetId="cc34-0630-85e1-2583"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4395-d789-8ac2-49d1"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Man&apos;s Best Friend" hidden="false" id="b629-dd71-c863-5db4">
           <profiles>
