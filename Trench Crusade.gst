@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-4f3d-c5c9-7df1-ad01" name="Trench Crusade" battleScribeVersion="2.03" authorName="Fawkstrot" authorUrl="https://github.com/Fawkstrot11" revision="16" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-4f3d-c5c9-7df1-ad01" name="Trench Crusade test library" battleScribeVersion="2.03" authorName="Fawkstrot" authorUrl="https://github.com/Fawkstrot11" revision="16" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Artificial" id="4180-5377-2d83-48ba" hidden="false" publicationId="c658-4a10-e1fe-befc"/>
     <categoryEntry name="Elite" id="3de0-192c-3ec2-51be" hidden="false" publicationId="c658-4a10-e1fe-befc"/>
@@ -121,6 +121,18 @@ MARKERS caused by the Keyword FIRE.</description>
     </rule>
     <rule name="Leader" id="9130-09e0-3351-8c4c" hidden="false" publicationId="c658-4a10-e1fe-befc" page="12-13">
       <description>As long as this model is not taken Out of Action, add +1 DICE to any Morale tests the warband has to take.</description>
+    </rule>
+    <rule name="Pain Amplifier" id="1b94-21f3-f212-3f04" hidden="false">
+      <description>Lower the roll needed to achieve a Critical Success for a Melee Attack made by this weapon by 1 for each BLOOD MARKER next to the target by 1 (so an enemy with 1 BLOOD MARKER will suffer a Critical Success on a roll of 11+).</description>
+    </rule>
+    <rule name="Inflict Pain" id="884b-c5a6-d8d0-b15f" hidden="false">
+      <description>If an attack made by this weapon against a target, without the ARTIFICIAL Keyword and mounted on a 40mm base or smaller is, a Critical Success, but the target is not taken Out of Action, then the target will move D3&quot; in a straight line directly away from the attacking model. It will stop if it moves into a friendly model, Impassable Terrain, a terrain piece it cannot cross without having to Climb, or immediately before it would move within 1&quot; of an enemy model other than the attacker. If the target model would finish the move more than 1&quot; from the attacking model, then the attacking model and any other models within 1&quot; of the target model can make an additional Melee Attack on it before it is moved, as if the target were carrying out a retreat move. If this causes the model to move a second time, add D3&quot; to the distance it is moved but do not attack it again.</description>
+    </rule>
+    <rule name="Negate Fear" id="eafa-4d2e-4493-23b6" hidden="false">
+      <description>This model is not affected by FEAR.</description>
+    </rule>
+    <rule name="Block" id="895b-5ca8-f2e0-35cf" hidden="false">
+      <description>Add -1 DICE for Melee Attacks targeting this model if the attacker made a Charge ACTION before making the attack this round.</description>
     </rule>
   </sharedRules>
   <publications>
@@ -901,6 +913,22 @@ Keyword: CONSUMABLE.</characteristic>
     <profile name="Heavy Ballistic Shield" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="adc0-8995-657b-8d4b">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Takes always one hand to use in both melee and in ranged combat and cannot be switched out. The target is always considered to be in Cover, and count as fighting behind a defended obstacle when an enemy charges them. These bonuses cannot be combined with Polearms, shovels, cover or defended obstacles.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Vivisector" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="d907-6aef-cf23-b54c">
+      <characteristics>
+        <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+        <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">BLOCK, CUMBERSOME</characteristic>
+        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Pain Amplifier: Lower the roll needed to achieve a Critical Success for a Melee Attack made by this weapon by 1 for each BLOOD MARKER next to the target by 1 (so an enemy with 1 BLOOD MARKER will suffer a Critical Success on a roll of 11+).
+
+
+Inflict Pain: If an attack made by this weapon against a target, without the ARTIFICIAL Keyword and mounted on a 40mm base or smaller is, a Critical Success, but the target is not taken Out of Action, then the target will move D3&quot; in a straight line directly away from the attacking model. It will stop if it moves into a friendly model, Impassable Terrain, a terrain piece it cannot cross without having to Climb, or immediately before it would move within 1&quot; of an enemy model other than the attacker. If the target model would finish the move more than 1&quot; from the attacking model, then the attacking model and any other models within 1&quot; of the target model can make an additional Melee Attack on it before it is moved, as if the target were carrying out a retreat move. If this causes the model to move a second time, add D3&quot; to the distance it is moved but do not attack it again.
+
+
+
+</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
