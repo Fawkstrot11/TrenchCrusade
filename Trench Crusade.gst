@@ -937,5 +937,52 @@ Inflict Pain: If an attack made by this weapon against a target, without the ART
 </characteristic>
       </characteristics>
     </profile>
+    <profile name="Grasping Maw" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5c54-1fe0-b7b0-251a">
+      <characteristics>
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">A model with this Equipment may, as a RISKY ACTION, move an enemy model within Line of Sight within 6” by 1D6” in a straight line towards them. This ability can be used to make the target model move within 1” of an enemy, retreat (though they are not subject to Free Strikes), or Jump Down, but may not be used to make a model move through Difficult or Dangerous terrain, Climb or Jump across a gap.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Devouring Jaws" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="eef0-5c41-eb2b-f626">
+      <characteristics>
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Equipment grants the wearer an additional attack ACTION in melee combat without penalty. Each time this attack is used, it also receives 1 BLOOD MARKER. Once this has been equipped, it can never be unequipped or removed from the model for any reason.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Blighted Claws" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b4fe-5008-2654-7aa1">
+      <characteristics>
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">This upgrade adds +1 DICE and the CRITICAL Keyword to Melee Attacks made by this model</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Unending Starvation" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="db99-b6cc-c2c6-dfa1">
+      <characteristics>
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">A model with this upgrade adds +1” to their movement Characteristic and may target themselves with the Ravenous Infection Ability. In addition, if this model is more than 1” away from an enemy model, its first action each Activation must be a Move, Charge or Dash Action towards the nearest enemy model (choose in the case of a tie) moving the maximum distance possible</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Black Spot Rifle" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="7e82-3942-b8aa-e18e">
+      <characteristics>
+        <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+        <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">24&quot;</characteristic>
+        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1Dice to hit</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">Bayonet Lug</characteristic>
+        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">An enormous bolt action. rifle this weapon inflicts INFECTION MARKERS instead of BLOOD MARKERS. If the Black Spot Rifle successfully hits an enemy, the closest Thrall model within 12” of the target of the attack may immediately attempt a Charge action against the enemy after resolving injury. This is done outside of the Thrall’s activation</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Butcher Bayonet" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="c042-31a3-dd90-bae8">
+      <characteristics>
+        <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+        <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1Dice to injury</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CUMBERSOME</characteristic>
+        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">The Butcher Bayonet counts as a bayonet and has the Shield Combo rule. Add +1 DICE to rolls on the Injury Table made with this weapon. In addition, lower the roll needed to achieve a Critical Success by one for Melee Attacks made by friendly Thralls within 3” of a model with a Butcher Bayonet.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Pestilent Fang" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="275e-b58c-e4c3-b2a6">
+      <characteristics>
+        <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+        <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1 to injury rolls</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
+        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">This weapon ignores armour on a critical hit, and always inflicts an INFECTION MARKER in addition to any BLOOD MARKERS it may cause.</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
 </gameSystem>
