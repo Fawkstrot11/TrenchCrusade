@@ -335,6 +335,7 @@
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -372,6 +373,35 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Pestilent Fang" hidden="false" id="8060-a6e1-22fc-ae8b" sortIndex="2">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Pestilent Fang" id="fdaf-e549-ceed-af62" hidden="false" type="profile" targetId="275e-b58c-e4c3-b2a6"/>
+            <infoLink name="Heavy" id="be36-3b45-b336-f7f3" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink name="Heavy" hidden="false" id="af4a-0ca0-0b3b-a13a" targetId="70c9-988d-71a7-7654" primary="false"/>
+            <categoryLink targetId="3de0-192c-3ec2-51be" id="9cda-96b7-d1ff-4ded" primary="false" name="Elite"/>
+          </categoryLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="dded-4e54-f521-3dd9" includeChildSelections="true"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1067,6 +1097,25 @@
           </entryLinks>
           <comment>antioch</comment>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Black Spot Rifle" hidden="false" id="45c6-ffdf-bc66-8e60" sortIndex="5">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="25"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="3b8a-5ff1-2689-43bc" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Black Spot Rifle" id="cf86-189d-5e96-c685" hidden="false" type="profile" targetId="7e82-3942-b8aa-e18e"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notEqualTo" value="1" field="selections" scope="parent" childId="3de0-192c-3ec2-51be" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Shield Combos" id="9b3c-991a-7d2d-be5f" hidden="false" sortIndex="17">
@@ -1333,11 +1382,18 @@
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="feab-369d-5285-ea19" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="a48e-e8a0-773e-e318" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="1291-a1ae-7eb0-bdc4" shared="true"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="feab-369d-5285-ea19" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="model" childId="a48e-e8a0-773e-e318" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -1368,6 +1424,7 @@
                   </conditionGroups>
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="1291-a1ae-7eb0-bdc4" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1397,9 +1454,14 @@
               </costs>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -1480,7 +1542,7 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Equipment" id="4e14-77e1-ca51-7dc6" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Unholy Trinket" hidden="false" id="1874-d203-73aa-863b" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Unholy Trinket" hidden="false" id="1874-d203-73aa-863b" sortIndex="4">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -1493,7 +1555,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab72-033f-8e86-7515" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Unholy Relic" hidden="true" id="7ced-ea8c-a03d-16c8" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Unholy Relic" hidden="true" id="7ced-ea8c-a03d-16c8" sortIndex="6">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -1526,7 +1588,7 @@
             <infoLink name="Field Shrine" id="8ed7-b428-ee1b-a247" hidden="false" type="profile" targetId="76e2-0e5b-972a-0f69"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Broken Crown" hidden="true" id="ed7f-e91c-7eca-840a" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Broken Crown" hidden="true" id="ed7f-e91c-7eca-840a" sortIndex="5">
           <profiles>
             <profile name="Broken Crown" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7cac-e423-0e4d-b763">
               <characteristics>
@@ -1549,7 +1611,7 @@
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Urn of Bitter Ashes " hidden="true" id="f451-eff3-bd36-29ff" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Urn of Bitter Ashes " hidden="true" id="f451-eff3-bd36-29ff" sortIndex="10">
           <profiles>
             <profile name="Urn of Bitter Ashes " typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cc13-67a7-5431-2fdd">
               <characteristics>
@@ -1603,6 +1665,99 @@
           <constraints>
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="a78a-bd8f-87bb-754c" includeChildSelections="true"/>
           </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Grasping Maw" hidden="false" id="5c4b-0fc9-29e9-bac9" sortIndex="2">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="67ee-4677-f2f2-d858"/>
+          </constraints>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="17"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Grasping Maw" id="2ccd-cf34-b385-2f04" hidden="false" type="profile" targetId="5c54-1fe0-b7b0-251a"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="5df2-ef54-85ea-adfe" shared="true" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="ec39-f328-bad6-a586" shared="true" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="4752-7d52-b5b4-b3f2" shared="true" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Devouring Jaws" hidden="false" id="e4fa-5c18-2af2-abfe" sortIndex="7">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f50-218c-39a4-adac"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9098-2f37-25c3-01eb" includeChildSelections="true"/>
+          </constraints>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Devouring Jaws" id="79ee-159f-2eaa-8ac6" hidden="false" type="profile" targetId="eef0-5c41-eb2b-f626"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notEqualTo" value="1" field="selections" scope="3de0-192c-3ec2-51be" childId="any" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Blighted Claws" hidden="false" id="e592-cf6e-1295-67ff" sortIndex="2">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="43bf-d988-97fa-9ea3"/>
+          </constraints>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Blighted Claws" id="5955-8289-540c-433c" hidden="false" type="profile" targetId="b4fe-5008-2654-7aa1"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="ec39-f328-bad6-a586" shared="true" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="4752-7d52-b5b4-b3f2" shared="true" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Unending Starvation" hidden="false" id="26fa-f94d-ebe4-4cc0" sortIndex="2">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4593-be95-471b-8cd7"/>
+          </constraints>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="8"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Unending Starvation" id="8f44-b6d9-dc52-d819" hidden="false" type="profile" targetId="db99-b6cc-c2c6-dfa1"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="ec39-f328-bad6-a586" shared="true" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="43b9-c7fd-4680-3e7a" shared="true" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2928,6 +3083,34 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="6af1-a74c-1d28-5137" includeChildSelections="true"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Butcher Bayonet Lug" hidden="false" id="639f-0d6f-8d80-5d5f">
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Butcher Bayonet" id="1f31-eb2c-6ff9-f9e4" hidden="false" type="profile" targetId="c042-31a3-dd90-bae8"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Cumbersome" hidden="false" id="94e3-c99c-ce73-477e" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ee47-c3b5-630e-ed63" includeChildSelections="false"/>
+        <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="3b93-c2d1-9728-e7fa" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
     <selectionEntry type="model" import="true" name="Plague Knight" hidden="false" id="43b9-c7fd-4680-3e7a">
@@ -3053,10 +3236,42 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Butcher Knight Rank" id="1fa6-2d23-a525-1534" hidden="false" sortIndex="6">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Butcher King " hidden="false" id="e3a2-dcb4-1fdb-7aeb" sortIndex="1">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Knight Companion of the Feast" hidden="false" id="c9e8-dee7-d9f8-6998" sortIndex="2">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Knight of Twin Cleavers " hidden="false" id="af43-2185-97cb-61dc" sortIndex="3">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notEqualTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="8d0a-3d1c-117c-d883"/>
+          </constraints>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Weapons" hidden="false" id="c047-141f-afb7-ba34" type="selectionEntryGroup" targetId="4f10-6941-6de8-d8a6" sortIndex="6"/>
-        <entryLink import="true" name="Grenades" hidden="false" id="6788-0e06-f9fb-fd4c" type="selectionEntryGroup" targetId="25fc-648e-83c5-0411" sortIndex="7"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="c047-141f-afb7-ba34" type="selectionEntryGroup" targetId="4f10-6941-6de8-d8a6" sortIndex="7"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="6788-0e06-f9fb-fd4c" type="selectionEntryGroup" targetId="25fc-648e-83c5-0411" sortIndex="8"/>
         <entryLink import="true" name="Equipment" hidden="false" id="ccc3-dc53-ab03-1abd" type="selectionEntryGroup" targetId="4e14-77e1-ca51-7dc6"/>
         <entryLink import="true" name="Advancement" hidden="true" id="dd18-b62d-e293-0b54" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Armour" hidden="false" id="0879-2cfc-656d-455d" type="selectionEntryGroup" targetId="e8c4-5c09-11b6-1e3f">
@@ -3065,7 +3280,15 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </constraints>
         </entryLink>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="413c-4b3f-249a-616d" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
-        <entryLink import="true" name="Plague Knight Rank" hidden="false" id="28bd-6fcd-3add-96d1" type="selectionEntryGroup" targetId="8ae8-ab71-98de-451a" sortIndex="5"/>
+        <entryLink import="true" name="Plague Knight Rank" hidden="false" id="28bd-6fcd-3add-96d1" type="selectionEntryGroup" targetId="8ae8-ab71-98de-451a" sortIndex="5">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink import="true" name="Fireteams" hidden="false" id="cfc0-2893-5456-2864" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
       </entryLinks>
       <costs>
@@ -3075,6 +3298,15 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <infoLinks>
         <infoLink name="Fear" id="20ea-96ee-230f-1e04" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
         <infoLink name="Strong" id="aab6-a319-05b7-89dd" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
+        <infoLink name="Ravenous Infection" id="e612-5876-cd15-1626" hidden="false" type="rule" targetId="2abe-5f25-4bcc-e4aa">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden" affects="category.profiles.Ability">
+              <conditions>
+                <condition type="notEqualTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="3" field="f025-ee7a-4125-ce80">
@@ -3274,6 +3506,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </profile>
           </profiles>
         </entryLink>
+        <entryLink import="true" name="Equipment" hidden="true" id="16a7-de91-1e15-7814" type="selectionEntryGroup" targetId="4e14-77e1-ca51-7dc6"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grail Thrall" hidden="false" id="ec39-f328-bad6-a586">
@@ -3945,15 +4178,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink name="Ravenous Infection" id="e612-5876-cd15-1626" hidden="false" type="rule" targetId="2abe-5f25-4bcc-e4aa">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden" affects="category.profiles.Ability">
-              <conditions>
-                <condition type="notEqualTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="d823-e8a8-3761-c40e" includeChildSelections="true"/>
@@ -3975,40 +4199,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </conditions>
         </modifier>
       </modifiers>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Butcher Knight Rank" id="1fa6-2d23-a525-1534" hidden="false" sortIndex="3">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Butcher King " hidden="false" id="e3a2-dcb4-1fdb-7aeb" sortIndex="1">
-              <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Knight Companion of the Feast" hidden="false" id="c9e8-dee7-d9f8-6998" sortIndex="2">
-              <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Knight of Twin Cleavers " hidden="false" id="af43-2185-97cb-61dc" sortIndex="3">
-              <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notEqualTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d0a-3d1c-117c-d883"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Warband Variant" hidden="false" id="8f8d-e167-36d5-dcdf">
       <constraints>
@@ -4041,193 +4231,3 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 </profile>
                 <profile name="The Lamenters" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="83c6-8b6b-a6d3-7d11">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Warband can include up to three Plague Knights (including the Executor), known as the Lamenters.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Dishonoured" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="174b-4b95-aed0-2823">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">No model in the warband may carry the Black Grail Shield or Beelzebub’s Axe. The Lord of the Flies does not suffer failed knights to carry his device.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="The Bereaved" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ae4d-6c6a-1159-e1b2">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Grail Thralls and Fly Thralls of the Warband are called the Bereaved. Bereaved have a Ranged characteristic of +0 DICE and cost 30 ducats each. Grail Tralls (but not Fly Thralls) can be equipped with Ranged weapons, Standards and Musical Instruments from the Black Grail Armoury</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Hegemon&apos;s Will" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="93cb-bfcb-e75d-a470">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Using the remnants of the lingering power of a fallen Hegemon, a Plague Knight of the Warband can directly
-command a nearby Thrall.
-
-
-During its Activation, a Plague Knight in this Warband can remove an INFECTION MARKER from any model in play to enable a friendly Thrall within 18&quot; to use any one of the Actions detailed below. Each Thrall can only be affected by Hegemon’s Will once per Turn, but one Plague Knight may issue commands to multiple Thralls (though not multiple commands to the same Thrall) during a single Activation, if all conditions are met.
-
-
-● Move: The Thrall takes a Standard Move ACTION.
-● Ranged Attack: The Thrall takes a Ranged Attack ACTION with any Ranged weapon it has.
-● Charge: The Thrall takes a Charge ACTION.
-● Melee Attack: The Thrall takes a Melee Attack ACTION.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fbee-018d-3c7f-3687" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Great Hunger" hidden="false" id="1291-a1ae-7eb0-bdc4">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0aed-3db3-3686-878f"/>
-              </constraints>
-              <profiles>
-                <profile name="Butcher Knights" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6072-b47d-774d-9c24">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Plague Knights of the warband are called Butcher Knights. They have the Ravenous Infection rule and are mounted on 32mm or 40mm bases. They may only be equipped with one of the following Butcher Knight Ranks:
-• Butcher King (10 ducats): If at the end of a game, this Butcher Knight is not Out of Action and it has taken at least one enemy model Out of Action with a Melee Attack, gain 1 Glory.
-• Knight Companion of the Feast (5 ducats): This Butcher Knight and any models within 3” of them add +1 DICE to Ravenous Infection ACTIONS.
-• Knight of Twin Cleavers (5 ducats): Melee Attacks made by this Butcher Knight gain the SHRAPNEL Keyword, and always ignore the Off-Hand special rule (-1 DICE to attacks with an off-hand weapon).</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Cradle of Filth" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f1b0-283b-2f8f-5b9a">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">There are those thralls who have become the vanguard of the Great Hunger, and where others seek the comfort of their matron, these thralls push forward in search of fresh meat. A Great Hunger Warband may recruit up to 3 Grail or Fly Thralls equipped with Blighted Claws to your Warband for 2 Glory each instead of their regular cost. Thralls recruited in this way are known as Cradle Thralls. If you are playing a campaign, after deployment, you may deploy up to three Cradle Thralls in reserve onto the battlefield. Cradle Thralls do not count towards your Maximum Field Strength, but do count for the purposes of Morale. In addition, if the scenario you are playing allows Infiltrators to use their special deployment rules, after any Infiltrators have deployed, you can deploy these Cradle Thralls within 1” of any edge of the battlefield and more than 8” away from any enemy models.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Dessiccated Husks" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0ec7-035e-8fb4-e93e">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Great Hunger Warband may include 0-2 Dessicated Husks. Dessicated Husks use the Corpse Guard Warband Entry, but replace the Bodyguard rule with the STRONG Keyword at no additional cost.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Equipment Restrictions" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7115-96b1-be9a-21dd">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Great Hunger often forgoes weapons in order to rend and bite the foe with bare hands and teeth. They cannot be trusted with treasured relics that are Beelzebub’s pride. In addition to this, The Great Hunger functions more like a ravenous horde than a disciplined force, and they prioritize close range combat over long ranged weapons. They do not have access to the following:
-• Beelzebub’s Axe
-• Black Grail Shields
-• Troop Standards
-• Musical Instruments
-• Compound Eyes Helmets
-• Any Ranged Weapons except for Shotguns, Black Spot Rifles, Parasite Grenades, and Putrid Shotguns. This restriction does not apply to Glory Items.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Grail Thralls &amp; Fly Thralls" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cda7-3bad-3aa7-e80f">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Grail and Fly Thralls in a Great Hunger Warband cost 35 ducats, and gain the Ravenous Infection Ability and the Blighted Claws equipment. They may be based on 25mm or 32mm bases, but all Thralls of the same type (Grail or Fly) must be on the same sized base.
-In addition, Grail and Fly Thralls may have the Unending Starvation and Grasping Maw equipment</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Prowlers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9f57-a517-2b2a-0adc">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Hounds of the Black Grail of the warband are called Prowlers and may be equipped with a Grasping Maw.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Ravenous Infection" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3e23-83d2-625b-8584">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Some infected with The Great Hunger care only to proliferate their Special Rules agonizing disease. A model with the Ravenous Infection Ability may make a RISKY ACTION to spread the virus. On a success, the model may place an INFECTION MARKER on any other model within 1”, as the Great Hunger virus burns through the battlefield. A model’s Activation ends immediately after using this Ability.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Spawn of Gluttony" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2d2e-ce27-e8eb-e3b0">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Great Hunger Warband must inclde either One (1) Matagot Hag or One (1) Lord of Tumours. It may not include both in a warband. It may include 0-2 Plague Knights (known as Butcher Knights).</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Waste no Flesh" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0d4d-09f0-54dd-79d2">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Great Hunger Warband cannot include any Corpse Guard, Heralds of Beelzebub or an Amalgam, as all flesh left on the battleground is consumed before it can manifest.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="self" shared="true" id="4c2f-5af2-df07-f5d3-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="4c2f-5af2-df07-f5d3-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink targetId="705b-e23f-e9c2-58ab" id="0f1c-ce96-001e-af7a" primary="true" name="Configuration"/>
-      </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Noble Hierarchy" hidden="false" id="a889-723f-f818-0867" defaultAmount="1">
-      <categoryLinks>
-        <categoryLink targetId="705b-e23f-e9c2-58ab" id="372b-42c1-c196-58ef" primary="true" name="Configuration"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="495e-0cf8-8f45-d3c7-min" includeChildSelections="true"/>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="495e-0cf8-8f45-d3c7-max" includeChildSelections="true"/>
-      </constraints>
-      <profiles>
-        <profile name="Special Rule: Morale" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6138-06ef-9465-b870">
-          <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enemy Warbands roll Morale Tests with -1 DICE when fighting a Black Grail Warband. The Court Warbands and other Black Grail Warbands ignore this penalty.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Leader Choice" id="663a-bdc1-dab8-ef03" hidden="false">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Led by a Plague Knight" hidden="false" id="fdaf-1b5e-0348-3ad9"/>
-            <selectionEntry type="upgrade" import="true" name="Led by a Lord of Tumours" hidden="false" id="bd82-c719-4abf-c104">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0643-2988-c501-a840-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0643-2988-c501-a840-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-    </selectionEntry>
-  </selectionEntries>
-  <forceEntries>
-    <forceEntry name="Warband" id="c331-f7cb-4f93-d861" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Configuration" hidden="false" id="f0b8-91e3-6b03-fbdc" targetId="705b-e23f-e9c2-58ab"/>
-        <categoryLink name="Elite" hidden="false" id="b233-bc4d-0af6-9b47" targetId="3de0-192c-3ec2-51be">
-          <modifiers>
-            <modifier type="add" value="Minimum 1 Leader" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="43b9-c7fd-4680-3e7a" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="80e3-313d-1c13-05a0" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="Troop" hidden="false" id="6ee3-420f-48cb-91c2" targetId="bd43-ddb1-262d-4489"/>
-        <categoryLink name="Mercenary" hidden="false" id="d202-90cd-2d6b-660a" targetId="3dfb-701d-e89c-eba2"/>
-      </categoryLinks>
-    </forceEntry>
-  </forceEntries>
-  <catalogueLinks>
-    <catalogueLink type="catalogue" name="Campaign Rules" id="3d00-75b6-5ee5-efe1" targetId="ba52-3616-d7f9-8d0c" importRootEntries="true"/>
-    <catalogueLink type="catalogue" name="Mercenaries" id="c1ee-b1f8-5b7a-b666" targetId="f569-e9dd-327a-5735" importRootEntries="true"/>
-  </catalogueLinks>
-  <entryLinks>
-    <entryLink import="true" name="Scripture Guardian" hidden="false" id="49df-7901-867a-c267" type="selectionEntry" targetId="08cc-f1b9-e991-e191">
-      <entryLinks>
-        <entryLink import="true" name="Melee Weapons" hidden="false" id="a009-94cc-985a-8bd3" type="selectionEntryGroup" targetId="9912-b634-058b-aa2d"/>
-        <entryLink import="true" name="Fireteams" hidden="false" id="bdc1-2fc7-8b72-3d0f" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink import="true" name="Pile of Stuff" hidden="false" id="6043-1c6c-c7ff-9d8d" type="selectionEntry" targetId="97ad-20f9-1e4c-c96c"/>
-    <entryLink import="true" name="Battlefield Title" hidden="false" id="f0cf-ddcc-51b6-b18a" type="selectionEntry" targetId="0175-e39b-7bab-aaaa"/>
-    <entryLink import="true" name="Homunculus" hidden="true" id="cc97-8441-8799-50ec" type="selectionEntry" targetId="feab-369d-5285-ea19">
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f73c-0f08-e6c3-e9fd" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
-  </entryLinks>
-</catalogue>
