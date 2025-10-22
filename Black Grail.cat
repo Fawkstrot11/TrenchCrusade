@@ -4897,6 +4897,7 @@ In addition, Grail and Fly Thralls may have the Unending Starvation and Graspin
         <categoryLink targetId="c5a0-e794-7661-ebb7" id="3332-5a9e-5734-dadf" primary="true" name="Black Grail"/>
         <categoryLink targetId="9b36-57f6-1887-7bea" id="c3d5-8ef9-947d-db6b" primary="false" name="Infiltrator"/>
         <categoryLink targetId="4f5c-027d-253c-ffa3" id="a0b1-0ffc-37ca-6774" primary="false" name="Fear"/>
+        <categoryLink targetId="bd43-ddb1-262d-4489" id="7333-a1f8-9ab4-a6b1" primary="false" name="Troop"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Arcana Putrescere" hidden="false" id="afc5-c58d-741b-a2ce" type="selectionEntryGroup" targetId="0c79-36ae-b3c7-b943"/>
@@ -4909,6 +4910,13 @@ In addition, Grail and Fly Thralls may have the Unending Starvation and Graspin
         <infoLink name="Fear" id="a2ca-541b-a8a0-bf09" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
         <infoLink name="Infiltrator" id="c769-1451-3929-0ad2" hidden="false" type="rule" targetId="154d-8072-ef87-e6c1"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="notEqualTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </selectionEntries>
   <forceEntries>
