@@ -4658,7 +4658,7 @@ During its Activation, a Plague Knight in this Warband can remove an INFECTION M
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fbee-018d-3c7f-3687" includeChildSelections="false"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Great Hunger" hidden="false" id="1291-a1ae-7eb0-bdc4">
+            <selectionEntry type="upgrade" import="true" name="The Great Hunger (v1.5)" hidden="false" id="1291-a1ae-7eb0-bdc4">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0aed-3db3-3686-878f"/>
               </constraints>
@@ -4756,12 +4756,25 @@ These INFECTION MARKERS can be taken from any models within 12” of the caster
       <selectionEntryGroups>
         <selectionEntryGroup name="Leader Choice" id="663a-bdc1-dab8-ef03" hidden="false">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Led by a Plague Knight" hidden="false" id="fdaf-1b5e-0348-3ad9"/>
+            <selectionEntry type="upgrade" import="true" name="Led by a Plague Knight" hidden="false" id="fdaf-1b5e-0348-3ad9">
+              <modifiers>
+                <modifier type="add" value="Roster requires 1 Plague Knight" field="error">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="43b9-c7fd-4680-3e7a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Led by a Lord of Tumours" hidden="false" id="bd82-c719-4abf-c104">
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="add" value="Roster requires 1 Lord of Tumor." field="error">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="80e3-313d-1c13-05a0" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -4771,6 +4784,11 @@ These INFECTION MARKERS can be taken from any models within 12” of the caster
                 <modifier type="set" value="false" field="hidden">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="add" value="Roster requires 1 Matagot Hag" field="error">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="4752-7d52-b5b4-b3f2" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -5044,6 +5062,7 @@ If you are playing a campaign, after deployment, you may deploy up to three Cr
       <infoLinks>
         <infoLink name="Fear" id="7340-eb85-0690-5749" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
         <infoLink name="Blighted Claws" id="df41-0078-9b89-d02f" hidden="false" type="profile" targetId="b4fe-5008-2654-7aa1"/>
+        <infoLink name="Critical" id="1bad-699e-78ce-9113" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -5056,6 +5075,9 @@ If you are playing a campaign, after deployment, you may deploy up to three Cr
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="e1f0-a9c9-56cc-de55" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="6298-29ad-0b96-fb96" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
       </entryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dcd7-e5d9-ff6e-bb58"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
   <forceEntries>
