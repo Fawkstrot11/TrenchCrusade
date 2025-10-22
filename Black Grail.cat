@@ -4577,7 +4577,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="d823-e8a8-3761-c40e" includeChildSelections="true"/>
       </constraints>
       <modifiers>
-        <modifier type="set" value="Dessiccated Husks" field="name">
+        <modifier type="set" value="Desiccated Husks" field="name">
           <conditions>
             <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
@@ -4676,9 +4676,9 @@ During its Activation, a Plague Knight in this Warband can remove an INFECTION M
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">There are those thralls who have become the vanguard of the Great Hunger, and where others seek the comfort of their matron, these thralls push forward in search of fresh meat. A Great Hunger Warband may recruit up to 3 Grail or Fly Thralls equipped with Blighted Claws to your Warband for 2 Glory each instead of their regular cost. Thralls recruited in this way are known as Cradle Thralls. If you are playing a campaign, after deployment, you may deploy up to three Cradle Thralls in reserve onto the battlefield. Cradle Thralls do not count towards your Maximum Field Strength, but do count for the purposes of Morale. In addition, if the scenario you are playing allows Infiltrators to use their special deployment rules, after any Infiltrators have deployed, you can deploy these Cradle Thralls within 1” of any edge of the battlefield and more than 8” away from any enemy models.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Dessiccated Husks" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0ec7-035e-8fb4-e93e">
+                <profile name="Desiccated Husks" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0ec7-035e-8fb4-e93e">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Great Hunger Warband may include 0-2 Dessicated Husks. Dessicated Husks use the Corpse Guard Warband Entry, but replace the Bodyguard rule with the STRONG Keyword at no additional cost.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Great Hunger Warband may include 0-2 Desicated Husks. Desicated Husks use the Corpse Guard Warband Entry, but replace the Bodyguard rule with the STRONG Keyword at no additional cost.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Equipment Restrictions" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7115-96b1-be9a-21dd">
@@ -4716,6 +4716,13 @@ In addition, Grail and Fly Thralls may have the Unending Starvation and Graspin
                 <profile name="Waste no Flesh" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0d4d-09f0-54dd-79d2">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Great Hunger Warband cannot include any Corpse Guard, Heralds of Beelzebub or an Amalgam, as all flesh left on the battleground is consumed before it can manifest.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Arcana Putrescere" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2923-695b-9444-4734">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Arcana Putrescere spells are marked with the Keyword PUTRESCERE (X) where the number in brackets indicates how many INFECTION MARKERS will have to be spent to trigger the effect of the Arcana. If multiple numbers or a range of numbers are listed in the brackets, any one of those numbers can be chosen. Not all of Beelzebub’s favoured are blessed with the arcana, but those who carry rank are often proficient in its use. 
+A MATAGOT HAG may take 0-3 Arcana, a LORD OF TUMOURS may take 0-1 Arcana, and GREGORI GULAS may take 0-1 Arcana.
+These INFECTION MARKERS can be taken from any models within 12” of the caster, be they friendly or enemy models. INFECTION MARKERS used this way are removed from the game and the described effect of the Arcana Putrescere then takes effect as described - no ACTION roll is needed, unless outlined in the Arcana. Despite not requiring an ACTION roll, Arcana being cast through the Arcana Putrescere are ACTIONS and, as with other ACTIONS, spells can only be used by the model once per Activation. Some Arcana Putrescere Powers are not marked with the Keyword PUTRESCRE (X). These powers are typically passive abilities.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4759,11 +4766,11 @@ In addition, Grail and Fly Thralls may have the Unending Starvation and Graspin
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Led by a Matagot Hag" hidden="false" id="2d86-754d-4c9f-9d70">
+            <selectionEntry type="upgrade" import="true" name="Led by a Matagot Hag" hidden="true" id="2d86-754d-4c9f-9d70">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="false" field="hidden">
                   <conditions>
-                    <condition type="notEqualTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -4927,6 +4934,128 @@ In addition, Grail and Fly Thralls may have the Unending Starvation and Graspin
           </conditions>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Cradle Thralls" hidden="true" id="618d-d244-7ba5-013c">
+      <profiles>
+        <profile name="Overwhelming Horde" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f94f-679f-b79e-4967">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">For each friendly BLACK GRAIL model within 3” of the Thrall, it gains +1 DICE to its Melee attack rolls, up to maximum +4 DICE.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Cradle of Filth" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5558-472c-3484-a6e6">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">There are those thralls who have become the vanguard of the Great Hunger, and where others seek the comfort of their matron, these thralls push forward in search of fresh meat. A Great Hunger Warband may recruit up to 3 Grail or Fly Thralls equipped with Blighted Claws to your Warband for 2 Glory each instead of their regular cost. Thralls recruited in this way are known as Cradle Thralls.
+ 
+If you are playing a campaign, after deployment, you may deploy up to three Cradle Thralls in reserve onto the battlefield. Cradle Thralls do not count towards your Maximum Field Strength, but do count for the purposes of Morale. In addition, if the scenario you are playing allows Infiltrators to use their special deployment rules, after any Infiltrators have deployed, you can deploy these Cradle Thralls within 1” of any edge of the battlefield and more than 8” away from any enemy models.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Thrall Type" id="9585-8d53-4aa5-96ad" hidden="false" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Grounded" hidden="false" id="35b7-e759-75b9-cfaf">
+              <costs>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c1e-569c-d370-8cbf" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Thrall" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="2031-7fb6-4a70-6119">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">5&quot;/Infantry</characteristic>
+                    <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">N/A</characteristic>
+                    <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">-1 Dice</characteristic>
+                    <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
+                    <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
+                  </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="+0 Dice" field="1a4f-d2cd-c405-6200">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="Bereaved" field="name">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </profile>
+                <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e544-3c50-9352-53b6">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Non-FIRE injuries against the Grail Thrall are rolled with -1 DICE. Additionally, this model ignores any additional BLOOD MARKERS caused by the Keyword GAS.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Winged" hidden="false" id="2292-0571-c1f4-7091">
+              <costs>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b60a-1bd0-610b-9395" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Winged Thrall" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="4396-bb96-7cc5-7060" publicationId="c658-4a10-e1fe-befc" page="80">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Flying</characteristic>
+                    <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">N/A</characteristic>
+                    <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">-1 Dice</characteristic>
+                    <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
+                    <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
+                  </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="Winged Bereaved" field="name">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="decrement" value="1" field="5de9-d70e-9021-6f71">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="self" childId="7fb6-d318-1757-96a6" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </profile>
+                <profile name="Toxic" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ece4-a016-ee9a-b1b8">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model ignores any additional BLOOD MARKERS caused by the Keyword GAS.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="08b7-aaaf-b78a-9090" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ee0-53f1-f2be-5a0f" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="c5a0-e794-7661-ebb7" id="67af-155d-d45a-fb42" primary="false" name="Black Grail"/>
+        <categoryLink targetId="4f5c-027d-253c-ffa3" id="4404-78f9-778d-2095" primary="false" name="Fear"/>
+        <categoryLink targetId="bd43-ddb1-262d-4489" id="67f0-81a6-dd59-94c4" primary="true" name="Troop"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Fear" id="7340-eb85-0690-5749" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
+        <infoLink name="Blighted Claws" id="df41-0078-9b89-d02f" hidden="false" type="profile" targetId="b4fe-5008-2654-7aa1"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Exploration Upgrades" hidden="false" id="e1f0-a9c9-56cc-de55" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="6298-29ad-0b96-fb96" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
+      </entryLinks>
     </selectionEntry>
   </selectionEntries>
   <forceEntries>
