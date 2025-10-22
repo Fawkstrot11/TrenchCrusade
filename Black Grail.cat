@@ -2461,6 +2461,134 @@
         <constraint type="max" value="1" field="selections" scope="self" shared="true" id="8d0a-3d1c-117c-d883"/>
       </constraints>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Arcana Putrescere" id="0c79-36ae-b3c7-b943" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Feral Hunger" hidden="false" id="3f53-aea9-150f-d687">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c8e0-e29f-ded2-4de6"/>
+            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="1cdf-eef2-72e0-ca2c" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Feral Hunger" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b7a4-71e2-da8f-cee3">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model charges an enemy model, it can always treat the dice roll added to the models movement as the maximum value (6 unless otherwise specified). The model suffers penalties to this movement as standard (Difficult Terrain, Standing etc).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Miasma of Pestilence" hidden="false" id="4a11-b54e-72cf-c433">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4ec2-d84b-5412-b977" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="14d9-10df-9200-fccd"/>
+          </constraints>
+          <profiles>
+            <profile name="Miasma of Pestilence" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3845-0e1e-cff1-0fc1">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a PUTRESCERE (3) arcana, any models within 6” of the caster are treated as though they are in COVER (-1 DICE from shooting) and it negates any bonuses a model would gain from elevation. This lasts until the caster’s next activation.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Mother&apos;s Call" hidden="false" id="968e-a7aa-fccc-cf80">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="905e-2df0-7f3d-7eaa"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden"/>
+          </modifiers>
+          <profiles>
+            <profile name="Mother&apos;s Call" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="facc-d1f3-44e7-5b18">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This arcana does not require Line of Sight.
+As a PUTRESCERE (1) arcana, this model can command any friendly Thrall model within 8” to do one of the following:
+• Move: The Thrall takes a Standard Move ACTION.
+• Melee Attack: The Thrall takes a Melee Attack ACTION.
+• Feast: The Thrall can use their Ravenous Infection Ability, doubling the amount of INFECTION MARKERS from the Ravenous Infection Ability if successful.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Rapturous Feast" hidden="false" id="3ffd-716d-1734-88e8">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Rapturous Feast" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d933-9312-6ae7-27d5">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Great Hunger burns so deeply within the caster, that nearby thralls find their saliva growing thick with digestive fluids in anticipation. Friendly models within 4” of this model (including this model) inflict INFECTION MARKERS instead of BLOOD MARKERS with their melee attacks if they have also made a Charge Action earlier this round.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c783-3e8e-2cd9-d478" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5abd-ebfa-c389-8aa4"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Virulent Clot" hidden="false" id="25f5-2339-059f-05e9">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Vile Churning" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dd78-c022-d4ca-f053">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Once per turn the caster may use this PUTRESCERE (2/4/6) arcana immediately before an injury is rolled against the model or any Thrall within 3” of the caster. If it is, deduct 1 from the injury result for every two INFECTION MARKERS spent unless the attack. This attack ignores the FIRE keyword.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f374-efaf-5df9-8b33" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Vomitus" hidden="false" id="7ec5-8653-0fd8-cea4">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="40"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Vomitus" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dab3-646c-04af-c130">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a ranged attack ACTION with PUTRESCERE (1-3), this model opens their mouth and spews forth an excessive stream of vileness that burns and causes flesh to erupt into fluid-filled pustules. Do not make a Success Roll for the attack. Instead, measure a straight line 1mm wide and up to 8” long from the attacking model to a point on the ground or a model’s base. The line stops if it reaches any terrain piece that is taller than the model making the Attack. Make an Injury Roll for every model (friend or foe) that is touched by the line, apart from the attacking model itself. Add +1 to Injury Chart rolls per INFECTION MARKER used for the Arcana after the first (e.g. using 2 INFECTION MARKERS gives +1 to Injury Chart rolls, 3 INFECTION MARKERS gives +2 to Injury Chart rolls, etc). This attack inflicts INFECTION MARKERS Instead of BLOOD MARKERS.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="08d5-4138-edfd-e808" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7393-3ae7-5766-ccb0"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Vile Churning" hidden="false" id="4a2b-46cf-4669-b4b5">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="846f-6693-5095-e253"/>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="7283-95a9-3f35-30e1" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Vile Churning" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1dd5-7234-d6b1-08fc">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a PUTRESCERE (1-2) arcana, any models within 1” of the caster (excluding the caster themselves) without the ARTIFICIAL or DEMONIC Keywords suffer a number of BLOOD MARKERS equal to the number of INFECTION MARKERS spent. This arcana may be cast even if the caster is Engaged in Melee Combat.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Bayonet Lug" hidden="false" id="f603-fb7b-cb6f-f1a4">
@@ -4514,9 +4642,9 @@ In addition, Grail and Fly Thralls may have the Unending Starvation and Graspin
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Led by a Matagot Hag" hidden="false" id="2d86-754d-4c9f-9d70">
               <modifiers>
-                <modifier type="set" value="false" field="hidden">
+                <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notEqualTo" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
