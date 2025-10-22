@@ -1964,8 +1964,14 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="model" childId="8f23-4665-3322-ca92" shared="true"/>
-                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -4853,8 +4859,8 @@ These INFECTION MARKERS can be taken from any models within 12” of the caster
         <profile name="Matagot Hag" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="9f6e-ddb1-4c46-1d5b">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
-            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1</characteristic>
-            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+3</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 Dice</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+3 Dice</characteristic>
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">50mm</characteristic>
           </characteristics>
