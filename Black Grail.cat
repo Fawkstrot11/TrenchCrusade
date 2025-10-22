@@ -4760,7 +4760,7 @@ These INFECTION MARKERS can be taken from any models within 12” of the caster
               <modifiers>
                 <modifier type="add" value="Roster requires 1 Plague Knight" field="error">
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="43b9-c7fd-4680-3e7a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="43b9-c7fd-4680-3e7a" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -4774,7 +4774,7 @@ These INFECTION MARKERS can be taken from any models within 12” of the caster
                 </modifier>
                 <modifier type="add" value="Roster requires 1 Lord of Tumor." field="error">
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="80e3-313d-1c13-05a0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="80e3-313d-1c13-05a0" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -4788,7 +4788,7 @@ These INFECTION MARKERS can be taken from any models within 12” of the caster
                 </modifier>
                 <modifier type="add" value="Roster requires 1 Matagot Hag" field="error">
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="4752-7d52-b5b4-b3f2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4752-7d52-b5b4-b3f2" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -5075,6 +5075,9 @@ If you are playing a campaign, after deployment, you may deploy up to three Cr
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="e1f0-a9c9-56cc-de55" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="6298-29ad-0b96-fb96" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="2be4-2b08-579f-13d4"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
   <forceEntries>
