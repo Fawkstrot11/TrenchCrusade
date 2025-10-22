@@ -4743,8 +4743,8 @@ These INFECTION MARKERS can be taken from any models within 12” of the caster
         <categoryLink targetId="705b-e23f-e9c2-58ab" id="372b-42c1-c196-58ef" primary="true" name="Configuration"/>
       </categoryLinks>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="495e-0cf8-8f45-d3c7-min" includeChildSelections="true"/>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="495e-0cf8-8f45-d3c7-max" includeChildSelections="true"/>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="495e-0cf8-8f45-d3c7-min-min" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="495e-0cf8-8f45-d3c7-min-max" includeChildSelections="true"/>
       </constraints>
       <profiles>
         <profile name="Special Rule: Morale" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6138-06ef-9465-b870">
@@ -4759,14 +4759,9 @@ These INFECTION MARKERS can be taken from any models within 12” of the caster
             <selectionEntry type="upgrade" import="true" name="Led by a Plague Knight" hidden="false" id="fdaf-1b5e-0348-3ad9">
               <modifiers>
                 <modifier type="add" value="Roster requires 1 Plague Knight" field="error">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="self" childId="any" shared="true"/>
-                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="43b9-c7fd-4680-3e7a" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="43b9-c7fd-4680-3e7a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -4778,14 +4773,9 @@ These INFECTION MARKERS can be taken from any models within 12” of the caster
                   </conditions>
                 </modifier>
                 <modifier type="add" value="Roster requires 1 Lord of Tumor." field="error">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="self" childId="any" shared="true"/>
-                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="80e3-313d-1c13-05a0" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="80e3-313d-1c13-05a0" shared="true"/>
+                  </conditions>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -4793,26 +4783,17 @@ These INFECTION MARKERS can be taken from any models within 12” of the caster
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="c331-f7cb-4f93-d861" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </modifier>
                 <modifier type="add" value="Roster requires 1 Matagot Hag" field="error">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="self" childId="any" shared="true"/>
-                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="4752-7d52-b5b4-b3f2" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="4752-7d52-b5b4-b3f2" shared="true" includeChildSelections="true"/>
+                  </conditions>
                 </modifier>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0643-2988-c501-a840-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0643-2988-c501-a840-max" includeChildSelections="false"/>
-          </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
