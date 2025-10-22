@@ -1964,14 +1964,12 @@
                       <conditions>
                         <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="1291-a1ae-7eb0-bdc4" shared="true" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="8f23-4665-3322-ca92" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="8f23-4665-3322-ca92" shared="true"/>
+                      </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
