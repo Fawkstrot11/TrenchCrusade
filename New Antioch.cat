@@ -62,7 +62,15 @@
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="176b-7b1e-df50-0052" includeChildSelections="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="2c87-8db5-9be4-38c0" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="2c87-8db5-9be4-38c0">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3523-c775-3603-dbeb" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Shovel" hidden="false" id="b892-9f94-5f57-7bab" sortIndex="3">
           <costs>
@@ -139,7 +147,15 @@
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dd8d-b384-6d13-4000" includeChildSelections="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="946e-ddc8-6c76-18a8" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="946e-ddc8-6c76-18a8">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3523-c775-3603-dbeb" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Martyrdom Pills" hidden="true" id="766a-1ae3-d5f5-26cd" sortIndex="5">
           <costs>
@@ -196,7 +212,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Holy Water of Lalibela" hidden="true" id="b4d4-3da2-7157-f15b" sortIndex="12">
+        <selectionEntry type="upgrade" import="true" name="Holy Water of Lalibela" hidden="true" id="b4d4-3da2-7157-f15b" sortIndex="13">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="3"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -223,7 +239,7 @@
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Tabot" hidden="true" id="ffda-4bec-1b59-f267" sortIndex="13">
+        <selectionEntry type="upgrade" import="true" name="Tabot" hidden="true" id="ffda-4bec-1b59-f267" sortIndex="14">
           <costs>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="4"/>
           </costs>
@@ -269,7 +285,7 @@
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4636-7ceb-9779-a535" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Blood Cloak" hidden="true" id="114b-97a7-6011-55c2" sortIndex="10">
+        <selectionEntry type="upgrade" import="true" name="Blood Cloak" hidden="true" id="114b-97a7-6011-55c2" sortIndex="11">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -330,6 +346,18 @@
             </modifier>
           </modifiers>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Armour-Piercing Bullets" hidden="false" id="8e13-6e55-df3a-2fe7" sortIndex="10">
+          <infoLinks>
+            <infoLink name="Armour Piercing" id="3127-ded9-fd3c-5af5" hidden="false" type="rule" targetId="ba7a-64b6-e87b-0ecd"/>
+          </infoLinks>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="4c6c-b4ae-2541-91f4" includeChildSelections="true"/>
+          </constraints>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Headgear" id="33a6-4dc3-100c-52c3" hidden="false" sortIndex="1">
@@ -389,14 +417,14 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Sniper Scope" hidden="true" id="ff38-50c0-2451-836c" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="11"/>
-        <entryLink import="true" name="Battlefield Title" hidden="true" id="f5cf-f56e-1756-e867" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="17"/>
-        <entryLink import="true" name="Resurrection Engine" hidden="true" id="c6da-3d4a-3dae-8e8a" type="selectionEntry" targetId="28c1-351c-12d0-1f26" sortIndex="20"/>
-        <entryLink import="true" name="Book of Battle Prayers" hidden="true" id="1ae8-3911-e885-b448" type="selectionEntry" targetId="2958-0f21-a1a5-74fb" sortIndex="18"/>
-        <entryLink import="true" name="Salvage Golem" hidden="true" id="1c98-df0a-2814-f1b1" type="selectionEntry" targetId="a9ef-f6d0-107c-2441" sortIndex="14"/>
-        <entryLink import="true" name="Field Hospital" hidden="true" id="2ffa-83b2-4c28-d014" type="selectionEntry" targetId="eb62-f33b-0d57-cd92" sortIndex="19"/>
-        <entryLink import="true" name="Smoke Screen" hidden="true" id="acc4-e923-3870-52de" type="selectionEntry" targetId="6db3-6176-dc20-c6b8" sortIndex="16"/>
-        <entryLink import="true" name="Knighthood" hidden="true" id="3c71-bc76-c2da-6589" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="15"/>
+        <entryLink import="true" name="Sniper Scope" hidden="true" id="ff38-50c0-2451-836c" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="12"/>
+        <entryLink import="true" name="Battlefield Title" hidden="true" id="f5cf-f56e-1756-e867" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="18"/>
+        <entryLink import="true" name="Resurrection Engine" hidden="true" id="c6da-3d4a-3dae-8e8a" type="selectionEntry" targetId="28c1-351c-12d0-1f26" sortIndex="21"/>
+        <entryLink import="true" name="Book of Battle Prayers" hidden="true" id="1ae8-3911-e885-b448" type="selectionEntry" targetId="2958-0f21-a1a5-74fb" sortIndex="19"/>
+        <entryLink import="true" name="Salvage Golem" hidden="true" id="1c98-df0a-2814-f1b1" type="selectionEntry" targetId="a9ef-f6d0-107c-2441" sortIndex="15"/>
+        <entryLink import="true" name="Field Hospital" hidden="true" id="2ffa-83b2-4c28-d014" type="selectionEntry" targetId="eb62-f33b-0d57-cd92" sortIndex="20"/>
+        <entryLink import="true" name="Smoke Screen" hidden="true" id="acc4-e923-3870-52de" type="selectionEntry" targetId="6db3-6176-dc20-c6b8" sortIndex="17"/>
+        <entryLink import="true" name="Knighthood" hidden="true" id="3c71-bc76-c2da-6589" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="16"/>
         <entryLink import="true" name="Curative Fluids" hidden="true" id="c53b-797a-a746-74ed" type="selectionEntry" targetId="0e49-dfa5-4190-ee69"/>
         <entryLink import="true" name="Lock of Samson&apos;s Hair" hidden="false" id="8ed1-2abd-94fe-13be" type="selectionEntry" targetId="9b61-d0a4-dd30-2d32"/>
         <entryLink import="true" name="Blasphemous Banner" hidden="true" id="8a3a-c966-249a-7019" type="selectionEntry" targetId="ac5b-0ae8-e0cd-5fda"/>
@@ -411,7 +439,7 @@
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Grenades" id="538c-c8f3-3ec7-a4b8" hidden="false" type="profile" targetId="cc34-0630-85e1-2583">
+            <infoLink name="Frag Grenades" id="538c-c8f3-3ec7-a4b8" hidden="false" type="profile" targetId="cc34-0630-85e1-2583">
               <modifiers>
                 <modifier type="increment" value="4" field="31a7-b5e8-41dc-5fd1">
                   <conditions>
@@ -696,6 +724,31 @@
             </modifier>
           </modifiers>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Misericordia" hidden="true" id="a315-4999-ec20-37e5">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Misericordia" id="9f13-28ed-5cbb-3e51" hidden="false" type="profile" targetId="d82e-4c7b-28ac-1413"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3523-c775-3603-dbeb" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="b889-ba3d-366e-245e">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3523-c775-3603-dbeb" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b889-ba3d-366e-245e" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="model" shared="true" id="4cc0-f87c-7c35-91ba" includeChildSelections="true"/>
+          </constraints>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Melee (Two-Handed)" id="9a78-862f-67eb-f06b" hidden="false">
@@ -706,7 +759,7 @@
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Double-Handed Blunt Weapon" id="0fa0-9859-ed95-c628" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
+            <infoLink name="Great Blunt Weapon" id="0fa0-9859-ed95-c628" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
             <infoLink name="Heavy" id="8a71-35c2-73c8-c57a" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <categoryLinks>
@@ -743,7 +796,7 @@
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="3133-240a-a0cc-9cb4" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3133-240a-a0cc-9cb4" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
@@ -754,11 +807,19 @@
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="3" field="0a2b-4ba5-08f1-0114">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="roster" shared="true" id="0a2b-4ba5-08f1-0114" includeChildSelections="true"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Lochaber Axe" hidden="true" id="adba-b7f8-83fd-a35c" sortIndex="3">
           <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <profiles>
@@ -766,11 +827,8 @@
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1 to Injury Rolls</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, CRITICAL, CUMBERSOME</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Models equipped with a Lochaber Axe impose a -1 DICE to hit penalty on any charging enemies in Melee combat. This only applies when a charging model attacks, not in subsequent rounds of Melee.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 INJURY DICE, BLOCK, CRITICAL, CUMBERSOME, HEAVY</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
               </characteristics>
             </profile>
           </profiles>
@@ -871,7 +929,7 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <infoLinks>
-                <infoLink name="Trench Polearm" id="1c41-37cc-8ccc-849b" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
+                <infoLink name="Polearm" id="1c41-37cc-8ccc-849b" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
                 <infoLink name="Cumbersome" id="d735-356e-f056-0f25" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
               </infoLinks>
               <categoryLinks>
@@ -1780,7 +1838,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0289-4b7c-c8f4-64fa" includeChildSelections="false"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Trench Shield" id="fedb-075a-c4f5-adfb" hidden="false" type="profile" targetId="c2a5-72b6-355d-0356"/>
+                <infoLink name="Shield" id="fedb-075a-c4f5-adfb" hidden="false" type="profile" targetId="c2a5-72b6-355d-0356"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -1815,10 +1873,10 @@
                     <conditionGroup type="or">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="model" childId="e6ac-8562-3982-4bfc" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="03eb-5358-03ae-8046" shared="true" includeChildSelections="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="model" childId="6b8a-68e7-f795-ffe7" shared="true" includeChildSelections="true">
                           <comment>for mechanized infantry</comment>
                         </condition>
-                        <condition type="atLeast" value="1" field="selections" scope="model" childId="03eb-5358-03ae-8046" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -2524,7 +2582,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Swiss Guard" hidden="true" id="c35e-c172-3e6b-1bda">
       <costs>
-        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <profiles>
@@ -2608,10 +2666,10 @@
       <profiles>
         <profile name="Berserker" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f634-bf69-b747-a78c">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is immune to FEAR and disregards any BLOOD MARKERS from any source. Berserkers never wear armour, though they can carry a Trench Shield.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model gains NEGATE FEAR and disregards any BLOOD MARKERS from any source. Berserkers never wear armour, though they can carry a Shield.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3538,10 +3596,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <profiles>
         <profile name="On my Command!" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8e11-d71b-f31f-4a42">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Once per Turn, as an ACTION the Lieutenant can instead force the opponent to activate one of their models that the Lieutenant can select from amongst the models they can see. This ends the Activation of the Lieutenant.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: The Lieutenant orders their warband to stop shooting, forcing the enemy to move first. To represent this, a Lieutenant can take a Hold Your Fire! ACTION. If they do so, pick 1 enemy model that is in the Lieutenant’s Line of Sight and that the opponent is allowed to Activate. The Lieutenant’s Activation then ends, and the opponent must Activate the model you picked.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -3937,11 +3995,42 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifierGroup>
           </modifierGroups>
         </profile>
+        <profile name="Away, Serpents!" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="true" id="0eb3-b47c-4f32-e978">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Select any enemy within 12” of the Priest and take a RISKY ACTION (targeting models on 40mm or larger bases incur -1 DICE penalty to this roll). If successful, the enemy model goes Down immediately, slithering on its belly like a snake.</characteristic>
+            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Onward Christian Soldiers!" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3072-0ff0-3ea9-e748">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Friendly NEW ANTIOCH models within 8&quot; of a Trench Cleric have the NEGATE FEAR Keyword.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">8&quot;</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="God is With Us!" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6b25-bd66-9cec-fb90">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: A Trench Cleric can take a God is With Us! ACTION. If they do so, take a Risky Success Roll for the Trench Cleric. If the roll is a Failure, nothing happens, and the Trench Cleric’s Activation ends. If the roll is a Success or a Critical Success, you can place 1 BLESSING MARKER next to the Trench Cleric or a friendly model within 6&quot; of the Trench Cleric.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">6&quot;</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <entryLinks>
         <entryLink import="true" name="Armour" hidden="false" id="27b6-5fa0-a382-f50d" type="selectionEntryGroup" targetId="8132-2c2e-56dc-14a6"/>
-        <entryLink import="true" name="Grenades" hidden="false" id="8efc-dc5e-31ac-ddfa" type="selectionEntryGroup" targetId="9c37-58de-3fa2-bfd2" sortIndex="6"/>
-        <entryLink import="true" name="Weapons" hidden="false" id="4e24-4a83-e02d-90c8" type="selectionEntryGroup" targetId="24ae-224b-0680-a9bd" sortIndex="5"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="8efc-dc5e-31ac-ddfa" type="selectionEntryGroup" targetId="9c37-58de-3fa2-bfd2" sortIndex="5"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="4e24-4a83-e02d-90c8" type="selectionEntryGroup" targetId="24ae-224b-0680-a9bd" sortIndex="4"/>
         <entryLink import="true" name="Equipment" hidden="false" id="ede5-41b4-df7a-dd60" type="selectionEntryGroup" targetId="d5c6-bf28-709b-7286"/>
         <entryLink import="true" name="Advancement" hidden="true" id="5567-ad3b-9a76-5f69" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="8a2c-186d-6db9-bfe6" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
@@ -3970,7 +4059,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
@@ -3978,95 +4066,46 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </modifier>
         <modifier type="set" value="Holy Warrior" field="name">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1da0-5c5c-ad5a-ae96" shared="true" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="3" field="16e2-020d-1d3b-6a0f">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Battlefield Litany" id="bf95-df95-850c-dab9" hidden="false" sortIndex="4">
+        <selectionEntryGroup name="Upgrades" id="4be9-648e-638f-3c62" hidden="false" sortIndex="3">
+          <entryLinks>
+            <entryLink import="true" name="Supreme Blessing" hidden="false" id="01ea-d172-1705-618f" type="selectionEntry" targetId="856b-ba44-04c5-fdf5"/>
+            <entryLink import="true" name="Chewa" hidden="false" id="b1d7-b973-c226-bdd0" type="selectionEntry" targetId="f5cc-8e5a-445d-bc09"/>
+          </entryLinks>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Onwards, Christian Soldiers!" hidden="false" id="bd29-0628-00be-3d6f">
-              <profiles>
-                <profile name="Onwards, Christian Soldiers!" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8d4a-bd62-2847-c98b">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">All friendly models that are within 8” of the Trench Cleric at the start of their Activation are not affected by FEAR.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                  </characteristics>
-                </profile>
-              </profiles>
+            <selectionEntry type="upgrade" import="true" name="Holy Warrior" hidden="false" id="1da0-5c5c-ad5a-ae96">
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c03a-38b1-021c-6608" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="God is With Us!" hidden="false" id="a389-d1a8-1bfe-7bba">
-              <profiles>
-                <profile name="God is With Us!" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c092-4fd5-e30d-0060">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Select one friendly model within 6” of the Priest (including the Priest) and take a RISKY ACTION. If successful, the model immediately gains a BLESSING MARKER</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6e92-dd0a-7532-054c" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Away, Serpents!" hidden="true" id="c372-7677-43fb-bbc3">
-              <profiles>
-                <profile name="Away, Serpents!" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5c3a-8564-bfc9-a979">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Select any enemy within 12” of the Priest and take a RISKY ACTION (targeting models on 40mm or larger bases incur -1 DICE penalty to this roll). If successful, the enemy model goes Down immediately, slithering on its belly like a snake.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc43-8dbe-6082-c2d6" includeChildSelections="false"/>
+                <constraint type="min" value="-1" field="selections" scope="roster" shared="true" id="8be7-b4d7-471e-b2f8" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="adfd-594f-10cd-e9f7" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="ea10-0efc-7795-e79c" includeChildSelections="true"/>
               </constraints>
               <modifiers>
-                <modifier type="set" value="false" field="hidden">
+                <modifier type="set" value="-20" field="8be7-b4d7-471e-b2f8">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Arise and be Healed!" hidden="true" id="ddcb-0890-fe88-d925">
-              <profiles>
-                <profile name="Arise and be Healed!" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="19e6-b3af-9141-c949">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Select one friendly model within 3” of the Priest and take a RISKY ACTION. If successful, the warrior immediately stands up if Down, and loses up to D3 BLOOD MARKERS or INFECTION MARKERS (or any combination) of your choice.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aef3-0182-48d6-5bf9" includeChildSelections="false"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="7dda-8f8f-2120-65de" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                <modifier type="increment" value="1" field="8be7-b4d7-471e-b2f8">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="roster" childId="f8bc-5df8-1768-a72a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
                 </modifier>
               </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Blessed Psalm" hidden="true" id="6455-1574-6176-1373">
               <profiles>
-                <profile name="Blessed Psalm" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e228-9c26-576d-3720">
+                <profile name="Blessed Psalm" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b328-f955-5697-e18d">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">As an ACTION, the Warrior removes one BLESSING MARKER it has and adds it to any other member of the warband. This ACTION succeeds automatically.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -4074,53 +4113,35 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f7af-62d7-c6f9-97fa" includeChildSelections="false"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="God&apos;s Mercy" hidden="true" id="c25b-a4dd-dde5-8910">
-              <profiles>
-                <profile name="God&apos;s Mercy" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c62f-0e4a-4ace-ad57">
+                <profile name="Arise and be Healed!" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8cee-fa0e-2238-359e">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Select one friendly model within 3” of the warrior and take an ACTION. If successful, the target immediately stands if Down and loses up to one BLOOD MARKER or INFECTION MARKER (your choice) it has.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: A Papal States Intervention Force Trench Cleric can take an Arise and be Healed! ACTION. If they do so, take a Risky Success Roll for the Trench Cleric. If the roll is a Failure, nothing happens, and the Trench Cleric’s Activation ends. If the roll is a Success or Critical Success, pick the Trench Cleric or 1 friendly model within 3&quot; of the Trench Cleric. The model you pick can stand back up at no cost to their movement, and you can remove up to D3 BLOOD MARKERS and/or INFECTION MARKERS from the model.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">3&quot;</characteristic>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7dcb-9d0d-d4e1-45d5" includeChildSelections="false"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b8f-4361-5f23-2e20" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </selectionEntry>
           </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="self" shared="true" id="c6d1-3907-fc10-2929-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="c6d1-3907-fc10-2929-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Upgrades" id="4be9-648e-638f-3c62" hidden="false" sortIndex="3">
-          <entryLinks>
-            <entryLink import="true" name="Supreme Blessing" hidden="false" id="01ea-d172-1705-618f" type="selectionEntry" targetId="856b-ba44-04c5-fdf5"/>
-            <entryLink import="true" name="Chewa" hidden="false" id="b1d7-b973-c226-bdd0" type="selectionEntry" targetId="f5cc-8e5a-445d-bc09"/>
-          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <infoLinks>
+        <infoLink name="Arise and be Healed!" id="42a7-d05e-becc-b974" hidden="true" type="profile" targetId="8cee-fa0e-2238-359e">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7dda-8f8f-2120-65de" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Yeoman" hidden="false" id="f2c3-86d1-5924-093f">
       <profiles>
@@ -4255,8 +4276,8 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="greaterThan" value="1000" field="limit::8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true"/>
-                        <condition type="greaterThan" value="1000" field="8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true"/>
+                        <condition type="atLeast" value="1000" field="limit::8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true"/>
+                        <condition type="atLeast" value="1000" field="8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4292,9 +4313,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <profile name="Menaulatoi" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d159-b6be-960c-3985">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Up to four Yeomen in a Byzantine war­band may be made a member of the Menaulatoi, the first line to welcome advancing enemy. This costs +5 ducats per model and can be done after the model has been recruited. These models gain +1 DICE to their ranged attack ACTIONS when fight­ing within 4&quot; of another Menaulatoi. This does not apply to GRENADE weapons.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4380,18 +4401,18 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Aim" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9abe-b135-9901-68d4">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Sniper Priest may take a RISKY ACTION to aim. If successful then the Priest may add +2 DICE to any Ranged attack rolls during this same Activation.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: A Sniper Priest can take an Aim ACTION. If they do so, take a Risky Success Roll for the model and add +2 DICE to the roll. If the roll is a Failure, nothing happens and the Sniper Priest’s Activation ends. If the roll is a Success or Critical Success, for the rest of the Activation, add +2 DICE to the Success Rolls for Ranged Attacks that are made by the Sniper Priest.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
         <profile name="Absolute Faith" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="100a-86b4-5508-6fd3">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Sniper Priests do not use their eyesight to aim at their enemies. The opponent cannot apply any BLOOD MARKERs when they use a Ranged weapon. They still suffer penalties for Range and Cover as standard.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Sniper Priests do not use their eyesight to aim at their enemies. The opposing player cannot spend BLOOD MARKERS to add -DICE to a Ranged Attack by a Sniper Priest.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4525,10 +4546,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Shock Charge" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c258-3050-2e8f-c05a">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When a Shocktrooper charges, roll 2D6 instead of 1D6 and then add the highest of the two dice to their charge move.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When you roll the Charge Bonus for a Shock Trooper, roll 1 extra D6 and use the single highest die to determine the bonus.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="append" value="This ability does not function if the model is equipped with a 2-handed axe and a shield." field="4834-43a9-1c93-9062">
@@ -4540,10 +4561,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Assault Drill" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="767a-8a41-50ae-1621">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Shocktroopers ignore the effects of Keyword HEAVY on Melee weapons. The Shocktrooper can still only carry a single HEAVY item, unless they are STRONG.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">You can ignore the Effect of the HEAVY Keyword for 1 Melee Weapon that a Shock Trooper has. A Shock Trooper still cannot have more than 1 Weapon (of any type) with the HEAVY Keyword.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -4561,9 +4582,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <profile name="Axe Mastery" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="true" id="1d6a-335b-09ab-0d3a">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">Varangian Guards ignore the keyword HEAVY on all axes, and treat two-handed axes as having the Shield Combo indicator. These fierce warriors often lead their charges with a wild swing, before smashing into their opponents for a bloody brawl. On a successful charge, they may immediately make a melee attack with one equipped axe. This is in addition to any other attacks.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -4576,9 +4597,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <profile name="Shield Bash" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="true" id="c2f7-dd44-cc90-5d72">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">Varangian Guards may use any Shield as an off-hand weapon with -1 DICE to injury. It functions otherwise like a Trench Club.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -4722,8 +4743,8 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <profile name="Engineer" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="7b50-3c72-1794-64bb">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
-            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 Dice</characteristic>
-            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">0</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+0 Dice</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 Dice</characteristic>
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-2</characteristic>
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
           </characteristics>
@@ -4781,28 +4802,36 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="De-mine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2aa0-f08e-8ff5-a137">
+        <profile name="Defuse Mine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2aa0-f08e-8ff5-a137">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a RISKY ACTION the Engineer can disable any mine or trapped terrain they move in contact with. If they fail, the mine blows up as described in applicable rules.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When you move a Combat Engineer into contact with a terrain piece that has been mined, you can say the Combat Engineer will try to defuse the mine before it detonates. If you do so, take a Risky Success Roll for the model. If the roll is a Failure the mine detonates and the Combat Engineer’s Activation ends. If the roll is a Success or a Critical Success, the mine does not detonate, and the terrain piece is no longer considered mined.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
         <profile name="Battlefield Demolition" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f039-f03d-2c1c-4d58">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Engineer ignores HEAVY rules for Satchel Charges.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">You can ignore the Effect of the HEAVY Keyword for 1 Satchel Charge that a Combat Engineer has. A Combat Engineer still cannot have more than 1 Weapon (of any type) with the HEAVY Keyword.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
         <profile name="Fortify" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2b71-61c6-9534-4129">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">During their Activation, an Engineer can take a RISKY ACTION with +1 DICE. If successful, the engineer is considered to be in Cover until the model moves. This ACTION cannot be used if the model is in Melee combat.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: A Combat Engineer can take a Fortify ACTION. If they do so, take a Risky Success Roll for the Combat Engineer. If the roll is a Failure, the Combat Engineer’s Activation ends. If the roll is a Success or a Critical Success, the Combat Engineer has the COVER Keyword until they move away from their current position.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Engineer Body Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7c61-1bc1-44c7-6c9f">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Ballistic Box Armour: Add -1 INJURY DICE to Injury Rolls for a model that has Engineer Body Armour that has been hit by an attack with the SHRAPNEL Keyword.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-2 INJURY MODIFIER, NEGATE SHRAPNEL</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4819,30 +4848,12 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="bd43-ddb1-262d-4489" id="2569-d7f4-df35-9c42" primary="true" name="Troop"/>
       </categoryLinks>
       <costs>
-        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="75"/>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="80"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <constraints>
         <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="daa3-c5e8-36e2-48c5" includeChildSelections="true"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Engineer Body Armour" hidden="false" id="7219-dd08-6feb-be36">
-          <profiles>
-            <profile name="Engineer Body Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="aa07-e476-68a0-fcf6">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Grants a -2 modifier to injury rolls made against the Combat Engineer (this is included in the Combat Engineer’s profile). All weapons with keyword SHRAPNEL suffer -1 DICE on all injury rolls against the Combat Engineer and SHRAPNEL attacks do not cause extra BLOOD MARKERS on a model wearing this suit. The effects relating to SHRAPNEL work even against attacks that ignore armour</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cddc-481e-e9a6-4948-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cddc-481e-e9a6-4948-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Upgrades" id="98ce-071a-d3dd-cec5" hidden="false" sortIndex="4">
           <entryLinks>
@@ -4864,8 +4875,8 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <profile name="Combat Medic" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="be61-1a63-4154-9a20">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
-            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">0</characteristic>
-            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">0</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+0 Dice</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+0 Dice</characteristic>
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-1</characteristic>
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
           </characteristics>
@@ -4912,14 +4923,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="bd43-ddb1-262d-4489" id="307c-b324-c6fb-299f" primary="true" name="Troop"/>
       </categoryLinks>
       <costs>
-        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="65"/>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="40"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="697d-8353-cd4d-2999" includeChildSelections="true"/>
       </constraints>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Upgrades" id="f89b-b5e2-83d1-1aa9" hidden="false" sortIndex="4">
+        <selectionEntryGroup name="Upgrades" id="f89b-b5e2-83d1-1aa9" hidden="false" sortIndex="3">
           <entryLinks>
             <entryLink import="true" name="Supreme Blessing" hidden="false" id="5de5-4df3-caed-168a" type="selectionEntry" targetId="856b-ba44-04c5-fdf5"/>
             <entryLink import="true" name="Swiss Guard" hidden="false" id="c6c6-01de-71ee-390b" type="selectionEntry" targetId="c35e-c172-3e6b-1bda"/>
@@ -4942,12 +4953,16 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Advancement" hidden="true" id="7d3d-35f5-4699-7992" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="080a-b497-4884-9ce9" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="d7e4-6880-ad30-6188" type="selectionEntryGroup" targetId="ef6c-46c2-70ec-568e" sortIndex="2"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="fd08-e7ae-4e24-64a0" type="selectionEntryGroup" targetId="24ae-224b-0680-a9bd" sortIndex="4"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="457f-fccc-fc6b-e84f" type="selectionEntryGroup" targetId="9c37-58de-3fa2-bfd2" sortIndex="5"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="57ca-da8b-63d4-2519" type="selectionEntryGroup" targetId="d5c6-bf28-709b-7286" sortIndex="6"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Gas Mask" id="4ef0-fbb6-c122-d867" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
         <infoLink name="Medi-kit" id="407e-439b-9d0f-2f25" hidden="false" type="profile" targetId="aa88-1987-505a-13ca"/>
         <infoLink name="Misericordia" id="cf17-57f2-1e96-18a9" hidden="false" type="profile" targetId="d82e-4c7b-28ac-1413"/>
         <infoLink name="Standard Armour" id="666b-5569-609b-1cf6" hidden="false" type="profile" targetId="6fa6-650d-4136-bc70"/>
+        <infoLink name="Standard Armour" id="e64b-a068-028a-3834" hidden="false" type="profile" targetId="6fa6-650d-4136-bc70"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Mechanized Heavy Infantry" hidden="false" id="3133-240a-a0cc-9cb4">
@@ -5087,7 +5102,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 Dice</characteristic>
             <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+0 Dice</characteristic>
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-2</characteristic>
-            <characteristic name="Base" typeId="73ae-cc17-596e-0481">32/40mm</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">40mm</characteristic>
           </characteristics>
           <modifierGroups>
             <modifierGroup type="and">
@@ -5319,21 +5334,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <profiles>
                 <profile name="Vatican’s Representative" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fdac-9fd9-f409-f0ed">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Any Trench Cleric in the Papal Intervention Force can select the following prayer instead to the ones usually available to a Trench Cleric:
-
-
-○ Arise and be Healed! Select one friendly model within 3” of the Priest and take a RISKY ACTION. If successful, the warrior immediately stands up if Down, and loses up to D3 BLOOD MARKERS or INFECTION MARKERS (or any combination) of your choice.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Papal States Warband must include a Trench Cleric but does not have to include a Lieutenant.. Any Trench Cleric in the Papal Intervention Force gains the Arise and be Healed! Ability.
+</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
                 <profile name="Swiss Guard" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="867a-dbfe-62da-2e28">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Up to 4 non-Elite troopers and the Lieutenant can be upgraded into Swiss Guards at the cost of 5 Ducats per model. They are immune to FEAR.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Up to 4 non-Elite troopers and the Lieutenant can be upgraded into Swiss Guards at no additional cost. They gain NEGATE FEAR.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
                 <profile name="Far from Home" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ff9f-e15d-1fe7-38d0">
@@ -5347,27 +5360,25 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <profile name="Supreme Blessing" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f293-f1e8-ec8b-f9a1">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">One model in the warband may carry the crucifix given by the Supreme Pontiff. This model can take further ACTIONS if it fails in an attempted RISKY ACTION. Note that the action fails, but you are allowed to try any other ACTIONS on your profile without losing the Activation. If the crucifix is lost, a new one can be acquired at the cost of 3 Glory Points.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
                 <profile name="Specialist Force" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c685-8b3d-a397-d5ff">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Papal States Intervention Force is recruited with 500 ducats and 11 Glory Points when creating a warband for a campaign. When recruiting a warband for a one-off battle, we recommend using 700 ducats and 15 Glory Points.
-
-(Note- Cost Limits can be adjusted via List Options -&gt; List Configuration)</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">You have 500 Ducats and 11 Glory Points to recruit a Papal States Intervention Force Warband for a campaign. A Papal States Intervention Force gains 4 ☼ each time it calls for Reinforcements.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
                 <profile name="Vatican’s Representative" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2b19-425d-8bf3-5675">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Papal States Warband must include a Trench Cleric but does not have to include a Lieutenant.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062"/>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5382,10 +5393,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <profiles>
                 <profile name="Berserker" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="98a6-cd84-26a9-cfce">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Either your Lieutenant or one of the Fianna can be a Berserker. This model is immune to FEAR and disregards any BLOOD MARKERS from any source. Berserkers never wear armour, though they can carry a Trench Shield. Add +15 Ducats to the cost of this model</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">he Lieutenant or one of the Fianna in an Éire Rangers Warband can be upgraded to a Berserker for +15 Ducats. A Berserker cannot have Armour (they can have Shields). In addition, a Berserker has the NEGATE FEAR Keyword, and BLOOD MARKERS are never placed on them under any circumstances</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
                 <profile name="Followers of St. Patrick" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="369e-cfea-3774-2a65">
@@ -5398,18 +5409,18 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 </profile>
                 <profile name="Carnyx" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ea0b-8b94-35f8-318a">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your army can purchase a special Carnyx instead of a generic musical instrument. This horn is identical to a musical instrument (including equipment restrictions and LIMIT), except it can be carried by an ELITE model and the model carrying it causes FEAR.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">One Musical Instrument in an Éire Rangers Warband can have the FEAR Keyword at no additional cost in Ducats.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
                 <profile name="Hit-and-run Tactics" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4045-4821-7c11-647a">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a model of this warband uses the Retreat ACTION to move away from Combat, enemies have a -1 DICE penalty to hit rolls with their free attack.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 DICE to the roll for a Melee Attack that targets a model from an Éire Rangers Warband that is making a Retreat.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
                 <profile name="Loose Organization" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9d1b-0e96-253c-6925">
@@ -5442,6 +5453,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                  </characteristics>
+                </profile>
+                <profile name="Anointed Ammunition" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9775-82ab-5461-70ed">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Models in an Eire Ranger Warband can have Armour- Piercing Bullets (▶ see Battlekit in the Trench Crusade Digital Rulebook) at a cost of 5 Ducats each. The Armour-Piercing Bullets have the Limit: 2 stipulation.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5524,6 +5543,118 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                   </characteristics>
                 </profile>
               </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Cold Steel Discounts" id="d418-1e1d-5d40-dad6" hidden="false">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Trench Club" hidden="false" id="8d4a-e616-1f4e-524a" sortIndex="2">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="-1"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="36a8-00d0-387a-551c" includeChildSelections="true"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="ef4f-253f-f25f-49bb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Sword/Axe" hidden="false" id="dd7c-21c0-4749-e9bc" sortIndex="3">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="-2"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3e88-5f2a-9a5b-20ab" includeChildSelections="true"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="1773-d8e5-0ff7-65b8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Great Hammer/Maul" hidden="false" id="0e55-3724-194f-d0c5" sortIndex="4">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="-5"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="73d9-d03d-fecd-9dc9" includeChildSelections="true"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="37a4-91c9-df9a-c5bd" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Great Sword/Axe" hidden="false" id="fe0b-da80-9525-9dac" sortIndex="5">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="-3"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e065-a107-9024-cebb" includeChildSelections="true"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="db8d-f0cf-9959-273f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Lochaber Axe" hidden="false" id="f7a6-3a6d-f522-ca96" sortIndex="6">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="-10"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="25b3-3772-eb1e-686f" includeChildSelections="true"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="adba-b7f8-83fd-a35c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Polearm" hidden="false" id="b2b8-a524-c382-4d55" sortIndex="7">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="-3"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="263d-7922-8bc6-cb4b" includeChildSelections="true"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="d4fe-0dd0-bcf9-6f6e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <profiles>
+                    <profile name="Cold Steel Discounts" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="91a5-be1f-3604-05ee">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">For each melee weapon in your Warband, you may mark it as the first one you&apos;ve purchased here. Unmark it once it&apos;s been lost.</characteristic>
+                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Stoßtruppen of the Free State of Prussia" hidden="false" id="440a-e3aa-60d7-7d9c">
               <profiles>

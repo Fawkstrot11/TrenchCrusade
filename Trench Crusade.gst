@@ -155,10 +155,7 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
       <description>Ignore -INJURY DICE and -INJURY MODIFIERS for a target’s Armour Characteristic, and for any Armour or Shield pieces of Battlekit that it has, for attacks that have this Keyword.</description>
     </rule>
     <rule name="Ignore [Modifier]" id="fd2f-4a14-7db4-8ec9" hidden="false">
-      <description>Ignore the Success Roll or Injury Roll modifier
-that is specified. For example, the Success Roll for an attack made with a Ranged
-Weapon that had the IGNORE COVER Keyword would not be affected by the
--1 DICE modifier for a target that is in Cover.</description>
+      <description>Ignore the Success Roll or Injury Roll modifier that is specified. For example, the Success Roll for an attack made with a Ranged Weapon that had the IGNORE COVER Keyword would not be affected by the -1 DICE modifier for a target that is in Cover.</description>
     </rule>
     <rule name="Impervious" id="00a9-ddfe-2a2b-078d" hidden="false">
       <description>The IGNORE ARMOUR Effect does not affect any -INJURY DICE and -INJURY MODIFIERS that apply to Battlekit that has this Keyword. The IGNORE ARMOUR Keyword affects any other Battlekit a target model has normally</description>
@@ -532,13 +529,13 @@ They do not count towards the maximum melee weapons a model can carry.</characte
     </profile>
     <profile name="Machine Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2558-23f8-cfa8-40f4" publicationId="c658-4a10-e1fe-befc" page="117">
       <characteristics>
-        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Grants a -3 modifier to all injury rolls against the model wearing this armour, and treats Down Injury results as a Minor Hit instead (note that TOUGH Keyword ability to avoid OOA with Down overrides this). Due to its bulk the wearer rolls D3 for a charge extra distance instead of D6. Machine armour cannot be combined with any shield. Models wearing Machine Armour may have Base size of 40mm if you wish unless the model wearing it already is on 50mm or bigger base.
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Bulky: A model that has Machine Armour cannot be equipped with a Trench Shield and has a Charge Bonus of D3&quot; instead of D6&quot;.
 
 
-If worn by a model that is not part of New Antioch force/subfaction, the only bonus the armour gives is the -3 Injury modifier, as the chemical treatment that allows the wearer to withstand the rigors of the armour is a carefully guarded military secret. D3 charge distance remains in force.</characteristic>
-        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+Standfast: When a model that has Machine Armour suffers a Down result on the Injury table, it is treated as a Minor Wound result instead.</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-3 INJURY MODIFIER</characteristic>
       </characteristics>
     </profile>
     <profile name="Standard Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6fa6-650d-4136-bc70" publicationId="c658-4a10-e1fe-befc" page="117">
@@ -743,7 +740,7 @@ Tear It Down!: Models can attack a Field Shrine as if it were an enemy model. I
     <profile name="Musical Instrument" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dd0c-c62d-46f1-64f8" publicationId="c658-4a10-e1fe-befc" page="120">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Fanfare: Add +1 DICE to Risky Success Rolls for friendly models that are taking a Dash ACTION and are within 4&quot; of one or more models with a Musical Instrument.</characteristic>
-        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">4&quot;</characteristic>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD</characteristic>
       </characteristics>
@@ -1102,11 +1099,8 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">If the Witchburner hits an enemy with the Gavel of Justice, the target of the attack automatically sustains Divine Judgement as explained in the Witchburner’s Abilities, even if the attack did no damage otherwise. This does not count as the Witchburner having used the Divine Judgement ACTION. Thus the Witchburner can potentially cause multiple Divine Judgements during a single Activation.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Wrath of God: After making the Injury Roll for a Gavel of Justice, place 1 extra BLOOD MARKER next to the target model (even if the Injury Roll has No Effect). If the target has the BLACK GRAIL, DEMONIC, or HERETIC Keyword, place 2 BLOOD MARKERS next to it instead of 1.</characteristic>
       </characteristics>
     </profile>
     <profile name="Gas Grenade Launcher" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="fb1b-45a3-5dd0-bba1" publicationId="c658-4a10-e1fe-befc" page="27">
@@ -1119,10 +1113,10 @@ with a Tormentor Chain.</characteristic>
     </profile>
     <profile name="Heavy Ballistic Shield" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="adc0-8995-657b-8d4b">
       <characteristics>
-        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Takes always one hand to use in both melee and in ranged combat and cannot be switched out. The target is always considered to be in Cover, and count as fighting behind a defended obstacle when an enemy charges them. These bonuses cannot be combined with Polearms, shovels, cover or defended obstacles.</characteristic>
-        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">-</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Shield</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">COVER, HELD</characteristic>
       </characteristics>
     </profile>
     <profile name="Dum-Dum Bullets" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b51b-0a4a-8aa8-e5ae">

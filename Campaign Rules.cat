@@ -3155,7 +3155,7 @@ The saint guides your troops before each battle. The model with the skull gains 
               <profiles>
                 <profile name="Janissary Training" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="58eb-63ed-23a8-24d9">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062"> If the first ACTION a model with this Skill makes during their Activation is a Charge, add +1 DICE to Melee Attacks made by the model for the rest of the Activation. Additionally, a model with this Skill has the IGNORE OFF-HAND WEAPON Keyword.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the first ACTION a model with this Skill makes during their Activation is a Charge, add +1 DICE to Melee Attacks made by the model for the rest of the Activation. Additionally, a model with this Skill has the IGNORE OFF-HAND WEAPON Keyword.</characteristic>
                     <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
                     <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
                     <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
@@ -4826,7 +4826,7 @@ Note that if the original attack was a Critical Success, the Injury Roll modifie
           <profiles>
             <profile name="Battlefield Title" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="06c4-5a96-4182-9c79">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062"> Privileged Access: Pick 1 Weapon or suit of Armour from your Armoury Tables that has the Limit special rule. Note on your Warband Roster that the Limit is increased by 1. The increase will remain in place even if the model that has the Battlefield Title is removed from your Roster later during the campaign. You are encouraged to come up with a special title for the Weapon or Armour that you have gained access to.</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Privileged Access: Pick 1 Weapon or suit of Armour from your Armoury Tables that has the Limit special rule. Note on your Warband Roster that the Limit is increased by 1. The increase will remain in place even if the model that has the Battlefield Title is removed from your Roster later during the campaign. You are encouraged to come up with a special title for the Weapon or Armour that you have gained access to.</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
@@ -5350,10 +5350,10 @@ Unstoppable Object: If a model that has been hit by a Sultanate Grand Cannon is
           <profiles>
             <profile name="Angelic Instrument" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5a63-5df8-de11-0039">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Any friendly models within 8” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Musical Instruments take one hand to use at all times as if it were a weapon.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Fanfare: Add +1 DICE to Risky Success Rolls for friendly models that are taking a Dash ACTION and are within 8&quot; of one or more models with a Musical Instrument.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">8&quot;</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD</characteristic>
               </characteristics>
               <modifiers>
                 <modifier type="set" value="Angelic Bagpipes" field="name">
@@ -5366,12 +5366,12 @@ Unstoppable Object: If a model that has been hit by a Sultanate Grand Cannon is
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" value="Any friendly models within 8” of the musician are immune to fear, and those who are not Down can add +1 DICE to their Dash ACTIONS. Bagpipes take one hand to use at all times as if it were a weapon." field="4834-43a9-1c93-9062">
+                <modifier type="set" value="Highland Fanfare: Add +1 DICE to Risky Success Rolls for friendly models that are taking a Dash ACTION and are within 8&quot; of one or more models with a Musical Instrument. Also, units within 8&quot; gain NEGATE FEAR." field="4834-43a9-1c93-9062">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" value="This model causes FEAR. Any friendly models within 8” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Carnyces take one hand to use at all times as if it were a weapon." field="4834-43a9-1c93-9062">
+                <modifier type="append" value="FEAR" field="5093-5528-b08f-1496" join=", ">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -5394,9 +5394,9 @@ Unstoppable Object: If a model that has been hit by a Sultanate Grand Cannon is
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">Having consumed the Fruit from the Tree of Knowledge of Good and Evil, this unit gains the Demonic keyword, and may select an additional skill from those available to it
 (note: non-Elites are assumed to have no skills available).</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Dietary Supplement</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5412,16 +5412,16 @@ Unstoppable Object: If a model that has been hit by a Sultanate Grand Cannon is
           <profiles>
             <profile name="Golgotha Tekites" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a9a0-cd15-f240-4c56">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model&apos;s armour is treated with the Golgotha Tekites. The armour now ignores extra BLOOD MARKERS from the Keywords GAS, FIRE and SHRAPNEL.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model&apos;s armour is treated with the Golgotha Tekites. The armour now gains NEGATE FIRE, NEGATE GAS, and NEGATE SHRAPNEL.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Special</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad18-d8c8-e4d0-78ec" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="39cf-72a6-6ffd-ebae" includeChildSelections="true"/>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="39cf-72a6-6ffd-ebae" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Blasphemous Banner" hidden="true" id="ac5b-0ae8-e0cd-5fda">
@@ -5500,10 +5500,10 @@ Unstoppable Object: If a model that has been hit by a Sultanate Grand Cannon is
           <profiles>
             <profile name="Curative Fluids" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e3d8-620c-8528-159f">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">During any Reallocate Equipment phase for the rest of the campaign, your warband can use these fluids to remove one Battle Scar from any model in your warband. Once these fluids are used, they are spent and cannot be used again.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Once, in any future Quartermaster Step, you can use the Curative Fluids to remove 1 Battle Scar (but not the effects of any Trauma) from a model in your Warband.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Special</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5577,10 +5577,10 @@ Unstoppable Object: If a model that has been hit by a Sultanate Grand Cannon is
           <profiles>
             <profile name="Infused with Divine Genetics" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ae0e-37e6-f12f-ca6c">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model is activated, one INFECTION MARKER or BLOOD MARKER the model has becomes a BLESSING MARKER instead.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model is activated, before any ACTIONS, you may replace one INFECTION MARKER or BLOOD MARKER the model has with a BLESSING MARKER.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Special</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
               </characteristics>
             </profile>
           </profiles>

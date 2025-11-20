@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue library="true" id="f569-e9dd-327a-5735" name="Mercenaries" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="11" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="model" import="true" name="Combat Medic" hidden="true" id="39c2-abb6-fef0-f96e">
+    <selectionEntry type="model" import="true" name="Sister of Saint Cosmas" hidden="true" id="39c2-abb6-fef0-f96e">
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d54d-055d-bbc0-a20f" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d54d-055d-bbc0-a20f" shared="true"/>
+              </conditions>
+              <comment>impossible because I dont really wanna *delete* them</comment>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <costs>
@@ -25,18 +30,18 @@
         </profile>
         <profile name="Finish the Fallen" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0ed0-319a-6fee-c76c">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Due to their knowledge of anatomy and physiology, medics are experts at inflicting debilitating injuries and excruciating pain. Unless the target has the Keyword DEMONIC or BLACK GRAIL, add +1 DICE to any injury rolls the Medic makes in melee against opponents who are Down.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Due to their knowledge of anatomy and physiology, the Sisters are experts at inflicting debilitating injuries and excruciating pain. Add +1 DICE to Injury Rolls for Melee Attacks made by a Sister of Saint Cosmas if the target is Down and does not have the BLACK GRAIL or DEMONIC Keywords.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
         <profile name="Expert Medic" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3e7f-811a-8510-6602">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Medic adds +1 DICE whenever they use their Medi-Kit to aid friendly models.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add +2 DICE to the Risky Success Roll when a Sister of Saint Cosmas carries out a Treat ACTION with their Medi-kit.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -55,6 +60,11 @@
       <entryLinks>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="ba39-7da3-156a-30ec" type="selectionEntry" targetId="1f47-9c34-ef9b-914b"/>
       </entryLinks>
+      <rules>
+        <rule name="Negate Fear" id="20cb-9390-aad3-4616" hidden="false">
+          <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Observer" hidden="true" id="886c-6e17-ab87-8c9c">
       <modifiers>
@@ -77,26 +87,18 @@
         <profile name="Observer" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="05fe-9537-b2ad-0782">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">8&quot;/Infantry</characteristic>
-            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1</characteristic>
-            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+2</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 Dice</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+2 Dice</characteristic>
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-1</characteristic>
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">32mm</characteristic>
           </characteristics>
         </profile>
         <profile name="Eye of God" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9132-9fba-fcbb-0a0a">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the Observer fails an ACTION, you may re-roll the dice. However, if any of the dice you roll gives a result of 1, there is psychic backlash and the Observer suffers a Down result (including any resulting BLOOD MARKERS), and their Activation immediately ends</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-          </characteristics>
-        </profile>
-        <profile name="Faithful Followers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bf3b-d8d5-af13-492a">
-          <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a RISKY ACTION, the Observer may command any model on the board, friend or a foe, that has not been Activated this Turn. If successful, that model is compelled by the Divine Words. The Observer’s Activation immediately ends and the target’s Activation begins immediately after.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a Success Roll or Risky Success Roll for an Observer is a Failure, you can re-roll all the dice you used to make the roll. If you do so and the re-roll is also a Failure, place 1 BLOOD MARKER next to the model and mark them as being Down. If the model is already Down, place 2 BLOOD MARKERS next to the model instead of 1.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
         <profile name="Oculus Helm" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fec0-1360-af63-dd6c">
@@ -109,24 +111,32 @@
         </profile>
         <profile name="Lightning Speed" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f6de-266a-b7d9-8541">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">In Melee, the Observer may attack twice with its Trench Polearm instead of only once</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When an Observer takes a Fight ACTION, they can make 2 Melee Attacks with their Trench Polearm, one after the other.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
         <profile name="Temporal Fugue" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="786d-5f14-e565-4d81">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Attacks that target the Observer suffer -1 DICE to hit.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 DICE to rolls for Ranged Attacks and Melee Attacks that target an Observer.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Voice of God" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1451-4bc1-113a-a100">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: An Observer can take a Voice of God ACTION. If they do so, take a Risky Success Roll for the Observer. If the roll is a Failure, the Observer’s Activation ends. If the roll is a Success or Critical Success, pick 1 model (friend or foe), anywhere on the battlefield, that has not been Activated this Turn. The Observer’s Activation then ends, and the other model’s Activation immediately begins.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Medi-kit" id="d110-b1e1-e577-c51b" hidden="false" type="profile" targetId="aa88-1987-505a-13ca"/>
-        <infoLink name="Trench Polearm" id="f2d3-4765-e297-a5f6" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
+        <infoLink name="Polearm" id="f2d3-4765-e297-a5f6" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
         <infoLink name="Standard Armour" id="be16-e96e-e2c5-788d" hidden="false" type="profile" targetId="6fa6-650d-4136-bc70"/>
       </infoLinks>
       <constraints>
@@ -175,18 +185,10 @@
         </profile>
         <profile name="Miracle of Regeneration" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e067-a1da-7b23-212e">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the Start of the Activation a Communicant may remove one BLOOD MARKER from themselves if they have any</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-          </characteristics>
-        </profile>
-        <profile name="Iron Flesh" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1c64-73ae-7ad3-4bc5">
-          <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">With flesh is hard as iron, Communicants are considered to be wearing Standard Armour</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When you Activate a Communicant Anti-Tank Hunter, before you carry out any ACTIONS, you can remove 1 BLOOD MARKER from the model.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -211,11 +213,8 @@
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">The Communicant counts as being armed with two Trench clubs in Melee combat – its fists are deadly weapons in their own right.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">This does not count as a weapon.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -258,26 +257,18 @@
         </profile>
         <profile name="Dignified Conduct" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="52b5-6f6c-cdac-8288">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Due to the dignity of their status, the Witchburner cannot take the Dash ACTION.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-          </characteristics>
-        </profile>
-        <profile name="Ceremonial Duty" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cf7b-4e3c-a0a0-b4f7">
-          <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Witchburner has taken vows to persecute heretics with extreme prejudice. Nothing will stop this holy task. The Witchburner is immune to FEAR.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Witchburners are well aware of the dignity of their status. A Witchburner cannot take a Dash ACTION.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
         <profile name="Divine Judgement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="04ac-4944-d9ff-e192">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Witchburner can select any model in the opposing warband within 24” (even if hidden or out of sight) and bring the Judgement of Heaven upon them with a Litany of Condemnation. This is a RISKY ACTION. If successful, the model suffers one BLOOD MARKER (models with the Keyword HERETIC, BLACK GRAIL or DEMONIC suffer two BLOOD MARKERS) as it bursts into celestial flames. This holy fire even affects units that are immune to FIRE weapons.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: A Witchburner can take a Divine Judgement ACTION. If they do so, take a Risky Success Roll for the Witchburner. If the roll is a Failure, the Witchburner’s Activation ends. If the roll is a Success or a Critical Success, pick 1 enemy model within 24&quot; of the Witchburner (no Line of Sight is required) and place 1 BLOOD MARKER next to them. If the enemy model has the BLACK GRAIL, DEMONIC, or HERETIC Keyword, place 2 BLOOD MARKERS next to it instead of 1.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">24&quot;</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -285,6 +276,7 @@
         <infoLink name="Gavel of Justice" id="2036-770b-7d27-da58" hidden="false" type="profile" targetId="ddce-0973-220d-51e0"/>
         <infoLink name="Combat Helmet" id="51fb-8920-832d-b03b" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
         <infoLink name="Reinforced Armour" id="5def-a135-da3b-9f06" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
+        <infoLink name="Critical" id="7781-6954-769a-4bdd" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="baab-302a-7af9-204e" includeChildSelections="true"/>
@@ -295,6 +287,11 @@
       <entryLinks>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="ee0a-e491-f584-e14d" type="selectionEntry" targetId="1f47-9c34-ef9b-914b"/>
       </entryLinks>
+      <rules>
+        <rule name="Negate Fear" id="904d-0755-801c-5c54" hidden="false">
+          <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Goetic Warlock" hidden="true" id="1281-b425-81b2-7ed9">
       <categoryLinks>
@@ -333,26 +330,26 @@
         </profile>
         <profile name="Barbed Embrace" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fa62-4d41-74e9-b543">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enemies cannot Retreat from the Goetic Warlock. Additionally, if a model is able to move out of Melee Combat with the Warlock because of a special ability (such as the Assassin’s Dagger), they cannot.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">An enemy model within 1&quot; of a Goetic Warlock cannot take a Retreat ACTION.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
         <profile name="Goetic Portal" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="90bb-2e34-4ff6-264a">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a RISKY ACTION with +1 DICE, the Warlock can Teleport up to 6” in any direction into a free space it can see, including into melee with an enemy model. The Warlock may bring a single enemy model that is in Melee Combat with it and has a base size of 32mm or smaller. There must be suitable space for the Warlock (and a possible passenger which must end the teleport in Melee Combat with the Warlock) at its target destination or this teleport automatically fails. It may not teleport out of the battlefield. It may teleport even if it is currently Down, but remains so after the teleportation.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: A Goetic Warlock can take a Goetic Portal ACTION. If they do so, take a Risky Success Roll for the Goetic Warlock with +1 DICE. If the roll is a Failure, the Goetic Warlock’s Activation ends. If the roll is a Success or Critical Success, you can pick up the Goetic Warlock and deploy them on the battlefield anywhere within 6&quot; of the location they originally occupied (measured from the centre of its base to the centre of its base). If this is impossible for any reason, the Goetic Warlock must stay in their original position. Note that the Goetic Warlock can redeploy even if they are down or within 1&quot; of an enemy model (in which case the enemy model cannot make a Melee Attack before the Goetic Warlock is redeployed), and can deploy within 1&quot; of an enemy model. In addition, if the roll is a Success or Critical Success and the Goetic Warlock is within 1&quot; of any enemy models mounted on a 32mm base or smaller, then the Goetic Warlock can take 1 of the enemy models with them. If they do so, you must deploy the Goetic Warlock first and then deploy the enemy model within 1&quot; of the Goetic Warlock. If you cannot deploy the enemy model within 1&quot; of the Goetic Warlock, then the enemy model stays in its original position.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">6&quot;</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
         <profile name="Goetic Gaze" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6fd1-affa-e7aa-8870">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">This is an ACTION which is modified exactly the same way as a ranged attack, executed against one enemy the Warlock can see within 24”. If successful, the model suffers one BLOOD MARKER. If the success is a Critical Success, the target suffers two BLOOD MARKERS instead. This ACTION can be used against enemy models in Melee Combat without having to randomise the target.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: A Goetic Warlock can take a Goetic Gaze ACTION. If they do so, take a Success Roll for the Goetic Warlock. If the roll is a Failure, nothing happens. If the roll is a Success, place 1 BLOOD MARKER next to an enemy model within 24&quot; of the Goetic Warlock and in their Line of Sight. If the roll is a Critical Success, place 2 BLOOD MARKERS next to an enemy model within 24&quot; of the Goetic Warlock and in their Line of Sight instead of only 1.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">24&quot;</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -363,17 +360,14 @@
         <infoLink name="Critical" id="801b-cab7-9b24-ecde" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Reaping Claws" hidden="false" id="36b3-8741-24f6-75da" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Iron-Clawed Hands" hidden="false" id="36b3-8741-24f6-75da" sortIndex="3">
           <profiles>
             <profile name="Reaping Claws" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="7d25-fae7-c629-94ef">
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">The Warlock counts as being armed with two Swords in Melee combat – its arms are deadly weapons in their own right.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">This does not count as a weapon.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -453,7 +447,7 @@
         <profile name="Sin Eater" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="2d21-7af1-0770-da4c">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
-            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">N/A</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">-</characteristic>
             <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+2 Dice</characteristic>
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-2</characteristic>
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">50mm</characteristic>
@@ -461,27 +455,32 @@
         </profile>
         <profile name="Devour the Guilty" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ed55-ebca-cfc0-4fda">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a RISKY ACTION, the Sin Eater can attempt to consume a model, friend (in which case the ACTION is not RISKY and is done with +1 DICE) or foe, that is on a 40mm or smaller base and is within 1”. If successful, remove the model from the table and set aside any markers that the model has (BLOOD, INFECTION, BLESSING etc.). While it is devoured the model cannot be targeted by any attack or ability. When Activated, the devoured model may make one melee attack ACTION available to it, but the attack suffers a -3 DICE penalty when rolling to hit. A devoured model counts as being Down for all rules purposes (including Morale) and, if it is still devoured at the end of the battle, it counts as being Out of Action instead. Whenever the Sin Eater is activated, the devoured model suffers one BLOOD MARKER automatically that cannot be avoided by any means. If the devoured model suffers a BLOOD MARKER in this way when it already has six BLOOD MARKERS, it is immediately taken Out of Action and it is no longer considered devoured. If the Sin Eater is taken Out of Action, the devoured model is placed Down where the Sin Eater was. The Sin Eater can only ever have one consumed model in its belly.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-          </characteristics>
-        </profile>
-        <profile name="Vomit" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b139-6974-d4b5-7a39">
-          <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Sin Eater attempts to purge a model it has devoured as an ACTION with +4 DICE. If successful, the model’s controller places the model within 1” of the Sin Eater. If no suitable space exists, the vomit fails and the model remains devoured. The vomited model is Down. The Sin Eater can only use this ACTION if it has a model devoured.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Devour the Guilty ACTION: A Sin Eater can take a Devour the Guilty ACTION. If they do so, pick 1 model (friend or foe) that is within 1&quot;of the Sin Eater and is mounted on a base that is 40mm or smaller. If the model is an enemy, take a Risky Success Roll for the Sin Eater. If the model is friendly, take a Success Roll for the Sin Eater with +1 DICE. If the roll is a Failure, the Sin Eater’s Activation ends, if it was a Risky Success Roll, and nothing happens if it was a normal Success Roll. If the roll is a Success or a Critical Success, the model you picked is devoured, and the following rules apply to it:
+
+Place the model to one side, along with any MARKERS it may have. It is inside the Sin Eater and cannot be affected in any way or carry out any ACTIONS except as described below. While it is in the Sin Eater it is considered to be Down for the purposes of Morale Checks. A Sin Eater can only have 1 devoured model at a time.
+
+When it is Activated, it can take a Fight ACTION and must target the Sin Eater. Add -3 DICE to the roll for the Melee Attack, and do not use any of the model’s abilities or any of the special rules for its weapons.
+
+If the Sin Eater is taken Out of Action, before removing them from the battlefield, deploy the devoured model within 1&quot; of the Sin Eater and place it Down. If this is impossible, the model is taken Out of Action. In either case, the Sin Eater is then removed from the battlefield.
+
+If a devoured model is still inside a Sin Eater when the game ends, it is considered to have been taken Out of Action.
+
+Each time the Sin Eater is Activated, place 1 BLOOD MARKER next to the devoured model. As soon as a devoured model has 6 BLOOD MARKERS, it is immediately taken Out of Action and is no longer considered to be inside the Sin Eater.
+
+A Sin Eater that has a devoured model inside it can take a Purge ACTION.If it does so, take a Success Roll for the Sin Eater with +4 DICE. If the roll is a Failure, nothing happens. If the roll is a Success or Critical Success, deploy the devoured model within 1&quot; of the Sin Eater and place it Down. If this is impossible, the devoured model remains inside the Sin Eater. Once released the model can be Activated normally.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">1&quot;</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Strong" id="cc1d-bd13-0869-c708" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
         <infoLink name="Fear" id="4238-f636-6b44-5809" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
-        <infoLink name="Reinforced Armour" id="1e4b-a2a2-fdf4-7e26" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
+        <infoLink name="Combat Helmet" id="1e4b-a2a2-fdf4-7e26" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
         <infoLink name="Tough" id="32ba-93de-8904-bbe8" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
         <infoLink name="Heavy" id="3fe6-bf2c-869a-04a4" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+        <infoLink name="Reinforced Armour" id="13b9-e8cd-ffe1-446c" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Tenderizer Maul" hidden="false" id="4d1c-67e3-95cf-1169">
@@ -494,11 +493,8 @@
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1 to Injury rolls</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Due to the Maul&apos;s huge, Sin Eater may make one Melee Attack ACTION against each enemy model it is fighting in Melee.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY MODIFIER, HEAVY</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Swinging Blow: When a model armed with a Tenderiser Maul takes a Fight ACTION, instead of making only 1 Melee Attack, you can make 1 Melee Attack against each enemy model with 1&quot; of the attacking model. Resolve each Melee Attack one at a time in the order of your choice.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -506,7 +502,8 @@
             <categoryLink targetId="70c9-988d-71a7-7654" id="abc6-e99d-599d-8e08" primary="false" name="Heavy"/>
           </categoryLinks>
           <infoLinks>
-            <infoLink name="Heavy" id="3c9a-6f21-7df1-fcb1" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="+/- Injury Modifier" id="3c9a-6f21-7df1-fcb1" hidden="false" type="rule" targetId="3f79-aee7-2c3d-828f"/>
+            <infoLink name="Heavy" id="d8c8-e06a-1c3c-baa1" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -563,21 +560,23 @@
         </profile>
         <profile name="The Ammunition Sacrement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a4d6-37b4-32e3-3cde">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a RISKY ACTION, the Monk can provide a friendly model within 1” of it with one of the following benefits. The chosen benefit lasts until the end of the targeted model’s Activation this Turn.
-- Bullet of the Guided Path: Whenever this model makes an Attack with a Ranged Weapon, add +1 DICE to hit.
-- Cartridge of His Wrath: Add the Keywords SHRAPNEL and BLAST 2” to every Ranged Weapon this model is equipped with.
-- Echo of His Word: Whenever this model makes an Attack with a Ranged Weapon, add +1 to injury rolls caused by that Attack.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Ammunition Sacrament ACTION: A Mendelist Ammo Monk can take an Ammunition Sacrament ACTION. If they do so, take a Risky Success Roll for the Mendelist Ammo Monk. If the roll is a Failure, the Mendelist Ammo Monk’s Activation ends. If the roll is a Success or a Critical Success, pick 1 friendly model within 1&quot; of the Mendelist Ammo Monk and in their Line of Sight, and then pick one of the following Ammunition Sacraments. The Sacrament you pick applies to the model until the end of its next Activation.
+
+
+* Bullet of the Guided Path Sacrament: Add +1 DICE to rolls for Ranged Attacks made by the model.
+* Cartridge of his Wrath Sacrament: Add the BLAST 2&quot; and SHRAPNEL Keywords to Ranged Weapons used by the model that do not have the BLAST or FLAMETHROWER Keywords.
+* Echo of his Word Sacrament: Add +1 INJURY DICE to rolls for Ranged Attacks made by the model .</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">1&quot;</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
         <profile name="Faithful Followers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d1bd-c32a-6365-587a">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When a friendly model within 1” of the Monk is Activated, you can declare that the Monk is Activated at the same time. You may then use the Monk before taking any ACTION or movement with the model you originally Activated. This does not allow you to Activate the Monk more than once per Turn.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When you Activate a model within 1&quot; of a Mendelist Ammo Monk, you can also Activate the Mendelist Monk if they have not yet been Activated during the Turn. If you do so, the two models can take their ACTIONS in any order you wish, and you can switch between the two models freely. If the Activation of either model ends (due to a failed Risky Success Roll, for example), the other model can carry on with its Activation normally.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -594,20 +593,20 @@
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="33e1-f989-e1a3-65c7" type="selectionEntry" targetId="1f47-9c34-ef9b-914b"/>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Trench Dog" hidden="false" id="52e5-2006-85e1-a7c7">
+    <selectionEntry type="model" import="true" name="Trench Dog" hidden="true" id="52e5-2006-85e1-a7c7">
       <categoryLinks>
         <categoryLink targetId="3dfb-701d-e89c-eba2" id="5b27-2007-3a77-372d" primary="true" name="Mercenary"/>
       </categoryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
-        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="1"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <profiles>
         <profile name="Trench Dog" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="ce78-bd08-5b44-8e38">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">8&quot;/Infantry</characteristic>
-            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">N/A</characteristic>
-            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">0</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">-</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+0 Dice</characteristic>
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
           </characteristics>
@@ -628,10 +627,10 @@
         </profile>
         <profile name="Four Paws" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="eb55-7f18-ebac-da25">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Dogs may take any Dash ACTION or jump/Diving Charge ACTION with bonus +1 DICE. They cannot climb sheer surfaces.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add +1 DICE to rolls for a Trench Dog when they Climb, Jump, Fall or take a Dash ACTION.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
         <profile name="Bite" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="46b7-fdc4-77cd-5271">
@@ -651,6 +650,14 @@
               </conditions>
             </modifier>
           </modifiers>
+        </profile>
+        <profile name="Pack Loyalty" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c45a-e0c1-402d-9d28">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Trench Dog has the same Faction Keyword as the model that has it. For example, the owner of a Trench Dog had the NEW ANTIOCH Faction Keyword, then the Trench Dog will have the NEW ANTIOCH Faction Keyword too.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+          </characteristics>
         </profile>
       </profiles>
       <modifiers>
@@ -683,6 +690,16 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="b990-d914-9dce-66af" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="05f3-2ee4-36c0-8c25" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1" field="22ee-cd8f-9929-aa6b">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="05f3-2ee4-36c0-8c25" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup name="Specialization" id="eef4-f47a-3aa7-e393" hidden="false">
@@ -691,10 +708,10 @@
               <profiles>
                 <profile name="Warning Howl" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="13c9-c695-ecd5-08a5">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">No infiltrator can be placed within 12” of a Guard Dog, and you can charge any enemy within 4” of this dog even if it is out of sight without the need to take a RISKY ACTION.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">These dogs warn their masters of impending danger and fight fiercely for their company. Models cannot use the INFILTRATOR Keyword to deploy within 12&quot; of an enemy Guard Dog. In addition, you do not have to take a Risky Success Roll for a Guard Dog when it charges an enemy model it cannot see, as long as the enemy model is within 4&quot; of the Guard Dog at the start of the charge.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Guard Dog" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="381b-1e9b-e962-cb6b">
@@ -738,12 +755,20 @@
                     <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Martyrdom Device" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="be32-13c2-d0f6-8eb1">
+                <profile name="Glorious Purpose" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="be32-13c2-d0f6-8eb1">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Dog strapped with a Martyrdom Device can trigger it at any point during their Activation. This does not require an ACTION. When detonated, the explosion is treated as a BLAST 3” weapon targeting the prisoner model. Models within 1” of the dog hit by the explosion roll their injuries with +1 DICE. The dog rolls 4d6 and adds them together to determine the results of their injury roll. If the explosive goes off and the dog somehow survives the battle, you can buy them a new explosive for 1 Glory Point as normal, or simply field them without.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Trench Pilgrims often enthusiastically strap their dogs with explosives so they can partake in a glorious martyrdom operation. A Martyrdom Dog has a Martyrdom Device and can trigger it like an Ecclesiastic Prisoner.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                  </characteristics>
+                </profile>
+                <profile name="Martyrdom Dog" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9d61-da2f-aed3-1c89">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">An Ecclesiastic Prisoner with a Martyrdom Device can take a Trigger Martyrdom Device ACTION. If they do so, take a Success Roll for the model. If the roll is a Failure, nothing happens (you can take this ACTION again for the model in a future Activation). If the roll is a Success or Critical Success, the Martyrdom Device detonates and cannot be used again. When Martyrdom Device detonates, make an Injury Roll for all models within 3&quot; of the Ecclesiastic Prisoner (friend or foe, including the Ecclesiastic Prisoner). Make the Injury Roll for the Ecclesiastic Prisoner by rolling 4D6 and adding all 4 dice together, and add +1 INJURY DICE to the Injury Rolls for other models that are within 1&quot; of the Ecclesiastic Prisoner. If an Ecclesiastic Prisoner detonates their Martyrdom Device and survives the game, you must either buy them a new Martyrdom Device for 35 Ducats, or use them without one.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">3&quot;</characteristic>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -764,14 +789,6 @@
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Mercy Dog" hidden="true" id="6871-d12d-d7fc-bb03" sortIndex="3">
               <profiles>
-                <profile name="Rescue Operation" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8965-7c21-d9eb-7a0e">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Mercy dogs can also drag any model within 1” that is Down at ½ speed with them, both with normal movement or when dashing.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                  </characteristics>
-                </profile>
                 <profile name="Mercy Dog" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="1331-ddb8-fad3-81a3">
                   <characteristics>
                     <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">8&quot;/Infantry</characteristic>
@@ -783,10 +800,10 @@
                 </profile>
                 <profile name="Guardian Angel" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e280-c990-4a68-4155">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Mercy dogs carry a Medi-Kit which can be used by any friendly model on themselves within 1” of the dog</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Mercy Dogs have and can use a Medi-kit. In addition, when you move a Mercy Dog that starts the move in contact with a friendly model that is Down that is more than 1&quot; from any enemy models, it can drag the friendly model along with itself. If it does so, halve the Mercy Dog’s Movement Characteristic. A Mercy Dog cannot drag a friendly model when it retreats or charges.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -820,24 +837,25 @@
                     <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Flames of Hell" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2c34-6e74-d136-e68d">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Hellhound is immune to any attack with the Keyword FIRE.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                  </characteristics>
-                </profile>
                 <profile name="Infernal Bite" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="afc3-8575-429c-3c17">
                   <characteristics>
                     <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
                     <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                    <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
                     <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">FIRE</characteristic>
-                    <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Dogs do not suffer penalties for fighting unarmed.</characteristic>
-                    <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                    <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                    <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
                   </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="GAS" field="8cd6-8018-f2da-5ede">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0b26-15c1-cebd-0077" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
                 </profile>
               </profiles>
               <costs>
@@ -860,6 +878,11 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ee60-7b0a-3bed-63a3" includeChildSelections="true"/>
               </constraints>
+              <rules>
+                <rule name="Negate Fire" id="5e0c-0ad4-65a8-2f1c" hidden="false">
+                  <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
+                </rule>
+              </rules>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="None" hidden="false" id="24d0-3e5b-6567-9318" sortIndex="1">
               <constraints>
@@ -883,25 +906,79 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4247-15fb-28c3-b5c3" includeChildSelections="false"/>
           </constraints>
           <profiles>
-            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8f63-9723-d34e-f249">
-              <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-              </characteristics>
-            </profile>
             <profile name="Man&apos;s Best Friend" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ce55-e4a0-f88f-0df9">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model may form a fireteam with another model in your Warband.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Fireteam" id="0183-6941-c02b-05f1" hidden="false" type="rule" targetId="a3e2-4af7-ab99-e6b1"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="22ee-cd8f-9929-aa6b" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Combat Biologist" hidden="true" id="ee4b-f5d6-afa4-9e50">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="72ab-daa4-80ee-e9a5" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Combat Biologist" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="02df-b4d5-3ca5-9a2b">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+0 Dice</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 Dice</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-1</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">32mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Vivisector" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="6dbf-5d41-0a93-b558">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">BLOCK, CUMBERSOME</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Pain Amplifier: Lower the roll needed to achieve a Critical Success for a Melee Attack made by this weapon by 1 for each BLOOD MARKER next to the target by 1 (so an enemy with 1 BLOOD MARKER will suffer a Critical Success on a roll of 11+).
+
+
+Inflict Pain: If an attack made by this weapon against a target, without the ARTIFICIAL Keyword and mounted on a 40mm base or smaller is, a Critical Success, but the target is not taken Out of Action, then the target will move D3&quot; in a straight line directly away from the attacking model. It will stop if it moves into a friendly model, Impassable Terrain, a terrain piece it cannot cross without having to Climb, or immediately before it would move within 1&quot; of an enemy model other than the attacker. If the target model would finish the move more than 1&quot; from the attacking model, then the attacking model and any other models within 1&quot; of the target model can make an additional Melee Attack on it before it is moved, as if the target were carrying out a retreat move. If this causes the model to move a second time, add D3&quot; to the distance it is moved but do not attack it again.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Gas Mask" id="9fb9-3e95-838c-e5bc" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
+        <infoLink name="Gas Grenades" id="e4c6-e1d4-6c28-d26f" hidden="false" type="profile" targetId="d0af-88cd-1c52-2114"/>
+        <infoLink name="Standard Armour" id="31d3-d71b-f922-df02" hidden="false" type="profile" targetId="6fa6-650d-4136-bc70"/>
+      </infoLinks>
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="3"/>
+      </costs>
+      <rules>
+        <rule name="Negate Fear" id="946d-ed8b-6f93-df1a" hidden="false">
+          <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink targetId="3dfb-701d-e89c-eba2" id="d601-3ebe-3e1b-4d32" primary="true" name="Mercenary"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="afe6-45e9-ff41-16df" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -937,47 +1014,36 @@
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Sworn Sword" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ccc4-bcd4-9e37-39db">
+        <profile name="Sworn Brethren" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ccc4-bcd4-9e37-39db">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Mamluks can form a FIRETEAM with any one ELITE model in the Warband they are part of. This FIRETEAM is always in addition to any other FIRETEAM(s) the Warband is allowed to form. If a Mamluk joins a New Antioch FIRETEAM, the model benefits from the Co-ordinated Fireteam special rules.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When you recruit a Mamluk Faris to your Warband, before adding it to your roster, you can say it will form a FIRETEAM with 1 other model from your Warband that has the ELITE Keyword. Both of the models gain the FIRETEAM Keyword. Note that the Mamluk Faris’s FIRETEAM is in addition to any other FIRETEAMS your Warband can have, and that if a Mamluk Faris is in a FIRETEAM with a model from a New Antioch Warband, then only the model from the New Antioch Warband can use the Concentrated Fire special rule.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
-          <modifiers>
-            <modifier type="set" value="Mamluks can form a FIRETEAM with any one ELITE model in the Warband they are part of. This FIRETEAM is always in addition to any other FIRETEAM(s) the Warband is allowed to form. If a Mamluk joins a New Antioch FIRETEAM, the model benefits from the Co-ordinated Fireteam special rules.
-(Note: for legibility&apos;s sake, this feature has been phased out from the base Mamluk: the ability to promote the Sipahi makes it far too cluttered. Please simply add the ELITE ally separately to your roster.)" field="4834-43a9-1c93-9062">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="self" childId="3be1-c0c4-cbaf-8665" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </profile>
         <profile name="Martial Prowess" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8651-f216-a441-3fe2">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Mamluks are disciples of Furūsiyya, the Knightly Discipline passed on through generations, they practice ceaselessly and have few equals. This gives their Jezzails the Keyword ASSAULT as well as the Shield Combo ability. Additionally, they suffer no penalties for fighting with off-hand weapons in melee.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Mamluks are disciples of furūsiyya, the knightly discipline passed on through generations, they practice ceaselessly and thus have few equals. The Mamluk’s Greatsword does not have the HEAVY Keyword, and the Jezzail carried by a Mamluk Faris has the ASSAULT Keyword and Shield Combo stipulation.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
-        <profile name="Arabian Destrier" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f1be-e3f3-a572-d391">
+        <profile name="Automaton Destrier" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f1be-e3f3-a572-d391">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Unless the scenario prohibits use of the special deployment of INFILTRATORS, you may deploy the Mamluk on any table edge as long as they are at least 8” away from any enemy model after INFILTRATORS are deployed. Mamluks can also be deployed in your own deployment zone as standard.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the scenario you are playing allows Infiltrators to use their special deployment rules, after any Infiltrators have deployed, you can deploy the Mamluk Faris within 1&quot; of any edge of the battlefield and more than 8&quot; away from any enemy models.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
         </profile>
         <profile name="Alchemical Jezzail" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="9353-c8d6-219d-55ef">
           <characteristics>
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
             <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">18&quot;</characteristic>
-            <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Hit</characteristic>
-            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
-            <characteristic name="Rules" typeId="6e95-3480-ad33-b345">-</characteristic>
-            <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-            <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, ASSAULT</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="increment" value="6" field="31a7-b5e8-41dc-5fd1">
@@ -996,7 +1062,7 @@
       <infoLinks>
         <infoLink name="Combat Helmet" id="c9d1-d419-4d29-6a14" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
         <infoLink name="Reinforced Armour" id="f5a6-8bb6-17f6-6bd9" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
-        <infoLink name="Assault" id="5e7c-5eb3-c80c-4697" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+        <infoLink name="Assault" id="1bda-88b2-6487-98c8" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mercenary" hidden="false" id="30d6-409c-e273-7875" targetId="3dfb-701d-e89c-eba2" primary="true"/>
@@ -1006,9 +1072,10 @@
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Polearm and Shield" hidden="false" id="68d9-a653-9765-d3e7">
               <infoLinks>
-                <infoLink name="Trench Shield" id="1924-1c4c-bd2c-1d81" hidden="false" type="profile" targetId="c2a5-72b6-355d-0356"/>
-                <infoLink name="Trench Polearm" id="97e6-2ef3-a6ad-3afa" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
-                <infoLink name="Cumbersome" id="6896-cd7b-5d97-a526" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+                <infoLink name="Shield" id="1924-1c4c-bd2c-1d81" hidden="false" type="profile" targetId="c2a5-72b6-355d-0356"/>
+                <infoLink name="Polearm" id="97e6-2ef3-a6ad-3afa" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
+                <infoLink name="Block" id="6896-cd7b-5d97-a526" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
+                <infoLink name="Cumbersome" id="fedc-7391-4577-dc70" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -1030,23 +1097,11 @@
                     </modifier>
                   </modifiers>
                 </infoLink>
-                <infoLink name="Critical" id="13a7-a63a-23af-597c" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+                <infoLink name="Pistol" id="13a7-a63a-23af-597c" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
+                <infoLink name="Critical" id="6526-1f6e-5512-f0e0" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
               </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Greatsword" hidden="false" id="71c7-f896-d812-77c5">
-              <profiles>
-                <profile name="Greatsword" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="57d4-f177-0000-8350">
-                  <characteristics>
-                    <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
-                    <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                    <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Injuries</characteristic>
-                    <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, CRITICAL</characteristic>
-                    <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Mamluk ignores the Keyword HEAVY on this weapon</characteristic>
-                    <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                    <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
-                  </characteristics>
-                </profile>
-              </profiles>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
@@ -1056,20 +1111,10 @@
               </modifiers>
               <infoLinks>
                 <infoLink name="Heavy" id="3be2-611d-3899-ad85" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
-                <infoLink name="Critical" id="459a-cca0-4ed6-7ae0" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+                <infoLink name="+/- Injury Dice" id="459a-cca0-4ed6-7ae0" hidden="false" type="rule" targetId="9880-1ec6-9767-4698"/>
+                <infoLink name="Great Sword/Axe" id="0160-b718-7fb2-733d" hidden="false" type="profile" targetId="2257-4155-dd7d-8641"/>
+                <infoLink name="Critical" id="4185-bb47-b83b-196b" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
               </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Just a Shield..." hidden="true" id="0942-d113-d5c5-47b5">
-              <infoLinks>
-                <infoLink name="Trench Shield" id="6351-e6d7-3276-03ec" hidden="false" type="profile" targetId="c2a5-72b6-355d-0356"/>
-              </infoLinks>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model" childId="6ffb-5ac2-a05a-8c44" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -1077,6 +1122,11 @@
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <rules>
+        <rule name="Ignore Off-Hand Weapon" id="4ff4-2c64-afd9-6f4f" hidden="false">
+          <description>Ignore the Success Roll or Injury Roll modifier that is specified. For example, the Success Roll for an attack made with a Ranged Weapon that had the IGNORE COVER Keyword would not be affected by the -1 DICE modifier for a target that is in Cover.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Scripture Guardian" hidden="false" id="08cc-f1b9-e991-e191">
       <categoryLinks>
@@ -1143,20 +1193,12 @@
             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
           </characteristics>
         </profile>
-        <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b40e-b8e0-dad4-32cb">
-          <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models that are part of the same FIRETEAM can be activated at the same time without the opponent getting their turn in between and can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the FIRETEAM forcefully ends (due to a failed RISKY ACTION for example), it ends both Activations.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-          </characteristics>
-        </profile>
         <profile name="Concerted Attack" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="true" id="d455-9d26-0f2d-3b30">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a model in the FIRETEAM makes any kind of Attack ACTION (ranged or melee) against an opponent, where the other member of their FIRETEAM has already hit it with an attack ACTION during the same activation, the cost of a Bloodbath is reduced to three BLOOD MARKERS against this opponent, whether the model is standing or Down.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a model from a Fireteam hits a target that has already been hit by an attack made by the other member of their Fireteam, then you can spend 3 BLOOD MARKERS to convert the Injury Roll for the second attack to a Bloodbath Roll, even if the target is not Down.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1182,6 +1224,28 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="model" shared="true" id="8434-a8f9-fe1c-0893" includeChildSelections="false"/>
         <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="938d-ae71-035c-aff9" includeChildSelections="true"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Fireteam" id="86e8-b620-bee3-5b60" hidden="false" type="rule" targetId="a3e2-4af7-ab99-e6b1"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dog Food" hidden="false" id="05f3-2ee4-36c0-8c25">
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="1"/>
+      </costs>
+      <profiles>
+        <profile name="Dog Food" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bd3d-9eff-a7d0-2805">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit can be deployed with a Trench Dog, found in the Mercenaries section.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8530-2dc3-75e0-1a85" includeChildSelections="true"/>
       </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
