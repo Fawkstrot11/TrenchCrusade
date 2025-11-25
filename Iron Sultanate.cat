@@ -350,6 +350,32 @@ Keywords: CONSUMABLE</characteristic>
             </modifier>
           </modifiers>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Takwin Anqā Bird" hidden="false" id="3f63-ae26-fd5d-3411" sortIndex="19">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8780-ee92-2dd8-9229" includeChildSelections="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Takwin Anqā Bird" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0888-90bb-c320-ca0f">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Cause Confusion: Success Rolls taken for Melee Attacks that target a model with a Takwin Anqā Bird become Risky Success Rolls (there is no additional effect if they are Risky Success Rolls already). In addition, before an enemy model within 1&quot; of a model with Takwin Anqā Bird makes a retreat, the opposing player must take a Risky Success Roll for the model. If the Roll is a Failure the enemy model cannot retreat and its Activation ends. If the Roll is a Success or a Critical Success, the enemy model can retreat normally.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Headgear" id="5986-4ea2-d618-1a0b" hidden="false" sortIndex="1">
@@ -417,7 +443,7 @@ Keywords: CONSUMABLE</characteristic>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Grenades" id="82ea-93a3-bf07-7dc0" hidden="false" type="profile" targetId="cc34-0630-85e1-2583"/>
+            <infoLink name="Frag Grenades" id="82ea-93a3-bf07-7dc0" hidden="false" type="profile" targetId="cc34-0630-85e1-2583"/>
             <infoLink name="Shrapnel" id="da9c-9f12-1228-4c45" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
             <infoLink name="Assault" id="bcd9-54a2-3b2d-ec5e" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Blast" id="eb40-1e15-ece7-9ceb" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
@@ -700,7 +726,7 @@ Keywords: CONSUMABLE</characteristic>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Flail" id="2d01-f2b5-57c6-2d77" hidden="false" type="profile" targetId="f469-b712-2233-ac79"/>
+            <infoLink name="Scourge" id="2d01-f2b5-57c6-2d77" hidden="false" type="profile" targetId="f469-b712-2233-ac79"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -755,7 +781,7 @@ Keywords: CONSUMABLE</characteristic>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Double-Handed Blunt Weapon" id="9095-643a-d8e7-71dc" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
+            <infoLink name="Great Blunt Weapon" id="9095-643a-d8e7-71dc" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
             <infoLink name="Heavy" id="eb79-a692-d9dc-9019" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <categoryLinks>
@@ -877,7 +903,7 @@ Keywords: CONSUMABLE</characteristic>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <infoLinks>
-                <infoLink name="Trench Polearm" id="3742-b482-701b-767b" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
+                <infoLink name="Polearm" id="3742-b482-701b-767b" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
                 <infoLink name="Cumbersome" id="101b-821e-4fe1-e198" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
               </infoLinks>
               <categoryLinks>
@@ -2107,7 +2133,7 @@ Keywords: CONSUMABLE</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f895-ac68-4424-915e" includeChildSelections="false"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Trench Shield" id="2216-0c02-cf87-573c" hidden="false" type="profile" targetId="c2a5-72b6-355d-0356"/>
+                <infoLink name="Shield" id="2216-0c02-cf87-573c" hidden="false" type="profile" targetId="c2a5-72b6-355d-0356"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -2319,6 +2345,7 @@ Keywords: CONSUMABLE</characteristic>
         <selectionEntry type="upgrade" import="true" name="Alchemist Armour" hidden="true" id="a2de-13d5-ab9c-8c93" sortIndex="3">
           <infoLinks>
             <infoLink name="Alchemist Armour" id="2501-18d0-d32d-df6d" hidden="false" type="profile" targetId="68e2-bde3-19a9-2980"/>
+            <infoLink name="Negate [Keyword]" id="174a-9ccb-3b1d-a868" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
           </infoLinks>
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
@@ -3926,10 +3953,18 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Mastery of the Elements" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="eabe-48c7-1cdc-a67d">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the beginning of a battle, all ranged and melee weapons that an Alchemist has been equipped with may be assigned one of the following Keywords: SHRAPNEL, FIRE or GAS added to them. All the weapons the Alchemist has will share the same Keyword. With a RISKY ACTION with +1 DICE, the Alchemist can change this Keyword into one of the others.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model is deployed for the first time in a game, you can give one of the following Keywords to all of the Jabirean Alchemist’s Ranged Weapons and Melee Weapons: FIRE or GAS or SHRAPNEL. All of the Weapons have the same Keyword. If the Weapon already has the Keyword, it does not receive it a second time.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+          </characteristics>
+        </profile>
+        <profile name="Elemental Change" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="07f2-5347-651a-0744">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: A Jabirean Alchemist can take an Elemental Change ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure, nothing happens and the Jabirean Alchemist’s Activation ends. If the roll is a Success or a Critical Success, you can change the Master of the Elements Keyword on all of the Jabirean Alchemist’s Weapons to one of the other two choices.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4136,20 +4171,20 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Brazen Bull" hidden="false" id="e62d-c06e-ce35-428b">
       <profiles>
-        <profile name="Artificial Body" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2767-ad8b-95f6-c084">
+        <profile name="Artificial Life" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2767-ad8b-95f6-c084">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Created through the Jabirean alchemy, the Brazen Bulls have no vital organs and they have to be hacked apart to kill them. All attacks against the Brazen Bull roll injuries with -1 DICE.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 INJURY DICE to Injury Rolls for a Brazen Bull.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Trample" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f09d-3206-6514-c294">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Once during its Activation, the Brazen Bull may make an extra Melee Attack ACTION against a Downed enemy model on a 32mm or smaller base. Resolve the attack as if the Brazen Bull was armed with a Trench Club. This attack ignores armour as the Brazen Bull stomps their enemies into a pulp.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: A Brazen Bull can take a Trample ACTION. If it does so, it can make a Melee Attack that must target an enemy model that is Down. A Trample Melee Attack does not use a Melee Weapon and has the IGNORE ARMOUR Keyword.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Brazen Bull" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="0a4b-397f-ded9-8e79">
@@ -4351,18 +4386,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Temporal Assassin" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fd33-0f29-cf19-2244">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">After the Assassin makes a Charge Roll, but before it moves toward its target, you may instead choose to have the Assassin split itself through time if it has not already taken a Melee Attack ACTION this Activation. Choose up to two enemy models within the charging distance of the Assassin. Then, place the Assassin into base contact with each enemy model, one after the other. It may make a Melee Attack against each one with a single melee weapon that it is equipped with. After the attacks (and any resulting effects) have been resolved, place the Assassin at either location. The Assassin cannot make any further melee attacks during this Activation.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">After determining the Charge Bonus for an Assassin that has not already carried out a Fight ACTION in its Activation, you can say that the Assassin will split itself through time. If you do so, choose two different enemy models that the Assassin can reach with its Charge, move the Assassin to within1&quot; of one of the enemy models you picked as normal, and then make a Melee Attack with the enemy model as the target. After resolving the Melee Attack, you can immediately redeploy the Assassin to within 1&quot; of the other model that you picked, and then make a second Melee Attack with the other enemy model as the target. The Assassin must use the same Melee Weapon for both attacks, and cannot take a Fight ACTION later in the same Activation.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Time Slip" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8f81-f60e-60f7-ea89">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If any type of attack (melee, ranged, mine etc.) misses the Assassin, they may slip into a moment in the future. The Assassin can move into any unoccupied space within 6”, though they cannot be moved within 1” of any enemy model or leave the gaming table. If moving out of melee this way, enemies do not get free attacks.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If your opponent fails their Success Roll for an attack targeting an Assassin, you can say the Assassin will slip into a moment in the future. If you do so, you can redeploy it anywhere within 6&quot; of its original location (measured from the centre of its base to the centre of its base), and more than 1&quot; away from any enemy models. Note that if the Assassin starts within 1&quot; of an enemy model, this is not treated as a Retreat, so the enemy model cannot make a Melee Attack before the
+Assassin makes the time slip.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4523,9 +4559,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <infoLink name="Strong" id="900a-9494-0743-50e7" hidden="true" type="rule" targetId="6297-d0e0-1935-5cfd">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="3fdd-747a-7297-115a" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </infoLink>
@@ -4539,18 +4580,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="1905-92a3-4759-3875-min" includeChildSelections="true"/>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1905-92a3-4759-3875-max" includeChildSelections="true"/>
       </constraints>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c2b1-d49e-937b-2f87" shared="true" includeChildSelections="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cd91-f171-98d6-423e" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
@@ -4563,7 +4592,45 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </conditions>
           <comment>Iron Wall</comment>
         </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="3fdd-747a-7297-115a" shared="true"/>
+          </conditions>
+          <comment>Janissary Training</comment>
+        </modifierGroup>
       </modifierGroups>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Janissary Veteran" hidden="false" id="3fdd-747a-7297-115a" sortIndex="2">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3298-41bc-1cf3-7dfb"/>
+          </constraints>
+          <profiles>
+            <profile name="Counter-Charge" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0561-6d7c-1c61-ecb5">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the first ACTION a Yüzbaşı makes during their Activation is a Charge, add +1 DICE to Melee Attacks made by the Yüzbaşı for the rest of the Activation.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+              </characteristics>
+            </profile>
+            <profile name="Janissary Veteran" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5686-e8b2-0fbb-39bf">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">You can make the Yüzbaşı a Janissary Veteran with the STRONG Keyword and the Janissary Counter- Charge ability at a cost of +10 ducats.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Azeb" hidden="false" id="0e7e-9167-f044-9493">
       <entryLinks>
@@ -4781,7 +4848,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">N/A</characteristic>
             <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 Dice</characteristic>
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
-            <characteristic name="Base" typeId="73ae-cc17-596e-0481">30x60/50mm</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">50mm</characteristic>
           </characteristics>
           <modifierGroups>
             <modifierGroup type="and">
@@ -4824,39 +4891,36 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Artificial Body" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c57a-8333-1d35-ae34">
+        <profile name="Artificial Life" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c57a-8333-1d35-ae34">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Created through the Jabirean alchemy, the Lions have no vital organs and they must be dismembered in order to kill them. All injury rolls against the Lion are made with -1 DICE.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 INJURY DICE to Injury Rolls for a Lion of Jabir</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
-        <profile name="Lion&apos;s Grace" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c71e-93f6-98c1-4b2c">
+        <profile name="Agile" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c71e-93f6-98c1-4b2c">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Lions of Jabir may take any Dash/Jump/Climb/Diving Charge ACTION with a +1 DICE bonus.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add +1 DICE to Risky Success Roll when a Lion of Jabir Climbs, Jumps, or makes a Diving Charge, or takes a Dash ACTION.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
-        <profile name="Mauling" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="31e8-c7ae-36d7-d76c">
+        <profile name="Pin" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="31e8-c7ae-36d7-d76c">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Downed opponent cannot stand up if it is in melee combat with a Lion of Jabir (even if the Lion is Down itself ), unless it is on a 40mm or larger base.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enemy models that are Down and that are mounted on a base of 40mm or less are not allowed to stand up if a Lion of Jabir is within 1&quot; of them (even if the Lion of Jabir is also Down).</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
-        <profile name="Ferocious Blows" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="364b-3951-419e-544e">
+        <profile name="Teeth and Claws" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="364b-3951-419e-544e">
           <characteristics>
-            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
-            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-            <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
-            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-            <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Thralls do not suffer penalties for fighting unarmed.</characteristic>
-            <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-            <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Lion of Jabir can make a Melee Attack even though it does not have any Melee Weapons.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4900,15 +4964,26 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <profiles>
             <profile name="Fierce" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1ccc-289e-d82d-c641">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">You can upgrade any Lion of Jabir into a Fierce Lion of Jabir at the cost of +5 ducats. Fierce Lions are not affected by the Keyword FEAR.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">You can upgrade any Lion of Jabir into a Fierce Lion of Jabir at the cost of +5 ducats. Fierce Lions gains the Keyword FEAR.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>Fierce Lion Fear</comment>
+          <modifiers>
+            <modifier type="add" value="4f5c-027d-253c-ffa3" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="b3f6-f405-6579-9ff9" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Mamluk Faris" hidden="false" id="95cf-1de7-a93e-b165">
       <categoryLinks>
