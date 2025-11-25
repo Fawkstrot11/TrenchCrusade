@@ -225,11 +225,10 @@
           <profiles>
             <profile name="Hashinshin Leaf" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ec64-7a03-2155-796b">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before the battle begins, a model may use this item to gain the Keyword STRONG until the end of a battle. 
-Keywords: CONSUMABLE.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">When you deploy a model with a Hashashin Leaf for the first time in a game, you can say that the model will consume the Hashashin Leaf. If you do so, the model has the STRONG Keyword for the rest of the game</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -711,11 +710,8 @@ Keywords: CONSUMABLE</characteristic>
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1 to Injury, 2 Attacks</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">A model armed with a Golden Khanjar can make two attacks instead of one in melee with one Melee Attack ACTION. This effect also applies to a Golden Khanjar wielded off-hand.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY MODIFIER</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Attack Twice: You can make 2 Melee Attacks with this Weapon, one after the other, when it is used as a Melee Weapon. Note that if you spend BLOOD MARKERS to modify the Injury Rolls for one attack, they do not modify Injury Rolls for any of the subsequent attacks.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1347,17 +1343,15 @@ Keywords: CONSUMABLE</characteristic>
           </modifiers>
           <infoLinks>
             <infoLink name="Critical" id="2315-cfde-81b6-7798" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+            <infoLink name="Ignore Armour" id="65db-14e9-b074-fabb" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <profiles>
             <profile name="Bow of Alamut" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="1bff-0694-c7a5-a7f8">
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">40&quot;</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">Ignores Armour</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">If the Assassin hits a model and causes at least one BLOOD MARKER, the Assassin may instantly place itself into Melee Combat with that model if there is a legal space that the Assassin could occupy within 1” of that model, regardless of the distance to the target or any interposing models/obstacles. The Assassin is considered to have charged that model, although it does not count as a Charge ACTION and therefore the Assassin can take the Move ACTION at a later point on this turn, if it hasn’t already. Note that if the bow takes the target Out of Action, no BLOOD MARKERS are caused and this movement cannot be made.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL, IGNORE ARMOUR</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Temporal Slipstream: If a Ranged Attack made with this Weapon causes any BLOOD MARKERS to be placed on the target model, you can immediately redeploy the attacking model within 1&quot; of the target model, regardless of the distance or any intervening obstacles. Note that if the attack takes the target Out of Action, no BLOOD MARKERS are placed and this ability cannot be used.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2406,13 +2400,10 @@ Keywords: CONSUMABLE</characteristic>
           <profiles>
             <profile name="Secret Paths" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4a5d-ed21-5b9f-231f">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the start of the battle, right before the first model is set up, declare whether or not this model will be set up by using Secret Paths. A model using the Secret Paths is not set up on the battlefield at the start of the battle and it may not be activated normally during the first turn. 
-
-
-Starting in the second turn, you may activate these models. When you do, set up the model in contact with an edge of the battlefield but more than 8” away from all enemy models at the start of its activation. If both players have such models, the starting player declares whether one of their models is deployed or not first, followed by the other player. Alternate as normal until all such models have been declared as using Secret Paths or not.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the start of the game, before deployment, you can say that this Assassin is using Secret Paths. If you do so, the Assassin is not deployed at the start of the game, and cannot be Activated in the first Turn of the game. Starting from the second Turn, you can Activate the Assassin using the Secret Paths. To do so, deploy the Assassin in contact with any edge of the battlefield and more than 8&quot; away from all enemy models. You can then carry on with the rest of its Activation normally.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2428,10 +2419,10 @@ Starting in the second turn, you may activate these models. When you do, set up
           <profiles>
             <profile name="Hallucinogen Disguise" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="72b6-02cc-db0a-7b35">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">An INFILTRATOR with this ability can be deployed anywhere on the battlefield, including the enemy Deployment Zone, as long as the model is at least 8” away from any enemy models. The model does not have to be out of Line of Sight. Binoculars or Guard Dogs have no effect on this ability.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If this Assassin is deployed using the INFILTRATOR Keyword, it must be deployed at least 8&quot; away from any enemy models but you may ignore any and all other restrictions that apply to deploying an INFILTRATOR. For example, the model can be deployed in the Line of Sight of an enemy model, enemy Guard Dogs do not affect how it is deployed, and so on.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2447,10 +2438,10 @@ Starting in the second turn, you may activate these models. When you do, set up
           <profiles>
             <profile name="Thunderbolt of Alamut" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a808-515b-bd90-4516">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The model has +2” movement and +1 DICE on its Dash ACTIONS.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add 2&quot; to this Assassin’s Movement Characteristic, and add +1 DICE to the Risky Success Roll when this Assassin takes a Dash ACTION</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2466,10 +2457,10 @@ Starting in the second turn, you may activate these models. When you do, set up
           <profiles>
             <profile name="Mirage of Time" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="58b6-00de-abd0-501c">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Both Ranged and Melee attacks against the Assassin suffer -1 DICE penalty when determining if they hit.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 DICE to the Success Roll for attacks that target this Assassin.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
