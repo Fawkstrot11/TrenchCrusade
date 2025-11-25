@@ -163,15 +163,22 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e6dd-64ff-4da4-ade1" includeChildSelections="false"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="The Price of Greed" hidden="true" id="1cb9-408c-58c2-68a9">
               <profiles>
                 <profile name="The Price of Greed" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c458-b32e-be25-c274">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Worldly wealth belonging to the target model of this curse starts crushing them under its weight. Choose any model the Priest sees within 12” and take a RISKY ACTION. If successful, roll immediately on the Injury Chart for that model and add +1 DICE to the injury roll for each -1 Armour modifier the model has (for example if the model has a Trench Shield and standard armour, add +2 DICE to the injury rolls).</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Worldly wealth becomes the target of this curse, gradually crushing its victim under its weight. A Knights of Avarice Heretic Priest can take a Price of Greed ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure, the Knights of Avarice Heretic Priest’s Activation ends immediately. If the roll is a Success or Critical Success, make an Injury Roll for an enemy model that is within 12&quot; of the model taking the Price of Greed ACTION and in its line of sight. Add +1 INJURY DICE to the roll if the Success Roll was a Critical Success, and add +1 DICE to the roll for each -1 INJURY MODIFIER that applies to the target (the -1 INJURY MODIFIER still applies). For example, if the target had Standard Armour with a -1 INJURY MODIFIER, you would add +1 INJURY DICE and a -1 INJURY MODIFIER to the roll.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -775,7 +782,7 @@
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
             <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
             <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-1 INJURY DICE, BLAST 3&quot;, GAS, IGNORES ARMOUR, IGNORE COVER, IGNORE ELEVATED POSITION, IGNORE LONG RANGE, RELOAD, SCATTER</characteristic>
-            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"> Choking Gas: If a model that has been hit by a Gas Bomb is not taken Out of Action by the Injury Roll, it staggers D3” in a straight line trying to get away from the gas cloud. Roll separately for each model to see how far it staggers. If the model was the target of the attack, it staggers in a direction chosen by the player making the attack. If the model was caught in the Blast of the weapon, it staggers directly away from the target point. The model stops if it staggers into another model, Impassable terrain, or a terrain piece it cannot cross without having to Climb.</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Choking Gas: If a model that has been hit by a Gas Bomb is not taken Out of Action by the Injury Roll, it staggers D3” in a straight line trying to get away from the gas cloud. Roll separately for each model to see how far it staggers. If the model was the target of the attack, it staggers in a direction chosen by the player making the attack. If the model was caught in the Blast of the weapon, it staggers directly away from the target point. The model stops if it staggers into another model, Impassable terrain, or a terrain piece it cannot cross without having to Climb.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2350,6 +2357,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           <categoryLinks>
             <categoryLink name="Cumbersome" hidden="false" id="f678-51a7-e3ec-eaf4" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
           </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="eb0a-d983-ed0e-f5cb" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Coin Hammer" hidden="true" id="cd7e-904f-67b2-2d24" sortIndex="4">
           <costs>
@@ -2493,7 +2503,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             </modifier>
           </modifiers>
           <constraints>
-            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="1497-b565-d05b-4b4c" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1497-b565-d05b-4b4c" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -2822,7 +2832,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <constraints>
-            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="24ef-14b4-af3f-70fe" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="24ef-14b4-af3f-70fe" includeChildSelections="true"/>
           </constraints>
           <infoLinks>
             <infoLink name="Sniper Rifle" id="aa72-0796-8527-b3c8" hidden="false" type="profile" targetId="6eb2-c600-98e7-16d3">
@@ -2863,6 +2873,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6ee8-83dc-9e8c-8d63" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Jezzail" hidden="true" id="ad74-e8b9-57f5-c0d1" sortIndex="2">
           <costs>
@@ -2886,6 +2899,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dcd9-3cc3-7122-e81a" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Siege Jezzail" hidden="true" id="7ab6-280f-5116-f532" sortIndex="8">
           <costs>
@@ -2914,6 +2930,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5fa5-603b-1896-3fc3" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="true" id="1b22-3636-d509-ff19" sortIndex="9">
           <costs>
@@ -2921,7 +2940,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <constraints>
-            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="c5ad-e5f5-762f-925e" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c5ad-e5f5-762f-925e" includeChildSelections="true"/>
           </constraints>
           <infoLinks>
             <infoLink name="Sniper Rifle" id="1c59-9ccf-96df-e8b0" hidden="false" type="profile" targetId="6eb2-c600-98e7-16d3">
@@ -3013,7 +3032,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <categoryLink name="Heavy" hidden="false" id="c413-b523-ed80-3bbd" targetId="70c9-988d-71a7-7654" primary="false"/>
               </categoryLinks>
               <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="6bc9-407d-f151-88b3" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6bc9-407d-f151-88b3" includeChildSelections="true"/>
               </constraints>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
@@ -3156,7 +3175,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d52-e640-a103-dd07" includeChildSelections="false"/>
-            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="ef37-2c5a-5c06-7a54" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ef37-2c5a-5c06-7a54" includeChildSelections="true"/>
           </constraints>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="6a8b-85b6-c065-2631" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -3394,7 +3413,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Medi-kit" id="01d2-0e07-211a-f40b" hidden="false" type="profile" targetId="aa88-1987-505a-13ca"/>
           </infoLinks>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cdfb-2f26-908c-4b6c" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="961a-f2a9-d1d3-840a" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3419,8 +3438,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Consumable" id="0075-433b-7a91-30eb" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
           </infoLinks>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23c8-e5ce-6a56-6633" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="1a46-80b5-b0bd-8fb4" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1a46-80b5-b0bd-8fb4" includeChildSelections="true"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3441,7 +3459,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e96-1e61-b3bb-8c3c" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e96-1e61-b3bb-8c3c" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <infoLinks>
             <infoLink name="Binoculars" id="edae-bc49-e328-55cd" hidden="false" type="profile" targetId="242b-2dd0-41e9-77e1"/>
@@ -3471,7 +3489,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
           </costs>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd2c-abb5-7c59-8369" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bd2c-abb5-7c59-8369" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <infoLinks>
             <infoLink name="Field Shrine" id="d37c-837e-692c-66a9" hidden="false" type="profile" targetId="76e2-0e5b-972a-0f69"/>
@@ -3494,7 +3512,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Consumable" id="5779-e777-cd63-31a3" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
           </infoLinks>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="87ec-a806-8bbb-a782" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="429e-3784-2c94-ed05" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3517,8 +3535,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Wind Amulet" id="117a-ae5f-1520-9dfa" hidden="false" type="profile" targetId="cb4d-4771-6cd2-240b"/>
           </infoLinks>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="236e-4006-6f4f-4030" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="39cb-9411-b440-cd0e" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="39cb-9411-b440-cd0e" includeChildSelections="true"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3536,7 +3553,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Cloak of Alamut" id="e9f2-0882-c4f9-2f6b" hidden="false" type="profile" targetId="fc84-ca32-2672-c684"/>
           </infoLinks>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3b27-f507-ac5b-288c" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3b27-f507-ac5b-288c" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3559,10 +3576,13 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           <profiles>
             <profile name="Golden Calf Altar" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="77d6-2ff5-90cb-b1a8">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The area within 3” of the altar is Difficult Terrain for all models in the opposing Warband. This affects even models that can Fly. The model carrying the altar may drop it at any point during their Activation. Once placed down, the Golden Calf Altar cannot be picked up again. It has a 25mm base.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">* Illusions: Enemy models treat open ground and all terrain within 3” of a model with a Golden Calf Altar as being Difficult terrain (if it is not already), even if they can Fly.
+
+
+* Place Altar ACTION: A model with a Golden Calf Altar can take a Place Altar ACTION. If they do so, the model no longer counts as having a Golden Calf Altar, and you must place a Golden Calf Altar terrain piece on a 25mm base on the ground within 1” of the model taking the ACTION. The Golden Calf Altar has the Illusions special rule, is Impassable terrain, and cannot be picked up again or moved in any way.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HEAVY, CONSUMABLE</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3586,6 +3606,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Consumable" id="00bf-aa89-b801-20b4" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
             <infoLink name="Heavy" id="cd11-48d1-0b5a-d066" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
+          <categoryLinks>
+            <categoryLink targetId="70c9-988d-71a7-7654" id="b580-8185-fe36-b533" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Trench Shrine" hidden="true" id="de31-881e-fc7e-2bf4">
           <infoLinks>
@@ -3676,10 +3699,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           <profiles>
             <profile name="Standard of Mammon" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="debb-b1ea-a645-92dd">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Grants +1 DICE for all Morale tests as long as the model with the Flag is not Down or Out of Action. Requires one hand to use as if it was a weapon, both in ranged and melee combat. Any enemy entering melee combat with the model carrying this banner must make a successful ACTION or the model goes Down and cannot get up as long as they are in melee combat with the bearer of the standard.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Kneel Before Me: An enemy model that is Down and within 1&quot; of a model with the Standard of Mammon cannot stand back up. In addition, the opposing player must take a Success Roll for any of their models that finish a charge within 1&quot; of a model with the Standard of Mammon. If the roll is a Failure, the enemy model is marked as being Down. If the roll is a Success or a Critical Success, the enemy model stays on its feet.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD, LEADER</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4003,16 +4026,16 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Tarnished Armour" hidden="true" id="a6fb-9aa2-1030-b5bf" sortIndex="3">
           <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="45"/>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="25"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <profiles>
             <profile name="Tarnished Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b2e8-94d9-2ff1-7cdd">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The suit counts as Reinforced Armour, a helmet and a gas mask. When an enemy declares a charge, they must charge the model wearing this armour if it is visible, not in cover and within 12” of the wearer. The charging model must be able to reach this model without climbing, leaping or crossing dangerous terrain. If the wearer of the armour is already in melee combat, this power has no effect</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">An enemy model must choose a model that has Tarnished Armour as the target of the charge if the model is in its Line of Sight, not already within 1” of an enemy model, and can be reached without the charging model having to Climb, Jump, make a Diving Charge, or move across Dangerous terrain.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-2 INJURY MODIFIER, NEGATE GAS</characteristic>
               </characteristics>
             </profile>
           </profiles>
