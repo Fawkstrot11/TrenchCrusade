@@ -236,16 +236,37 @@
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="60"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
-          <infoLinks>
-            <infoLink name="Machine Armour" id="9a77-4054-5da9-532c" hidden="false" type="profile" targetId="2558-23f8-cfa8-40f4"/>
-          </infoLinks>
           <profiles>
-            <profile name="Raised Platform" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7215-1443-8f01-62bf">
+            <profile name="Death From On High" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7215-1443-8f01-62bf">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Priest riding the Tank Palanquin has a 50mm base, and counts as being on a 2” high platform.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add 3&quot; to the height of a model that has a Tank Palanquin when determining if it receives the Elevated Position modifier for any Ranged Attacks that it makes.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+              </characteristics>
+            </profile>
+            <profile name="Bulky" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8bf3-11bd-c1a9-c4f9">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">A model that has a Tank Palanquin must be mounted on a 50mm base and cannot be equipped with a Shield. In addition, it has a Charge Bonus of D3&quot; instead of D6&quot;.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+              </characteristics>
+            </profile>
+            <profile name="Standfast" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="daef-b905-2d3b-abb6">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">When a model that has a Tank Palanquin suffers a Down result on the Injury table, it is treated as a Minor Wound result instead.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+              </characteristics>
+            </profile>
+            <profile name="Tank Palanquin" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="835c-9624-303f-5792">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-3 INJURY MODIFIER, STRONG</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1210,6 +1231,7 @@
                   <repeats>
                     <repeat value="2" repeats="1" field="selections" scope="roster" childId="3844-b41c-9ecc-85b9" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
                   </repeats>
+                  <comment>Need to be updated to take into account the Sarcophagus Mines (which is now an Equipment technically and not an upgrade)</comment>
                 </modifier>
               </modifiers>
               <costs>
@@ -1269,13 +1291,16 @@
               <profiles>
                 <profile name="Sarcophagus Mine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9395-0d4e-5cdb-6377">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit gains an armour characteristic of -3, but can carry no other weapons or any other items from Armoury. In addition, Whenever an enemy comes within 3” of the Mine, you can trigger a detonation as described below. Alternatively, you can forgo this and explode the mine during your own Activation of the model with a successful RISKY ACTION with +1 DICE.
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">* Walking Bomb: A model that has a Sarcophagus Mine cannot have any other Battlekit. A model with a Sarcophagus Mine can take a Trigger ACTION. In addition, if an enemy model finishes a move within 3&quot; of a model with a Sarcophagus Mine, you can interrupt its Activation and detonate the Sarcophagus Mine without having to take a Trigger ACTION. 
 
 
-When detonated, the mine explosion is treated as a BLAST 3” weapon targeting the Sargophagus model with Keyword SHRAPNEL. Models within 1” of the Prisoner hit by the explosion roll their injuries with +1 DICE. The Mine itself is taken Out of Action.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+* Trigger ACTION: When a model with a Sarcophagus Mine takes a Trigger ACTION, you must take a Risky Success Roll for the model with +1 DICE. If the roll is a failure, nothing happens (but you can try again the next time the model is Activated). If the roll is a Success or Critical Success, the Sarcophagus Mine detonates as described below.
+
+
+* Detonation: When a Sarcophagus Mine detonates, all models (friend or foe) within 3&quot; of the model carrying the Sarcophagus Mine and in its Line of Sight are hit by a Ranged Attack with the SHRAPNEL Keyword. Add +1 INJURY DICE to the Injury Rolls for models that are within 1&quot; of the model carrying the Sarcophagus Mine. The model carrying the Sarcophagus Mine is then taken Out of Action.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-3 INJURY MODIFIER, BLAST 3&apos;&apos;</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
