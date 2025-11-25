@@ -464,11 +464,8 @@ They do not count towards the maximum melee weapons a model can carry.</characte
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CUMBERSOME</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Tartarus Claws always come as a pair and do not allow the use of any other melee weapons. You can make two Attack ACTIONS with the Claws without the usual -1 DICE for the second attack. If the opponent is taken Down or Out of Action with the Claws you may immediately move the model up to 6”. If the move takes you into contact with another enemy model, this counts as a charge and you can make a second Melee Attack ACTION with the claws. You can only do this follow-up move once per Activation</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL, CUMBERSOME</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Paired Weapon: This Weapon must be taken as a pair of two 1-Handed Melee Weapons (one for each hand). Melee Attacks made with the Paired Weapons do not suffer the Success Roll modifier for making an Off-Hand Attack. If the target is taken Down or Out of Action by a Melee Attack made with the Paired Weapons, you may immediately move the model up to 3&quot;. If the move takes it within 1&quot; another enemy model, it can take another Fight ACTION, but it cannot make the 3&quot; move again if the second attack takes the target Down or Out of Action.</characteristic>
       </characteristics>
     </profile>
     <profile name="Anti-Tank Hammer" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="8df3-f372-20a0-4a59" publicationId="c658-4a10-e1fe-befc" page="115">
