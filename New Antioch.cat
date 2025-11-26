@@ -520,6 +520,9 @@
                 </modifier>
                 <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5" affects="profiles.Unit" scope="model"/>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Negate [Keyword]" id="941d-a629-d73c-2b1e" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -804,11 +807,8 @@
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">Ignore Shield</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">The Shotel is specifically designed to overcome enemy shields. It ignores the target’s penalty to injury rolls from its shield, if any. The Holy Icon Shield and similar effects still apply.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Bypass Shield: The Shotel is specifically designed to overcome enemy shields. Ignore -INJURY DICE or -INJURY MODIFIERS for Shields against Melee Attacks made with a Shotel. Any other Keywords or special rules that apply to the Shield are used normally.</characteristic>
               </characteristics>
             </profile>
           </profiles>
