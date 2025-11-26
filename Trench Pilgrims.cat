@@ -717,16 +717,14 @@ Keywords: CONSUMABLE</characteristic>
     </selectionEntryGroup>
     <selectionEntryGroup name="Ranged (Two-Handed)" id="8f05-2ca1-a241-fd39" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Musket" hidden="false" id="ebaa-a03b-aed3-ffa0" sortIndex="1">
+        <selectionEntry type="upgrade" import="true" name="Blunderbuss" hidden="false" id="ebaa-a03b-aed3-ffa0" sortIndex="2">
           <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
-          <entryLinks>
-            <entryLink import="true" name="Bayonet Lug" hidden="false" id="910c-6d19-51de-fea3" type="selectionEntry" targetId="780a-82e9-b0f2-9caf"/>
-          </entryLinks>
           <infoLinks>
-            <infoLink name="Musket" id="05e8-4d7d-b7c9-9a4a" hidden="false" type="profile" targetId="b5e4-35bd-ba00-55c0"/>
+            <infoLink name="Blunderbuss" id="05e8-4d7d-b7c9-9a4a" hidden="false" type="profile" targetId="2540-a186-5024-be0a"/>
+            <infoLink name="Shrapnel" id="6030-df45-6c3b-9415" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Semi-Automatic Rifle" hidden="false" id="a8ac-1e12-a8f3-5a8e" sortIndex="3">
@@ -779,7 +777,7 @@ Keywords: CONSUMABLE</characteristic>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <constraints>
-            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="ef7e-68c5-2b65-1ca4" includeChildSelections="true"/>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="ef7e-68c5-2b65-1ca4" includeChildSelections="true"/>
           </constraints>
           <infoLinks>
             <infoLink name="Flamethrower" id="41c1-1d28-d995-3f9d" hidden="false" type="profile" targetId="9b21-3223-c112-c65f"/>
@@ -908,6 +906,18 @@ Keywords: CONSUMABLE</characteristic>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0991-fcb1-ee05-149b" includeChildSelections="true"/>
           </constraints>
           <comment>methodius</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Musket" hidden="false" id="028f-f870-3b2e-f353" sortIndex="1">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="Bayonet Lug" hidden="false" id="d86c-39e7-f53f-f267" type="selectionEntry" targetId="780a-82e9-b0f2-9caf"/>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Musket" id="722e-9a97-534c-be00" hidden="false" type="profile" targetId="b5e4-35bd-ba00-55c0"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1336,11 +1346,8 @@ Keywords: CONSUMABLE</characteristic>
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Hit</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">RISKY, HEAVY</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Because of the enormous weight and the skill of the Anchorite Shrine in inflicting maximum pain, the Catherine Wheel rolls 3D6 on the Injury Chart, adding the results together.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, RISKY, HEAVY</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Mighty Blows: When you make an Injury Roll for an attack made with the Catherine Wheel, roll 3D6 and add all 3 dice together. Any +INJURY DICE or -INJURY DICE are added to the roll normally, except that you pick the 3 highest or lowest dice in the roll instead of the 2 highest or lowest.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2655,10 +2662,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Resurrection" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="87c7-8ddb-b2bb-5b27">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When a Trench Pilgrim dies, you may elect to re-buy them as a Martyr-Penitent resurrected by a Meta-Christ for a cost of 45 Ducats after battle. When hit, any attacks against a Martyr-Penitent add -1 DICE when rolling on the Injury Table. Their Melee bonus is increased to +1 DICE (reflected on the profile above). Martyr-Penitents retain any possessions they had before dying and being resurrected, but lose any Scars and advancements they had if they were ELITE via Campaign promotion.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a Trench Pilgrim is killed after a game (▶ see Campaign in the Trench Crusade Digital Rulebook), they can be resurrected as a Martyr Penitent with the Martyr Penitent Profile for a cost 45 ducats. Add -1 INJURY DICE to Injury Rolls for a Martyr Penitent. A Martyr Penitent keeps their Battlekit and Zealot Strength if the ability was purchased, but loses any Scars, Experience, and Advancements. Martyrdom Pills have no effect on a Martyr Penitent model</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2691,11 +2698,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="self" childId="6082-859c-8347-2a94" shared="true" includeChildSelections="false"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="Martyr-Penitent" field="name">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="b32b-6d55-9163-8486" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2763,6 +2765,17 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="b32b-6d55-9163-8486" shared="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="Martyr-Penitent" field="name"/>
+            <modifier type="set" value="+1 DICE" field="12e8-ff8c-c933-9eb5" affects="profiles.Unit"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Communicant" hidden="false" id="d21f-81f7-cf6f-690e">
       <profiles>
@@ -2961,26 +2974,26 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Loudspeakers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9ec3-b93c-1646-ccec">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The War Prophet blares out holy sermons and dire prophecies at 100 decibels to inspire the faithful. The Prophet can take a RISKY ACTION with +2 DICE once during each Activation. If the action is successful, all friendly models within 8” of the Prophet (including the Prophet) that are not engaged in melee can immediately move up to 3” towards any enemy model they can see by the optimal path that reduces the distance between the moving model and the enemy. This move allows them to enter combat as if they charged the enemy and are considered to have done so until the end of the turn.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A War Prophet can take a Loudspeakers ACTION. If they do so, take a Risky Success Roll for the model and add +2 DICE to the roll. If the roll is a Failure, the War Prophet’s Activation ends immediately. If the roll is a Success or Critical Success, you can move all friendly models within 8&quot; of the War Prophet up to 3&quot;. They must end the move as close as possible to the nearest enemy model that was visible to them at the start of the move. This move can be used to bring a model within 1&quot; of an enemy model in which case the model counts as charging. If no enemy models are visible, they can move normally.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">8&apos;&apos;</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Memento Mori" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f2b4-37b5-8a5a-ac9f">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The War Prophet is touched by a higher power and the revealed truth allows them a degree of protection against premature death. Once per battle, when the War Prophet is taken Out of Action for any reason, ignore the result as if nothing had happened.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The War Prophet is touched by a higher power, and the revealed truth allows them a degree of protection against premature death. The first time the War Prophet suffers an Out of Action result on the Injury Table, it is treated as a No Effect result instead.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Laying on Hands" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4458-54c7-2ee5-90df">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">With a successful ACTION, you may remove D3 BLOOD MARKERs from any friendly model within 6” (including the Prophet).</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A War Prophet can take a Laying on of Hands ACTION. If they do so, take a Success Roll for the model. If the roll is a Failure, nothing happens. If the roll is a Success, remove 1 BLOOD MARKER from a friendly model within 6&quot; of the War Prophet. If the roll is a Critical Success, remove 3 BLOOD MARKERS from a friendly model within 6&quot; of the War Prophet instead of only 1. The War Prophet can use this ACTION to heal themselves.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">6&apos;&apos;</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -3075,10 +3088,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </profile>
             <profile name="Martyrdom Device" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4283-0424-9334-02b2">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Prisoner strapped with a Martyrdom Device can trigger it at any point during their Activation. This does not require an ACTION. When detonated, the explosion is treated as a BLAST 3” weapon targeting the prisoner model. Models within 1” of the prisoner hit by the explosion roll their injuries with +1 DICE. The prisoner rolls 4d6 and adds them together to determine the results of their injury roll. If the explosive goes off and the prisoner somehow survives the battle, you can buy them a new explosive for 35 ducats as normal, or simply field them without.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">An Ecclesiastic Prisoner with a Martyrdom Device can take a Trigger Martyrdom Device ACTION. If they do so, the Martyrdom Device detonates and cannot be used again. When Martyrdom Device detonates, make an Injury Roll for all models within 3&quot; of the Ecclesiastic Prisoner (friend or foe, including the Ecclesiastic Prisoner). Make the Injury Roll for the Ecclesiastic Prisoner by rolling 4D6 and adding all 4 dice together, and add +1 INJURY DICE to the Injury Rolls for other models that are within 1&quot; of the Ecclesiastic Prisoner. If an Ecclesiastic Prisoner detonates their Martyrdom Device and survives the game, you must either buy them a new Martyrdom Device for 35 ducats, or use them without one.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -3304,19 +3317,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <characteristics>
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
             <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-            <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Injure</characteristic>
-            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">RISKY</characteristic>
-            <characteristic name="Rules" typeId="6e95-3480-ad33-b345"/>
-            <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-            <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, RISKY</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
           </characteristics>
         </profile>
         <profile name="Broken on the Wheel" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ca00-3c87-ba97-103d">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before the start of the battle, one Trench Pilgrim or Ecclesiastic Prisoner may voluntarily be broken on the wheel to show their piety and devotion (permanently remove all weapons, armour and equipment from the victim and use/store them as you wish). The Anchorite Shrine will then shatter the bones of the volunteer and carry the broken victim to the battle on its Wheel. As long as the volunteer is not taken Out of Action, any Attacks against the Anchorite are redirected to the volunteer. The volunteer cannot be independently targeted by any abilities or attacks (including BLAST weapons). For all rules purposes and attack effects (such as forced movement), the two models are treated as a single model, including sharing BLOOD, INFECTION and BLESSING MARKERS. Treat Down results against the volunteer as a Minor Hit. The volunteer cannot take any ACTIONS, be Activated separately or move – for obvious reasons. At the end of the battle, even if the volunteer may have survived, the model dies and is removed from your warband.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the start of each game, before deployment, you can say that one Trench Pilgrim or Ecclesiastic Prisoner will be broken on the wheel to show their piety and devotion. The model you choose is permanently removed from your Warband, but you can redistribute their Battlekit to other models that would be allowed to have it. The Anchorite Shrine then shatters the bones of the volunteer and carries the broken victim to battle on its Wheel. Injuries that would be inflicted on the Anchorite Shrine are instead inflicted on its unfortunate victim, until the victim finally passes away. This is represented by the following special rules, which apply to the Anchorite Shrine until it suffers an Out of Action result on the Injury Table:
+* It has an Armour Characteristic of 0 and does not have the NEGATE SHRAPNEL and TOUGH Keywords.
+* It treats Down results as Minor Hit results.
+* The first time the Anchorite Shrine suffers an Out of Action result on the Injury Table, it is treated as a No Effect result. When this happens, any Blood Markers on the Anchorite Shrine are removed, and from then on, these special rules no longer apply to the model.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -3325,6 +3338,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               </conditions>
             </modifier>
           </modifiers>
+        </profile>
+        <profile name="Symphony of Slaughter" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c845-81eb-cd8e-9498">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">An Anchorite Shrine is armed with two 1-Handed Melee Weapons (the Catherine Wheel and Bonebreaker Mace). When it makes a Melee Attack, it can either attack once using either its Catherine Wheel or the Bonebreaker Mace, or twice, first with the Catherine Wheel and second with its Bonebreaker Mace (the Off-Hand Weapon modifier applies to the attack made with the Bonebreaker Mace). Note that both Weapons have the RISKY keyword, which means that the Anchorite Shrine’s Activation ends immediately if the Success Roll for an attack made with either weapon is a Failure.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+          </characteristics>
         </profile>
       </profiles>
       <constraints>
