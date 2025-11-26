@@ -1383,11 +1383,8 @@ Keywords: CONSUMABLE</characteristic>
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">48&quot;</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">Ignore Cover, +1D Injuries</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">FIRE, HEAVY, BLAST 3”</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Specify a point on the battlefield within 36” (must be in line of sight) that you want to target. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bombard shot lands 2” away, as 7 – 5 = 2). The direction is decided by your opponent. All models within 3” of the 1 x 1 mm landing spot are hit as the shell explodes – no roll to hit is needed. This weapon has a BLAST radius of 3” – all models within this range are hit. Add +1 DICE to all injury rolls.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, BLAST 3&apos;&apos;, FIRE, HEAVY, IGNORE COVER, SCATTER</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">High Trajectory: When a Trench Mortar is used to make a Ranged Attack, the target model (or target point, if targeting a point on the ground) cannot be within 6&quot; of the attacking model. Note that if the attack Scatters it may end up landing within 6&quot; of the attacking model.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1409,6 +1406,8 @@ Keywords: CONSUMABLE</characteristic>
             <infoLink name="Fire" id="b586-79c9-b58d-e935" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
             <infoLink name="Blast" id="a9d8-c06f-bde8-533c" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Heavy" id="8a47-6cc7-317f-046c" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore [Modifier]" id="880f-55e9-deff-2fb3" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Scatter" id="87af-9f02-7b2d-3caf" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Gas Censer" hidden="true" id="bf35-3729-df69-7562">
@@ -1416,12 +1415,9 @@ Keywords: CONSUMABLE</characteristic>
             <profile name="Gas Censer" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="ca96-4933-b496-593f">
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Special</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">Ignore Armour</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">GAS, BLAST 6&quot;</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">The Anchorite may make an injury roll against all models within 6” except the Anchorite itself. Note that all models within range, friend or foe, are hit if the weapon is used. No Line of Sight is needed. The attack has the Keyword GAS and Ignores Armour, unless the models are in Cover in which case armour works as normal. The use of the Gas Censer always ends the Activation of this model.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">6&apos;&apos;</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">GAS, IGNORE ARMOUR, RELOAD</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Cloud of Gas: When you take a Shoot ACTION with this model, instead of making a Ranged Attack, you can unleash a cloud of gas. If you do so, do notmake a Success Roll. Instead, all other models within 6&quot; of the model using the Gas Censer are hit, and an Injury Roll must be made for each one. Note that the attack hits all models, friend or foe, apart from the model making the attack, regardless of line of sight.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1441,20 +1437,26 @@ Keywords: CONSUMABLE</characteristic>
           </modifiers>
           <infoLinks>
             <infoLink name="Gas" id="bee6-3d7f-cbf4-d9e3" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
-            <infoLink name="Blast" id="7fc8-586c-a763-f46e" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+            <infoLink name="Ignore Armour" id="5f3f-b68b-0f4f-ac43" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+            <infoLink name="Reload" id="ec1c-e487-ffbc-245f" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Autocannon" hidden="true" id="844d-8df1-2006-2cf7" sortIndex="6">
           <profiles>
-            <profile name="Autocannon" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="e37a-b7ce-312c-3242">
+            <profile name="Autocannon (Bursts)" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="e37a-b7ce-312c-3242">
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">48&quot;</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">3 Attacks, +1D to injuries</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Rules: Autocannons can make three Attack ACTIONS instead of one. They can target separate models with each attack, as long as all targets are within 6” of each other. After taking all three attacks the Activation of the model is over regardless of any remaining ACTIONS the model might have. Add +1 DICE to all injury rolls. They can shoot up to five times instead of three if they take ALL the attacks as RISKY ACTIONS.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, AUTOMATIC 3, HEAVY</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+              </characteristics>
+            </profile>
+            <profile name="Autocannon (Full Auto)" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="584f-141d-ce83-d55d">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">48&quot;</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, AUTOMATIC 5, HEAVY, RELOAD, RISKY</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Full Auto: Each time you make a Ranged Attack with an Autocannon, you must choose to either fire it using the Bursts Weapon Profile or the Full Auto Weapons Profile.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1474,11 +1476,15 @@ Keywords: CONSUMABLE</characteristic>
           </modifiers>
           <infoLinks>
             <infoLink name="Heavy" id="1f6b-0179-a28f-e3fb" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Automatic" id="18cf-6992-feca-6bcb" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Risky" id="ede7-eaff-8f62-23d6" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+            <infoLink name="Reload" id="7ee5-1485-8d79-7d9a" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Anti-Material Rifle" hidden="true" id="8ece-f70d-905f-dbf9" sortIndex="3">
           <costs>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="40"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
             <infoLink name="Anti-Material Rifle" id="2128-7403-24da-e52f" hidden="false" type="profile" targetId="50ec-f075-494f-9dc5"/>
@@ -1602,10 +1608,10 @@ Keywords: CONSUMABLE</characteristic>
           <profiles>
             <profile name="Wrathful Cherub Face" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2359-5cf1-b45c-b058">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the model fighting the Shrine Anchorite in Melee is affected by the Keyword FEAR, one of the ACTIONS it has to take when it is activated must be Retreat from Melee Combat.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Cower Before The Lord: An enemy model that does not have the FEAR keyword and that starts an Activation within 1&quot; of this Anchorite Shrine must take a Retreat ACTION as part of the Activation. It cannot take any RISKY ACTIONS while it is within 1&quot; of this Anchorite Shrine.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
