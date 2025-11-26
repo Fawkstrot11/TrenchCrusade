@@ -419,6 +419,53 @@
             <infoLink name="Consumable" id="7844-df26-25ea-7c31" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
           </infoLinks>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Dum-Dum Ammunition" hidden="false" id="fcd7-1ee9-70e5-736d" sortIndex="22">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="7470-0b9f-1cca-4efa" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5245-734f-4244-db8f" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Dum-Dum Bullets" id="51e1-986f-df45-0ce9" hidden="false" type="profile" targetId="b51b-0a4a-8aa8-e5ae"/>
+            <infoLink name="Consumable" id="f3c8-3e3f-8a36-8d54" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+            <infoLink name="Critical" id="485a-99cb-fd3f-3bb1" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Holy Smoke" hidden="false" id="a5c3-aa0d-4d45-c224" sortIndex="22">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="62b0-0944-0b5b-be22" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Holy Smoke" id="ba4f-72d9-4710-588c" hidden="false" type="profile" targetId="ba87-1d35-4977-50e2"/>
+            <infoLink name="Consumable" id="ccdf-3b64-79a9-9c96" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="f8bc-5df8-1768-a72a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Headgear" id="33a6-4dc3-100c-52c3" hidden="false" sortIndex="1">
@@ -2096,15 +2143,17 @@
               <profiles>
                 <profile name="Bagpipes" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d777-d95f-f173-9c07">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Any friendly models within 4” of the musician are immune to fear, and those who are not Down can add +1 DICE to their Dash ACTIONS. Bagpipes take one hand to use at all times as if it were a weapon.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">One Musical Instrument in a Kingdom of Alba Assault Detachment Warband can be upgraded to a set of Bagpipes at no additional cost in ducats. 
+Friendly models within 8&quot; of a model that has a set of Bagpipes have the NEGATE FEAR Keyword</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
               <infoLinks>
                 <infoLink name="Fear" id="ae73-8108-76a3-b082" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
+                <infoLink name="Negate [Keyword]" id="c275-61ed-09b6-346a" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
               </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="War Horn" hidden="true" id="2b13-5e5c-b810-c791">
@@ -3645,7 +3694,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
   <selectionEntries>
     <selectionEntry type="model" import="true" name="Lieutenant" hidden="false" id="e578-1122-47cb-10ad">
       <profiles>
-        <profile name="On my Command!" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8e11-d71b-f31f-4a42">
+        <profile name="Hold your Fire!" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8e11-d71b-f31f-4a42">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: The Lieutenant orders their warband to stop shooting, forcing the enemy to move first. To represent this, a Lieutenant can take a Hold Your Fire! ACTION. If they do so, pick 1 enemy model that is in the Lieutenant’s Line of Sight and that the opponent is allowed to Activate. The Lieutenant’s Activation then ends, and the opponent must Activate the model you picked.</characteristic>
             <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -3785,6 +3834,15 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </infoLink>
         <infoLink name="Tough" id="29bc-ca42-b304-0549" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
         <infoLink name="Leader" id="08b0-a605-6d88-3e54" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
+        <infoLink name="Strong" id="3199-2239-f6fc-39c0" hidden="true" type="rule" targetId="6297-d0e0-1935-5cfd">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="70"/>
@@ -4115,7 +4173,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <categoryLinks>
         <categoryLink targetId="3de0-192c-3ec2-51be" id="6e79-070e-d330-f323" primary="true" name="Elite"/>
         <categoryLink targetId="2cfb-73f8-0df3-30e8" id="1ef7-76a8-4ee1-6913" primary="false" name="New Antioch"/>
-        <categoryLink targetId="65d9-9d4b-c697-c9ef" id="bb09-4f22-01db-95dc" primary="false" name="Clergy"/>
+        <categoryLink targetId="2d2d-696e-e30a-bbf4" id="4978-97e8-2de6-2f4c" primary="false" name="Negate Fear"/>
       </categoryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="60"/>
@@ -4806,6 +4864,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="f397-820f-7f8a-9610" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
+        <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <modifierGroups>
         <modifierGroup type="and">
@@ -4820,6 +4883,17 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <comment>Byzantine</comment>
         </modifierGroup>
       </modifierGroups>
+      <infoLinks>
+        <infoLink name="Strong" id="5a6f-8b04-6d09-d41b" hidden="true" type="rule" targetId="6297-d0e0-1935-5cfd">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Combat Engineer" hidden="false" id="50d8-f63e-e01d-2698">
       <profiles>
@@ -5245,6 +5319,17 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+          <comment>Byzantium Changes</comment>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="+1 Dice" field="12e8-ff8c-c933-9eb5" affects="profiles.Unit"/>
+            <modifier type="set" value="+ 0 Dice" field="1a4f-d2cd-c405-6200" affects="profiles.Unit"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <comment>Alba Characteristic Changes</comment>
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
@@ -5475,10 +5560,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 </profile>
                 <profile name="Followers of St. Patrick" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="369e-cfea-3774-2a65">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">If playing a Campaign, the patron of the warband is automatically Saint Patrick.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Patron of an Éire Rangers Warband is always a Learned Saint.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
                 <profile name="Carnyx" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ea0b-8b94-35f8-318a">
@@ -5546,10 +5631,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <profiles>
                 <profile name="Highland Strength" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8b76-b65f-6a20-618f">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Lieutenant of the warband has the Keyword STRONG</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Lieutenant and any Shock Troopers in a Kingdom of Alba Assault Detachment Warband have the STRONG Keyword at no additional cost in ducats.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
                 <profile name="Rampant Charge" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="307d-830b-4eab-5ed2">
@@ -5586,7 +5671,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 </profile>
                 <profile name="Strained Supply" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="06f8-2c98-360b-bf9d">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Automatic Shotguns, Grenade Launchers, Machine Guns, Sniper Rifles, and Submachine Guns in a Kingdom of Alba have a Limit of 1</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Automatic Shotguns, Grenade Launchers, Machine Guns, Sniper Rifles, and Submachine Guns in a Kingdom of Alba have a Limit of 1.</characteristic>
                     <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                     <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
                     <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
