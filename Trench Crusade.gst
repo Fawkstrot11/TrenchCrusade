@@ -27,6 +27,9 @@
     <categoryEntry name="Golem" id="c15a-8839-8c4e-c312" hidden="false" publicationId="c658-4a10-e1fe-befc" page="12"/>
     <categoryEntry name="Leader" id="afb9-39f5-82d9-46ed" hidden="false"/>
     <categoryEntry name="Pile" id="ce28-ad9a-bbc1-f1dc" hidden="true"/>
+    <categoryEntry name="Negate Gas" id="d935-8238-a3f7-8ab0" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13">
+      <description/>
+    </categoryEntry>
   </categoryEntries>
   <costTypes>
     <costType name="Ducats" id="8d43-33fd-332d-17a6" defaultCostLimit="-1"/>
@@ -620,15 +623,6 @@ Standfast: When a model that has Machine Armour suffers a Down result on the In
         <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
       </characteristics>
     </profile>
-    <profile name="Dum-Dum Bullets" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="254b-af21-71d6-cd8e" publicationId="c658-4a10-e1fe-befc" page="119">
-      <characteristics>
-        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before the battle begins, a model may use this item to grant a rifle or pistol weapon that they are equipped with the CRITICAL keyword until the end of the battle. 
-Keywords: CONSUMABLE, CRITICAL.</characteristic>
-        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-      </characteristics>
-    </profile>
     <profile name="Incendiary Bullets" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="01b8-f846-e8f7-6d71" publicationId="c658-4a10-e1fe-befc" page="119">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Incendiary: When this Battlekit is taken, you must choose 1 Ranged Weapon that the model already has. The Weapon gains the FIRE Keyword.</characteristic>
@@ -780,11 +774,8 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Hit</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">This weapon causes INFECTION MARKERS instead of BLOOD MARKERS.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, ASSAULT, INFECTION MARKERS, SHOTGUN</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
       </characteristics>
     </profile>
     <profile name="Beelzebub&apos;s Axe" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="6c2c-bd2c-d794-fb34" publicationId="c658-4a10-e1fe-befc" page="76">
@@ -802,11 +793,8 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">24&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+2D to hit</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">After resolving an injury caused by this weapon, this model may choose to suffer up to three BLOOD MARKERS to inflict the same number of additional BLOOD MARKERS upon the target of the attack.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 DICE, HEAVY</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">If a Viscera Cannon hits a target, after resolving the Injury Roll, you can place up to 3 BLOOD MARKERS next to model that made the Attack (until it has a maximum of 6 markers). Then place 1 INFECTION MARKER next to the target for each BLOOD MARKER that you placed on the attacking model.</characteristic>
       </characteristics>
     </profile>
     <profile name="Plague Blade" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="c403-778c-1c4f-ec6e" publicationId="c658-4a10-e1fe-befc" page="76">
@@ -830,13 +818,10 @@ with a Tormentor Chain.</characteristic>
     </profile>
     <profile name="Parasite Grenades" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="ddce-6e00-e451-7281" publicationId="c658-4a10-e1fe-befc" page="111">
       <characteristics>
-        <characteristic name="Type" typeId="f90e-171a-4ca6-3845">GRENADE</characteristic>
+        <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Grenades</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">If this weapon hits a model, the target is moved up to 3&quot; in a single direction of the attacker&apos;s choosing. This can be used to move the model out of cover, to fall from a high position or even into Melee Combat with their enemies. Models that are immune to FEAR cannot be moved by this weapon.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, IGNORE COVER, IGNORE LONG RANGE</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Terrifying Hallucinations: If a Parasite Grenade hits a target, after resolving the Injury Roll, you can move the target model 3&quot;. The move must be in a straight line, but can be in any direction, and can be used to make the model move within 1&quot; of an enemy, make a retreat move, Climb, Jump, or Jump Down. The model cannot make a Diving Charge and does not count as charging if it finishes the move within 1&quot; of an enemy model.</characteristic>
       </characteristics>
     </profile>
     <profile name="Corruption Belcher" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="801f-50a4-1ea2-7b92" publicationId="c658-4a10-e1fe-befc" page="113">
