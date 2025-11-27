@@ -1101,7 +1101,12 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Sultanate Grand Cannon" hidden="false" id="bdbc-7944-e0d0-2e0a" type="selectionEntry" targetId="d9f1-b37e-ff7c-cffe" sortIndex="7"/>
+        <entryLink import="true" name="Sultanate Grand Cannon" hidden="false" id="bdbc-7944-e0d0-2e0a" type="selectionEntry" targetId="d9f1-b37e-ff7c-cffe" sortIndex="7">
+          <infoLinks>
+            <infoLink name="Heavy" id="0dfc-5c79-4698-f0db" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore Armour" id="723c-3603-7aa7-6d79" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+          </infoLinks>
+        </entryLink>
         <entryLink import="true" name=" Sultanate Grand Cannon" hidden="true" id="3170-6b1d-e2ce-2be6" type="selectionEntry" targetId="bf03-e9ef-b9e7-b490" sortIndex="6">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1122,6 +1127,10 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Heavy" id="46a4-f568-b4f9-1ca0" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore Armour" id="0736-e12a-fab7-fcde" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+          </infoLinks>
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
@@ -2746,11 +2755,17 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemis
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">48&quot;</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+2D Injury, Ignores Armour</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Add +2 DICE to all Injury rolls and ignore all armour. If this attack hits its target, but does not take it Out of Action, the target is pushed 1d6” directly away from the attacker, stopping if they hit another model or solid piece of terrain.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 INJURY DICE, HEAVY, IGNORE ARMOUR</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Brazen Bull Grand Cannon: A Grand Cannon carried by a Brazen Bull is treated as a 1-Handed Ranged Weapon that uses the profile above for all rules purposes. If it is removed from the Brazen Bull for any reason, or if the Brazen Bull is removed from the Warband for any reason, then the Grand Cannon is lost (it cannot be fielded as a stationary gun battery).
+
+
+Deploying a Gun Battery: A Grand Cannon that is included in the Armoury on a Warband’s roster as a gun battery must be mounted on its own 50mm base. It is deployed in the same way as a unit when the Warband is deployed. After it has been deployed it is treated as a piece of Impassable terrain and cannot be moved or attacked during the game.
+
+
+Firing a Gun Battery: Each Grand Cannon weapon battery can be used once per Turn by a friendly model that is within 1&quot; of it, as long as both the friendly model and the Grand Cannon are not within 1&quot; of an enemy model, and as long as the friendly model does not move as part of the same Activation. The friendly model must take a Shoot ACTION, and can then use the Grand Cannon as the Ranged Weapon for the attack using the profile above (if the model is an Alchemist, then its Mastery of the Elements ability will apply to the attack). Measure the range and check the Line of Sight using the Grand Cannon instead of the attacking model. In a campaign the Grand Cannon gun battery is assumed 
+to have been returned to the Warband’s Armoury at the end of the game, and will be available to be deployed in the Warband’s next game.
+
+Unstoppable Object: If a model that has been hit by a Sultanate Grand Cannon is not taken Out of Action by the Injury Roll, it is pushed D6&quot; in a straight line directly away from the attacking model. The model stops if it is pushed into another model, Impassable terrain or a terrain piece it cannot cross without having to Climb.</characteristic>
               </characteristics>
             </profile>
           </profiles>
