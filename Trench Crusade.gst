@@ -27,9 +27,7 @@
     <categoryEntry name="Golem" id="c15a-8839-8c4e-c312" hidden="false" publicationId="c658-4a10-e1fe-befc" page="12"/>
     <categoryEntry name="Leader" id="afb9-39f5-82d9-46ed" hidden="false"/>
     <categoryEntry name="Pile" id="ce28-ad9a-bbc1-f1dc" hidden="true"/>
-    <categoryEntry name="Negate Gas" id="d935-8238-a3f7-8ab0" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13">
-      <description/>
-    </categoryEntry>
+    <categoryEntry name="Negate Gas" id="d935-8238-a3f7-8ab0" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
   </categoryEntries>
   <costTypes>
     <costType name="Ducats" id="8d43-33fd-332d-17a6" defaultCostLimit="-1"/>
@@ -593,15 +591,6 @@ cannot be equipped with a Trench Shield and has a Charge Bonus of D3&quot; inst
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-      </characteristics>
-    </profile>
-    <profile name="Dum-Dum Bullets" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="254b-af21-71d6-cd8e" publicationId="c658-4a10-e1fe-befc" page="119">
-      <characteristics>
-        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before the battle begins, a model may use this item to grant a rifle or pistol weapon that they are equipped with the CRITICAL keyword until the end of the battle. 
-Keywords: CONSUMABLE, CRITICAL.</characteristic>
-        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
       </characteristics>
     </profile>
     <profile name="Incendiary Bullets" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="01b8-f846-e8f7-6d71" publicationId="c658-4a10-e1fe-befc" page="119">
