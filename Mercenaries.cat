@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f569-e9dd-327a-5735" name="Mercenaries" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="11" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f569-e9dd-327a-5735" name="Mercenaries" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="11" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="model" import="true" name="Sister of Saint Cosmas" hidden="true" id="39c2-abb6-fef0-f96e">
       <modifiers>
@@ -393,26 +393,6 @@
           </conditionGroups>
           <conditions>
             <condition type="lessThan" value="1" field="selections" scope="roster" childId="eee9-35a4-9eda-70e9" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="110" field="8d43-33fd-332d-17a6">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="0" field="f3bb-a7e6-d476-f60b">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set-primary" value="bd43-ddb1-262d-4489" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="remove" value="3dfb-701d-e89c-eba2" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -979,6 +959,111 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="afe6-45e9-ff41-16df" includeChildSelections="true"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Goetic Warlock" hidden="true" id="a08d-b6d2-d0de-8881">
+      <categoryLinks>
+        <categoryLink targetId="3dfb-701d-e89c-eba2" id="6ea0-81a6-8f01-4ef7" primary="true" name="Mercenary"/>
+        <categoryLink targetId="420c-0871-4283-b95b" id="8260-f756-2e77-3893" primary="false" name="Demonic"/>
+        <categoryLink targetId="4180-5377-2d83-48ba" id="6a0b-67a3-6dbc-18e1" primary="false" name="Artificial"/>
+        <categoryLink targetId="4f5c-027d-253c-ffa3" id="e1bf-4220-1203-b4c8" primary="false" name="Fear"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8f4e-c36c-2997-2647" includeChildSelections="true"/>
+      </constraints>
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="110"/>
+      </costs>
+      <profiles>
+        <profile name="Goetic Warlock" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="9413-9e48-d7a2-71cc">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 Dice</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 Dice</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-2</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">40mm</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="3564-70ed-8e9e-6ee8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="2a4f-c258-5d70-a3c5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Barbed Embrace" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ace5-dd31-4235-ec1f">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">An enemy model within 1&quot; of a Goetic Warlock cannot take a Retreat ACTION.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Goetic Portal" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f953-cc7c-b427-d6e7">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: A Goetic Warlock can take a Goetic Portal ACTION. If they do so, take a Risky Success Roll for the Goetic Warlock with +1 DICE. If the roll is a Failure, the Goetic Warlock’s Activation ends. If the roll is a Success or Critical Success, you can pick up the Goetic Warlock and deploy them on the battlefield anywhere within 6&quot; of the location they originally occupied (measured from the centre of its base to the centre of its base). If this is impossible for any reason, the Goetic Warlock must stay in their original position. Note that the Goetic Warlock can redeploy even if they are down or within 1&quot; of an enemy model (in which case the enemy model cannot make a Melee Attack before the Goetic Warlock is redeployed), and can deploy within 1&quot; of an enemy model. In addition, if the roll is a Success or Critical Success and the Goetic Warlock is within 1&quot; of any enemy models mounted on a 32mm base or smaller, then the Goetic Warlock can take 1 of the enemy models with them. If they do so, you must deploy the Goetic Warlock first and then deploy the enemy model within 1&quot; of the Goetic Warlock. If you cannot deploy the enemy model within 1&quot; of the Goetic Warlock, then the enemy model stays in its original position.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">6&quot;</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Goetic Gaze" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f6e6-fc55-c2ba-a52c">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: A Goetic Warlock can take a Goetic Gaze ACTION. If they do so, take a Success Roll for the Goetic Warlock. If the roll is a Failure, nothing happens. If the roll is a Success, place 1 BLOOD MARKER next to an enemy model within 24&quot; of the Goetic Warlock and in their Line of Sight. If the roll is a Critical Success, place 2 BLOOD MARKERS next to an enemy model within 24&quot; of the Goetic Warlock and in their Line of Sight instead of only 1.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">24&quot;</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Demonic" id="ab0a-88bc-86b9-5177" hidden="false" type="rule" targetId="e1d1-9534-0d38-b1e8"/>
+        <infoLink name="Reinforced Armour" id="112a-935c-9354-69a9" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
+        <infoLink name="Fear" id="6699-92c7-080b-74ab" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
+        <infoLink name="Critical" id="01b1-9230-d0d6-9870" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Iron-Clawed Hands" hidden="false" id="27fe-8310-ef1e-e0fa" sortIndex="3">
+          <profiles>
+            <profile name="Reaping Claws" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="65a7-7c7f-b6bb-7337">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">This does not count as a weapon.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="5ab4-49a5-15fa-55a1" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="dd36-835b-1544-7403" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Advancement" hidden="true" id="99ff-9676-a927-e22e" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="d65d-2367-7868-a3bf" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
+      </entryLinks>
+      <comment>Knights of Avarice Version</comment>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>

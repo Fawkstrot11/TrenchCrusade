@@ -4383,6 +4383,8 @@ Action Rifle, Assault Rifle etc).
           </constraints>
           <infoLinks>
             <infoLink name="Consumable" id="b008-481e-23a7-9097" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+            <infoLink name="Reload" id="efa3-65f5-17fc-f769" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
+            <infoLink name="Ignore [Modifier]" id="c180-216a-59d1-a259" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -4419,6 +4421,7 @@ Action Rifle, Assault Rifle etc).
           <infoLinks>
             <infoLink name="Tormentor Chain" id="57c8-b1cb-0df5-8045" hidden="false" type="profile" targetId="36d4-9b55-fd0a-150f"/>
             <infoLink name="Shrapnel" id="d494-ee1f-b6f3-429e" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+            <infoLink name="Ignore [Modifier]" id="25a6-e3a9-7af8-5e7d" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="1bc6-fac8-ee95-c426" includeChildSelections="true"/>
@@ -4460,6 +4463,9 @@ Action Rifle, Assault Rifle etc).
           </profiles>
           <infoLinks>
             <infoLink name="Blast" id="2862-1b64-8699-090a" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+            <infoLink name="Ignore [Modifier]" id="8dff-83fc-b150-29f2" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Assault" id="13d4-5fc4-7b80-3465" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Scatter" id="09dc-31dc-c3ef-a5b2" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4875-7b63-8849-8ba7" includeChildSelections="true"/>
@@ -4660,7 +4666,6 @@ Speak a Blessing ACTION: A model that has the Book of Battle Prayers can take a
             <profile name="Armour of Cobar" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="90f7-bbfc-d41c-2fb8">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">Lead to Death: Place 1 BLESSING MARKER next to a model that has the Armour of Cobar each time a friendly model is taken Out of Action.
-
 
 Weight of Sins: Add -1 DICE to the Risky Success Roll for a model that has the Armour of Cobar that is taking a Dash ACTION. In addition, a model wearing the Armour of Cobar cannot have a Shield.</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -5379,6 +5384,9 @@ Unstoppable Object: If a model that has been hit by a Sultanate Grand Cannon is
               </modifiers>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Held" id="e16c-1ba0-858a-3154" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Consume the Fruit from the Tree of Knowledge of Good and Evil" hidden="true" id="f6fb-8677-c747-229e">
           <modifiers>
