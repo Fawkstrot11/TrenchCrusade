@@ -1109,7 +1109,12 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Sultanate Grand Cannon" hidden="false" id="bdbc-7944-e0d0-2e0a" type="selectionEntry" targetId="d9f1-b37e-ff7c-cffe" sortIndex="7"/>
+        <entryLink import="true" name="Sultanate Grand Cannon" hidden="false" id="bdbc-7944-e0d0-2e0a" type="selectionEntry" targetId="d9f1-b37e-ff7c-cffe" sortIndex="7">
+          <infoLinks>
+            <infoLink name="Heavy" id="0dfc-5c79-4698-f0db" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore Armour" id="723c-3603-7aa7-6d79" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+          </infoLinks>
+        </entryLink>
         <entryLink import="true" name=" Sultanate Grand Cannon" hidden="true" id="3170-6b1d-e2ce-2be6" type="selectionEntry" targetId="bf03-e9ef-b9e7-b490" sortIndex="6">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1130,6 +1135,10 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Heavy" id="46a4-f568-b4f9-1ca0" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore Armour" id="0736-e12a-fab7-fcde" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+          </infoLinks>
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
@@ -2187,6 +2196,9 @@
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Negate [Keyword]" id="5d28-0228-e7f9-4840" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Iron Wall Kalkan" hidden="true" id="b246-355b-f3ba-f72e">
               <costs>
@@ -2499,10 +2511,13 @@
           <profiles>
             <profile name="Secrets of Medicine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0966-6f0e-5300-4284">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Alchemist is a student of Ibn Sina’s School of Medicine. The model is equipped with tools for healing from the House of Wisdom. The Alchemist can take an ACTION with +1 DICE to remove up to two BLOOD MARKERS or a single INFECTION MARKER from any one friendly model (including themselves) within 1” range or allow one friendly model (including themselves) who is Down to regain their footing. This training and these tools are an improvement upon the standard Medi-Kit and therefore a model with this Secret cannot carry a Medi-Kit</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Alchemist is a student of Ibn Sina’s School of Medicine.
+This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemist it can take a School of Medicine ACTION as part of the Activation. If it does so, take a Success Roll for the Alchemist and add +1 DICE to the roll. If the roll is a Failure, nothing happens. If it is a Success or a Critical Success, you can do one of the following things:
+* Remove 2 BLOOD MARKERS or 1 INFECTION MARKER from the Alchemist or a friendly model within 1&quot; of the Alchemist.
+* Stand up a friendly model that is Down and which is within 1&quot; of the Alchemist.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2518,10 +2533,10 @@
           <profiles>
             <profile name="Secrets of Cartography &amp; Geometry" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4e71-6ded-f58e-8ffe">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Alchemist has studied long and hard the sciences of cartography and geometry. At the beginning of each battle, immediately before any models are deployed, up to two models in your warband gain the Keyword INFILTRATOR, This ability cannot affect an Alchemist or a model with a base larger than 32mm. In addition, the warband may reroll one Exploration dice in the Exploration phase if you wish. The second result stands.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Alchemist has studied long and hard the sciences of cartography and Geometry. At the start of the game, before deployment, you can pick up to 2 models in the Warband that are mounted on a base of 32mm or less, giving them the INFILTRATOR Keyword for that game.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2537,13 +2552,10 @@
           <profiles>
             <profile name="Secrets of Chemistry &amp; Alchemy" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="77a1-74cd-f781-efb5">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before the battle starts, but after all models (including INFILTRATORS) are deployed, you may place a rectangular
-elemental obstacle 2” wide and 6” long. It counts both as Difficult Terrain and Dangerous Terrain, and damage it
-causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed). It cannot be placed within
-6” of any model or on top of any other Terrain.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the start of the first Turn of the game, before any models have been Activated, you can set up an Elemental Obstacle terrain piece that is up to 2&quot; wide and 6&quot; long. It must be set up more than 1&quot; away from any other terrain pieces and more than 6&quot; from any models. After setting it up, you must say if it has the FIRE, GAS, or SHRAPNEL Keyword. The Elemental Obstacle is Difficult and Dangerous terrain. Any Injury Rolls caused by the Dangerous terrain rule have the Keywords you chose when you set the terrain up.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2559,10 +2571,10 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
           <profiles>
             <profile name="Secrets of Takwin" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4285-e047-b265-bc62">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Alchemist has bound their Takwin creature to themselves with unbreakable bonds. If the Alchemist is hit by an attack while within 1” of their Homunculus, you may redirect the hit to the Homunculi instead. Determine the injuries and additional effects exactly as if the weapon just hit the Homunculi.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Alchemist has bound their Takwin creature to themselves with unbreakable bonds. If this Alchemist is hit by an attack while within 1&quot; of their Takwin Homunculus, you can apply the hit to the Homunculus and make the Injury Roll for it instead of the Alchemist.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2578,10 +2590,10 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
           <profiles>
             <profile name="Secrets of Philosophy, Poetry and Theology" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1397-70c7-2653-9820">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Alchemist is well-versed in the hidden truths of the universe and of the Divine, and has a calm and clear mind. The warband gains +1 DICE to all Morale Rolls, cannot become Shaken and the Alchemist plus another model of your choice is immune to the effects of the Keyword FEAR.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Alchemist is well-versed in the hidden truths of the Universe and of the Divine and has a calm and clearmind. Add +1 DICE to Morale Check Success Rolls for this Alchemist’s Warband, as long as the Alchemist is not Down or Out of Action. In addition, if this Alchemist’s Warband becomes Shaken, ignore the requirement that all Success Rolls become Risky Success Rolls (however you still need to see if the Warband flees in the following Turn’s Morale Phase). The Alchemist has the NEGATE FEAR Keyword</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE FEAR</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3062,20 +3074,20 @@ which is mounted on a 40mm base.
             </modifierGroup>
           </modifierGroups>
         </profile>
-        <profile name="Artificial Body" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ed29-27ae-0cae-da7e">
+        <profile name="Artificial Life" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ed29-27ae-0cae-da7e">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Created through the Jabirean alchemy, the Homunculus has no vital organs and they have to be dismembered in order to kill them. All injury rolls against the Homunculus are made with -1 DICE.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 DICE to Injury Rolls for a Takwin Homunculus.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Re-creation" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7fcf-ee16-4d90-be2c">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the Homunculus is taken Out of Action during battle, and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats at any time between battles to bring it back to life with all of its weapons and abilities</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a Takwin Homunculus is killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats to leave it on the Roster.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
       </profiles>
@@ -3090,16 +3102,23 @@ which is mounted on a 40mm base.
               <profiles>
                 <profile name="Wings" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dcc1-4b2d-69a9-224d">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus gains a new movement mode: 8”/Flying</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Change this Takwin Homunculus’s Movement Characteristic to 8&quot;/Flying. A Homunculus cannot have the Wings Alchemical Formula if it has the Massive Size Alchemical Formula.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1674-62f2-c48d-e189" includeChildSelections="false"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="246c-e662-2f58-db1b" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Elemental Resistance" hidden="false" id="f500-e61c-b740-703c" sortIndex="2">
               <costs>
@@ -3109,16 +3128,19 @@ which is mounted on a 40mm base.
               <profiles>
                 <profile name="Elemental Resistance" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a2be-ba4e-81e3-ee95">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Attacks made against the Homunculus that have the Keywords FIRE and/or GAS suffer a -1 DICE penalty to injure it. Also, the Homunculus does not suffer additional BLOOD MARKERS from attacks with Keywords FIRE and/or GAS.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Give this Takwin Homunculus the NEGATE FIRE and NEGATE GAS Keywords. In addition, add -1 INJURY DICE to Injury Rolls for attacks with the FIRE or GAS Keywords that target this Takwin Homunculus.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE FIRE, NEGATE GAS</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c36a-edea-b78a-5ba6" includeChildSelections="false"/>
               </constraints>
+              <infoLinks>
+                <infoLink name="Negate [Keyword]" id="40ad-a88e-d658-de49" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Human Hands" hidden="false" id="c251-4b5c-2ba0-82e0" sortIndex="5">
               <costs>
@@ -3128,10 +3150,13 @@ which is mounted on a 40mm base.
               <profiles>
                 <profile name="Human Hands" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4d8a-f815-3da6-f146">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus can buy and wield any weapon allowed in the Iron Sultanate warband or House of Wisdom list, though they cannot select ELITE only items, grenades or items limited to specific units (such as Assassins). They can also carry a Trench Shield or a Fire Shield. This will apply to the Additional Arms formula as well. Cannot be combined with the Wings formula.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Takwin Homunculus can have Ranged and Melee Weapons from the Iron Sultanate Armoury. It can also have a Trench Shield or a Fire Shield. A Homunculus cannot have the Human Hands Alchemical Formula if it has the Wings Alchemical Formula. It cannot use its Pummelling Blows ability if it is armed with any Melee Weapons.
+
+
+* If a Takwin Homunculus with Human hands also has an Additional Arm, then it can have three 1-Handed Melee Weapons or two 1-Handed Melee Weapons and one 2-Handed Melee Weapon, and it can have three 1-Handed Ranged Weapons or two 1-Handed Ranged Weapons and one 2-Handed Ranged Weapon. If it takes a Shield, then the Shield replaces one of the Melee Weapons it can have but the Shield-combo rule cannot be used for any of its weapons. In addition, when it takes a Fight ACTION it can make 1 Melee Attack with each Melee Weapon that it has, one after the other. If it makes more than 1 attack, the Off-Hand Melee Modifier applies to the last Melee Attack that it makes. When it takes a Shoot ACTION it can make 1 Ranged Attack with up to two Ranged Weapons that it has, one after the other.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3154,10 +3179,10 @@ which is mounted on a 40mm base.
               <profiles>
                 <profile name="Enslaved Mind" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f071-7b84-eda1-d2b0">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus gains the Keyword FIRETEAM along with one model of your choice in the Warband. The other model can only form a Fireteam with this Homunculi, not with any other models.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Give this Takwin Homunculus and one other model in your Warband the FIRETEAM Keyword. The other model can only form a Fireteam with this Homunculus.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3181,7 +3206,7 @@ which is mounted on a 40mm base.
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="88f5-dd59-4f09-528f" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="self" shared="true" id="88f5-dd59-4f09-528f" includeChildSelections="false"/>
               </constraints>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -3207,10 +3232,10 @@ which is mounted on a 40mm base.
               <profiles>
                 <profile name="Inhuman Strength" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c21b-3605-9267-3fbb">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The musculature of the Homunculus is reinforced, replaced and strengthened. It now has a base size of 32mm (or 50mm if it also has Massive size). The Homunculus gains +1 DICE to its Melee characteristic and the Keyword STRONG.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The musculature of the Homunculus is reinforced, replaced and strengthened. Give this Takwin Homunculus the STRONG Keyword, change its Melee Characteristic to +1 DICE, and increase its base size to 32mm</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">STRONG</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3226,10 +3251,10 @@ which is mounted on a 40mm base.
               <profiles>
                 <profile name="Terrifying Appearance" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bcc6-de73-31ae-56cf">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Whether by captivating beauty or a terrifying appearance, this Homunculus gains the Keyword FEAR.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The formula bestows an alluring beauty or horrifying visage upon the Homunculus. Give this Takwin Homunculus FEAR Keyword</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">FEAR</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3245,13 +3270,10 @@ which is mounted on a 40mm base.
               <profiles>
                 <profile name="Additional Arm" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d227-b378-83da-84ac">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus can perform an additional attack ACTION in Melee or Ranged combat without any penalty. Therefore, if making attacks with three melee weapons, only a single weapon would need to be declared an Off-Hand weapon (suffering the appropriate penalties). It has three hands to carry weapons if combined with Human Hands, and may equip weapons and a shield in any combination, as long as it has hands free to do so. 
-
-
-In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has sufficient weapons and number of hands to carry them), and up to three Melee Attack ACTIONS (if armed with three one-handed weapons); or one Melee Attack ACTION with a two-handed weapon and one Melee Attack ACTION with a one-handed weapon.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Takwin Homunculus can make 2 Melee Attacks, one after the other, when it takes a Fight ACTION. Note that if you spend BLOOD MARKERS to modify the Injury Rolls for one attack, they do not modify Injury Rolls for any of the subsequent attacks.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3259,14 +3281,15 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3daa-ac8f-7f92-fe30" includeChildSelections="false"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Additional Head" hidden="false" id="7c26-046f-1b11-cf08" sortIndex="9">
+            <selectionEntry type="upgrade" import="true" name="Two Heads" hidden="false" id="7c26-046f-1b11-cf08" sortIndex="9">
               <profiles>
-                <profile name="Additional Head" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a797-7607-858a-8c56">
+                <profile name="Two Heads" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a797-7607-858a-8c56">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus has two heads and therefore can have two sets of eyes via Alchemical Formula.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Takwin Homunculus can have both the Hawk Eyes and
+Hypnotic Eyes Alchemical Formulas.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3282,10 +3305,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <profiles>
                 <profile name="Startling Speed" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f816-4ccd-1d94-171b">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus adds +1 DICE to its Dash ACTIONS.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add +1 DICE to the Risky Success Roll for this Takwin Homunculus when it takes a Dash ACTION.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3301,10 +3324,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <profiles>
                 <profile name="Seal of Solomon" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1212-09b5-42dd-9a05">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Formula greatly enhances the intelligence of the Homunculus and makes it painfully aware of its artificial existence. It can now buy and use Equipment from the Sultanate Warband Armoury as long as it is not limited to ELITE models. Note that one helmet protects a Homunculus with two heads normally and the Two Heads Formula does not allow the purchase of two different kinds of headgear.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Formula greatly enhances the intelligence of the Homunculus and makes it painfully aware of its artificial existence. This Takwin Homunculus can have Equipment from the Iron Sultanate Armoury.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3316,14 +3339,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Gargantuan Size" hidden="true" id="6603-2315-97b5-d845" sortIndex="13">
+            <selectionEntry type="upgrade" import="true" name="Massive Size" hidden="true" id="6603-2315-97b5-d845" sortIndex="13">
               <profiles>
-                <profile name="Gargantuan Size" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8cb2-f9e6-e496-1153">
+                <profile name="Massive Size" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8cb2-f9e6-e496-1153">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Can only be bought if the Homunculus already has the Human Hands, Inhuman Strength and Massive Size Formulas. The Homunculus now has a Base Size of 60mm and it can now use one Brazen Bull Only weapon.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus’ size is increased into vast proportions. Give this Takwin Homunculus the TOUGH Keyword and increase its base size to 50mm. A Homunculus cannot have the Massive Size Alchemical Formula if it has the Wings Alchemical Formula.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">TOUGH</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3331,7 +3354,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d86-4eb8-3e18-fb23" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <modifiers>
@@ -3348,14 +3371,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Regenerative" hidden="false" id="98cd-4186-8208-9b0e">
+            <selectionEntry type="upgrade" import="true" name="Regenerative Tissue" hidden="false" id="98cd-4186-8208-9b0e">
               <profiles>
-                <profile name="Regenerative" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="30b8-b72a-077c-fb93">
+                <profile name="Regenerative Tissue" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="30b8-b72a-077c-fb93">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus has an astonishing healing factor and can remove one BLOOD MARKER every time it is Activated, if it has any.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">When you Activate this Takwin Homunculus, before carrying out any ACTIONS you can remove up to 1 BLOOD MARKER from the model.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3389,10 +3412,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                   <profiles>
                     <profile name="Hypnotic Eyes" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7a49-17b2-a239-1d6c">
                       <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enemies suffer -1 DICE to hit the Homunculus in Melee. Does not affect Sniper Priests or enemies with the keyword BLACK GRAIL. Cannot be combined with Hawk Eyes without Two Heads.</characteristic>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 DICE to Success Rolls for Melee Attacks that target this Takwin Homunculus, unless the attack is made by a Sniper Priest or a model with the BLACK GRAIL Keyword. A Homunculus cannot have the Hypnotic Eyes Alchemical Formula if it has the Hawk Eyes Alchemical Formula unless it also has the Two Heads Alchemical Formula</characteristic>
+                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3408,10 +3431,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                   <profiles>
                     <profile name="Hawk Eyes" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="46f5-9ae0-66a3-e515">
                       <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">The eyesight of the Homunculus is based on that of a predatory bird. It can add +1 DICE to its Ranged Attack characteristic. Cannot be combined with Hypnotic Eyes without Two Heads.</characteristic>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">The eyesight of the Homunculus is based on that of a predatory bird. Change the Ranged Characteristic of this Takwin Homunculus to +1 DICE. A Homunculus cannot have the Hawk Eyes Alchemical Formula if it has the Hypnotic Eyes Alchemical Formula unless it also has the Two Heads Alchemical Formula.</characteristic>
+                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5512,6 +5535,16 @@ Assassin makes the time slip.</characteristic>
       <categoryLinks>
         <categoryLink targetId="bd43-ddb1-262d-4489" id="bf7a-6fa0-48c6-4966" primary="true" name="Troop"/>
       </categoryLinks>
+      <profiles>
+        <profile name="Pummelling Blows" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e028-d503-dcf3-b3cf">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Takwin Homunculus can make a Melee Attack even though it does not have any Melee Weapons.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+          </characteristics>
+        </profile>
+      </profiles>
     </entryLink>
   </entryLinks>
 </catalogue>
