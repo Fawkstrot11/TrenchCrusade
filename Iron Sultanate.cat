@@ -145,6 +145,7 @@
           </costs>
           <infoLinks>
             <infoLink name="Marid Shovel" id="7fae-c4a9-0026-16f3" hidden="false" type="profile" targetId="20a6-1425-0331-7e02"/>
+            <infoLink name="Heavy" id="66ec-1067-8b6b-7106" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d033-5263-2aa8-7122" includeChildSelections="false"/>
@@ -214,19 +215,18 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Hashinshin Leaf" hidden="true" id="fdd0-11e7-0db6-acb2" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Hashashin Leaf" hidden="true" id="fdd0-11e7-0db6-acb2" sortIndex="2">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <profiles>
-            <profile name="Hashinshin Leaf" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ec64-7a03-2155-796b">
+            <profile name="Hashashin Leaf" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ec64-7a03-2155-796b">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before the battle begins, a model may use this item to gain the Keyword STRONG until the end of a battle. 
-Keywords: CONSUMABLE.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">When you deploy a model with a Hashashin Leaf for the first time in a game, you can say that the model will consume the Hashashin Leaf. If you do so, the model has the STRONG Keyword for the rest of the game</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -261,11 +261,10 @@ Keywords: CONSUMABLE.</characteristic>
           <profiles>
             <profile name="Elixir of Al-Khidr" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7d3a-4d24-677e-bb71">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Gives the model consuming the Elixir Keyword TOUGH for the duration of a single battle. It cannot be given to Lions of Jabir, Brazen Bulls or Homunculi.
-Keywords: CONSUMABLE</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062"> Fountain of Life: When deploying a model with an Elixir of Al-Khidr for the first time in a game, you can say that the model will consume the Elixir of Al-Khidr. If you do so, the model has the TOUGH Keyword for the rest of the game. An Elixir of AlKhidr cannot be used by models with the ARTIFICIAL Keyword.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -314,10 +313,11 @@ Keywords: CONSUMABLE</characteristic>
           <profiles>
             <profile name="Explosive Charges" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9902-c422-18ce-ab2b">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">After deployment but before the battle starts select one piece of terrain that is not a Scenario Objective granting Victory Points and no model is touching outside of the enemy Deployment Zone. Write on a piece of paper which terrain piece it is. It can be no bigger than 8” x 8” (an 8” section of trench, a wall, a tree, a building etc). The Sappers have placed explosive charges here before the battle. Whenever you Activate one of your models you can declare you are detonating the charges by revealing the name of the terrain piece. Roll on the Injury Chart to see what happens to any model that is placed touching or on top of this terrain piece. The mine has the Keyword SHRAPNEL. After this, the terrain piece is removed from the game. If any model(s) are standing on top of the terrain piece when it explodes they will have to roll on the Injury Chart immediately. If they are on top of the terrain piece and are more than 2” high, they suffer Falling damage as per standard rules. Remove this terrain piece permanently from the play.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">* Hidden Explosives: At the start of the game, after Deployment, you can say that a model that has Explosive Charges is going to plant them on the battlefield. If you do so, secretly write down their location on a piece of paper. The Explosive Charges must be planted on a terrain piece that measures up to 8&quot; by 8&quot;, is not fully or partially within the enemy deployment zone or within 1&quot; of a model, and which is not a scenario objective that is worth any Victory Points.
+* Detonating the Explosives: When you Activate a friendly model, before you carry out any ACTIONS you can say that the model is going to detonate any hidden explosives you set up at the start of the game. If you do so, show your opponent the piece of paper saying where the explosives are hidden, and then make an Injury Roll with the SHRAPNEL Keyword for each model (friend or foe) that is in on or in contact with the terrain piece. The terrain piece is then removed from the game. Models that were on top of the terrain piece Fall directly down to the battlefield, and an additional Injury Roll may have to be made for them if they Fall 3&quot; or more.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -346,6 +346,32 @@ Keywords: CONSUMABLE</characteristic>
               </conditionGroups>
             </modifier>
           </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Takwin Anqā Bird" hidden="false" id="3f63-ae26-fd5d-3411" sortIndex="19">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8780-ee92-2dd8-9229" includeChildSelections="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Takwin Anqā Bird" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0888-90bb-c320-ca0f">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Cause Confusion: Success Rolls taken for Melee Attacks that target a model with a Takwin Anqā Bird become Risky Success Rolls (there is no additional effect if they are Risky Success Rolls already). In addition, before an enemy model within 1&quot; of a model with Takwin Anqā Bird makes a retreat, the opposing player must take a Risky Success Roll for the model. If the Roll is a Failure the enemy model cannot retreat and its Activation ends. If the Roll is a Success or a Critical Success, the enemy model can retreat normally.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -403,6 +429,9 @@ Keywords: CONSUMABLE</characteristic>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2a4-5514-5559-42c0" includeChildSelections="false"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="New Info (link)" id="e516-412b-5cc9-918b" hidden="false" type="rule"/>
+          </infoLinks>
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
@@ -682,8 +711,8 @@ Keywords: CONSUMABLE</characteristic>
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY MODIFIER</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Attack Twice: You can make 2 Melee Attacks with this Weapon, one after the other, when it is used as a Melee Weapon. Note that if you spend BLOOD MARKERS to modify the Injury Rolls for one attack, they do not modify Injury Rolls for any of the subsequent attacks.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -785,8 +814,9 @@ Keywords: CONSUMABLE</characteristic>
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink name="Assault" id="ef32-5c75-b4b8-cc15" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Block" id="ef32-5c75-b4b8-cc15" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
             <infoLink name="Cumbersome" id="8946-47f7-7bbc-b48b" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+            <infoLink name="Assault" id="d983-745a-9ddd-94d3" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
           </infoLinks>
           <profiles>
             <profile name="Alchemical Halberd-Gun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="true" id="b403-8915-ec25-37b4">
@@ -919,8 +949,9 @@ Keywords: CONSUMABLE</characteristic>
           </costs>
           <infoLinks>
             <infoLink name="MURAD Bombard" id="867d-5eb8-ca67-d90f" hidden="false" type="profile" targetId="556c-7009-6fc2-d658"/>
-            <infoLink name="Heavy" id="9613-a449-1d54-947e" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Scatter" id="9613-a449-1d54-947e" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
             <infoLink name="Blast" id="32e3-3264-c86f-4a19" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+            <infoLink name="Heavy" id="c54d-e093-1c21-ca50" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -949,8 +980,9 @@ Keywords: CONSUMABLE</characteristic>
           </costs>
           <infoLinks>
             <infoLink name="Flame Cannon" id="2e68-e36d-6da8-2c95" hidden="false" type="profile" targetId="ac5c-14a9-8462-8ddd"/>
-            <infoLink name="Heavy" id="6bfc-aaf6-c7f9-1ace" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore Armour" id="6bfc-aaf6-c7f9-1ace" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
             <infoLink name="Fire" id="a68c-2e40-0486-da66" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+            <infoLink name="Heavy" id="9087-404b-94dc-b1b8" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1071,7 +1103,12 @@ Keywords: CONSUMABLE</characteristic>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Sultanate Grand Cannon" hidden="false" id="bdbc-7944-e0d0-2e0a" type="selectionEntry" targetId="d9f1-b37e-ff7c-cffe" sortIndex="7"/>
+        <entryLink import="true" name="Sultanate Grand Cannon" hidden="false" id="bdbc-7944-e0d0-2e0a" type="selectionEntry" targetId="d9f1-b37e-ff7c-cffe" sortIndex="7">
+          <infoLinks>
+            <infoLink name="Heavy" id="0dfc-5c79-4698-f0db" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore Armour" id="723c-3603-7aa7-6d79" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+          </infoLinks>
+        </entryLink>
         <entryLink import="true" name=" Sultanate Grand Cannon" hidden="true" id="3170-6b1d-e2ce-2be6" type="selectionEntry" targetId="bf03-e9ef-b9e7-b490" sortIndex="6">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1092,6 +1129,10 @@ Keywords: CONSUMABLE</characteristic>
               </conditionGroups>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Heavy" id="46a4-f568-b4f9-1ca0" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore Armour" id="0736-e12a-fab7-fcde" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+          </infoLinks>
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
@@ -1306,14 +1347,15 @@ Keywords: CONSUMABLE</characteristic>
           </modifiers>
           <infoLinks>
             <infoLink name="Critical" id="2315-cfde-81b6-7798" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+            <infoLink name="Ignore Armour" id="65db-14e9-b074-fabb" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <profiles>
             <profile name="Bow of Alamut" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="1bff-0694-c7a5-a7f8">
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">40&quot;</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL</characteristic>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL, IGNORE ARMOUR</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Temporal Slipstream: If a Ranged Attack made with this Weapon causes any BLOOD MARKERS to be placed on the target model, you can immediately redeploy the attacking model within 1&quot; of the target model, regardless of the distance or any intervening obstacles. Note that if the attack takes the target Out of Action, no BLOOD MARKERS are placed and this ability cannot be used.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1665,6 +1707,7 @@ Keywords: CONSUMABLE</characteristic>
                     </modifier>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Shrapnel" id="ffe3-d939-b26b-f9ab" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
@@ -2062,13 +2105,17 @@ Keywords: CONSUMABLE</characteristic>
           <profiles>
             <profile name="Banner of Desert Wind" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a92a-fa8e-15f9-f2f2">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This banner occupies one hand at all times and acts as Troop Flag. In addition, as long as the model carrying this banner is not Down or Out of Action, all enemies with 24” have to reduce their Movement Characteristic of by 1”.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Sandstorm: Subtract 1 from the Movement Characteristic of enemy models within 24&quot; of a model with the Banner of Desert Wind, unless the model with the Banner of Desert Wind is Down.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD, LEADER</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Leader" id="d0fc-6b51-ab1e-732d" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
+            <infoLink name="Held" id="7764-38e8-840f-8b34" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2105,10 +2152,10 @@ Keywords: CONSUMABLE</characteristic>
               <profiles>
                 <profile name="Fire Shield" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ce56-ea31-c691-08eb">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Always takes one hand to use in both melee and in ranged combat. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated. Any attack against this model that has the Keyword FIRE will suffer -1 DICE on injury rolls and will not cause an additional BLOOD MARKER.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Fire Shield: Add -1 INJURY DICE to Injury Rolls for attacks with the FIRE Keyword that targets a model that has a Fire Shield, even if the attacking weapon has the IGNORE ARMOUR Keyword.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Shield</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-1 INJURY MODIFIER, NEGATE FIRE</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2131,6 +2178,9 @@ Keywords: CONSUMABLE</characteristic>
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Negate [Keyword]" id="5d28-0228-e7f9-4840" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Iron Wall Kalkan" hidden="true" id="b246-355b-f3ba-f72e">
               <costs>
@@ -2140,10 +2190,11 @@ Keywords: CONSUMABLE</characteristic>
               <profiles>
                 <profile name="Iron Wall Kalkan" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bfda-ea24-3f37-828d">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Takes always one hand to use in both melee and in ranged combat and cannot be switched out. The target is always considered to be in Cover when shot, and counts as fighting behind a defended obstacle when an enemy charges them. In addition, when the Brazen bull is Activated and it is in combat with only 1 model on a 40mm or smaller base, the Bull can Move normally (though not Charge or Dash), pushing its opponent in the same direction as the Bull is moving and travelling the same distance as the Bull moves if it moves directly towards the enemy that is in front half of its base. This can push the enemies so they fall as per Falling rules), and if the Bull pushes the opponent against a terrain piece higher than 2”, both models stop and the opponent immediately rolls on the injury table.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Othismos: When a Brazen Bull that has an Iron Wall Kalkan takes a Move ACTION (not a Dash or Charge) and is in contact with 1 enemy model that is mounted on a base of 40mm or less, then the Brazen Bull can use the Iron Wall Kalkan to push the enemy model when it moves. The Brazen Bull must move in a straight line, directly towards the enemy model. The enemy model is pushed in front of the Brazen Bull as the Brazen Bull moves along. The move can also be used to push a model off a terrain piece, so that it Falls (▶ see Comprehensive Rules in the Trench Crusade Digital Rulebook). If the move pushes the enemy model into contact with another model, both the enemy model and the Brazen Bull must stop moving. If it pushes the enemy into contact with a terrain piece that is more than ½&quot; high, the enemy model and the Brazen Bull must stop moving and an Injury Roll is made for the enemy model.
+</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">SHIELD</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">COVER</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2295,6 +2346,7 @@ Keywords: CONSUMABLE</characteristic>
         <selectionEntry type="upgrade" import="true" name="Alchemist Armour" hidden="true" id="a2de-13d5-ab9c-8c93" sortIndex="3">
           <infoLinks>
             <infoLink name="Alchemist Armour" id="2501-18d0-d32d-df6d" hidden="false" type="profile" targetId="68e2-bde3-19a9-2980"/>
+            <infoLink name="Negate [Keyword]" id="174a-9ccb-3b1d-a868" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
           </infoLinks>
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
@@ -2355,13 +2407,10 @@ Keywords: CONSUMABLE</characteristic>
           <profiles>
             <profile name="Secret Paths" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4a5d-ed21-5b9f-231f">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the start of the battle, right before the first model is set up, declare whether or not this model will be set up by using Secret Paths. A model using the Secret Paths is not set up on the battlefield at the start of the battle and it may not be activated normally during the first turn. 
-
-
-Starting in the second turn, you may activate these models. When you do, set up the model in contact with an edge of the battlefield but more than 8” away from all enemy models at the start of its activation. If both players have such models, the starting player declares whether one of their models is deployed or not first, followed by the other player. Alternate as normal until all such models have been declared as using Secret Paths or not.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the start of the game, before deployment, you can say that this Assassin is using Secret Paths. If you do so, the Assassin is not deployed at the start of the game, and cannot be Activated in the first Turn of the game. Starting from the second Turn, you can Activate the Assassin using the Secret Paths. To do so, deploy the Assassin in contact with any edge of the battlefield and more than 8&quot; away from all enemy models. You can then carry on with the rest of its Activation normally.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2377,10 +2426,10 @@ Starting in the second turn, you may activate these models. When you do, set up
           <profiles>
             <profile name="Hallucinogen Disguise" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="72b6-02cc-db0a-7b35">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">An INFILTRATOR with this ability can be deployed anywhere on the battlefield, including the enemy Deployment Zone, as long as the model is at least 8” away from any enemy models. The model does not have to be out of Line of Sight. Binoculars or Guard Dogs have no effect on this ability.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If this Assassin is deployed using the INFILTRATOR Keyword, it must be deployed at least 8&quot; away from any enemy models but you may ignore any and all other restrictions that apply to deploying an INFILTRATOR. For example, the model can be deployed in the Line of Sight of an enemy model, enemy Guard Dogs do not affect how it is deployed, and so on.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2396,10 +2445,10 @@ Starting in the second turn, you may activate these models. When you do, set up
           <profiles>
             <profile name="Thunderbolt of Alamut" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a808-515b-bd90-4516">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The model has +2” movement and +1 DICE on its Dash ACTIONS.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add 2&quot; to this Assassin’s Movement Characteristic, and add +1 DICE to the Risky Success Roll when this Assassin takes a Dash ACTION</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2415,10 +2464,10 @@ Starting in the second turn, you may activate these models. When you do, set up
           <profiles>
             <profile name="Mirage of Time" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="58b6-00de-abd0-501c">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Both Ranged and Melee attacks against the Assassin suffer -1 DICE penalty when determining if they hit.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 DICE to the Success Roll for attacks that target this Assassin.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2444,10 +2493,13 @@ Starting in the second turn, you may activate these models. When you do, set up
           <profiles>
             <profile name="Secrets of Medicine" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="0966-6f0e-5300-4284">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Alchemist is a student of Ibn Sina’s School of Medicine. The model is equipped with tools for healing from the House of Wisdom. The Alchemist can take an ACTION with +1 DICE to remove up to two BLOOD MARKERS or a single INFECTION MARKER from any one friendly model (including themselves) within 1” range or allow one friendly model (including themselves) who is Down to regain their footing. This training and these tools are an improvement upon the standard Medi-Kit and therefore a model with this Secret cannot carry a Medi-Kit</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Alchemist is a student of Ibn Sina’s School of Medicine.
+This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemist it can take a School of Medicine ACTION as part of the Activation. If it does so, take a Success Roll for the Alchemist and add +1 DICE to the roll. If the roll is a Failure, nothing happens. If it is a Success or a Critical Success, you can do one of the following things:
+* Remove 2 BLOOD MARKERS or 1 INFECTION MARKER from the Alchemist or a friendly model within 1&quot; of the Alchemist.
+* Stand up a friendly model that is Down and which is within 1&quot; of the Alchemist.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2463,10 +2515,10 @@ Starting in the second turn, you may activate these models. When you do, set up
           <profiles>
             <profile name="Secrets of Cartography &amp; Geometry" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4e71-6ded-f58e-8ffe">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Alchemist has studied long and hard the sciences of cartography and geometry. At the beginning of each battle, immediately before any models are deployed, up to two models in your warband gain the Keyword INFILTRATOR, This ability cannot affect an Alchemist or a model with a base larger than 32mm. In addition, the warband may reroll one Exploration dice in the Exploration phase if you wish. The second result stands.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Alchemist has studied long and hard the sciences of cartography and Geometry. At the start of the game, before deployment, you can pick up to 2 models in the Warband that are mounted on a base of 32mm or less, giving them the INFILTRATOR Keyword for that game.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2482,13 +2534,10 @@ Starting in the second turn, you may activate these models. When you do, set up
           <profiles>
             <profile name="Secrets of Chemistry &amp; Alchemy" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="77a1-74cd-f781-efb5">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before the battle starts, but after all models (including INFILTRATORS) are deployed, you may place a rectangular
-elemental obstacle 2” wide and 6” long. It counts both as Difficult Terrain and Dangerous Terrain, and damage it
-causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed). It cannot be placed within
-6” of any model or on top of any other Terrain.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the start of the first Turn of the game, before any models have been Activated, you can set up an Elemental Obstacle terrain piece that is up to 2&quot; wide and 6&quot; long. It must be set up more than 1&quot; away from any other terrain pieces and more than 6&quot; from any models. After setting it up, you must say if it has the FIRE, GAS, or SHRAPNEL Keyword. The Elemental Obstacle is Difficult and Dangerous terrain. Any Injury Rolls caused by the Dangerous terrain rule have the Keywords you chose when you set the terrain up.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2504,10 +2553,10 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
           <profiles>
             <profile name="Secrets of Takwin" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4285-e047-b265-bc62">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Alchemist has bound their Takwin creature to themselves with unbreakable bonds. If the Alchemist is hit by an attack while within 1” of their Homunculus, you may redirect the hit to the Homunculi instead. Determine the injuries and additional effects exactly as if the weapon just hit the Homunculi.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Alchemist has bound their Takwin creature to themselves with unbreakable bonds. If this Alchemist is hit by an attack while within 1&quot; of their Takwin Homunculus, you can apply the hit to the Homunculus and make the Injury Roll for it instead of the Alchemist.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2523,10 +2572,10 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
           <profiles>
             <profile name="Secrets of Philosophy, Poetry and Theology" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1397-70c7-2653-9820">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Alchemist is well-versed in the hidden truths of the universe and of the Divine, and has a calm and clear mind. The warband gains +1 DICE to all Morale Rolls, cannot become Shaken and the Alchemist plus another model of your choice is immune to the effects of the Keyword FEAR.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Alchemist is well-versed in the hidden truths of the Universe and of the Divine and has a calm and clearmind. Add +1 DICE to Morale Check Success Rolls for this Alchemist’s Warband, as long as the Alchemist is not Down or Out of Action. In addition, if this Alchemist’s Warband becomes Shaken, ignore the requirement that all Success Rolls become Risky Success Rolls (however you still need to see if the Warband flees in the following Turn’s Morale Phase). The Alchemist has the NEGATE FEAR Keyword</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE FEAR</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2702,23 +2751,37 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">48&quot;</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 INJURY DICE, HEAVY IGNORE ARMOUR</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb"> Deploying a Gun Battery: A Grand Cannon that is included in the Armoury on a Warband’s roster as a gun battery must be mounted on its own 50mm base. It is deployed in the same way as a unit when the Warband is deployed. After it has been deployed it is treated as a piece of Impassable terrain and cannot be moved or attacked during the game.
+* Firing a Gun Battery: Each Grand Cannon weapon battery can be used once per Turn by a friendly model that is within 1&quot; of it, as long as both the friendly model and the Grand Cannon are not within 1&quot; of an enemy model, and as long as the friendly model does not move as part of the same Activation. The friendly model must take a Shoot ACTION, and can then use the Grand Cannon as the Ranged Weapon for the attack using the profile above (if the model is an Alchemist, then its Mastery of the Elements ability will apply to the attack). Measure the range and check the Line of Sight using the Grand Cannon instead of the attacking model. In a campaign the Grand Cannon gun battery is assumed to have been returned to the Warband’s Armoury at the end of the game, and will be available to be deployed in the Warband’s next game.
+* Unstoppable Object: If a model that has been hit by a Sultanate Grand Cannon is not taken Out of Action by the Injury Roll, it is pushed D6&quot; in a straight line directly away from the attacking model. The model stops if it is pushed into another model, Impassable terrain or a terrain piece it cannot cross without having to Climb.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <categoryLinks>
             <categoryLink targetId="70c9-988d-71a7-7654" id="3b70-8a7b-8528-71fc" primary="false" name="Heavy"/>
           </categoryLinks>
+          <infoLinks>
+            <infoLink name="Heavy" id="c48e-165e-9aaa-1b63" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore Armour" id="6659-8fec-9124-8b48" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Anqā Guard" hidden="true" id="20ec-9e12-6cdf-abe2">
           <profiles>
             <profile name="Anqā Guard" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="dbf1-479d-1dfa-29e2">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This transportable fortification is represented by a 1” high standing shield on 40mm base. They can either be placed anywhere within your own deployment zone after all other models are deployed. Alternatively, a sapper may carry one on their back, and then deploy it with a +2 DICE RISKY ACTION during their Activation as long as the Sapper is not in Melee combat. In this case, it must be placed within 1” of the Sapper. In either case, they count as both Cover and a Defended Obstacle once deployed.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">An Anqā Guard is represented by a model of a shield that is about 1&quot; high and
+which is mounted on a 40mm base.
+
+
+* Pre-battle Deployment: At the start of each game, after Deployment, you can say that a model that has an Anqā Guard is going to deploy it. If you do so, deploy the Anqā Guard anywhere wholly within your deployment zone. 
+* Combat Deployment ACTION: A model that has an Anqā Guard can take a Combat Deployment ACTION. If it does so, take a Risky Success Roll for the model and add +2 DICE to the roll. If the roll is a Failure, nothing happens and the model’s Activation ends. If the roll is a Success or Critical Success, you can deploy the Anqā Guard within 1&quot; of the model. 
+
+* Mobile Cover: Once deployed, the Anqā Guard is treated as a piece of Impassable terrain and can serve as Cover or a Defended Obstacle. The model that had the Anqā Guard is not considered to be carrying it for the rest of the game.
+</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HEAVY</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2726,6 +2789,9 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Heavy" id="4b81-9d97-ddf3-e795" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -2990,20 +3056,20 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
             </modifierGroup>
           </modifierGroups>
         </profile>
-        <profile name="Artificial Body" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ed29-27ae-0cae-da7e">
+        <profile name="Artificial Life" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ed29-27ae-0cae-da7e">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Created through the Jabirean alchemy, the Homunculus has no vital organs and they have to be dismembered in order to kill them. All injury rolls against the Homunculus are made with -1 DICE.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 DICE to Injury Rolls for a Takwin Homunculus.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Re-creation" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7fcf-ee16-4d90-be2c">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the Homunculus is taken Out of Action during battle, and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats at any time between battles to bring it back to life with all of its weapons and abilities</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a Takwin Homunculus is killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats to leave it on the Roster.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
       </profiles>
@@ -3018,16 +3084,23 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
               <profiles>
                 <profile name="Wings" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="dcc1-4b2d-69a9-224d">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus gains a new movement mode: 8”/Flying</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Change this Takwin Homunculus’s Movement Characteristic to 8&quot;/Flying. A Homunculus cannot have the Wings Alchemical Formula if it has the Massive Size Alchemical Formula.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1674-62f2-c48d-e189" includeChildSelections="false"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="246c-e662-2f58-db1b" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Elemental Resistance" hidden="false" id="f500-e61c-b740-703c" sortIndex="2">
               <costs>
@@ -3037,16 +3110,19 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
               <profiles>
                 <profile name="Elemental Resistance" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a2be-ba4e-81e3-ee95">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Attacks made against the Homunculus that have the Keywords FIRE and/or GAS suffer a -1 DICE penalty to injure it. Also, the Homunculus does not suffer additional BLOOD MARKERS from attacks with Keywords FIRE and/or GAS.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Give this Takwin Homunculus the NEGATE FIRE and NEGATE GAS Keywords. In addition, add -1 INJURY DICE to Injury Rolls for attacks with the FIRE or GAS Keywords that target this Takwin Homunculus.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE FIRE, NEGATE GAS</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c36a-edea-b78a-5ba6" includeChildSelections="false"/>
               </constraints>
+              <infoLinks>
+                <infoLink name="Negate [Keyword]" id="40ad-a88e-d658-de49" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Human Hands" hidden="false" id="c251-4b5c-2ba0-82e0" sortIndex="5">
               <costs>
@@ -3056,10 +3132,13 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
               <profiles>
                 <profile name="Human Hands" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4d8a-f815-3da6-f146">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus can buy and wield any weapon allowed in the Iron Sultanate warband or House of Wisdom list, though they cannot select ELITE only items, grenades or items limited to specific units (such as Assassins). They can also carry a Trench Shield or a Fire Shield. This will apply to the Additional Arms formula as well. Cannot be combined with the Wings formula.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Takwin Homunculus can have Ranged and Melee Weapons from the Iron Sultanate Armoury. It can also have a Trench Shield or a Fire Shield. A Homunculus cannot have the Human Hands Alchemical Formula if it has the Wings Alchemical Formula. It cannot use its Pummelling Blows ability if it is armed with any Melee Weapons.
+
+
+* If a Takwin Homunculus with Human hands also has an Additional Arm, then it can have three 1-Handed Melee Weapons or two 1-Handed Melee Weapons and one 2-Handed Melee Weapon, and it can have three 1-Handed Ranged Weapons or two 1-Handed Ranged Weapons and one 2-Handed Ranged Weapon. If it takes a Shield, then the Shield replaces one of the Melee Weapons it can have but the Shield-combo rule cannot be used for any of its weapons. In addition, when it takes a Fight ACTION it can make 1 Melee Attack with each Melee Weapon that it has, one after the other. If it makes more than 1 attack, the Off-Hand Melee Modifier applies to the last Melee Attack that it makes. When it takes a Shoot ACTION it can make 1 Ranged Attack with up to two Ranged Weapons that it has, one after the other.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3082,10 +3161,10 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
               <profiles>
                 <profile name="Enslaved Mind" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f071-7b84-eda1-d2b0">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus gains the Keyword FIRETEAM along with one model of your choice in the Warband. The other model can only form a Fireteam with this Homunculi, not with any other models.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Give this Takwin Homunculus and one other model in your Warband the FIRETEAM Keyword. The other model can only form a Fireteam with this Homunculus.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3109,7 +3188,7 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="88f5-dd59-4f09-528f" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="self" shared="true" id="88f5-dd59-4f09-528f" includeChildSelections="false"/>
               </constraints>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -3135,10 +3214,10 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
               <profiles>
                 <profile name="Inhuman Strength" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c21b-3605-9267-3fbb">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The musculature of the Homunculus is reinforced, replaced and strengthened. It now has a base size of 32mm (or 50mm if it also has Massive size). The Homunculus gains +1 DICE to its Melee characteristic and the Keyword STRONG.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The musculature of the Homunculus is reinforced, replaced and strengthened. Give this Takwin Homunculus the STRONG Keyword, change its Melee Characteristic to +1 DICE, and increase its base size to 32mm</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">STRONG</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3154,10 +3233,10 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
               <profiles>
                 <profile name="Terrifying Appearance" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bcc6-de73-31ae-56cf">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Whether by captivating beauty or a terrifying appearance, this Homunculus gains the Keyword FEAR.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The formula bestows an alluring beauty or horrifying visage upon the Homunculus. Give this Takwin Homunculus FEAR Keyword</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">FEAR</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3173,13 +3252,10 @@ causes has the Keyword FIRE, GAS or SHRAPNEL (chosen when the obstacle is placed
               <profiles>
                 <profile name="Additional Arm" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d227-b378-83da-84ac">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus can perform an additional attack ACTION in Melee or Ranged combat without any penalty. Therefore, if making attacks with three melee weapons, only a single weapon would need to be declared an Off-Hand weapon (suffering the appropriate penalties). It has three hands to carry weapons if combined with Human Hands, and may equip weapons and a shield in any combination, as long as it has hands free to do so. 
-
-
-In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has sufficient weapons and number of hands to carry them), and up to three Melee Attack ACTIONS (if armed with three one-handed weapons); or one Melee Attack ACTION with a two-handed weapon and one Melee Attack ACTION with a one-handed weapon.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Takwin Homunculus can make 2 Melee Attacks, one after the other, when it takes a Fight ACTION. Note that if you spend BLOOD MARKERS to modify the Injury Rolls for one attack, they do not modify Injury Rolls for any of the subsequent attacks.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3187,14 +3263,15 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3daa-ac8f-7f92-fe30" includeChildSelections="false"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Additional Head" hidden="false" id="7c26-046f-1b11-cf08" sortIndex="9">
+            <selectionEntry type="upgrade" import="true" name="Two Heads" hidden="false" id="7c26-046f-1b11-cf08" sortIndex="9">
               <profiles>
                 <profile name="Additional Head" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a797-7607-858a-8c56">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus has two heads and therefore can have two sets of eyes via Alchemical Formula.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Takwin Homunculus can have both the Hawk Eyes and
+Hypnotic Eyes Alchemical Formulas.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3210,10 +3287,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <profiles>
                 <profile name="Startling Speed" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f816-4ccd-1d94-171b">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus adds +1 DICE to its Dash ACTIONS.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add +1 DICE to the Risky Success Roll for this Takwin Homunculus when it takes a Dash ACTION.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3229,10 +3306,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <profiles>
                 <profile name="Seal of Solomon" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1212-09b5-42dd-9a05">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Formula greatly enhances the intelligence of the Homunculus and makes it painfully aware of its artificial existence. It can now buy and use Equipment from the Sultanate Warband Armoury as long as it is not limited to ELITE models. Note that one helmet protects a Homunculus with two heads normally and the Two Heads Formula does not allow the purchase of two different kinds of headgear.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Formula greatly enhances the intelligence of the Homunculus and makes it painfully aware of its artificial existence. This Takwin Homunculus can have Equipment from the Iron Sultanate Armoury.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3244,14 +3321,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Gargantuan Size" hidden="true" id="6603-2315-97b5-d845" sortIndex="13">
+            <selectionEntry type="upgrade" import="true" name="Massive Size" hidden="true" id="6603-2315-97b5-d845" sortIndex="13">
               <profiles>
                 <profile name="Gargantuan Size" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8cb2-f9e6-e496-1153">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Can only be bought if the Homunculus already has the Human Hands, Inhuman Strength and Massive Size Formulas. The Homunculus now has a Base Size of 60mm and it can now use one Brazen Bull Only weapon.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus’ size is increased into vast proportions. Give this Takwin Homunculus the TOUGH Keyword and increase its base size to 50mm. A Homunculus cannot have the Massive Size Alchemical Formula if it has the Wings Alchemical Formula.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">TOUGH</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3259,7 +3336,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d86-4eb8-3e18-fb23" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <modifiers>
@@ -3276,14 +3353,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Regenerative" hidden="false" id="98cd-4186-8208-9b0e">
+            <selectionEntry type="upgrade" import="true" name="Regenerative Tissue" hidden="false" id="98cd-4186-8208-9b0e">
               <profiles>
                 <profile name="Regenerative" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="30b8-b72a-077c-fb93">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus has an astonishing healing factor and can remove one BLOOD MARKER every time it is Activated, if it has any.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">When you Activate this Takwin Homunculus, before carrying out any ACTIONS you can remove up to 1 BLOOD MARKER from the model.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3317,10 +3394,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                   <profiles>
                     <profile name="Hypnotic Eyes" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7a49-17b2-a239-1d6c">
                       <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enemies suffer -1 DICE to hit the Homunculus in Melee. Does not affect Sniper Priests or enemies with the keyword BLACK GRAIL. Cannot be combined with Hawk Eyes without Two Heads.</characteristic>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 DICE to Success Rolls for Melee Attacks that target this Takwin Homunculus, unless the attack is made by a Sniper Priest or a model with the BLACK GRAIL Keyword. A Homunculus cannot have the Hypnotic Eyes Alchemical Formula if it has the Hawk Eyes Alchemical Formula unless it also has the Two Heads Alchemical Formula</characteristic>
+                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3336,10 +3413,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                   <profiles>
                     <profile name="Hawk Eyes" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="46f5-9ae0-66a3-e515">
                       <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">The eyesight of the Homunculus is based on that of a predatory bird. It can add +1 DICE to its Ranged Attack characteristic. Cannot be combined with Hypnotic Eyes without Two Heads.</characteristic>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">The eyesight of the Homunculus is based on that of a predatory bird. Change the Ranged Characteristic of this Takwin Homunculus to +1 DICE. A Homunculus cannot have the Hawk Eyes Alchemical Formula if it has the Hypnotic Eyes Alchemical Formula unless it also has the Two Heads Alchemical Formula.</characteristic>
+                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3700,7 +3777,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry type="model" import="true" name="Sapper" hidden="false" id="e874-ea2b-96ed-0f9a">
+    <selectionEntry type="model" import="true" name="Sultanate Sapper" hidden="false" id="e874-ea2b-96ed-0f9a">
       <entryLinks>
         <entryLink import="true" name="Weapons" hidden="false" id="6f17-83fd-34be-044f" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="3"/>
         <entryLink import="true" name="Grenades" hidden="false" id="7060-0360-6812-14b0" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="4"/>
@@ -3715,7 +3792,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="bd43-ddb1-262d-4489" id="1d08-7692-0641-9a5a" primary="true" name="Troop"/>
       </categoryLinks>
       <profiles>
-        <profile name="Sapper" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="6938-a6bd-aec7-18d9">
+        <profile name="Sultanate Sapper" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="6938-a6bd-aec7-18d9">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 Dice</characteristic>
@@ -3769,36 +3846,44 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Mine-setting" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5920-36e6-b95e-f0b4">
+        <profile name="Set Mine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5920-36e6-b95e-f0b4">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">As an ACTION with +2 DICE, the Sapper can mine a piece of terrain they alone are touching, no bigger than 8” x 8” (an 8” section of trench, a wall, a tree, a building etc). If successful, the terrain piece is now mined. Any model (except the Sapper who set the mine) who moves into contact with the terrain piece will trigger the mine. Roll on the Injury Chart to see what happens to the model. The mine has the Keyword SHRAPNEL. After this, the terrain piece is no longer mined.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Sultanate Sapper can take a Set Mine ACTION if they are in contact with a terrain piece that measures up to 8&quot; by 8&quot;. If they do so, take a Success Roll for the model and add +2 DICE to the roll. If the roll is a Failure, nothing happens. If the roll is a Success or a Critical Success, the terrain piece becomes Mined.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Fortify" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2f66-3cf4-7424-cd4d">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">During their Activation, a Sapper can take a RISKY ACTION with +1 DICE. If successful, the Sapper is considered to be in Cover until the model moves. This ACTION cannot be used if the model is in melee combat.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Sultanate Sapper can take a Fortify ACTION. If they do so, take a Risky Success Roll for the Sultanate Sapper. If the roll is a Failure, the Sultanate Sappers Activation ends. If the roll is a Success or a Critical Success, the Sultanate Sapper has the COVER Keyword until they move away from their current position.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
-        <profile name="De-mine" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a162-b451-9a8d-5f6a">
+        <profile name="Defuse Mine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a162-b451-9a8d-5f6a">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a RISKY ACTION the Sapper can disable any mine (see Scenarios) they move in contact with. If they fail, the mine blows causing damage as per the rules.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When you move a Sultanate Sapper into contact with a terrain piece that has been Mined, you can say the Sultanate Sapper will halt and try to defuse the mine before it detonates (▶ see Detonating Mines below). If you do so, take a Risky Success Roll for the model. If the roll is a Failure, the mine detonates anyway and the Sultanate Sapper’s Activation ends. If the roll is a Success or a Critical Success, the mine does not detonate and the terrain piece is no longer considered to be Mined</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Forward Positions" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b748-eebc-d4a5-19c4">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When the Sapper is set up during standard deployment, it can be placed up to 6” away from its player’s Deployment Zone. If deployed in this way, it must be in contact with a piece of scenery. This ability cannot be used if playing a scenario that does not allow the use of INFILTRATORS.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When you deploy a Sultanate Sapper for the first time in a game, you must deploy them up to 6&quot; away from your deployment zone and in contact with a terrain piece that is at least ½&quot; high.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+          </characteristics>
+        </profile>
+        <profile name="Detonating Mine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1003-fdc1-a7f2-68de">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When a model moves into contact with a Mined terrain piece, the mine will detonate unless the model is the one that set the mine, or has the Defuse Mine ability (▶ see above). Make an Injury Roll with the SHRAPNEL Keyword for the model that detonated the mine. The terrain piece is then no longer considered to be Mined. If the model wasn’t taken Down or Out of Action, it can then continue its move. Flying models only detonate a mine if they finish a move in contact with a Mined terrain piece (they can fly across it without setting it off ).</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
       </profiles>
@@ -3823,7 +3908,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Alchemist" hidden="false" id="7c17-5f75-6fd9-73cf">
+    <selectionEntry type="model" import="true" name="Jabirean Alchemist" hidden="false" id="7c17-5f75-6fd9-73cf">
       <entryLinks>
         <entryLink import="true" name="Weapons" hidden="false" id="85cf-e5f2-188a-0511" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="5"/>
         <entryLink import="true" name="Grenades" hidden="false" id="ed14-1fd8-9d84-e35d" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="6"/>
@@ -3843,7 +3928,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Fireteam" hidden="false" id="8c4a-e696-800f-1095" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="2"/>
       </entryLinks>
       <profiles>
-        <profile name="Alchemist" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="8aa4-2bfe-6a85-595c">
+        <profile name="Jabirean Alchemist" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="8aa4-2bfe-6a85-595c">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+2 Dice</characteristic>
@@ -3899,10 +3984,18 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Mastery of the Elements" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="eabe-48c7-1cdc-a67d">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the beginning of a battle, all ranged and melee weapons that an Alchemist has been equipped with may be assigned one of the following Keywords: SHRAPNEL, FIRE or GAS added to them. All the weapons the Alchemist has will share the same Keyword. With a RISKY ACTION with +1 DICE, the Alchemist can change this Keyword into one of the others.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model is deployed for the first time in a game, you can give one of the following Keywords to all of the Jabirean Alchemist’s Ranged Weapons and Melee Weapons: FIRE or GAS or SHRAPNEL. All of the Weapons have the same Keyword. If the Weapon already has the Keyword, it does not receive it a second time.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+          </characteristics>
+        </profile>
+        <profile name="Elemental Change" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="07f2-5347-651a-0744">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: A Jabirean Alchemist can take an Elemental Change ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure, nothing happens and the Jabirean Alchemist’s Activation ends. If the roll is a Success or a Critical Success, you can change the Master of the Elements Keyword on all of the Jabirean Alchemist’s Weapons to one of the other two choices.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4109,20 +4202,20 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Brazen Bull" hidden="false" id="e62d-c06e-ce35-428b">
       <profiles>
-        <profile name="Artificial Body" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2767-ad8b-95f6-c084">
+        <profile name="Artificial Life" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2767-ad8b-95f6-c084">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Created through the Jabirean alchemy, the Brazen Bulls have no vital organs and they have to be hacked apart to kill them. All attacks against the Brazen Bull roll injuries with -1 DICE.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 INJURY DICE to Injury Rolls for a Brazen Bull.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Trample" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f09d-3206-6514-c294">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Once during its Activation, the Brazen Bull may make an extra Melee Attack ACTION against a Downed enemy model on a 32mm or smaller base. Resolve the attack as if the Brazen Bull was armed with a Trench Club. This attack ignores armour as the Brazen Bull stomps their enemies into a pulp.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">ACTION: A Brazen Bull can take a Trample ACTION. If it does so, it can make a Melee Attack that must target an enemy model that is Down. A Trample Melee Attack does not use a Melee Weapon and has the IGNORE ARMOUR Keyword.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Brazen Bull" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="0a4b-397f-ded9-8e79">
@@ -4203,6 +4296,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="fd8d-e9e0-2540-a257" id="5a05-3973-7908-ddfb" primary="false" name="Sultanate"/>
         <categoryLink targetId="bd43-ddb1-262d-4489" id="637d-a28e-a5b1-21ed" primary="true" name="Troop"/>
         <categoryLink targetId="71f8-ee29-0f90-59ec" id="26bc-2e4e-b7fe-5555" primary="false" name="Limited Potential"/>
+        <categoryLink targetId="4180-5377-2d83-48ba" id="7f32-4f43-3a96-31b9" primary="false" name="Artificial"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Weapons" hidden="false" id="f296-3d61-534b-857f" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="3"/>
@@ -4238,7 +4332,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4796-111c-7f8d-fcad" includeChildSelections="true"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Assassin" hidden="false" id="62d4-d89a-f7e2-7d3b">
+    <selectionEntry type="model" import="true" name="Sultanate Assassin" hidden="false" id="62d4-d89a-f7e2-7d3b">
       <entryLinks>
         <entryLink import="true" name="Armour" hidden="false" id="b226-2cff-1864-09c1" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365" sortIndex="7"/>
         <entryLink import="true" name="Equipment" hidden="false" id="84de-886f-a719-e585" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="8"/>
@@ -4258,7 +4352,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Fireteam" hidden="false" id="0608-376a-3f9d-b614" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="2"/>
       </entryLinks>
       <profiles>
-        <profile name="Assassin" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="2e2a-409a-cf05-c437">
+        <profile name="Sultanate Assassin" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="2e2a-409a-cf05-c437">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 Dice</characteristic>
@@ -4324,18 +4418,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Temporal Assassin" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="fd33-0f29-cf19-2244">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">After the Assassin makes a Charge Roll, but before it moves toward its target, you may instead choose to have the Assassin split itself through time if it has not already taken a Melee Attack ACTION this Activation. Choose up to two enemy models within the charging distance of the Assassin. Then, place the Assassin into base contact with each enemy model, one after the other. It may make a Melee Attack against each one with a single melee weapon that it is equipped with. After the attacks (and any resulting effects) have been resolved, place the Assassin at either location. The Assassin cannot make any further melee attacks during this Activation.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">After determining the Charge Bonus for an Assassin that has not already carried out a Fight ACTION in its Activation, you can say that the Assassin will split itself through time. If you do so, choose two different enemy models that the Assassin can reach with its Charge, move the Assassin to within1&quot; of one of the enemy models you picked as normal, and then make a Melee Attack with the enemy model as the target. After resolving the Melee Attack, you can immediately redeploy the Assassin to within 1&quot; of the other model that you picked, and then make a second Melee Attack with the other enemy model as the target. The Assassin must use the same Melee Weapon for both attacks, and cannot take a Fight ACTION later in the same Activation.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Time Slip" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8f81-f60e-60f7-ea89">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If any type of attack (melee, ranged, mine etc.) misses the Assassin, they may slip into a moment in the future. The Assassin can move into any unoccupied space within 6”, though they cannot be moved within 1” of any enemy model or leave the gaming table. If moving out of melee this way, enemies do not get free attacks.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If your opponent fails their Success Roll for an attack targeting an Assassin, you can say the Assassin will slip into a moment in the future. If you do so, you can redeploy it anywhere within 6&quot; of its original location (measured from the centre of its base to the centre of its base), and more than 1&quot; away from any enemy models. Note that if the Assassin starts within 1&quot; of an enemy model, this is not treated as a Retreat, so the enemy model cannot make a Melee Attack before the
+Assassin makes the time slip.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4462,10 +4557,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Mubarizun" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8231-771f-29d7-e9cf">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Yüzbaşı is expected to face the mightiest of their enemies in personal combat, inspiring the troops to victory with their personal prowess. Yüzbaşı are immune to the effects of the Keyword FEAR and add +1 DICE to injury rolls against TOUGH opponents.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Yüzbaşı is expected to face the mightiest of their enemies in personal combat, inspiring the troops to victory with their personal prowess. Yüzbaşı are immune to the effects of the Keyword FEAR and add +1 DICE to injury rolls against TOUGH opponents.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -4490,15 +4585,21 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="fd8d-e9e0-2540-a257" id="5c7d-b966-518c-16c5" primary="false" name="Sultanate"/>
         <categoryLink targetId="3de0-192c-3ec2-51be" id="c70a-bf37-bd06-1578" primary="true" name="Elite"/>
         <categoryLink targetId="afb9-39f5-82d9-46ed" id="4552-7376-aab5-2bf6" primary="false" name="Leader"/>
+        <categoryLink targetId="d22a-5f0d-49a1-3892" id="3451-7bec-fe2d-cd42" primary="false" name="Negate Fear"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Tough" id="933f-f858-b8f9-2bcc" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
         <infoLink name="Strong" id="900a-9494-0743-50e7" hidden="true" type="rule" targetId="6297-d0e0-1935-5cfd">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="3fdd-747a-7297-115a" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </infoLink>
@@ -4512,18 +4613,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="1905-92a3-4759-3875-min" includeChildSelections="true"/>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1905-92a3-4759-3875-max" includeChildSelections="true"/>
       </constraints>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c2b1-d49e-937b-2f87" shared="true" includeChildSelections="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cd91-f171-98d6-423e" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
@@ -4536,7 +4625,45 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </conditions>
           <comment>Iron Wall</comment>
         </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="3fdd-747a-7297-115a" shared="true"/>
+          </conditions>
+          <comment>Janissary Training</comment>
+        </modifierGroup>
       </modifierGroups>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Janissary Veteran" hidden="false" id="3fdd-747a-7297-115a" sortIndex="2">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3298-41bc-1cf3-7dfb"/>
+          </constraints>
+          <profiles>
+            <profile name="Counter-Charge" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0561-6d7c-1c61-ecb5">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the first ACTION a Yüzbaşı makes during their Activation is a Charge, add +1 DICE to Melee Attacks made by the Yüzbaşı for the rest of the Activation.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+              </characteristics>
+            </profile>
+            <profile name="Janissary Veteran" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5686-e8b2-0fbb-39bf">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">You can make the Yüzbaşı a Janissary Veteran with the STRONG Keyword and the Janissary Counter-Charge ability at a cost of +10 ducats.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Azeb" hidden="false" id="0e7e-9167-f044-9493">
       <entryLinks>
@@ -4657,7 +4784,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <selectionEntryGroups>
         <selectionEntryGroup name="Upgrades" id="d7e5-65b7-ba51-8bd3" hidden="false" sortIndex="3">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Skirmisher" hidden="false" id="bcd1-1771-9c7f-413c">
+            <selectionEntry type="upgrade" import="true" name="Light Skirmisher" hidden="false" id="bcd1-1771-9c7f-413c">
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -4754,7 +4881,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">N/A</characteristic>
             <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 Dice</characteristic>
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
-            <characteristic name="Base" typeId="73ae-cc17-596e-0481">30x60/50mm</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">50mm</characteristic>
           </characteristics>
           <modifierGroups>
             <modifierGroup type="and">
@@ -4797,36 +4924,36 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Artificial Body" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c57a-8333-1d35-ae34">
+        <profile name="Artificial Life" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c57a-8333-1d35-ae34">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Created through the Jabirean alchemy, the Lions have no vital organs and they must be dismembered in order to kill them. All injury rolls against the Lion are made with -1 DICE.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 INJURY DICE to Injury Rolls for a Lion of Jabir</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
-        <profile name="Lion&apos;s Grace" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c71e-93f6-98c1-4b2c">
+        <profile name="Agile" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c71e-93f6-98c1-4b2c">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Lions of Jabir may take any Dash/Jump/Climb/Diving Charge ACTION with a +1 DICE bonus.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add +1 DICE to Risky Success Roll when a Lion of Jabir Climbs, Jumps, or makes a Diving Charge, or takes a Dash ACTION.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
-        <profile name="Mauling" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="31e8-c7ae-36d7-d76c">
+        <profile name="Pin" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="31e8-c7ae-36d7-d76c">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Downed opponent cannot stand up if it is in melee combat with a Lion of Jabir (even if the Lion is Down itself ), unless it is on a 40mm or larger base.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enemy models that are Down and that are mounted on a base of 40mm or less are not allowed to stand up if a Lion of Jabir is within 1&quot; of them (even if the Lion of Jabir is also Down).</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
-        <profile name="Ferocious Blows" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="364b-3951-419e-544e">
+        <profile name="Teeth and Claws" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="364b-3951-419e-544e">
           <characteristics>
-            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
-            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-            <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Lion of Jabir can make a Melee Attack even though it does not have any Melee Weapons.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4834,6 +4961,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="bd43-ddb1-262d-4489" id="5129-9180-a7e3-500c" primary="true" name="Troop"/>
         <categoryLink targetId="fd8d-e9e0-2540-a257" id="b45e-f95a-490e-dd75" primary="false" name="Sultanate"/>
         <categoryLink targetId="71f8-ee29-0f90-59ec" id="31e6-190b-07cd-3b20" primary="false" name="Limited Potential"/>
+        <categoryLink targetId="4180-5377-2d83-48ba" id="3a56-1b1a-8b59-1a43" primary="false" name="Artificial"/>
       </categoryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="60"/>
@@ -4870,15 +4998,29 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <profiles>
             <profile name="Fierce" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1ccc-289e-d82d-c641">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">You can upgrade any Lion of Jabir into a Fierce Lion of Jabir at the cost of +5 ducats. Fierce Lions are not affected by the Keyword FEAR.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">You can upgrade any Lion of Jabir into a Fierce Lion of Jabir at the cost of +5 ducats. Fierce Lions gains the Keyword FEAR.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="5fb2-5995-bee6-b465"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>Fierce Lion Fear</comment>
+          <modifiers>
+            <modifier type="add" value="4f5c-027d-253c-ffa3" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="b3f6-f405-6579-9ff9" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Mamluk Faris" hidden="false" id="95cf-1de7-a93e-b165">
       <categoryLinks>
@@ -5375,6 +5517,16 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <categoryLinks>
         <categoryLink targetId="bd43-ddb1-262d-4489" id="bf7a-6fa0-48c6-4966" primary="true" name="Troop"/>
       </categoryLinks>
+      <profiles>
+        <profile name="Pummelling Blows" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e028-d503-dcf3-b3cf">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Takwin Homunculus can make a Melee Attack even though it does not have any Melee Weapons.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+          </characteristics>
+        </profile>
+      </profiles>
     </entryLink>
   </entryLinks>
 </catalogue>
