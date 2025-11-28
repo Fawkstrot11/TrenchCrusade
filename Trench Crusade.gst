@@ -27,13 +27,16 @@
     <categoryEntry name="Golem" id="c15a-8839-8c4e-c312" hidden="false" publicationId="c658-4a10-e1fe-befc" page="12"/>
     <categoryEntry name="Leader" id="afb9-39f5-82d9-46ed" hidden="false"/>
     <categoryEntry name="Pile" id="ce28-ad9a-bbc1-f1dc" hidden="true"/>
+    <categoryEntry name="Negate Gas" id="d935-8238-a3f7-8ab0" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13">
+      <description/>
+    </categoryEntry>
   </categoryEntries>
   <costTypes>
     <costType name="Ducats" id="8d43-33fd-332d-17a6" defaultCostLimit="-1"/>
     <costType name="Glory Points" id="f3bb-a7e6-d476-f60b" defaultCostLimit="-1"/>
   </costTypes>
   <profileTypes>
-    <profileType name="Unit" id="b3af-94f9-2e35-d1c5" hidden="false">
+    <profileType name="Unit" id="b3af-94f9-2e35-d1c5" hidden="false" sortIndex="1">
       <characteristicTypes>
         <characteristicType name="Movement" id="b725-e0a4-16ae-8df2"/>
         <characteristicType name="Ranged" id="1a4f-d2cd-c405-6200"/>
@@ -42,7 +45,7 @@
         <characteristicType name="Base" id="73ae-cc17-596e-0481"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Weapon" id="090c-b12e-592a-9874" hidden="false">
+    <profileType name="Weapon" id="090c-b12e-592a-9874" hidden="false" sortIndex="2">
       <characteristicTypes>
         <characteristicType name="Type" id="f90e-171a-4ca6-3845"/>
         <characteristicType name="Range" id="31a7-b5e8-41dc-5fd1"/>
@@ -50,12 +53,17 @@
         <characteristicType name="Rules" id="87f0-637b-734a-22eb"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ability" id="7079-589c-df69-fa7e" hidden="false">
+    <profileType name="Battlekit" id="7079-589c-df69-fa7e" hidden="false" sortIndex="4">
       <characteristicTypes>
         <characteristicType name="Description" id="4834-43a9-1c93-9062"/>
         <characteristicType name="Range" id="2b32-2f45-9c06-7a77"/>
         <characteristicType name="Type" id="3f15-74a1-4d35-3642"/>
         <characteristicType name="Keywords" id="5093-5528-b08f-1496"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Ability" id="058c-866b-6487-ccc4" hidden="false" sortIndex="3">
+      <characteristicTypes>
+        <characteristicType name="Description" id="2ecd-b4ff-9e78-a8e2" kind="longText"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -91,7 +99,7 @@
       <description>If carrying a weapon, armour or equipment with this Keyword, the model cannot move/dash and shoot during its Activation, and the model cannot roll D6 and add it to the Charge move. A model can only carry one item with this Keyword.</description>
     </rule>
     <rule name="Infiltrator" id="154d-8072-ef87-e6c1" hidden="false">
-      <description>Models with this Keyword can be deployed anywhere on the table out of line of sight of any enemies, but at least 8” away from the closest enemy. They are deployed after all other models without this Keyword. If any infiltrators cannot be deployed according to these restrictions then those models can always be placed in your deployment zone. If a scenario does not allow for infiltrators, deploy models with this Keyword during standard deployment as if they didn’t have this Keyword.</description>
+      <description>When a model with this Keyword is deployed for the first time in a game, it can be set up anywhere on the battlefield as long as it is out of the Line of Sight of all enemies and is at least 8&quot; away from the closest enemy. INFILTRATORS are deployed after models that do not have this Keyword. Any INFILTRATORS that cannot be deployed in this way are instead deployed normally in their deployment zone.</description>
     </rule>
     <rule name="Tough" id="3c75-701d-e708-1438" hidden="false">
       <description>The first time a model with this Keyword suffers an Out of Action result on the Injury Table, it is treated as a Down result instead.</description>
@@ -160,9 +168,6 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
     <rule name="Impervious" id="00a9-ddfe-2a2b-078d" hidden="false">
       <description>The IGNORE ARMOUR Effect does not affect any -INJURY DICE and -INJURY MODIFIERS that apply to Battlekit that has this Keyword. The IGNORE ARMOUR Keyword affects any other Battlekit a target model has normally</description>
     </rule>
-    <rule name="Infiltrator" id="b1cd-b0a1-4f2e-1b44" hidden="false">
-      <description>When a model with this Keyword is deployed for the first time in a game, it can be set up anywhere on the battlefield as long as it is out of line of sight of all enemies and is at least 8&quot; away from the closest enemy. INFILTRATORS are deployed after models that do not have this Keyword. Any INFILTRATORS that cannot be deployed in this way are instead deployed normally in their deployment zone.</description>
-    </rule>
     <rule name="Negate [Keyword]" id="47f9-6914-172d-26a9" hidden="false">
       <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
     </rule>
@@ -220,10 +225,7 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">24&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">-</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
@@ -231,10 +233,7 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">24&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">-</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
@@ -242,10 +241,7 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">18&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">-</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
@@ -261,8 +257,8 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, HEAVY</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Tungsten-orichalcum Alloy Shot: Add +2 INJURY DICE to rolls for Ranged Attacks made by this Weapon at Short Range.</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, +1 INJURY DICE, HEAVY, SHOTGUN</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Add +1 INJURY DICE to rolls for Ranged Attacks made by this Weapon at Short Range.</characteristic>
       </characteristics>
     </profile>
     <profile name="Shotgun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="0924-0647-1366-9d85" publicationId="c658-4a10-e1fe-befc" page="110">
@@ -389,10 +385,7 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">-</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
@@ -400,21 +393,15 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+2 on Injury Results</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">RISKY</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">-</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 INJURY MODIFIER, RISKY</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
       </characteristics>
     </profile>
     <profile name="Trench Club" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="b242-1242-be3a-d232" publicationId="c658-4a10-e1fe-befc" page="114">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">-</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
@@ -422,11 +409,7 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CUMBERSOME</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Bayonets can only be attached to weapons fitted with a ‘Bayonet lug’ (indicated in each Warband’s Armoury).
-They do not count towards the maximum melee weapons a model can carry.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
@@ -442,33 +425,24 @@ They do not count towards the maximum melee weapons a model can carry.</characte
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa"/>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">FIRE, CRITICAL</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Gives +1 DICE bonus to any other ACTION the model takes apart from Dash, Ranged Attack or Melee Attack.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Evil Power: Add +1 DICE to Success Rolls or Risky Success Rolls for a model with a Blasphemous Staff, apart from the Success Rolls for a Ranged or Melee Attack, or the Risky Success Roll to take a Dash ACTION.</characteristic>
       </characteristics>
     </profile>
     <profile name="Hellblade" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="7490-f22e-68ff-79d3" publicationId="c658-4a10-e1fe-befc" page="115">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D Injuries</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">FIRE</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">-</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, FIRE</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
       </characteristics>
     </profile>
     <profile name="Tartarus Claws" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="0999-4c6b-539f-d1b2" publicationId="c658-4a10-e1fe-befc" page="115">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CUMBERSOME</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Tartarus Claws always come as a pair and do not allow the use of any other melee weapons. You can make two Attack ACTIONS with the Claws without the usual -1 DICE for the second attack. If the opponent is taken Down or Out of Action with the Claws you may immediately move the model up to 6”. If the move takes you into contact with another enemy model, this counts as a charge and you can make a second Melee Attack ACTION with the claws. You can only do this follow-up move once per Activation</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL, CUMBERSOME</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Paired Weapon: This Weapon must be taken as a pair of two 1-Handed Melee Weapons (one for each hand). Melee Attacks made with the Paired Weapons do not suffer the Success Roll modifier for making an Off-Hand Attack. If the target is taken Down or Out of Action by a Melee Attack made with the Paired Weapons, you may immediately move the model up to 3&quot;. If the move takes it within 1&quot; another enemy model, it can take another Fight ACTION, but it cannot make the 3&quot; move again if the second attack takes the target Down or Out of Action.</characteristic>
       </characteristics>
     </profile>
     <profile name="Anti-Tank Hammer" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="8df3-f372-20a0-4a59" publicationId="c658-4a10-e1fe-befc" page="115">
@@ -519,7 +493,7 @@ They do not count towards the maximum melee weapons a model can carry.</characte
         <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Despatch: This weapon has the IGNORE ARMOUR Keyword if the target is Down.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Shield" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c2a5-72b6-355d-0356" publicationId="c658-4a10-e1fe-befc" page="117">
+    <profile name="Shield" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c2a5-72b6-355d-0356" publicationId="c658-4a10-e1fe-befc" page="117">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062"/>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -527,18 +501,19 @@ They do not count towards the maximum melee weapons a model can carry.</characte
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-1 INJURY MODIFIER</characteristic>
       </characteristics>
     </profile>
-    <profile name="Machine Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2558-23f8-cfa8-40f4" publicationId="c658-4a10-e1fe-befc" page="117">
+    <profile name="Machine Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2558-23f8-cfa8-40f4" publicationId="c658-4a10-e1fe-befc" page="117">
       <characteristics>
-        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Bulky: A model that has Machine Armour cannot be equipped with a Trench Shield and has a Charge Bonus of D3&quot; instead of D6&quot;.
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Change the base size of a model that has Machine Armour to 40mm unless it is already 40mm or larger. In addition, a model with Machine Armour
+cannot be equipped with a Trench Shield and has a Charge Bonus of D3&quot; instead of D6&quot;.
 
 
-Standfast: When a model that has Machine Armour suffers a Down result on the Injury table, it is treated as a Minor Wound result instead.</characteristic>
+* Standfast: When a model that has Machine Armour suffers a Down result on the Injury table, it is treated as a Minor Wound result instead.</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-3 INJURY MODIFIER</characteristic>
       </characteristics>
     </profile>
-    <profile name="Standard Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6fa6-650d-4136-bc70" publicationId="c658-4a10-e1fe-befc" page="117">
+    <profile name="Standard Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6fa6-650d-4136-bc70" publicationId="c658-4a10-e1fe-befc" page="117">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062"/>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -546,7 +521,7 @@ Standfast: When a model that has Machine Armour suffers a Down result on the In
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-1 INJURY MODIFIER</characteristic>
       </characteristics>
     </profile>
-    <profile name="Reinforced Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f6aa-583c-a14b-0ee9" publicationId="c658-4a10-e1fe-befc" page="117">
+    <profile name="Reinforced Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f6aa-583c-a14b-0ee9" publicationId="c658-4a10-e1fe-befc" page="117">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062"/>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -554,7 +529,7 @@ Standfast: When a model that has Machine Armour suffers a Down result on the In
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-2 INJURY MODIFIER</characteristic>
       </characteristics>
     </profile>
-    <profile name="Holy Icon Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0b4c-42b8-cf94-e25f" publicationId="c658-4a10-e1fe-befc" page="117">
+    <profile name="Holy Icon Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="0b4c-42b8-cf94-e25f" publicationId="c658-4a10-e1fe-befc" page="117">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Grants -1 to all Injury Chart rolls against the model wearing this armour. This armour is effective even against weapons and attacks that would normally ignore armour.</characteristic>
         <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -562,7 +537,7 @@ Standfast: When a model that has Machine Armour suffers a Down result on the In
         <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
       </characteristics>
     </profile>
-    <profile name="Holy Icon Shield" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c0ec-55b6-b5ef-09c3" publicationId="c658-4a10-e1fe-befc" page="117">
+    <profile name="Holy Icon Shield" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c0ec-55b6-b5ef-09c3" publicationId="c658-4a10-e1fe-befc" page="117">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Takes one hand to use in both melee and in ranged combat. Grants -1 to all injury rolls against the model. This shield is effective even against weapons and attacks that would normally ignore armour.</characteristic>
         <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -570,7 +545,7 @@ Standfast: When a model that has Machine Armour suffers a Down result on the In
         <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
       </characteristics>
     </profile>
-    <profile name="Combat Helmet" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f9d1-44f2-f4d7-442f" publicationId="c658-4a10-e1fe-befc" page="118">
+    <profile name="Combat Helmet" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f9d1-44f2-f4d7-442f" publicationId="c658-4a10-e1fe-befc" page="118">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">-</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -578,7 +553,7 @@ Standfast: When a model that has Machine Armour suffers a Down result on the In
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE SHRAPNEL</characteristic>
       </characteristics>
     </profile>
-    <profile name="Iron Capirote" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4813-2d95-702d-d646" publicationId="c658-4a10-e1fe-befc" page="118">
+    <profile name="Iron Capirote" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4813-2d95-702d-d646" publicationId="c658-4a10-e1fe-befc" page="118">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Negates the additional BLOOD MARKERS from weapons with SHRAPNEL Keyword. Makes the model immune to the effects of FEAR.</characteristic>
         <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -586,7 +561,7 @@ Standfast: When a model that has Machine Armour suffers a Down result on the In
         <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
       </characteristics>
     </profile>
-    <profile name="Medi-kit" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="aa88-1987-505a-13ca" publicationId="c658-4a10-e1fe-befc" page="118">
+    <profile name="Medi-kit" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="aa88-1987-505a-13ca" publicationId="c658-4a10-e1fe-befc" page="118">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Treat ACTION: A model with this Keyword can take a Treat ACTION. If it does so, take a Risky Success Roll for the model. If the roll is a Failure, the model’s Activation ends immediately. If it is a Success or a Critical Success, you can do one of the following things:
 * Remove 1 BLOOD MARKER from the model or a friendly model within 1&quot; of the model.
@@ -596,7 +571,7 @@ Standfast: When a model that has Machine Armour suffers a Down result on the In
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
       </characteristics>
     </profile>
-    <profile name="Gas Mask" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ba17-1e71-ee46-ee0f" publicationId="c658-4a10-e1fe-befc" page="118">
+    <profile name="Gas Mask" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ba17-1e71-ee46-ee0f" publicationId="c658-4a10-e1fe-befc" page="118">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">-</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -604,7 +579,7 @@ Standfast: When a model that has Machine Armour suffers a Down result on the In
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE GAS</characteristic>
       </characteristics>
     </profile>
-    <profile name="Holy Relic" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f7dd-c304-609f-c9d1" publicationId="c658-4a10-e1fe-befc" page="118">
+    <profile name="Holy Relic" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f7dd-c304-609f-c9d1" publicationId="c658-4a10-e1fe-befc" page="118">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">-</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -612,15 +587,15 @@ Standfast: When a model that has Machine Armour suffers a Down result on the In
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">BLESSED 1</characteristic>
       </characteristics>
     </profile>
-    <profile name="Crown of Hellfire" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9e48-632e-20ab-14ad" publicationId="c658-4a10-e1fe-befc" page="91">
+    <profile name="Crown of Hellfire" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9e48-632e-20ab-14ad" publicationId="c658-4a10-e1fe-befc" page="91">
       <characteristics>
-        <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model ends its Activation, each enemy model in melee combat with it suffers a BLOOD MARKER. Any effect or ability that negates BLOOD MARKERS from the Keyword FIRE negates this BLOOD MARKER.</characteristic>
-        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Searing Flames: When a model with a Crown of Hellfire ends an Activation, place 1 BLOOD MARKER next to each enemy model within 1” of the model with a Crown of Hellfire, except for enemy models that have the NEGATE FIRE Keyword.</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
       </characteristics>
     </profile>
-    <profile name="Dum-Dum Bullets" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="254b-af21-71d6-cd8e" publicationId="c658-4a10-e1fe-befc" page="119">
+    <profile name="Dum-Dum Bullets" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="254b-af21-71d6-cd8e" publicationId="c658-4a10-e1fe-befc" page="119">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before the battle begins, a model may use this item to grant a rifle or pistol weapon that they are equipped with the CRITICAL keyword until the end of the battle. 
 Keywords: CONSUMABLE, CRITICAL.</characteristic>
@@ -629,15 +604,15 @@ Keywords: CONSUMABLE, CRITICAL.</characteristic>
         <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
       </characteristics>
     </profile>
-    <profile name="Incendiary Bullets" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="01b8-f846-e8f7-6d71" publicationId="c658-4a10-e1fe-befc" page="119">
+    <profile name="Incendiary Bullets" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="01b8-f846-e8f7-6d71" publicationId="c658-4a10-e1fe-befc" page="119">
       <characteristics>
-        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Incendiary: When this Battlekit is taken, you must choose 1 Ranged Weapon that the model already has. The Weapon gains the FIRE Keyword.</characteristic>
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Incendiary: When this Battlekit is taken, you must choose 1 Ranged Weapon that the model already has that does not have the BLAST, FIRE, GAS, or SHRAPNEL Keywords. The Weapon gains the FIRE Keyword.</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
       </characteristics>
     </profile>
-    <profile name="Tracer Bullets" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="37d1-6c76-e847-8a7a" publicationId="c658-4a10-e1fe-befc" page="119">
+    <profile name="Tracer Bullets" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="37d1-6c76-e847-8a7a" publicationId="c658-4a10-e1fe-befc" page="119">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Tracers: When this Battlekit is taken, you must choose 1 Ranged Weapon that
 the model already has. The Weapon gains the +1 DICE Keyword.</characteristic>
@@ -646,15 +621,15 @@ the model already has. The Weapon gains the +1 DICE Keyword.</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
       </characteristics>
     </profile>
-    <profile name="Sniper Scope" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5a48-9735-499f-e394" publicationId="c658-4a10-e1fe-befc" page="119">
+    <profile name="Sniper Scope" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5a48-9735-499f-e394" publicationId="c658-4a10-e1fe-befc" page="119">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enhanced Accuracy: When this Glory Item is given to a model, you must choose 1 Ranged Weapon that the model already has and which has the word “Rifle” as part of its name. That Weapon gains the IGNORE LONG RANGE Keyword.</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
       </characteristics>
     </profile>
-    <profile name="Shovel" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d829-4d67-52aa-baaf" publicationId="c658-4a10-e1fe-befc" page="119">
+    <profile name="Shovel" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d829-4d67-52aa-baaf" publicationId="c658-4a10-e1fe-befc" page="119">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Shovel: A model equipped with a Shovel that starts the game on Open terrain has the COVER Keyword until it moves away from its starting position. In addition, a model equipped with a Shovel can use it as a 2-Handed Melee Weapon instead of using any other Melee Weapons it has.</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -662,7 +637,7 @@ the model already has. The Weapon gains the +1 DICE Keyword.</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
       </characteristics>
     </profile>
-    <profile name="Troop Flag" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e86e-146a-65b7-09f2" publicationId="c658-4a10-e1fe-befc" page="119">
+    <profile name="Troop Flag" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e86e-146a-65b7-09f2" publicationId="c658-4a10-e1fe-befc" page="119">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062"/>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -670,7 +645,7 @@ the model already has. The Weapon gains the +1 DICE Keyword.</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">LEADER, HELD</characteristic>
       </characteristics>
     </profile>
-    <profile name="Martyrdom Pills" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0de6-1178-a184-ddff" publicationId="c658-4a10-e1fe-befc" page="119">
+    <profile name="Martyrdom Pills" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="0de6-1178-a184-ddff" publicationId="c658-4a10-e1fe-befc" page="119">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Inured to Pain: When you deploy a model that has Martyrdom Pills you can say that they will consume them. If you do so, until the end of the game the model has the NEGATE FEAR Keyword. In addition, add -1 INJURY DICE to rolls for attacks that hit the model.</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -678,7 +653,7 @@ the model already has. The Weapon gains the +1 DICE Keyword.</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
       </characteristics>
     </profile>
-    <profile name="Unholy Trinket" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="df27-d1f1-d5b9-d53b" publicationId="c658-4a10-e1fe-befc" page="119">
+    <profile name="Unholy Trinket" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="df27-d1f1-d5b9-d53b" publicationId="c658-4a10-e1fe-befc" page="119">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Talisman: Once during a game, when a Risky Success Roll for a model with an Unholy Trinket is a Failure, you can say that the model will use it. If you do, the model’s Activation does not end.</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -686,7 +661,7 @@ the model already has. The Weapon gains the +1 DICE Keyword.</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
       </characteristics>
     </profile>
-    <profile name="Unholy Relic" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b914-1197-66a6-3aae" publicationId="c658-4a10-e1fe-befc" page="120">
+    <profile name="Unholy Relic" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b914-1197-66a6-3aae" publicationId="c658-4a10-e1fe-befc" page="120">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062"/>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -694,15 +669,15 @@ the model already has. The Weapon gains the +1 DICE Keyword.</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">FEAR</characteristic>
       </characteristics>
     </profile>
-    <profile name="Infernal Iron Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="38b3-22f4-f484-61dc" publicationId="c658-4a10-e1fe-befc" page="120">
+    <profile name="Infernal Iron Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="38b3-22f4-f484-61dc" publicationId="c658-4a10-e1fe-befc" page="120">
       <characteristics>
-        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Injuries against this model are rolled with a flat -2 penalty. This penalty applies even against injuries that ignore armour.</characteristic>
-        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062"/>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-2 INJURY MODIFIER, IMPERVIOUS</characteristic>
       </characteristics>
     </profile>
-    <profile name="Infernal Brand Mark" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e973-f445-e1c5-92ec" publicationId="c658-4a10-e1fe-befc" page="120">
+    <profile name="Infernal Brand" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e973-f445-e1c5-92ec" publicationId="c658-4a10-e1fe-befc" page="120">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">-</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -710,10 +685,9 @@ the model already has. The Weapon gains the +1 DICE Keyword.</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE FIRE</characteristic>
       </characteristics>
     </profile>
-    <profile name="Field Shrine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="76e2-0e5b-972a-0f69" publicationId="c658-4a10-e1fe-befc" page="120">
+    <profile name="Field Shrine" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="76e2-0e5b-972a-0f69" publicationId="c658-4a10-e1fe-befc" page="120">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Shrine: After you deploy a model that has Field Shrine, you must set up a Field Shrine terrain piece in the model’s deployment zone. The Field Shrine terrain piece must be at least ½&quot; tall and mounted on a 40mm base. The Field Shrine is Impassable terrain and cannot be picked up or moved in any way. In the Morale Phase, each friendly Field Shrine on the battlefield adds 3 to the number of models you have in your Warband that are not Down or Out of Action, up to a maximum bonus of 9 extra models.
-
 
 Tear It Down!: Models can attack a Field Shrine as if it were an enemy model. If it is hit by an attack or is in the blast radius of an attack made with a Weapon that has the BLAST Keyword, it is removed from the battlefield and crossed off the Warband Roster (no Injury Roll is required).</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -721,7 +695,7 @@ Tear It Down!: Models can attack a Field Shrine as if it were an enemy model. I
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
       </characteristics>
     </profile>
-    <profile name="Hellbound Brand Contract" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e408-e0b1-f858-fff5" publicationId="c658-4a10-e1fe-befc" page="120">
+    <profile name="Hellbound Brand Contract" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e408-e0b1-f858-fff5" publicationId="c658-4a10-e1fe-befc" page="120">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Contract: If a model with a Hellbound Soul Contract is taken Out of Action, before removing it from the battlefield add 1 BLOOD MARKER to each enemy model that is within 1&quot; of it. Models that have the NEGATE FIRE Keyword are not affected by this special rule.</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -729,7 +703,7 @@ Tear It Down!: Models can attack a Field Shrine as if it were an enemy model. I
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
       </characteristics>
     </profile>
-    <profile name="Binoculars" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="242b-2dd0-41e9-77e1" publicationId="c658-4a10-e1fe-befc" page="120">
+    <profile name="Binoculars" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="242b-2dd0-41e9-77e1" publicationId="c658-4a10-e1fe-befc" page="120">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Binoculars: Enemy models with the INFILTRATOR Keyword cannot deploy within 16&quot; of a model with this Keyword unless they are in their own side’s deployment zone.</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -737,7 +711,7 @@ Tear It Down!: Models can attack a Field Shrine as if it were an enemy model. I
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
       </characteristics>
     </profile>
-    <profile name="Musical Instrument" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dd0c-c62d-46f1-64f8" publicationId="c658-4a10-e1fe-befc" page="120">
+    <profile name="Musical Instrument" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="dd0c-c62d-46f1-64f8" publicationId="c658-4a10-e1fe-befc" page="120">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Fanfare: Add +1 DICE to Risky Success Rolls for friendly models that are taking a Dash ACTION and are within 4&quot; of one or more models with a Musical Instrument.</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">4&quot;</characteristic>
@@ -745,7 +719,7 @@ Tear It Down!: Models can attack a Field Shrine as if it were an enemy model. I
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD</characteristic>
       </characteristics>
     </profile>
-    <profile name="Mountaineer Kit" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="603a-ae82-9f91-4a29" publicationId="c658-4a10-e1fe-befc" page="120">
+    <profile name="Mountaineer Kit" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="603a-ae82-9f91-4a29" publicationId="c658-4a10-e1fe-befc" page="120">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Mountaineer: Add +1 DICE to Risky Success Rolls for friendly models with this special rule that are attempting to climb a sheer surface.</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -757,9 +731,8 @@ Tear It Down!: Models can attack a Field Shrine as if it were an enemy model. I
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">10&quot;</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">IGNORE COVER, IGNORE LONG, RANGE, SHRAPNEL</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">IGNORE COVER, IGNORE LONG RANGE, SHRAPNEL</characteristic>
         <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Dragged Forwards: If an attack made with a Tormentor Chain is a Success or Critical Success, do not make an Injury Roll for the target. Instead, place 1 BLOOD MARKER next to the target, and then place a second BLOOD MARKER on the target because the Tormentor Chain has the SHRAPNEL Keyword. After placing the BLOOD MARKERS, you can move the target model up to 12&quot; in a straight line, but you must move it so that it finishes the move as close as possible to the attacking model.
-
 
 Deadly Embrace: Enemy models cannot retreat if they are within 1&quot; of a model
 with a Tormentor Chain.</characteristic>
@@ -769,10 +742,7 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">18&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">When resolving injuries for this weapon, the total modifier to injuries from a model’s armour (including shields) is reduced by 1. Thus Reinforced Armour, for example, only offers a -1 modifier to injury rolls this weapon causes.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
@@ -780,21 +750,15 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Hit</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">This weapon causes INFECTION MARKERS instead of BLOOD MARKERS.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, ASSAULT, INFECTION MARKERS, SHOTGUN</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
       </characteristics>
     </profile>
     <profile name="Beelzebub&apos;s Axe" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="6c2c-bd2c-d794-fb34" publicationId="c658-4a10-e1fe-befc" page="76">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+2D to Injury</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">This weapon causes INFECTION MARKERS instead of BLOOD MARKERS.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
@@ -802,25 +766,19 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">24&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+2D to hit</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">After resolving an injury caused by this weapon, this model may choose to suffer up to three BLOOD MARKERS to inflict the same number of additional BLOOD MARKERS upon the target of the attack.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 DICE, HEAVY</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">If a Viscera Cannon hits a target, after resolving the Injury Roll, you can place up to 3 BLOOD MARKERS next to model that made the Attack (until it has a maximum of 6 markers). Then place 1 INFECTION MARKER next to the target for each BLOOD MARKER that you placed on the attacking model.</characteristic>
       </characteristics>
     </profile>
     <profile name="Plague Blade" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="c403-778c-1c4f-ec6e" publicationId="c658-4a10-e1fe-befc" page="76">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa"/>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede"/>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">This weapon causes INFECTION MARKERS instead of BLOOD MARKERS.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
-    <profile name="Black Grail Shield" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bfc1-5172-0c42-138f" publicationId="c658-4a10-e1fe-befc" page="77">
+    <profile name="Black Grail Shield" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bfc1-5172-0c42-138f" publicationId="c658-4a10-e1fe-befc" page="77">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">This counts as a Trench Shield. In addition, when this model is targeted by a ranged attack, it can draw on the power of the Black Grail to disturb the flow of reality as an ACTION. If successful, the ranged attack is rolled with -2 DICE. If this ACTION is a Critical, the ranged attack automatically misses. This can be done outside of the model&apos;s Activation and can be done each time the model is targeted by a ranged attack.</characteristic>
         <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -830,23 +788,17 @@ with a Tormentor Chain.</characteristic>
     </profile>
     <profile name="Parasite Grenades" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="ddce-6e00-e451-7281" publicationId="c658-4a10-e1fe-befc" page="111">
       <characteristics>
-        <characteristic name="Type" typeId="f90e-171a-4ca6-3845">GRENADE</characteristic>
+        <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Grenades</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">If this weapon hits a model, the target is moved up to 3&quot; in a single direction of the attacker&apos;s choosing. This can be used to move the model out of cover, to fall from a high position or even into Melee Combat with their enemies. Models that are immune to FEAR cannot be moved by this weapon.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, IGNORE COVER, IGNORE LONG RANGE</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Terrifying Hallucinations: If a Parasite Grenade hits a target, after resolving the Injury Roll, you can move the target model 3&quot;. The move must be in a straight line, but can be in any direction, and can be used to make the model move within 1&quot; of an enemy, make a retreat move, Climb, Jump, or Jump Down. The model cannot make a Diving Charge and does not count as charging if it finishes the move within 1&quot; of an enemy model.</characteristic>
       </characteristics>
     </profile>
     <profile name="Corruption Belcher" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="801f-50a4-1ea2-7b92" publicationId="c658-4a10-e1fe-befc" page="113">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">GAS</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">This weapon automatically hits and it ignores armour.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
@@ -854,54 +806,39 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">This weapon rolls D6 on the Injury Chart, or 2D6 on a BLOODBATH. This weapon causes an additional BLOOD MARKER for each BLOOD MARKER it inflicts from an injury result.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Agonising Injuries: When you make an Injury Roll for an attack made with a Torture Instrument, roll 1D6 instead of 2D6, but then double the number of BLOOD MARKERS that are caused by the roll (if there are any). Any +INJURY DICE or -INJURY DICE that applied to the Injury Roll will apply normally, except that you pick the single highest or lowest dice in the roll instead of the 2 highest or lowest. Note that when you make a Bloodbath Roll for an attack made with a Torture Instrument, you only roll 2D6 instead of 3D6, but you can then double the number of BLOOD MARKERS that are caused by the roll.</characteristic>
       </characteristics>
     </profile>
     <profile name="Arquebus" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="39a3-6b2f-e1cf-8775" publicationId="c658-4a10-e1fe-befc" page="116">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">18&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345"/>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CUMBERSOME</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Batter: A model that has an Arquebus can use it as a 2-Handed Melee Weapon.</characteristic>
       </characteristics>
     </profile>
     <profile name="Ophidian Rifle" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="d8fe-561c-9243-f9b8" publicationId="c658-4a10-e1fe-befc" page="116">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">30&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">This weapon ignores the penalties for Cover and Long Range, and rolls attacks against models at Long Range or in Cover with +1 DICE. These bonuses stack for a possible total of +2 DICE.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, IGNORE COVER, IGNORE LONG RANGE</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Unnatural Inversion: Add +1 DICE to roll for attacks made with this weapon if the Cover or Long Range modifiers apply to the attack, instead of adding -1 DICE. Note that this means you add +2 DICE to the roll if both modifiers apply to the attack.</characteristic>
       </characteristics>
     </profile>
     <profile name="Serpent Assault Gun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="651a-d454-07bf-a7fa" publicationId="c658-4a10-e1fe-befc" page="89">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">GAS, HEAVY, ASSAULT</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">When this model takes this ranged attack ACTION, it can make up to two attacks with this weapon. These attacks can target separate models, but the targets must be within 6” of each other.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, AUTOMATIC 2 GAS, HEAVY</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
       </characteristics>
     </profile>
     <profile name="Blunderbuss" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="2540-a186-5024-be0a" publicationId="c658-4a10-e1fe-befc" page="116">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">10&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">SHRAPNEL</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345"/>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
@@ -909,25 +846,19 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">This weapon rolls injuries against models that have not been activated this turn with a flat +2 bonus.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Ambush Weapon: Add a +2 INJURY MODIFIER to rolls made for this weapon if the target has not yet been Activated this Turn.</characteristic>
       </characteristics>
     </profile>
     <profile name="Malebranche Sword" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="f41a-17c4-1d59-abac" publicationId="c658-4a10-e1fe-befc" page="116">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">This enormous evil sword rolls 3D6 on the Injury Chart, adding the results together.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Abyssal Blade: When you make an Injury Roll for an attack made with this weapon, roll 3D6 and add all 3 dice together. Any +INJURY DICE or -INJURY DICE that applied to the Injury Roll will apply normally, except that you pick the 3 highest or lowest dice in the roll instead of the 2 highest or lowest.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Armour-Piercing Bullets" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="90fa-0eaa-3d49-be2c" publicationId="c658-4a10-e1fe-befc" page="118">
+    <profile name="Armour-Piercing Bullets" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="90fa-0eaa-3d49-be2c" publicationId="c658-4a10-e1fe-befc" page="118">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Armour-Piercing: When this Battlekit is taken, you must choose 1 Ranged Weapon that the model already has. The Weapon gains the ARMOUR-PIERCING Keyword.</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -935,7 +866,7 @@ with a Tormentor Chain.</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Blessed Icon" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ddb0-3689-bc81-7162" publicationId="c658-4a10-e1fe-befc" page="120">
+    <profile name="Blessed Icon" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ddb0-3689-bc81-7162" publicationId="c658-4a10-e1fe-befc" page="120">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Talisman: Once during a game, when a Risky Success Roll for a model with a Blessed Icon is a Failure, you can say that the model will use its Talisman. If you do, the model’s Activation does not end.</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -947,61 +878,53 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">24&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Before rolling an injury for this weapon, choose one of the following effects to apply to that roll:
-● The injury ignores armour
-● Roll the injury with +2 DICE</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Special Ammunition: Before making an Injury Roll for an attack made with a Bow of Lethe, you must choose if the roll will have the +2 INJURY DICE Keyword or the IGNORE ARMOUR Keyword.</characteristic>
       </characteristics>
     </profile>
     <profile name="Punt Gun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="77ea-665d-7ac6-58ef" publicationId="c658-4a10-e1fe-befc" page="109">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">18&quot;</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, +1 INJURY DICE, HEAVY, SHOTGUN, SHRAPNEL</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Overcharge: Before making a Ranged Attack with a model armed with a Punt Gun, you can say that the model will Overcharge the weapon. To do so, the model has to either have the STRONG Keyword or be in base-to-base contact with a friendly model. An Overcharged Ranged Attack gains the BLAST 3&quot; and RELOAD Keywords. After an Overcharged attack has been carried out, place 1 BLOOD MARKER next to the model that made the attack, and its activation immediately ends.</characteristic>
+        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to hit and to injure</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, SHRAPNEL</characteristic>
+        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Before a model shoots with the punt gun, you can overcharge it with a shot, giving the weapon BLAST 3” radius. If you do this, the shooting ACTION with the Punt Gun always ends the shooter’s Activation and causes one BLOOD MARKER on the shooter. A model cannot make a ranged attack with the punt gun unless it is either STRONG or another friendly model is in base contact with it.</characteristic>
+        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
+        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
     <profile name="War Cross" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="2d02-94a4-2493-186f" publicationId="c658-4a10-e1fe-befc" page="76">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, IGNORE LONG RANGE</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
+        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Ignores penalties for long range. A model with the weapon will not run out of them.</characteristic>
+        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
+        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
     <profile name="Assassin&apos;s Dagger" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="4549-32db-4b08-2bdf">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1 To Injury</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">If the Assassin hits an enemy and causes at least one BLOOD MARKER, the Assassin can move away from combat during this Activation. Note that this move does not grant enemies free attacks. Assassins can use both normal and Dash move to do this, though this may not be used for charging.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY MODIFIER, CRITICAL</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Slashing Attack: If an Assassin’s Blade causes at least one BLOOD MARKER to be placed next to the target model, the Assassin can use a Dash ACTION to Retreat in the same Activation. In addition, if the Assassin Retreats (by Dashing or using the normal Retreat ACTION) during the same Activation, enemy models within 1” cannot make a Melee Attack against it before it is moved as they would normally be able to do.</characteristic>
       </characteristics>
     </profile>
     <profile name="Halberd-Gun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="c403-4b36-5fd6-5c95">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee/24&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa"/>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, CUMBERSOME</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Enemies charging a model equipped with a Halberd-gun add -1 DICE in melee combat when rolling to hit. This only applies when a model attacks after a charge, not on subsequent rounds of melee.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, BLOCK, CUMBERSOME</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
       </characteristics>
     </profile>
     <profile name="MURAD Bombard" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="556c-7009-6fc2-d658">
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa"/>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, BLAST 3&quot;</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Specify a point on the battlefield within 36” (must be in line of sight) that you want to target. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bombard shot lands 2” away, as 7-5=2). The direction is decided by your opponent. All models within 3” of the landing 1x1mm landing spot are hit as the bomb explodes – no roll to hit is needed. If the bomb lands directly on top of any model, roll with 3D6 on the Injury Chart and add the dice together to see what happens! Other models hit by the bombard suffer a Down result due the booming shockwave, but do not incur any BLOOD MARKERS or other effects from this attack.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
@@ -1009,10 +932,7 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa"/>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, FIRE</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">When shot in ranged combat, draw a straight 12” line that is 1mm wide from the Brazen Bull. All models along the path of the line are automatically hit – roll for their injuries immediately. Armour does not protect against the Flame Cannon. Due to the Keyword FIRE, its hits cause an additional +1 BLOOD MARKER. This is applied after rolling for injuries.</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
@@ -1020,10 +940,7 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa"/>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, CRITICAL</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Add +2 to the result of all injuries caused by this weapon (i.e. a roll of 7 on the Injury Chart becomes 9).</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
@@ -1031,10 +948,7 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">SHRAPNEL</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">-</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
         <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
       </characteristics>
     </profile>
@@ -1042,22 +956,19 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">30&quot;</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Injuries</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">-</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, HEAVY</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
       </characteristics>
     </profile>
-    <profile name="Alchemist Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="68e2-bde3-19a9-2980">
+    <profile name="Alchemist Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="68e2-bde3-19a9-2980">
       <characteristics>
-        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Counts as Reinforced Armour and therefore grants a -2 modifier to all injury rolls made against the model wearing it. All attacks with the Keyword FIRE and/or GAS suffer a -1 DICE penalty to injure this model. Additionally, this model does not suffer additional BLOOD MARKERS caused by the Keywords FIRE and/or GAS</characteristic>
-        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Protection From Harm: Add- 1 INJURY DICE to Injury Rolls for attacks made by Weapons with the FIRE or GAS Keywords that target a model that has Alchemist Armour, even if the attacking weapon has the IGNORE ARMOUR Keyword.</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-2 INJURY MODIFIER, NEGATE FIRE, NEGATE GAS</characteristic>
       </characteristics>
     </profile>
-    <profile name="Alchemical Ammunition" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c296-2021-0947-c6c7">
+    <profile name="Alchemical Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c296-2021-0947-c6c7">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Adds +1 DICE to Ranged Attack rolls on the Action Success Chart. Can only be used with Jezzails, Alaybozan, Halberd-Guns and Siege Jezzails.</characteristic>
         <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1065,23 +976,24 @@ with a Tormentor Chain.</characteristic>
         <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
       </characteristics>
     </profile>
-    <profile name="Cloak of Alamut" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fc84-ca32-2672-c684">
+    <profile name="Cloak of Alamut" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="fc84-ca32-2672-c684">
       <characteristics>
-        <characteristic name="Description" typeId="4834-43a9-1c93-9062">All ranged attacks against a model that is in cover suffer -2 DICE penalty instead of -1 DICE. All the normal rules for cover apply otherwise.</characteristic>
-        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Blend In: The Ranged Attack Modifier for a target being in Cover is -2 DICE
+instead of -1 DICE if the target has a Cloak of Alamut.</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
       </characteristics>
     </profile>
-    <profile name="Wind Amulet" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cb4d-4771-6cd2-240b">
+    <profile name="Wind Amulet" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="cb4d-4771-6cd2-240b">
       <characteristics>
-        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Once per battle, you may add +3” to the Movement characteristic of this model once during the activation. Declare this when the model is Activated.</characteristic>
-        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Gusts of Wind: Once per game, when you Activate a model that has a Wind Amulet you may declare that it will use the amulet before it takes any ACTIONS. Using the Wind Amulet adds 3&quot; to the model’s Movement Characteristic for the rest of the Activation.</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
       </characteristics>
     </profile>
-    <profile name="Marid Shovel" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="20a6-1425-0331-7e02">
+    <profile name="Marid Shovel" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="20a6-1425-0331-7e02">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Marid Shovel has the Keyword HEAVY which allows a Brazen Bull to use it. Otherwise, it works exactly like a normal shovel.</characteristic>
         <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1105,7 +1017,7 @@ with a Tormentor Chain.</characteristic>
         <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
       </characteristics>
     </profile>
-    <profile name="Heavy Ballistic Shield" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="adc0-8995-657b-8d4b">
+    <profile name="Heavy Ballistic Shield" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="adc0-8995-657b-8d4b">
       <characteristics>
         <characteristic name="Description" typeId="4834-43a9-1c93-9062">-</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -1113,9 +1025,10 @@ with a Tormentor Chain.</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">COVER, HELD</characteristic>
       </characteristics>
     </profile>
-    <profile name="Dum-Dum Bullets" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b51b-0a4a-8aa8-e5ae">
+    <profile name="Dum-Dum Bullets" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b51b-0a4a-8aa8-e5ae">
       <characteristics>
-        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Dum-Dums: When this Battlekit is taken, you must choose 1 Ranged Weapon that the model already has. The Weapon gains the CRITICAL Keyword.</characteristic>
+        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Dum-Dums: When this Battlekit is taken, you must choose 1 Ranged Weapon
+that the model already has. The Weapon gains the CRITICAL Keyword.</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
