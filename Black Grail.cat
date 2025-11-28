@@ -81,7 +81,7 @@
           <infoLinks>
             <infoLink name="Parasite Grenades" id="f779-5a2a-25fc-356e" hidden="false" type="profile" targetId="ddce-6e00-e451-7281"/>
             <infoLink name="Assault" id="f312-181f-617b-3a95" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
-            <infoLink name="Grenade" id="55ff-def9-7666-43cb" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+            <infoLink name="Ignore [Modifier]" id="2860-cdb6-3d43-c73d" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="37e8-fbe9-0123-abe7" includeChildSelections="false"/>
@@ -232,7 +232,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="258d-bdbe-189e-18a0" includeChildSelections="true"/>
+            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="258d-bdbe-189e-18a0" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Blasphemous Staff" hidden="false" id="22dc-8476-fd2c-183a">
@@ -667,6 +667,7 @@
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Armour Piercing" id="9623-2703-9635-5572" hidden="false" type="rule" targetId="ba7a-64b6-e87b-0ecd"/>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Bayonet Lug" hidden="false" id="31d7-aa0d-a13c-c605" type="selectionEntry" targetId="f603-fb7b-cb6f-f1a4"/>
@@ -1083,6 +1084,7 @@
                 <infoLink name="Putrid Shotgun" id="951e-1512-3a92-315d" hidden="false" type="profile" targetId="f342-1a5a-726e-8782"/>
                 <infoLink name="Infection Markers" id="17e1-02e7-67c0-fdca" hidden="false" type="rule" targetId="884b-d2e7-31a6-f0b7"/>
                 <infoLink name="Assault" id="51c9-00e9-0b62-8e97" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+                <infoLink name="Shotgun" id="91e2-1360-bdf2-9ec4" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
               </infoLinks>
               <constraints>
                 <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="afe2-81ea-b376-d164" includeChildSelections="true"/>
@@ -1117,10 +1119,7 @@
                   <characteristics>
                     <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
                     <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">10”</characteristic>
-                    <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
                     <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">SHRAPNEL</characteristic>
-                    <characteristic name="Rules" typeId="6e95-3480-ad33-b345"/>
-                    <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
                     <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
                   </characteristics>
                 </profile>
@@ -1415,7 +1414,7 @@
                 <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="e278-9146-ff0d-86d4" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="Fire Shield" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d488-9020-4ba3-a3a2">
+                <profile name="Fire Shield" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d488-9020-4ba3-a3a2">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Always takes one hand to use in both melee and in ranged combat. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated. Any attack against this model that has the Keyword FIRE will suffer -1 DICE on injury rolls and will not cause an additional BLOOD MARKER.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1533,12 +1532,12 @@
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Broken Crown" hidden="true" id="ed7f-e91c-7eca-840a" sortIndex="4">
           <profiles>
-            <profile name="Broken Crown" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7cac-e423-0e4d-b763">
+            <profile name="Broken Crown" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7cac-e423-0e4d-b763">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this model is Activated, each enemy model in Melee Combat with it suffers one INFECTION MARKER. Despite its name, this item is not Headgear</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Each time the model with the Broken Crown is Activated, before carrying out any ACTIONS with the model, place 1 INFECTION MARKER next to each enemy model within 1&quot; of the model with the Broken Crown.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1559,12 +1558,12 @@
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Urn of Bitter Ashes " hidden="true" id="f451-eff3-bd36-29ff" sortIndex="6">
           <profiles>
-            <profile name="Urn of Bitter Ashes " typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cc13-67a7-5431-2fdd">
+            <profile name="Urn of Bitter Ashes " typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="cc13-67a7-5431-2fdd">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Ranged attacks against this model and other models within 3” of it are rolled with -1 DICE.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 DICE to the roll for Ranged Attacks that target a model that has the Urn of Bitter Ashes or that is within 3&quot; of the model with the Urn of Bitter Ashes</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1605,18 +1604,46 @@
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <profiles>
-            <profile name="Grail Devotee" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a36b-0ca9-03de-492a">
+            <profile name="Grail Devotee" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a36b-0ca9-03de-492a">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">A single model may be accompanied by up to two Grail Devotees. For each Devotee a model is accompanied by, it rolls injuries with a flat +1 bonus with all of its attack ACTIONS. Note that although Grail Devotees can be represented by a model, they are not treated as models for any rules purposes. As equipment, they must remain stationary and wholly on the base of the model that they accompany</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Up to 2 models can have up to 2 Grail Devotees each. Add +1 INJURY MODIFIER to Injury Rolls for Melee attacks made by the model for each Grail Devotee that it has. Each Grail Devotee can be represented by a model if you wish. Place them adjacent to the model that they are following but note that Grail Devotees are not treated as models for any rules purposes, just move them out of the way if they get in the way of a “proper” model.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
           <constraints>
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="a78a-bd8f-87bb-754c" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d759-72dc-9224-8808" includeChildSelections="true"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Second Grail Devotee" hidden="false" id="720d-fced-3283-89f6">
+              <costs>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+              </costs>
+              <profiles>
+                <profile name="Grail Devotee" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ac98-5942-087b-9eaf">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Up to 2 models can have up to 2 Grail Devotees each. Add +1 INJURY MODIFIER to Injury Rolls for Melee attacks made by the model for each Grail Devotee that it has. Each Grail Devotee can be represented by a model if you wish. Place them adjacent to the model that they are following but note that Grail Devotees are not treated as models for any rules purposes, just move them out of the way if they get in the way of a “proper” model.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8940-dbdc-bf24-70a1" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="8f23-4665-3322-ca92" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1640,12 +1667,12 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Compound Eyes Helmet" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fe5c-8b4d-7a52-73d0">
+                <profile name="Compound Eyes Helmet" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="fe5c-8b4d-7a52-73d0">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This counts as a Combat Helmet. Additionally, this model increases its Ranged characteristic by +1 DICE.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enhanced Vision: Add +1 DICE to the Success Roll of Ranged Attacks taken for a model that has a Compound Eyes Helmet.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE SHRAPNEL</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1665,6 +1692,9 @@
               <constraints>
                 <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="64d0-ecf3-15d5-9ae8" includeChildSelections="true"/>
               </constraints>
+              <infoLinks>
+                <infoLink name="Negate [Keyword]" id="9948-09d5-3a18-98eb" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -1732,7 +1762,7 @@
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Melee" hidden="false" id="3e58-4098-275d-dfce">
                   <profiles>
-                    <profile name="Knight Companion of the Bladed Fly" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b064-784f-a535-ca37">
+                    <profile name="Knight Companion of the Bladed Fly" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b064-784f-a535-ca37">
                       <characteristics>
                         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add +1 DICE to Melee.</characteristic>
                         <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1750,7 +1780,7 @@
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Ranged" hidden="false" id="126e-560a-c85d-fb2e">
                   <profiles>
-                    <profile name="Knight Companion of the Distant Fly" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="54ac-2422-34c4-3bad">
+                    <profile name="Knight Companion of the Distant Fly" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="54ac-2422-34c4-3bad">
                       <characteristics>
                         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add +1 DICE to Ranged.</characteristic>
                         <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1776,12 +1806,12 @@
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Knight of the Rotten Cross" hidden="false" id="dd64-8133-3b6e-724e">
           <profiles>
-            <profile name="Knight of the Rotten Cross" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ef69-c253-5f0f-b3ad">
+            <profile name="Knight of the Rotten Cross" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ef69-c253-5f0f-b3ad">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">When acquired, this model may purchase any weapon from the New Antioch or Heretic Legion list. The Knight of the Rotten Cross cannot give its weapon away but can purchase a new one if the old one is lost.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">You can purchase 1 Ranged Weapon or 1 Melee Weapon from the New Antioch or Heretic Legions Armoury Tables for this model. Any stipulations that apply to the Weapon must be followed (so there is no point in taking a Weapon that can only be used by a specific model). The Weapon cannot be sold or reallocated in the Quartermaster Step of the Campaign Phase (▶ see Campaign in the Trench Crusade Digital Rulebook), but can be replaced if it is lost for any reason.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1796,7 +1826,7 @@
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Automatic Pistol" hidden="false" id="085c-7c75-d3e5-9db2">
                       <profiles>
-                        <profile name="Claimed: Automatic Pistol" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fec5-bb13-792b-8199">
+                        <profile name="Claimed: Automatic Pistol" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="fec5-bb13-792b-8199">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use an Automatic Pistol as though it were from the New Antioch.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1811,7 +1841,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Semi-automatic Rifle" hidden="false" id="f541-3b6f-3518-340f">
                       <profiles>
-                        <profile name="Claimed: Semi-automatic Rifle" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="707f-beaa-1d76-4cd8">
+                        <profile name="Claimed: Semi-automatic Rifle" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="707f-beaa-1d76-4cd8">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Semi-automatic Rifle as though it were from the New Antioch.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1826,7 +1856,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Automatic Shotgun" hidden="false" id="f7bb-c32a-6e20-01fa">
                       <profiles>
-                        <profile name="Claimed: Automatic Shotgun" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dc09-d86d-ae34-41d2">
+                        <profile name="Claimed: Automatic Shotgun" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="dc09-d86d-ae34-41d2">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use an Automatic Shotgun as though it were from the New Antioch.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1841,7 +1871,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Automatic Rifle" hidden="false" id="cd9d-bbf9-725f-e50c">
                       <profiles>
-                        <profile name="Claimed: Automatic Rifle" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b8f0-aa97-3937-9647">
+                        <profile name="Claimed: Automatic Rifle" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b8f0-aa97-3937-9647">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use an Automatic Rifle as though it were from the New Antioch.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1856,7 +1886,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="false" id="5c8d-1c40-9c03-41a9">
                       <profiles>
-                        <profile name="Claimed: Sniper Rifle" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="736b-79f3-9bb1-bf1d">
+                        <profile name="Claimed: Sniper Rifle" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="736b-79f3-9bb1-bf1d">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Sniper Rifle as though it were from the New Antioch.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1871,7 +1901,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Grenade Launcher" hidden="false" id="3a47-d5a7-a039-3eae">
                       <profiles>
-                        <profile name="Claimed: Grenade Launcher" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e886-7dfb-33ed-95f7">
+                        <profile name="Claimed: Grenade Launcher" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e886-7dfb-33ed-95f7">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Grenade Launcher as though it were from the New Antioch.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1886,7 +1916,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Incendiary Grenades" hidden="false" id="2391-8571-4ce5-d96e">
                       <profiles>
-                        <profile name="Claimed: Incendiary Grenades" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1637-5050-6752-0717">
+                        <profile name="Claimed: Incendiary Grenades" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1637-5050-6752-0717">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use Incendiary Grenades as though it were from the New Antioch.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1901,7 +1931,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Submachine Gun" hidden="false" id="c0fc-22cd-ad4c-838b">
                       <profiles>
-                        <profile name="Claimed: Submachine Gun" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7915-ab6a-b727-3c5c">
+                        <profile name="Claimed: Submachine Gun" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7915-ab6a-b727-3c5c">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Submachine Gun as though it were from the New Antioch.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1916,7 +1946,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Machine Gun" hidden="false" id="7fd2-9f6e-9db5-0a3e">
                       <profiles>
-                        <profile name="Claimed: Machine Gun" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fe45-0d6a-cf4a-347f">
+                        <profile name="Claimed: Machine Gun" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="fe45-0d6a-cf4a-347f">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Machine Gun as though it were from the New Antioch.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1931,7 +1961,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Satchel Charge" hidden="false" id="9ad1-3a15-c3ad-c116">
                       <profiles>
-                        <profile name="Claimed: Satchel Charge" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5945-b33c-aca6-8fb1">
+                        <profile name="Claimed: Satchel Charge" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5945-b33c-aca6-8fb1">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Satchel Charge as though it were from the New Antioch.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1946,7 +1976,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Grenades" hidden="false" id="d456-7dbf-4db1-a18c">
                       <profiles>
-                        <profile name="Claimed: Grenades" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="52a1-3eb7-ed92-8636">
+                        <profile name="Claimed: Grenades" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="52a1-3eb7-ed92-8636">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use Grenades as though it were from the New Antioch.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1961,7 +1991,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Heavy Flamethrower" hidden="false" id="f37f-0096-6b13-3881">
                       <profiles>
-                        <profile name="Claimed: Heavy Flamethrower" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0838-7d47-0d0b-4747">
+                        <profile name="Claimed: Heavy Flamethrower" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="0838-7d47-0d0b-4747">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Heavy Flamethrower as though it were from the New Antioch.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1976,7 +2006,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Heavy Shotgun" hidden="false" id="8b59-8e2f-7036-da88">
                       <profiles>
-                        <profile name="Claimed: Heavy Shotgun" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="481a-d408-3699-d802">
+                        <profile name="Claimed: Heavy Shotgun" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="481a-d408-3699-d802">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Heavy Shotgun as though it were from the New Antioch.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1991,7 +2021,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Flamethrower" hidden="false" id="f9b1-e638-9536-7164">
                       <profiles>
-                        <profile name="Claimed: Flamethrower" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d8f9-a2d9-d49f-e65d">
+                        <profile name="Claimed: Flamethrower" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d8f9-a2d9-d49f-e65d">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Flamethrower as though it were from the New Antioch.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2010,7 +2040,7 @@
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Automatic Shotgun" hidden="false" id="88d5-06eb-8513-fd0c">
                       <profiles>
-                        <profile name="Claimed: Automatic Shotgun" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6883-6f33-5604-4f1f">
+                        <profile name="Claimed: Automatic Shotgun" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6883-6f33-5604-4f1f">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use an Automatic Shotgun as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2022,7 +2052,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Blasphemous Staff" hidden="false" id="04ed-2336-0404-d8ea">
                       <profiles>
-                        <profile name="Claimed: Blasphemous Staff" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7901-7b55-fd13-1c06">
+                        <profile name="Claimed: Blasphemous Staff" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7901-7b55-fd13-1c06">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Blasphemous Staff as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2034,7 +2064,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Automatic Rifle" hidden="false" id="77d4-a2d2-2f40-d20b">
                       <profiles>
-                        <profile name="Claimed: Automatic Rifle" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c50d-32c4-ff0e-12bf">
+                        <profile name="Claimed: Automatic Rifle" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c50d-32c4-ff0e-12bf">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use an Automatic Rifle as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2046,7 +2076,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Silenced Pistol" hidden="false" id="0407-c546-5fd0-f3f9">
                       <profiles>
-                        <profile name="Claimed: Silenced Pistol" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b911-6e05-ae16-b799">
+                        <profile name="Claimed: Silenced Pistol" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b911-6e05-ae16-b799">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Silent Pistol as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2058,7 +2088,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Machine Gun " hidden="false" id="ba6a-7cfa-20b6-15c4">
                       <profiles>
-                        <profile name="Claimed: Machine Gun " typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6d21-dbbd-d6e6-c101">
+                        <profile name="Claimed: Machine Gun " typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6d21-dbbd-d6e6-c101">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Machine Gun as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2066,7 +2096,7 @@
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                           </characteristics>
                         </profile>
-                        <profile name="Claimed: Machine Gun " typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b401-8a8b-c3fa-80dc">
+                        <profile name="Claimed: Machine Gun " typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b401-8a8b-c3fa-80dc">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Machine Gun as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2078,7 +2108,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Incendiary Grenades" hidden="false" id="9a90-38c3-7c21-163f">
                       <profiles>
-                        <profile name="Claimed: Incendiary Grenades" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6ced-b27b-7642-41e8">
+                        <profile name="Claimed: Incendiary Grenades" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6ced-b27b-7642-41e8">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use Incendiary Grenades as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2090,7 +2120,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Submachine Gun" hidden="false" id="9996-c3a6-606f-7855">
                       <profiles>
-                        <profile name="Claimed: Submachine Gun" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="aca9-4bdb-5e73-ad58">
+                        <profile name="Claimed: Submachine Gun" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="aca9-4bdb-5e73-ad58">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Submachine Gun as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2102,7 +2132,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Grenades" hidden="false" id="84d2-3015-2fb3-2b51">
                       <profiles>
-                        <profile name="Claimed: Grenades" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="26d3-c5f2-dfc5-6cc9">
+                        <profile name="Claimed: Grenades" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="26d3-c5f2-dfc5-6cc9">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use Grenades as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2114,7 +2144,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Grenade Launcher" hidden="false" id="d1d3-dea7-48d7-42fc">
                       <profiles>
-                        <profile name="Claimed: Grenade Launcher" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="717c-569e-8f9e-3985">
+                        <profile name="Claimed: Grenade Launcher" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="717c-569e-8f9e-3985">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Grenade Launcher as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2126,7 +2156,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Semi-Automatic Rifle" hidden="false" id="635a-322d-b312-68f5">
                       <profiles>
-                        <profile name="Claimed: Semi-Automatic Rifle" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4e54-317d-3391-e00d">
+                        <profile name="Claimed: Semi-Automatic Rifle" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4e54-317d-3391-e00d">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Semi-Automatic Rifle as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2138,7 +2168,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Flamethrower" hidden="false" id="9a54-32a8-1ab8-7b58">
                       <profiles>
-                        <profile name="Claimed: Flamethrower" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="36f9-cbf1-7f8b-474a">
+                        <profile name="Claimed: Flamethrower" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="36f9-cbf1-7f8b-474a">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Flamethrower as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2150,7 +2180,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Heavy Flamethrower" hidden="false" id="dd8d-f0b1-2c9d-208f">
                       <profiles>
-                        <profile name="Claimed: Heavy Flamethrower" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f73e-b97e-1b7b-0d76">
+                        <profile name="Claimed: Heavy Flamethrower" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f73e-b97e-1b7b-0d76">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Heavy Flamethrower as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2162,7 +2192,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Anti-Materiel Rifle" hidden="false" id="06a1-9111-a3f5-9f77">
                       <profiles>
-                        <profile name="Claimed: Anti-Materiel Rifle" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f855-3a79-f6c4-c14d">
+                        <profile name="Claimed: Anti-Materiel Rifle" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f855-3a79-f6c4-c14d">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use an Anti-Materiel Rifle as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2174,7 +2204,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Sacrificial Blade" hidden="false" id="1b94-d655-8d37-4dbd">
                       <profiles>
-                        <profile name="Claimed: Sacrificial Blade" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a591-57b1-8abb-3426">
+                        <profile name="Claimed: Sacrificial Blade" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a591-57b1-8abb-3426">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Sacrificial Blade as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2186,7 +2216,7 @@
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Hellblade" hidden="false" id="6bf6-ed24-d225-3675">
                       <profiles>
-                        <profile name="Claimed: Hellblade" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fab2-a4e3-5baf-e68b">
+                        <profile name="Claimed: Hellblade" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="fab2-a4e3-5baf-e68b">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model can use a Hellblade as though it were from the Heretic Legions.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2205,15 +2235,18 @@
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ca22-afcb-f91f-a42d" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Plague Almoner" hidden="false" id="ca6e-b552-9a9c-9288">
           <profiles>
-            <profile name="Plague Almoner" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1780-92d2-3e63-3c71">
+            <profile name="Plague Almoner" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1780-92d2-3e63-3c71">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model requires one less BLOOD MARKER/INFECTION MARKER to cause Bloodbath.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If you convert an Injury Roll into a Bloodbath Roll for an attack made by this Plague Knight, the cost in BLOOD MARKERS and/or INFECTION MARKERS of the Bloodbath Roll is reduced by 1.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2231,7 +2264,7 @@
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Mind Linked" hidden="true" id="8858-f2cf-be66-80ce">
           <profiles>
-            <profile name="Mind Linked" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7fd0-a83c-445b-40ff">
+            <profile name="Mind Linked" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7fd0-a83c-445b-40ff">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is in a fireteam with a Homunculus.</characteristic>
                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2281,7 +2314,7 @@
         <categoryLink name="Heavy" hidden="false" id="ef53-dc1a-9bb8-f76c" targetId="70c9-988d-71a7-7654" primary="false"/>
       </categoryLinks>
       <profiles>
-        <profile name="Comically Large Rock" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bebb-3a98-6e7c-d755">
+        <profile name="Comically Large Rock" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bebb-3a98-6e7c-d755">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">rock</characteristic>
             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2367,7 +2400,7 @@
             </modifierGroup>
           </modifierGroups>
         </profile>
-        <profile name="Artificial Body" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c98b-7bb9-5c12-0147">
+        <profile name="Artificial Body" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c98b-7bb9-5c12-0147">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">Created through the Jabirean alchemy, the Homunculus has no vital organs and they have to be dismembered in order to kill them. All injury rolls against the Homunculus are made with -1 DICE.</characteristic>
             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2375,7 +2408,7 @@
             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
           </characteristics>
         </profile>
-        <profile name="Re-creation" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="920a-c4f1-99e2-1104">
+        <profile name="Re-creation" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="920a-c4f1-99e2-1104">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the Homunculus is taken Out of Action during battle, and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats at any time between battles to bring it back to life with all of its weapons and abilities</characteristic>
             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2393,7 +2426,7 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Wings" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="292a-65c6-ee6a-db6a">
+                <profile name="Wings" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="292a-65c6-ee6a-db6a">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus gains a new movement mode: 8”/Flying</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2412,7 +2445,7 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Elemental Resistance" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="71ba-33b1-bd3f-fb3d">
+                <profile name="Elemental Resistance" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="71ba-33b1-bd3f-fb3d">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Attacks made against the Homunculus that have the Keywords FIRE and/or GAS suffer a -1 DICE penalty to injure it. Also, the Homunculus does not suffer additional BLOOD MARKERS from attacks with Keywords FIRE and/or GAS.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2431,7 +2464,7 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Human Hands" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9551-aaae-a05e-8026">
+                <profile name="Human Hands" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9551-aaae-a05e-8026">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus can buy and wield any weapon allowed in the Iron Sultanate warband or House of Wisdom list, though they cannot select ELITE only items, grenades or items limited to specific units (such as Assassins). They can also carry a Trench Shield or a Fire Shield. This will apply to the Additional Arms formula as well. Cannot be combined with the Wings formula.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2457,7 +2490,7 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Enslaved Mind" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b2ab-84ac-2b1d-203d">
+                <profile name="Enslaved Mind" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b2ab-84ac-2b1d-203d">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus gains the Keyword FIRETEAM along with one model of your choice in the Warband. The other model can only form a Fireteam with this Homunculi, not with any other models.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2476,7 +2509,7 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Massive Size" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bf7f-0891-7ad8-83a5">
+                <profile name="Massive Size" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bf7f-0891-7ad8-83a5">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus’ size is increased to huge proportions. It now has a base size of 50mm and it gains the Keyword TOUGH. This formula cannot be combined with the Wings formula.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2510,7 +2543,7 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Inhuman Strength" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ed1e-b034-f0b9-dbab">
+                <profile name="Inhuman Strength" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ed1e-b034-f0b9-dbab">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The musculature of the Homunculus is reinforced, replaced and strengthened. It now has a base size of 32mm (or 50mm if it also has Massive size). The Homunculus gains +1 DICE to its Melee characteristic and the Keyword STRONG.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2529,7 +2562,7 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Terrifying Appearance" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e411-89dd-5fbb-4cbe">
+                <profile name="Terrifying Appearance" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e411-89dd-5fbb-4cbe">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Whether by captivating beauty or a terrifying appearance, this Homunculus gains the Keyword FEAR.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2548,7 +2581,7 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Additional Arm" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1bf3-df46-8da1-602c">
+                <profile name="Additional Arm" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1bf3-df46-8da1-602c">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus can perform an additional attack ACTION in Melee or Ranged combat without any penalty. Therefore, if making attacks with three melee weapons, only a single weapon would need to be declared an Off-Hand weapon (suffering the appropriate penalties). It has three hands to carry weapons if combined with Human Hands, and may equip weapons and a shield in any combination, as long as it has hands free to do so. 
 
@@ -2566,7 +2599,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Additional Head" hidden="false" id="0a92-110b-990d-1dfc" sortIndex="9">
               <profiles>
-                <profile name="Additional Head" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5cb6-8353-fcf6-9066">
+                <profile name="Additional Head" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5cb6-8353-fcf6-9066">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus has two heads and therefore can have two sets of eyes via Alchemical Formula.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2585,7 +2618,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name=" Startling Speed" hidden="false" id="7e4b-d6b3-582f-5334" sortIndex="11">
               <profiles>
-                <profile name="Startling Speed" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d620-b97c-0e00-f1af">
+                <profile name="Startling Speed" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d620-b97c-0e00-f1af">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus adds +1 DICE to its Dash ACTIONS.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2604,7 +2637,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Seal of Solomon" hidden="false" id="a48e-e8a0-773e-e318" sortIndex="12">
               <profiles>
-                <profile name="Seal of Solomon" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c0d0-9dd9-051c-d0dd">
+                <profile name="Seal of Solomon" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c0d0-9dd9-051c-d0dd">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Formula greatly enhances the intelligence of the Homunculus and makes it painfully aware of its artificial existence. It can now buy and use Equipment from the Sultanate Warband Armoury as long as it is not limited to ELITE models. Note that one helmet protects a Homunculus with two heads normally and the Two Heads Formula does not allow the purchase of two different kinds of headgear.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2623,7 +2656,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Gargantuan Size" hidden="true" id="207d-922f-cedb-5b14" sortIndex="13">
               <profiles>
-                <profile name="Gargantuan Size" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d736-170e-38e7-4519">
+                <profile name="Gargantuan Size" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d736-170e-38e7-4519">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Can only be bought if the Homunculus already has the Human Hands, Inhuman Strength and Massive Size Formulas. The Homunculus now has a Base Size of 60mm and it can now use one Brazen Bull Only weapon.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2655,7 +2688,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Regenerative" hidden="false" id="3046-7d44-bf5c-2473">
               <profiles>
-                <profile name="Regenerative" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e895-2aea-af4b-f433">
+                <profile name="Regenerative" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e895-2aea-af4b-f433">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus has an astonishing healing factor and can remove one BLOOD MARKER every time it is Activated, if it has any.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2692,7 +2725,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                   </costs>
                   <profiles>
-                    <profile name="Hypnotic Eyes" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="511f-c35a-8e6b-273c">
+                    <profile name="Hypnotic Eyes" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="511f-c35a-8e6b-273c">
                       <characteristics>
                         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enemies suffer -1 DICE to hit the Homunculus in Melee. Does not affect Sniper Priests or enemies with the keyword BLACK GRAIL. Cannot be combined with Hawk Eyes without Two Heads.</characteristic>
                         <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2711,7 +2744,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                   </costs>
                   <profiles>
-                    <profile name="Hawk Eyes" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9f3f-364c-a9ed-a47b">
+                    <profile name="Hawk Eyes" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9f3f-364c-a9ed-a47b">
                       <characteristics>
                         <characteristic name="Description" typeId="4834-43a9-1c93-9062">The eyesight of the Homunculus is based on that of a predatory bird. It can add +1 DICE to its Ranged Attack characteristic. Cannot be combined with Hypnotic Eyes without Two Heads.</characteristic>
                         <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3002,7 +3035,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Entitled To Corruption Belchers" hidden="false" id="feda-5057-a3f1-a3a5">
               <profiles>
-                <profile name="Entitled To Corruption Belchers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7cc3-5efe-ed8e-574e">
+                <profile name="Entitled To Corruption Belchers" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7cc3-5efe-ed8e-574e">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Corruption Belcher.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3014,7 +3047,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Entitled To Machine Guns" hidden="false" id="720a-243e-936f-7bc4">
               <profiles>
-                <profile name="Entitled To Machine Guns" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="46a3-73b3-8c4b-c65e">
+                <profile name="Entitled To Machine Guns" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="46a3-73b3-8c4b-c65e">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Machine Gun.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3026,7 +3059,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Entitled To Putrid Shotguns" hidden="false" id="f86a-6dfe-0ae6-352d">
               <profiles>
-                <profile name="Entitled To Putrid Shotguns" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="802e-98a7-30b5-551b">
+                <profile name="Entitled To Putrid Shotguns" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="802e-98a7-30b5-551b">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Putrid Shotgun</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3038,7 +3071,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Entitled To Viscera Cannons" hidden="false" id="71bc-496d-162c-3816">
               <profiles>
-                <profile name="Entitled To Viscera Cannons" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7e1b-68ce-f927-2410">
+                <profile name="Entitled To Viscera Cannons" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7e1b-68ce-f927-2410">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Viscera Cannon.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3050,7 +3083,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Entitled To Plague Blades" hidden="false" id="a7be-2afb-dd87-9cd5">
               <profiles>
-                <profile name="Entitled To Plague Blades" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f414-efa5-ad21-edf7">
+                <profile name="Entitled To Plague Blades" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f414-efa5-ad21-edf7">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Plague Blade.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3062,7 +3095,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Entitled To Beelzebub&apos;s Axe" hidden="false" id="ce2b-3df0-f2a1-8005">
               <profiles>
-                <profile name="Entitled To Beelzebub&apos;s Axe" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5f11-5881-a15c-9100">
+                <profile name="Entitled To Beelzebub&apos;s Axe" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5f11-5881-a15c-9100">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband may take an additional Beelzebub&apos;s Axe.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3131,14 +3164,15 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="c5a0-e794-7661-ebb7" id="baf7-2124-e1bb-a176" primary="false" name="Black Grail"/>
         <categoryLink targetId="afcc-5f24-1c7c-63c4" id="611c-583c-a125-6584" primary="false" name="Strong"/>
         <categoryLink targetId="4f5c-027d-253c-ffa3" id="71d4-d4c2-527b-d282" primary="false" name="Fear"/>
+        <categoryLink targetId="d935-8238-a3f7-8ab0" id="5fef-1778-7c6e-6274" primary="false" name="Negate Gas"/>
       </categoryLinks>
       <profiles>
-        <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5af2-de11-6c23-567e">
+        <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5af2-de11-6c23-567e">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Non-FIRE injuries against the Plague Knight are rolled with -1 DICE. Additionally, this model ignores any additional BLOOD MARKERS caused by the Keyword GAS.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 INJURY DICE to Injury Rolls for a Plague Knight unless the attack has the FIRE Keyword.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Plague Knight" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="5fad-8b9c-8d6a-a2f0" publicationId="c658-4a10-e1fe-befc" page="78">
@@ -3302,7 +3336,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Leader" hidden="true" id="0526-f0b0-ecbe-7893" sortIndex="3">
           <profiles>
-            <profile name="Leader" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ad78-80b9-dee7-9bf2">
+            <profile name="Leader" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ad78-80b9-dee7-9bf2">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Plague Knight is the leader of the Warband.</characteristic>
                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3336,6 +3370,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <rules>
+        <rule name="Negate Gas" id="6852-5200-63e9-1c11" hidden="false">
+          <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Hounds of the Black Grail" hidden="false" id="5df2-ef54-85ea-adfe">
       <profiles>
@@ -3355,14 +3394,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Pounce" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="aa15-64a9-87eb-87c8">
+        <profile name="Teeths &amp; Claws" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="aa15-64a9-87eb-87c8">
           <characteristics>
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
             <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-            <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
             <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-            <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Hounds do not suffer penalties for fighting unarmed.</characteristic>
-            <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
             <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
           </characteristics>
           <modifiers>
@@ -3373,20 +3409,20 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Frightening Speed" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9494-6d28-0c24-b18d">
+        <profile name="Frightening Speed" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9494-6d28-0c24-b18d">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Hounds roll to Dash with +1 DICE and they do not suffer any penalties to movement after they Stand from being Down.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add +1 DICE to the Risky Success Roll for a Hound of the Cult of the Black Grail that is taking a Dash ACTION. In addition, do not halve the Movement Characteristic of a Hound of the Cult of the Black Grail when it stands up at the start of an Activation.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
-        <profile name="Disease Carrier" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="daee-ce18-e487-8c9c">
+        <profile name="Disease Carrier" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="daee-ce18-e487-8c9c">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If an enemy model is Activated while in Melee Combat with a Hound, that model suffers one INFECTION MARKER.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If an enemy model is Activated while it is within 1&quot; of a Hound of the Cult of the Black Grail, place 1 INFECTION MARKER next to the enemy model before it carries out any Actions.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Hounds of the Black Grail" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="8fc4-805a-2894-01ad">
@@ -3405,12 +3441,12 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1e0f-7803-5158-bf35">
+        <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1e0f-7803-5158-bf35">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Non-FIRE injuries against the Hound are rolled with -1 DICE. Additionally, this model ignores any additional BLOOD MARKERS caused by the Keyword GAS.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 INJURY DICE to Injury Rolls for a Hound of the Cult of the Black Grail unless the attack has the FIRE Keyword.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
       </profiles>
@@ -3424,15 +3460,12 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="89d2-b313-5386-bb61" includeChildSelections="false"/>
           </constraints>
           <profiles>
-            <profile name="Infected Pounce" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="e635-2d2a-2df7-bafe">
+            <profile name="Infected Teeth &amp; Claws" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="e635-2d2a-2df7-bafe">
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Hounds do not suffer penalties for fighting unarmed. This weapon causes INFECTION MARKERS instead of BLOOD MARKERS.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">INFECTION MARKERS</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
               </characteristics>
             </profile>
           </profiles>
@@ -3449,6 +3482,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="c5a0-e794-7661-ebb7" id="1071-8c7b-84a1-7df9" primary="false" name="Black Grail"/>
         <categoryLink targetId="4f5c-027d-253c-ffa3" id="3cd2-212f-58dc-447b" primary="false" name="Fear"/>
         <categoryLink targetId="bd43-ddb1-262d-4489" id="8fdf-0f44-833e-36bf" primary="true" name="Troop"/>
+        <categoryLink targetId="d935-8238-a3f7-8ab0" id="3902-8900-3b72-2dff" primary="false" name="Negate Gas"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Fear" id="b275-58f1-6dd4-ad60" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
@@ -3469,7 +3503,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="ea30-8361-ba0b-65f5" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776" sortIndex="3"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="88c2-b376-ccbb-6918" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="1">
           <profiles>
-            <profile name="Double Dog" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="true" id="f1f4-ad6d-1a6e-d822">
+            <profile name="Double Dog" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="true" id="f1f4-ad6d-1a6e-d822">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This dog is friends with another dog. Isn&apos;t that lovely?</characteristic>
                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3487,6 +3521,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </profiles>
         </entryLink>
       </entryLinks>
+      <rules>
+        <rule name="Negate Gas" id="7d2b-1539-7f16-01aa" hidden="false">
+          <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grail Thrall" hidden="false" id="ec39-f328-bad6-a586">
       <profiles>
@@ -3494,10 +3533,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <characteristics>
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
             <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-            <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
             <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-            <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Thralls do not suffer penalties for fighting unarmed.</characteristic>
-            <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
             <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
           </characteristics>
           <modifiers>
@@ -3508,12 +3544,12 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Overwhelming Horde" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b4a6-25a1-64e7-5dae">
+        <profile name="Overwhelming Horde" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b4a6-25a1-64e7-5dae">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">For each friendly BLACK GRAIL model within 3” of the Thrall, it gains +1 DICE to its Melee attack rolls, up to maximum +4 DICE.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Grail Thrall or Fly Thrall can make a Melee Attack even though it does not have a Melee Weapon. In addition, add +1 DICE to the Success Roll for a Melee Attack made by a Grail Thrall or Fly Thrall for each other friendly model within 3&quot; of the attacking model (not including the attacking model itself).</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
       </profiles>
@@ -3553,12 +3589,12 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     </modifier>
                   </modifiers>
                 </profile>
-                <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8cce-0a3c-fe8a-6cfa">
+                <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8cce-0a3c-fe8a-6cfa">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Non-FIRE injuries against the Grail Thrall are rolled with -1 DICE. Additionally, this model ignores any additional BLOOD MARKERS caused by the Keyword GAS.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 INJURY DICE to Injury Rolls for a Grail Thrall unless the attack has the FIRE Keyword.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3592,7 +3628,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     </modifier>
                   </modifiers>
                 </profile>
-                <profile name="Toxic" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bc6f-c70e-8e15-bc41">
+                <profile name="Toxic" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bc6f-c70e-8e15-bc41">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model ignores any additional BLOOD MARKERS caused by the Keyword GAS.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3607,12 +3643,16 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="92b0-cedc-0a21-616f-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="92b0-cedc-0a21-616f-max" includeChildSelections="false"/>
           </constraints>
+          <categoryLinks>
+            <categoryLink targetId="d935-8238-a3f7-8ab0" id="d37c-f11f-9e1c-1338" primary="false" name="Negate Gas"/>
+          </categoryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink targetId="c5a0-e794-7661-ebb7" id="afc4-0926-0a45-7fc8" primary="false" name="Black Grail"/>
         <categoryLink targetId="4f5c-027d-253c-ffa3" id="45a0-3d8f-0ef6-4311" primary="false" name="Fear"/>
         <categoryLink targetId="bd43-ddb1-262d-4489" id="b9e5-0571-730b-47ab" primary="true" name="Troop"/>
+        <categoryLink targetId="d935-8238-a3f7-8ab0" id="6e00-7905-88c0-7c95" primary="false" name="Negate Gas"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Fear" id="164c-45bb-ed46-1d5c" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
@@ -3661,6 +3701,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="a2e7-fa4e-fe98-575d" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="8b6e-3b4c-8b7c-eb03" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
       </entryLinks>
+      <rules>
+        <rule name="Negate Gas" id="fc82-32ff-cff2-50d7" hidden="false">
+          <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Heralds of Beelzebub" hidden="false" id="8f23-4665-3322-ca92">
       <profiles>
@@ -3668,19 +3713,8 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <characteristics>
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
             <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-            <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
-            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-            <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Heralds do not suffer penalties for fighting unarmed. This weapon causes INFECTION MARKERS instead of BLOOD MARKERS. If this attack causes an INFECTION MARKER on any enemy without the Keyword BLACK GRAIL, the Herald can remove one of their own BLOOD MARKERS.</characteristic>
-            <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-            <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
-          </characteristics>
-        </profile>
-        <profile name="Toxic" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="829e-2ec3-43d0-12a3">
-          <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model ignores any additional BLOOD MARKERS caused by the Keyword GAS.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">INFECTION MARKERS</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">If a Melee Attack made by a Herald of Beelzebub causes any INFECTION MARKERS to be placed on the target model, you can remove up to 1 BLOOD MARKER from the attacking Herald of Beelzebub.</characteristic>
           </characteristics>
         </profile>
         <profile name="Heralds of Beelzebub" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="b0d3-1c47-ce33-922d">
@@ -3719,6 +3753,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="4f5c-027d-253c-ffa3" id="da7b-c386-013e-9c11" primary="false" name="Fear"/>
         <categoryLink targetId="bd43-ddb1-262d-4489" id="b3d7-27d2-f594-2292" primary="true" name="Troop"/>
         <categoryLink targetId="73cd-d90d-7e4f-8e86" id="70a1-2d02-68b2-88af" primary="false" name="Skirmisher"/>
+        <categoryLink targetId="d935-8238-a3f7-8ab0" id="5654-d70c-02d4-f4f6" primary="false" name="Negate Gas"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Fear" id="5b8b-ac8d-3b9a-3829" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
@@ -3734,12 +3769,12 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <profiles>
-            <profile name="Maddening Buzz" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f726-9549-bfcb-51e6">
+            <profile name="Maddening Buzz" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f726-9549-bfcb-51e6">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Every ACTION taken by non-BLACK GRAIL models within 8” of a Herald is considered a RISKY ACTION. Note: This does not affect non-ACTION rolls such as Charge distance rolls nor does it affect ACTIONS that do not require a roll on the Action Success Chart</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Success Rolls taken for enemy models within 8&quot; of a model with this ability become Risky Success Rolls (there is no additional effect if they are Risky Success Rolls already)</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -3785,6 +3820,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </conditions>
         </modifier>
       </modifiers>
+      <rules>
+        <rule name="Negate Gas" id="7edc-9994-2372-378e" hidden="false">
+          <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Amalgam" hidden="false" id="036b-eb9f-9b58-fa7e">
       <costs>
@@ -3899,42 +3939,37 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="4f5c-027d-253c-ffa3" id="c08e-9151-8ae2-e64f" primary="false" name="Fear"/>
         <categoryLink targetId="914f-0020-0d97-e217" id="4dad-6a77-5353-cf6f" primary="false" name="Tough"/>
         <categoryLink targetId="c5a0-e794-7661-ebb7" id="1fbb-187a-2362-f640" primary="false" name="Black Grail"/>
+        <categoryLink targetId="d935-8238-a3f7-8ab0" id="aef3-ff9a-7c48-2592" primary="false" name="Negate Gas"/>
+        <categoryLink targetId="afcc-5f24-1c7c-63c4" id="6f01-c828-0587-c6b7" primary="false" name="Strong"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Tough" id="c864-cb8d-9f12-d55e" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
         <infoLink name="Fear" id="215b-54cc-fa41-2437" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
+        <infoLink name="Strong" id="d93b-1470-9892-5a44" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
       </infoLinks>
       <profiles>
-        <profile name="Corpulent" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="25e6-11bb-8833-ff82">
+        <profile name="Corpulent" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="25e6-11bb-8833-ff82">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">An Amalgam is a vast bulk of diseased flesh and is extraordinarily difficult to kill. All injury rolls from any source against an Amalgam suffer a -2 DICE penalty.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -2 DICE to Injury Rolls for any attacks that target an Amalgam model.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
-        <profile name="Toxic" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e44b-d46b-fcf2-f50f">
+        <profile name="Unstoppable" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b2bd-73a1-5f59-aa1f">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model ignores any additional BLOOD MARKERS caused by the Keyword GAS.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enemy models that are mounted on a base of 32mm or less are not allowed to make a Melee Attack when an Amalgam that is within 1&quot; of them retreats. In addition, an Amalgam can use a normal move or a charge move if all enemy models within 1&quot; of it are mounted on bases of 32mm or less.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
-        <profile name="Unstoppable" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b2bd-73a1-5f59-aa1f">
+        <profile name="Trample" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c927-1f41-5473-f2f2">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enemy models never get free attacks against the Amalgam when it Retreats. Additionally, the Amalgam can move out of Melee Combat using its Standard Move, Charge and Dash.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-          </characteristics>
-        </profile>
-        <profile name="Trample" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c927-1f41-5473-f2f2">
-          <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Once during its Activation, the Amalgam may make an extra Melee Attack ACTION against a Downed enemy model on a 32mm or smaller base. Resolve the attack as if the Amalgam was armed with a Trench Club. This attack ignores armour as the Amalgam stomps their enemies into pulp.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">An Amalgam can take a Trample ACTION. If it does so, it can make a Melee Attack that must target an enemy model that is Down. A Trample Melee Attack does not use a Melee Weapon and has the IGNORE ARMOUR Keyword</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
         <profile name="Amalgam" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="e5d5-c4bb-4b99-020d">
@@ -3953,15 +3988,15 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Many-Limbed Monstrosity" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7d24-3042-d6c2-f5bc">
+        <profile name="Six-armed Monstrosity" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7d24-3042-d6c2-f5bc">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Amalgam can take a Ranged Attack ACTION once per Activation with each ranged weapon it is equipped with and it can take a Melee Attack ACTION once per Activation with each melee weapon it is equipped with. None of its weapons are off-hand weapons</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The rules for making more than one Ranged or Melee Attack do not apply to an Amalgam. Instead an Amalgam can take 1 Shoot ACTION per Activation with each Ranged Weapon it is equipped with, and can take 1 Fight ACTION per Activation with each Melee Weapon it is equipped with. The Off-Hand Weapon modifier does not apply to any of its Melee Attacks</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
-        <profile name="Strong-ish" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a01c-f868-09d3-8cb7">
+        <profile name="Strong-ish" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a01c-f868-09d3-8cb7">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">Two of the arms of the Amalgam have the Keyword STRONG. It can wield any two HEAVY weapons of its choice, each using one hand regardless of the weapon rules.</characteristic>
             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3984,6 +4019,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="2e49-56db-5bee-cec3" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776" sortIndex="3"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="f7f8-8f17-e129-eaba" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="1"/>
       </entryLinks>
+      <rules>
+        <rule name="Negate Gas" id="506b-4017-6415-b335" hidden="false">
+          <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Lord of Tumours" hidden="false" id="80e3-313d-1c13-05a0">
       <categoryLinks>
@@ -3993,6 +4033,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="afcc-5f24-1c7c-63c4" id="32f5-5533-16dc-53b6" primary="false" name="Strong"/>
         <categoryLink targetId="914f-0020-0d97-e217" id="57d5-8618-0b0a-6673" primary="false" name="Tough"/>
         <categoryLink targetId="afb9-39f5-82d9-46ed" id="eb13-f919-d35f-a39f" primary="false" name="Leader"/>
+        <categoryLink targetId="d935-8238-a3f7-8ab0" id="953b-db3f-1126-2582" primary="false" name="Negate Gas"/>
       </categoryLinks>
       <profiles>
         <profile name="Lord of Tumours" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="aca1-8c2f-0a00-ee49" publicationId="c658-4a10-e1fe-befc" page="78">
@@ -4043,20 +4084,28 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dae4-94a1-1c22-0c9a">
+        <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="dae4-94a1-1c22-0c9a">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Non-FIRE injuries against the Lord of Tumours are rolled with -1 DICE. Additionally, this model ignores any additional BLOOD MARKERS caused by the Keyword GAS.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 INJURY DICE to Injury Rolls for a Lord of Tumours unless the attack has the FIRE Keyword.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
-        <profile name="Beelzebub’s Touch" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f662-8943-c553-035f">
+        <profile name="Beelzebub’s Touch" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f662-8943-c553-035f">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a melee attack by the Lord of Tumours hits the target and causes at least one BLOOD MARKER or INFECTION MARKER, the Lord of Tumours inflicts an additional INFECTION MARKER on the target. Additionally, the Lord of Tumours is never considered unarmed and any of its empty hands count as Trench Clubs.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Whenever a Melee Attack made by a Lord of Tumours causes any BLOOD MARKERS or INFECTION MARKERS to be placed on the target, place 1 extra INFECTION MARKER next to the target model</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+          </characteristics>
+        </profile>
+        <profile name="Crushing Blows" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="25bc-e870-f2a0-877a">
+          <characteristics>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Lord of Tumours can make a Crushing Blows Melee Attack instead of using any Melee Weapons that it has. If does so, it can attack twice and the Off-Hand modifier does not apply to the second attack.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4078,6 +4127,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <infoLink name="Fear" id="1fa6-2bad-501f-2ce1" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
         <infoLink name="Leader" id="96cf-91af-2279-837e" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
         <infoLink name="Strong" id="2f57-b22f-c807-90c5" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
+        <infoLink name="Negate [Keyword]" id="95e3-f976-5b6e-cda3" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="14da-6cb8-f66e-7ad6" includeChildSelections="true"/>
@@ -4100,6 +4150,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="3de0-192c-3ec2-51be" id="3d60-24f4-cc59-bba4" primary="true" name="Elite"/>
         <categoryLink targetId="c5a0-e794-7661-ebb7" id="6373-d0f8-680b-9a5c" primary="false" name="Black Grail"/>
         <categoryLink targetId="4f5c-027d-253c-ffa3" id="9c20-17a2-28a0-2058" primary="false" name="Fear"/>
+        <categoryLink targetId="d935-8238-a3f7-8ab0" id="c611-29d6-f9a3-8f43" primary="false" name="Negate Gas"/>
       </categoryLinks>
       <profiles>
         <profile name="Corpse Guard" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="6435-cea8-b098-e528" publicationId="c658-4a10-e1fe-befc" page="78">
@@ -4150,28 +4201,28 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b3e7-566c-fefe-402d">
+        <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b3e7-566c-fefe-402d">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Non-FIRE injuries against the Plague Knight are rolled with -1 DICE. Additionally, this model ignores any additional BLOOD MARKERS caused by the Keyword GAS.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Add -1 INJURY DICE to Injury Rolls for a Corpse Guard unless the attack has the FIRE Keyword.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
-        <profile name="Bodyguard" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="77fd-38d3-3b6c-4a77">
+        <profile name="Bodyguard" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="77fd-38d3-3b6c-4a77">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a BLACK GRAIL model within 1&quot; of the Corpse Guard is hit, the Corpse Guard can redirect the hit to itself. The injury and any additional effects of the attack are resolved against the Corpse Guard instead of the original target. This ability cannot be used against BLAST weapons</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a friendly Cult of the Black Grail model within 1&quot; of a Corpse Guard is hit by a Ranged Attack or Melee Attack, you can say that the Corpse Guard will take the hit. If you do so, make an Injury Roll for the Corpse Guard instead of the original target. This ability cannot be used against attacks that have the BLAST Keyword.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
-        <profile name="Parasitic Tick" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="45af-c659-4300-106e">
+        <profile name="Parasitic Tick" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="45af-c659-4300-106e">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the Corpse Guard inflicts one or more BLOOD or INFECTION MARKERS with a melee attack on a non-BLACK GRAIL model, it can remove one of its own BLOOD or INFECTION MARKERS.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Whenever a Melee Attack made by a Corpse Guard causes any BLOOD MARKERS or INFECTION MARKERS to be placed on the target, you can remove up to 1 BLOOD MARKER or INFECTION MARKER from the attacking Corpse Guard model.</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
       </profiles>
@@ -4194,6 +4245,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="d823-e8a8-3761-c40e" includeChildSelections="true"/>
       </constraints>
+      <rules>
+        <rule name="Negate Gas" id="ec06-3f9a-7dfc-6eaf" hidden="false">
+          <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Warband Variant" hidden="false" id="8f8d-e167-36d5-dcdf">
       <constraints>
@@ -4204,7 +4260,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Dirge of the Great Hegemon" hidden="false" id="0f19-7c79-420e-13bf">
               <profiles>
-                <profile name="The Executor" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d4fd-5041-ccff-6543">
+                <profile name="The Executor" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d4fd-5041-ccff-6543">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The warband must include an Executor (use Plague Knight Stats), who has the Keyword TOUGH and Ranged characteristic of +1 DICE. The Executor costs 80 ducats.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -4212,7 +4268,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="The Fallen" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="aa2c-299f-030f-62a3">
+                <profile name="The Fallen" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="aa2c-299f-030f-62a3">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The warband cannot include a Lord of Tumours or Amalgam, for all were slain a long time ago.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -4220,7 +4276,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="The Lost" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="81c0-5739-c144-7205">
+                <profile name="The Lost" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="81c0-5739-c144-7205">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The warband may only include a maximum of two Hounds (known as Wailers) and a maximum of two Heralds of Beelzebub (called Weepers).</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -4228,7 +4284,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Hegemon&apos;s Last Blessing" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c6e8-3705-c05c-ed5d">
+                <profile name="Hegemon&apos;s Last Blessing" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c6e8-3705-c05c-ed5d">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">This warband has Plague Blade LIMIT:3, Putrid Shotgun LIMIT:3 and Viscera Cannon LIMIT:2. Non-ELITE models can be equipped with Viscera Cannons.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -4236,7 +4292,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="The Lamenters" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="83c6-8b6b-a6d3-7d11">
+                <profile name="The Lamenters" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="83c6-8b6b-a6d3-7d11">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Warband can include up to three Plague Knights (including the Executor), known as the Lamenters.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -4244,7 +4300,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Dishonoured" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="174b-4b95-aed0-2823">
+                <profile name="Dishonoured" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="174b-4b95-aed0-2823">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">No model in the warband may carry the Black Grail Shield or Beelzebub’s Axe. The Lord of the Flies does not suffer failed knights to carry his device.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -4252,30 +4308,24 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="The Bereaved" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ae4d-6c6a-1159-e1b2">
+                <profile name="The Bereaved" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ae4d-6c6a-1159-e1b2">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Grail Thralls and Fly Thralls of the Warband are called the Bereaved. Bereaved have a Ranged characteristic of +0 DICE and cost 30 ducats each. Grail Tralls (but not Fly Thralls) can be equipped with Ranged weapons, Standards and Musical Instruments from the Black Grail Armoury</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Grail Thralls or Fly Thralls in a Dirge of the Great Hegemon Warband are called the Bereaved. They have a Ranged Characteristic of +0 DICE and a cost of 30 ducats, and can have Ranged Weapons, Grenades, a Musical Instrument or a Troop Flag from the Cult of the Black Grail Armoury.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
-                <profile name="Hegemon&apos;s Will" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="93cb-bfcb-e75d-a470">
+                <profile name="Hegemon&apos;s Will" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="93cb-bfcb-e75d-a470">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Using the remnants of the lingering power of a fallen Hegemon, a Plague Knight of the Warband can directly
-command a nearby Thrall.
-
-
-During its Activation, a Plague Knight in this Warband can remove an INFECTION MARKER from any model in play to enable a friendly Thrall within 18&quot; to use any one of the Actions detailed below. Each Thrall can only be affected by Hegemon’s Will once per Turn, but one Plague Knight may issue commands to multiple Thralls (though not multiple commands to the same Thrall) during a single Activation, if all conditions are met.
-
-
-● Move: The Thrall takes a Standard Move ACTION.
-● Ranged Attack: The Thrall takes a Ranged Attack ACTION with any Ranged weapon it has.
-● Charge: The Thrall takes a Charge ACTION.
-● Melee Attack: The Thrall takes a Melee Attack ACTION.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Using the remnants of the lingering power of a fallen Hegemon, a Plague Knight of the Warband can directly command a nearby Bereaved. An Executor or Plague Knight in a Dirge of the Great Hegemon Warband can take a Command Bereaved ACTION. If it does so, you can remove any number of INFECTION MARKERS from enemy models. For each INFECTION MARKER you remove, you can then carry out one of the following Commands with a Bereaved (Grail Thrall or Fly Thrall) that is within 18&quot; of the model taking the Command Bereaved ACTION. A Bereaved cannot be given more than 1 Command each Turn, but carrying out a Command does not stop it from also being Activated in the same Turn (before or after the Command was issued).
+* Charge Command: The Bereaved carries out a charge move.
+* Fight Command: The Bereaved carries out a Melee Attack.
+* Move Command: The Bereaved carries out a normal move (it cannot Retreat).
+* Shoot Command: The Bereaved carries out a Ranged Attack.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4303,7 +4353,7 @@ During its Activation, a Plague Knight in this Warband can remove an INFECTION M
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="495e-0cf8-8f45-d3c7-max" includeChildSelections="true"/>
       </constraints>
       <profiles>
-        <profile name="Special Rule: Morale" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6138-06ef-9465-b870">
+        <profile name="Special Rule: Morale" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6138-06ef-9465-b870">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enemy Warbands roll Morale Tests with -1 DICE when fighting a Black Grail Warband. The Court Warbands and other Black Grail Warbands ignore this penalty.</characteristic>
             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>

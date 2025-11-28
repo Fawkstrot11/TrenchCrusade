@@ -199,11 +199,15 @@
           <profiles>
             <profile name="Sacrificial Lamb" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e51e-7de9-7131-6994">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before the battle, this lamb is sacrificed to God’s glory, and the pilgrim then anoints themselves with its blood, averting the wrath of Yahweh while fighting for His cause. The model ignores the first BLOOD MARKER or INFECTION MARKER it suffers in combat.
-Keywords: CONSUMABLE</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">* Anointed: When you deploy a model that has a Sacrificial Lamb, you can say
+that they will sacrifice it and anoint themselves with its blood. If you do so, the
+first BLOOD MARKER placed on the model is ignored.
+
+
+* Only the Righteous: Ecclesiastic Prisoners cannot have a Sacrificial Lamb.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -231,7 +235,7 @@ Keywords: CONSUMABLE</characteristic>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="15cf-bee7-aa7e-cd95" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Field Shrine" hidden="false" id="e6f1-8965-19f9-ee33" sortIndex="10">
+        <selectionEntry type="upgrade" import="true" name="Field Shrine" hidden="false" id="e6f1-8965-19f9-ee33" sortIndex="11">
           <costs>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
           </costs>
@@ -287,18 +291,21 @@ Keywords: CONSUMABLE</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Horn of Joshua" hidden="false" id="0620-8c6a-c05d-e36d" type="selectionEntry" targetId="d954-b3b8-db5f-0026" sortIndex="11"/>
+        <entryLink import="true" name="Horn of Joshua" hidden="false" id="0620-8c6a-c05d-e36d" type="selectionEntry" targetId="d954-b3b8-db5f-0026" sortIndex="12"/>
         <entryLink import="true" name="Blasphemous Banner" hidden="true" id="d0e0-774c-120f-eb89" type="selectionEntry" targetId="ac5b-0ae8-e0cd-5fda"/>
         <entryLink import="true" name="Curative Fluids" hidden="true" id="eced-e795-aa11-ed5a" type="selectionEntry" targetId="0e49-dfa5-4190-ee69"/>
         <entryLink import="true" name="Lock of Samson&apos;s Hair" hidden="false" id="f264-2ade-c985-d3d7" type="selectionEntry" targetId="9b61-d0a4-dd30-2d32"/>
         <entryLink import="true" name="Saints Reliquary" hidden="true" id="5d29-e0b3-1ac1-c9ae" type="selectionEntry" targetId="cf19-f306-c26c-1537"/>
+        <entryLink import="true" name="Dog Food" hidden="false" id="5e90-ed78-533d-3a9b" type="selectionEntry" targetId="05f3-2ee4-36c0-8c25" sortIndex="10"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Throwables" id="70c8-b7ed-f20b-8bd6" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="War Cross" hidden="false" id="9c5f-3b67-0d6e-8f01" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Warcross" hidden="false" id="9c5f-3b67-0d6e-8f01" sortIndex="2">
           <infoLinks>
-            <infoLink name="War Cross" id="b119-22e0-fe05-8a66" hidden="false" type="profile" targetId="2d02-94a4-2493-186f"/>
+            <infoLink name="Warcross" id="b119-22e0-fe05-8a66" hidden="false" type="profile" targetId="2d02-94a4-2493-186f"/>
+            <infoLink name="Assault" id="1d0e-047b-93de-ccae" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Ignore [Modifier]" id="36cb-1495-06e4-c7e5" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
@@ -408,6 +415,7 @@ Keywords: CONSUMABLE</characteristic>
           </costs>
           <infoLinks>
             <infoLink name="Misericordia" id="deef-6bda-31ed-e53d" hidden="false" type="profile" targetId="d82e-4c7b-28ac-1413"/>
+            <infoLink name="Ignore Armour" id="c17c-2b1d-2181-9d2b" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dda2-74bc-f125-de14" includeChildSelections="true"/>
@@ -477,6 +485,7 @@ Keywords: CONSUMABLE</characteristic>
             <infoLink name="Anti-Tank Hammer" id="9993-c9c4-1c2b-6684" hidden="false" type="profile" targetId="8df3-f372-20a0-4a59"/>
             <infoLink name="Critical" id="77c8-99df-0a6d-1260" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
             <infoLink name="Risky" id="9ffe-3093-1a58-3040" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+            <infoLink name="Ignore Armour" id="d865-36a3-6b6a-5fd2" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -717,18 +726,6 @@ Keywords: CONSUMABLE</characteristic>
     </selectionEntryGroup>
     <selectionEntryGroup name="Ranged (Two-Handed)" id="8f05-2ca1-a241-fd39" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Musket" hidden="false" id="ebaa-a03b-aed3-ffa0" sortIndex="1">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="Bayonet Lug" hidden="false" id="910c-6d19-51de-fea3" type="selectionEntry" targetId="780a-82e9-b0f2-9caf"/>
-          </entryLinks>
-          <infoLinks>
-            <infoLink name="Musket" id="05e8-4d7d-b7c9-9a4a" hidden="false" type="profile" targetId="b5e4-35bd-ba00-55c0"/>
-          </infoLinks>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Semi-Automatic Rifle" hidden="false" id="a8ac-1e12-a8f3-5a8e" sortIndex="3">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
@@ -747,6 +744,7 @@ Keywords: CONSUMABLE</characteristic>
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Assault" id="8900-124c-6d76-3142" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Machine Gun" hidden="false" id="7995-a97c-4a75-5dee" sortIndex="6">
@@ -756,6 +754,8 @@ Keywords: CONSUMABLE</characteristic>
           <infoLinks>
             <infoLink name="Machine Gun" id="1e9c-e5f9-c50d-e526" hidden="false" type="profile" targetId="517c-652f-100e-71d6"/>
             <infoLink name="Heavy" id="0f83-1d74-8ff3-95b0" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Automatic" id="0578-ecdf-8c0f-77f5" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Reload" id="8303-a496-9d05-cdaf" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="ca66-5dc3-e336-7c86" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -779,11 +779,13 @@ Keywords: CONSUMABLE</characteristic>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <constraints>
-            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="ef7e-68c5-2b65-1ca4" includeChildSelections="true"/>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="ef7e-68c5-2b65-1ca4" includeChildSelections="true"/>
           </constraints>
           <infoLinks>
             <infoLink name="Flamethrower" id="41c1-1d28-d995-3f9d" hidden="false" type="profile" targetId="9b21-3223-c112-c65f"/>
             <infoLink name="Fire" id="a69d-2493-df05-d36b" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+            <infoLink name="Flamethrower" id="3a70-0322-c41e-d36f" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+            <infoLink name="Ignore Armour" id="8d83-2044-48e1-38ac" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Punt Gun" hidden="false" id="1805-1ff3-cb28-85bd" sortIndex="4">
@@ -793,6 +795,9 @@ Keywords: CONSUMABLE</characteristic>
           </costs>
           <infoLinks>
             <infoLink name="Punt Gun" id="5142-c71d-e439-0b50" hidden="false" type="profile" targetId="77ea-665d-7ac6-58ef"/>
+            <infoLink name="Heavy" id="3bef-ba8a-319a-bcc7" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Shotgun" id="165d-7cee-9fab-6a78" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
+            <infoLink name="Shrapnel" id="fc72-fd0b-c1e6-95d0" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="106f-899c-c7c7-9d92" includeChildSelections="true"/>
@@ -861,6 +866,8 @@ Keywords: CONSUMABLE</characteristic>
           <infoLinks>
             <infoLink name="Machine Gun" id="6baa-81dd-2fc6-48e0" hidden="false" type="profile" targetId="517c-652f-100e-71d6"/>
             <infoLink name="Heavy" id="5dde-3955-bebb-60f3" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Automatic" id="d7d8-e5b3-43c2-8cd2" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Reload" id="b39e-ae52-0ae7-e954" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="7f31-f7d0-c110-314f" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -893,6 +900,7 @@ Keywords: CONSUMABLE</characteristic>
               </modifiers>
             </infoLink>
             <infoLink name="Assault" id="fd14-dbe0-263d-2b77" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Automatic" id="4a45-e047-8148-b459" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="eeea-ae51-8f79-edc5" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -908,6 +916,18 @@ Keywords: CONSUMABLE</characteristic>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0991-fcb1-ee05-149b" includeChildSelections="true"/>
           </constraints>
           <comment>methodius</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Musket" hidden="false" id="028f-f870-3b2e-f353" sortIndex="1">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="Bayonet Lug" hidden="false" id="d86c-39e7-f53f-f267" type="selectionEntry" targetId="780a-82e9-b0f2-9caf"/>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Musket" id="722e-9a97-534c-be00" hidden="false" type="profile" targetId="b5e4-35bd-ba00-55c0"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1189,6 +1209,9 @@ Keywords: CONSUMABLE</characteristic>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="705a-5247-841d-116c" includeChildSelections="false"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Impervious" id="67cf-af80-91be-a90d" hidden="false" type="rule" targetId="00a9-ddfe-2a2b-078d"/>
+          </infoLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -1315,6 +1338,9 @@ Keywords: CONSUMABLE</characteristic>
             <infoLink name="Heavy Flamethrower" id="89f0-f120-7d13-08bd" hidden="false" type="profile" targetId="2fc0-bc43-b366-5b95"/>
             <infoLink name="Fire" id="f495-3544-1991-c335" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
             <infoLink name="Heavy" id="db27-22f0-7a65-8a2c" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Automatic" id="8b95-05dd-27ef-a4d2" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Flamethrower" id="9a9e-6d31-f991-46d4" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+            <infoLink name="Ignore Armour" id="f74e-97c5-5d56-63a3" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ce1-ac72-5d3d-3893" includeChildSelections="false"/>
@@ -1336,25 +1362,29 @@ Keywords: CONSUMABLE</characteristic>
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Hit</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">RISKY, HEAVY</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Because of the enormous weight and the skill of the Anchorite Shrine in inflicting maximum pain, the Catherine Wheel rolls 3D6 on the Injury Chart, adding the results together.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, RISKY, HEAVY</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Mighty Blows: When you make an Injury Roll for an attack made with the Catherine Wheel, roll 3D6 and add all 3 dice together. Any +INJURY DICE or -INJURY DICE are added to the roll normally, except that you pick the 3 highest or lowest dice in the roll instead of the 2 highest or lowest.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c14f-3932-400b-0152" includeChildSelections="false"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Heavy" id="0950-5c32-b3a3-f555" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Risky" id="d62c-7317-d889-03ed" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+          </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Punt Gun" hidden="true" id="9dc9-c266-d6a3-37cf" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Punt Gun" hidden="true" id="9dc9-c266-d6a3-37cf" sortIndex="3">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
             <infoLink name="Punt Gun" id="b2c7-362f-2fb9-2db2" hidden="false" type="profile" targetId="77ea-665d-7ac6-58ef"/>
+            <infoLink name="Heavy" id="e786-95e0-d8d2-df13" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Shotgun" id="a741-f6e5-ebe3-67e0" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
+            <infoLink name="Shrapnel" id="89dd-3888-5aa3-d402" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0819-d5e1-5bcb-4e52" includeChildSelections="false"/>
@@ -1376,11 +1406,8 @@ Keywords: CONSUMABLE</characteristic>
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">48&quot;</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">Ignore Cover, +1D Injuries</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">FIRE, HEAVY, BLAST 3”</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Specify a point on the battlefield within 36” (must be in line of sight) that you want to target. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bombard shot lands 2” away, as 7 – 5 = 2). The direction is decided by your opponent. All models within 3” of the 1 x 1 mm landing spot are hit as the shell explodes – no roll to hit is needed. This weapon has a BLAST radius of 3” – all models within this range are hit. Add +1 DICE to all injury rolls.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, BLAST 3&apos;&apos;, FIRE, HEAVY, IGNORE COVER, SCATTER</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">High Trajectory: When a Trench Mortar is used to make a Ranged Attack, the target model (or target point, if targeting a point on the ground) cannot be within 6&quot; of the attacking model. Note that if the attack Scatters it may end up landing within 6&quot; of the attacking model.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1402,6 +1429,8 @@ Keywords: CONSUMABLE</characteristic>
             <infoLink name="Fire" id="b586-79c9-b58d-e935" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
             <infoLink name="Blast" id="a9d8-c06f-bde8-533c" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Heavy" id="8a47-6cc7-317f-046c" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore [Modifier]" id="880f-55e9-deff-2fb3" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Scatter" id="87af-9f02-7b2d-3caf" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Gas Censer" hidden="true" id="bf35-3729-df69-7562">
@@ -1409,12 +1438,9 @@ Keywords: CONSUMABLE</characteristic>
             <profile name="Gas Censer" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="ca96-4933-b496-593f">
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Special</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">Ignore Armour</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">GAS, BLAST 6&quot;</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">The Anchorite may make an injury roll against all models within 6” except the Anchorite itself. Note that all models within range, friend or foe, are hit if the weapon is used. No Line of Sight is needed. The attack has the Keyword GAS and Ignores Armour, unless the models are in Cover in which case armour works as normal. The use of the Gas Censer always ends the Activation of this model.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">6&apos;&apos;</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">GAS, IGNORE ARMOUR, RELOAD</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Cloud of Gas: When you take a Shoot ACTION with this model, instead of making a Ranged Attack, you can unleash a cloud of gas. If you do so, do notmake a Success Roll. Instead, all other models within 6&quot; of the model using the Gas Censer are hit, and an Injury Roll must be made for each one. Note that the attack hits all models, friend or foe, apart from the model making the attack, regardless of line of sight.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1434,20 +1460,26 @@ Keywords: CONSUMABLE</characteristic>
           </modifiers>
           <infoLinks>
             <infoLink name="Gas" id="bee6-3d7f-cbf4-d9e3" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
-            <infoLink name="Blast" id="7fc8-586c-a763-f46e" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+            <infoLink name="Ignore Armour" id="5f3f-b68b-0f4f-ac43" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+            <infoLink name="Reload" id="ec1c-e487-ffbc-245f" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Autocannon" hidden="true" id="844d-8df1-2006-2cf7" sortIndex="6">
           <profiles>
-            <profile name="Autocannon" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="e37a-b7ce-312c-3242">
+            <profile name="Autocannon (Bursts)" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="e37a-b7ce-312c-3242">
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">48&quot;</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">3 Attacks, +1D to injuries</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Rules: Autocannons can make three Attack ACTIONS instead of one. They can target separate models with each attack, as long as all targets are within 6” of each other. After taking all three attacks the Activation of the model is over regardless of any remaining ACTIONS the model might have. Add +1 DICE to all injury rolls. They can shoot up to five times instead of three if they take ALL the attacks as RISKY ACTIONS.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, AUTOMATIC 3, HEAVY</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+              </characteristics>
+            </profile>
+            <profile name="Autocannon (Full Auto)" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="584f-141d-ce83-d55d">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">48&quot;</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, AUTOMATIC 5, HEAVY, RELOAD, RISKY</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Full Auto: Each time you make a Ranged Attack with an Autocannon, you must choose to either fire it using the Bursts Weapon Profile or the Full Auto Weapons Profile.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1467,16 +1499,21 @@ Keywords: CONSUMABLE</characteristic>
           </modifiers>
           <infoLinks>
             <infoLink name="Heavy" id="1f6b-0179-a28f-e3fb" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Automatic" id="18cf-6992-feca-6bcb" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Risky" id="ede7-eaff-8f62-23d6" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+            <infoLink name="Reload" id="7ee5-1485-8d79-7d9a" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Anti-Material Rifle" hidden="true" id="8ece-f70d-905f-dbf9" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Anti-Material Rifle" hidden="true" id="8ece-f70d-905f-dbf9" sortIndex="4">
           <costs>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="40"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
             <infoLink name="Anti-Material Rifle" id="2128-7403-24da-e52f" hidden="false" type="profile" targetId="50ec-f075-494f-9dc5"/>
             <infoLink name="Critical" id="b489-0805-418c-66a3" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
             <infoLink name="Heavy" id="29b3-7eef-b527-456f" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore Armour" id="04b8-8e96-5b96-d425" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f02-fa98-a411-f2c6" includeChildSelections="false"/>
@@ -1503,10 +1540,10 @@ Keywords: CONSUMABLE</characteristic>
           <profiles>
             <profile name="Gas Filters" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="69ba-974b-0e6f-7391">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This upgrade counts as a gas mask.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE GAS</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1517,15 +1554,18 @@ Keywords: CONSUMABLE</characteristic>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="02c5-e8be-9826-4be6" includeChildSelections="false"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Negate [Keyword]" id="ff86-a67d-0420-2667" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Holy Diesel Engine" hidden="false" id="1298-0ecd-ca20-0e16" sortIndex="2">
           <profiles>
             <profile name="Holy Diesel Engine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e6ee-0b99-239f-7120">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Anchorite can add +2 DICE to its Dash ACTIONS, but it automatically gains one BLOOD MARKER if it succeeds in a Dash ACTION.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Advanced Design: When you take a Dash ACTION with this Anchorite Shrine, you can choose to add +2 DICE to the Risky Success Roll. If you do so, you must place 1 BLOOD MARKER next to the model</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1541,10 +1581,10 @@ Keywords: CONSUMABLE</characteristic>
           <profiles>
             <profile name="Sacred Geometry" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3869-f6f2-7f5a-92af">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This upgrade increases its Ranged Characteristic to +1 DICE.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Divine Accuracy: Add +1 DICE to the Ranged Characteristic of this Anchorite Shrine.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1562,16 +1602,17 @@ Keywords: CONSUMABLE</characteristic>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="4850-3648-7cf2-ea62" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="+1 DICE" field="1a4f-d2cd-c405-6200" affects="profiles.Unit"/>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Grand Anchorite" hidden="false" id="a9cd-89ba-ea71-c282" sortIndex="4">
           <profiles>
             <profile name="Grand Anchorite" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="828c-64ab-63e9-051b">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Anchorite Shrine can always move out of Melee combat with any enemy without the enemy having a chance to attack it. Additionally, it can move out of Melee combat as part of a Standard Move, Charge or Dash.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Impossible to Stop: Enemy models are not allowed to make a Melee Attack when a Grand Anchorite Shrine that is within 1&quot; of them retreats. In addition, a Grand Anchorite Shrine can use a normal move or a charge move if it starts within 1&quot; of any enemy models.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1593,12 +1634,12 @@ Keywords: CONSUMABLE</characteristic>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Wrathful Cherub Face" hidden="false" id="d93a-6190-7c98-1e4c" sortIndex="7">
           <profiles>
-            <profile name="Wrathful Cherub Face" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2359-5cf1-b45c-b058">
+            <profile name="Wrathful Cherub Face" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2359-5cf1-b45c-b058">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the model fighting the Shrine Anchorite in Melee is affected by the Keyword FEAR, one of the ACTIONS it has to take when it is activated must be Retreat from Melee Combat.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Cower Before The Lord: An enemy model that does not have the FEAR keyword and that starts an Activation within 1&quot; of this Anchorite Shrine must take a Retreat ACTION as part of the Activation. It cannot take any RISKY ACTIONS while it is within 1&quot; of this Anchorite Shrine.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1612,12 +1653,12 @@ Keywords: CONSUMABLE</characteristic>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Hallowed Anchorite" hidden="false" id="07cd-fdf6-9ff2-7873" sortIndex="6">
           <profiles>
-            <profile name="Hallowed Anchorite" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ef56-de02-03da-7fd7">
+            <profile name="Hallowed Anchorite" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ef56-de02-03da-7fd7">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Anchorite can be promoted to ELITE during campaigns.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Manifold Blessings: A Hallowed Anchorite Shrine can be promoted to ELITE status in the Promotions &amp; Experience Step of the Campaign Phase.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1641,10 +1682,10 @@ Keywords: CONSUMABLE</characteristic>
           <profiles>
             <profile name="Piston Legs" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bd5a-aaba-367a-8f09">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Once during its Activation, the Anchorite Shrine may make an extra Melee Attack ACTION against a Downed enemy model on a 32mm or smaller base. Resolve the attack as if the Anchorite Shrine was armed with a Trench Club.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Grind to Dust ACTION: This Anchorite Shrine can take a Grind to Dust ACTION. If it does so, it makes a Melee Attack but must target an enemy model within 1&quot; that is Down and is mounted on a base that is 32mm or smaller. The attack does not use a Melee Weapon.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1716,12 +1757,12 @@ Keywords: CONSUMABLE</characteristic>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Wrath of God" hidden="true" id="1a8c-d998-b42b-9e8b">
       <profiles>
-        <profile name="Vengeful Fury" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cdfe-5f3e-eefe-e3e1">
+        <profile name="Vengeful Fury" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="cdfe-5f3e-eefe-e3e1">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is immune to FEAR and disregards any BLOOD MARKERS from any source, but cannot use armour or ranged weapons.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="4834-43a9-1c93-9062">BLOOD MARKERS are never placed next to a model with the Wrath of God special rule, and it has the NEGATE FEAR Keyword. It cannot be Broken on the Wheel by an Anchorite Shrine. A model with the Wrath of God special rule cannot have Ranged Weapons or Armour (it can have a Shield).</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
           </characteristics>
         </profile>
       </profiles>
@@ -2523,20 +2564,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Whip of God" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3334-ac1d-eda1-a0e1">
+        <profile name="Whip of God" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="3334-ac1d-eda1-a0e1">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Unlike other models, a Castigator is allowed to attack friendly models with melee attacks within 1”. They can do this without declaring a charge. Each time the Castigator takes a friendly model Out of Action with a melee attack, set a die aside in a pool as the act of piety inspires the troops. The next time your warband makes a Morale roll, add an amount of +DICE to that roll equal to the amount of dice in the pool and empty it.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Unlike other models, a Castigator is allowed to attack friendly models with melee attacks within 1”. They can do this without declaring a charge. Each time the Castigator takes a friendly model Out of Action with a melee attack, set a die aside in a pool as the act of piety inspires the troops. The next time your warband makes a Morale roll, add an amount of +DICE to that roll equal to the amount of dice in the pool and empty it.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Enforced Orthodoxy" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9a0d-9964-aee2-78c4">
+        <profile name="Enforced Orthodoxy" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9a0d-9964-aee2-78c4">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">At any point during its Activation, a Castigator may take a RISKY ACTION with +1 DICE. If successful, all friendly models that are Down and within 8” of the Castigator may immediately stand up at no penalty or cost.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">At any point during its Activation, a Castigator may take a RISKY ACTION with +1 DICE. If successful, all friendly models that are Down and within 8” of the Castigator may immediately stand up at no penalty or cost.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2560,6 +2595,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="self" childId="2fe1-9dfe-d2d6-5ecc" shared="true" includeChildSelections="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="914f-0020-0d97-e217" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="8b6b-5bd4-c742-bb12" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2653,12 +2693,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifierGroup>
           </modifierGroups>
         </profile>
-        <profile name="Resurrection" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="87c7-8ddb-b2bb-5b27">
+        <profile name="Resurrection" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="87c7-8ddb-b2bb-5b27">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When a Trench Pilgrim dies, you may elect to re-buy them as a Martyr-Penitent resurrected by a Meta-Christ for a cost of 45 Ducats after battle. When hit, any attacks against a Martyr-Penitent add -1 DICE when rolling on the Injury Table. Their Melee bonus is increased to +1 DICE (reflected on the profile above). Martyr-Penitents retain any possessions they had before dying and being resurrected, but lose any Scars and advancements they had if they were ELITE via Campaign promotion.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If a Trench Pilgrim is killed after a game (▶ see Campaign in the Trench Crusade Digital Rulebook), they can be resurrected as a Martyr Penitent with the Martyr Penitent Profile for a cost 45 ducats. Add -1 INJURY DICE to Injury Rolls for a Martyr Penitent. A Martyr Penitent keeps their Battlekit and Zealot Strength if the ability was purchased, but loses any Scars, Experience, and Advancements. Martyrdom Pills have no effect on a Martyr Penitent model</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2691,11 +2728,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="self" childId="6082-859c-8347-2a94" shared="true" includeChildSelections="false"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="Martyr-Penitent" field="name">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="b32b-6d55-9163-8486" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2763,23 +2795,28 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="b32b-6d55-9163-8486" shared="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="Martyr-Penitent" field="name"/>
+            <modifier type="set" value="+1 DICE" field="12e8-ff8c-c933-9eb5" affects="profiles.Unit"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Communicant" hidden="false" id="d21f-81f7-cf6f-690e">
       <profiles>
-        <profile name="Bodyguard" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b241-36e1-f345-a731">
+        <profile name="Bodyguard" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b241-36e1-f345-a731">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If any model with the PILGRIM Keyword within 1” of the Communicant is hit by a ranged or melee weapon (excluding BLAST weapons), you can choose to redirect the hit against the Communicant instead. Determine the injuries exactly as if the weapon just hit the Communicant.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If a friendly PILGRIM model within 1&quot; of a Communicant is hit by a Ranged Attack or Melee Attack, you can say that the Communicant will take the hit. If you do so, make an Injury Roll for the Communicant instead of the original target. This ability cannot be used against attacks that have the BLAST Keyword.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Miracle of Regeneration" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="aff3-58e7-e3b9-a779">
+        <profile name="Miracle of Regeneration" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="aff3-58e7-e3b9-a779">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the start of each of their Activations, the Communicant can remove one BLOOD MARKER from themselves, if they have any.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">At the start of each of their Activations, the Communicant can remove one BLOOD MARKER from themselves, if they have any.</characteristic>
           </characteristics>
         </profile>
         <profile name="Communicant" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="53e3-a873-a192-6a91">
@@ -2834,12 +2871,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="The Communicant Cross" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d090-0fbb-4251-618c">
+        <profile name="The Communicant Cross" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d090-0fbb-4251-618c">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A sacred cross is nailed on the face of the Communicant. This counts as an Iron Capirote, Combat Helmet and a Gas Mask (Immune to SHRAPNEL, GAS, and FEAR).</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A sacred cross is nailed on the face of the Communicant. This counts as an Iron Capirote, Combat Helmet and a Gas Mask (Immune to SHRAPNEL, GAS, and FEAR).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2943,12 +2977,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Day of His Wrath" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="true" id="8160-6b76-eb5c-dd34">
+        <profile name="Day of His Wrath" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="8160-6b76-eb5c-dd34">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">With a successful RISKY ACTION, roll on the Injury Chart against one enemy model within 3” of the Prophet. Armour offers no protection against this attack.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Cavalcade of the Tenth Plague War Prophet can take a Day of his Wrath ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure the War Prophet’s Activation ends immediately. If the roll is a Success, make an Injury Roll with the IGNORE ARMOUR Keyword for 1 enemy model within 3&quot; of the War Prophet. If the roll is a Critical Success, make an Injury Roll with +1 INJURY DICE and the IGNORE ARMOUR Keyword for 1 enemy model within 3&quot; of the War Prophet.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -2959,28 +2990,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </modifiers>
           <alias>Wrath of God</alias>
         </profile>
-        <profile name="Loudspeakers" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9ec3-b93c-1646-ccec">
+        <profile name="Loudspeakers" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9ec3-b93c-1646-ccec">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The War Prophet blares out holy sermons and dire prophecies at 100 decibels to inspire the faithful. The Prophet can take a RISKY ACTION with +2 DICE once during each Activation. If the action is successful, all friendly models within 8” of the Prophet (including the Prophet) that are not engaged in melee can immediately move up to 3” towards any enemy model they can see by the optimal path that reduces the distance between the moving model and the enemy. This move allows them to enter combat as if they charged the enemy and are considered to have done so until the end of the turn.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A War Prophet can take a Loudspeakers ACTION. If they do so, take a Risky Success Roll for the model and add +2 DICE to the roll. If the roll is a Failure, the War Prophet’s Activation ends immediately. If the roll is a Success or Critical Success, you can move all friendly models within 8&quot; of the War Prophet up to 3&quot;. They must end the move as close as possible to the nearest enemy model that was visible to them at the start of the move. This move can be used to bring a model within 1&quot; of an enemy model in which case the model counts as charging. If no enemy models are visible, they can move normally.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Memento Mori" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f2b4-37b5-8a5a-ac9f">
+        <profile name="Memento Mori" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f2b4-37b5-8a5a-ac9f">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The War Prophet is touched by a higher power and the revealed truth allows them a degree of protection against premature death. Once per battle, when the War Prophet is taken Out of Action for any reason, ignore the result as if nothing had happened.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The War Prophet is touched by a higher power, and the revealed truth allows them a degree of protection against premature death. The first time the War Prophet suffers an Out of Action result on the Injury Table, it is treated as a No Effect result instead.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Laying on Hands" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4458-54c7-2ee5-90df">
+        <profile name="Laying on Hands" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4458-54c7-2ee5-90df">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">With a successful ACTION, you may remove D3 BLOOD MARKERs from any friendly model within 6” (including the Prophet).</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A War Prophet can take a Laying on of Hands ACTION. If they do so, take a Success Roll for the model. If the roll is a Failure, nothing happens. If the roll is a Success, remove 1 BLOOD MARKER from a friendly model within 6&quot; of the War Prophet. If the roll is a Critical Success, remove 3 BLOOD MARKERS from a friendly model within 6&quot; of the War Prophet instead of only 1. The War Prophet can use this ACTION to heal themselves.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -3039,7 +3061,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
           </characteristics>
         </profile>
-        <profile name="Mad Dash" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f345-3b64-dcf0-4daf">
+        <profile name="Mad Dash" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f345-3b64-dcf0-4daf">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">Ecclesiastic Prisoner can add +1 DICE to their Dash ACTION</characteristic>
             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3075,10 +3097,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </profile>
             <profile name="Martyrdom Device" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4283-0424-9334-02b2">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Prisoner strapped with a Martyrdom Device can trigger it at any point during their Activation. This does not require an ACTION. When detonated, the explosion is treated as a BLAST 3” weapon targeting the prisoner model. Models within 1” of the prisoner hit by the explosion roll their injuries with +1 DICE. The prisoner rolls 4d6 and adds them together to determine the results of their injury roll. If the explosive goes off and the prisoner somehow survives the battle, you can buy them a new explosive for 35 ducats as normal, or simply field them without.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">An Ecclesiastic Prisoner with a Martyrdom Device can take a Trigger Martyrdom Device ACTION. If they do so, the Martyrdom Device detonates and cannot be used again. When Martyrdom Device detonates, make an Injury Roll for all models within 3&quot; of the Ecclesiastic Prisoner (friend or foe, including the Ecclesiastic Prisoner). Make the Injury Roll for the Ecclesiastic Prisoner by rolling 4D6 and adding all 4 dice together, and add +1 INJURY DICE to the Injury Rolls for other models that are within 1&quot; of the Ecclesiastic Prisoner. If an Ecclesiastic Prisoner detonates their Martyrdom Device and survives the game, you must either buy them a new Martyrdom Device for 35 ducats, or use them without one.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
             </profile>
           </profiles>
@@ -3177,20 +3199,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Blessed Stigmata" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="39e0-2444-2fb0-c9ae">
+        <profile name="Blessed Stigmata" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="39e0-2444-2fb0-c9ae">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the start of each of their Activations, any Stigmatic Nun can remove one BLOOD MARKER (but not an INFECTION MARKER) from themselves and convert it into a BLESSING MARKER.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">At the start of each of their Activations, any Stigmatic Nun can remove one BLOOD MARKER (but not an INFECTION MARKER) from themselves and convert it into a BLESSING MARKER.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Agile" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c190-c883-b2da-b8b6">
+        <profile name="Agile" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c190-c883-b2da-b8b6">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Stigmatic Nuns may take any Dash ACTION or jump/climb/Diving Charge ACTION with +1 DICE.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Stigmatic Nuns may take any Dash ACTION or jump/climb/Diving Charge ACTION with +1 DICE.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3304,19 +3320,16 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <characteristics>
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
             <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-            <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Injure</characteristic>
-            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">RISKY</characteristic>
-            <characteristic name="Rules" typeId="6e95-3480-ad33-b345"/>
-            <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-            <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, RISKY</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
           </characteristics>
         </profile>
-        <profile name="Broken on the Wheel" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="ca00-3c87-ba97-103d">
+        <profile name="Broken on the Wheel" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ca00-3c87-ba97-103d">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Before the start of the battle, one Trench Pilgrim or Ecclesiastic Prisoner may voluntarily be broken on the wheel to show their piety and devotion (permanently remove all weapons, armour and equipment from the victim and use/store them as you wish). The Anchorite Shrine will then shatter the bones of the volunteer and carry the broken victim to the battle on its Wheel. As long as the volunteer is not taken Out of Action, any Attacks against the Anchorite are redirected to the volunteer. The volunteer cannot be independently targeted by any abilities or attacks (including BLAST weapons). For all rules purposes and attack effects (such as forced movement), the two models are treated as a single model, including sharing BLOOD, INFECTION and BLESSING MARKERS. Treat Down results against the volunteer as a Minor Hit. The volunteer cannot take any ACTIONS, be Activated separately or move – for obvious reasons. At the end of the battle, even if the volunteer may have survived, the model dies and is removed from your warband.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">At the start of each game, before deployment, you can say that one Trench Pilgrim or Ecclesiastic Prisoner will be broken on the wheel to show their piety and devotion. The model you choose is permanently removed from your Warband, but you can redistribute their Battlekit to other models that would be allowed to have it. The Anchorite Shrine then shatters the bones of the volunteer and carries the broken victim to battle on its Wheel. Injuries that would be inflicted on the Anchorite Shrine are instead inflicted on its unfortunate victim, until the victim finally passes away. This is represented by the following special rules, which apply to the Anchorite Shrine until it suffers an Out of Action result on the Injury Table:
+* It has an Armour Characteristic of 0 and does not have the NEGATE SHRAPNEL and TOUGH Keywords.
+* It treats Down results as Minor Hit results.
+* The first time the Anchorite Shrine suffers an Out of Action result on the Injury Table, it is treated as a No Effect result. When this happens, any Blood Markers on the Anchorite Shrine are removed, and from then on, these special rules no longer apply to the model.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -3325,6 +3338,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               </conditions>
             </modifier>
           </modifiers>
+        </profile>
+        <profile name="Symphony of Slaughter" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c845-81eb-cd8e-9498">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">An Anchorite Shrine is armed with two 1-Handed Melee Weapons (the Catherine Wheel and Bonebreaker Mace). When it makes a Melee Attack, it can either attack once using either its Catherine Wheel or the Bonebreaker Mace, or twice, first with the Catherine Wheel and second with its Bonebreaker Mace (the Off-Hand Weapon modifier applies to the attack made with the Bonebreaker Mace). Note that both Weapons have the RISKY keyword, which means that the Anchorite Shrine’s Activation ends immediately if the Success Roll for an attack made with either weapon is a Failure.</characteristic>
+          </characteristics>
         </profile>
       </profiles>
       <constraints>
@@ -3440,27 +3458,29 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Wrath of God" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="86fd-13bd-28d2-a251">
+                <profile name="Wrath of God" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="86fd-13bd-28d2-a251">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">One Trench Pilgrim or Castigator in this warband can be gripped by the vengeful fury of the Lord. This model is immune to FEAR and disregards any BLOOD MARKERS from any source. This model may never wear armour, though they can carry a Trench Shield or Holy Icon Shield. Add +15 ducats to the cost of this model. This model may not carry any ranged weapons.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Up to 1 Castigator, or Trench Pilgrim, or Martyr Penitent can have the Wrath of God special rule at a cost of 15 ducats. BLOOD MARKERS are never placed next to a model with the Wrath of God special rule, and it has the NEGATE FEAR Keyword. It cannot be Broken on the Wheel by an Anchorite Shrine. A model with the Wrath of God special rule cannot have Ranged Weapons or Armour (it can have a Shield)</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Cavalcade of the Tenth Plague" hidden="false" id="8b6b-5bd4-c742-bb12">
               <profiles>
-                <profile name="Day of His Wrath" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0dce-bfc4-58eb-1d8e">
+                <profile name="Day of His Wrath" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="0dce-bfc4-58eb-1d8e">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The War Prophet of this warband cannot use Laying on Hands but can call upon the Wrath of God instead. This is a RISKY ACTION. If successful, roll on the Injury Chart against one enemy model within 3” of the Prophet. Armour offers no protection against this attack.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The War Prophet of this Warband replaces their Laying on Hands ACTION with the following Day of his Wrath ACTION. 
+
+* Day of His Wrath ACTION: A Cavalcade of the Tenth Plague War Prophet can take a Day of his Wrath ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure the War Prophet’s Activation ends immediately. If the roll is a Success, make an Injury Roll with the IGNORE ARMOUR Keyword for 1 enemy model within 3&quot; of the War Prophet. If the roll is a Critical Success, make an Injury Roll with +1 INJURY DICE and the IGNORE ARMOUR Keyword for 1 enemy model within 3&quot; of the War Prophet.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
-                <profile name="Stolen Communicants" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2869-0005-707a-063a">
+                <profile name="Stolen Communicants" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2869-0005-707a-063a">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Communicants cost 3 Glory Points instead of ducats for this warband due to the difficulty of acquiring and indoctrinating them.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3468,15 +3488,15 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Blood Sacrifice" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f12b-c290-4800-54ba">
+                <profile name="Blood Sacrifice" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f12b-c290-4800-54ba">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Any model (except Ecclesiastic Prisoners who are not worthy) in the warband can purchase a Sacrificial Lamb (see below).</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Any model (except Ecclesiastic Prisoners who are not worthy) in the warband can purchase a Sacrificial Lamb.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
-                <profile name="Heaven Awaits" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="481f-ff6c-c433-5161">
+                <profile name="Heaven Awaits" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="481f-ff6c-c433-5161">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Cavalcade rejects the doctrine of the Meta-Christ. Their dead Pilgrims cannot be resurrected as Martyr-Penitents.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3484,7 +3504,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="The Unclean" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a9d9-489e-9125-0212">
+                <profile name="The Unclean" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a9d9-489e-9125-0212">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Cavalcade detests using the unclean Ecclesiastic Prisoners and may have only up to two of them.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3492,7 +3512,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Favour of the Lord" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="28fc-4d05-7a78-80a3">
+                <profile name="Favour of the Lord" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="28fc-4d05-7a78-80a3">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the start of each turn, you can give any one model in the warband a BLESSING MARKER</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>

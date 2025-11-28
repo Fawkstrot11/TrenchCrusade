@@ -56,7 +56,7 @@
         <infoLink name="Reinforced Armour" id="fad8-546d-9f91-bc38" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
       </infoLinks>
       <modifiers>
-        <modifier type="set" value="1" field="2daf-dded-85a2-f21a">
+        <modifier type="set" value="2" field="2daf-dded-85a2-f21a">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d05-603e-4b5a-aed4" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -144,33 +144,34 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Goetic Power" id="313a-7f25-cc7e-920c" hidden="false" sortIndex="4">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9a62-abe5-e0a5-8b6d-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a62-abe5-e0a5-8b6d-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9a62-abe5-e0a5-8b6d-max-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a62-abe5-e0a5-8b6d-max-max" includeChildSelections="false"/>
           </constraints>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Puppet Master" hidden="false" id="da8a-c360-e7e1-47df">
               <profiles>
-                <profile name="Puppet Master" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7b33-345f-cdc7-913e">
+                <profile name="Puppet Master" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="7b33-345f-cdc7-913e">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Select a target model, friend or foe (including the Priest), within 12”. As a RISKY ACTION you can move the model D6” in any one direction, including forcing it to jump/fall down or enter into melee combat with any enemy model (as if it had Charged), or leave Combat (as if it had Retreated, including granting any enemies within range free attacks).</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Select a target model, friend or foe (including the Priest), within 12”. As a RISKY ACTION you can move the model D6” in any one direction, including forcing it to jump/fall down or enter into melee combat with any enemy model (as if it had Charged), or leave Combat (as if it had Retreated, including granting any enemies within range free attacks).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e6dd-64ff-4da4-ade1" includeChildSelections="false"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="The Price of Greed" hidden="true" id="1cb9-408c-58c2-68a9">
               <profiles>
-                <profile name="The Price of Greed" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c458-b32e-be25-c274">
+                <profile name="The Price of Greed" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c458-b32e-be25-c274">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Worldly wealth belonging to the target model of this curse starts crushing them under its weight. Choose any model the Priest sees within 12” and take a RISKY ACTION. If successful, roll immediately on the Injury Chart for that model and add +1 DICE to the injury roll for each -1 Armour modifier the model has (for example if the model has a Trench Shield and standard armour, add +2 DICE to the injury rolls).</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Worldly wealth becomes the target of this curse, gradually crushing its victim under its weight. A Knights of Avarice Heretic Priest can take a Price of Greed ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure, the Knights of Avarice Heretic Priest’s Activation ends immediately. If the roll is a Success or Critical Success, make an Injury Roll for an enemy model that is within 12&quot; of the model taking the Price of Greed ACTION and in its line of sight. Add +1 INJURY DICE to the roll if the Success Roll was a Critical Success, and add +1 DICE to the roll for each -1 INJURY MODIFIER that applies to the target (the -1 INJURY MODIFIER still applies). For example, if the target had Standard Armour with a -1 INJURY MODIFIER, you would add +1 INJURY DICE and a -1 INJURY MODIFIER to the roll.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -235,16 +236,28 @@
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="60"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
-          <infoLinks>
-            <infoLink name="Machine Armour" id="9a77-4054-5da9-532c" hidden="false" type="profile" targetId="2558-23f8-cfa8-40f4"/>
-          </infoLinks>
           <profiles>
-            <profile name="Raised Platform" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7215-1443-8f01-62bf">
+            <profile name="Death From On High" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="7215-1443-8f01-62bf">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Priest riding the Tank Palanquin has a 50mm base, and counts as being on a 2” high platform.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add 3&quot; to the height of a model that has a Tank Palanquin when determining if it receives the Elevated Position modifier for any Ranged Attacks that it makes.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Bulky" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8bf3-11bd-c1a9-c4f9">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A model that has a Tank Palanquin must be mounted on a 50mm base and cannot be equipped with a Shield. In addition, it has a Charge Bonus of D3&quot; instead of D6&quot;.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Standfast" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="daef-b905-2d3b-abb6">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When a model that has a Tank Palanquin suffers a Down result on the Injury table, it is treated as a Minor Wound result instead.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Tank Palanquin" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="835c-9624-303f-5792">
+              <characteristics>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-3 INJURY MODIFIER, STRONG</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -321,20 +334,14 @@
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Stealth Generator" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1110-b5e7-9966-1383">
+        <profile name="Stealth Generator" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1110-b5e7-9966-1383">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Ranged attacks against a Death Commando suffer -1 DICE to all the attack rolls.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 DICE to Ranged Attacks that target a Death Commando.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Hide" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1191-44c6-b786-d49d">
+        <profile name="Hide" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1191-44c6-b786-d49d">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">As a RISKY ACTION with +1 DICE the Commando can hide if any piece of scenery the model is touching can block line of sight in any direction, even partially, regardless of whether an enemy currently has a clear LOS. If successful, enemies cannot target the Commando with ranged attacks or Charges. Weapons with the Keyword BLAST affect the Commando as normal if it is in the radius of the weapon. This effect ends if the Commando moves from its exact position in any way, it makes a Ranged Attack or an enemy model comes within 1.5” of it.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Death Commando can take a Hide ACTION if they are in contact with a terrain piece that is at least ½&quot; high. If they do so, take a Risky Success Roll for the model and add +1 DICE to the roll. If the roll is a Failure, the Death Commando’s Activation ends immediately. If the roll is a Success or Critical Success, enemy models cannot choose the Death Commando as the target for a Ranged Attack or Charge until the Death Commando moves, charges, retreats, makes a Ranged Attack, or an enemy model moves within 1.5&quot; of them. The Death Commando can be hit if they are within the blast radius of a Weapon with the BLAST Keyword.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -492,12 +499,9 @@
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Unholy Hymns" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dcb0-e7e0-84df-2871">
+        <profile name="Unholy Hymns" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="dcb0-e7e0-84df-2871">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">All enemy models within 8” of the Chorister suffer an additional -1 DICE for all ACTIONS they attempt.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">All enemy models within 8” of the Chorister suffer an additional -1 DICE for all ACTIONS they attempt.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -546,12 +550,9 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="75ab-16f3-3e6d-d3d8" includeChildSelections="false"/>
           </constraints>
           <profiles>
-            <profile name="Death Wail" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e9e3-64e9-c6b6-b0f5">
+            <profile name="Death Wail" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e9e3-64e9-c6b6-b0f5">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">All enemy models within 8” of the Banshee suffer additional +1 DICE when any Injury roll is made against them.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">All enemy models within 8” of the Banshee suffer additional +1 DICE when any Injury roll is made against them.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -583,34 +584,25 @@
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Loping Dash" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3cce-f0d7-ac9e-f3a6">
+        <profile name="Loping Dash" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="3cce-f0d7-ac9e-f3a6">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A War Wolf may take its Dash ACTION with +2 DICE. The War Wolf ignores movement penalties caused by Difficult Terrain.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add +1 DICE to the Risky Success Roll for a War Wolf that is taking a Dash ACTION. In addition, a War Wolf ignores the penalty for moving through Difficult terrain (other terrain affects it normally).</characteristic>
           </characteristics>
         </profile>
-        <profile name="Chainmaw" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="46aa-d5a4-2a05-9708">
+        <profile name="Chainsaw Mouth" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="46aa-d5a4-2a05-9708">
           <characteristics>
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
             <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-            <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Hit, +1D to Injure</characteristic>
-            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">RISKY</characteristic>
-            <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Ignores Armor. Takes no hands to wield.</characteristic>
-            <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-            <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, +1 INJURY DICE, IGNORE ARMOUR, RISKY</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
           </characteristics>
         </profile>
         <profile name="Shredding Claws" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="212b-163e-3eb6-575d">
           <characteristics>
-            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Two-Handed</characteristic>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
             <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-            <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Injure</characteristic>
-            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">RISKY, CUMBERSOME</characteristic>
-            <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Considered an Off-Hand Weapon</characteristic>
-            <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-            <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, CUMBERSOME, RISKY</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
           </characteristics>
         </profile>
       </profiles>
@@ -619,12 +611,13 @@
         <infoLink name="Tough" id="91bd-c95c-1b81-6801" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
         <infoLink name="Fear" id="e09c-5bf5-dc63-cf8c" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
         <infoLink name="Cumbersome" id="5714-23f4-28e3-f924" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+        <infoLink name="Ignore Armour" id="8f61-3348-fb48-c7c2" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="105c-8780-b389-2f18" includeChildSelections="true"/>
       </constraints>
       <costs>
-        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="140"/>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="145"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <categoryLinks>
@@ -633,7 +626,6 @@
         <categoryLink targetId="914f-0020-0d97-e217" id="d43c-15d8-e34f-cf5b" primary="false" name="Tough"/>
         <categoryLink targetId="4f5c-027d-253c-ffa3" id="c0f6-4160-1d96-486e" primary="false" name="Fear"/>
         <categoryLink targetId="bd43-ddb1-262d-4489" id="7057-3183-59fa-13d3" primary="true" name="Troop"/>
-        <categoryLink targetId="71f8-ee29-0f90-59ec" id="8c99-9816-b0ad-d872" primary="false" name="Limited Potential"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -648,14 +640,13 @@
         </modifier>
       </modifiers>
       <entryLinks>
-        <entryLink import="true" name="Advancement" hidden="true" id="fcc1-b53a-b6f3-bc32" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="7484-ab7d-0652-dfb7" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
-        <entryLink import="true" name="Fireteams" hidden="false" id="d9b7-c390-c59d-8663" type="selectionEntryGroup" targetId="7bcd-ee92-0f03-ae73" sortIndex="2"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="d9b7-c390-c59d-8663" type="selectionEntryGroup" targetId="7bcd-ee92-0f03-ae73" sortIndex="1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Artillery Witch" hidden="false" id="f2d9-0f99-61a1-fce5" publicationId="c658-4a10-e1fe-befc" page="24">
       <costs>
-        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="90"/>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="100"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <categoryLinks>
@@ -671,7 +662,7 @@
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+0 Dice</characteristic>
             <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">-1 Dice</characteristic>
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
-            <characteristic name="Base" typeId="73ae-cc17-596e-0481">25-32mm</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">32mm</characteristic>
           </characteristics>
           <modifierGroups>
             <modifierGroup type="and">
@@ -719,26 +710,23 @@
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Levitate" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="975d-e551-7d4d-1e9b">
+        <profile name="Levitate" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="975d-e551-7d4d-1e9b">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Artillery Witch can Climb up without taking an ACTION and does not roll on the Injury Chart when falling.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">You do not have to take a Risky Success Roll for an Artillery Witch when they Climb or Jump, or an Injury Roll if they Fall.</characteristic>
           </characteristics>
         </profile>
         <profile name="Infernal Bomb" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="8755-5cd3-d0a0-1caa">
           <characteristics>
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
             <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
-            <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">Special</characteristic>
-            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">BLAST 3&quot;, SHRAPNEL</characteristic>
-            <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Specify a 1x1mm point on the battlefield within 36” that the Witch can see and that you want to target. Next, make a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less with the two lowest Dice), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. Roll on the Injury Chart for each model within the BLAST radius
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">BLAST 3&quot;, IGNORE COVER, IGNORE ELEVATED POSITION, IGNORE LONG RANGE, RELOAD, SCATTER SHRAPNEL</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">* Duck: Add -1 INJURY DICE to the roll for a model that is hit by an Infernal Bomb if it is in contact with a terrain piece that is at least ½&quot; tall and that lies in between it and the target point. 
 
 
-If the bomb lands exactly on top of any model, roll with 3D6 on the Injury Chart and add the dice together! Other models hit by the bomb roll on the Injury Chart as standard. Any model hit, but not taken Out of Action, by this attack is blown D3” directly away from the point of impact (roll for each model separately), stopping if they hit other models/buildings/objects. Cover, range and higher position do not affect attacks by the Infernal Bomb. Roll injuries for models that would benefit from Cover from the perspective of the BLAST point with -1 DICE. The Activation of the Witch ends immediately after using the Infernal Bomb.</characteristic>
-            <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-            <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+* Infernal Strike: If a model was the target for an Infernal Bomb and hit by it, or if an Infernal Bomb scatters and the target point lands on a model&apos;s base, when you make the Injury Roll for that model, roll 3D6 and add all 3 dice together. Any +INJURY DICE or -INJURY DICE that applied to the Injury Roll will apply normally, except that you pick the 3 highest or lowest dice in the roll instead of the 2 highest or lowest. Injury Rolls for other models caught in the Infernal Bomb’s BLAST are made normally.
+
+
+* Mighty Explosion: If a model that has been hit by an Infernal Bomb is not taken Out of Action by the Injury Roll, it is blown away D3&quot; in a straight line by the explosion. Roll separately for each model to see how far it is blown away by an Infernal Bomb. If the model was the target of the attack, it is blown directly away from the Artillery Witch. If the model was caught in the Blast of the weapon, it is blown directly away from the target point. The model stops if it is blown into another model, Impassable terrain, or terrain it cannot cross without having to Climb.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -748,25 +736,17 @@ If the bomb lands exactly on top of any model, roll with 3D6 on the Injury Chart
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Artificial Life" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2c8d-724a-e4eb-d4cb">
+        <profile name="Abiotic Life" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2c8d-724a-e4eb-d4cb">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Artillery Witches are not affected by FEAR. Additionally, attacks with the Keyword GAS suffer a -1 DICE penalty to injure the Witch and they do not suffer additional BLOOD MARKERS from the Keyword GAS.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE for an Artillery Witch that has been hit by an attack with the GAS Keyword.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Chemical Bomb" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="6d5e-3299-c138-e478">
+        <profile name="Gas Bomb" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="6d5e-3299-c138-e478">
           <characteristics>
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
             <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
-            <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">Special</characteristic>
-            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">BLAST 3&quot;, GAS, IGNORES ARMOUR</characteristic>
-            <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Specify a 1x1mm point on the battlefield within 36” that the Witch can see and that you want to target. Next, make a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less with the two lowest Dice), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. Roll on the Injury Chart for each model within the BLAST radius
-
-If the bomb lands exactly on top of any model, roll on the Injury Chart as standard. Other models hit by the bomb roll on the Injury Chart with -1 DICE. Any model hit, but not taken Out of Action, by this attack is blown D3” directly away from the point of impact (roll for each model separately), stopping if they hit other models/buildings/objects. Cover, range and higher position do not affect attacks by the Chemical Bomb. Roll injuries for models that would benefit from Cover from the perspective of the BLAST point with -1 DICE. The Activation of the Witch ends immediately after using the Chemical Bomb.</characteristic>
-            <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-            <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-1 INJURY DICE, BLAST 3&quot;, GAS, IGNORES ARMOUR, IGNORE COVER, IGNORE ELEVATED POSITION, IGNORE LONG RANGE, RELOAD, SCATTER</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Choking Gas: If a model that has been hit by a Gas Bomb is not taken Out of Action by the Injury Roll, it staggers D3” in a straight line trying to get away from the gas cloud. Roll separately for each model to see how far it staggers. If the model was the target of the attack, it staggers in a direction chosen by the player making the attack. If the model was caught in the Blast of the weapon, it staggers directly away from the target point. The model stops if it staggers into another model, Impassable terrain, or a terrain piece it cannot cross without having to Climb.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -811,8 +791,8 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="greaterThan" value="1000" field="limit::8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true"/>
-                    <condition type="greaterThan" value="1000" field="8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true"/>
+                    <condition type="atLeast" value="1000" field="limit::8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true"/>
+                    <condition type="atLeast" value="1000" field="8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -854,6 +834,7 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
       </costs>
       <categoryLinks>
         <categoryLink name="Troop" hidden="false" id="916c-9d43-17b1-75a3" targetId="bd43-ddb1-262d-4489" primary="true"/>
+        <categoryLink targetId="7ba1-f516-e8cf-3957" id="240b-7ddc-459c-0532" primary="false" name="Heretic"/>
       </categoryLinks>
       <profiles>
         <profile name="Wretched" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="5c28-fb72-df49-7ffd">
@@ -872,122 +853,29 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Dark Blessing" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2a4a-1cd3-c412-997e">
+        <profile name="Dark Blessing" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2a4a-1cd3-c412-997e">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a Wretch is taken Out of Action in battle, one of your models with Keywords HERETIC and ELITE gains one BLESSING MARKER.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When a Wretched is taken Out of Action, place 1 BLESSING MARKER next to the nearest friendly model with the ELITE and HERETIC Keywords. If two or more eligible models are equally close to the Wretched, you can choose which receives the BLESSING MARKER</characteristic>
           </characteristics>
         </profile>
-        <profile name="Law of Hell" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b470-fc56-b15f-c431">
+        <profile name="Law of Hell" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b470-fc56-b15f-c431">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a Wretch manages to take any enemy ELITE model Out of Action or performs a Glorious Deed, it gains its freedom and is immediately removed from the battle and from your warband permanently. It does not count as a casualty, but your warband’s total size for this battle is reduced by one for purposes of Morale.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If an attack made by a Wretched takes an enemy model with the ELITE Keyword out of Action, the Wretched model gains its freedom and is immediately removed from the game. It no longer counts as being part of the Warband for the purposes of Morale Checks and is removed from the Warband Roster.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Chattel" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c671-421c-22ef-5503">
+        <profile name="Chattel" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c671-421c-22ef-5503">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Wretched can be sold at any time for their full ducat value between battles. Note that their weapons, armour and equipment still only fetch half price.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">In a campaign, Wretched can be sold in the Quartermaster Step for 25 ducats plus half the cost in ducats of any Battlekit they have.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Weapons" id="d790-768c-fc52-8b1b" hidden="false" sortIndex="3">
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Melee Weapons" id="302d-1482-6d32-4767" hidden="false" sortIndex="1">
-              <entryLinks>
-                <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="2431-d420-356a-1de6" type="selectionEntryGroup" targetId="2316-99d3-0e3a-3771"/>
-              </entryLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Melee (Two-Handed)" id="6f68-afc3-a4af-e943" hidden="false">
-                  <entryLinks>
-                    <entryLink import="true" name="Shield Combo" hidden="false" id="826c-56bd-6ad8-8510" type="selectionEntryGroup" targetId="1eda-2b87-9a83-a714"/>
-                    <entryLink import="true" name="Great Hammer/Maul" hidden="false" id="afdb-9108-0e12-5a90" type="selectionEntry" targetId="c1ca-cefe-c074-ed85"/>
-                  </entryLinks>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="187d-1954-25cc-2fc7" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="decrement" value="1" field="187d-1954-25cc-2fc7">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="7472-20fc-dfdf-a42d" shared="true"/>
-                          </conditions>
-                          <conditionGroups>
-                            <conditionGroup type="and">
-                              <conditions>
-                                <condition type="atLeast" value="1" field="selections" scope="parent" childId="4a0e-6f55-3bac-71b1" shared="true"/>
-                                <condition type="atLeast" value="1" field="selections" scope="parent" childId="afdb-9108-0e12-5a90" shared="true"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <modifiers>
-                <modifier type="decrement" value="1" field="f748-23ee-1e76-ec13">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="bba6-0d3f-8601-725e" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="decrement" value="1" field="f748-23ee-1e76-ec13">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="ab85-ed9c-ce16-9431" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="6f68-afc3-a4af-e943" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f748-23ee-1e76-ec13" includeChildSelections="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1dc7-3926-03fb-0cb1" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Utility Hands" id="bba6-0d3f-8601-725e" hidden="false">
-              <entryLinks>
-                <entryLink import="true" name="Shields" hidden="false" id="ab85-ed9c-ce16-9431" type="selectionEntryGroup" targetId="4a0e-6f55-3bac-71b1"/>
-                <entryLink import="true" name="Troop Flag" hidden="false" id="7472-20fc-dfdf-a42d" type="selectionEntry" targetId="1e8d-e5ce-d1e5-4ab0" sortIndex="1"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <modifiers>
-            <modifier type="add" value="Max 1 Heavy item on Non-Strong Unit" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="greaterThan" value="1" field="selections" scope="parent" childId="70c9-988d-71a7-7654" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="afcc-5f24-1c7c-63c4" shared="true" includeChildForces="false"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <comment>Errors out if 2 or more Heavy on non-</comment>
-            </modifier>
-          </modifiers>
-          <comment>its best not to touch this, as is.</comment>
-        </selectionEntryGroup>
         <selectionEntryGroup name="Equipment" id="bf1a-16c0-f260-9448" hidden="false">
           <entryLinks>
             <entryLink import="true" name="Headgear" hidden="false" id="ef06-1bc2-9427-c550" type="selectionEntryGroup" targetId="0ff3-f218-8676-1288" sortIndex="1"/>
             <entryLink import="true" name="Gas Mask" hidden="false" id="7ca0-63de-1b38-384a" type="selectionEntry" targetId="a16f-6866-66e3-e84c" sortIndex="2"/>
             <entryLink import="true" name="Mountaineer Kit" hidden="false" id="7d23-8690-3892-e5ed" type="selectionEntry" targetId="b611-946c-0c0f-dbfc" sortIndex="5"/>
-            <entryLink import="true" name="Infernal Brand Mark" hidden="false" id="7655-b5f4-f36d-41b3" type="selectionEntry" targetId="fbf4-745c-c4b1-be37" sortIndex="3"/>
+            <entryLink import="true" name="Infernal Brand" hidden="false" id="7655-b5f4-f36d-41b3" type="selectionEntry" targetId="fbf4-745c-c4b1-be37" sortIndex="3"/>
             <entryLink import="true" name="Shovel" hidden="false" id="36b1-fe2f-bdbe-9f05" type="selectionEntry" targetId="fa1f-59c8-3f39-3ff0" sortIndex="4"/>
             <entryLink import="true" name="Lock of Samson&apos;s Hair" hidden="false" id="2a79-43bf-1b77-a104" type="selectionEntry" targetId="9b61-d0a4-dd30-2d32" sortIndex="11"/>
             <entryLink import="true" name="Curative Fluids" hidden="true" id="39b7-1bcf-8601-0494" type="selectionEntry" targetId="0e49-dfa5-4190-ee69" sortIndex="10"/>
@@ -1018,22 +906,15 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="roster" shared="true" id="fdf2-72c7-8ada-82f0" includeChildSelections="true"/>
       </constraints>
-      <modifiers>
-        <modifier type="increment" value="1" field="fdf2-72c7-8ada-82f0">
-          <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="roster" childId="7ba1-f516-e8cf-3957" shared="true" roundUp="false" includeChildSelections="true"/>
-          </repeats>
-        </modifier>
-        <modifier type="set" value="0" field="fdf2-72c7-8ada-82f0">
-          <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="roster" childId="7ba1-f516-e8cf-3957" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <entryLinks>
         <entryLink import="true" name="Unseen Infiltrator" hidden="false" id="6261-b217-6eba-7048" type="selectionEntry" targetId="7b92-190b-f8c3-531a" sortIndex="2"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="71bf-0c2b-8f27-640e" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="880f-3d04-e7a6-e385" type="selectionEntryGroup" targetId="7bcd-ee92-0f03-ae73" sortIndex="1"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="35ad-5260-4667-c149" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="3">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="self" shared="true" id="a446-37c8-07e4-476c" includeChildSelections="true"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Heretic Trooper" hidden="false" id="3844-b41c-9ecc-85b9" publicationId="c658-4a10-e1fe-befc" page="22">
@@ -1206,6 +1087,7 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
                   <repeats>
                     <repeat value="2" repeats="1" field="selections" scope="roster" childId="3844-b41c-9ecc-85b9" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
                   </repeats>
+                  <comment>Need to be updated to take into account the Sarcophagus Mines (which is now an Equipment technically and not an upgrade)</comment>
                 </modifier>
               </modifiers>
               <costs>
@@ -1224,7 +1106,7 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c69-e381-cfee-5096" includeChildSelections="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Ranged Legionnaires" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="edc3-f4c5-69c1-d15e">
+                        <profile name="Ranged Legionnaires" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="edc3-f4c5-69c1-d15e">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Legionnaire has +1 to their Ranged characteristic</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1239,7 +1121,7 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="31be-76bc-cd2a-a13c" includeChildSelections="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Melee Legionnaires" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="82cc-dadb-7eca-e047">
+                        <profile name="Melee Legionnaires" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="82cc-dadb-7eca-e047">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Legionnaire has +1 to their Melee characteristic</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1263,15 +1145,18 @@ If the bomb lands exactly on top of any model, roll on the Injury Chart as stand
                 <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="10cc-9fb1-e13a-d49d" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="Sarcophagus Mine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9395-0d4e-5cdb-6377">
+                <profile name="Sarcophagus Mine" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9395-0d4e-5cdb-6377">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This unit gains an armour characteristic of -3, but can carry no other weapons or any other items from Armoury. In addition, Whenever an enemy comes within 3” of the Mine, you can trigger a detonation as described below. Alternatively, you can forgo this and explode the mine during your own Activation of the model with a successful RISKY ACTION with +1 DICE.
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">* Walking Bomb: A model that has a Sarcophagus Mine cannot have any other Battlekit. A model with a Sarcophagus Mine can take a Trigger ACTION. In addition, if an enemy model finishes a move within 3&quot; of a model with a Sarcophagus Mine, you can interrupt its Activation and detonate the Sarcophagus Mine without having to take a Trigger ACTION. 
 
 
-When detonated, the mine explosion is treated as a BLAST 3” weapon targeting the Sargophagus model with Keyword SHRAPNEL. Models within 1” of the Prisoner hit by the explosion roll their injuries with +1 DICE. The Mine itself is taken Out of Action.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+* Trigger ACTION: When a model with a Sarcophagus Mine takes a Trigger ACTION, you must take a Risky Success Roll for the model with +1 DICE. If the roll is a failure, nothing happens (but you can try again the next time the model is Activated). If the roll is a Success or Critical Success, the Sarcophagus Mine detonates as described below.
+
+
+* Detonation: When a Sarcophagus Mine detonates, all models (friend or foe) within 3&quot; of the model carrying the Sarcophagus Mine and in its Line of Sight are hit by a Ranged Attack with the SHRAPNEL Keyword. Add +1 INJURY DICE to the Injury Rolls for models that are within 1&quot; of the model carrying the Sarcophagus Mine. The model carrying the Sarcophagus Mine is then taken Out of Action.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-3 INJURY MODIFIER, BLAST 3&apos;&apos;</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1299,7 +1184,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Trench Ghosts" hidden="false" id="eee9-35a4-9eda-70e9">
               <profiles>
-                <profile name="Horror" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b72c-5ef3-e8a1-8570">
+                <profile name="Horror" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b72c-5ef3-e8a1-8570">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models in the Warband cause FEAR.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1307,7 +1192,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Slow" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="fd1e-a345-6501-0bbc">
+                <profile name="Slow" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="fd1e-a345-6501-0bbc">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models in Trench Ghost warband have a half Dash distance (i.e. 3”), and they suffer -1 DICE to all attacks against models Retreating from Melee combat.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1315,7 +1200,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Lost Souls" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9114-91ec-d19a-e386">
+                <profile name="Lost Souls" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9114-91ec-d19a-e386">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Since only mortals who have souls become ghosts, this warband may not have any War Wolves or Artillery Witches, since they are artificial beings. In addition, no model in the warband may have a Hellbound Soul Contract or an Infernal Brand Mark. Any model that has one of these pieces of equipment in their base profile will not have it, although its price remains the same.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1323,7 +1208,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Semi-Corporeal" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="725a-28dc-8da5-dd4a">
+                <profile name="Semi-Corporeal" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="725a-28dc-8da5-dd4a">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Any Ranged attacks against all models in the Trench Ghost Warband roll injuries with -1 DICE – the undead are hard to kill with bullets! Melee Attacks do not suffer this penalty.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1331,7 +1216,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Spectral" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="50f6-0785-3b36-7392">
+                <profile name="Spectral" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="50f6-0785-3b36-7392">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models in the warband ignore movement penalties caused by Difficult Terrain, though they cannot move through any objects/terrain. Dangerous terrain affects them as normal.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1339,7 +1224,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Undead" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c139-9280-6e25-113a">
+                <profile name="Undead" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c139-9280-6e25-113a">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models in the Trench Ghost warband do not suffer additional BLOOD MARKERS from attacks with the Keyword GAS.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1347,7 +1232,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Enemies of All" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="dbc1-d8d1-1fed-a2c7">
+                <profile name="Enemies of All" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="dbc1-d8d1-1fed-a2c7">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Trench Ghosts cannot use Mercenaries.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1355,7 +1240,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Sarcophagus Mines" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="60ef-93e4-4922-1ada">
+                <profile name="Sarcophagus Mines" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="60ef-93e4-4922-1ada">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the cost of +30 ducats, up to two of the Troopers can be turned into Sarcophagus Mines. They gain an armour characteristic of -3, but can carry no other weapons or any other items from Armoury. In addition, Whenever an enemy comes within 3” of the Mine, you can trigger a detonation as described below. Alternatively, you can forgo this and explode the mine during your own Activation of the model with a successful RISKY ACTION with +1 DICE.
 
@@ -1382,7 +1267,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Automatic Rifle" hidden="false" id="31ef-14a4-4be6-508f">
                       <profiles>
-                        <profile name="Battlefield Looters (Automatic Rifle)" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="05d8-72d5-36d0-f648">
+                        <profile name="Battlefield Looters (Automatic Rifle)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="05d8-72d5-36d0-f648">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1394,7 +1279,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Machine Gun" hidden="false" id="7698-8d7d-b9d0-d110">
                       <profiles>
-                        <profile name="Battlefield Looters (Machine Gun)" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cab4-0571-19c0-eaf2">
+                        <profile name="Battlefield Looters (Machine Gun)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="cab4-0571-19c0-eaf2">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1406,7 +1291,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Grenade Launcher" hidden="false" id="5530-8135-2df1-4b67">
                       <profiles>
-                        <profile name="Battlefield Looters (Grenade Launcher)" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="314c-5a0b-cf87-d46d">
+                        <profile name="Battlefield Looters (Grenade Launcher)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="314c-5a0b-cf87-d46d">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1418,7 +1303,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Musical Instrument " hidden="false" id="0ea6-99b3-e165-9336">
                       <profiles>
-                        <profile name="Battlefield Looters (Musical Instrument)" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a73b-6d6d-37aa-fd3f">
+                        <profile name="Battlefield Looters (Musical Instrument)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a73b-6d6d-37aa-fd3f">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1430,7 +1315,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Flamethrower" hidden="false" id="1c2d-14b1-1ec3-3bdb">
                       <profiles>
-                        <profile name="Battlefield Looters (Flamethrower)" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4ab1-ea85-f390-6fb0">
+                        <profile name="Battlefield Looters (Flamethrower)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4ab1-ea85-f390-6fb0">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1442,7 +1327,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Heavy Flamethrower" hidden="false" id="346b-cc13-f92e-61bc">
                       <profiles>
-                        <profile name="Battlefield Looters (Heavy Flamethrower)" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="06bf-a67e-fba4-5214">
+                        <profile name="Battlefield Looters (Heavy Flamethrower)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="06bf-a67e-fba4-5214">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1454,7 +1339,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Anti-Material Rifle" hidden="false" id="f968-d86e-691c-d8af">
                       <profiles>
-                        <profile name="Battlefield Looters (Anti-Material Rifle)" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bca6-aeb8-da80-ca45">
+                        <profile name="Battlefield Looters (Anti-Material Rifle)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bca6-aeb8-da80-ca45">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1466,7 +1351,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Mountaineer Kit" hidden="false" id="fc35-e469-8877-b62c">
                       <profiles>
-                        <profile name="Battlefield Looters (Mountaineer Kit)" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e8cf-8a0c-d0cc-756d">
+                        <profile name="Battlefield Looters (Mountaineer Kit)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e8cf-8a0c-d0cc-756d">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1478,7 +1363,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Incendiary Ammunition" hidden="false" id="c66f-56e1-c379-0f1c">
                       <profiles>
-                        <profile name="Battlefield Looters (Incendiary Ammunition)" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4951-f794-ad38-ad03">
+                        <profile name="Battlefield Looters (Incendiary Ammunition)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4951-f794-ad38-ad03">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1490,7 +1375,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Hellblade" hidden="false" id="5549-36f8-a639-8fc4">
                       <profiles>
-                        <profile name="Battlefield Looters (Hellblade)" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="290e-b9f3-e527-d0f5">
+                        <profile name="Battlefield Looters (Hellblade)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="290e-b9f3-e527-d0f5">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1502,7 +1387,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Troop Flag" hidden="false" id="0422-86f1-0b4b-26b9">
                       <profiles>
-                        <profile name="Battlefield Looters (Troop Flag)" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cc71-f6a8-5519-bcf3">
+                        <profile name="Battlefield Looters (Troop Flag)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="cc71-f6a8-5519-bcf3">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1514,7 +1399,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Sacrificial Blade" hidden="false" id="3ff6-3412-b7f3-b0a4">
                       <profiles>
-                        <profile name="Battlefield Looters (Sacrificial Blade)" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3362-0f7e-b412-ce4d">
+                        <profile name="Battlefield Looters (Sacrificial Blade)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3362-0f7e-b412-ce4d">
                           <characteristics>
                             <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1532,9 +1417,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Heretic Naval Raiding Party" hidden="false" id="4d05-603e-4b5a-aed4">
+            <selectionEntry type="upgrade" import="true" name="Heretic Naval Raiders" hidden="false" id="4d05-603e-4b5a-aed4">
               <profiles>
-                <profile name="Close Assault Weapons" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9ef5-9c37-2db2-8bb9">
+                <profile name="Close Assault Weapons" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9ef5-9c37-2db2-8bb9">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The warband can buy Submachine Guns for 25 ducats per weapon.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1542,7 +1427,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Unseen Advance" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="be89-20dd-8e06-9309">
+                <profile name="Unseen Advance" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="be89-20dd-8e06-9309">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Up to three models without ELITE Keyword can be upgraded into INFILTRATORS at the cost of 10 ducats per Model</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1550,7 +1435,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Light Troops" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4e2e-e5c2-c100-0a16">
+                <profile name="Light Troops" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4e2e-e5c2-c100-0a16">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The force may only include 0-1 Annointed and 0-1 Artillery Witch.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1558,7 +1443,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Let Sleeping Dogs Lie" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2bfc-ba39-b280-debb">
+                <profile name="Let Sleeping Dogs Lie" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2bfc-ba39-b280-debb">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The warband may not include a War Wolf</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1566,7 +1451,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Fast as Lightning" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="84f7-b619-cba1-b824">
+                <profile name="Fast as Lightning" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="84f7-b619-cba1-b824">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">All Models have +1 DICE when taking their Dash ACTIONS.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1587,7 +1472,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="38f6-437b-f3f3-e4d3" includeChildSelections="false"/>
               </constraints>
               <profiles>
-                <profile name="Debtors to Mammon" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4b0d-65aa-4b45-bacb">
+                <profile name="Debtors to Mammon" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4b0d-65aa-4b45-bacb">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Wretched of the warband are not tied by Mammon’s Chosen rule.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1595,7 +1480,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Mammon&apos;s Chosen" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="0388-f845-438e-c865">
+                <profile name="Mammon&apos;s Chosen" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="0388-f845-438e-c865">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Knights of Avarice allow only the wealthiest and the best-equipped candidates to join their ranks. Your force may have no models that cost less than 80 ducats (including their equipment).</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1603,7 +1488,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Goetic Warlock" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="11ef-3d53-6389-6d76">
+                <profile name="Goetic Warlock" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="11ef-3d53-6389-6d76">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Goetic Warlocks are creations of Mammon. This warband may include one for the price of 110 ducats. This Warlock is still a mercenary and obeys all of the rules associated with being a mercenary (such as having fixed equipment and not being able to be promoted to an ELITE throughout the course of a campaign).</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1611,7 +1496,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Infernal Rivalry" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3a61-fd62-4f66-e489">
+                <profile name="Infernal Rivalry" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3a61-fd62-4f66-e489">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Mammon is a rival of Beruth, the great devil of wrath and murder, who is the Patron of Death Commandos. Knights of Avarice may include no Death Commandos.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1619,7 +1504,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Preserve the Loot" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="260b-e416-8459-c504">
+                <profile name="Preserve the Loot" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="260b-e416-8459-c504">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Knights of Avarice greatly dislike using weapons that could damage the amount of wealth that can be extracted from the fallen. No weapon with the Keyword FIRE or SHRAPNEL can be used by any model in this warband. In addition, the Artillery Witches of this warband use Gas Bombs: They have the Keyword GAS instead of SHRAPNEL and they ignore armour. Injuries caused by a direct hit are rolled with 2D6 and models within a 3” blast radius are rolled with -1 DICE. In a similar vein, their Grenade Launchers have the GAS keyword instead of the SHRAPNEL keyword, have a -1 D to injury rolls and ignore armour</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1627,7 +1512,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Corrupt Merchants" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e4ed-2af9-d2cf-a93a">
+                <profile name="Corrupt Merchants" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e4ed-2af9-d2cf-a93a">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Many merchants, traders and moneylenders within the Faithful nations are followers of Mammon and secretly supply the Knights of Avarice with their wares. When creating the warband, select one weapon, suit of armour or other piece of equipment from the New Antioch Armoury and one such item from the Iron Sultanate Armoury. You can acquire this gear exactly as the warband they come from. Any of these items in question must not be already available to the Heretic Warband. All the same limitations of the original lists apply, so there is little point in taking an Assassin’s Dagger (for example) since it can be only used by Assassins. These two selected additions are available to your warband throughout the campaign</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1650,7 +1535,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f89d-cb72-748d-0f1d" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Pilfered: Jezzail" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6df6-b367-67b3-0a82">
+                            <profile name="Pilfered: Jezzail" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6df6-b367-67b3-0a82">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Jezzails as though they were from Iron Sultanate</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1665,7 +1550,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="abc3-0d08-3052-04eb" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Pilfered: Siege Jezzail" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9687-b24e-bf63-d228">
+                            <profile name="Pilfered: Siege Jezzail" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9687-b24e-bf63-d228">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Siege Jezzails as though they were from Iron Sultanate</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1680,7 +1565,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf1c-2d89-a985-b27e" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Pilfered: Musket" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="24a0-e75f-fda6-3a63">
+                            <profile name="Pilfered: Musket" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="24a0-e75f-fda6-3a63">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Muskets as though they were from Iron Sultanate</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1695,7 +1580,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0f6f-0e11-c754-2213" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Pilfered: Halberd-Gun" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b8e7-a29c-9ca9-24b6">
+                            <profile name="Pilfered: Halberd-Gun" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b8e7-a29c-9ca9-24b6">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Halberd-Guns as though they were from Iron Sultanate</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1710,7 +1595,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cbd6-97d5-4958-71e1" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Pilfered: Sniper Rifle" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2a14-9d00-49fb-86df">
+                            <profile name="Pilfered: Sniper Rifle" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2a14-9d00-49fb-86df">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Sniper Rifles as though they were from Iron Sultanate</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1725,7 +1610,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d20b-39b2-56fe-32f0" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Pilfered: Alchemist Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="1181-0635-aa21-d9bb">
+                            <profile name="Pilfered: Alchemist Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1181-0635-aa21-d9bb">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Alchemist Armour as though they were from Iron Sultanate</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1740,7 +1625,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f051-26cc-42f9-3e55" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Pilfered: Cloak of Alamut" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8e79-67ff-8442-44b2">
+                            <profile name="Pilfered: Cloak of Alamut" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8e79-67ff-8442-44b2">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Cloak of Alamuts as though they were from Iron Sultanate</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1755,7 +1640,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e761-7f79-a9d8-1f4f" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Pilfered: Wind Amulet" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7840-b59b-373f-9fc2">
+                            <profile name="Pilfered: Wind Amulet" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7840-b59b-373f-9fc2">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Wind Amulets as though they were from Iron Sultanate</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1770,7 +1655,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6f58-0c00-c1f1-d626" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Pilfered: Holy Relic" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6dcf-8eba-6204-b814">
+                            <profile name="Pilfered: Holy Relic" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6dcf-8eba-6204-b814">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Holy Relics as though they were from Iron Sultanate</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1785,7 +1670,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f31d-cd39-7ca6-5f1f" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Pilfered: Binoculars" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="412d-d440-11fc-f415">
+                            <profile name="Pilfered: Binoculars" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="412d-d440-11fc-f415">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Binoculars as though they were from Iron Sultanate</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1800,7 +1685,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="857c-758b-aa00-2cf6" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Pilfered: Medi-kits" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="da4c-40b8-a166-dc7c">
+                            <profile name="Pilfered: Medi-kits" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="da4c-40b8-a166-dc7c">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Medi-kits as though they were from Iron Sultanate</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1823,7 +1708,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="adc7-87f2-85bc-1aa2" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Stolen: Automatic Pistol" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4964-07b9-b8a1-f35b">
+                            <profile name="Stolen: Automatic Pistol" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4964-07b9-b8a1-f35b">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Automatic Pistols as though they were from New Antioch</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1838,7 +1723,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b47e-579e-2f2e-fa3b" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Stolen: Heavy Shotgun" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8a1d-ae05-5597-07e2">
+                            <profile name="Stolen: Heavy Shotgun" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8a1d-ae05-5597-07e2">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Heavy Shotguns as though they were from New Antioch</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1853,7 +1738,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb25-018a-ce9d-21b0" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Stolen: Sniper Rifle" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9626-3796-60f5-9170">
+                            <profile name="Stolen: Sniper Rifle" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9626-3796-60f5-9170">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Sniper Rifles as though they were from New Antioch</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1868,7 +1753,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8cf8-daad-2987-4182" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Stolen: Satchel Charge" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6ce7-e339-f8ab-ac68">
+                            <profile name="Stolen: Satchel Charge" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6ce7-e339-f8ab-ac68">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Satchel Charges as though they were from New Antioch</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1883,7 +1768,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d395-8e03-6b31-3a1c" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Stolen: Machine Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="83f0-876a-3cc7-3564">
+                            <profile name="Stolen: Machine Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="83f0-876a-3cc7-3564">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Machine Armours as though they were from New Antioch</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1898,7 +1783,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="306a-8b17-7c3c-9651" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Stolen: Medi-Kit" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="f4ce-75a0-6a5e-7f5f">
+                            <profile name="Stolen: Medi-Kit" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f4ce-75a0-6a5e-7f5f">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Medi-Kits as though they were from New Antioch</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1913,7 +1798,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ca4-3cd5-dfb0-817b" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Stolen: Martyrdom Pills" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3ee7-3e7e-d239-1c94">
+                            <profile name="Stolen: Martyrdom Pills" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3ee7-3e7e-d239-1c94">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Martyrdom Pills as though they were from New Antioch</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1928,7 +1813,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8177-94cd-674b-1a54" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Stolen: Field Shrine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5b33-f856-132e-7c89">
+                            <profile name="Stolen: Field Shrine" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5b33-f856-132e-7c89">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Field Shrines as though they were from New Antioch</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1943,7 +1828,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="875c-2c31-295c-d4bf" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Stolen: Binoculars" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d65c-996d-9bd5-be6b">
+                            <profile name="Stolen: Binoculars" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d65c-996d-9bd5-be6b">
                               <characteristics>
                                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Binoculars as though they were from New Antioch</characteristic>
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2217,7 +2102,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Double-Handed Blunt Weapon" id="df89-c80c-db1e-136c" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
+            <infoLink name="Great Blunt Weapon" id="df89-c80c-db1e-136c" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
             <infoLink name="Heavy" id="89c2-27fc-3d07-926b" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <categoryLinks>
@@ -2237,6 +2122,13 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           <categoryLinks>
             <categoryLink targetId="70c9-988d-71a7-7654" id="f97e-511b-6836-45ce" primary="false" name="Heavy"/>
           </categoryLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Hellblade" hidden="false" id="c2f4-409f-b6d1-5720" sortIndex="3">
           <costs>
@@ -2305,6 +2197,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Halberd-Gun" id="4ffc-bd45-a43e-b250" hidden="false" type="profile" targetId="c403-4b36-5fd6-5c95"/>
             <infoLink name="Assault" id="4c97-6c28-b05e-a51b" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Cumbersome" id="5228-9199-5077-1cfd" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+            <infoLink name="Block" id="3c44-ab4f-79a5-e5c9" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -2317,10 +2210,18 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <categoryLinks>
             <categoryLink name="Cumbersome" hidden="false" id="f678-51a7-e3ec-eaf4" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
           </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="eb0a-d983-ed0e-f5cb" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Coin Hammer" hidden="true" id="cd7e-904f-67b2-2d24" sortIndex="4">
           <costs>
@@ -2346,6 +2247,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="cfac-603e-607e-58f1" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <categoryLinks>
             <categoryLink targetId="70c9-988d-71a7-7654" id="dd06-c57b-194a-77b0" primary="false" name="Heavy"/>
@@ -2355,11 +2261,8 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">+1D to Injure</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">When you inflict a BLOOD MARKER in melee with this weapon, the model wielding the hammer gains one BLESSING MARKER</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, HEAVY</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Rune of Mammon: If the Injury Roll for an attack made by a Coin Hammer results in 1 or more BLOOD MARKERS being placed on the target, place 1 BLESSING MARKER on the model using the Coin Hammer.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2377,8 +2280,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <infoLinks>
-                <infoLink name="Trench Polearm" id="ed89-4f34-6a91-0e59" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
+                <infoLink name="Polearm" id="ed89-4f34-6a91-0e59" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
                 <infoLink name="Cumbersome" id="df7a-0ad5-5738-fccd" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+                <infoLink name="Block" id="df4f-0eed-6e76-21b8" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink targetId="f87d-5ea3-e505-6a9f" id="15a0-1bd8-b18e-f22d" primary="false" name="Cumbersome"/>
@@ -2408,6 +2312,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Pistol" id="4910-a9a7-887f-7b11" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Silenced Pistol" hidden="true" id="e126-07c8-283d-a9c0" collective="false" sortIndex="2">
@@ -2426,6 +2331,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </modifiers>
             </infoLink>
             <infoLink name="Assault" id="d269-18f4-f861-5ff4" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Pistol" id="a1a0-ec75-63aa-df15" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -2450,6 +2356,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Assault" id="a54e-a40e-5b04-f789" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Automatic" id="6d67-504b-1ec1-86ea" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Pistol" id="25bb-1a31-6823-4ff6" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -2464,7 +2373,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             </modifier>
           </modifiers>
           <constraints>
-            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="1497-b565-d05b-4b4c" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1497-b565-d05b-4b4c" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -2512,7 +2421,15 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Assault" id="f29d-672b-41c2-ace8" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Anti-Material Rifle" hidden="false" id="3b88-7bdf-2370-d7e4" sortIndex="14">
           <costs>
@@ -2532,8 +2449,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink name="Critical" id="1eec-0e08-f9cc-8829" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+            <infoLink name="Ignore Armour" id="1eec-0e08-f9cc-8829" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
             <infoLink name="Heavy" id="bf23-b588-52b1-a845" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Critical" id="6bc1-81e3-7e57-676d" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="70c9-988d-71a7-7654" id="bdb6-1a3e-b263-0121" primary="false" name="Heavy"/>
@@ -2573,6 +2491,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <modifier type="set" value="true" field="hidden"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Ignore [Modifier]" id="dd03-b77e-f88e-b80e" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="70c9-988d-71a7-7654" id="55eb-c4aa-45ab-7db6" primary="false" name="Heavy"/>
@@ -2598,6 +2517,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="637c-4134-8734-152e" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Machine Gun" hidden="false" id="5c4c-5169-0e5e-b35b" sortIndex="11">
@@ -2610,6 +2534,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           </constraints>
           <infoLinks>
             <infoLink name="Machine Gun" id="c2ab-d898-5266-d1c5" hidden="false" type="profile" targetId="517c-652f-100e-71d6"/>
+            <infoLink name="Automatic" id="cee4-34fa-d11a-b0e5" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Heavy" id="a7df-8f39-fab7-a6d3" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Reload" id="dedd-d0a9-2081-ed21" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="70c9-988d-71a7-7654" id="75b8-da92-445e-d47e" primary="false" name="Heavy"/>
@@ -2630,6 +2557,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="8de0-69a6-1628-25e3" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Flamethrower" hidden="false" id="9a7e-bfe8-e3bf-6f2e" sortIndex="5">
@@ -2642,7 +2574,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           </constraints>
           <infoLinks>
             <infoLink name="Flamethrower" id="7b69-4991-432f-a6da" hidden="false" type="profile" targetId="9b21-3223-c112-c65f"/>
-            <infoLink name="Fire" id="ec5e-91f3-fcf8-7eca" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+            <infoLink name="Flamethrower" id="ec5e-91f3-fcf8-7eca" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+            <infoLink name="Fire" id="a72a-37a2-0cab-8d03" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+            <infoLink name="Ignore Armour" id="c8b5-f6b2-870c-7314" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="increment" value="1" field="11a6-d064-f34d-ab29">
@@ -2665,6 +2599,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="2407-821b-3a79-20e8" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Heavy Flamethrower" hidden="false" id="d55a-3291-216f-bf2c" sortIndex="12">
@@ -2679,6 +2618,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Heavy Flamethrower" id="dc59-1907-d587-dfd9" hidden="false" type="profile" targetId="2fc0-bc43-b366-5b95"/>
             <infoLink name="Fire" id="b222-5417-3ec8-fcc2" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
             <infoLink name="Heavy" id="d60c-6442-088d-a045" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Automatic" id="309e-0c7e-af8c-6009" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Flamethrower" id="d7ab-c52f-3d8d-473d" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+            <infoLink name="Ignore Armour" id="62a0-8c8e-0fce-cdc8" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="70c9-988d-71a7-7654" id="fc0a-fdcd-8250-7d7d" primary="false" name="Heavy"/>
@@ -2704,6 +2646,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="2faa-0945-7b24-2282" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Automatic Rifle" hidden="false" id="8292-a94f-828f-955e" sortIndex="13">
@@ -2727,7 +2674,8 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink name="Assault" id="f6f4-84af-4588-3c2d" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Automatic" id="f6f4-84af-4588-3c2d" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Assault" id="58e4-5e7d-a3c8-7637" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
           </infoLinks>
           <modifiers>
             <modifier type="increment" value="1" field="939e-912c-de97-4fcf">
@@ -2760,6 +2708,8 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Blast" id="a846-6445-11c9-8f9b" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Heavy" id="ade3-2257-7b9d-89fa" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
             <infoLink name="Gas" id="886b-46f2-1d63-d27c" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
+            <infoLink name="Ignore [Modifier]" id="4b5b-4bfb-b860-98ff" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Ignore Armour" id="c9a8-58c8-922c-06d9" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="70c9-988d-71a7-7654" id="be2b-9ff1-27fb-a454" primary="false" name="Heavy"/>
@@ -2785,6 +2735,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="637c-4134-8734-152e" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="true" id="e5a6-8f21-f476-cc75" sortIndex="10">
@@ -2793,7 +2748,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <constraints>
-            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="24ef-14b4-af3f-70fe" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="24ef-14b4-af3f-70fe" includeChildSelections="true"/>
           </constraints>
           <infoLinks>
             <infoLink name="Sniper Rifle" id="aa72-0796-8527-b3c8" hidden="false" type="profile" targetId="6eb2-c600-98e7-16d3">
@@ -2807,6 +2762,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             </infoLink>
             <infoLink name="Risky" id="9be8-4e74-ce3e-862d" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
             <infoLink name="Critical" id="26de-062a-0236-3445" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+            <infoLink name="Ignore Armour" id="9e38-8e67-38ce-6dab" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="e8a4-ab0b-dedb-015b" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -2815,6 +2771,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="5d6e-91f8-4cfd-b79d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2834,6 +2795,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6ee8-83dc-9e8c-8d63" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Jezzail" hidden="true" id="ad74-e8b9-57f5-c0d1" sortIndex="2">
           <costs>
@@ -2857,6 +2821,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dcd9-3cc3-7122-e81a" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Siege Jezzail" hidden="true" id="7ab6-280f-5116-f532" sortIndex="8">
           <costs>
@@ -2884,7 +2851,15 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="59c9-2964-96f1-9b9a" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5fa5-603b-1896-3fc3" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="true" id="1b22-3636-d509-ff19" sortIndex="9">
           <costs>
@@ -2892,7 +2867,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <constraints>
-            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="c5ad-e5f5-762f-925e" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c5ad-e5f5-762f-925e" includeChildSelections="true"/>
           </constraints>
           <infoLinks>
             <infoLink name="Sniper Rifle" id="1c59-9ccf-96df-e8b0" hidden="false" type="profile" targetId="6eb2-c600-98e7-16d3">
@@ -2906,6 +2881,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             </infoLink>
             <infoLink name="Critical" id="d1c2-0f47-dd44-6317" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
             <infoLink name="Risky" id="2acf-e223-2bec-c5e6" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+            <infoLink name="Ignore Armour" id="c6b2-fa04-d61c-6b5a" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -2917,6 +2893,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <comment>sultan version</comment>
@@ -2957,6 +2938,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </entryLinks>
               <infoLinks>
                 <infoLink name="Shotgun" id="58d9-83d6-bcd8-6562" hidden="false" type="profile" targetId="0924-0647-1366-9d85"/>
+                <infoLink name="Shotgun" id="d595-c9e6-888a-5d01" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
               </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Automatic Shotgun" hidden="false" id="f118-2787-2eed-84fd" sortIndex="2">
@@ -2969,7 +2951,15 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <infoLinks>
                 <infoLink name="Automatic Shotgun" id="81f6-3be0-4126-1976" hidden="false" type="profile" targetId="a19d-90ab-da9f-95ff"/>
                 <infoLink name="Assault" id="7fce-5365-92cc-df29" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+                <infoLink name="Shotgun" id="ace2-13db-8bf3-8063" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
               </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Heavy Shotgun" hidden="true" id="669d-4a56-7875-17ed" sortIndex="3">
               <costs>
@@ -2979,17 +2969,23 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <infoLinks>
                 <infoLink name="Heavy Shotgun" id="83a4-adef-e745-cd80" hidden="false" type="profile" targetId="c5ac-8d24-4060-8655"/>
                 <infoLink name="Heavy" id="a4c6-1969-db88-a1df" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+                <infoLink name="Shotgun" id="8589-16e6-3b55-bc1d" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Heavy" hidden="false" id="c413-b523-ed80-3bbd" targetId="70c9-988d-71a7-7654" primary="false"/>
               </categoryLinks>
               <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="6bc9-407d-f151-88b3" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6bc9-407d-f151-88b3" includeChildSelections="true"/>
               </constraints>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="8be5-7527-c6fa-2bf7" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -3058,11 +3054,12 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Grenades" id="b1c6-bcbf-3d78-d176" hidden="false" type="profile" targetId="cc34-0630-85e1-2583"/>
+            <infoLink name="Frag Grenades" id="b1c6-bcbf-3d78-d176" hidden="false" type="profile" targetId="cc34-0630-85e1-2583"/>
             <infoLink name="Shrapnel" id="96c6-08d6-a171-cd00" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
             <infoLink name="Assault" id="e4fe-217e-0bd8-efe1" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Blast" id="8da3-3c90-0bc9-8903" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Grenade" id="13e0-9c26-68c5-ee7f" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+            <infoLink name="Ignore [Modifier]" id="713f-0513-25ba-8862" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="126e-d930-e6d6-2f1a" includeChildSelections="false"/>
@@ -3086,6 +3083,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Blast" id="bbbb-60af-aef3-57fe" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Gas" id="63f5-aebb-c03b-e981" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
             <infoLink name="Grenade" id="33d9-2618-83c7-f3f3" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+            <infoLink name="Ignore [Modifier]" id="034d-6d06-cb77-e65b" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="08f3-4e24-842c-7741" includeChildSelections="false"/>
@@ -3101,6 +3099,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Assault" id="f0c7-2f08-2bb3-ad0c" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Fire" id="4e03-e4b8-b51a-1a78" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
             <infoLink name="Grenade" id="51b1-e69a-49ce-cb01" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+            <infoLink name="Ignore [Modifier]" id="0748-194f-fa23-83f4" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c8d-d8be-cd2c-983a" includeChildSelections="false"/>
@@ -3124,10 +3123,12 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Blast" id="37a8-f1f0-5e88-4a7b" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Grenade" id="e492-be6b-36ec-04f9" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
             <infoLink name="Consumable" id="b486-4269-e4a2-9544" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+            <infoLink name="Ignore [Modifier]" id="2c8f-1420-9d39-8d29" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Scatter" id="40ac-d414-6146-ba4d" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d52-e640-a103-dd07" includeChildSelections="false"/>
-            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="ef37-2c5a-5c06-7a54" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ef37-2c5a-5c06-7a54" includeChildSelections="true"/>
           </constraints>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="6a8b-85b6-c065-2631" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -3171,6 +3172,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           </costs>
           <infoLinks>
             <infoLink name="Gas Mask" id="c892-0101-458b-1825" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
+            <infoLink name="Negate [Keyword]" id="87e8-5b46-e9cd-439d" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3396-636c-640f-5dc9" includeChildSelections="false"/>
@@ -3250,10 +3252,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-                <characteristic name="Rules" typeId="6e95-3480-ad33-b345">Usable only with both hands otherwise free.</characteristic>
-                <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
                 <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
               </characteristics>
               <modifiers>
@@ -3271,7 +3270,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Hellbound Brand Contract" hidden="true" id="095e-7a3d-0538-1d4a" sortIndex="16">
+        <selectionEntry type="upgrade" import="true" name="Hellbound Soul Contract" hidden="true" id="095e-7a3d-0538-1d4a" sortIndex="17">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -3282,6 +3281,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           </constraints>
           <infoLinks>
             <infoLink name="Hellbound Brand Contract" id="8098-7411-5179-c994" hidden="false" type="profile" targetId="e408-e0b1-f858-fff5"/>
+            <infoLink name="Negate [Keyword]" id="0663-3677-4aeb-4ff8" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3296,7 +3296,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Mountaineer Kit" hidden="false" id="b611-946c-0c0f-dbfc" sortIndex="15">
+        <selectionEntry type="upgrade" import="true" name="Mountaineer Kit" hidden="false" id="b611-946c-0c0f-dbfc" sortIndex="16">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="3"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -3321,13 +3321,14 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Infernal Brand Mark" hidden="false" id="fbf4-745c-c4b1-be37" sortIndex="7">
+        <selectionEntry type="upgrade" import="true" name="Infernal Brand" hidden="false" id="fbf4-745c-c4b1-be37" sortIndex="7">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Infernal Brand Mark" id="0b1a-f491-9e78-b12d" hidden="false" type="profile" targetId="e973-f445-e1c5-92ec"/>
+            <infoLink name="Infernal Brand" id="0b1a-f491-9e78-b12d" hidden="false" type="profile" targetId="e973-f445-e1c5-92ec"/>
+            <infoLink name="Negate [Keyword]" id="15b1-670b-e3a6-5ef3" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7176-d241-c221-8366" includeChildSelections="false"/>
@@ -3365,7 +3366,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Medi-kit" id="01d2-0e07-211a-f40b" hidden="false" type="profile" targetId="aa88-1987-505a-13ca"/>
           </infoLinks>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cdfb-2f26-908c-4b6c" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="961a-f2a9-d1d3-840a" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3388,10 +3389,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           <infoLinks>
             <infoLink name="Martyrdom Pills" id="b589-ea09-7546-ca5a" hidden="false" type="profile" targetId="0de6-1178-a184-ddff"/>
             <infoLink name="Consumable" id="0075-433b-7a91-30eb" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+            <infoLink name="Negate [Keyword]" id="52c7-d51b-e843-ee72" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
           </infoLinks>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23c8-e5ce-6a56-6633" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="1a46-80b5-b0bd-8fb4" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1a46-80b5-b0bd-8fb4" includeChildSelections="true"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3412,10 +3413,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e96-1e61-b3bb-8c3c" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e96-1e61-b3bb-8c3c" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <infoLinks>
             <infoLink name="Binoculars" id="edae-bc49-e328-55cd" hidden="false" type="profile" targetId="242b-2dd0-41e9-77e1"/>
+            <infoLink name="Infiltrator" id="32ae-bac2-11ae-c8e9" hidden="false" type="rule" targetId="154d-8072-ef87-e6c1"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3437,12 +3439,12 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Field Shrine" hidden="true" id="b59b-8601-bbe5-e216" sortIndex="14">
+        <selectionEntry type="upgrade" import="true" name="Field Shrine" hidden="true" id="b59b-8601-bbe5-e216" sortIndex="15">
           <costs>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
           </costs>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd2c-abb5-7c59-8369" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bd2c-abb5-7c59-8369" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <infoLinks>
             <infoLink name="Field Shrine" id="d37c-837e-692c-66a9" hidden="false" type="profile" targetId="76e2-0e5b-972a-0f69"/>
@@ -3462,10 +3464,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           </costs>
           <infoLinks>
             <infoLink name="Holy Relic" id="9ca5-4b67-20f3-0dd1" hidden="false" type="profile" targetId="f7dd-c304-609f-c9d1"/>
-            <infoLink name="Consumable" id="5779-e777-cd63-31a3" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+            <infoLink name="Blessed" id="6339-83fd-1389-8e8c" hidden="false" type="rule" targetId="269c-81bd-f64b-737f"/>
           </infoLinks>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="87ec-a806-8bbb-a782" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="429e-3784-2c94-ed05" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3488,8 +3490,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Wind Amulet" id="117a-ae5f-1520-9dfa" hidden="false" type="profile" targetId="cb4d-4771-6cd2-240b"/>
           </infoLinks>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="236e-4006-6f4f-4030" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="39cb-9411-b440-cd0e" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="39cb-9411-b440-cd0e" includeChildSelections="true"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3507,7 +3508,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Cloak of Alamut" id="e9f2-0882-c4f9-2f6b" hidden="false" type="profile" targetId="fc84-ca32-2672-c684"/>
           </infoLinks>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3b27-f507-ac5b-288c" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3b27-f507-ac5b-288c" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3522,18 +3523,21 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Golden Calf Altar" hidden="true" id="c9ba-7a03-eaae-1c00" sortIndex="17">
+        <selectionEntry type="upgrade" import="true" name="Golden Calf Altar" hidden="true" id="c9ba-7a03-eaae-1c00" sortIndex="18">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <profiles>
-            <profile name="Golden Calf Altar" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="77d6-2ff5-90cb-b1a8">
+            <profile name="Golden Calf Altar" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="77d6-2ff5-90cb-b1a8">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The area within 3” of the altar is Difficult Terrain for all models in the opposing Warband. This affects even models that can Fly. The model carrying the altar may drop it at any point during their Activation. Once placed down, the Golden Calf Altar cannot be picked up again. It has a 25mm base.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">* Illusions: Enemy models treat open ground and all terrain within 3” of a model with a Golden Calf Altar as being Difficult terrain (if it is not already), even if they can Fly.
+
+
+* Place Altar ACTION: A model with a Golden Calf Altar can take a Place Altar ACTION. If they do so, the model no longer counts as having a Golden Calf Altar, and you must place a Golden Calf Altar terrain piece on a 25mm base on the ground within 1” of the model taking the ACTION. The Golden Calf Altar has the Illusions special rule, is Impassable terrain, and cannot be picked up again or moved in any way.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HEAVY, CONSUMABLE</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3557,6 +3561,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Consumable" id="00bf-aa89-b801-20b4" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
             <infoLink name="Heavy" id="cd11-48d1-0b5a-d066" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
+          <categoryLinks>
+            <categoryLink targetId="70c9-988d-71a7-7654" id="b580-8185-fe36-b533" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Trench Shrine" hidden="true" id="de31-881e-fc7e-2bf4">
           <infoLinks>
@@ -3584,6 +3591,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <selectionEntry type="upgrade" import="true" name="Combat Helmet" hidden="false" id="7831-876a-742a-e89a">
               <infoLinks>
                 <infoLink name="Combat Helmet" id="8efb-6c87-58b6-cd6d" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
+                <infoLink name="Negate [Keyword]" id="b397-d90d-b2fd-7863" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
               </infoLinks>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
@@ -3594,13 +3602,18 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Sniper Scope" hidden="false" id="42f5-fa6d-819e-2c9d" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="18"/>
-        <entryLink import="true" name="The Mark of Cain" hidden="false" id="e7aa-1b0b-c234-c2b9" type="selectionEntry" targetId="446f-35b5-6d7e-5fb2" sortIndex="19"/>
-        <entryLink import="true" name="Knighthood" hidden="false" id="58a8-8222-f959-021c" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="20"/>
-        <entryLink import="true" name="Battlefield Title" hidden="false" id="ac73-89fb-59cd-b519" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="21"/>
+        <entryLink import="true" name="Sniper Scope" hidden="false" id="42f5-fa6d-819e-2c9d" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="19">
+          <infoLinks>
+            <infoLink name="Ignore [Modifier]" id="51ac-1f91-8c42-b675" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+          </infoLinks>
+        </entryLink>
+        <entryLink import="true" name="The Mark of Cain" hidden="false" id="e7aa-1b0b-c234-c2b9" type="selectionEntry" targetId="446f-35b5-6d7e-5fb2" sortIndex="20"/>
+        <entryLink import="true" name="Knighthood" hidden="false" id="58a8-8222-f959-021c" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="21"/>
+        <entryLink import="true" name="Battlefield Title" hidden="false" id="ac73-89fb-59cd-b519" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="22"/>
         <entryLink import="true" name="Lock of Samson&apos;s Hair" hidden="false" id="85c7-3489-4852-ee41" type="selectionEntry" targetId="9b61-d0a4-dd30-2d32"/>
         <entryLink import="true" name="Curative Fluids" hidden="true" id="b95d-0bf9-8d0c-b60b" type="selectionEntry" targetId="0e49-dfa5-4190-ee69"/>
         <entryLink import="true" name="Saints Reliquary" hidden="true" id="bee3-bf8d-7c29-81f2" type="selectionEntry" targetId="cf19-f306-c26c-1537"/>
+        <entryLink import="true" name="Dog Food" hidden="false" id="fa09-0e16-35a4-0f1b" type="selectionEntry" targetId="05f3-2ee4-36c0-8c25" sortIndex="14"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Utility Hand" id="3676-db5e-8076-8b90" hidden="false">
@@ -3615,6 +3628,8 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           </constraints>
           <infoLinks>
             <infoLink name="Troop Flag" id="4475-5beb-9e9d-0c5e" hidden="false" type="profile" targetId="e86e-146a-65b7-09f2"/>
+            <infoLink name="Leader" id="98cf-5611-408b-6a4b" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
+            <infoLink name="Held" id="b01a-d833-223c-a556" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
           </infoLinks>
           <modifiers>
             <modifier type="increment" value="1" field="1a5b-1f57-733e-f61a">
@@ -3645,12 +3660,12 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <profiles>
-            <profile name="Standard of Mammon" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="debb-b1ea-a645-92dd">
+            <profile name="Standard of Mammon" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="debb-b1ea-a645-92dd">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Grants +1 DICE for all Morale tests as long as the model with the Flag is not Down or Out of Action. Requires one hand to use as if it was a weapon, both in ranged and melee combat. Any enemy entering melee combat with the model carrying this banner must make a successful ACTION or the model goes Down and cannot get up as long as they are in melee combat with the bearer of the standard.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Kneel Before Me: An enemy model that is Down and within 1&quot; of a model with the Standard of Mammon cannot stand back up. In addition, the opposing player must take a Success Roll for any of their models that finish a charge within 1&quot; of a model with the Standard of Mammon. If the roll is a Failure, the enemy model is marked as being Down. If the roll is a Success or a Critical Success, the enemy model stays on its feet.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD, LEADER</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3678,6 +3693,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </conditionGroups>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Held" id="ac92-2f86-6cbd-2b8b" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
+            <infoLink name="Leader" id="fb3e-d4f9-04d9-ef4a" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Musical Instrument" hidden="false" id="9d6b-937a-5823-21e8">
           <costs>
@@ -3690,6 +3709,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           </constraints>
           <infoLinks>
             <infoLink name="Musical Instrument" id="d022-d616-34d0-99b9" hidden="false" type="profile" targetId="dd0c-c62d-46f1-64f8"/>
+            <infoLink name="Held" id="0395-c4a3-304c-ffa2" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -3729,7 +3749,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="51b4-1f58-7c64-6d97" includeChildSelections="false"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Trench Shield" id="34b1-c3b3-99df-adf0" hidden="false" type="profile" targetId="c2a5-72b6-355d-0356"/>
+                <infoLink name="Shield" id="34b1-c3b3-99df-adf0" hidden="false" type="profile" targetId="c2a5-72b6-355d-0356"/>
               </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Fire Shield" hidden="true" id="c2f1-1e4f-2374-a6a5" sortIndex="2">
@@ -3742,12 +3762,12 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="1ad6-b684-8296-5c42" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="Fire Shield" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="7555-188e-e8fb-6a31">
+                <profile name="Fire Shield" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7555-188e-e8fb-6a31">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Always takes one hand to use in both melee and in ranged combat. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated. Any attack against this model that has the Keyword FIRE will suffer -1 DICE on injury rolls and will not cause an additional BLOOD MARKER.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">dd -1 INJURY DICE to Injury Rolls for attacks with the FIRE Keyword that targets a model that has a Fire Shield, even if the attacking weapon has the IGNORE ARMOUR Keyword.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-1 INJURY MODIFIER, NEGATE FIRE</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3763,6 +3783,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Negate [Keyword]" id="5d0a-4c2f-199d-c0b0" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -3951,6 +3974,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
         <selectionEntry type="upgrade" import="true" name="Alchemist Armour" hidden="true" id="6f0b-f2e8-3e60-f596" sortIndex="4">
           <infoLinks>
             <infoLink name="Alchemist Armour" id="5cef-c9fa-b991-f49e" hidden="false" type="profile" targetId="68e2-bde3-19a9-2980"/>
+            <infoLink name="Negate [Keyword]" id="d6ee-57f2-d4ac-721e" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
           </infoLinks>
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
@@ -3974,16 +3998,16 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Tarnished Armour" hidden="true" id="a6fb-9aa2-1030-b5bf" sortIndex="3">
           <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="45"/>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="25"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <profiles>
-            <profile name="Tarnished Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b2e8-94d9-2ff1-7cdd">
+            <profile name="Tarnished Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b2e8-94d9-2ff1-7cdd">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">The suit counts as Reinforced Armour, a helmet and a gas mask. When an enemy declares a charge, they must charge the model wearing this armour if it is visible, not in cover and within 12” of the wearer. The charging model must be able to reach this model without climbing, leaping or crossing dangerous terrain. If the wearer of the armour is already in melee combat, this power has no effect</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">An enemy model must choose a model that has Tarnished Armour as the target of the charge if the model is in its Line of Sight, not already within 1” of an enemy model, and can be reached without the charging model having to Climb, Jump, make a Diving Charge, or move across Dangerous terrain.</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-2 INJURY MODIFIER, NEGATE GAS</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4013,6 +4037,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </repeats>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Negate [Keyword]" id="a617-96a6-7e10-8c46" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -4026,7 +4053,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Mind Linked" hidden="true" id="30bc-1025-53a4-1ecc">
           <profiles>
-            <profile name="Mind Linked" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bc3d-26f8-182e-d523">
+            <profile name="Mind Linked" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bc3d-26f8-182e-d523">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is in a fireteam with a Homunculus.</characteristic>
                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -4046,6 +4073,35 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             </modifier>
           </modifiers>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Plutocracy" hidden="true" id="f63b-4911-cb7a-2a12">
+          <profiles>
+            <profile name="Plutocratic" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ab0a-9e55-2b79-c20b">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This model is in a fireteam with a Plutocratic Elite. When acting together, treat Risky Success Rolls as normal Success Rolls</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="7ee9-6695-25dd-e105" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b264-96ca-b0aa-038c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="increment" value="1" field="7ee9-6695-25dd-e105">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="b264-96ca-b0aa-038c" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="true" id="0559-7525-a496-1718" type="selectionEntry" targetId="1f47-9c34-ef9b-914b"/>
@@ -4062,19 +4118,6 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
       </categoryLinks>
     </forceEntry>
   </forceEntries>
-  <sharedProfiles>
-    <profile name="Test Weapon Number 3" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="2c1f-572b-b74f-a25c">
-      <characteristics>
-        <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
-        <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-        <characteristic name="Rules" typeId="6e95-3480-ad33-b345">-</characteristic>
-        <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
-      </characteristics>
-    </profile>
-  </sharedProfiles>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Bayonet Lug" hidden="false" id="3348-ed1b-adf7-af00">
       <costs>
@@ -4099,7 +4142,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
         <categoryLink name="Heavy" hidden="false" id="ff39-a952-4350-d03e" targetId="70c9-988d-71a7-7654" primary="false"/>
       </categoryLinks>
       <profiles>
-        <profile name="Comically Large Rock" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2451-9e55-fa8b-cf77">
+        <profile name="Comically Large Rock" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2451-9e55-fa8b-cf77">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">rock</characteristic>
             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -4205,20 +4248,14 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             </modifierGroup>
           </modifierGroups>
         </profile>
-        <profile name="Artificial Body" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5ffd-c09f-8c37-d626">
+        <profile name="Artificial Body" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5ffd-c09f-8c37-d626">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Created through the Jabirean alchemy, the Homunculus has no vital organs and they have to be dismembered in order to kill them. All injury rolls against the Homunculus are made with -1 DICE.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Created through the Jabirean alchemy, the Homunculus has no vital organs and they have to be dismembered in order to kill them. All injury rolls against the Homunculus are made with -1 DICE.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Re-creation" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="26cb-315c-d838-d06a">
+        <profile name="Re-creation" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="26cb-315c-d838-d06a">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the Homunculus is taken Out of Action during battle, and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats at any time between battles to bring it back to life with all of its weapons and abilities</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If the Homunculus is taken Out of Action during battle, and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats at any time between battles to bring it back to life with all of its weapons and abilities</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4231,12 +4268,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Wings" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a846-fca2-5d42-8ed2">
+                <profile name="Wings" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="a846-fca2-5d42-8ed2">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus gains a new movement mode: 8”/Flying</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus gains a new movement mode: 8”/Flying</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4250,12 +4284,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Elemental Resistance" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="be6c-be10-e7ae-c32d">
+                <profile name="Elemental Resistance" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="be6c-be10-e7ae-c32d">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Attacks made against the Homunculus that have the Keywords FIRE and/or GAS suffer a -1 DICE penalty to injure it. Also, the Homunculus does not suffer additional BLOOD MARKERS from attacks with Keywords FIRE and/or GAS.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Attacks made against the Homunculus that have the Keywords FIRE and/or GAS suffer a -1 DICE penalty to injure it. Also, the Homunculus does not suffer additional BLOOD MARKERS from attacks with Keywords FIRE and/or GAS.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4269,12 +4300,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Human Hands" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="569b-ae5c-dc00-2e64">
+                <profile name="Human Hands" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="569b-ae5c-dc00-2e64">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus can buy and wield any weapon allowed in the Iron Sultanate warband or House of Wisdom list, though they cannot select ELITE only items, grenades or items limited to specific units (such as Assassins). They can also carry a Trench Shield or a Fire Shield. This will apply to the Additional Arms formula as well. Cannot be combined with the Wings formula.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus can buy and wield any weapon allowed in the Iron Sultanate warband or House of Wisdom list, though they cannot select ELITE only items, grenades or items limited to specific units (such as Assassins). They can also carry a Trench Shield or a Fire Shield. This will apply to the Additional Arms formula as well. Cannot be combined with the Wings formula.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4295,12 +4323,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Enslaved Mind" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b146-999e-652c-37cd">
+                <profile name="Enslaved Mind" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b146-999e-652c-37cd">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus gains the Keyword FIRETEAM along with one model of your choice in the Warband. The other model can only form a Fireteam with this Homunculi, not with any other models.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus gains the Keyword FIRETEAM along with one model of your choice in the Warband. The other model can only form a Fireteam with this Homunculi, not with any other models.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4314,12 +4339,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Massive Size" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5742-240c-13ea-02fc">
+                <profile name="Massive Size" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5742-240c-13ea-02fc">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus’ size is increased to huge proportions. It now has a base size of 50mm and it gains the Keyword TOUGH. This formula cannot be combined with the Wings formula.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus’ size is increased to huge proportions. It now has a base size of 50mm and it gains the Keyword TOUGH. This formula cannot be combined with the Wings formula.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4348,18 +4370,18 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Inhuman Strength" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="70ac-7d7a-74d2-44f6">
+                <profile name="Inhuman Strength" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="70ac-7d7a-74d2-44f6">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The musculature of the Homunculus is reinforced, replaced and strengthened. It now has a base size of 32mm (or 50mm if it also has Massive size). The Homunculus gains +1 DICE to its Melee characteristic and the Keyword STRONG.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The musculature of the Homunculus is reinforced, replaced and strengthened. It now has a base size of 32mm (or 50mm if it also has Massive size). The Homunculus gains +1 DICE to its Melee characteristic and the Keyword STRONG.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1cbb-9998-0db8-d357" includeChildSelections="false"/>
               </constraints>
+              <infoLinks>
+                <infoLink name="Strong" id="c424-7395-5d3d-00d8" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Terrifying Appearance" hidden="false" id="b210-a78b-2c43-8366" sortIndex="7">
               <costs>
@@ -4367,12 +4389,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Terrifying Appearance" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4908-d1d0-1e0b-742a">
+                <profile name="Terrifying Appearance" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4908-d1d0-1e0b-742a">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Whether by captivating beauty or a terrifying appearance, this Homunculus gains the Keyword FEAR.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Whether by captivating beauty or a terrifying appearance, this Homunculus gains the Keyword FEAR.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4386,15 +4405,12 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Additional Arm" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d419-9f55-0708-0571">
+                <profile name="Additional Arm" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d419-9f55-0708-0571">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus can perform an additional attack ACTION in Melee or Ranged combat without any penalty. Therefore, if making attacks with three melee weapons, only a single weapon would need to be declared an Off-Hand weapon (suffering the appropriate penalties). It has three hands to carry weapons if combined with Human Hands, and may equip weapons and a shield in any combination, as long as it has hands free to do so. 
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus can perform an additional attack ACTION in Melee or Ranged combat without any penalty. Therefore, if making attacks with three melee weapons, only a single weapon would need to be declared an Off-Hand weapon (suffering the appropriate penalties). It has three hands to carry weapons if combined with Human Hands, and may equip weapons and a shield in any combination, as long as it has hands free to do so. 
 
 
 In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has sufficient weapons and number of hands to carry them), and up to three Melee Attack ACTIONS (if armed with three one-handed weapons); or one Melee Attack ACTION with a two-handed weapon and one Melee Attack ACTION with a one-handed weapon.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4404,12 +4420,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Additional Head" hidden="false" id="c954-2ddb-f552-c976" sortIndex="9">
               <profiles>
-                <profile name="Additional Head" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4792-d0b3-6bde-483c">
+                <profile name="Additional Head" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4792-d0b3-6bde-483c">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus has two heads and therefore can have two sets of eyes via Alchemical Formula.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus has two heads and therefore can have two sets of eyes via Alchemical Formula.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4423,12 +4436,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name=" Startling Speed" hidden="false" id="7f10-21b2-211e-85aa" sortIndex="11">
               <profiles>
-                <profile name="Startling Speed" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2efe-624c-9d6a-b743">
+                <profile name="Startling Speed" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2efe-624c-9d6a-b743">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus adds +1 DICE to its Dash ACTIONS.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus adds +1 DICE to its Dash ACTIONS.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4442,12 +4452,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Seal of Solomon" hidden="false" id="adcc-26c4-07e5-0372" sortIndex="12">
               <profiles>
-                <profile name="Seal of Solomon" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="52ca-ad85-c4f7-ba4b">
+                <profile name="Seal of Solomon" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="52ca-ad85-c4f7-ba4b">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Formula greatly enhances the intelligence of the Homunculus and makes it painfully aware of its artificial existence. It can now buy and use Equipment from the Sultanate Warband Armoury as long as it is not limited to ELITE models. Note that one helmet protects a Homunculus with two heads normally and the Two Heads Formula does not allow the purchase of two different kinds of headgear.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Formula greatly enhances the intelligence of the Homunculus and makes it painfully aware of its artificial existence. It can now buy and use Equipment from the Sultanate Warband Armoury as long as it is not limited to ELITE models. Note that one helmet protects a Homunculus with two heads normally and the Two Heads Formula does not allow the purchase of two different kinds of headgear.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4461,12 +4468,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Gargantuan Size" hidden="true" id="29e1-35be-2c50-269a" sortIndex="13">
               <profiles>
-                <profile name="Gargantuan Size" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="baa0-2627-70b5-03b8">
+                <profile name="Gargantuan Size" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="baa0-2627-70b5-03b8">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Can only be bought if the Homunculus already has the Human Hands, Inhuman Strength and Massive Size Formulas. The Homunculus now has a Base Size of 60mm and it can now use one Brazen Bull Only weapon.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Can only be bought if the Homunculus already has the Human Hands, Inhuman Strength and Massive Size Formulas. The Homunculus now has a Base Size of 60mm and it can now use one Brazen Bull Only weapon.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4493,12 +4497,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Regenerative" hidden="false" id="ab92-d72f-4403-7943">
               <profiles>
-                <profile name="Regenerative" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c7ba-dfeb-57fc-5ba9">
+                <profile name="Regenerative" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c7ba-dfeb-57fc-5ba9">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus has an astonishing healing factor and can remove one BLOOD MARKER every time it is Activated, if it has any.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus has an astonishing healing factor and can remove one BLOOD MARKER every time it is Activated, if it has any.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4530,12 +4531,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                   </costs>
                   <profiles>
-                    <profile name="Hypnotic Eyes" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b3d5-d96b-24a2-cef6">
+                    <profile name="Hypnotic Eyes" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b3d5-d96b-24a2-cef6">
                       <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enemies suffer -1 DICE to hit the Homunculus in Melee. Does not affect Sniper Priests or enemies with the keyword BLACK GRAIL. Cannot be combined with Hawk Eyes without Two Heads.</characteristic>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Enemies suffer -1 DICE to hit the Homunculus in Melee. Does not affect Sniper Priests or enemies with the keyword BLACK GRAIL. Cannot be combined with Hawk Eyes without Two Heads.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4549,12 +4547,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                   </costs>
                   <profiles>
-                    <profile name="Hawk Eyes" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6604-5dbd-50cf-6083">
+                    <profile name="Hawk Eyes" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="6604-5dbd-50cf-6083">
                       <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">The eyesight of the Homunculus is based on that of a predatory bird. It can add +1 DICE to its Ranged Attack characteristic. Cannot be combined with Hypnotic Eyes without Two Heads.</characteristic>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The eyesight of the Homunculus is based on that of a predatory bird. It can add +1 DICE to its Ranged Attack characteristic. Cannot be combined with Hypnotic Eyes without Two Heads.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
