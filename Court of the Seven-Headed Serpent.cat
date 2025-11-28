@@ -12,6 +12,23 @@
           <constraints>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="036c-23e8-f06e-9539" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="decrement" value="1" field="036c-23e8-f06e-9539">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="6354-0407-0c17-84a5" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="c9e2-5728-f485-e683" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="decrement" value="1" field="036c-23e8-f06e-9539">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model" childId="6ffb-5ac2-a05a-8c44" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
       <modifiers>
@@ -302,6 +319,18 @@
         <entryLink import="true" name="Battlefield Title" hidden="false" id="fe00-56b6-79c9-0a03" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="11"/>
         <entryLink import="true" name="Knighthood" hidden="false" id="6c55-3b2a-ba53-b958" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="10"/>
         <entryLink import="true" name="Dog Food" hidden="false" id="f481-6ec6-aa71-ce63" type="selectionEntry" targetId="05f3-2ee4-36c0-8c25" sortIndex="9"/>
+        <entryLink import="true" name="Restraining Muzzle" hidden="false" id="af16-e7f1-b528-97b9" type="selectionEntry" targetId="1a9c-7660-b193-7734" sortIndex="8">
+          <entryLinks>
+            <entryLink import="true" name="Goetic Powers" hidden="false" id="2885-3036-33eb-6ae4" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2ae-be0c-7685-dec4" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="1"/>
+          </costs>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Grenades" id="3dce-3062-9abb-c1de" hidden="false">
@@ -3333,20 +3362,9 @@
             </modifierGroup>
           </modifierGroups>
         </profile>
-        <profile name="Artificial Body" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8532-5bc2-29fa-a2cc">
+        <profile name="Re-creation" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9582-534b-e10b-cf60">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Created through the Jabirean alchemy, the Homunculus has no vital organs and they have to be dismembered in order to kill them. All injury rolls against the Homunculus are made with -1 DICE.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-          </characteristics>
-        </profile>
-        <profile name="Re-creation" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9582-534b-e10b-cf60">
-          <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the Homunculus is taken Out of Action during battle, and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats at any time between battles to bring it back to life with all of its weapons and abilities</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If the Homunculus is taken Out of Action during battle, and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats at any time between battles to bring it back to life with all of its weapons and abilities</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3875,6 +3893,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="54e8-98b3-94f6-e3d9" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="3901-b673-ad38-1d03" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
+      <infoLinks>
+        <infoLink name="Golem" id="b763-b2a8-f8ca-0fd9" hidden="false" type="rule" targetId="d70f-081c-259b-6cb6"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Pile of Stuff" hidden="true" id="1d87-ef77-69ca-eb3f">
       <selectionEntryGroups>

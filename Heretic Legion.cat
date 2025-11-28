@@ -3866,6 +3866,16 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <condition type="atLeast" value="1" field="selections" scope="model" childId="6a11-3bd5-d303-dc2b" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="decrement" value="1" field="277a-373f-e66a-7953">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="c565-00c6-2806-e1c5" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="8f2f-2c59-b0bc-34fd" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -4247,11 +4257,6 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <comment>armour adjustments</comment>
             </modifierGroup>
           </modifierGroups>
-        </profile>
-        <profile name="Artificial Body" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5ffd-c09f-8c37-d626">
-          <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Created through the Jabirean alchemy, the Homunculus has no vital organs and they have to be dismembered in order to kill them. All injury rolls against the Homunculus are made with -1 DICE.</characteristic>
-          </characteristics>
         </profile>
         <profile name="Re-creation" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="26cb-315c-d838-d06a">
           <characteristics>
@@ -4748,6 +4753,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="aae0-91c8-476b-f917" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="ee8b-f180-a30d-b4f5" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="1"/>
       </entryLinks>
+      <infoLinks>
+        <infoLink name="Golem" id="01c5-4258-8ed3-fa71" hidden="false" type="rule" targetId="d70f-081c-259b-6cb6"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Pile of Stuff" hidden="true" id="afbe-4010-1921-03ae">
       <selectionEntryGroups>

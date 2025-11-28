@@ -4900,15 +4900,12 @@ Steadfast: When a model that has Ducal Winged Armour suffers a Down result on th
         <selectionEntry type="upgrade" import="true" name="Sultanate Grand Cannon" hidden="true" id="d9f1-b37e-ff7c-cffe">
           <comment>Bull Weapon</comment>
           <profiles>
-            <profile name="Sultanate Grand Cannon" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="55cc-bfda-1fd4-0633">
+            <profile name="Brazen Bull Grand Cannon" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="55cc-bfda-1fd4-0633">
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">48&quot;</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 INJURY DICE, HEAVY, IGNORE ARMOUR</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Brazen Bull Grand Cannon: A Grand Cannon that is found as a Glory Item must be carried by a Brazen Bull and uses the profile above for all rules purposes. If it is removed from the Brazen Bull for any reason, or if the Brazen Bull is removed from the Warband for any reason, then the Grand Cannon is lost (it cannot be fielded as a stationary gun battery).
-
-
-Unstoppable Object: If a model that has been hit by a Sultanate Grand Cannon is not taken Out of Action by the Injury Roll, it is pushed D6&quot; in a straight line directly away from the attacking model. The model stops if it pushed into another model, Impassable terrain or a terrain piece it cannot cross without having to Climb.</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Unstoppable Object: If a model that has been hit by a Sultanate Grand Cannon is not taken Out of Action by the Injury Roll, it is pushed D6&quot; in a straight line directly away from the attacking model. The model stops if it pushed into another model, Impassable terrain or a terrain piece it cannot cross without having to Climb.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5319,6 +5316,15 @@ Unstoppable Object: If a model that has been hit by a Sultanate Grand Cannon is
                   <conditions>
                     <condition type="instanceOf" value="1" field="selections" scope="model" childId="658a-8247-8e8a-8f85" shared="true"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="e144-fd65-dd37-8ba2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="afdf-43aa-a03d-918b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="a805-292c-3b37-bc40" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>

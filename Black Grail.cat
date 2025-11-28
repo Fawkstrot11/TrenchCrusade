@@ -23,6 +23,16 @@
                 <condition type="atLeast" value="1" field="selections" scope="model" childId="92a7-eb28-94aa-7a80" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="decrement" value="1" field="1d35-3568-298b-3d61">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="89dd-2c9d-b547-4afd" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="e5e4-3d89-6ccd-71e8" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -2400,20 +2410,9 @@
             </modifierGroup>
           </modifierGroups>
         </profile>
-        <profile name="Artificial Body" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c98b-7bb9-5c12-0147">
+        <profile name="Re-creation" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="920a-c4f1-99e2-1104">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Created through the Jabirean alchemy, the Homunculus has no vital organs and they have to be dismembered in order to kill them. All injury rolls against the Homunculus are made with -1 DICE.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-          </characteristics>
-        </profile>
-        <profile name="Re-creation" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="920a-c4f1-99e2-1104">
-          <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the Homunculus is taken Out of Action during battle, and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats at any time between battles to bring it back to life with all of its weapons and abilities</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If the Homunculus is taken Out of Action during battle, and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats at any time between battles to bring it back to life with all of its weapons and abilities</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2426,12 +2425,9 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Wings" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="292a-65c6-ee6a-db6a">
+                <profile name="Wings" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="292a-65c6-ee6a-db6a">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus gains a new movement mode: 8”/Flying</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus gains a new movement mode: 8”/Flying</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2445,12 +2441,9 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Elemental Resistance" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="71ba-33b1-bd3f-fb3d">
+                <profile name="Elemental Resistance" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="71ba-33b1-bd3f-fb3d">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Attacks made against the Homunculus that have the Keywords FIRE and/or GAS suffer a -1 DICE penalty to injure it. Also, the Homunculus does not suffer additional BLOOD MARKERS from attacks with Keywords FIRE and/or GAS.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Attacks made against the Homunculus that have the Keywords FIRE and/or GAS suffer a -1 DICE penalty to injure it. Also, the Homunculus does not suffer additional BLOOD MARKERS from attacks with Keywords FIRE and/or GAS.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2464,12 +2457,9 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Human Hands" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9551-aaae-a05e-8026">
+                <profile name="Human Hands" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9551-aaae-a05e-8026">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus can buy and wield any weapon allowed in the Iron Sultanate warband or House of Wisdom list, though they cannot select ELITE only items, grenades or items limited to specific units (such as Assassins). They can also carry a Trench Shield or a Fire Shield. This will apply to the Additional Arms formula as well. Cannot be combined with the Wings formula.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus can buy and wield any weapon allowed in the Iron Sultanate warband or House of Wisdom list, though they cannot select ELITE only items, grenades or items limited to specific units (such as Assassins). They can also carry a Trench Shield or a Fire Shield. This will apply to the Additional Arms formula as well. Cannot be combined with the Wings formula.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2490,12 +2480,9 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Enslaved Mind" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b2ab-84ac-2b1d-203d">
+                <profile name="Enslaved Mind" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b2ab-84ac-2b1d-203d">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus gains the Keyword FIRETEAM along with one model of your choice in the Warband. The other model can only form a Fireteam with this Homunculi, not with any other models.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus gains the Keyword FIRETEAM along with one model of your choice in the Warband. The other model can only form a Fireteam with this Homunculi, not with any other models.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2509,12 +2496,9 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Massive Size" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bf7f-0891-7ad8-83a5">
+                <profile name="Massive Size" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="bf7f-0891-7ad8-83a5">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus’ size is increased to huge proportions. It now has a base size of 50mm and it gains the Keyword TOUGH. This formula cannot be combined with the Wings formula.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus’ size is increased to huge proportions. It now has a base size of 50mm and it gains the Keyword TOUGH. This formula cannot be combined with the Wings formula.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2543,12 +2527,9 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Inhuman Strength" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ed1e-b034-f0b9-dbab">
+                <profile name="Inhuman Strength" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ed1e-b034-f0b9-dbab">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The musculature of the Homunculus is reinforced, replaced and strengthened. It now has a base size of 32mm (or 50mm if it also has Massive size). The Homunculus gains +1 DICE to its Melee characteristic and the Keyword STRONG.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The musculature of the Homunculus is reinforced, replaced and strengthened. It now has a base size of 32mm (or 50mm if it also has Massive size). The Homunculus gains +1 DICE to its Melee characteristic and the Keyword STRONG.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2562,12 +2543,9 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Terrifying Appearance" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e411-89dd-5fbb-4cbe">
+                <profile name="Terrifying Appearance" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e411-89dd-5fbb-4cbe">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Whether by captivating beauty or a terrifying appearance, this Homunculus gains the Keyword FEAR.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Whether by captivating beauty or a terrifying appearance, this Homunculus gains the Keyword FEAR.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2581,15 +2559,11 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Additional Arm" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1bf3-df46-8da1-602c">
+                <profile name="Additional Arm" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1bf3-df46-8da1-602c">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus can perform an additional attack ACTION in Melee or Ranged combat without any penalty. Therefore, if making attacks with three melee weapons, only a single weapon would need to be declared an Off-Hand weapon (suffering the appropriate penalties). It has three hands to carry weapons if combined with Human Hands, and may equip weapons and a shield in any combination, as long as it has hands free to do so. 
-
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus can perform an additional attack ACTION in Melee or Ranged combat without any penalty. Therefore, if making attacks with three melee weapons, only a single weapon would need to be declared an Off-Hand weapon (suffering the appropriate penalties). It has three hands to carry weapons if combined with Human Hands, and may equip weapons and a shield in any combination, as long as it has hands free to do so. 
 
 In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has sufficient weapons and number of hands to carry them), and up to three Melee Attack ACTIONS (if armed with three one-handed weapons); or one Melee Attack ACTION with a two-handed weapon and one Melee Attack ACTION with a one-handed weapon.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2599,12 +2573,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Additional Head" hidden="false" id="0a92-110b-990d-1dfc" sortIndex="9">
               <profiles>
-                <profile name="Additional Head" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5cb6-8353-fcf6-9066">
+                <profile name="Additional Head" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5cb6-8353-fcf6-9066">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus has two heads and therefore can have two sets of eyes via Alchemical Formula.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus has two heads and therefore can have two sets of eyes via Alchemical Formula.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2618,12 +2589,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name=" Startling Speed" hidden="false" id="7e4b-d6b3-582f-5334" sortIndex="11">
               <profiles>
-                <profile name="Startling Speed" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d620-b97c-0e00-f1af">
+                <profile name="Startling Speed" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d620-b97c-0e00-f1af">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus adds +1 DICE to its Dash ACTIONS.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus adds +1 DICE to its Dash ACTIONS.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2637,12 +2605,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Seal of Solomon" hidden="false" id="a48e-e8a0-773e-e318" sortIndex="12">
               <profiles>
-                <profile name="Seal of Solomon" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c0d0-9dd9-051c-d0dd">
+                <profile name="Seal of Solomon" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c0d0-9dd9-051c-d0dd">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Formula greatly enhances the intelligence of the Homunculus and makes it painfully aware of its artificial existence. It can now buy and use Equipment from the Sultanate Warband Armoury as long as it is not limited to ELITE models. Note that one helmet protects a Homunculus with two heads normally and the Two Heads Formula does not allow the purchase of two different kinds of headgear.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Formula greatly enhances the intelligence of the Homunculus and makes it painfully aware of its artificial existence. It can now buy and use Equipment from the Sultanate Warband Armoury as long as it is not limited to ELITE models. Note that one helmet protects a Homunculus with two heads normally and the Two Heads Formula does not allow the purchase of two different kinds of headgear.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2656,12 +2621,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Gargantuan Size" hidden="true" id="207d-922f-cedb-5b14" sortIndex="13">
               <profiles>
-                <profile name="Gargantuan Size" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d736-170e-38e7-4519">
+                <profile name="Gargantuan Size" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d736-170e-38e7-4519">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Can only be bought if the Homunculus already has the Human Hands, Inhuman Strength and Massive Size Formulas. The Homunculus now has a Base Size of 60mm and it can now use one Brazen Bull Only weapon.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Can only be bought if the Homunculus already has the Human Hands, Inhuman Strength and Massive Size Formulas. The Homunculus now has a Base Size of 60mm and it can now use one Brazen Bull Only weapon.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2688,12 +2650,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Regenerative" hidden="false" id="3046-7d44-bf5c-2473">
               <profiles>
-                <profile name="Regenerative" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e895-2aea-af4b-f433">
+                <profile name="Regenerative" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e895-2aea-af4b-f433">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus has an astonishing healing factor and can remove one BLOOD MARKER every time it is Activated, if it has any.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus has an astonishing healing factor and can remove one BLOOD MARKER every time it is Activated, if it has any.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2725,12 +2684,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                   </costs>
                   <profiles>
-                    <profile name="Hypnotic Eyes" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="511f-c35a-8e6b-273c">
+                    <profile name="Hypnotic Eyes" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="511f-c35a-8e6b-273c">
                       <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enemies suffer -1 DICE to hit the Homunculus in Melee. Does not affect Sniper Priests or enemies with the keyword BLACK GRAIL. Cannot be combined with Hawk Eyes without Two Heads.</characteristic>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Enemies suffer -1 DICE to hit the Homunculus in Melee. Does not affect Sniper Priests or enemies with the keyword BLACK GRAIL. Cannot be combined with Hawk Eyes without Two Heads.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -2744,12 +2700,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                   </costs>
                   <profiles>
-                    <profile name="Hawk Eyes" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9f3f-364c-a9ed-a47b">
+                    <profile name="Hawk Eyes" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9f3f-364c-a9ed-a47b">
                       <characteristics>
-                        <characteristic name="Description" typeId="4834-43a9-1c93-9062">The eyesight of the Homunculus is based on that of a predatory bird. It can add +1 DICE to its Ranged Attack characteristic. Cannot be combined with Hypnotic Eyes without Two Heads.</characteristic>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The eyesight of the Homunculus is based on that of a predatory bird. It can add +1 DICE to its Ranged Attack characteristic. Cannot be combined with Hypnotic Eyes without Two Heads.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -2948,6 +2901,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="5ea3-e7f0-028d-7f08" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="fc27-1419-ff1d-ac75" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="1"/>
       </entryLinks>
+      <infoLinks>
+        <infoLink name="Golem" id="a586-1c5d-329e-a486" hidden="false" type="rule" targetId="d70f-081c-259b-6cb6"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Pile of Stuff" hidden="true" id="97ad-20f9-1e4c-c96c">
       <selectionEntryGroups>
