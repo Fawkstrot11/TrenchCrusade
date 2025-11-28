@@ -197,7 +197,7 @@
             <infoLink name="Consumable" id="35e8-2107-dfd6-9c7d" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
           </infoLinks>
           <profiles>
-            <profile name="Sacrificial Lamb" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e51e-7de9-7131-6994">
+            <profile name="Sacrificial Lamb" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e51e-7de9-7131-6994">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">* Anointed: When you deploy a model that has a Sacrificial Lamb, you can say
 that they will sacrifice it and anoint themselves with its blood. If you do so, the
@@ -296,14 +296,14 @@ first BLOOD MARKER placed on the model is ignored.
         <entryLink import="true" name="Curative Fluids" hidden="true" id="eced-e795-aa11-ed5a" type="selectionEntry" targetId="0e49-dfa5-4190-ee69"/>
         <entryLink import="true" name="Lock of Samson&apos;s Hair" hidden="false" id="f264-2ade-c985-d3d7" type="selectionEntry" targetId="9b61-d0a4-dd30-2d32"/>
         <entryLink import="true" name="Saints Reliquary" hidden="true" id="5d29-e0b3-1ac1-c9ae" type="selectionEntry" targetId="cf19-f306-c26c-1537"/>
-        <entryLink import="true" name="Dog Food" hidden="false" id="4702-f9d7-e0e0-00fd" type="selectionEntry" targetId="05f3-2ee4-36c0-8c25" sortIndex="10"/>
+        <entryLink import="true" name="Dog Food" hidden="false" id="5e90-ed78-533d-3a9b" type="selectionEntry" targetId="05f3-2ee4-36c0-8c25" sortIndex="10"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Throwables" id="70c8-b7ed-f20b-8bd6" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="War Cross" hidden="false" id="9c5f-3b67-0d6e-8f01" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Warcross" hidden="false" id="9c5f-3b67-0d6e-8f01" sortIndex="2">
           <infoLinks>
-            <infoLink name="War Cross" id="b119-22e0-fe05-8a66" hidden="false" type="profile" targetId="2d02-94a4-2493-186f"/>
+            <infoLink name="Warcross" id="b119-22e0-fe05-8a66" hidden="false" type="profile" targetId="2d02-94a4-2493-186f"/>
             <infoLink name="Assault" id="1d0e-047b-93de-ccae" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Ignore [Modifier]" id="36cb-1495-06e4-c7e5" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
@@ -1188,7 +1188,7 @@ first BLOOD MARKER placed on the model is ignored.
                 <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="0b2b-2357-d2a4-ddf1" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="Fire Shield" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="61e5-6561-5d91-b9c5">
+                <profile name="Fire Shield" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="61e5-6561-5d91-b9c5">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Always takes one hand to use in both melee and in ranged combat. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated. Any attack against this model that has the Keyword FIRE will suffer -1 DICE on injury rolls and will not cause an additional BLOOD MARKER.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1290,7 +1290,7 @@ first BLOOD MARKER placed on the model is ignored.
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <profiles>
-            <profile name="Holy Icon Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="04f7-979a-e1cc-9270">
+            <profile name="Holy Icon Armour" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="04f7-979a-e1cc-9270">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This suit of armour is made of blessed icons and scripture scrolls written with the blood of saints. This armour confers a -1 modifier to any injury rolls. This modifier applies even against attacks that ignore Armour. Can be combined with a shield, including Holy Icon Shield.</characteristic>
                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1375,7 +1375,7 @@ first BLOOD MARKER placed on the model is ignored.
             <infoLink name="Risky" id="d62c-7317-d889-03ed" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Punt Gun" hidden="true" id="9dc9-c266-d6a3-37cf" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Punt Gun" hidden="true" id="9dc9-c266-d6a3-37cf" sortIndex="3">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -1504,7 +1504,7 @@ first BLOOD MARKER placed on the model is ignored.
             <infoLink name="Reload" id="7ee5-1485-8d79-7d9a" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Anti-Material Rifle" hidden="true" id="8ece-f70d-905f-dbf9" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Anti-Material Rifle" hidden="true" id="8ece-f70d-905f-dbf9" sortIndex="4">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="40"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -1538,7 +1538,7 @@ first BLOOD MARKER placed on the model is ignored.
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Gas Filters" hidden="false" id="01ce-2f99-f398-1a50" sortIndex="1">
           <profiles>
-            <profile name="Gas Filters" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="69ba-974b-0e6f-7391">
+            <profile name="Gas Filters" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="69ba-974b-0e6f-7391">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062"/>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
@@ -1560,7 +1560,7 @@ first BLOOD MARKER placed on the model is ignored.
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Holy Diesel Engine" hidden="false" id="1298-0ecd-ca20-0e16" sortIndex="2">
           <profiles>
-            <profile name="Holy Diesel Engine" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e6ee-0b99-239f-7120">
+            <profile name="Holy Diesel Engine" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e6ee-0b99-239f-7120">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">Advanced Design: When you take a Dash ACTION with this Anchorite Shrine, you can choose to add +2 DICE to the Risky Success Roll. If you do so, you must place 1 BLOOD MARKER next to the model</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
@@ -1579,7 +1579,7 @@ first BLOOD MARKER placed on the model is ignored.
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sacred Geometry" hidden="false" id="4863-d3e6-bda5-f230" sortIndex="3">
           <profiles>
-            <profile name="Sacred Geometry" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3869-f6f2-7f5a-92af">
+            <profile name="Sacred Geometry" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3869-f6f2-7f5a-92af">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">Divine Accuracy: Add +1 DICE to the Ranged Characteristic of this Anchorite Shrine.</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
@@ -1607,7 +1607,7 @@ first BLOOD MARKER placed on the model is ignored.
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Grand Anchorite" hidden="false" id="a9cd-89ba-ea71-c282" sortIndex="4">
           <profiles>
-            <profile name="Grand Anchorite" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="828c-64ab-63e9-051b">
+            <profile name="Grand Anchorite" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="828c-64ab-63e9-051b">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">Impossible to Stop: Enemy models are not allowed to make a Melee Attack when a Grand Anchorite Shrine that is within 1&quot; of them retreats. In addition, a Grand Anchorite Shrine can use a normal move or a charge move if it starts within 1&quot; of any enemy models.</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
@@ -1637,7 +1637,7 @@ first BLOOD MARKER placed on the model is ignored.
             <profile name="Wrathful Cherub Face" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2359-5cf1-b45c-b058">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">Cower Before The Lord: An enemy model that does not have the FEAR keyword and that starts an Activation within 1&quot; of this Anchorite Shrine must take a Retreat ACTION as part of the Activation. It cannot take any RISKY ACTIONS while it is within 1&quot; of this Anchorite Shrine.</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
               </characteristics>
@@ -1655,7 +1655,7 @@ first BLOOD MARKER placed on the model is ignored.
           <profiles>
             <profile name="Hallowed Anchorite" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ef56-de02-03da-7fd7">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Manifold Blessings: A Hallowed Anchorite Shrine can be promoted to ELITE status in the Promotions &amp; Experience Step of the Campaign Phase (▶ see Campaign in the Trench Crusade Digital Rulebook).</characteristic>
+                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Manifold Blessings: A Hallowed Anchorite Shrine can be promoted to ELITE status in the Promotions &amp; Experience Step of the Campaign Phase.</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
@@ -1680,7 +1680,7 @@ first BLOOD MARKER placed on the model is ignored.
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Piston Legs" hidden="false" id="82a8-f3ae-7726-1b79" sortIndex="5">
           <profiles>
-            <profile name="Piston Legs" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bd5a-aaba-367a-8f09">
+            <profile name="Piston Legs" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bd5a-aaba-367a-8f09">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">Grind to Dust ACTION: This Anchorite Shrine can take a Grind to Dust ACTION. If it does so, it makes a Melee Attack but must target an enemy model within 1&quot; that is Down and is mounted on a base that is 32mm or smaller. The attack does not use a Melee Weapon.</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
@@ -1713,7 +1713,7 @@ first BLOOD MARKER placed on the model is ignored.
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Mind Linked" hidden="true" id="0972-9632-56f2-b0cb">
           <profiles>
-            <profile name="Mind Linked" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="78c1-4e06-7fff-4d4b">
+            <profile name="Mind Linked" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="78c1-4e06-7fff-4d4b">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is in a fireteam with a Homunculus.</characteristic>
                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1857,7 +1857,7 @@ first BLOOD MARKER placed on the model is ignored.
             </modifierGroup>
           </modifierGroups>
         </profile>
-        <profile name="Artificial Body" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d0d0-e062-3e11-f1c3">
+        <profile name="Artificial Body" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d0d0-e062-3e11-f1c3">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">Created through the Jabirean alchemy, the Homunculus has no vital organs and they have to be dismembered in order to kill them. All injury rolls against the Homunculus are made with -1 DICE.</characteristic>
             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1865,7 +1865,7 @@ first BLOOD MARKER placed on the model is ignored.
             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
           </characteristics>
         </profile>
-        <profile name="Re-creation" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d60f-e5a0-7d3e-e08d">
+        <profile name="Re-creation" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="d60f-e5a0-7d3e-e08d">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the Homunculus is taken Out of Action during battle, and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats at any time between battles to bring it back to life with all of its weapons and abilities</characteristic>
             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1883,7 +1883,7 @@ first BLOOD MARKER placed on the model is ignored.
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Wings" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c442-a749-bd36-0eb5">
+                <profile name="Wings" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c442-a749-bd36-0eb5">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus gains a new movement mode: 8”/Flying</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1902,7 +1902,7 @@ first BLOOD MARKER placed on the model is ignored.
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Elemental Resistance" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9274-10da-b3e8-e389">
+                <profile name="Elemental Resistance" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9274-10da-b3e8-e389">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Attacks made against the Homunculus that have the Keywords FIRE and/or GAS suffer a -1 DICE penalty to injure it. Also, the Homunculus does not suffer additional BLOOD MARKERS from attacks with Keywords FIRE and/or GAS.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1921,7 +1921,7 @@ first BLOOD MARKER placed on the model is ignored.
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Human Hands" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c714-c746-dc00-e534">
+                <profile name="Human Hands" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="c714-c746-dc00-e534">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus can buy and wield any weapon allowed in the Iron Sultanate warband or House of Wisdom list, though they cannot select ELITE only items, grenades or items limited to specific units (such as Assassins). They can also carry a Trench Shield or a Fire Shield. This will apply to the Additional Arms formula as well. Cannot be combined with the Wings formula.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1947,7 +1947,7 @@ first BLOOD MARKER placed on the model is ignored.
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Enslaved Mind" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b1c8-50ec-d534-43ff">
+                <profile name="Enslaved Mind" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b1c8-50ec-d534-43ff">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus gains the Keyword FIRETEAM along with one model of your choice in the Warband. The other model can only form a Fireteam with this Homunculi, not with any other models.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -1966,7 +1966,7 @@ first BLOOD MARKER placed on the model is ignored.
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Massive Size" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e300-5a3b-53af-da52">
+                <profile name="Massive Size" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="e300-5a3b-53af-da52">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus’ size is increased to huge proportions. It now has a base size of 50mm and it gains the Keyword TOUGH. This formula cannot be combined with the Wings formula.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2000,7 +2000,7 @@ first BLOOD MARKER placed on the model is ignored.
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Inhuman Strength" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="199e-6575-09a1-d52c">
+                <profile name="Inhuman Strength" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="199e-6575-09a1-d52c">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The musculature of the Homunculus is reinforced, replaced and strengthened. It now has a base size of 32mm (or 50mm if it also has Massive size). The Homunculus gains +1 DICE to its Melee characteristic and the Keyword STRONG.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2019,7 +2019,7 @@ first BLOOD MARKER placed on the model is ignored.
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Terrifying Appearance" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="291c-616a-d3f1-501c">
+                <profile name="Terrifying Appearance" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="291c-616a-d3f1-501c">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Whether by captivating beauty or a terrifying appearance, this Homunculus gains the Keyword FEAR.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2038,7 +2038,7 @@ first BLOOD MARKER placed on the model is ignored.
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Additional Arm" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="aa89-9e2f-f003-cc72">
+                <profile name="Additional Arm" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="aa89-9e2f-f003-cc72">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus can perform an additional attack ACTION in Melee or Ranged combat without any penalty. Therefore, if making attacks with three melee weapons, only a single weapon would need to be declared an Off-Hand weapon (suffering the appropriate penalties). It has three hands to carry weapons if combined with Human Hands, and may equip weapons and a shield in any combination, as long as it has hands free to do so. 
 
@@ -2056,7 +2056,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Additional Head" hidden="false" id="4f45-802c-eb6d-9d1e" sortIndex="9">
               <profiles>
-                <profile name="Additional Head" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8d91-3799-73ce-424d">
+                <profile name="Additional Head" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8d91-3799-73ce-424d">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus has two heads and therefore can have two sets of eyes via Alchemical Formula.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2075,7 +2075,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name=" Startling Speed" hidden="false" id="c9be-5263-dd32-def6" sortIndex="11">
               <profiles>
-                <profile name="Startling Speed" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6939-0d30-7d26-214a">
+                <profile name="Startling Speed" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="6939-0d30-7d26-214a">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus adds +1 DICE to its Dash ACTIONS.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2094,7 +2094,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Seal of Solomon" hidden="false" id="c97f-dd97-35b1-86ab" sortIndex="12">
               <profiles>
-                <profile name="Seal of Solomon" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3f21-5004-4d32-c6d1">
+                <profile name="Seal of Solomon" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3f21-5004-4d32-c6d1">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Formula greatly enhances the intelligence of the Homunculus and makes it painfully aware of its artificial existence. It can now buy and use Equipment from the Sultanate Warband Armoury as long as it is not limited to ELITE models. Note that one helmet protects a Homunculus with two heads normally and the Two Heads Formula does not allow the purchase of two different kinds of headgear.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2113,7 +2113,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Gargantuan Size" hidden="true" id="b2d3-2cbc-d328-4fe2" sortIndex="13">
               <profiles>
-                <profile name="Gargantuan Size" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b71d-9997-2026-2bd9">
+                <profile name="Gargantuan Size" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b71d-9997-2026-2bd9">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Can only be bought if the Homunculus already has the Human Hands, Inhuman Strength and Massive Size Formulas. The Homunculus now has a Base Size of 60mm and it can now use one Brazen Bull Only weapon.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2145,7 +2145,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Regenerative" hidden="false" id="87e9-c5a8-6da7-2a75">
               <profiles>
-                <profile name="Regenerative" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="15fa-4ea5-8e02-ae02">
+                <profile name="Regenerative" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="15fa-4ea5-8e02-ae02">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Homunculus has an astonishing healing factor and can remove one BLOOD MARKER every time it is Activated, if it has any.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2182,7 +2182,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                   </costs>
                   <profiles>
-                    <profile name="Hypnotic Eyes" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2264-4f8b-b8de-fd4b">
+                    <profile name="Hypnotic Eyes" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2264-4f8b-b8de-fd4b">
                       <characteristics>
                         <characteristic name="Description" typeId="4834-43a9-1c93-9062">Enemies suffer -1 DICE to hit the Homunculus in Melee. Does not affect Sniper Priests or enemies with the keyword BLACK GRAIL. Cannot be combined with Hawk Eyes without Two Heads.</characteristic>
                         <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2201,7 +2201,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                   </costs>
                   <profiles>
-                    <profile name="Hawk Eyes" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="72b5-4586-7a51-fe6a">
+                    <profile name="Hawk Eyes" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="72b5-4586-7a51-fe6a">
                       <characteristics>
                         <characteristic name="Description" typeId="4834-43a9-1c93-9062">The eyesight of the Homunculus is based on that of a predatory bird. It can add +1 DICE to its Ranged Attack characteristic. Cannot be combined with Hypnotic Eyes without Two Heads.</characteristic>
                         <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2498,7 +2498,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Mind Linked" hidden="false" id="46da-9ea5-bf45-3022">
       <profiles>
-        <profile name="Mind Linked" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="02e8-c715-06fe-e490">
+        <profile name="Mind Linked" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="02e8-c715-06fe-e490">
           <characteristics>
             <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is in a fireteam with a Homunculus.</characteristic>
             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2564,20 +2564,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Whip of God" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3334-ac1d-eda1-a0e1">
+        <profile name="Whip of God" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="3334-ac1d-eda1-a0e1">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Unlike other models, a Castigator is allowed to attack friendly models with melee attacks within 1”. They can do this without declaring a charge. Each time the Castigator takes a friendly model Out of Action with a melee attack, set a die aside in a pool as the act of piety inspires the troops. The next time your warband makes a Morale roll, add an amount of +DICE to that roll equal to the amount of dice in the pool and empty it.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Unlike other models, a Castigator is allowed to attack friendly models with melee attacks within 1”. They can do this without declaring a charge. Each time the Castigator takes a friendly model Out of Action with a melee attack, set a die aside in a pool as the act of piety inspires the troops. The next time your warband makes a Morale roll, add an amount of +DICE to that roll equal to the amount of dice in the pool and empty it.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Enforced Orthodoxy" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9a0d-9964-aee2-78c4">
+        <profile name="Enforced Orthodoxy" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9a0d-9964-aee2-78c4">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">At any point during its Activation, a Castigator may take a RISKY ACTION with +1 DICE. If successful, all friendly models that are Down and within 8” of the Castigator may immediately stand up at no penalty or cost.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">At any point during its Activation, a Castigator may take a RISKY ACTION with +1 DICE. If successful, all friendly models that are Down and within 8” of the Castigator may immediately stand up at no penalty or cost.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2699,12 +2693,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifierGroup>
           </modifierGroups>
         </profile>
-        <profile name="Resurrection" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="87c7-8ddb-b2bb-5b27">
+        <profile name="Resurrection" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="87c7-8ddb-b2bb-5b27">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If a Trench Pilgrim is killed after a game (▶ see Campaign in the Trench Crusade Digital Rulebook), they can be resurrected as a Martyr Penitent with the Martyr Penitent Profile for a cost 45 ducats. Add -1 INJURY DICE to Injury Rolls for a Martyr Penitent. A Martyr Penitent keeps their Battlekit and Zealot Strength if the ability was purchased, but loses any Scars, Experience, and Advancements. Martyrdom Pills have no effect on a Martyr Penitent model</characteristic>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If a Trench Pilgrim is killed after a game (▶ see Campaign in the Trench Crusade Digital Rulebook), they can be resurrected as a Martyr Penitent with the Martyr Penitent Profile for a cost 45 ducats. Add -1 INJURY DICE to Injury Rolls for a Martyr Penitent. A Martyr Penitent keeps their Battlekit and Zealot Strength if the ability was purchased, but loses any Scars, Experience, and Advancements. Martyrdom Pills have no effect on a Martyr Penitent model</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2759,7 +2750,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <profiles>
-                <profile name="Beyond Death" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3ee5-5ddf-dfdd-b3d4">
+                <profile name="Beyond Death" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="3ee5-5ddf-dfdd-b3d4">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Any attacks against a Martyr-Penitent add -1 DICE when rolling on the Injury Table.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -2818,20 +2809,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Communicant" hidden="false" id="d21f-81f7-cf6f-690e">
       <profiles>
-        <profile name="Bodyguard" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b241-36e1-f345-a731">
+        <profile name="Bodyguard" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b241-36e1-f345-a731">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">If any model with the PILGRIM Keyword within 1” of the Communicant is hit by a ranged or melee weapon (excluding BLAST weapons), you can choose to redirect the hit against the Communicant instead. Determine the injuries exactly as if the weapon just hit the Communicant.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If a friendly PILGRIM model within 1&quot; of a Communicant is hit by a Ranged Attack or Melee Attack, you can say that the Communicant will take the hit. If you do so, make an Injury Roll for the Communicant instead of the original target. This ability cannot be used against attacks that have the BLAST Keyword.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Miracle of Regeneration" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="aff3-58e7-e3b9-a779">
+        <profile name="Miracle of Regeneration" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="aff3-58e7-e3b9-a779">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the start of each of their Activations, the Communicant can remove one BLOOD MARKER from themselves, if they have any.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">At the start of each of their Activations, the Communicant can remove one BLOOD MARKER from themselves, if they have any.</characteristic>
           </characteristics>
         </profile>
         <profile name="Communicant" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="53e3-a873-a192-6a91">
@@ -2886,12 +2871,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="The Communicant Cross" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d090-0fbb-4251-618c">
+        <profile name="The Communicant Cross" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d090-0fbb-4251-618c">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A sacred cross is nailed on the face of the Communicant. This counts as an Iron Capirote, Combat Helmet and a Gas Mask (Immune to SHRAPNEL, GAS, and FEAR).</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A sacred cross is nailed on the face of the Communicant. This counts as an Iron Capirote, Combat Helmet and a Gas Mask (Immune to SHRAPNEL, GAS, and FEAR).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2995,12 +2977,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Day of His Wrath" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="true" id="8160-6b76-eb5c-dd34">
+        <profile name="Day of His Wrath" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="8160-6b76-eb5c-dd34">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A Cavalcade of the Tenth Plague War Prophet can take a Day of his Wrath ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure the War Prophet’s Activation ends immediately. If the roll is a Success, make an Injury Roll with the IGNORE ARMOUR Keyword for 1 enemy model within 3&quot; of the War Prophet. If the roll is a Critical Success, make an Injury Roll with +1 INJURY DICE and the IGNORE ARMOUR Keyword for 1 enemy model within 3&quot; of the War Prophet.</characteristic>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Cavalcade of the Tenth Plague War Prophet can take a Day of his Wrath ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure the War Prophet’s Activation ends immediately. If the roll is a Success, make an Injury Roll with the IGNORE ARMOUR Keyword for 1 enemy model within 3&quot; of the War Prophet. If the roll is a Critical Success, make an Injury Roll with +1 INJURY DICE and the IGNORE ARMOUR Keyword for 1 enemy model within 3&quot; of the War Prophet.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3011,28 +2990,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </modifiers>
           <alias>Wrath of God</alias>
         </profile>
-        <profile name="Loudspeakers" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9ec3-b93c-1646-ccec">
+        <profile name="Loudspeakers" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9ec3-b93c-1646-ccec">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A War Prophet can take a Loudspeakers ACTION. If they do so, take a Risky Success Roll for the model and add +2 DICE to the roll. If the roll is a Failure, the War Prophet’s Activation ends immediately. If the roll is a Success or Critical Success, you can move all friendly models within 8&quot; of the War Prophet up to 3&quot;. They must end the move as close as possible to the nearest enemy model that was visible to them at the start of the move. This move can be used to bring a model within 1&quot; of an enemy model in which case the model counts as charging. If no enemy models are visible, they can move normally.</characteristic>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">8&apos;&apos;</characteristic>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A War Prophet can take a Loudspeakers ACTION. If they do so, take a Risky Success Roll for the model and add +2 DICE to the roll. If the roll is a Failure, the War Prophet’s Activation ends immediately. If the roll is a Success or Critical Success, you can move all friendly models within 8&quot; of the War Prophet up to 3&quot;. They must end the move as close as possible to the nearest enemy model that was visible to them at the start of the move. This move can be used to bring a model within 1&quot; of an enemy model in which case the model counts as charging. If no enemy models are visible, they can move normally.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Memento Mori" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f2b4-37b5-8a5a-ac9f">
+        <profile name="Memento Mori" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f2b4-37b5-8a5a-ac9f">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">The War Prophet is touched by a higher power, and the revealed truth allows them a degree of protection against premature death. The first time the War Prophet suffers an Out of Action result on the Injury Table, it is treated as a No Effect result instead.</characteristic>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The War Prophet is touched by a higher power, and the revealed truth allows them a degree of protection against premature death. The first time the War Prophet suffers an Out of Action result on the Injury Table, it is treated as a No Effect result instead.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Laying on Hands" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4458-54c7-2ee5-90df">
+        <profile name="Laying on Hands" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4458-54c7-2ee5-90df">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">A War Prophet can take a Laying on of Hands ACTION. If they do so, take a Success Roll for the model. If the roll is a Failure, nothing happens. If the roll is a Success, remove 1 BLOOD MARKER from a friendly model within 6&quot; of the War Prophet. If the roll is a Critical Success, remove 3 BLOOD MARKERS from a friendly model within 6&quot; of the War Prophet instead of only 1. The War Prophet can use this ACTION to heal themselves.</characteristic>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">6&apos;&apos;</characteristic>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A War Prophet can take a Laying on of Hands ACTION. If they do so, take a Success Roll for the model. If the roll is a Failure, nothing happens. If the roll is a Success, remove 1 BLOOD MARKER from a friendly model within 6&quot; of the War Prophet. If the roll is a Critical Success, remove 3 BLOOD MARKERS from a friendly model within 6&quot; of the War Prophet instead of only 1. The War Prophet can use this ACTION to heal themselves.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -3084,7 +3054,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <characteristics>
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
             <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Modifiers" typeId="6977-37be-e105-b5aa">-</characteristic>
             <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
+            <characteristic name="Rules" typeId="6e95-3480-ad33-b345">The -1D penalty for unarmed is included in the Prisoner statblock.</characteristic>
+            <characteristic typeId="4d26-500d-2bf8-8880" name="Rules"/>
             <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
           </characteristics>
         </profile>
@@ -3114,7 +3087,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <constraint type="max" value="4" field="selections" scope="roster" shared="true" id="ee95-919c-30a1-c8bc" includeChildSelections="true"/>
           </constraints>
           <profiles>
-            <profile name=" Awaited" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8cbd-7395-617e-ef28">
+            <profile name=" Awaited" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="8cbd-7395-617e-ef28">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">If the Ecclesiastic Prisoner is taken Out of Action by its Martyrdom Device, it does not count as being Out of Action for any rules related to Morale.</characteristic>
                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3122,7 +3095,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
               </characteristics>
             </profile>
-            <profile name="Martyrdom Device" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4283-0424-9334-02b2">
+            <profile name="Martyrdom Device" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4283-0424-9334-02b2">
               <characteristics>
                 <characteristic name="Description" typeId="4834-43a9-1c93-9062">An Ecclesiastic Prisoner with a Martyrdom Device can take a Trigger Martyrdom Device ACTION. If they do so, the Martyrdom Device detonates and cannot be used again. When Martyrdom Device detonates, make an Injury Roll for all models within 3&quot; of the Ecclesiastic Prisoner (friend or foe, including the Ecclesiastic Prisoner). Make the Injury Roll for the Ecclesiastic Prisoner by rolling 4D6 and adding all 4 dice together, and add +1 INJURY DICE to the Injury Rolls for other models that are within 1&quot; of the Ecclesiastic Prisoner. If an Ecclesiastic Prisoner detonates their Martyrdom Device and survives the game, you must either buy them a new Martyrdom Device for 35 ducats, or use them without one.</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
@@ -3226,20 +3199,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Blessed Stigmata" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="39e0-2444-2fb0-c9ae">
+        <profile name="Blessed Stigmata" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="39e0-2444-2fb0-c9ae">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the start of each of their Activations, any Stigmatic Nun can remove one BLOOD MARKER (but not an INFECTION MARKER) from themselves and convert it into a BLESSING MARKER.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">At the start of each of their Activations, any Stigmatic Nun can remove one BLOOD MARKER (but not an INFECTION MARKER) from themselves and convert it into a BLESSING MARKER.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Agile" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c190-c883-b2da-b8b6">
+        <profile name="Agile" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c190-c883-b2da-b8b6">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">Stigmatic Nuns may take any Dash ACTION or jump/climb/Diving Charge ACTION with +1 DICE.</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Stigmatic Nuns may take any Dash ACTION or jump/climb/Diving Charge ACTION with +1 DICE.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3443,7 +3410,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Procession of the Sacred Affliction" hidden="false" id="0d88-774c-22af-e2fc">
               <profiles>
-                <profile name="Face Thy Fears" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bcd9-4d7d-fd27-9fc5">
+                <profile name="Face Thy Fears" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="bcd9-4d7d-fd27-9fc5">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">No model in the Procession of the Sacred Affliction can wear Iron Capirotes. Those troops with Capirotes in their base profile will not have them, though their cost remains the same.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3451,7 +3418,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Hammer and the Anvil" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="094b-0da3-d4d8-1979">
+                <profile name="Hammer and the Anvil" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="094b-0da3-d4d8-1979">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Anti-tank Hammers of this warband are not limited to ELITE</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3459,7 +3426,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Reliquary Armoury" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5f54-da18-cb78-f4ee">
+                <profile name="Reliquary Armoury" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="5f54-da18-cb78-f4ee">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models of this warband (save for the Anchorite) can buy Holy Icon Shields for 20 ducats, not just ELITE models. In addition, warband models with the ELITE Keyword may acquire Holy Icon Armour (see below).</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3467,7 +3434,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Punishing Millstones" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="aaa4-243f-d998-d366">
+                <profile name="Punishing Millstones" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="aaa4-243f-d998-d366">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models in the Procession of the Sacred Affliction (except Ecclesiastic Prisoners who are not worthy) add extra +1 DICE to injury rolls in melee against models that are Down.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3475,7 +3442,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Melee-Focused" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a231-5d63-e5ee-e551">
+                <profile name="Melee-Focused" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="a231-5d63-e5ee-e551">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">This warband may not have any Machine Guns and only one Punt Gun.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3483,7 +3450,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Zealot Strength" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4353-c510-5d4e-63d1">
+                <profile name="Zealot Strength" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="4353-c510-5d4e-63d1">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Up to three Trench Pilgrims may purchase the Zealot Strength upgrade.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3523,10 +3490,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 </profile>
                 <profile name="Blood Sacrifice" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f12b-c290-4800-54ba">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Any model (except Ecclesiastic Prisoners who are not worthy) in the warband can purchase a Sacrificial Lamb (see below).</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Any model (except Ecclesiastic Prisoners who are not worthy) in the warband can purchase a Sacrificial Lamb.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
                 <profile name="Heaven Awaits" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="481f-ff6c-c433-5161">
@@ -3557,7 +3524,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="War Pilgrimage of Saint Methodius" hidden="false" id="52bc-6b21-136a-608d">
               <profiles>
-                <profile name="Chaste Order" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="cdda-3af7-349f-a8c7">
+                <profile name="Chaste Order" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="cdda-3af7-349f-a8c7">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">While they revere the holy stigmata of the nuns of the order, the fathers of the monasteries shun the ecstatic revelry of many Trench Pilgrims and insist on modest dress. All Stigmatic Nuns of the warband must wear Standard Armour. In addition, the warband may only have a maximum of three Stigmatic Nuns.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3565,7 +3532,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Anchorite Cloister" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9f25-99b2-4762-022e">
+                <profile name="Anchorite Cloister" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="9f25-99b2-4762-022e">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">This warband may buy up to two Anchorite Shrines.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3573,7 +3540,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Communicant Heresy" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="992f-94f7-30a3-0b0b">
+                <profile name="Communicant Heresy" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="992f-94f7-30a3-0b0b">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Pilgrims of St. Methodius oppose the creation of Communicants and therefore cannot include them in their warbands. This includes Mercenaries.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3581,7 +3548,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Anchorite Armoury" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2287-33e5-5788-b99c">
+                <profile name="Anchorite Armoury" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="2287-33e5-5788-b99c">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">This warband may alter the weaponry and equipment of their Anchorites as indicated below. Anchorites of St. Methodius have +0 DICE to their Ranged Characteristic.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3589,7 +3556,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Followers of St. Methodius" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b02a-d2c2-0e43-04dc">
+                <profile name="Followers of St. Methodius" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="b02a-d2c2-0e43-04dc">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Patron of the warband is always a Learned Saint.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3597,7 +3564,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Treasure in Heaven" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="81e7-1ec9-3936-33a3">
+                <profile name="Treasure in Heaven" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="81e7-1ec9-3936-33a3">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Trench Pilgrims of this warband cannot be resurrected as Martyr Penintents.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3605,7 +3572,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Mortal Sin" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="954f-fd6b-c4fd-2585">
+                <profile name="Mortal Sin" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="954f-fd6b-c4fd-2585">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">No Ecclesiastic Prisoner of the warband may be equipped with a Martyrdom Device and no member of the warband can be Broken on the Wheel.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
@@ -3613,7 +3580,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
-                <profile name="Gunsmith Monks" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="73cd-43a3-2889-3ce1">
+                <profile name="Gunsmith Monks" typeId="7079-589c-df69-fa7e" typeName="Ability" hidden="false" id="73cd-43a3-2889-3ce1">
                   <characteristics>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">The warband can buy Machine Guns (LIMIT: 2) at a cost of 50 ducats each, an Automatic Rifle (LIMIT: 1) for 40 ducats and a Submachine Gun (LIMIT: 1) for 30 ducats.</characteristic>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
