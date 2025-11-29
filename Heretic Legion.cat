@@ -254,10 +254,10 @@
             </profile>
             <profile name="Tank Palanquin" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="835c-9624-303f-5792">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062"/>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-3 INJURY MODIFIER, STRONG</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1141,16 +1141,16 @@
               <profiles>
                 <profile name="Sarcophagus Mine" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9395-0d4e-5cdb-6377">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">* Walking Bomb: A model that has a Sarcophagus Mine cannot have any other Battlekit. A model with a Sarcophagus Mine can take a Trigger ACTION. In addition, if an enemy model finishes a move within 3&quot; of a model with a Sarcophagus Mine, you can interrupt its Activation and detonate the Sarcophagus Mine without having to take a Trigger ACTION. 
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-3 INJURY MODIFIER, BLAST 3&apos;&apos;</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">* Walking Bomb: A model that has a Sarcophagus Mine cannot have any other Battlekit. A model with a Sarcophagus Mine can take a Trigger ACTION. In addition, if an enemy model finishes a move within 3&quot; of a model with a Sarcophagus Mine, you can interrupt its Activation and detonate the Sarcophagus Mine without having to take a Trigger ACTION. 
 
 
 * Trigger ACTION: When a model with a Sarcophagus Mine takes a Trigger ACTION, you must take a Risky Success Roll for the model with +1 DICE. If the roll is a failure, nothing happens (but you can try again the next time the model is Activated). If the roll is a Success or Critical Success, the Sarcophagus Mine detonates as described below.
 
 
 * Detonation: When a Sarcophagus Mine detonates, all models (friend or foe) within 3&quot; of the model carrying the Sarcophagus Mine and in its Line of Sight are hit by a Ranged Attack with the SHRAPNEL Keyword. Add +1 INJURY DICE to the Injury Rolls for models that are within 1&quot; of the model carrying the Sarcophagus Mine. The model carrying the Sarcophagus Mine is then taken Out of Action.</characteristic>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-3 INJURY MODIFIER, BLAST 3&apos;&apos;</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1180,69 +1180,69 @@
               <profiles>
                 <profile name="Horror" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b72c-5ef3-e8a1-8570">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models in the Warband cause FEAR.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">All models in the Warband cause FEAR.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Slow" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="fd1e-a345-6501-0bbc">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models in Trench Ghost warband have a half Dash distance (i.e. 3”), and they suffer -1 DICE to all attacks against models Retreating from Melee combat.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">All models in Trench Ghost warband have a half Dash distance (i.e. 3”), and they suffer -1 DICE to all attacks against models Retreating from Melee combat.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Lost Souls" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9114-91ec-d19a-e386">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Since only mortals who have souls become ghosts, this warband may not have any War Wolves or Artillery Witches, since they are artificial beings. In addition, no model in the warband may have a Hellbound Soul Contract or an Infernal Brand Mark. Any model that has one of these pieces of equipment in their base profile will not have it, although its price remains the same.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Since only mortals who have souls become ghosts, this warband may not have any War Wolves or Artillery Witches, since they are artificial beings. In addition, no model in the warband may have a Hellbound Soul Contract or an Infernal Brand Mark. Any model that has one of these pieces of equipment in their base profile will not have it, although its price remains the same.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Semi-Corporeal" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="725a-28dc-8da5-dd4a">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Any Ranged attacks against all models in the Trench Ghost Warband roll injuries with -1 DICE – the undead are hard to kill with bullets! Melee Attacks do not suffer this penalty.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Any Ranged attacks against all models in the Trench Ghost Warband roll injuries with -1 DICE – the undead are hard to kill with bullets! Melee Attacks do not suffer this penalty.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Spectral" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="50f6-0785-3b36-7392">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models in the warband ignore movement penalties caused by Difficult Terrain, though they cannot move through any objects/terrain. Dangerous terrain affects them as normal.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">All models in the warband ignore movement penalties caused by Difficult Terrain, though they cannot move through any objects/terrain. Dangerous terrain affects them as normal.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Undead" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c139-9280-6e25-113a">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">All models in the Trench Ghost warband do not suffer additional BLOOD MARKERS from attacks with the Keyword GAS.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">All models in the Trench Ghost warband do not suffer additional BLOOD MARKERS from attacks with the Keyword GAS.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Enemies of All" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="dbc1-d8d1-1fed-a2c7">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Trench Ghosts cannot use Mercenaries.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Trench Ghosts cannot use Mercenaries.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Sarcophagus Mines" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="60ef-93e4-4922-1ada">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">At the cost of +30 ducats, up to two of the Troopers can be turned into Sarcophagus Mines. They gain an armour characteristic of -3, but can carry no other weapons or any other items from Armoury. In addition, Whenever an enemy comes within 3” of the Mine, you can trigger a detonation as described below. Alternatively, you can forgo this and explode the mine during your own Activation of the model with a successful RISKY ACTION with +1 DICE.
+                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">At the cost of +30 ducats, up to two of the Troopers can be turned into Sarcophagus Mines. They gain an armour characteristic of -3, but can carry no other weapons or any other items from Armoury. In addition, Whenever an enemy comes within 3” of the Mine, you can trigger a detonation as described below. Alternatively, you can forgo this and explode the mine during your own Activation of the model with a successful RISKY ACTION with +1 DICE.
 
 
 When detonated, the mine explosion is treated as a BLAST 3” weapon targeting the Sargophagus model with Keyword SHRAPNEL. Models within 1” of the Prisoner hit by the explosion roll their injuries with +1 DICE. The Mine itself is taken Out of Action.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1263,10 +1263,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                       <profiles>
                         <profile name="Battlefield Looters (Automatic Rifle)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="05d8-72d5-36d0-f648">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
-                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1275,10 +1275,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                       <profiles>
                         <profile name="Battlefield Looters (Machine Gun)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="cab4-0571-19c0-eaf2">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
-                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1287,10 +1287,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                       <profiles>
                         <profile name="Battlefield Looters (Grenade Launcher)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="314c-5a0b-cf87-d46d">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
-                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1299,10 +1299,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                       <profiles>
                         <profile name="Battlefield Looters (Musical Instrument)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a73b-6d6d-37aa-fd3f">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
-                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1311,10 +1311,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                       <profiles>
                         <profile name="Battlefield Looters (Flamethrower)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4ab1-ea85-f390-6fb0">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
-                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1323,10 +1323,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                       <profiles>
                         <profile name="Battlefield Looters (Heavy Flamethrower)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="06bf-a67e-fba4-5214">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
-                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1335,10 +1335,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                       <profiles>
                         <profile name="Battlefield Looters (Anti-Material Rifle)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bca6-aeb8-da80-ca45">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
-                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1347,10 +1347,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                       <profiles>
                         <profile name="Battlefield Looters (Mountaineer Kit)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e8cf-8a0c-d0cc-756d">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
-                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1359,10 +1359,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                       <profiles>
                         <profile name="Battlefield Looters (Incendiary Ammunition)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4951-f794-ad38-ad03">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
-                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1371,10 +1371,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                       <profiles>
                         <profile name="Battlefield Looters (Hellblade)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="290e-b9f3-e527-d0f5">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
-                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1383,10 +1383,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                       <profiles>
                         <profile name="Battlefield Looters (Troop Flag)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="cc71-f6a8-5519-bcf3">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
-                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1395,10 +1395,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                       <profiles>
                         <profile name="Battlefield Looters (Sacrificial Blade)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3362-0f7e-b412-ce4d">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
-                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When this warband is created, select one item with LIMIT in the Heretic Legions Armoury. Its LIMIT is increased by one for your warband.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1415,42 +1415,42 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <profiles>
                 <profile name="Close Assault Weapons" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9ef5-9c37-2db2-8bb9">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The warband can buy Submachine Guns for 25 ducats per weapon.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The warband can buy Submachine Guns for 25 ducats per weapon.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Unseen Advance" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="be89-20dd-8e06-9309">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Up to three models without ELITE Keyword can be upgraded into INFILTRATORS at the cost of 10 ducats per Model</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Up to three models without ELITE Keyword can be upgraded into INFILTRATORS at the cost of 10 ducats per Model</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Light Troops" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4e2e-e5c2-c100-0a16">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The force may only include 0-1 Annointed and 0-1 Artillery Witch.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The force may only include 0-1 Annointed and 0-1 Artillery Witch.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Let Sleeping Dogs Lie" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2bfc-ba39-b280-debb">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The warband may not include a War Wolf</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The warband may not include a War Wolf</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Fast as Lightning" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="84f7-b619-cba1-b824">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">All Models have +1 DICE when taking their Dash ACTIONS.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">All Models have +1 DICE when taking their Dash ACTIONS.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1468,50 +1468,50 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <profiles>
                 <profile name="Debtors to Mammon" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4b0d-65aa-4b45-bacb">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Wretched of the warband are not tied by Mammon’s Chosen rule.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Wretched of the warband are not tied by Mammon’s Chosen rule.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Mammon&apos;s Chosen" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="0388-f845-438e-c865">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Knights of Avarice allow only the wealthiest and the best-equipped candidates to join their ranks. Your force may have no models that cost less than 80 ducats (including their equipment).</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Knights of Avarice allow only the wealthiest and the best-equipped candidates to join their ranks. Your force may have no models that cost less than 80 ducats (including their equipment).</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Goetic Warlock" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="11ef-3d53-6389-6d76">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Goetic Warlocks are creations of Mammon. This warband may include one for the price of 110 ducats. This Warlock is still a mercenary and obeys all of the rules associated with being a mercenary (such as having fixed equipment and not being able to be promoted to an ELITE throughout the course of a campaign).</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Goetic Warlocks are creations of Mammon. This warband may include one for the price of 110 ducats. This Warlock is still a mercenary and obeys all of the rules associated with being a mercenary (such as having fixed equipment and not being able to be promoted to an ELITE throughout the course of a campaign).</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Infernal Rivalry" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3a61-fd62-4f66-e489">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Mammon is a rival of Beruth, the great devil of wrath and murder, who is the Patron of Death Commandos. Knights of Avarice may include no Death Commandos.</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Mammon is a rival of Beruth, the great devil of wrath and murder, who is the Patron of Death Commandos. Knights of Avarice may include no Death Commandos.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Preserve the Loot" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="260b-e416-8459-c504">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Knights of Avarice greatly dislike using weapons that could damage the amount of wealth that can be extracted from the fallen. No weapon with the Keyword FIRE or SHRAPNEL can be used by any model in this warband. In addition, the Artillery Witches of this warband use Gas Bombs: They have the Keyword GAS instead of SHRAPNEL and they ignore armour. Injuries caused by a direct hit are rolled with 2D6 and models within a 3” blast radius are rolled with -1 DICE. In a similar vein, their Grenade Launchers have the GAS keyword instead of the SHRAPNEL keyword, have a -1 D to injury rolls and ignore armour</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Knights of Avarice greatly dislike using weapons that could damage the amount of wealth that can be extracted from the fallen. No weapon with the Keyword FIRE or SHRAPNEL can be used by any model in this warband. In addition, the Artillery Witches of this warband use Gas Bombs: They have the Keyword GAS instead of SHRAPNEL and they ignore armour. Injuries caused by a direct hit are rolled with 2D6 and models within a 3” blast radius are rolled with -1 DICE. In a similar vein, their Grenade Launchers have the GAS keyword instead of the SHRAPNEL keyword, have a -1 D to injury rolls and ignore armour</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Corrupt Merchants" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e4ed-2af9-d2cf-a93a">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Many merchants, traders and moneylenders within the Faithful nations are followers of Mammon and secretly supply the Knights of Avarice with their wares. When creating the warband, select one weapon, suit of armour or other piece of equipment from the New Antioch Armoury and one such item from the Iron Sultanate Armoury. You can acquire this gear exactly as the warband they come from. Any of these items in question must not be already available to the Heretic Warband. All the same limitations of the original lists apply, so there is little point in taking an Assassin’s Dagger (for example) since it can be only used by Assassins. These two selected additions are available to your warband throughout the campaign</characteristic>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Many merchants, traders and moneylenders within the Faithful nations are followers of Mammon and secretly supply the Knights of Avarice with their wares. When creating the warband, select one weapon, suit of armour or other piece of equipment from the New Antioch Armoury and one such item from the Iron Sultanate Armoury. You can acquire this gear exactly as the warband they come from. Any of these items in question must not be already available to the Heretic Warband. All the same limitations of the original lists apply, so there is little point in taking an Assassin’s Dagger (for example) since it can be only used by Assassins. These two selected additions are available to your warband throughout the campaign</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1531,10 +1531,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Pilfered: Jezzail" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6df6-b367-67b3-0a82">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Jezzails as though they were from Iron Sultanate</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Jezzails as though they were from Iron Sultanate</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1546,10 +1546,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Pilfered: Siege Jezzail" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9687-b24e-bf63-d228">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Siege Jezzails as though they were from Iron Sultanate</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Siege Jezzails as though they were from Iron Sultanate</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1561,10 +1561,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Pilfered: Musket" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="24a0-e75f-fda6-3a63">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Muskets as though they were from Iron Sultanate</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Muskets as though they were from Iron Sultanate</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1576,10 +1576,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Pilfered: Halberd-Gun" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b8e7-a29c-9ca9-24b6">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Halberd-Guns as though they were from Iron Sultanate</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Halberd-Guns as though they were from Iron Sultanate</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1591,10 +1591,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Pilfered: Sniper Rifle" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2a14-9d00-49fb-86df">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Sniper Rifles as though they were from Iron Sultanate</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Sniper Rifles as though they were from Iron Sultanate</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1606,10 +1606,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Pilfered: Alchemist Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1181-0635-aa21-d9bb">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Alchemist Armour as though they were from Iron Sultanate</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Alchemist Armour as though they were from Iron Sultanate</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1621,10 +1621,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Pilfered: Cloak of Alamut" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8e79-67ff-8442-44b2">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Cloak of Alamuts as though they were from Iron Sultanate</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Cloak of Alamuts as though they were from Iron Sultanate</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1636,10 +1636,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Pilfered: Wind Amulet" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7840-b59b-373f-9fc2">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Wind Amulets as though they were from Iron Sultanate</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Wind Amulets as though they were from Iron Sultanate</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1651,10 +1651,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Pilfered: Holy Relic" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6dcf-8eba-6204-b814">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Holy Relics as though they were from Iron Sultanate</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Holy Relics as though they were from Iron Sultanate</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1666,10 +1666,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Pilfered: Binoculars" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="412d-d440-11fc-f415">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Binoculars as though they were from Iron Sultanate</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Binoculars as though they were from Iron Sultanate</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1681,10 +1681,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Pilfered: Medi-kits" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="da4c-40b8-a166-dc7c">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Medi-kits as though they were from Iron Sultanate</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Medi-kits as though they were from Iron Sultanate</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1704,10 +1704,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Stolen: Automatic Pistol" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4964-07b9-b8a1-f35b">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Automatic Pistols as though they were from New Antioch</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Automatic Pistols as though they were from New Antioch</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1719,10 +1719,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Stolen: Heavy Shotgun" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8a1d-ae05-5597-07e2">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Heavy Shotguns as though they were from New Antioch</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Heavy Shotguns as though they were from New Antioch</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1734,10 +1734,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Stolen: Sniper Rifle" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9626-3796-60f5-9170">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Sniper Rifles as though they were from New Antioch</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Sniper Rifles as though they were from New Antioch</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1749,10 +1749,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Stolen: Satchel Charge" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6ce7-e339-f8ab-ac68">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Satchel Charges as though they were from New Antioch</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Satchel Charges as though they were from New Antioch</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1764,10 +1764,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Stolen: Machine Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="83f0-876a-3cc7-3564">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Machine Armours as though they were from New Antioch</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Machine Armours as though they were from New Antioch</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1779,10 +1779,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Stolen: Medi-Kit" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f4ce-75a0-6a5e-7f5f">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Medi-Kits as though they were from New Antioch</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Medi-Kits as though they were from New Antioch</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1794,10 +1794,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Stolen: Martyrdom Pills" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3ee7-3e7e-d239-1c94">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Martyrdom Pills as though they were from New Antioch</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Martyrdom Pills as though they were from New Antioch</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1809,10 +1809,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Stolen: Field Shrine" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5b33-f856-132e-7c89">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Field Shrines as though they were from New Antioch</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Field Shrines as though they were from New Antioch</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1824,10 +1824,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                           <profiles>
                             <profile name="Stolen: Binoculars" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d65c-996d-9bd5-be6b">
                               <characteristics>
-                                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Warband can use Binoculars as though they were from New Antioch</characteristic>
-                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Binoculars as though they were from New Antioch</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -3532,13 +3532,13 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           <profiles>
             <profile name="Golden Calf Altar" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="77d6-2ff5-90cb-b1a8">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">* Illusions: Enemy models treat open ground and all terrain within 3” of a model with a Golden Calf Altar as being Difficult terrain (if it is not already), even if they can Fly.
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HEAVY, CONSUMABLE</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">* Illusions: Enemy models treat open ground and all terrain within 3” of a model with a Golden Calf Altar as being Difficult terrain (if it is not already), even if they can Fly.
 
 
 * Place Altar ACTION: A model with a Golden Calf Altar can take a Place Altar ACTION. If they do so, the model no longer counts as having a Golden Calf Altar, and you must place a Golden Calf Altar terrain piece on a 25mm base on the ground within 1” of the model taking the ACTION. The Golden Calf Altar has the Illusions special rule, is Impassable terrain, and cannot be picked up again or moved in any way.</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HEAVY, CONSUMABLE</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3663,10 +3663,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           <profiles>
             <profile name="Standard of Mammon" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="debb-b1ea-a645-92dd">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">Kneel Before Me: An enemy model that is Down and within 1&quot; of a model with the Standard of Mammon cannot stand back up. In addition, the opposing player must take a Success Roll for any of their models that finish a charge within 1&quot; of a model with the Standard of Mammon. If the roll is a Failure, the enemy model is marked as being Down. If the roll is a Success or a Critical Success, the enemy model stays on its feet.</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD, LEADER</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Kneel Before Me: An enemy model that is Down and within 1&quot; of a model with the Standard of Mammon cannot stand back up. In addition, the opposing player must take a Success Roll for any of their models that finish a charge within 1&quot; of a model with the Standard of Mammon. If the roll is a Failure, the enemy model is marked as being Down. If the roll is a Success or a Critical Success, the enemy model stays on its feet.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3770,10 +3770,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <profiles>
                 <profile name="Fire Shield" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7555-188e-e8fb-6a31">
                   <characteristics>
-                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">dd -1 INJURY DICE to Injury Rolls for attacks with the FIRE Keyword that targets a model that has a Fire Shield, even if the attacking weapon has the IGNORE ARMOUR Keyword.</characteristic>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                     <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                     <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-1 INJURY MODIFIER, NEGATE FIRE</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">dd -1 INJURY DICE to Injury Rolls for attacks with the FIRE Keyword that targets a model that has a Fire Shield, even if the attacking weapon has the IGNORE ARMOUR Keyword.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4020,10 +4020,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           <profiles>
             <profile name="Tarnished Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b2e8-94d9-2ff1-7cdd">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">An enemy model must choose a model that has Tarnished Armour as the target of the charge if the model is in its Line of Sight, not already within 1” of an enemy model, and can be reached without the charging model having to Climb, Jump, make a Diving Charge, or move across Dangerous terrain.</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-2 INJURY MODIFIER, NEGATE GAS</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">An enemy model must choose a model that has Tarnished Armour as the target of the charge if the model is in its Line of Sight, not already within 1” of an enemy model, and can be reached without the charging model having to Climb, Jump, make a Diving Charge, or move across Dangerous terrain.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4071,10 +4071,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           <profiles>
             <profile name="Mind Linked" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bc3d-26f8-182e-d523">
               <characteristics>
-                <characteristic name="Description" typeId="4834-43a9-1c93-9062">This model is in a fireteam with a Homunculus.</characteristic>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                 <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model is in a fireteam with a Homunculus.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4160,10 +4160,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
       <profiles>
         <profile name="Comically Large Rock" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2451-9e55-fa8b-cf77">
           <characteristics>
-            <characteristic name="Description" typeId="4834-43a9-1c93-9062">rock</characteristic>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">rock</characteristic>
           </characteristics>
         </profile>
       </profiles>
