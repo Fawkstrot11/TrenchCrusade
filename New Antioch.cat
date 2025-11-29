@@ -178,19 +178,19 @@
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+              </conditions>
             </modifier>
             <modifier type="increment" value="1" field="38da-57e8-c7e1-95d4">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="0d4c-f0ae-cd5a-6f83" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -1745,18 +1745,6 @@
         <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3265-f0db-dbe4-1366" includeChildSelections="false"/>
         <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="7702-1238-a0c1-bd75" includeChildSelections="false"/>
       </constraints>
-      <modifiers>
-        <modifier type="set" value="1" field="7702-1238-a0c1-bd75">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="f2c3-86d1-5924-093f" shared="true"/>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="9c37-58de-3fa2-bfd2" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
@@ -4033,7 +4021,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <categoryLinks>
         <categoryLink targetId="3de0-192c-3ec2-51be" id="6e79-070e-d330-f323" primary="true" name="Elite"/>
         <categoryLink targetId="2cfb-73f8-0df3-30e8" id="1ef7-76a8-4ee1-6913" primary="false" name="New Antioch"/>
-        <categoryLink targetId="65d9-9d4b-c697-c9ef" id="bb09-4f22-01db-95dc" primary="false" name="Clergy"/>
+        <categoryLink targetId="7877-788b-2d58-c844" id="afac-5593-ff1c-6165" primary="false" name="Negate Fear"/>
       </categoryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="60"/>
@@ -4696,7 +4684,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </modifier>
         <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4713,6 +4701,17 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <comment>Byzantine</comment>
         </modifierGroup>
       </modifierGroups>
+      <infoLinks>
+        <infoLink name="Strong" id="5a6f-8b04-6d09-d41b" hidden="true" type="rule" targetId="6297-d0e0-1935-5cfd">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Combat Engineer" hidden="false" id="50d8-f63e-e01d-2698">
       <profiles>

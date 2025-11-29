@@ -28,6 +28,9 @@
     <categoryEntry name="Leader" id="afb9-39f5-82d9-46ed" hidden="false"/>
     <categoryEntry name="Pile" id="ce28-ad9a-bbc1-f1dc" hidden="true"/>
     <categoryEntry name="Negate Gas" id="d935-8238-a3f7-8ab0" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
+    <categoryEntry name="Negate Fear" id="7877-788b-2d58-c844" hidden="false">
+      <description/>
+    </categoryEntry>
   </categoryEntries>
   <costTypes>
     <costType name="Ducats" id="8d43-33fd-332d-17a6" defaultCostLimit="-1"/>

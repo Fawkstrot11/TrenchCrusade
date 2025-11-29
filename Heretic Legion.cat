@@ -1106,12 +1106,9 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c69-e381-cfee-5096" includeChildSelections="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Ranged Legionnaires" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="edc3-f4c5-69c1-d15e">
+                        <profile name="Ranged Legionnaires" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="edc3-f4c5-69c1-d15e">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Legionnaire has +1 to their Ranged characteristic</characteristic>
-                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Legionnaire has +1 to their Ranged characteristic</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1121,12 +1118,9 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="31be-76bc-cd2a-a13c" includeChildSelections="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Melee Legionnaires" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="82cc-dadb-7eca-e047">
+                        <profile name="Melee Legionnaires" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="82cc-dadb-7eca-e047">
                           <characteristics>
-                            <characteristic name="Description" typeId="4834-43a9-1c93-9062">This Legionnaire has +1 to their Melee characteristic</characteristic>
-                            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Legionnaire has +1 to their Melee characteristic</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -2928,6 +2922,13 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                   </conditions>
                 </modifierGroup>
               </modifierGroups>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Shotgun" hidden="false" id="b729-c409-1ae1-3e76" sortIndex="1">
               <costs>
@@ -3733,6 +3734,11 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="2f0a-69a9-39ce-1a7d" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
