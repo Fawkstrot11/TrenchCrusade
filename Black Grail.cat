@@ -3582,6 +3582,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                         <condition type="atLeast" value="1" field="selections" scope="self" childId="7fb6-d318-1757-96a6" shared="true"/>
                       </conditions>
                     </modifier>
+                    <modifier type="set" value="+0 Dice" field="1a4f-d2cd-c405-6200">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
                   </modifiers>
                 </profile>
                 <profile name="Toxic" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bc6f-c70e-8e15-bc41">
@@ -3632,7 +3637,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model" childId="3a3c-7f8b-4ee4-d9d7" shared="true" includeChildSelections="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
@@ -3646,7 +3650,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model" childId="3a3c-7f8b-4ee4-d9d7" shared="true" includeChildSelections="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
