@@ -136,12 +136,7 @@ MARKERS caused by the Keyword FIRE.</description>
       <description>A Weapon with this Keyword reduces the target’s total -INJURY MODIFIER from its Armour and/or Shields by 1, to a minimum of 0. For example, if a target had Standard Armour and a Trench Shield, the -INJURY MODIFIER would be lowered from -2 to -1.</description>
     </rule>
     <rule name="Automatic" id="c435-c893-2c72-e7c6" hidden="false">
-      <description>You can make a number of Ranged Attacks with this
-weapon equal to X, one after another. The attacks can target different enemy
-models, as long as they are all within 6&quot; of each other. Resolve each attack one
-at a time using steps 2 to 6 of the Ranged Attack Sequence. Any BLOOD
-MARKERS that are spent only modify the Injury Roll for the attack they are
-spent on, and do not modify Injury Rolls for subsequent attacks.</description>
+      <description>You can make a number of Ranged Attacks with this weapon equal to X, one after another. The attacks can target different enemy models, as long as they are all within 6&quot; of each other. Resolve each attack one at a time using steps 2 to 6 of the Ranged Attack Sequence. Any BLOOD MARKERS that are spent only modify the Injury Roll for the attack they are spent on, and do not modify Injury Rolls for subsequent attacks.</description>
     </rule>
     <rule name="Blessed" id="269c-81bd-f64b-737f" hidden="false">
       <description>When you deploy a model with this Keyword for the first time in a game, place a number of BLESSING MARKERS beside the model equal to X</description>
@@ -233,7 +228,7 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">24&quot;</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Jezzail" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="6d28-673b-5fe7-849e" publicationId="c658-4a10-e1fe-befc" page="109">
@@ -241,7 +236,7 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">18&quot;</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Submachine Gun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="f366-4889-0ac5-375d" publicationId="c658-4a10-e1fe-befc" page="110">
@@ -265,7 +260,7 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, SHOTGUN</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Automatic Shotgun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="a19d-90ab-da9f-95ff" publicationId="c658-4a10-e1fe-befc" page="110">
@@ -273,7 +268,7 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, ASSAULT, SHOTGUN</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Musket" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="b5e4-35bd-ba00-55c0" publicationId="c658-4a10-e1fe-befc" page="110">
@@ -353,7 +348,7 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">AUTOMATIC 3, HEAVY, RELOAD</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Anti-Material Rifle" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="50ec-f075-494f-9dc5" publicationId="c658-4a10-e1fe-befc" page="112">
@@ -377,7 +372,7 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">10&quot;</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-1 INJURY DICE, AUTOMATIC 2, FIRE, FLAMETHROWER, HEAVY, IGNORES ARMOUR</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Sword/Axe" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="e938-b0dc-418c-0924" publicationId="c658-4a10-e1fe-befc" page="114">
@@ -433,7 +428,7 @@ spent on, and do not modify Injury Rolls for subsequent attacks.</description>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, FIRE</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Tartarus Claws" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="0999-4c6b-539f-d1b2" publicationId="c658-4a10-e1fe-befc" page="115">
@@ -818,8 +813,8 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, AUTOMATIC 2 GAS, HEAVY</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, AUTOMATIC 2, GAS, HEAVY</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Blunderbuss" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="2540-a186-5024-be0a" publicationId="c658-4a10-e1fe-befc" page="116">
@@ -827,7 +822,7 @@ with a Tormentor Chain.</characteristic>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">10&quot;</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">SHRAPNEL</characteristic>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Headtaker" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="29cd-71a7-a9f8-a828" publicationId="c658-4a10-e1fe-befc" page="116">
@@ -874,8 +869,8 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">18&quot;</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, SHRAPNEL</characteristic>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, +1 INJURY DICE, HEAVY, SHOTGUN, SHRAPNEL</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
       </characteristics>
     </profile>
     <profile name="War Cross" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="2d02-94a4-2493-186f" publicationId="c658-4a10-e1fe-befc" page="76">
@@ -939,7 +934,7 @@ with a Tormentor Chain.</characteristic>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">30&quot;</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, HEAVY</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Alchemist Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="68e2-bde3-19a9-2980">
