@@ -276,7 +276,7 @@ MARKERS caused by the Keyword FIRE.</description>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">18&quot;</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-1 INJURY DICE</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Silenced Pistol" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="c196-6ca8-b9d1-d407" publicationId="c658-4a10-e1fe-befc" page="111">
@@ -340,7 +340,7 @@ MARKERS caused by the Keyword FIRE.</description>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">GRENADE</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, BLAST 2&quot;, IGNORE COVER, IGNORE LONG RANGE, SHRAPNEL</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Machine Gun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="517c-652f-100e-71d6" publicationId="c658-4a10-e1fe-befc" page="112">
@@ -356,7 +356,7 @@ MARKERS caused by the Keyword FIRE.</description>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, CRITICAL, HEAVY, IGNORE ARMOUR</characteristic>
-        <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Flamethrower" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="9b21-3223-c112-c65f" publicationId="c658-4a10-e1fe-befc" page="113">
@@ -388,7 +388,7 @@ MARKERS caused by the Keyword FIRE.</description>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 INJURY MODIFIER, RISKY</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Trench Club" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="b242-1242-be3a-d232" publicationId="c658-4a10-e1fe-befc" page="114">
@@ -452,7 +452,7 @@ MARKERS caused by the Keyword FIRE.</description>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">BLOCK, CUMBERSOME</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Scourge/Battle Whip/Flail" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="f469-b712-2233-ac79" publicationId="c658-4a10-e1fe-befc" page="116">
@@ -468,7 +468,7 @@ MARKERS caused by the Keyword FIRE.</description>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY MODIFIER, HEAVY</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Great Sword/Axe" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="2257-4155-dd7d-8641" publicationId="c658-4a10-e1fe-befc" page="116">
@@ -476,7 +476,7 @@ MARKERS caused by the Keyword FIRE.</description>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, CRITICAL, HEAVY</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Misericordia" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="d82e-4c7b-28ac-1413" publicationId="c658-4a10-e1fe-befc" page="116">
@@ -511,7 +511,7 @@ cannot be equipped with a Trench Shield and has a Charge Bonus of D3&quot; inst
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-1 INJURY MODIFIER</characteristic>
-        <characteristic name="Rules" typeId="4834-43a9-1c93-9062"/>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Reinforced Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f6aa-583c-a14b-0ee9" publicationId="c658-4a10-e1fe-befc" page="117">
@@ -519,7 +519,7 @@ cannot be equipped with a Trench Shield and has a Charge Bonus of D3&quot; inst
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-2 INJURY MODIFIER</characteristic>
-        <characteristic name="Rules" typeId="4834-43a9-1c93-9062"/>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Holy Icon Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="0b4c-42b8-cf94-e25f" publicationId="c658-4a10-e1fe-befc" page="117">
@@ -894,7 +894,7 @@ with a Tormentor Chain.</characteristic>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee/24&quot;</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, BLOCK, CUMBERSOME</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="MURAD Bombard" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="556c-7009-6fc2-d658">
@@ -940,7 +940,7 @@ with a Tormentor Chain.</characteristic>
     <profile name="Alchemist Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="68e2-bde3-19a9-2980">
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
-        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-2 INJURY MODIFIER, NEGATE FIRE, NEGATE GAS</characteristic>
         <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Protection From Harm: Add- 1 INJURY DICE to Injury Rolls for attacks made by Weapons with the FIRE or GAS Keywords that target a model that has Alchemist Armour, even if the attacking weapon has the IGNORE ARMOUR Keyword.</characteristic>
       </characteristics>
@@ -956,8 +956,8 @@ with a Tormentor Chain.</characteristic>
     <profile name="Cloak of Alamut" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="fc84-ca32-2672-c684">
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
         <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Blend In: The Ranged Attack Modifier for a target being in Cover is -2 DICE
 instead of -1 DICE if the target has a Cloak of Alamut.</characteristic>
       </characteristics>
@@ -965,8 +965,8 @@ instead of -1 DICE if the target has a Cloak of Alamut.</characteristic>
     <profile name="Wind Amulet" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="cb4d-4771-6cd2-240b">
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
         <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Gusts of Wind: Once per game, when you Activate a model that has a Wind Amulet you may declare that it will use the amulet before it takes any ACTIONS. Using the Wind Amulet adds 3&quot; to the model’s Movement Characteristic for the rest of the Activation.</characteristic>
       </characteristics>
     </profile>
@@ -991,7 +991,7 @@ instead of -1 DICE if the target has a Cloak of Alamut.</characteristic>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-1 INJURY DICE, BLAST 3&quot;, GAS, HEAVY, IGNORE ARMOUR, IGNORE COVER</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Heavy Ballistic Shield" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="adc0-8995-657b-8d4b">
