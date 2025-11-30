@@ -79,6 +79,7 @@
           </costs>
           <infoLinks>
             <infoLink name="Gas Mask" id="375b-623a-cb69-fc4f" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
+            <infoLink name="Negate [Keyword]" id="d933-59e8-137e-1f3f" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="69c8-1aef-0ea9-5e42" includeChildSelections="false"/>
@@ -110,6 +111,7 @@
           </costs>
           <infoLinks>
             <infoLink name="Holy Relic" id="36f7-37a5-fd50-c645" hidden="false" type="profile" targetId="f7dd-c304-609f-c9d1"/>
+            <infoLink name="Blessed" id="c9f6-20e4-e8b3-49ab" hidden="false" type="rule" targetId="269c-81bd-f64b-737f"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a113-0e2d-3f25-2419" includeChildSelections="false"/>
@@ -166,6 +168,7 @@
           </constraints>
           <infoLinks>
             <infoLink name="Martyrdom Pills" id="69b3-4ab3-719a-102d" hidden="false" type="profile" targetId="0de6-1178-a184-ddff"/>
+            <infoLink name="Consumable" id="1939-b26c-0920-e2e1" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
           </infoLinks>
           <modifiers>
             <modifier type="increment" value="1" field="b1bb-2f92-8dbc-d80f">
@@ -216,7 +219,6 @@
 that they will sacrifice it and anoint themselves with its blood. If you do so, the
 first BLOOD MARKER placed on the model is ignored.
 
-
 * Only the Righteous: Ecclesiastic Prisoners cannot have a Sacrificial Lamb.</characteristic>
               </characteristics>
             </profile>
@@ -260,6 +262,7 @@ first BLOOD MARKER placed on the model is ignored.
           </constraints>
           <infoLinks>
             <infoLink name="Sniper Scope" id="2484-a18b-d985-5880" hidden="false" type="profile" targetId="5a48-9735-499f-e394"/>
+            <infoLink name="Ignore [Modifier]" id="4612-20cd-ae9c-5c8b" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -279,6 +282,7 @@ first BLOOD MARKER placed on the model is ignored.
             <selectionEntry type="upgrade" import="true" name="Iron Capirote" hidden="false" id="176f-a895-04d4-3792">
               <infoLinks>
                 <infoLink name="Iron Capirote" id="e920-700a-6f1b-1c16" hidden="false" type="profile" targetId="4813-2d95-702d-d646"/>
+                <infoLink name="Negate [Keyword]" id="0afc-c623-968b-6a25" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
               </infoLinks>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="7"/>
@@ -336,6 +340,8 @@ first BLOOD MARKER placed on the model is ignored.
                 <infoLink name="Assault" id="294a-5f52-0f0b-6142" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
                 <infoLink name="Fire" id="cd3b-9cb9-93d8-c0fd" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
                 <infoLink name="Grenade" id="99eb-cea9-a958-cf43" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+                <infoLink name="Ignore [Modifier]" id="2ddd-28ea-67b5-8313" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+                <infoLink name="Ignore Armour" id="0e4e-12e0-6dec-f19d" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
               </infoLinks>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba18-d35f-0507-56e2" includeChildSelections="false"/>
@@ -351,6 +357,8 @@ first BLOOD MARKER placed on the model is ignored.
                 <infoLink name="Assault" id="fb3e-d052-3460-c714" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
                 <infoLink name="Fire" id="0380-54d8-14d7-5c38" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
                 <infoLink name="Grenade" id="e9f8-5211-4b1a-44bf" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+                <infoLink name="Ignore [Modifier]" id="42f0-822f-e91a-53f7" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+                <infoLink name="Ignore Armour" id="76dc-1632-afba-96ef" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
               </infoLinks>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a71d-8f73-70fc-c10a" includeChildSelections="false"/>
@@ -530,6 +538,7 @@ first BLOOD MARKER placed on the model is ignored.
               <infoLinks>
                 <infoLink name="Polearm" id="4801-eb18-0f1c-7342" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
                 <infoLink name="Cumbersome" id="1928-cb5a-564c-f155" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+                <infoLink name="Block" id="b1a6-7182-c485-d323" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Cumbersome" hidden="false" id="bd93-d468-c69a-69f4" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
@@ -703,6 +712,7 @@ first BLOOD MARKER placed on the model is ignored.
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Pistol" id="4249-2de0-e90b-76dd" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Automatic Pistol" hidden="false" id="3e1b-b310-c000-bb5d" collective="false" sortIndex="2">
@@ -1086,6 +1096,8 @@ first BLOOD MARKER placed on the model is ignored.
           </constraints>
           <infoLinks>
             <infoLink name="Troop Flag" id="d61e-6e8c-b71f-f532" hidden="false" type="profile" targetId="e86e-146a-65b7-09f2"/>
+            <infoLink name="Held" id="daf2-d830-3397-8df0" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
+            <infoLink name="Leader" id="d828-3850-99f4-4acf" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
           </infoLinks>
           <modifiers>
             <modifier type="increment" value="1" field="1993-3955-a17e-32c9">
@@ -1116,6 +1128,7 @@ first BLOOD MARKER placed on the model is ignored.
           </constraints>
           <infoLinks>
             <infoLink name="Musical Instrument" id="0b02-6a40-6057-782b" hidden="false" type="profile" targetId="dd0c-c62d-46f1-64f8"/>
+            <infoLink name="Held" id="2f93-313e-224f-a4d2" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -1286,16 +1299,6 @@ first BLOOD MARKER placed on the model is ignored.
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
-          <profiles>
-            <profile name="Holy Icon Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="04f7-979a-e1cc-9270">
-              <characteristics>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This suit of armour is made of blessed icons and scripture scrolls written with the blood of saints. This armour confers a -1 modifier to any injury rolls. This modifier applies even against attacks that ignore Armour. Can be combined with a shield, including Holy Icon Shield.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditionGroups>
@@ -1311,6 +1314,10 @@ first BLOOD MARKER placed on the model is ignored.
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ebbe-1087-0fa8-011c" includeChildSelections="false"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Holy Icon Armour" id="e4ea-3ed2-d659-e2e3" hidden="false" type="profile" targetId="0b4c-42b8-cf94-e25f"/>
+            <infoLink name="Impervious" id="db2a-ff2c-549c-eba7" hidden="false" type="rule" targetId="00a9-ddfe-2a2b-078d"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <modifiers>
@@ -1479,7 +1486,7 @@ first BLOOD MARKER placed on the model is ignored.
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">48&quot;</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, AUTOMATIC 3, HEAVY</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
               </characteristics>
             </profile>
             <profile name="Autocannon (Full Auto)" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="584f-141d-ce83-d55d">
@@ -1549,9 +1556,9 @@ first BLOOD MARKER placed on the model is ignored.
             <profile name="Gas Filters" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="69ba-974b-0e6f-7391">
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE GAS</characteristic>
-                <characteristic name="Rules" typeId="4834-43a9-1c93-9062"/>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1571,8 +1578,8 @@ first BLOOD MARKER placed on the model is ignored.
             <profile name="Holy Diesel Engine" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e6ee-0b99-239f-7120">
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Advanced Design: When you take a Dash ACTION with this Anchorite Shrine, you can choose to add +2 DICE to the Risky Success Roll. If you do so, you must place 1 BLOOD MARKER next to the model</characteristic>
               </characteristics>
             </profile>
@@ -1590,8 +1597,8 @@ first BLOOD MARKER placed on the model is ignored.
             <profile name="Sacred Geometry" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3869-f6f2-7f5a-92af">
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Divine Accuracy: Add +1 DICE to the Ranged Characteristic of this Anchorite Shrine.</characteristic>
               </characteristics>
             </profile>
@@ -1618,8 +1625,8 @@ first BLOOD MARKER placed on the model is ignored.
             <profile name="Grand Anchorite" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="828c-64ab-63e9-051b">
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Impossible to Stop: Enemy models are not allowed to make a Melee Attack when a Grand Anchorite Shrine that is within 1&quot; of them retreats. In addition, a Grand Anchorite Shrine can use a normal move or a charge move if it starts within 1&quot; of any enemy models.</characteristic>
               </characteristics>
             </profile>
@@ -1646,7 +1653,7 @@ first BLOOD MARKER placed on the model is ignored.
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Cower Before The Lord: An enemy model that does not have the FEAR keyword and that starts an Activation within 1&quot; of this Anchorite Shrine must take a Retreat ACTION as part of the Activation. It cannot take any RISKY ACTIONS while it is within 1&quot; of this Anchorite Shrine.</characteristic>
               </characteristics>
             </profile>
@@ -1664,8 +1671,8 @@ first BLOOD MARKER placed on the model is ignored.
             <profile name="Hallowed Anchorite" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ef56-de02-03da-7fd7">
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Manifold Blessings: A Hallowed Anchorite Shrine can be promoted to ELITE status in the Promotions &amp; Experience Step of the Campaign Phase.</characteristic>
               </characteristics>
             </profile>
@@ -1691,8 +1698,8 @@ first BLOOD MARKER placed on the model is ignored.
             <profile name="Piston Legs" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bd5a-aaba-367a-8f09">
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Grind to Dust ACTION: This Anchorite Shrine can take a Grind to Dust ACTION. If it does so, it makes a Melee Attack but must target an enemy model within 1&quot; that is Down and is mounted on a base that is 32mm or smaller. The attack does not use a Melee Weapon.</characteristic>
               </characteristics>
             </profile>
