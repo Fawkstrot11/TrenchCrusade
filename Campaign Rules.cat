@@ -4048,7 +4048,7 @@ Action Rifle, Assault Rifle etc).
           <infoLinks>
             <infoLink name="Consumable" id="b008-481e-23a7-9097" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
             <infoLink name="Reload" id="efa3-65f5-17fc-f769" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
-            <infoLink name="Ignore [Modifier]" id="c180-216a-59d1-a259" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Ignore Armour" id="c180-216a-59d1-a259" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -4282,6 +4282,9 @@ For example, if you roll a 9 for the Success Roll, you could make an Injury Roll
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1fe2-6ec9-0f62-1042" includeChildSelections="true"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e02a-8dbf-3419-9587" includeChildSelections="false"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Critical" id="c558-c81c-ddbf-ef4a" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Book of Battle Prayers" hidden="true" id="2958-0f21-a1a5-74fb">
           <profiles>
@@ -4583,7 +4586,7 @@ Note that if the original attack was a Critical Success, the Injury Roll modifie
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY MODIFIER, CRITICAL</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4819,6 +4822,9 @@ Steadfast: When a model that has Ducal Winged Armour suffers a Down result on th
               </conditionGroups>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Impervious" id="6cc3-526e-1e41-94ed" hidden="false" type="rule" targetId="00a9-ddfe-2a2b-078d"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Great Banner of New Antioch" hidden="true" id="53fc-b3e3-e7f6-6ce5">
           <costs>
