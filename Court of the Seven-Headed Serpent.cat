@@ -3087,7 +3087,7 @@
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Void Magic" id="3690-4db6-c76c-c212" hidden="false" sortIndex="9">
+        <selectionEntryGroup name="Void Magic" id="3690-4db6-c76c-c212" hidden="true" sortIndex="9">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Beauty in Suffering" hidden="false" id="f524-976a-c9e5-af0d" sortIndex="1">
               <costs>
@@ -3198,7 +3198,7 @@ The spellcaster’s Activation then ends immediately.</characteristic>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Event Horizon" hidden="false" id="09ab-dc4d-83d6-10f7" sortIndex="6">
+            <selectionEntry type="upgrade" import="true" name="Event Horizon" hidden="true" id="09ab-dc4d-83d6-10f7" sortIndex="6">
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -3215,6 +3215,7 @@ The spellcaster’s Activation then ends immediately.</characteristic>
                     <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order to cast this spell. If you do so, the spellcaster can make a Ranged Attack with a Range of 24”. The attack has the BLAST and SCATTER Keywords, and a blast radius in inches equal to the number of BLOOD MARKERS that were paid to cast the spell plus 1. In addition, if the attack lands directly on top of a model, the model is immediately downed before rolling for its injury. All other models (friend or foe) caught in the blast are pulled up to 3” towards the epicenter of the blast after resolving their Injury Rolls.
 
 
+
 A Sorcerer cannot purchase both Event horizon and Burning Inferno.</characteristic>
                   </characteristics>
                 </profile>
@@ -3223,7 +3224,6 @@ A Sorcerer cannot purchase both Event horizon and Burning Inferno.</characterist
                 <modifier type="set" value="false" field="hidden">
                   <conditions>
                     <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="upgrade" childId="42bc-f444-0c78-b0f6" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -3295,6 +3295,16 @@ A Sorcerer cannot purchase both Event horizon and Burning Inferno.</characterist
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
               </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="68a4-5af6-6f09-aeab" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -4377,9 +4387,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </constraints>
           <modifiers>
             <modifier type="set" value="1" field="2a1e-e823-29c1-7b64">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2fbd-2ebe-b0e5-8708" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2fbd-2ebe-b0e5-8708" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </entryLink>
@@ -4446,6 +4461,54 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
+        <profile name="The Gift" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="3029-2245-ced8-1761">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Faceless can take The Gift ACTION when it takes an enemy model Out of Action in Melee. If they do so, take a Risky Success Roll for the model. If the roll is a Failure, the Faceless’s Activation ends immediately. If the roll is a Success or Critical Success, create a new friendly Cultist armed with a trench club and the same number of Blood Markers on it as the deceased enemy model had. The new Cultist is not counted for the purposes of Morale or any Objectives in the Battle, and dies after the battle has ended.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Ceaseless Destruction" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="0496-483b-97bd-e7bd">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">As long as there are at least a total of 3 Blood Markers on friendly models within 4&quot; of a Faceless, every Out of Action injury result against it are treated as Downed instead. Any effects that would prevent a Downed state do not apply when this occurs. Additionally, any friendly models with the CULTIST keyword within 4” and in its Line of Sight of the Faceless gain -1 INJURY DICE to all Injury rolls made against them.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Praetor" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="3fb8-4a27-f88e-4942">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2"/>
+          </characteristics>
+        </profile>
+        <profile name="Slavemaster" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="true" id="89cc-a0ab-b1d6-5a4a">
+          <characteristics>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 1)</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order for it to cast this spell. If you do so, you can carry out one of the following Commands with a Yoke Fiend that is within 18&quot; of the spellcaster. Carrying out a Command does not stop the Yoke Fiend from being Activated in the same Turn (before or after the Command was issued).
+- Sacrifice Command: The Yoke Fiend kills itself. It is taken Out of Action and crossed off its Warband Roster.
+- Fight Command: The Yoke Fiend carries out a Melee Attack.
+- Move Command: The Yoke Fiend carries out a Move (it cannot Charge or Retreat).
+- Shoot Command: The Yoke Fiend carries out a Ranged Attack.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Strong" id="ccf3-d919-1999-1621" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
@@ -4470,6 +4533,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <modifiers>
             <modifier type="set" value="Faceless" field="name"/>
             <modifier type="set" value="Faceless" field="name" affects="profiles.Unit"/>
+            <modifier type="set" value="105" field="8d43-33fd-332d-17a6"/>
+            <modifier type="set" value="6&quot;/Infantry" field="b725-e0a4-16ae-8df2" affects="profiles.Unit"/>
+            <modifier type="set" value="+2 DICE" field="1a4f-d2cd-c405-6200" affects="profiles.Unit"/>
+            <modifier type="set" value="40mm" field="73ae-cc17-596e-0481" affects="profiles.Unit"/>
           </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
@@ -4807,55 +4874,50 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Void Blade" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1472-8a93-ec65-d12e">
+        <profile name="Void Blade" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="true" id="1472-8a93-ec65-d12e">
           <characteristics>
             <characteristic name="Type" typeId="3f15-74a1-4d35-3642">1-handed</characteristic>
             <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">Melee</characteristic>
             <characteristic name="Keywords" typeId="5093-5528-b08f-1496">RISKY</characteristic>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Touch of the Void: Before making an Injury Roll for an attack made with a Bow of Lethe, you must choose if the roll will have the +2 INJURY DICE Keyword or the IGNORE ARMOUR Keyword.</characteristic>
+            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Touch of the Void: Before making an Injury Roll for an attack made with a Void Blade, you must choose if the roll will have the +2 INJURY DICE Keyword or the IGNORE ARMOUR Keyword.</characteristic>
           </characteristics>
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
+            <modifier type="set" value="false" field="hidden">
               <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Living Shadow" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="231f-bbc9-438c-588e">
+        <profile name="Living Shadow" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="231f-bbc9-438c-588e">
           <characteristics>
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Enemy models cannot target the Stalker with ranged attacks unless they are within 18” of it, decreased to 12” if the Stalker is in Cover from the perspective of the attacking Model. </characteristic>
           </characteristics>
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
+            <modifier type="set" value="false" field="hidden">
               <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Gruesome Cover" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5ba1-407f-7eea-8883">
+        <profile name="Gruesome Cover" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="5ba1-407f-7eea-8883">
           <characteristics>
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Stalker can take a Gruesome Cover ACTION when it takes an enemy model Out of Action in Melee. If they do so, take a Success Roll for the model. If the roll is a Failure, nothing happens. If the roll is a Success or a Critical Success, it buries itself into the still-warm corpse, body bending at unnatural angles and ends its Activation. Until the beginning of its next Activation, it is considered to be in Cover from any angle.</characteristic>
           </characteristics>
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
+            <modifier type="set" value="false" field="hidden">
               <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Undying Vassal" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="57eb-c604-6faa-c6b9">
+        <profile name="Undying Vassal" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="57eb-c604-6faa-c6b9">
           <characteristics>
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Once per turn, whenever a model (friend or foe) is taken Out of Action, the Stalker may choose to instantly appear out of the Model’s corpse. Redeploy it and immediately place it so that the center of its base is at the location that was previously occupied by the center of the base of the removed model. If this is impossible for any reason, the Stalker remains at its original location. This ability can be used at any point during the Battle, even if it is outside of the Stalker’s Activation. Note that if the Stalker starts within 1&quot; of an enemy model, this is not treated as a Retreat, so the enemy model cannot make a Melee Attack before the Stalker uses that ability.</characteristic>
           </characteristics>
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
@@ -4883,8 +4945,26 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
       <selectionEntryGroups>
         <selectionEntryGroup name="Weapons" id="26f0-d9f3-8451-e41c" hidden="false" sortIndex="3">
           <entryLinks>
-            <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="f3b9-7230-693b-dda1" type="selectionEntryGroup" targetId="02d4-0537-9a27-5baa" collective="false" collapsible="true"/>
-            <entryLink import="true" name="Utility Hand" hidden="false" id="8122-3c3b-f8dd-785a" type="selectionEntryGroup" targetId="2c66-b5c4-72e2-82ed"/>
+            <entryLink import="true" name="Melee (One-Handed)" hidden="false" id="f3b9-7230-693b-dda1" type="selectionEntryGroup" targetId="02d4-0537-9a27-5baa" collective="false" collapsible="true" sortIndex="1"/>
+            <entryLink import="true" name="Utility Hand" hidden="false" id="8122-3c3b-f8dd-785a" type="selectionEntryGroup" targetId="2c66-b5c4-72e2-82ed" sortIndex="4"/>
+            <entryLink import="true" name="Ranged (One-Handed)" hidden="true" id="d5b4-a178-9e38-cc5b" type="selectionEntryGroup" targetId="cd2d-89be-32a4-afa5" sortIndex="2">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Grenades" hidden="true" id="cad5-9583-8246-a6fb" type="selectionEntryGroup" targetId="3dce-3062-9abb-c1de" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="71a5-88b1-d039-46f3" includeChildSelections="false"/>
@@ -5052,11 +5132,74 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
           <characteristics>
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When a yoke fiend is Activated, if there is an enemy model without the Keyword BLACK GRAIL or DEMONIC within 12” that it can see, it must make a Charge against the closest enemy model without the Keyword BLACK GRAIL or DEMONIC as its first ACTION. If it begins its Activation Down and the above conditions are true, it must stand and then Charge, unless it cannot stand. If it begins its Activation in melee combat, it ignores this ability.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Torturer" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="055b-99d9-d536-ce9d">
           <characteristics>
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When a Yoke Fiend makes a Melee Attack, it can target a friendly model that does not have the DEMONIC Keyword. If it does so, it cannot attack again during the same Activation.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Infinite Duress" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="e548-955a-6a84-d5bd">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If a Cultist inflicts any Injury on an Enemy Model in Melee, it removes one Blood Marker from itself, if it had any.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Unstable" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="5ebc-2280-dd09-b031">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If a Cultist ever has 6 Blood Markers, it instantly is taken Out of Action, before anything else resolves.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Willing Sacrifice" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="c104-c912-a766-408f">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If a Cultist is taken Out of Action as a result of a friendly Goetic Spell (either through paying the spell’s cost and triggering Unstable, or being killed due to the effect of the Spell), then dies after the Battle, its equipment is returned to your warchest. Another willing soul for the Seething Black’s infinite contempt.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Hateful" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="70d1-6a66-9a7a-e23d">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When a Cultist is Activated, if it is more than 1&quot;from any enemy models and there is an enemy model within 12&quot; of it, then the Cultist must take a Charge ACTION with the closest enemy model as the target of the charge. If the Cultist was Down at the start of the Activation, it will stand up if it can do so and must then attempt to make the charge</characteristic>
+          </characteristics>
+          <comment>Fang Version</comment>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <modifierGroups>
