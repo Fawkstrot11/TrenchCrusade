@@ -4809,15 +4809,51 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
         </profile>
         <profile name="Void Blade" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1472-8a93-ec65-d12e">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">1-handed</characteristic>
             <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">Melee</characteristic>
             <characteristic name="Keywords" typeId="5093-5528-b08f-1496">RISKY</characteristic>
             <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Touch of the Void: Before making an Injury Roll for an attack made with a Bow of Lethe, you must choose if the roll will have the +2 INJURY DICE Keyword or the IGNORE ARMOUR Keyword.</characteristic>
           </characteristics>
           <modifiers>
-            <modifier type="set" value="false" field="hidden">
+            <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Living Shadow" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="231f-bbc9-438c-588e">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Enemy models cannot target the Stalker with ranged attacks unless they are within 18” of it, decreased to 12” if the Stalker is in Cover from the perspective of the attacking Model. </characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Gruesome Cover" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5ba1-407f-7eea-8883">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Stalker can take a Gruesome Cover ACTION when it takes an enemy model Out of Action in Melee. If they do so, take a Success Roll for the model. If the roll is a Failure, nothing happens. If the roll is a Success or a Critical Success, it buries itself into the still-warm corpse, body bending at unnatural angles and ends its Activation. Until the beginning of its next Activation, it is considered to be in Cover from any angle.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Undying Vassal" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="57eb-c604-6faa-c6b9">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Once per turn, whenever a model (friend or foe) is taken Out of Action, the Stalker may choose to instantly appear out of the Model’s corpse. Redeploy it and immediately place it so that the center of its base is at the location that was previously occupied by the center of the base of the removed model. If this is impossible for any reason, the Stalker remains at its original location. This ability can be used at any point during the Battle, even if it is outside of the Stalker’s Activation. Note that if the Stalker starts within 1&quot; of an enemy model, this is not treated as a Retreat, so the enemy model cannot make a Melee Attack before the Stalker uses that ability.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4856,8 +4892,9 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
             <modifier type="set" value="Stalker" field="name"/>
             <modifier type="set" value="Stalker" field="name" affects="profiles.Unit"/>
             <modifier type="set" value="7&quot;/Flying" field="b725-e0a4-16ae-8df2" affects="profiles.Unit"/>
-            <modifier type="set" value="0" field="31a7-b5e8-41dc-5fd1" affects="profiles.Unit"/>
+            <modifier type="set" value="+0 Dice" field="1a4f-d2cd-c405-6200" affects="profiles.Unit"/>
             <modifier type="set" value="+2" field="12e8-ff8c-c933-9eb5" affects="profiles.Unit"/>
+            <modifier type="set" value="95" field="8d43-33fd-332d-17a6"/>
           </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
