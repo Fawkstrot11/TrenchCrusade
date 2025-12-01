@@ -362,6 +362,7 @@
             </conditionGroup>
           </conditionGroups>
           <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
             <condition type="lessThan" value="1" field="selections" scope="roster" childId="eee9-35a4-9eda-70e9" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
@@ -460,6 +461,7 @@ A Sin Eater that has a devoured model inside it can take a Purge ACTION.If it d
             <conditionGroup type="and">
               <conditions>
                 <condition type="lessThan" value="1" field="selections" scope="roster" childId="eee9-35a4-9eda-70e9" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
               </conditions>
               <conditionGroups>
                 <conditionGroup type="or">
@@ -605,6 +607,7 @@ A Sin Eater that has a devoured model inside it can take a Purge ACTION.If it d
             <conditionGroup type="or">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="eee9-35a4-9eda-70e9" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>

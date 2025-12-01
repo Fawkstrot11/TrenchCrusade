@@ -5019,15 +5019,7 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
         <categoryLink name="Configuration" hidden="false" id="fba0-49a8-51ac-9ce3" targetId="705b-e23f-e9c2-58ab"/>
         <categoryLink name="Elite" hidden="false" id="d8dc-1370-739d-282c" targetId="3de0-192c-3ec2-51be"/>
         <categoryLink name="Troop" hidden="false" id="c405-3aa4-1d4d-0966" targetId="bd43-ddb1-262d-4489"/>
-        <categoryLink name="Mercenary" hidden="false" id="1a6c-be91-ea62-7309" targetId="3dfb-701d-e89c-eba2">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1fda-e6a9-7628-9c49" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
+        <categoryLink name="Mercenary" hidden="false" id="1a6c-be91-ea62-7309" targetId="3dfb-701d-e89c-eba2"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
@@ -5041,6 +5033,13 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
         <entryLink import="true" name="Melee Weapons" hidden="false" id="90ce-00fc-1d49-5244" type="selectionEntryGroup" targetId="085e-a0e2-7ba3-9d9c"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="45e4-3031-39fd-02d9" type="selectionEntryGroup" targetId="0e52-65c7-fba4-9113"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="1fda-e6a9-7628-9c49" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Pile of Stuff" hidden="false" id="015f-82da-ae66-1fd3" type="selectionEntry" targetId="1d87-ef77-69ca-eb3f">
       <categoryLinks>
