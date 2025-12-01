@@ -4386,6 +4386,62 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f161-0ff4-1107-7bd2-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Third Party" id="72cf-c9e0-e66f-b668" hidden="false" collapsible="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Fang of the Seething Black" hidden="false" id="1fda-e6a9-7628-9c49">
+              <profiles>
+                <profile name="Eternal Eclipse" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7b7e-988f-303e-a202">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">A Fang of the Seething Black warband must choose to dedicate themselves to The Void, and no other Sin.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Hated by Creation" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="87c9-0198-ac2c-6232">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Followers of the Seething Black seek to destroy all of creation, and are in turn reviled by everything. As a result, they cannot take Praetors, Hunters of the Left Hand Path, Yoke Fiends or Wretched. They instead can take Faceless, Stalkers and Cultists.
+
+
+The Fang of the Seething Black cannot purchase Mercenaries and don’t have access to the normal Glory Shop in a Campaign, and instead have their own unique Shop.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Void Magic" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1177-cee2-7eb0-dc8d">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When casting Goetic Spells, the Fang of the Seething Black add BLOOD MARKERS to models that are both Friendly and without the DEMONIC keyword, and must do so only with models within the Goetic Range of the caster, including the caster themselves if applicable.
+
+
+° Void Cultists have a Goetic Range of 1”
+° Faceless and Hell Knights have a Goetic Range of 8”
+° Sorcerers have a Goetic Range of 12”
+
+
+Special effects such as a Cultist’s Unstable may trigger as a result of paying a spell’s costs. These resolve before the spell does.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2417-d6ed-2999-a6ef"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <profiles>
+            <profile name="Third Party Subfactions" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3847-5f3c-97bc-84c3">
+              <characteristics>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">These subfactions are not fully official. They are officially condoned by Factory Forge, but no assurances are made to balance or consistency with rules. They are included here for the benefit of the community. Please only use these factions with permission from all involved players.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Hunter of the Left-hand Path" hidden="false" id="bf89-44f3-36a0-c7b4">
@@ -4878,6 +4934,18 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="3a0b-d655-c557-84c1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Aura of the Void" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="01d9-f19c-3bb3-b0c3">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Every time any other model (friend or foe) within 8” would gain Blood Marker(s), it gains twice as many. Additionally, the Desecrated Saint gains -1D for any Injury rolls made against it for every 2 Blood Markers on any other model within 8”, to a maximum of -2D from this effect.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
