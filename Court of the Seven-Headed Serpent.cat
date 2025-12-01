@@ -4770,6 +4770,11 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
                 <condition type="atLeast" value="1" field="selections" scope="self" childId="58a3-64fb-8c2d-5105" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </profile>
         <profile name="Left-Hand Path" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8393-ece2-0750-7df7">
@@ -4779,6 +4784,13 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
             <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
             <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You can cast this spell when the spellcaster moves into contact with a terrain piece. If you do so, you can interrupt the spellcaster&apos;s move to remove them from the battlefield and then deploy them in contact with another terrain piece more than 1&quot; from any enemy models, unless the spellcaster is making a charge. If the spell is cast during a charge, the spellcaster must deploy closer to the target than it was before it was removed from the battlefield. You can then carry on with the spellcaster&apos;s move as normal. This spell can be used for a normal move or a charge or a retreat, and can be cast more than once during the course of a single ACTION (you must pay its cost each time it is cast). If it is cast as part of a charge, the spellcaster must still start the charge within 12&quot; of the target model, and you will need to take a Risky Success Roll for the spellcaster if they do not have a Line of Sight to the target model.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Shadow Walker" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c65a-d1b7-59d9-9d95">
           <characteristics>
@@ -4787,11 +4799,41 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
             <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
             <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You can cast this spell before the spellcaster takes a Retreat ACTION. If you do so, enemy models cannot make a Melee Attack on the spellcaster when they retreat.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Void Blade" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1472-8a93-ec65-d12e">
+          <characteristics>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">Melee</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">RISKY</characteristic>
+            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Touch of the Void: Before making an Injury Roll for an attack made with a Bow of Lethe, you must choose if the roll will have the +2 INJURY DICE Keyword or the IGNORE ARMOUR Keyword.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Infiltrator" id="9cf1-bfc2-3e99-09ef" hidden="false" type="rule" targetId="154d-8072-ef87-e6c1"/>
-        <infoLink name="Bow of Lethe" id="afee-d092-6884-3074" hidden="false" type="profile" targetId="0dae-2ad7-bfec-82bb"/>
+        <infoLink name="Bow of Lethe" id="afee-d092-6884-3074" hidden="false" type="profile" targetId="0dae-2ad7-bfec-82bb">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="110"/>
@@ -4813,6 +4855,9 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
           <modifiers>
             <modifier type="set" value="Stalker" field="name"/>
             <modifier type="set" value="Stalker" field="name" affects="profiles.Unit"/>
+            <modifier type="set" value="7&quot;/Flying" field="b725-e0a4-16ae-8df2" affects="profiles.Unit"/>
+            <modifier type="set" value="0" field="31a7-b5e8-41dc-5fd1" affects="profiles.Unit"/>
+            <modifier type="set" value="+2" field="12e8-ff8c-c933-9eb5" affects="profiles.Unit"/>
           </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
