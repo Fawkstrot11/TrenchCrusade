@@ -1018,5 +1018,64 @@ instead of -1 DICE if the target has a Cloak of Alamut.</characteristic>
 that the model already has. The Weapon gains the CRITICAL Keyword.</characteristic>
       </characteristics>
     </profile>
+    <profile name="Black Spot Rifle" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="e476-2dae-7eb7-f469">
+      <characteristics>
+        <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+        <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">24&quot;</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, INFECTION MARKERS</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Fresh Meat: If an Injury Roll for a Ranged Attack made with a Black Spot Rifle does not take an enemy model Out of Action, a Ravenous within 12” of the attacking model can immediately carry out a Charge move. This Charge move does not stop that Ravenous from also being Activated in the same Turn (before or after this Charge move was made).</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Butcher Bayonet" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="1063-b1d1-807f-91ec" publicationId="c658-4a10-e1fe-befc" page="114">
+      <characteristics>
+        <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+        <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, CUMBERSOME</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Bayonet: A model must have a Ranged Weapon with a Bayonet Lug for it to have a Butcher Bayonet.
+
+Hack and Hew: A model with a Butcher Bayonet, and Friendly Ravenous, Cradle Thralls, Lords of Tumours and Desiccated Husks within 3” of a model with a Butcher Bayonet, achieve a Critical Success on an 11+ for their Melee Attacks.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Grasping Maw" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3dd1-198c-9222-d273">
+      <characteristics>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Grasp ACTION: A model with this Battlekit can take a Grasp ACTION. If it does so, take a Risky Success Roll for the model. If the roll is a Failure, the model’s Activation ends immediately. If the roll is a Success or Critical Success, pick 1 enemy model that is within 12” of the model taking the Grasp ACTION and in their Line of Sight. You can move the model up to D6”. The move must be in a straight line directly towards the model taking the Grasp ACTION, and can be used to and can be used to make the model move with 1” of an enemy or retreat, but you cannot make Melee attacks with models within 1” of it before it retreats. The model stops if the model moves into contact with another model, Difficult, Dangerous or Impassable Terrain, or a terrain piece it cannot cross without having to Climb or Jump.
+ 
+Mutation: Once this Battlekit has been equipped, it cannot be removed or lost over the course of a campaign for any reason.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Devouring Jaws" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f5c3-6c1d-c0b8-98ae">
+      <characteristics>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Masticate: A model with Devouring Jaws can make an additional Melee Attack ACTION once per Activation. If it does so, place 1 BLOOD MARKER beside it.
+
+
+Mutation: Once this Battlekit has been equipped, it cannot be removed or lost over the course of a campaign for any reason.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Pestilent Fang" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="a595-aa3e-986e-edf0">
+      <characteristics>
+        <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+        <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY MODIFIER, HEAVY</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Gnashing Blow: When a Melee Attack made with a Pestilent Fang causes 1 or more BLOOD MARKERS to be placed next to the target, place 1 INFECTION MARKER next to the target model.
+
+Rotten Splinters: If the Success Roll for a Melee Attack made with a Pestilent Fang is a Critical Success then the Injury Roll for the Attack has the IGNORE ARMOUR Keyword.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Unending Starvation" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5f9b-de73-1181-b57a">
+      <characteristics>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Agonising Pangs: A model with this Battlekit adds +1” to their Movement Characteristic, and may target themselves with the Ravenous Infection Ability. In addition, if this model is more than 1” away from an enemy model, its first ACTION each Activation must be a Move, Charge or Dash ACTION, moving the maximum distance possible directly towards the nearest enemy model, and charging them if possible.
+
+Mutation: Once this Battlekit has been equipped, it cannot be removed or lost over the course of a campaign for any reason.</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
 </gameSystem>
