@@ -3198,7 +3198,7 @@ The spellcaster’s Activation then ends immediately.</characteristic>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Event Horizon" hidden="true" id="09ab-dc4d-83d6-10f7" sortIndex="6">
+            <selectionEntry type="upgrade" import="true" name="Event Horizon" hidden="true" id="79d0-a521-12d1-5158" sortIndex="6">
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -3226,18 +3226,24 @@ A Sorcerer cannot purchase both Event horizon and Burning Inferno.</characterist
                     <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="add" value="Event Horizon is not allowed with Burning Inferno." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="79d0-a521-12d1-5158" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="42bc-f444-0c78-b0f6" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <comment>Fang of the Seething Black spell lists</comment>
@@ -3246,7 +3252,7 @@ A Sorcerer cannot purchase both Event horizon and Burning Inferno.</characterist
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Burning Inferno" hidden="true" id="42bc-f444-0c78-b0f6" sortIndex="1">
           <profiles>
-            <profile name="Burning Inferno" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5eef-c619-168b-fec6">
+            <profile name="Burning Inferno" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9b7a-8ca7-9868-cc02">
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 1-3)</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">36&quot;</characteristic>
