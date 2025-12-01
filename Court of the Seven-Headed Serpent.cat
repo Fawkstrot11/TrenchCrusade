@@ -4385,36 +4385,36 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f161-0ff4-1107-7bd2-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f161-0ff4-1107-7bd2-max" includeChildSelections="false"/>
           </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Third Party" id="72cf-c9e0-e66f-b668" hidden="false" collapsible="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Fang of the Seething Black" hidden="false" id="1fda-e6a9-7628-9c49">
-              <profiles>
-                <profile name="Eternal Eclipse" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7b7e-988f-303e-a202">
-                  <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">A Fang of the Seething Black warband must choose to dedicate themselves to The Void, and no other Sin.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Hated by Creation" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="87c9-0198-ac2c-6232">
-                  <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Followers of the Seething Black seek to destroy all of creation, and are in turn reviled by everything. As a result, they cannot take Praetors, Hunters of the Left Hand Path, Yoke Fiends or Wretched. They instead can take Faceless, Stalkers and Cultists.
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Third Party" id="72cf-c9e0-e66f-b668" hidden="false" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Fang of the Seething Black" hidden="false" id="1fda-e6a9-7628-9c49">
+                  <profiles>
+                    <profile name="Eternal Eclipse" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7b7e-988f-303e-a202">
+                      <characteristics>
+                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">A Fang of the Seething Black warband must choose to dedicate themselves to The Void, and no other Sin.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Hated by Creation" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="87c9-0198-ac2c-6232">
+                      <characteristics>
+                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Followers of the Seething Black seek to destroy all of creation, and are in turn reviled by everything. As a result, they cannot take Praetors, Hunters of the Left Hand Path, Yoke Fiends or Wretched. They instead can take Faceless, Stalkers and Cultists.
 
 
 The Fang of the Seething Black cannot purchase Mercenaries and don’t have access to the normal Glory Shop in a Campaign, and instead have their own unique Shop.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Void Magic" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1177-cee2-7eb0-dc8d">
-                  <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When casting Goetic Spells, the Fang of the Seething Black add BLOOD MARKERS to models that are both Friendly and without the DEMONIC keyword, and must do so only with models within the Goetic Range of the caster, including the caster themselves if applicable.
+                      </characteristics>
+                    </profile>
+                    <profile name="Void Magic" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1177-cee2-7eb0-dc8d">
+                      <characteristics>
+                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When casting Goetic Spells, the Fang of the Seething Black add BLOOD MARKERS to models that are both Friendly and without the DEMONIC keyword, and must do so only with models within the Goetic Range of the caster, including the caster themselves if applicable.
 
 
 ° Void Cultists have a Goetic Range of 1”
@@ -4423,24 +4423,26 @@ The Fang of the Seething Black cannot purchase Mercenaries and don’t have acce
 
 
 Special effects such as a Cultist’s Unstable may trigger as a result of paying a spell’s costs. These resolve before the spell does.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2417-d6ed-2999-a6ef"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <profiles>
+                <profile name="Third Party Subfactions" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3847-5f3c-97bc-84c3">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">These subfactions are not fully official. They are officially condoned by Factory Forge, but no assurances are made to balance or consistency with rules. They are included here for the benefit of the community. Please only use these factions with permission from all involved players.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2417-d6ed-2999-a6ef"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-          <profiles>
-            <profile name="Third Party Subfactions" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3847-5f3c-97bc-84c3">
-              <characteristics>
-                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">These subfactions are not fully official. They are officially condoned by Factory Forge, but no assurances are made to balance or consistency with rules. They are included here for the benefit of the community. Please only use these factions with permission from all involved players.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -5031,6 +5033,13 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
         <entryLink import="true" name="Melee Weapons" hidden="false" id="90ce-00fc-1d49-5244" type="selectionEntryGroup" targetId="085e-a0e2-7ba3-9d9c"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="45e4-3031-39fd-02d9" type="selectionEntryGroup" targetId="0e52-65c7-fba4-9113"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Pile of Stuff" hidden="false" id="015f-82da-ae66-1fd3" type="selectionEntry" targetId="1d87-ef77-69ca-eb3f">
       <categoryLinks>
