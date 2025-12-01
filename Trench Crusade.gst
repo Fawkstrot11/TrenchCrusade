@@ -1039,7 +1039,7 @@ Hack and Hew: A model with a Butcher Bayonet, and Friendly Ravenous, Cradle Thra
     <profile name="Grasping Maw" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3dd1-198c-9222-d273">
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">12&quot;</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
         <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Grasp ACTION: A model with this Battlekit can take a Grasp ACTION. If it does so, take a Risky Success Roll for the model. If the roll is a Failure, the model’s Activation ends immediately. If the roll is a Success or Critical Success, pick 1 enemy model that is within 12” of the model taking the Grasp ACTION and in their Line of Sight. You can move the model up to D6”. The move must be in a straight line directly towards the model taking the Grasp ACTION, and can be used to and can be used to make the model move with 1” of an enemy or retreat, but you cannot make Melee attacks with models within 1” of it before it retreats. The model stops if the model moves into contact with another model, Difficult, Dangerous or Impassable Terrain, or a terrain piece it cannot cross without having to Climb or Jump.
  
