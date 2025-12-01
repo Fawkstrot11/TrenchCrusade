@@ -4852,9 +4852,13 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </profile>
