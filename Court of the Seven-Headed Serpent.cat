@@ -3087,6 +3087,164 @@
             </modifier>
           </modifiers>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Void Magic" id="3690-4db6-c76c-c212" hidden="false" sortIndex="9">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Beauty in Suffering" hidden="false" id="f524-976a-c9e5-af0d" sortIndex="1">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="157d-16a4-b449-898c" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d521-fc62-15e1-4728"/>
+              </constraints>
+              <profiles>
+                <profile name="Beauty in Suffering" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="80a8-fe07-6cfc-68bd">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 1)</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order to cast this spell. If you do so, make an ACTION roll. If the roll is a Failure, nothing happens. If the roll is a Success or a Critical Success, every model (friend or foe, including the spellcaster) within 6” of the spellcaster gains 1 Blessing Marker for every 2 Blood Markers on themselves, rounding down.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Coagulation" hidden="false" id="fb8a-8c3b-e04b-68ab" sortIndex="2">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="44f5-f2df-5b5e-83f1"/>
+                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="efa3-65cc-f0e9-5410" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Coagulation" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="79b8-db30-6294-d5e3">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 3)</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order to cast this spell. If you do so, pick an enemy model within 18” of the spellcaster. The targeted model’s Movement is reduced by 2” until the end of its next activation.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Dark Innervation" hidden="false" id="d99d-2dbd-c2ca-9d4c" sortIndex="3">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <profiles>
+                <profile name="Dark Innervation" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8250-d2c5-b8b6-9c1f">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 2-3)</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You can cast this spell once per Turn after the spellcaster or a friendly model with at least 2 BLOOD MARKER on it hits with an attack without the BLAST keyword. If you do so, the chosen model gains either +1 INJURY DICE or +2 INJURY DICE, one less than the amount of Blood Markers used to pay this spell’s costs.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="d111-bd98-4a8d-89c4" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa1e-1e1d-7b1f-c791"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Final Frenzy" hidden="false" id="106d-9327-56be-188e" sortIndex="4">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2c9a-8501-3188-6af2"/>
+              </constraints>
+              <profiles>
+                <profile name="Final Frenzy" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="32cc-13ad-b391-00c0">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 2)</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You can cast this spell once per turn after a friendly model (including the spellcaster) that is eligible to pay this spell’s cost is hit by an attack, before the injury roll is made. If you do so, the chosen model pays this spell’s cost and ignores all Minor Injury and Downed Injury results, and cannot gain Blood Markers in any way, including paying the cost of any other Goetic Spells, until the end of its next activation.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Dust to Dust" hidden="false" id="9a58-b86e-4759-a49b" sortIndex="5">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9eff-8b3b-637a-9430" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dfd1-5c60-48d4-017c"/>
+              </constraints>
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="25"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <profiles>
+                <profile name="Dust to Dust" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="143b-3167-b6c2-b243">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 3)</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order to cast this spell. If you do so, take a Risky Action for the model and add +1 DICE to the roll. If the roll is a Failure, the spellcaster’s Activation ends immediately. If the roll is a Success or a Critical Success, you can choose a friendly model within 12” of the spellcaster, and inflict an Out of Action injury on it. It accepts this fate with open arms, and inflicts 3 Blood Markers on every model within 3” of itself as it dies in a painfully beautiful implosion, fracturing reality itself. If the dying model had at least 3 Blood Markers on it before it died, the caster of this spell gains a Blessing Marker.
+
+
+The spellcaster’s Activation then ends immediately.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Event Horizon" hidden="false" id="09ab-dc4d-83d6-10f7" sortIndex="6">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a3b-ff85-dc7f-523a"/>
+              </constraints>
+              <profiles>
+                <profile name="Event Horizon" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="de39-4798-436c-d3a3">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 1-3)</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order to cast this spell. If you do so, the spellcaster can make a Ranged Attack with a Range of 24”. The attack has the BLAST and SCATTER Keywords, and a blast radius in inches equal to the number of BLOOD MARKERS that were paid to cast the spell plus 1. In addition, if the attack lands directly on top of a model, the model is immediately downed before rolling for its injury. All other models (friend or foe) caught in the blast are pulled up to 3” towards the epicenter of the blast after resolving their Injury Rolls.
+
+
+A Sorcerer cannot purchase both Event horizon and Burning Inferno.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <comment>Fang of the Seething Black spell lists</comment>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Burning Inferno" hidden="true" id="42bc-f444-0c78-b0f6" sortIndex="1">
@@ -4227,166 +4385,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               </conditions>
             </modifier>
           </modifiers>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Void Magic" id="3690-4db6-c76c-c212" hidden="false" sortIndex="9">
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Beauty in Suffering" hidden="false" id="f524-976a-c9e5-af0d" sortIndex="1">
-                  <costs>
-                    <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
-                    <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="157d-16a4-b449-898c" includeChildSelections="true" includeChildForces="true"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d521-fc62-15e1-4728"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Beauty in Suffering" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="80a8-fe07-6cfc-68bd">
-                      <characteristics>
-                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 1)</characteristic>
-                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order to cast this spell. If you do so, make an ACTION roll. If the roll is a Failure, nothing happens. If the roll is a Success or a Critical Success, every model (friend or foe, including the spellcaster) within 6” of the spellcaster gains 1 Blessing Marker for every 2 Blood Markers on themselves, rounding down.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Coagulation" hidden="false" id="fb8a-8c3b-e04b-68ab" sortIndex="2">
-                  <costs>
-                    <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
-                    <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="44f5-f2df-5b5e-83f1"/>
-                    <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="efa3-65cc-f0e9-5410" includeChildSelections="true" includeChildForces="true"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <profiles>
-                    <profile name="Coagulation" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="79b8-db30-6294-d5e3">
-                      <characteristics>
-                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 3)</characteristic>
-                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order to cast this spell. If you do so, pick an enemy model within 18” of the spellcaster. The targeted model’s Movement is reduced by 2” until the end of its next activation.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Dark Innervation" hidden="false" id="d99d-2dbd-c2ca-9d4c" sortIndex="3">
-                  <costs>
-                    <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
-                    <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-                  </costs>
-                  <profiles>
-                    <profile name="Dark Innervation" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8250-d2c5-b8b6-9c1f">
-                      <characteristics>
-                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 2-3)</characteristic>
-                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You can cast this spell once per Turn after the spellcaster or a friendly model with at least 2 BLOOD MARKER on it hits with an attack without the BLAST keyword. If you do so, the chosen model gains either +1 INJURY DICE or +2 INJURY DICE, one less than the amount of Blood Markers used to pay this spell’s costs.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="d111-bd98-4a8d-89c4" includeChildSelections="true" includeChildForces="true"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa1e-1e1d-7b1f-c791"/>
-                  </constraints>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Final Frenzy" hidden="false" id="106d-9327-56be-188e" sortIndex="4">
-                  <costs>
-                    <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
-                    <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2c9a-8501-3188-6af2"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Final Frenzy" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="32cc-13ad-b391-00c0">
-                      <characteristics>
-                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 2)</characteristic>
-                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You can cast this spell once per turn after a friendly model (including the spellcaster) that is eligible to pay this spell’s cost is hit by an attack, before the injury roll is made. If you do so, the chosen model pays this spell’s cost and ignores all Minor Injury and Downed Injury results, and cannot gain Blood Markers in any way, including paying the cost of any other Goetic Spells, until the end of its next activation.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Dust to Dust" hidden="false" id="9a58-b86e-4759-a49b" sortIndex="5">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9eff-8b3b-637a-9430" includeChildSelections="true" includeChildForces="true"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dfd1-5c60-48d4-017c"/>
-                  </constraints>
-                  <costs>
-                    <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="25"/>
-                    <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-                  </costs>
-                  <profiles>
-                    <profile name="Dust to Dust" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="143b-3167-b6c2-b243">
-                      <characteristics>
-                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 3)</characteristic>
-                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order to cast this spell. If you do so, take a Risky Action for the model and add +1 DICE to the roll. If the roll is a Failure, the spellcaster’s Activation ends immediately. If the roll is a Success or a Critical Success, you can choose a friendly model within 12” of the spellcaster, and inflict an Out of Action injury on it. It accepts this fate with open arms, and inflicts 3 Blood Markers on every model within 3” of itself as it dies in a painfully beautiful implosion, fracturing reality itself. If the dying model had at least 3 Blood Markers on it before it died, the caster of this spell gains a Blessing Marker.
-
-
-The spellcaster’s Activation then ends immediately.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Event Horizon" hidden="false" id="09ab-dc4d-83d6-10f7" sortIndex="6">
-                  <costs>
-                    <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
-                    <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a3b-ff85-dc7f-523a"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Event Horizon" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="de39-4798-436c-d3a3">
-                      <characteristics>
-                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 1-3)</characteristic>
-                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order to cast this spell. If you do so, the spellcaster can make a Ranged Attack with a Range of 24”. The attack has the BLAST and SCATTER Keywords, and a blast radius in inches equal to the number of BLOOD MARKERS that were paid to cast the spell plus 1. In addition, if the attack lands directly on top of a model, the model is immediately downed before rolling for its injury. All other models (friend or foe) caught in the blast are pulled up to 3” towards the epicenter of the blast after resolving their Injury Rolls.
-
-
-A Sorcerer cannot purchase both Event horizon and Burning Inferno.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="2a14-1d21-3b35-86a8" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-              </selectionEntries>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <comment>Fang of the Seething Black spell lists</comment>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
         </entryLink>
         <entryLink import="true" name="Grenades" hidden="false" id="f4e0-9006-0ee0-87af" type="selectionEntryGroup" targetId="3dce-3062-9abb-c1de" sortIndex="5"/>
         <entryLink import="true" name="Advancement" hidden="true" id="17df-aec5-58b3-6a10" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
