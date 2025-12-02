@@ -700,8 +700,11 @@
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">GRENADE</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">6&quot;</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, BLAST 3&quot;, FIRE, CONSUMABLE</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, BLAST 3&quot;, FIRE, CONSUMABLE, SCATTER</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Rolls Injuries with 3d6 on a direct hit, or with +1 DICE for every other model caught in the blast.
+
+
+For the purpose of Battle Demolition on Combat Engineers, this item counts as a Satchel Charge.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -717,6 +720,7 @@
             <infoLink name="Fire" id="100b-b764-9ea4-1d51" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
             <infoLink name="Heavy" id="a7c5-226b-99b2-ceb5" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
             <infoLink name="Consumable" id="65a1-ca87-4929-8cd8" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+            <infoLink name="Scatter" id="c0e7-6931-050d-e9d9" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -970,8 +974,8 @@
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, CRITICAL</characteristic>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ARMOUR PIERCING 2, HEAVY, CRITICAL, +1 INJURY DICE</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
               </characteristics>
             </profile>
           </profiles>
@@ -988,6 +992,7 @@
           <infoLinks>
             <infoLink name="Critical" id="fafc-e5ac-fe24-1c5b" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
             <infoLink name="Heavy" id="a6b3-4590-0cdc-4886" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Armour Piercing" id="cff0-6e43-c110-3457" hidden="false" type="rule" targetId="ba7a-64b6-e87b-0ecd"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="b097-ea28-5739-2393" includeChildSelections="true"/>
@@ -2171,6 +2176,10 @@
                     <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">4&quot;</characteristic>
                     <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD</characteristic>
                     <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model causes FEAR. Any friendly models within 4” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. War Horns take one hand to use at all times as if it were a weapon.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your army can purchase a special War Horn instead of a generic musical instrument, but only a Varagian Guard may equip it. This horn is identical to a musical instrument (including equipment restrictions and sharing a LIMIT with the regular Musical Instrument), except the model carrying it causes FEAR.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3912,10 +3921,13 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <profiles>
                 <profile name="Piston Reconfiguration" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f11c-fa32-df03-b98a">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                     <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Warlord gains the keyword AS­SAULT to ranged weapons with the Shield Combo indicator when used with a Trench Shield.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">The Warlord’s armour has been reconfigured to gain +1 to their melee characteristic, at the cost of -1 to their ranged characteristic. It is already reflected in their profile. This upgrade gives the keyword AS­SAULT to ranged weapons with the Shield Combo indicator when used with a Trench Shield.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
                 <profile name="Axe Mastery" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ba8a-6d25-4842-123c">
@@ -3928,10 +3940,13 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 </profile>
                 <profile name="Shield Bash" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2f38-3778-4b83-a125">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
                     <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                     <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                     <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Varangian Guards may use any Shield as an off-hand weapon with -1 DICE to injury. It functions otherwise like a Trench Club.</characteristic>
+                    <characteristic name="Description" typeId="4834-43a9-1c93-9062">Varangian Guards may use any Shield as an off-hand weapon with -1 INJURY DICE. It functions otherwise like a Trench Club.</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                   </characteristics>
                 </profile>
                 <profile name="Indomitable" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="aac6-410b-8a02-3bb9">
@@ -4584,7 +4599,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Axe Mastery" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="1d6a-335b-09ab-0d3a">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Varangian Guards ignore the keyword HEAVY on all axes, and treat two-handed axes as having the Shield Combo indicator. These fierce warriors often lead their charges with a wild swing, before smashing into their opponents for a bloody brawl. On a successful charge, they may immediately make a melee attack with one equipped axe. This is in addition to any other attacks.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">These fierce warriors often lead their charges with a wild swing, before smashing into their opponents for a bloody brawl. On a successful charge, they may immediately make a melee attack with one equipped axe. This is in addition to any other attacks.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -4596,7 +4611,31 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Shield Bash" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="c2f7-dd44-cc90-5d72">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Varangian Guards may use any Shield as an off-hand weapon with -1 DICE to injury. It functions otherwise like a Trench Club.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Varangian Guards may use any Shield as an off-hand weapon with -1 INJURY DICE. It functions otherwise like a Trench Club.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Indomitable" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2513-db50-fb6b-e213">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">These warriors are immune to FEAR.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Weapon Familiarity" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="fd74-ad2b-c80b-3e0b">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Varangian Guards ignore the keyword HEAVY on all axes, and treat two-handed axes as having the Shield Combo indicator. They lose Shock Charge if they equip a shield together with a two-handed axe. They can still carry only one HEAVY item, unless they are STRONG.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -6007,10 +6046,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <profiles>
                 <profile name="Third Party Subfactions" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ef92-4c10-4b69-05e3">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">These subfactions are not fully official, and are licensed under the TCC. They are officially condoned by Factory Forge, but no assurances are made to balance or consistency with rules. They are included here for the benefit of the community. Please only use these factions with permission from all involved players.</characteristic>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">These subfactions are not fully official. They are officially condoned by Factory Forge, but no assurances are made to balance or consistency with rules. They are included here for the benefit of the community. Please only use these factions with permission from all involved players.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
