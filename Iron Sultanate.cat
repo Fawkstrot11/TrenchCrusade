@@ -10,7 +10,6 @@
           </costs>
           <infoLinks>
             <infoLink name="Gas Mask" id="b2fa-8976-9a2b-4f6e" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
-            <infoLink name="Negate [Keyword]" id="3b1b-bcc4-2649-6101" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f72b-5f05-c552-cee6" includeChildSelections="false"/>
@@ -46,7 +45,6 @@
           </costs>
           <infoLinks>
             <infoLink name="Holy Relic" id="628b-50af-095d-32b1" hidden="false" type="profile" targetId="f7dd-c304-609f-c9d1"/>
-            <infoLink name="Blessed" id="22bd-9909-2512-a242" hidden="false" type="rule" targetId="269c-81bd-f64b-737f"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c50c-8dc1-9431-05e4" includeChildSelections="false"/>
@@ -237,7 +235,7 @@
           <profiles>
             <profile name="Hashashin Leaf" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ec64-7a03-2155-796b">
               <characteristics>
-                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When you deploy a model with a Hashashin Leaf for the first time in a game, you can say that the model will consume the Hashashin Leaf. If you do so, the model has the STRONG Keyword for the rest of the game</characteristic>
@@ -328,7 +326,7 @@
             <profile name="Explosive Charges" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9902-c422-18ce-ab2b">
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">* Hidden Explosives: At the start of the game, after Deployment, you can say that a model that has Explosive Charges is going to plant them on the battlefield. If you do so, secretly write down their location on a piece of paper. The Explosive Charges must be planted on a terrain piece that measures up to 8&quot; by 8&quot;, is not fully or partially within the enemy deployment zone or within 1&quot; of a model, and which is not a scenario objective that is worth any Victory Points.
 * Detonating the Explosives: When you Activate a friendly model, before you carry out any ACTIONS you can say that the model is going to detonate any hidden explosives you set up at the start of the game. If you do so, show your opponent the piece of paper saying where the explosives are hidden, and then make an Injury Roll with the SHRAPNEL Keyword for each model (friend or foe) that is in on or in contact with the terrain piece. The terrain piece is then removed from the game. Models that were on top of the terrain piece Fall directly down to the battlefield, and an additional Injury Roll may have to be made for them if they Fall 3&quot; or more.</characteristic>
@@ -360,9 +358,6 @@
               </conditionGroups>
             </modifier>
           </modifiers>
-          <infoLinks>
-            <infoLink name="Consumable" id="be37-754e-c1b8-034d" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
-          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Takwin Anqā Bird" hidden="false" id="3f63-ae26-fd5d-3411" sortIndex="20">
           <costs>
@@ -384,7 +379,7 @@
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Cause Confusion: Success Rolls taken for Melee Attacks that target a model with a Takwin Anqā Bird become Risky Success Rolls (there is no additional effect if they are Risky Success Rolls already). In addition, before an enemy model within 1&quot; of a model with Takwin Anqā Bird makes a retreat, the opposing player must take a Risky Success Roll for the model. If the Roll is a Failure the enemy model cannot retreat and its Activation ends. If the Roll is a Success or a Critical Success, the enemy model can retreat normally.</characteristic>
               </characteristics>
             </profile>
@@ -417,7 +412,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-<<<<<<< HEAD
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
                 <conditionGroup type="or">
@@ -428,8 +422,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-=======
->>>>>>> 06a2712947eed18c8af7059f2af1a99575476004
           </modifiers>
           <profiles>
             <profile name="Sparkpowder Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="71fb-43b5-da89-15f1">
@@ -471,7 +463,6 @@ Can only be used with Jezzails, Alaybozan, Halberd-Guns, Siege Jezzails and Mach
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
-<<<<<<< HEAD
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
                 <conditionGroup type="or">
@@ -482,8 +473,6 @@ Can only be used with Jezzails, Alaybozan, Halberd-Guns, Siege Jezzails and Mach
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-=======
->>>>>>> 06a2712947eed18c8af7059f2af1a99575476004
           </modifiers>
           <profiles>
             <profile name="Heavy Bore Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2bfa-f76b-086f-249e">
@@ -529,7 +518,6 @@ Can only be used with Alaybozan and Siege Jezzails.</characteristic>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-<<<<<<< HEAD
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
                 <conditionGroup type="or">
@@ -540,8 +528,6 @@ Can only be used with Alaybozan and Siege Jezzails.</characteristic>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-=======
->>>>>>> 06a2712947eed18c8af7059f2af1a99575476004
           </modifiers>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b27-f514-658f-899d" includeChildSelections="true"/>
@@ -561,6 +547,38 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Nomads R.P.G." hidden="true" id="d93a-0370-2f55-2f63" sortIndex="8">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <comment>Nomads unique RPG</comment>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="a97b-4723-7109-8686" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Nomads R.P.G." typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="c76e-7839-f61f-df09">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Equipment</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, CONSUMABLE, IGNORE ARMOUR, RELOAD</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">A Rocket-Propelled Grenade is a piece of Equipment that can be used once during a campaign as a Ranged Weapon. If a model that has been hit by a Rocket-Propelled Grenade is not taken Out of Action by the Injury Roll, it is blown D6&quot; in a straight line directly away from the attacking model. It stops if it is blown into another model, Impassable terrain or terrain it cannot cross without having to Climb.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Consumable" id="d2b5-e375-8ab4-d8b7" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+            <infoLink name="Ignore Armour" id="2cfa-4902-0995-9f91" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+            <infoLink name="Reload" id="b7ed-92de-e8ec-ae02" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Headgear" id="5986-4ea2-d618-1a0b" hidden="false" sortIndex="1">
@@ -571,7 +589,6 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
             <selectionEntry type="upgrade" import="true" name="Combat Helmet" hidden="false" id="4f8c-a202-17cd-9c93">
               <infoLinks>
                 <infoLink name="Combat Helmet" id="eec1-7f73-cb22-6508" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
-                <infoLink name="Negate [Keyword]" id="3c69-6f0e-7b78-a039" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
               </infoLinks>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
@@ -633,8 +650,8 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
             <infoLink name="Frag Grenades" id="82ea-93a3-bf07-7dc0" hidden="false" type="profile" targetId="cc34-0630-85e1-2583"/>
             <infoLink name="Shrapnel" id="da9c-9f12-1228-4c45" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
             <infoLink name="Assault" id="bcd9-54a2-3b2d-ec5e" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
-            <infoLink name="Ignore [Modifier]" id="eb40-1e15-ece7-9ceb" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
-            <infoLink name="Blast" id="a614-4704-69eb-1ab1" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+            <infoLink name="Blast" id="eb40-1e15-ece7-9ceb" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+            <infoLink name="Grenade" id="d40a-2811-e941-c2a6" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a54-0729-db4a-84af" includeChildSelections="false"/>
@@ -649,7 +666,7 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
             <infoLink name="Incendiary Grenades" id="a85d-c270-5e4d-8fd0" hidden="false" type="profile" targetId="3bfd-2c1d-2d6b-a36c"/>
             <infoLink name="Assault" id="7308-1bfe-c415-413c" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Fire" id="2741-d89b-d40e-81aa" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
-            <infoLink name="Ignore [Modifier]" id="4c4c-e11f-3b0e-d412" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Grenade" id="576f-adbe-6b92-90d5" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2103-ed7c-fa2a-7fcd" includeChildSelections="false"/>
@@ -672,9 +689,6 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
             <infoLink name="Heavy" id="9e3c-f3d1-c704-af9d" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
             <infoLink name="Blast" id="0c8a-f32d-ca2e-3f6a" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Consumable" id="1c86-cd72-e342-ef8a" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
-            <infoLink name="Ignore [Modifier]" id="ec9f-ec1c-15a1-39ab" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
-            <infoLink name="Scatter" id="8eba-b3fa-494e-0c9a" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
-            <infoLink name="Ignore Armour" id="d1c7-8d49-8968-e42e" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -723,7 +737,6 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
           <infoLinks>
             <infoLink name="War Cross" id="8509-868e-b67f-6500" hidden="false" type="profile" targetId="2d02-94a4-2493-186f"/>
             <infoLink name="Assault" id="4e3d-5e4c-e8f3-5e99" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
-            <infoLink name="Ignore [Modifier]" id="a8bb-baf1-b2ca-7c22" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -749,8 +762,7 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
           <infoLinks>
             <infoLink name="Molotov Cocktail" id="9e0a-edc8-2c9b-de5a" hidden="false" type="profile" targetId="b16a-e1fa-433f-efc0"/>
             <infoLink name="Assault" id="3575-767a-a966-5ea5" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
-            <infoLink name="Ignore [Modifier]" id="3ac6-c424-8fd5-ff2d" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
-            <infoLink name="Fire" id="a591-ef75-e368-88b2" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+            <infoLink name="Fire" id="3ac6-c424-8fd5-ff2d" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -831,7 +843,7 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Trench Knife" id="d891-e4d1-da5e-e372" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
+            <infoLink name="Knife" id="d891-e4d1-da5e-e372" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -954,7 +966,7 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Scourge/Battle Whip/Flail" id="2d01-f2b5-57c6-2d77" hidden="false" type="profile" targetId="f469-b712-2233-ac79"/>
+            <infoLink name="Scourge" id="2d01-f2b5-57c6-2d77" hidden="false" type="profile" targetId="f469-b712-2233-ac79"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -979,7 +991,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
           </costs>
           <infoLinks>
             <infoLink name="Misericordia" id="d215-598b-3d48-d57b" hidden="false" type="profile" targetId="d82e-4c7b-28ac-1413"/>
-            <infoLink name="Ignore Armour" id="81cc-48ed-5b7d-61c0" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1010,7 +1021,7 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Great Hammer/Maul/Club/Mace" id="9095-643a-d8e7-71dc" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
+            <infoLink name="Great Blunt Weapon" id="9095-643a-d8e7-71dc" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
             <infoLink name="Heavy" id="eb79-a692-d9dc-9019" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <categoryLinks>
@@ -1098,7 +1109,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <infoLink name="Anti-Tank Hammer" id="8019-ba89-51f7-3850" hidden="false" type="profile" targetId="8df3-f372-20a0-4a59"/>
             <infoLink name="Risky" id="8b53-f390-0dba-c31b" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
             <infoLink name="Critical" id="d444-3329-967c-6d90" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
-            <infoLink name="Ignore Armour" id="1117-0bc7-84cf-00a1" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1139,7 +1149,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
               <infoLinks>
                 <infoLink name="Polearm" id="3742-b482-701b-767b" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
                 <infoLink name="Cumbersome" id="101b-821e-4fe1-e198" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
-                <infoLink name="Block" id="8bcc-1ef3-0e72-ce06" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Cumbersome" hidden="false" id="6a35-7b6a-2ed9-5595" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
@@ -1211,7 +1220,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink name="Pistol" id="aa2a-ea12-b6cd-646d" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -1299,8 +1307,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
               </modifiers>
             </infoLink>
             <infoLink name="Assault" id="767d-27c0-72a1-3baa" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
-            <infoLink name="Pistol" id="168f-11d5-11b1-fb43" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
-            <infoLink name="Automatic" id="4e1f-1531-f86d-bf76" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1359,8 +1365,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
               </modifiers>
             </infoLink>
             <infoLink name="Assault" id="a709-40b9-a55e-7979" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
-            <infoLink name="Automatic" id="ff8c-e52e-5e0c-175a" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
-            <infoLink name="Pistol" id="6019-b7c9-7cc4-8cd9" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4daa-c00f-1e3e-8864" includeChildSelections="true"/>
@@ -1415,6 +1419,10 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
               </conditionGroups>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Heavy" id="46a4-f568-b4f9-1ca0" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore Armour" id="0736-e12a-fab7-fcde" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink targetId="0934-cc68-ca08-7e2b" id="051f-05a1-006b-4f3e" primary="false" name="Bull"/>
           </categoryLinks>
@@ -1452,9 +1460,7 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
           </constraints>
           <infoLinks>
             <infoLink name="Machine Gun" id="8c9c-d59f-aca7-08b9" hidden="false" type="profile" targetId="517c-652f-100e-71d6"/>
-            <infoLink name="Automatic" id="18aa-3e7a-f708-34ed" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
-            <infoLink name="Heavy" id="fe62-8ec3-6c4f-074d" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
-            <infoLink name="Reload" id="4cdb-595f-5cce-1848" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
+            <infoLink name="Heavy" id="18aa-3e7a-f708-34ed" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="820a-2610-1a0a-1443" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -1471,8 +1477,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
           <infoLinks>
             <infoLink name="Flamethrower" id="1669-edb3-ada1-a817" hidden="false" type="profile" targetId="9b21-3223-c112-c65f"/>
             <infoLink name="Fire" id="3c38-28ec-9d38-31e2" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
-            <infoLink name="Flamethrower" id="992f-db65-43b9-c521" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
-            <infoLink name="Ignore Armour" id="2e8e-2445-71bc-301a" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -1512,8 +1516,8 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">30&quot;</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, HEAVY</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
+                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
               </characteristics>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
@@ -1571,7 +1575,7 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">18&quot;</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
+                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
               </characteristics>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
@@ -1608,7 +1612,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             </infoLink>
             <infoLink name="Critical" id="d31c-91cc-d2cc-61af" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
             <infoLink name="Risky" id="59b2-8198-7e48-91ef" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
-            <infoLink name="Ignore Armour" id="7886-fd3c-470f-19e9" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1679,8 +1682,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink name="Assault" id="8133-e5df-b284-3c44" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
-            <infoLink name="Automatic" id="7559-9d13-93f9-b54a" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1861,9 +1862,8 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
           <infoLinks>
             <infoLink name="Grenade Launcher" id="24bc-d793-79c5-d19e" hidden="false" type="profile" targetId="3113-d133-1726-05a0"/>
             <infoLink name="Shrapnel" id="2a58-fccc-ce27-e3d2" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
-            <infoLink name="Ignore [Modifier]" id="3eb2-0836-06e3-95b9" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Heavy" id="3eb2-0836-06e3-95b9" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
             <infoLink name="Blast" id="528f-8f9b-f5bf-49b1" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
-            <infoLink name="Heavy" id="cc35-c018-1da3-b53e" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1913,7 +1913,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <infoLink name="Punt Gun" id="26ff-9411-2eda-c56b" hidden="false" type="profile" targetId="77ea-665d-7ac6-58ef"/>
             <infoLink name="Heavy" id="ee81-fcdb-f143-a895" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
             <infoLink name="Shrapnel" id="84e8-c035-8cc5-018f" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
-            <infoLink name="Shotgun" id="68f6-032f-e034-f991" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1936,11 +1935,8 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
           </costs>
           <infoLinks>
             <infoLink name="Heavy Flamethrower" id="414f-c8dc-7453-c069" hidden="false" type="profile" targetId="2fc0-bc43-b366-5b95"/>
-            <infoLink name="Flamethrower" id="930b-8d31-11b5-b456" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+            <infoLink name="Heavy" id="930b-8d31-11b5-b456" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
             <infoLink name="Fire" id="0498-59cf-e055-2a48" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
-            <infoLink name="Automatic" id="cb0a-6503-3487-d88e" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
-            <infoLink name="Ignore Armour" id="e329-d882-0351-14cd" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
-            <infoLink name="Heavy" id="276c-3b18-62b8-1c66" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -2021,7 +2017,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
               </entryLinks>
               <infoLinks>
                 <infoLink name="Shotgun" id="6a62-29af-6f0e-c1bd" hidden="false" type="profile" targetId="0924-0647-1366-9d85"/>
-                <infoLink name="Shotgun" id="db53-262c-354d-6cda" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -2073,7 +2068,7 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
                     <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
                     <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;</characteristic>
                     <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">SHRAPNEL</characteristic>
-                    <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
+                    <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
                   </characteristics>
                   <modifiers>
                     <modifier type="set" value="false" field="hidden">
@@ -2092,8 +2087,7 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
               </costs>
               <infoLinks>
                 <infoLink name="Automatic Shotgun" id="6090-768f-2baa-3705" hidden="false" type="profile" targetId="a19d-90ab-da9f-95ff"/>
-                <infoLink name="Shotgun" id="62ad-0920-3de7-9c81" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
-                <infoLink name="Assault" id="563f-53e0-143d-228f" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+                <infoLink name="Assault" id="62ad-0920-3de7-9c81" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
@@ -2145,7 +2139,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
               <infoLinks>
                 <infoLink name="Heavy Shotgun" id="90c8-a096-897f-b3f9" hidden="false" type="profile" targetId="c5ac-8d24-4060-8655"/>
                 <infoLink name="Heavy" id="057c-edb5-2413-3b3d" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
-                <infoLink name="Shotgun" id="f59b-4e60-0986-afe0" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
@@ -2407,8 +2400,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
           </constraints>
           <infoLinks>
             <infoLink name="Troop Flag" id="23a9-a599-14eb-7bae" hidden="false" type="profile" targetId="e86e-146a-65b7-09f2"/>
-            <infoLink name="Leader" id="c42e-013f-cbab-5fa6" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
-            <infoLink name="Held" id="0e47-dfd3-e1f3-c3e6" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2433,7 +2424,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
           </constraints>
           <infoLinks>
             <infoLink name="Musical Instrument" id="7dda-6618-ec51-d699" hidden="false" type="profile" targetId="dd0c-c62d-46f1-64f8"/>
-            <infoLink name="Held" id="17b3-68fd-daa1-78cb" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2487,7 +2477,7 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <profile name="Banner of Desert Wind" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a92a-fa8e-15f9-f2f2">
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">24&quot;</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD, LEADER</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Sandstorm: Subtract 1 from the Movement Characteristic of enemy models within 24&quot; of a model with the Banner of Desert Wind, unless the model with the Banner of Desert Wind is Down.</characteristic>
               </characteristics>
@@ -2881,12 +2871,15 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Medicine" hidden="false" id="df13-797c-9e94-0df3" sortIndex="1">
           <profiles>
-            <profile name="Secrets of Medicine" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="0966-6f0e-5300-4284">
+            <profile name="Secrets of Medicine" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="0966-6f0e-5300-4284">
               <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Alchemist is a student of Ibn Sina’s School of Medicine.
-This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemist it can take a School of Medicine ACTION as part of the Activation. If it does so, take a Success Roll for the Alchemist and add +1 DICE to the roll. If the roll is a Failure, nothing happens. If it is a Success or a Critical Success, you can do one of the following things:
-* Remove 2 BLOOD MARKERS or 1 INFECTION MARKER from the Alchemist or a friendly model within 1&quot; of the Alchemist.
-* Stand up a friendly model that is Down and which is within 1&quot; of the Alchemist.</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Alchemist is a student of Ibn Sina’s School of Medicine.
+This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemist it can take a School of Medicine ACTION as part of the Activation. If it does so, take a Success Roll for the Alchemist and add +1 DICE to the roll. If the roll is a Failure, nothing happens. If it is a Success or a Critical Success, you can do one of the following things:
+* Remove 2 BLOOD MARKERS or 1 INFECTION MARKER from the Alchemist or a friendly model within 1&quot; of the Alchemist.
+* Stand up a friendly model that is Down and which is within 1&quot; of the Alchemist.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2900,9 +2893,12 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemist
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Cartography &amp; Geometry" hidden="false" id="74b6-87eb-d383-ea59" sortIndex="2">
           <profiles>
-            <profile name="Secrets of Cartography &amp; Geometry" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4e71-6ded-f58e-8ffe">
+            <profile name="Secrets of Cartography &amp; Geometry" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4e71-6ded-f58e-8ffe">
               <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Alchemist has studied long and hard the sciences of cartography and Geometry. At the start of the game, before deployment, you can pick up to 2 models in the Warband that are mounted on a base of 32mm or less, giving them the INFILTRATOR Keyword for that game.</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Alchemist has studied long and hard the sciences of cartography and Geometry. At the start of the game, before deployment, you can pick up to 2 models in the Warband that are mounted on a base of 32mm or less, giving them the INFILTRATOR Keyword for that game.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2916,9 +2912,12 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemist
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Chemistry &amp; Alchemy" hidden="false" id="5731-aea3-61d2-206c" sortIndex="4">
           <profiles>
-            <profile name="Secrets of Chemistry &amp; Alchemy" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="77a1-74cd-f781-efb5">
+            <profile name="Secrets of Chemistry &amp; Alchemy" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="77a1-74cd-f781-efb5">
               <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">At the start of the first Turn of the game, before any models have been Activated, you can set up an Elemental Obstacle terrain piece that is up to 2&quot; wide and 6&quot; long. It must be set up more than 1&quot; away from any other terrain pieces and more than 6&quot; from any models. After setting it up, you must say if it has the FIRE, GAS, or SHRAPNEL Keyword. The Elemental Obstacle is Difficult and Dangerous terrain. Any Injury Rolls caused by the Dangerous terrain rule have the Keywords you chose when you set the terrain up.</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">At the start of the first Turn of the game, before any models have been Activated, you can set up an Elemental Obstacle terrain piece that is up to 2&quot; wide and 6&quot; long. It must be set up more than 1&quot; away from any other terrain pieces and more than 6&quot; from any models. After setting it up, you must say if it has the FIRE, GAS, or SHRAPNEL Keyword. The Elemental Obstacle is Difficult and Dangerous terrain. Any Injury Rolls caused by the Dangerous terrain rule have the Keywords you chose when you set the terrain up.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2932,9 +2931,12 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemist
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Secrets of Takwin" hidden="false" id="1549-4fe1-f55f-fd26" sortIndex="3">
           <profiles>
-            <profile name="Secrets of Takwin" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4285-e047-b265-bc62">
+            <profile name="Secrets of Takwin" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4285-e047-b265-bc62">
               <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Alchemist has bound their Takwin creature to themselves with unbreakable bonds. If this Alchemist is hit by an attack while within 1&quot; of their Takwin Homunculus, you can apply the hit to the Homunculus and make the Injury Roll for it instead of the Alchemist.</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Alchemist has bound their Takwin creature to themselves with unbreakable bonds. If this Alchemist is hit by an attack while within 1&quot; of their Takwin Homunculus, you can apply the hit to the Homunculus and make the Injury Roll for it instead of the Alchemist.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2948,9 +2950,12 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemist
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Philosophy, Poetry and Theology" hidden="false" id="8dc7-e406-a9c5-2215" sortIndex="4">
           <profiles>
-            <profile name="Secrets of Philosophy, Poetry and Theology" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1397-70c7-2653-9820">
+            <profile name="Secrets of Philosophy, Poetry and Theology" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1397-70c7-2653-9820">
               <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">At the start of the first Turn of the game, before any models have been Activated, you can set up an Elemental Obstacle terrain piece that is up to 2&quot; wide and 6&quot; long. It must be set up more than 1&quot; away from any other terrain pieces and more than 6&quot; from any models. After setting it up, you must say if it has the FIRE, GAS, or SHRAPNEL Keyword. The Elemental Obstacle is Difficult and Dangerous terrain. Any Injury Rolls caused by the Dangerous terrain rule have the Keywords you chose when you set the terrain up.</characteristic>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE FEAR</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Alchemist is well-versed in the hidden truths of the Universe and of the Divine and has a calm and clearmind. Add +1 DICE to Morale Check Success Rolls for this Alchemist’s Warband, as long as the Alchemist is not Down or Out of Action. In addition, if this Alchemist’s Warband becomes Shaken, ignore the requirement that all Success Rolls become Risky Success Rolls (however you still need to see if the Warband flees in the following Turn’s Morale Phase). The Alchemist has the NEGATE FEAR Keyword</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2961,9 +2966,6 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemist
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
-          <infoLinks>
-            <infoLink name="Negate [Keyword]" id="b638-ac18-0f29-4432" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
-          </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -3129,7 +3131,7 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemist
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">48&quot;</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 INJURY DICE, HEAVY, IGNORE ARMOUR</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 INJURY DICE, HEAVY IGNORE ARMOUR</characteristic>
                 <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Unstoppable Object: If a model that has been hit by a Sultanate Grand Cannon is not taken Out of Action by the Injury Roll, it is pushed D6&quot; in a straight line directly away from the attacking model. The model stops if it pushed into another model, Impassable terrain or a terrain piece it cannot cross without having to Climb.</characteristic>
               </characteristics>
             </profile>
@@ -3147,7 +3149,7 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemist
             <profile name="Anqā Guard" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="dbf1-479d-1dfa-29e2">
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HEAVY</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">An Anqā Guard is represented by a model of a shield that is about 1&quot; high and which is mounted on a 40mm base.
 
@@ -3695,11 +3697,11 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Gargantuan Size" hidden="true" id="6603-2315-97b5-d845" sortIndex="13">
+            <selectionEntry type="upgrade" import="true" name="Massive Size" hidden="true" id="6603-2315-97b5-d845" sortIndex="13">
               <profiles>
                 <profile name="Gargantuan Size" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8cb2-f9e6-e496-1153">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus can use 1 Weapon that can usually only be taken by a Brazen Bull, and its base size is increased to 60mm.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Homunculus’ size is increased into vast proportions. Give this Takwin Homunculus the TOUGH Keyword and increase its base size to 50mm. A Homunculus cannot have the Massive Size Alchemical Formula if it has the Wings Alchemical Formula.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3707,7 +3709,7 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d86-4eb8-3e18-fb23" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <modifiers>
@@ -5071,7 +5073,6 @@ Assassin makes the time slip.</characteristic>
             <conditionGroup type="or">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="c2b1-d49e-937b-2f87" shared="true" includeChildSelections="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cd91-f171-98d6-423e" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
