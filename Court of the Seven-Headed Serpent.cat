@@ -375,9 +375,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This equipment is treated as an upgrade that cannot be removed once purchased. When this upgrade is purchased you may choose to remove a scar from this Model. Additionally any time you roll 3 or more 6’s on exploration (after exploration skills like Set Dice or Rerolls have been accounted for), you may choose to pay 1 Glory to remove 1 scar from this Model.
-
-</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This equipment is treated as an upgrade that cannot be removed once purchased. When this upgrade is purchased you may choose to remove a scar from this Model. Additionally any time you roll 3 or more 6’s on exploration (after exploration skills like Set Dice or Rerolls have been accounted for), you may choose to pay 1 Glory to remove 1 scar from this Model.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3577,11 +3575,21 @@ A Sorcerer cannot purchase both Event horizon and Burning Inferno.</characterist
             </modifier>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="68a4-5af6-6f09-aeab" shared="true"/>
-                  </conditions>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="68a4-5af6-6f09-aeab" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="658a-8247-8e8a-8f85" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -5343,8 +5351,8 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Weapons" hidden="false" id="2c39-2b8e-7dc1-1bfb" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="2"/>
-        <entryLink import="true" name="Grenades" hidden="false" id="9d44-5e38-8bf9-2967" type="selectionEntryGroup" targetId="3dce-3062-9abb-c1de" sortIndex="3">
+        <entryLink import="true" name="Weapons" hidden="false" id="2c39-2b8e-7dc1-1bfb" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="4"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="9d44-5e38-8bf9-2967" type="selectionEntryGroup" targetId="3dce-3062-9abb-c1de" sortIndex="5">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c8fa-c6d0-5c1c-7d13" includeChildSelections="false"/>
           </constraints>
@@ -5356,15 +5364,18 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Armour" hidden="false" id="20ee-a72f-e2e1-65bf" type="selectionEntryGroup" targetId="a7de-6b4b-be33-277c" sortIndex="4"/>
+        <entryLink import="true" name="Armour" hidden="false" id="20ee-a72f-e2e1-65bf" type="selectionEntryGroup" targetId="a7de-6b4b-be33-277c" sortIndex="6"/>
         <entryLink import="true" name="Equipment" hidden="false" id="4b2e-ef91-026c-72a8" type="selectionEntryGroup" targetId="1434-ae99-841b-041e" sortIndex="5"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="83b2-bdbd-7ede-4bf1" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
-        <entryLink import="true" name="Fireteams" hidden="false" id="22dd-3046-4d8b-26a0" type="selectionEntryGroup" targetId="0e52-65c7-fba4-9113" sortIndex="1"/>
-        <entryLink import="true" name="Advancement" hidden="true" id="5223-9076-b329-4bbe" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="-1">
+        <entryLink import="true" name="Fireteams" hidden="false" id="22dd-3046-4d8b-26a0" type="selectionEntryGroup" targetId="0e52-65c7-fba4-9113" sortIndex="2"/>
+        <entryLink import="true" name="Goetic Powers" hidden="true" id="0229-3b1d-5553-8cc5" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee" sortIndex="3">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="618c-da02-ecb5-b1bd" includeChildSelections="false"/>
+          </constraints>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="8ba8-5e95-71aa-24e8" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5486,6 +5497,38 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
             </modifier>
           </modifiers>
         </profile>
+        <profile name="Slavemaster" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="true" id="c7c3-3548-f3e2-365a">
+          <characteristics>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 1)</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">18&quot;</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order for it to cast this spell. If you do so, you can carry out one of the following Commands with a Yoke Fiend that is within 18&quot; of the spellcaster. Carrying out a Command does not stop the Yoke Fiend from being Activated in the same Turn (before or after the Command was issued).
+- Sacrifice Command: The Yoke Fiend kills itself. It is taken Out of Action and crossed off its Warband Roster.
+- Fight Command: The Yoke Fiend carries out a Melee Attack.
+- Move Command: The Yoke Fiend carries out a Move (it cannot Charge or Retreat).
+- Shoot Command: The Yoke Fiend carries out a Ranged Attack.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Low on the Blood Chain" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="b852-3309-a987-5ad5">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Cultists are treated as Yoke Fiends for the purposes of Equipment and the spell Slavemaster. 
+Unlike Yoke Fiends, Cultists can be promoted to ELITE.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
       </profiles>
       <modifierGroups>
         <modifierGroup type="and">
@@ -5508,12 +5551,218 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
             <conditionGroup type="and">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="bc33-e591-8f2e-a847" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="8ba8-5e95-71aa-24e8" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifierGroup>
       </modifierGroups>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Advancement" id="546a-54d9-5b69-37c4" hidden="true" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Elite Promotion" hidden="false" id="30b2-e154-1911-8f5e">
+              <profiles>
+                <profile name="Promoted!" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="12d2-7961-1e16-963c">
+                  <characteristics>
+                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This unit is now Elite.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true" includeChildSelections="false"/>
+                        <condition type="lessThan" value="1" field="selections" scope="model" childId="30b2-e154-1911-8f5e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="remove" value="bd43-ddb1-262d-4489" field="category" scope="model"/>
+                    <modifier type="set-primary" value="3de0-192c-3ec2-51be" field="category" scope="model"/>
+                  </modifiers>
+                </modifierGroup>
+                <modifierGroup type="and">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="prepend" value="Favoured" field="name" scope="model" join=" " affects="profiles.Unit">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="72ab-daa4-80ee-e9a5" shared="true"/>
+                          </conditions>
+                        </modifier>
+                        <modifier type="prepend" value="Favoured" field="name" scope="model" join=" ">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="72ab-daa4-80ee-e9a5" shared="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                      <comment>sultans</comment>
+                    </modifierGroup>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="prepend" value="Commissioned Officer" field="name" scope="model" join=" " affects="profiles.Unit">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                          </conditions>
+                        </modifier>
+                        <modifier type="prepend" value="Commissioned Officer" field="name" scope="model" join=" ">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                      <comment>antioch</comment>
+                    </modifierGroup>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="prepend" value="Ascendant" field="name" scope="model" join=" " affects="profiles.Unit">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="44b9-e92b-2dc0-6820" shared="true"/>
+                          </conditions>
+                        </modifier>
+                        <modifier type="prepend" value="Ascendant" field="name" scope="model" join=" ">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="44b9-e92b-2dc0-6820" shared="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                      <comment>court</comment>
+                    </modifierGroup>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="prepend" value="Blasphemous" field="name" scope="model" join=" " affects="profiles.Unit">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
+                          </conditions>
+                        </modifier>
+                        <modifier type="prepend" value="Blasphemous" field="name" scope="model" join=" ">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                      <comment>heretic</comment>
+                    </modifierGroup>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="prepend" value="Exalted" field="name" scope="model" join=" " affects="profiles.Unit">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d54d-055d-bbc0-a20f" shared="true"/>
+                          </conditions>
+                        </modifier>
+                        <modifier type="prepend" value="Exalted" field="name" scope="model" join=" ">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d54d-055d-bbc0-a20f" shared="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                      <comment>pilgrim</comment>
+                    </modifierGroup>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="prepend" value="Putrid" field="name" scope="model" join=" " affects="profiles.Unit">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0b26-15c1-cebd-0077" shared="true"/>
+                          </conditions>
+                        </modifier>
+                        <modifier type="prepend" value="Putrid" field="name" scope="model" join=" ">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0b26-15c1-cebd-0077" shared="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                      <comment>grail</comment>
+                    </modifierGroup>
+                  </modifierGroups>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b97-8150-7d1e-fd06" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experience" hidden="true" id="49fd-8f83-901e-e948">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="7" field="9ae8-1dfa-19a6-5bf8">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="71f8-ee29-0f90-59ec" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="18" field="selections" scope="parent" shared="true" id="9ae8-1dfa-19a6-5bf8" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Experience" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2873-9e7a-3ad9-a547">
+                  <characteristics>
+                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model has accumulated experience. This does not effect your skill access in NewRecruit, and is solely for convenience of tracking.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Embraced by the Void" hidden="true" id="8ba8-5e95-71aa-24e8">
+              <profiles>
+                <profile name="Embraced by the Void" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="90f3-ace3-bdcc-dad4">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Void Cultists learn the Slavemaster Goetic Spell, and may purchase one more Goetic spell if it wishes to.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="30b2-e154-1911-8f5e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="88ab-177a-be50-a62c"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Skills" hidden="false" id="8323-b698-0a55-d891" type="selectionEntryGroup" targetId="e01c-f1e9-f8ca-e6c9"/>
+            <entryLink import="true" name="Injuries" hidden="false" id="fa73-b83a-6044-9f56" type="selectionEntryGroup" targetId="5bde-8a8f-302c-1431"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="afdf-43aa-a03d-918b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Wretched" hidden="false" id="a957-7766-e2fa-f4b3">
       <categoryLinks>
