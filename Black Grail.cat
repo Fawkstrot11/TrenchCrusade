@@ -78,6 +78,8 @@
             <infoLink name="Blast" id="b190-a9b3-55e7-725b" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Gas" id="5240-7f4c-b551-0140" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
             <infoLink name="Grenade" id="ffca-27a6-0df3-060b" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+            <infoLink name="Ignore [Modifier]" id="23f8-6530-a177-9a2f" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Ignore Armour" id="e033-5e9a-29e6-d7eb" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="47c5-67fa-3500-1c09" includeChildSelections="false"/>
@@ -110,6 +112,7 @@
             <infoLink name="Blast" id="e327-b957-a030-d36f" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Assault" id="3613-9b45-3dd5-e43f" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Shrapnel" id="d1c8-7654-cd2a-f2a1" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+            <infoLink name="Ignore [Modifier]" id="fa09-7fed-995e-7de5" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -136,6 +139,7 @@
             <infoLink name="Incendiary Grenades" id="73cf-0ac1-da38-cec6" hidden="false" type="profile" targetId="3bfd-2c1d-2d6b-a36c"/>
             <infoLink name="Fire" id="2123-fd70-508f-fab5" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
             <infoLink name="Assault" id="ec26-a7e0-82c8-2857" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Ignore [Modifier]" id="f2ed-371a-105d-6b82" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -164,6 +168,9 @@
             <infoLink name="Blast" id="9e34-f523-6fda-cb0e" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Consumable" id="a49b-428f-3ec5-a5ca" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
             <infoLink name="Heavy" id="c4d4-a613-f34a-f3e3" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore [Modifier]" id="68fe-fcd9-158b-dde4" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Scatter" id="2290-2cd3-9acc-757a" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
+            <infoLink name="Ignore Armour" id="bd60-8b9e-5f5a-b7ca" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -193,7 +200,7 @@
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Knife" id="6273-19ad-dc6c-5c99" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
+            <infoLink name="Trench Knife" id="6273-19ad-dc6c-5c99" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sword/Axe" hidden="false" id="e7d2-831b-a94c-be67" sortIndex="3" collective="false">
@@ -304,8 +311,9 @@
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Great Blunt Weapon" id="1891-9d28-1dee-a9ad" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
+            <infoLink name="Great Hammer/Maul/Club/Mace" id="1891-9d28-1dee-a9ad" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
             <infoLink name="Heavy" id="d462-707d-fd7d-31dc" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="+/- Injury Modifier" id="ae27-4776-3f8f-07b4" hidden="false" type="rule" targetId="3f79-aee7-2c3d-828f"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="b4c2-c309-5609-0b53" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -395,6 +403,7 @@
               <infoLinks>
                 <infoLink name="Polearm" id="011a-2433-3786-4dae" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
                 <infoLink name="Cumbersome" id="1fb9-3c49-63e6-0161" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+                <infoLink name="Block" id="adfc-ad4d-2d70-eb80" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Cumbersome" hidden="false" id="c654-aaf0-173d-da76" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
@@ -582,6 +591,7 @@
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Pistol" id="8535-be84-27ea-5b6b" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Silenced Pistol" hidden="false" id="3c3d-2a14-cb20-a0b6" sortIndex="2">
@@ -602,6 +612,8 @@
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Pistol" id="11eb-c38e-cc7b-b2d7" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
+            <infoLink name="Assault" id="a59f-f352-2738-84ec" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -634,6 +646,9 @@
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Automatic" id="1fde-0344-869b-910b" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Pistol" id="2c91-9938-3415-c0fd" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
+            <infoLink name="Assault" id="e519-7c01-eb55-9dde" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -732,7 +747,9 @@
           </constraints>
           <infoLinks>
             <infoLink name="Corruption Belcher" id="e746-f7e5-b427-0a40" hidden="false" type="profile" targetId="801f-50a4-1ea2-7b92"/>
-            <infoLink name="Gas" id="0b4d-9009-6cae-c9ac" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
+            <infoLink name="Flamethrower" id="0b4d-9009-6cae-c9ac" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+            <infoLink name="Gas" id="0943-7d8f-a3d1-f78a" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
+            <infoLink name="Ignore Armour" id="6dd3-f9ab-bb35-d13d" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="increment" value="1" field="0b3d-9c8c-5946-779a">
@@ -773,6 +790,8 @@
           <infoLinks>
             <infoLink name="Machine Gun" id="5f6e-7b59-dcf5-ca96" hidden="false" type="profile" targetId="517c-652f-100e-71d6"/>
             <infoLink name="Heavy" id="6c9a-7cd7-b55d-bf39" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Automatic" id="9179-7313-1789-b832" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Reload" id="3deb-7d9d-ed33-f5fc" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="0eec-a486-b68b-91d7" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -814,6 +833,7 @@
               </modifiers>
             </infoLink>
             <infoLink name="Assault" id="4956-de88-4285-2855" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Automatic" id="5a8e-52ce-0c29-31ab" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -843,6 +863,7 @@
             <infoLink name="Anti-Material Rifle" id="37d6-4bf6-f741-49d6" hidden="false" type="profile" targetId="50ec-f075-494f-9dc5"/>
             <infoLink name="Critical" id="2db0-86c3-ac53-7845" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
             <infoLink name="Heavy" id="bd6b-1c59-c590-b74b" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore Armour" id="834b-6d17-a509-733d" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -871,6 +892,8 @@
           <infoLinks>
             <infoLink name="Flamethrower" id="6d5e-7d3e-9c84-e808" hidden="false" type="profile" targetId="9b21-3223-c112-c65f"/>
             <infoLink name="Fire" id="6001-115e-9417-3a31" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+            <infoLink name="Flamethrower" id="ed7e-a68c-8dca-3413" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+            <infoLink name="Ignore Armour" id="5165-dbdf-d78b-ae32" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -896,6 +919,10 @@
           </constraints>
           <infoLinks>
             <infoLink name="Grenade Launcher" id="03bb-a603-735b-f528" hidden="false" type="profile" targetId="3113-d133-1726-05a0"/>
+            <infoLink name="Blast" id="67d6-c694-2e04-6c5f" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+            <infoLink name="Ignore [Modifier]" id="26d2-f301-849d-6b5f" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Heavy" id="02cf-e162-3ca3-3968" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Shrapnel" id="7538-094e-97f2-3466" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -924,8 +951,11 @@
           </constraints>
           <infoLinks>
             <infoLink name="Heavy Flamethrower" id="8593-e023-91cf-53f9" hidden="false" type="profile" targetId="2fc0-bc43-b366-5b95"/>
-            <infoLink name="Fire" id="1c3b-e76e-6cc7-522b" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
-            <infoLink name="Heavy" id="ae6a-9b7b-84e1-1d7c" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Automatic" id="1c3b-e76e-6cc7-522b" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Ignore Armour" id="ae6a-9b7b-84e1-1d7c" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+            <infoLink name="Flamethrower" id="828c-a9a5-7dd9-cfb3" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+            <infoLink name="Fire" id="4094-d280-862d-d74d" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+            <infoLink name="Heavy" id="df86-7ed1-c9a4-e7c9" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -954,7 +984,9 @@
           </constraints>
           <infoLinks>
             <infoLink name="Machine Gun" id="1264-c9f6-ad7e-6bc0" hidden="false" type="profile" targetId="517c-652f-100e-71d6"/>
-            <infoLink name="Heavy" id="5f1d-1706-6914-ea6a" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Reload" id="5f1d-1706-6914-ea6a" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
+            <infoLink name="Automatic" id="1a69-0844-ce66-ca97" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Heavy" id="6eba-fb63-8037-c45e" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -1027,6 +1059,7 @@
             </infoLink>
             <infoLink name="Critical" id="9806-b4b7-5431-cabb" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
             <infoLink name="Risky" id="761b-dbcf-f9ac-3e81" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+            <infoLink name="Ignore Armour" id="08f0-d081-acc0-804c" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -1061,6 +1094,7 @@
               </modifiers>
             </infoLink>
             <infoLink name="Assault" id="8f4a-1c2b-6521-5fe4" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Automatic" id="e591-3f68-9d27-d936" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -1144,7 +1178,7 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <infoLinks>
-                <infoLink name="Shrapnel" id="13db-225b-c053-d0ee" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+                <infoLink name="Shotgun" id="13db-225b-c053-d0ee" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
                 <infoLink name="Shotgun" id="d0ff-cd0c-5221-f220" hidden="false" type="profile" targetId="0924-0647-1366-9d85"/>
               </infoLinks>
               <entryLinks>
@@ -1161,6 +1195,8 @@
               </constraints>
               <infoLinks>
                 <infoLink name="Automatic Shotgun" id="a6f9-63ec-40a1-b031" hidden="false" type="profile" targetId="a19d-90ab-da9f-95ff"/>
+                <infoLink name="Shotgun" id="001d-97c9-b75e-8a37" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
+                <infoLink name="Assault" id="471f-b9fa-6187-6116" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -1214,6 +1250,7 @@
               <infoLinks>
                 <infoLink name="Heavy Shotgun" id="30bb-b34f-ccc1-022e" hidden="false" type="profile" targetId="c5ac-8d24-4060-8655"/>
                 <infoLink name="Heavy" id="a930-75de-4dc4-8da0" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+                <infoLink name="Shotgun" id="cff2-9e4a-fa58-3ff7" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -1426,10 +1463,10 @@
               <profiles>
                 <profile name="Fire Shield" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d488-9020-4ba3-a3a2">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Always takes one hand to use in both melee and in ranged combat. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated. Any attack against this model that has the Keyword FIRE will suffer -1 DICE on injury rolls and will not cause an additional BLOOD MARKER.</characteristic>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Shield</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-1 INJURY MODIFIER, NEGATE FIRE</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Fire Shield: Add -1 INJURY DICE to Injury Rolls for attacks with the FIRE Keyword that targets a model that has a Fire Shield, even if the attacking weapon has the IGNORE ARMOUR Keyword.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1545,8 +1582,8 @@
             <profile name="Broken Crown" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7cac-e423-0e4d-b763">
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Each time the model with the Broken Crown is Activated, before carrying out any ACTIONS with the model, place 1 INFECTION MARKER next to each enemy model within 1&quot; of the model with the Broken Crown.</characteristic>
               </characteristics>
             </profile>
@@ -1571,8 +1608,8 @@
             <profile name="Urn of Bitter Ashes " typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="cc13-67a7-5431-2fdd">
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Add -1 DICE to the roll for Ranged Attacks that target a model that has the Urn of Bitter Ashes or that is within 3&quot; of the model with the Urn of Bitter Ashes</characteristic>
               </characteristics>
             </profile>
@@ -1614,12 +1651,9 @@
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <profiles>
-            <profile name="Grail Devotee" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a36b-0ca9-03de-492a">
+            <profile name="Grail Devotee" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="a36b-0ca9-03de-492a">
               <characteristics>
-                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Up to 2 models can have up to 2 Grail Devotees each. Add +1 INJURY MODIFIER to Injury Rolls for Melee attacks made by the model for each Grail Devotee that it has. Each Grail Devotee can be represented by a model if you wish. Place them adjacent to the model that they are following but note that Grail Devotees are not treated as models for any rules purposes, just move them out of the way if they get in the way of a “proper” model.</characteristic>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Up to 2 models can have up to 2 Grail Devotees each. Add +1 INJURY MODIFIER to Injury Rolls for Melee attacks made by the model for each Grail Devotee that it has. Each Grail Devotee can be represented by a model if you wish. Place them adjacent to the model that they are following but note that Grail Devotees are not treated as models for any rules purposes, just move them out of the way if they get in the way of a “proper” model.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1665,6 +1699,7 @@
             <selectionEntry type="upgrade" import="true" name="Combat Helmet" hidden="false" id="ba69-fc51-66ad-c5f5">
               <infoLinks>
                 <infoLink name="Combat Helmet" id="2109-119b-ec2b-592b" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
+                <infoLink name="Negate [Keyword]" id="e444-2d6a-7caa-044b" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
               </infoLinks>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
@@ -3123,12 +3158,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="d935-8238-a3f7-8ab0" id="5fef-1778-7c6e-6274" primary="false" name="Negate Gas"/>
       </categoryLinks>
       <profiles>
-        <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5af2-de11-6c23-567e">
+        <profile name="Undead Fortitude" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5af2-de11-6c23-567e">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Add -1 INJURY DICE to Injury Rolls for a Plague Knight unless the attack has the FIRE Keyword.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE to Injury Rolls for a Plague Knight unless the attack has the FIRE Keyword.</characteristic>
           </characteristics>
         </profile>
         <profile name="Plague Knight" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="5fad-8b9c-8d6a-a2f0" publicationId="c658-4a10-e1fe-befc" page="78">
@@ -3365,20 +3397,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Frightening Speed" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9494-6d28-0c24-b18d">
+        <profile name="Frightening Speed" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9494-6d28-0c24-b18d">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Add +1 DICE to the Risky Success Roll for a Hound of the Cult of the Black Grail that is taking a Dash ACTION. In addition, do not halve the Movement Characteristic of a Hound of the Cult of the Black Grail when it stands up at the start of an Activation.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add +1 DICE to the Risky Success Roll for a Hound of the Cult of the Black Grail that is taking a Dash ACTION. In addition, do not halve the Movement Characteristic of a Hound of the Cult of the Black Grail when it stands up at the start of an Activation.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Disease Carrier" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="daee-ce18-e487-8c9c">
+        <profile name="Disease Carrier" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="daee-ce18-e487-8c9c">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">If an enemy model is Activated while it is within 1&quot; of a Hound of the Cult of the Black Grail, place 1 INFECTION MARKER next to the enemy model before it carries out any Actions.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If an enemy model is Activated while it is within 1&quot; of a Hound of the Cult of the Black Grail, place 1 INFECTION MARKER next to the enemy model before it carries out any Actions.</characteristic>
           </characteristics>
         </profile>
         <profile name="Hounds of the Black Grail" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="8fc4-805a-2894-01ad">
@@ -3397,12 +3423,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1e0f-7803-5158-bf35">
+        <profile name="Undead Fortitude" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1e0f-7803-5158-bf35">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Add -1 INJURY DICE to Injury Rolls for a Hound of the Cult of the Black Grail unless the attack has the FIRE Keyword.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE to Injury Rolls for a Hound of the Cult of the Black Grail unless the attack has the FIRE Keyword.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3500,12 +3523,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Overwhelming Horde" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b4a6-25a1-64e7-5dae">
+        <profile name="Overwhelming Horde" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b4a6-25a1-64e7-5dae">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">A Grail Thrall or Fly Thrall can make a Melee Attack even though it does not have a Melee Weapon. In addition, add +1 DICE to the Success Roll for a Melee Attack made by a Grail Thrall or Fly Thrall for each other friendly model within 3&quot; of the attacking model (not including the attacking model itself).</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Grail Thrall or Fly Thrall can make a Melee Attack even though it does not have a Melee Weapon. In addition, add +1 DICE to the Success Roll for a Melee Attack made by a Grail Thrall or Fly Thrall for each other friendly model within 3&quot; of the attacking model (not including the attacking model itself).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3907,28 +3927,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <infoLink name="Strong" id="d93b-1470-9892-5a44" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
       </infoLinks>
       <profiles>
-        <profile name="Corpulent" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="25e6-11bb-8833-ff82">
+        <profile name="Corpulent" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="25e6-11bb-8833-ff82">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Add -2 DICE to Injury Rolls for any attacks that target an Amalgam model.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -2 DICE to Injury Rolls for any attacks that target an Amalgam model.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Unstoppable" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b2bd-73a1-5f59-aa1f">
+        <profile name="Unstoppable" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b2bd-73a1-5f59-aa1f">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Enemy models that are mounted on a base of 32mm or less are not allowed to make a Melee Attack when an Amalgam that is within 1&quot; of them retreats. In addition, an Amalgam can use a normal move or a charge move if all enemy models within 1&quot; of it are mounted on bases of 32mm or less.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Enemy models that are mounted on a base of 32mm or less are not allowed to make a Melee Attack when an Amalgam that is within 1&quot; of them retreats. In addition, an Amalgam can use a normal move or a charge move if all enemy models within 1&quot; of it are mounted on bases of 32mm or less.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Trample" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c927-1f41-5473-f2f2">
+        <profile name="Trample" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c927-1f41-5473-f2f2">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">An Amalgam can take a Trample ACTION. If it does so, it can make a Melee Attack that must target an enemy model that is Down. A Trample Melee Attack does not use a Melee Weapon and has the IGNORE ARMOUR Keyword</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">An Amalgam can take a Trample ACTION. If it does so, it can make a Melee Attack that must target an enemy model that is Down. A Trample Melee Attack does not use a Melee Weapon and has the IGNORE ARMOUR Keyword</characteristic>
           </characteristics>
         </profile>
         <profile name="Amalgam" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="e5d5-c4bb-4b99-020d">
@@ -3947,20 +3958,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Six-armed Monstrosity" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7d24-3042-d6c2-f5bc">
+        <profile name="Six-armed Monstrosity" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="7d24-3042-d6c2-f5bc">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The rules for making more than one Ranged or Melee Attack do not apply to an Amalgam. Instead an Amalgam can take 1 Shoot ACTION per Activation with each Ranged Weapon it is equipped with, and can take 1 Fight ACTION per Activation with each Melee Weapon it is equipped with. The Off-Hand Weapon modifier does not apply to any of its Melee Attacks</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The rules for making more than one Ranged or Melee Attack do not apply to an Amalgam. Instead an Amalgam can take 1 Shoot ACTION per Activation with each Ranged Weapon it is equipped with, and can take 1 Fight ACTION per Activation with each Melee Weapon it is equipped with. The Off-Hand Weapon modifier does not apply to any of its Melee Attacks</characteristic>
           </characteristics>
         </profile>
-        <profile name="Strong-ish" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a01c-f868-09d3-8cb7">
+        <profile name="Strong-ish" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="a01c-f868-09d3-8cb7">
           <characteristics>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Two of the arms of the Amalgam have the Keyword STRONG. It can wield any two HEAVY weapons of its choice, each using one hand regardless of the weapon rules.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Two of the arms of the Amalgam have the Keyword STRONG. It can wield any two HEAVY weapons of its choice, each using one hand regardless of the weapon rules.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4043,28 +4048,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="dae4-94a1-1c22-0c9a">
+        <profile name="Undead Fortitude" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="dae4-94a1-1c22-0c9a">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Add -1 INJURY DICE to Injury Rolls for a Lord of Tumours unless the attack has the FIRE Keyword.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE to Injury Rolls for a Lord of Tumours unless the attack has the FIRE Keyword.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Beelzebub’s Touch" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f662-8943-c553-035f">
+        <profile name="Beelzebub’s Touch" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f662-8943-c553-035f">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Whenever a Melee Attack made by a Lord of Tumours causes any BLOOD MARKERS or INFECTION MARKERS to be placed on the target, place 1 extra INFECTION MARKER next to the target model</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Whenever a Melee Attack made by a Lord of Tumours causes any BLOOD MARKERS or INFECTION MARKERS to be placed on the target, place 1 extra INFECTION MARKER next to the target model</characteristic>
           </characteristics>
         </profile>
-        <profile name="Crushing Blows" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="25bc-e870-f2a0-877a">
+        <profile name="Crushing Blows" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="25bc-e870-f2a0-877a">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">A Lord of Tumours can make a Crushing Blows Melee Attack instead of using any Melee Weapons that it has. If does so, it can attack twice and the Off-Hand modifier does not apply to the second attack.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Lord of Tumours can make a Crushing Blows Melee Attack instead of using any Melee Weapons that it has. If does so, it can attack twice and the Off-Hand modifier does not apply to the second attack.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4160,28 +4156,19 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Undead Fortitude" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b3e7-566c-fefe-402d">
+        <profile name="Undead Fortitude" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b3e7-566c-fefe-402d">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Add -1 INJURY DICE to Injury Rolls for a Corpse Guard unless the attack has the FIRE Keyword.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE to Injury Rolls for a Corpse Guard unless the attack has the FIRE Keyword.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Bodyguard" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="77fd-38d3-3b6c-4a77">
+        <profile name="Bodyguard" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="77fd-38d3-3b6c-4a77">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">If a friendly Cult of the Black Grail model within 1&quot; of a Corpse Guard is hit by a Ranged Attack or Melee Attack, you can say that the Corpse Guard will take the hit. If you do so, make an Injury Roll for the Corpse Guard instead of the original target. This ability cannot be used against attacks that have the BLAST Keyword.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If a friendly Cult of the Black Grail model within 1&quot; of a Corpse Guard is hit by a Ranged Attack or Melee Attack, you can say that the Corpse Guard will take the hit. If you do so, make an Injury Roll for the Corpse Guard instead of the original target. This ability cannot be used against attacks that have the BLAST Keyword.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Parasitic Tick" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="45af-c659-4300-106e">
+        <profile name="Parasitic Tick" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="45af-c659-4300-106e">
           <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Whenever a Melee Attack made by a Corpse Guard causes any BLOOD MARKERS or INFECTION MARKERS to be placed on the target, you can remove up to 1 BLOOD MARKER or INFECTION MARKER from the attacking Corpse Guard model.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Whenever a Melee Attack made by a Corpse Guard causes any BLOOD MARKERS or INFECTION MARKERS to be placed on the target, you can remove up to 1 BLOOD MARKER or INFECTION MARKER from the attacking Corpse Guard model.</characteristic>
           </characteristics>
         </profile>
       </profiles>

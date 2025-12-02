@@ -3882,6 +3882,7 @@ Action Rifle, Assault Rifle etc).
           </costs>
           <infoLinks>
             <infoLink name="Sniper Scope" id="e88d-3915-f9f0-ff3b" hidden="false" type="profile" targetId="5a48-9735-499f-e394"/>
+            <infoLink name="Ignore [Modifier]" id="08d0-a1e7-ad8c-99dc" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3997,7 +3998,7 @@ Action Rifle, Assault Rifle etc).
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 INJURY DICE</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4048,7 +4049,7 @@ Action Rifle, Assault Rifle etc).
           <infoLinks>
             <infoLink name="Consumable" id="b008-481e-23a7-9097" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
             <infoLink name="Reload" id="efa3-65f5-17fc-f769" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
-            <infoLink name="Ignore [Modifier]" id="c180-216a-59d1-a259" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Ignore Armour" id="c180-216a-59d1-a259" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -4128,8 +4129,9 @@ Action Rifle, Assault Rifle etc).
           <infoLinks>
             <infoLink name="Blast" id="2862-1b64-8699-090a" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Ignore [Modifier]" id="8dff-83fc-b150-29f2" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
-            <infoLink name="Assault" id="13d4-5fc4-7b80-3465" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Ignore Armour" id="13d4-5fc4-7b80-3465" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
             <infoLink name="Scatter" id="09dc-31dc-c3ef-a5b2" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
+            <infoLink name="Assault" id="29f3-bfde-1426-d4b4" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4875-7b63-8849-8ba7" includeChildSelections="true"/>
@@ -4281,6 +4283,9 @@ For example, if you roll a 9 for the Success Roll, you could make an Injury Roll
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1fe2-6ec9-0f62-1042" includeChildSelections="true"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e02a-8dbf-3419-9587" includeChildSelections="false"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Critical" id="c558-c81c-ddbf-ef4a" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Book of Battle Prayers" hidden="true" id="2958-0f21-a1a5-74fb">
           <profiles>
@@ -4419,12 +4424,10 @@ Weight of Sins: Add -1 DICE to the Risky Success Roll for a model that has the 
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">24&quot;</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede"/>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-1 INJURY DICE, IGNORE ARMOUR</characteristic>
                 <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Devouring Swarm: When a target is hit with the Locust Spitter, the mindless hunger of the Lord of Flies compels the swarm to continue devouring. If the Success Roll for a Ranged Attack made with Locust Spitter is a Success or Critical Success, after making the Injury Roll for the target, subtract the range to the target from 18&quot;. Then make another Injury Roll for the closest model (friend or foe) that is within this distance of the target model and has a line of sight to it (no Success Roll is required). After the second target’s Injury Roll has been made, the swarm moves on again, but this time the remaining distance it can travel is reduced by the distance between the first and second target, and it must target a new model that has not already been attacked. This carries on until the swarm either runs out of new target models it can reach and has a line of sight to, or the distance it is allowed to move is reduced to 0&quot;.
 
-
 For example, if the range to the first target was 10&quot;, then after making an Injury Roll for the first target, the closest model that can see the first target and is within (18-10) = 8&quot; of it would also be hit. If the second target was within 3&quot; of the first, then after making the second Injury Roll , the closest model that has not yet been attacked, and which can see the second target and is within (18-10-3) = 5&quot; of it would be hit, and so on.
-
 
 Note that if the original attack was a Critical Success, the Injury Roll modifier only applies to the first Injury Roll; it does not apply to any subsequent models that are hit by the swarm. However, the -1 INJURY DICE and IGNORE ARMOUR Keywords apply to all of the Injury Rolls made.</characteristic>
               </characteristics>
@@ -4450,6 +4453,9 @@ Note that if the original attack was a Critical Success, the Injury Roll modifie
               </conditionGroups>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Ignore Armour" id="27dc-8977-5910-18e8" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Knighthood" hidden="true" id="639d-bf8f-60b5-1585">
           <profiles>
@@ -4581,7 +4587,7 @@ Note that if the original attack was a Critical Success, the Injury Roll modifie
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY MODIFIER, CRITICAL</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4621,7 +4627,6 @@ Note that if the original attack was a Critical Success, the Injury Roll modifie
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-2 INJURY MODIFIER, NEGATE SHRAPNEL</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Insect Wings: Change the Movement Characteristic of a model that has the Armour of the Fly to 8&quot;/Flying.
 
-
 Sucked Dry: After a model that has the Armour of the Fly makes a Melee Attack, it can immediately make a second Melee Attack with +1 DICE to the roll for the second attack. However, do not make an Injury Roll if the second attack hits the target; instead place 1 BLOOD MARKER next to the target model.</characteristic>
               </characteristics>
             </profile>
@@ -4654,13 +4659,16 @@ Sucked Dry: After a model that has the Armour of the Fly makes a Melee Attack, 
             </modifier>
             <modifier type="set" value="8&quot;/Flying" field="b725-e0a4-16ae-8df2" scope="model" affects="profiles.Unit"/>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Negate [Keyword]" id="d876-2cec-ad05-19d8" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Ducal Winged Armour" hidden="true" id="03eb-5358-03ae-8046">
           <profiles>
             <profile name="Ducal Winged Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="303c-e35a-9668-0fe8">
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-3 Injury Modifier</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Myrmidon Wings: Change the Movement Characteristic of a model that has the Ducal Winged Armour to 10&quot;/Flying.
 
@@ -4815,6 +4823,9 @@ Steadfast: When a model that has Ducal Winged Armour suffers a Down result on th
               </conditionGroups>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Impervious" id="6cc3-526e-1e41-94ed" hidden="false" type="rule" targetId="00a9-ddfe-2a2b-078d"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Great Banner of New Antioch" hidden="true" id="53fc-b3e3-e7f6-6ce5">
           <costs>
@@ -4832,7 +4843,7 @@ Steadfast: When a model that has Ducal Winged Armour suffers a Down result on th
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Consumable" id="8499-7fed-37c4-f8e8" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+            <infoLink name="Held" id="8499-7fed-37c4-f8e8" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="29d4-8fcd-34d0-b7b7" includeChildSelections="true"/>
@@ -5183,6 +5194,9 @@ Steadfast: When a model that has Ducal Winged Armour suffers a Down result on th
               </conditions>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Consumable" id="84cc-ffe1-b063-7176" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Lock of Samson&apos;s Hair" hidden="true" id="9b61-d0a4-dd30-2d32">
           <constraints>
@@ -5207,6 +5221,9 @@ Steadfast: When a model that has Ducal Winged Armour suffers a Down result on th
               </conditions>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Strong" id="6ac6-dbf0-bbb1-ea76" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Saints Reliquary" hidden="true" id="cf19-f306-c26c-1537">
           <constraints>
@@ -5216,9 +5233,9 @@ Steadfast: When a model that has Ducal Winged Armour suffers a Down result on th
           <profiles>
             <profile name="Saint&apos;s Reliquary" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c35a-d304-0b12-be6c">
               <characteristics>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">-</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This piece of equipment can only be carried by an ELITE model. A model equipped with the Saintly Relic gains the Keyword TOUGH but loses the Keyword INFILTRATOR (should it have it) and can never have cover.</characteristic>
               </characteristics>
             </profile>

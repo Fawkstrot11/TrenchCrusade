@@ -2007,7 +2007,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Knife" id="bf03-1a86-b70b-883f" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
+            <infoLink name="Trench Knife" id="bf03-1a86-b70b-883f" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sword/Axe" hidden="false" id="83ea-09d0-8fed-7e98" sortIndex="3" collective="false">
@@ -2037,6 +2037,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           <infoLinks>
             <infoLink name="Sacrificial Blade" id="63e9-79bf-dc36-33fb" hidden="false" type="profile" targetId="1459-550f-ed53-b276"/>
             <infoLink name="Risky" id="4835-8827-480f-df41" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+            <infoLink name="+/- Injury Modifier" id="92ff-6905-2d06-ea87" hidden="false" type="rule" targetId="3f79-aee7-2c3d-828f"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -2096,7 +2097,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Great Blunt Weapon" id="df89-c80c-db1e-136c" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
+            <infoLink name="Great Hammer/Maul/Club/Mace" id="df89-c80c-db1e-136c" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
             <infoLink name="Heavy" id="89c2-27fc-3d07-926b" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <categoryLinks>
@@ -2170,6 +2171,8 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           </costs>
           <infoLinks>
             <infoLink name="Tartarus Claws" id="69a7-509e-e8a3-2ccc" hidden="false" type="profile" targetId="0999-4c6b-539f-d1b2"/>
+            <infoLink name="Critical" id="6211-ac24-ff2c-80ba" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+            <infoLink name="Cumbersome" id="382a-e260-2aec-2f23" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3059,7 +3062,6 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Shrapnel" id="96c6-08d6-a171-cd00" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
             <infoLink name="Assault" id="e4fe-217e-0bd8-efe1" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Blast" id="8da3-3c90-0bc9-8903" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
-            <infoLink name="Grenade" id="13e0-9c26-68c5-ee7f" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
             <infoLink name="Ignore [Modifier]" id="713f-0513-25ba-8862" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <constraints>
@@ -3083,8 +3085,8 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Assault" id="3d65-cd4e-61cf-9b2a" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Blast" id="bbbb-60af-aef3-57fe" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Gas" id="63f5-aebb-c03b-e981" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
-            <infoLink name="Grenade" id="33d9-2618-83c7-f3f3" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
             <infoLink name="Ignore [Modifier]" id="034d-6d06-cb77-e65b" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Ignore Armour" id="ea7b-063d-79b1-e897" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="08f3-4e24-842c-7741" includeChildSelections="false"/>
@@ -3099,8 +3101,8 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Incendiary Grenades" id="972c-75fb-b8ab-0add" hidden="false" type="profile" targetId="3bfd-2c1d-2d6b-a36c"/>
             <infoLink name="Assault" id="f0c7-2f08-2bb3-ad0c" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Fire" id="4e03-e4b8-b51a-1a78" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
-            <infoLink name="Grenade" id="51b1-e69a-49ce-cb01" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
             <infoLink name="Ignore [Modifier]" id="0748-194f-fa23-83f4" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Ignore Armour" id="ef83-a613-2663-357f" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c8d-d8be-cd2c-983a" includeChildSelections="false"/>
@@ -3122,10 +3124,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Satchel Charge" id="7078-4cbc-2abf-912d" hidden="false" type="profile" targetId="744d-f4d2-f8d5-064a"/>
             <infoLink name="Heavy" id="c7b6-6ca0-a1c8-9d26" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
             <infoLink name="Blast" id="37a8-f1f0-5e88-4a7b" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
-            <infoLink name="Grenade" id="e492-be6b-36ec-04f9" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
             <infoLink name="Consumable" id="b486-4269-e4a2-9544" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
             <infoLink name="Ignore [Modifier]" id="2c8f-1420-9d39-8d29" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
             <infoLink name="Scatter" id="40ac-d414-6146-ba4d" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
+            <infoLink name="Ignore Armour" id="732d-9311-8043-abaf" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d52-e640-a103-dd07" includeChildSelections="false"/>
@@ -3215,7 +3217,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d71b-d00a-6b05-9db8" includeChildSelections="false"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Incendiary Bullets" id="0501-86c2-60c2-776e" hidden="false" type="profile" targetId="01b8-f846-e8f7-6d71"/>
+            <infoLink name="Incendiary Ammunition" id="0501-86c2-60c2-776e" hidden="false" type="profile" targetId="01b8-f846-e8f7-6d71"/>
             <infoLink name="Consumable" id="62f9-5dc5-2976-0e4f" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
             <infoLink name="Fire" id="f7f4-2ca9-1157-b2a1" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
           </infoLinks>
@@ -3281,7 +3283,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ca02-cd8e-36be-3b49" includeChildSelections="false"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Hellbound Brand Contract" id="8098-7411-5179-c994" hidden="false" type="profile" targetId="e408-e0b1-f858-fff5"/>
+            <infoLink name="Hellbound Soul Contract" id="8098-7411-5179-c994" hidden="false" type="profile" targetId="e408-e0b1-f858-fff5"/>
             <infoLink name="Negate [Keyword]" id="0663-3677-4aeb-4ff8" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
           </infoLinks>
           <modifiers>
@@ -3534,10 +3536,9 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <profile name="Golden Calf Altar" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="77d6-2ff5-90cb-b1a8">
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HEAVY, CONSUMABLE</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">* Illusions: Enemy models treat open ground and all terrain within 3” of a model with a Golden Calf Altar as being Difficult terrain (if it is not already), even if they can Fly.
-
 
 * Place Altar ACTION: A model with a Golden Calf Altar can take a Place Altar ACTION. If they do so, the model no longer counts as having a Golden Calf Altar, and you must place a Golden Calf Altar terrain piece on a 25mm base on the ground within 1” of the model taking the ACTION. The Golden Calf Altar has the Illusions special rule, is Impassable terrain, and cannot be picked up again or moved in any way.</characteristic>
               </characteristics>
@@ -4021,8 +4022,8 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           <profiles>
             <profile name="Tarnished Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b2e8-94d9-2ff1-7cdd">
               <characteristics>
-                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">-</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-2 INJURY MODIFIER, NEGATE GAS</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">An enemy model must choose a model that has Tarnished Armour as the target of the charge if the model is in its Line of Sight, not already within 1” of an enemy model, and can be reached without the charging model having to Climb, Jump, make a Diving Charge, or move across Dangerous terrain.</characteristic>
               </characteristics>
