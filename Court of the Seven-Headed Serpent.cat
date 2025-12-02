@@ -4721,6 +4721,18 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="e7d6-fe06-e83b-c791" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="71dc-0c64-49ec-a6cc" type="selectionEntryGroup" targetId="0e52-65c7-fba4-9113" sortIndex="1"/>
         <entryLink import="true" name="Weapons" hidden="false" id="c42c-5c26-a975-0ad3" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="2"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="22af-c114-4143-a904" type="selectionEntryGroup" targetId="3dce-3062-9abb-c1de" sortIndex="3">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="33f7-08d9-bb82-45d3" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="33f7-08d9-bb82-45d3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="304f-6271-343c-ddc9" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <profiles>
         <profile name="Wretched" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="b2dd-8727-aaa1-e504">
@@ -4751,6 +4763,17 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="roster" childId="420c-0871-4283-b95b" shared="true" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="add" value="Wretched must be armed!" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="self" childId="c42c-5c26-a975-0ad3" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="self" childId="22af-c114-4143-a904" shared="true" includeChildForces="false" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <comment>Errors out if 2 or more Heavy on non-</comment>
         </modifier>
       </modifiers>
     </selectionEntry>

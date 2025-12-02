@@ -910,12 +910,22 @@
         <entryLink import="true" name="Unseen Infiltrator" hidden="false" id="6261-b217-6eba-7048" type="selectionEntry" targetId="7b92-190b-f8c3-531a" sortIndex="2"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="71bf-0c2b-8f27-640e" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="880f-3d04-e7a6-e385" type="selectionEntryGroup" targetId="7bcd-ee92-0f03-ae73" sortIndex="1"/>
-        <entryLink import="true" name="Weapons" hidden="false" id="35ad-5260-4667-c149" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="3">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="self" shared="true" id="a446-37c8-07e4-476c" includeChildSelections="true"/>
-          </constraints>
-        </entryLink>
+        <entryLink import="true" name="Weapons" hidden="false" id="35ad-5260-4667-c149" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="3"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="0b63-e9c2-4fd5-3829" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" collapsible="true" sortIndex="4"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="add" value="Wretched must be armed!" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="self" childId="35ad-5260-4667-c149" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="self" childId="0b63-e9c2-4fd5-3829" shared="true" includeChildForces="false" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <comment>Errors out if 2 or more Heavy on non-</comment>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Heretic Trooper" hidden="false" id="3844-b41c-9ecc-85b9" publicationId="c658-4a10-e1fe-befc" page="22">
       <costs>
@@ -3109,9 +3119,14 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           </constraints>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -3143,9 +3158,14 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </conditions>
             </modifier>
             <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="767d-1b1d-79b4-5765" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="767d-1b1d-79b4-5765" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
