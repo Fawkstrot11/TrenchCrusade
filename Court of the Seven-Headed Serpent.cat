@@ -5087,6 +5087,15 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
         <entryLink import="true" name="Equipment" hidden="false" id="4b2e-ef91-026c-72a8" type="selectionEntryGroup" targetId="1434-ae99-841b-041e" sortIndex="5"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="83b2-bdbd-7ede-4bf1" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="22dd-3046-4d8b-26a0" type="selectionEntryGroup" targetId="0e52-65c7-fba4-9113" sortIndex="1"/>
+        <entryLink import="true" name="Advancement" hidden="true" id="5223-9076-b329-4bbe" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="-1">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <profiles>
         <profile name="Yoke Fiend" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="f16c-02fc-f6ad-4562">
@@ -5215,6 +5224,21 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
           </conditions>
           <comment>Fang of the Seething Black</comment>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="Void Cultist" field="name"/>
+            <modifier type="set" value="Void Cultist" field="name" affects="profiles.Unit"/>
+          </modifiers>
+          <comment>Fang of the Seething Black</comment>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="bc33-e591-8f2e-a847" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
