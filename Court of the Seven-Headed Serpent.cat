@@ -59,6 +59,7 @@
           </costs>
           <infoLinks>
             <infoLink name="Gas Mask" id="842d-43f5-fcc9-0ba5" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
+            <infoLink name="Negate [Keyword]" id="a5ae-81a1-d67c-07b5" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d314-0b14-480e-3063" includeChildSelections="false"/>
@@ -118,7 +119,7 @@
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c3c9-e4ef-13be-a9b4" includeChildSelections="true"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Incendiary Bullets" id="0a24-fffb-e87d-d711" hidden="false" type="profile" targetId="01b8-f846-e8f7-6d71"/>
+            <infoLink name="Incendiary Ammunition" id="0a24-fffb-e87d-d711" hidden="false" type="profile" targetId="01b8-f846-e8f7-6d71"/>
             <infoLink name="Consumable" id="5594-6b1a-bb73-9c7d" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
             <infoLink name="Fire" id="c50a-fd06-a4a6-9cfc" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
           </infoLinks>
@@ -455,6 +456,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
             <selectionEntry type="upgrade" import="true" name="Combat Helmet" hidden="false" id="877a-a3c2-d179-eda0" sortIndex="1">
               <infoLinks>
                 <infoLink name="Combat Helmet" id="2d4f-919a-d424-2478" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
+                <infoLink name="Negate [Keyword]" id="acb8-0e61-eec2-e7e4" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
               </infoLinks>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
@@ -628,7 +630,8 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
             <infoLink name="Assault" id="84ae-ea66-40f4-5bd3" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Blast" id="37a3-791b-133a-75ed" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Gas" id="fd91-0eae-c1e7-100e" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
-            <infoLink name="Grenade" id="9baa-add6-1ee5-954a" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+            <infoLink name="Ignore [Modifier]" id="8bbb-56e1-101d-59cf" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Ignore Armour" id="824c-87f2-e48c-9b15" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0acf-2208-c7bb-8a37" includeChildSelections="false"/>
@@ -643,7 +646,9 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
             <infoLink name="Incendiary Grenades" id="0cff-83de-264b-83d7" hidden="false" type="profile" targetId="3bfd-2c1d-2d6b-a36c"/>
             <infoLink name="Assault" id="2227-61bb-eb60-3577" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Fire" id="dd49-aa27-a03e-8715" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
-            <infoLink name="Grenade" id="3b7f-f1ee-929a-affb" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+            <infoLink name="Ignore [Modifier]" id="6057-cfaa-a744-aec1" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Assault" id="35c2-c937-53bd-c8c3" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Ignore Armour" id="5a0a-2575-cf9f-7506" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6147-9145-4564-e6b5" includeChildSelections="false"/>
@@ -676,7 +681,8 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
             <infoLink name="Molotov Cocktail" id="af64-73e1-1e2a-3837" hidden="false" type="profile" targetId="b16a-e1fa-433f-efc0"/>
             <infoLink name="Assault" id="8dd7-ea0b-a8b7-a3c8" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Fire" id="7a2b-98be-8817-a4c2" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
-            <infoLink name="Grenade" id="db1f-d5e1-1f78-6e82" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+            <infoLink name="Ignore [Modifier]" id="d434-bca8-28cb-feb5" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Ignore Armour" id="42f6-064c-e9ce-e503" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c458-bb47-b48a-40b3" includeChildSelections="false"/>
@@ -692,6 +698,8 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
         <selectionEntry type="upgrade" import="true" name="War Cross" hidden="true" id="4811-8f48-e089-a5c9" sortIndex="2">
           <infoLinks>
             <infoLink name="War Cross" id="1b16-067b-2080-9fd4" hidden="false" type="profile" targetId="2d02-94a4-2493-186f"/>
+            <infoLink name="Assault" id="3512-352d-21eb-c5b5" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Ignore [Modifier]" id="ccb7-ce12-294d-05ff" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
@@ -715,10 +723,10 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
           </costs>
           <infoLinks>
             <infoLink name="Frag Grenades" id="aff1-5ccb-40d5-d1bc" hidden="false" type="profile" targetId="cc34-0630-85e1-2583"/>
-            <infoLink name="Shrapnel" id="c756-bb99-d09e-7598" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+            <infoLink name="Ignore [Modifier]" id="c756-bb99-d09e-7598" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
             <infoLink name="Assault" id="9a27-b95a-9628-e1e7" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Blast" id="4ae9-5aee-0797-be07" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
-            <infoLink name="Grenade" id="b7e0-8aa1-a03f-c9a8" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+            <infoLink name="Shrapnel" id="f77c-266e-a68d-c5cc" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="665c-0116-0389-1aa9" includeChildSelections="false"/>
@@ -745,8 +753,10 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
             <infoLink name="Satchel Charge" id="6c83-52d4-876a-b8d3" hidden="false" type="profile" targetId="744d-f4d2-f8d5-064a"/>
             <infoLink name="Heavy" id="a1cd-9e8f-ee31-39ac" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
             <infoLink name="Blast" id="1252-7be2-acb5-ed42" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
-            <infoLink name="Grenade" id="90dd-fde6-f406-b99b" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
             <infoLink name="Consumable" id="e374-c335-ca81-e359" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+            <infoLink name="Scatter" id="2334-f524-a9a9-b0da" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
+            <infoLink name="Ignore [Modifier]" id="e4d9-6396-459d-c309" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Ignore Armour" id="b15e-c772-7bac-913a" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c28b-ea48-2a9f-159a" includeChildSelections="false"/>
@@ -776,7 +786,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Knife" id="1531-a113-80b8-5de6" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
+            <infoLink name="Trench Knife" id="1531-a113-80b8-5de6" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sword/Axe" hidden="false" id="e4f1-642b-f2ac-7391" sortIndex="3" collective="false">
@@ -838,6 +848,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
           </costs>
           <infoLinks>
             <infoLink name="Misericordia" id="c920-e507-f643-7d5e" hidden="false" type="profile" targetId="d82e-4c7b-28ac-1413"/>
+            <infoLink name="Ignore Armour" id="ceae-4870-b9ff-d643" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="aa7a-14ee-6a8a-d861" includeChildSelections="true"/>
@@ -856,8 +867,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Scourge" id="6607-a5c3-5c02-df2a" hidden="false" type="profile" targetId="f469-b712-2233-ac79"/>
-            <infoLink name="Critical" id="e693-c9af-fbf3-9452" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+            <infoLink name="Scourge/Battle Whip/Flail" id="6607-a5c3-5c02-df2a" hidden="false" type="profile" targetId="f469-b712-2233-ac79"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -877,8 +887,9 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Great Blunt Weapon" id="5fd2-175c-f019-27ef" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
+            <infoLink name="Great Hammer/Maul/Club/Mace" id="5fd2-175c-f019-27ef" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
             <infoLink name="Heavy" id="e02c-007c-f15e-66e7" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="+/- Injury Modifier" id="67e9-a89b-221a-0fe8" hidden="false" type="rule" targetId="3f79-aee7-2c3d-828f"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="854d-a090-758e-6eaa" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -995,6 +1006,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
             <infoLink name="Anti-Tank Hammer" id="8119-376c-fd07-894c" hidden="false" type="profile" targetId="8df3-f372-20a0-4a59"/>
             <infoLink name="Critical" id="ab12-a3d1-94b2-ed65" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
             <infoLink name="Risky" id="97dc-53c9-417e-e4f4" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+            <infoLink name="Ignore Armour" id="8559-a1bb-19ba-8f78" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1019,8 +1031,9 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
           </costs>
           <infoLinks>
             <infoLink name="Halberd-Gun" id="af14-8718-e347-d4fc" hidden="false" type="profile" targetId="c403-4b36-5fd6-5c95"/>
-            <infoLink name="Assault" id="96f9-0fba-0c3e-d6e5" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Block" id="96f9-0fba-0c3e-d6e5" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
             <infoLink name="Cumbersome" id="31fd-0bab-5ce7-6800" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+            <infoLink name="Assault" id="368e-259c-364c-ebb7" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1045,6 +1058,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
               <infoLinks>
                 <infoLink name="Polearm" id="82e9-6fd8-af28-0f0c" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
                 <infoLink name="Cumbersome" id="ea0e-8076-4c68-f8ff" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+                <infoLink name="Block" id="d41d-2eef-8cef-043f" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Cumbersome" hidden="false" id="f88d-1e8f-f44d-cac0" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
@@ -1230,6 +1244,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Pistol" id="3d31-73e2-3d1b-ccad" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -1254,6 +1269,9 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Assault" id="5631-86e5-f51c-c9b0" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Automatic" id="deb9-cd7e-6dad-e198" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Pistol" id="9a46-7937-decd-bd02" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="f030-d86f-038c-55cd" includeChildSelections="true"/>
@@ -1273,6 +1291,9 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
           </costs>
           <infoLinks>
             <infoLink name="Automatic Pistol" id="20de-4813-7cee-13d6" hidden="false" type="profile" targetId="8ac5-3721-e679-7c6e"/>
+            <infoLink name="Pistol" id="303e-3aa0-246d-f99b" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
+            <infoLink name="Assault" id="599a-9ebf-d135-1124" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Automatic" id="bcff-2d3f-7010-94e0" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1369,6 +1390,8 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
           <infoLinks>
             <infoLink name="Flamethrower" id="d06c-3968-140b-ee3a" hidden="false" type="profile" targetId="9b21-3223-c112-c65f"/>
             <infoLink name="Fire" id="8de4-ce4b-4aaf-894c" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+            <infoLink name="Flamethrower" id="23d5-efbd-0b64-79d8" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+            <infoLink name="Ignore Armour" id="14e3-eeb3-1cb1-62d8" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -1403,8 +1426,11 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
           </constraints>
           <infoLinks>
             <infoLink name="Heavy Flamethrower" id="fbf4-3c69-6736-f096" hidden="false" type="profile" targetId="2fc0-bc43-b366-5b95"/>
-            <infoLink name="Fire" id="1358-9a20-e2e6-32f4" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+            <infoLink name="Automatic" id="1358-9a20-e2e6-32f4" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
             <infoLink name="Heavy" id="2702-2366-2444-5f5d" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Ignore Armour" id="d899-fc5c-68d1-b468" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+            <infoLink name="Fire" id="257d-fc27-5a84-716e" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+            <infoLink name="Flamethrower" id="4174-ba72-9da9-2a03" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="45be-cbff-fd37-33fd" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -1549,6 +1575,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Assault" id="7f27-c5a8-d2b8-06a6" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1574,7 +1601,9 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
           </costs>
           <infoLinks>
             <infoLink name="Machine Gun" id="81cf-15ed-8b89-600a" hidden="false" type="profile" targetId="517c-652f-100e-71d6"/>
-            <infoLink name="Heavy" id="b2ae-d0ea-219d-df40" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Automatic" id="b2ae-d0ea-219d-df40" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Reload" id="75dc-49a4-7f1d-70f3" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
+            <infoLink name="Heavy" id="2745-bfb8-8750-55d4" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="19a5-ac85-e87d-2137" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -1613,6 +1642,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
             </infoLink>
             <infoLink name="Risky" id="f399-b0e4-aba5-5bbc" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
             <infoLink name="Critical" id="6b8c-50e0-e661-432b" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+            <infoLink name="Ignore Armour" id="6b2f-ba94-06f0-5b40" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="8796-1b17-8a84-c21c" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -1642,6 +1672,9 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
           </costs>
           <infoLinks>
             <infoLink name="Punt Gun" id="cb07-f82f-f3f1-3349" hidden="false" type="profile" targetId="77ea-665d-7ac6-58ef"/>
+            <infoLink name="Shotgun" id="466b-ee92-6d17-2173" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
+            <infoLink name="Shrapnel" id="699d-69d9-a61a-8321" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+            <infoLink name="Heavy" id="c9a2-9d0a-b691-8dfc" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="bc44-3ad5-5f55-54b1" includeChildSelections="true"/>
@@ -1728,6 +1761,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
             </infoLink>
             <infoLink name="Critical" id="3a83-b707-4e9b-e11c" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
             <infoLink name="Risky" id="2afc-80c2-6151-e3bb" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+            <infoLink name="Ignore Armour" id="43ca-7606-d74d-3227" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1753,6 +1787,8 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
           <infoLinks>
             <infoLink name="Machine Gun" id="ccca-f48c-981f-53b3" hidden="false" type="profile" targetId="517c-652f-100e-71d6"/>
             <infoLink name="Heavy" id="64c6-34d5-31aa-859e" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Automatic" id="f973-74ae-7c63-a592" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Reload" id="9a27-3ae5-095d-5a36" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="354e-3bfe-6415-72bc" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -1778,6 +1814,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
             <infoLink name="Blast" id="26ab-48c7-6010-d41f" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Heavy" id="250a-432c-e35a-ad08" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
             <infoLink name="Shrapnel" id="7b75-5a43-1832-cf47" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+            <infoLink name="Ignore [Modifier]" id="cf15-4aa5-349e-3c3e" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="a9a8-2723-defe-d94e" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -1796,6 +1833,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
           </costs>
           <entryLinks>
             <entryLink import="true" name="Assault" hidden="false" id="ad94-573e-be17-dc6c" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <entryLink import="true" name="Automatic" hidden="false" id="ba1b-1eee-716f-9e23" type="rule" targetId="c435-c893-2c72-e7c6"/>
           </entryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="be9e-b16d-78d9-0405" includeChildSelections="true"/>
@@ -1846,6 +1884,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
               </costs>
               <infoLinks>
                 <infoLink name="Shotgun" id="4ac6-0777-ee2d-06dd" hidden="false" type="profile" targetId="0924-0647-1366-9d85"/>
+                <infoLink name="Shotgun" id="b829-5e18-6233-0b92" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -1879,6 +1918,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
               <infoLinks>
                 <infoLink name="Heavy Shotgun" id="ee3a-8f94-deb4-1feb" hidden="false" type="profile" targetId="c5ac-8d24-4060-8655"/>
                 <infoLink name="Heavy" id="440e-9ced-d2d1-622a" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+                <infoLink name="Shotgun" id="22f1-5894-95fd-b38c" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Heavy" hidden="false" id="6858-982a-648b-b370" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -1900,7 +1940,8 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
               </costs>
               <infoLinks>
                 <infoLink name="Automatic Shotgun" id="cad3-6b19-56a3-5d7b" hidden="false" type="profile" targetId="a19d-90ab-da9f-95ff"/>
-                <infoLink name="Assault" id="314f-7764-bb4c-cd47" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+                <infoLink name="Shotgun" id="314f-7764-bb4c-cd47" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
+                <infoLink name="Assault" id="90f3-bbd7-6a86-e263" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
               </infoLinks>
               <constraints>
                 <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="a4ed-f57a-808b-ffe0" includeChildSelections="true"/>
@@ -3644,6 +3685,7 @@ A Sorcerer cannot purchase both Event horizon and Burning Inferno.</characterist
           </costs>
           <infoLinks>
             <infoLink name="Infernal Iron Armour" id="a343-20bf-6b83-e159" hidden="false" type="profile" targetId="38b3-22f4-f484-61dc"/>
+            <infoLink name="Impervious" id="c736-5f49-4e0d-d066" hidden="false" type="rule" targetId="00a9-ddfe-2a2b-078d"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3d60-86ce-bd6c-dccb" includeChildSelections="false"/>
@@ -3672,6 +3714,7 @@ A Sorcerer cannot purchase both Event horizon and Burning Inferno.</characterist
         <selectionEntry type="upgrade" import="true" name="Alchemist Armour" hidden="true" id="59c0-13d8-450a-c0b4">
           <infoLinks>
             <infoLink name="Alchemist Armour" id="3bba-1f40-ecec-2a4c" hidden="false" type="profile" targetId="68e2-bde3-19a9-2980"/>
+            <infoLink name="Negate [Keyword]" id="e401-cfd7-f391-7281" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
           </infoLinks>
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
@@ -5703,6 +5746,18 @@ Unlike Yoke Fiends, Cultists can be promoted to ELITE.</characteristic>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="e7d6-fe06-e83b-c791" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="71dc-0c64-49ec-a6cc" type="selectionEntryGroup" targetId="0e52-65c7-fba4-9113" sortIndex="1"/>
         <entryLink import="true" name="Weapons" hidden="false" id="c42c-5c26-a975-0ad3" type="selectionEntryGroup" targetId="a774-f5b9-3fd9-7a0b" sortIndex="2"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="22af-c114-4143-a904" type="selectionEntryGroup" targetId="3dce-3062-9abb-c1de" sortIndex="3">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="33f7-08d9-bb82-45d3" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="33f7-08d9-bb82-45d3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="304f-6271-343c-ddc9" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <profiles>
         <profile name="Wretched" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="b2dd-8727-aaa1-e504">
@@ -5734,10 +5789,16 @@ Unlike Yoke Fiends, Cultists can be promoted to ELITE.</characteristic>
             <condition type="equalTo" value="0" field="selections" scope="roster" childId="420c-0871-4283-b95b" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
+        <modifier type="add" value="Wretched must be armed!" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="self" childId="c42c-5c26-a975-0ad3" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="self" childId="22af-c114-4143-a904" shared="true" includeChildForces="false" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <comment>Errors out if 2 or more Heavy on non-</comment>
         </modifier>
       </modifiers>
     </selectionEntry>
