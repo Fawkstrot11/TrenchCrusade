@@ -69,6 +69,7 @@
           </costs>
           <infoLinks>
             <infoLink name="Gas Mask" id="9fd9-ab76-54f2-6333" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
+            <infoLink name="Negate [Keyword]" id="c2bc-cc85-328b-9704" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="176b-7b1e-df50-0052" includeChildSelections="false"/>
@@ -175,6 +176,7 @@
           <infoLinks>
             <infoLink name="Martyrdom Pills" id="3603-b9fa-cec0-aee8" hidden="false" type="profile" targetId="0de6-1178-a184-ddff"/>
             <infoLink name="Consumable" id="3563-3a46-ccdc-b970" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+            <infoLink name="Negate [Keyword]" id="027f-3d82-836a-3bd4" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -245,7 +247,7 @@
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Healing Waters: Add +1 DICE when a model with the Holy Water of Lalibela takes a Success Roll for an ACTION that can remove BLOOD MARKERS and/or INFECTION MARKERS from another model or itself.</characteristic>
               </characteristics>
             </profile>
@@ -275,7 +277,7 @@
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Virtuous Rewards: Place 1 BLESSING MARKER next to a model that has a Tabot each time that an ACTION carried out by a friendly model results in one or more BLOOD MARKERS and/or INFECTION MARKERS being removed from one or more friendly models.</characteristic>
               </characteristics>
             </profile>
@@ -305,9 +307,9 @@
           <profiles>
             <profile name="Blood Cloak" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4f6a-a92d-d7a7-d512">
               <characteristics>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">A model wearing a Blood Cloak gains the Keyword SKIRMISHER</characteristic>
               </characteristics>
             </profile>
@@ -340,9 +342,9 @@
           <profiles>
             <profile name="Phosphorous Rounds" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8bd6-c237-de4c-2e9a">
               <characteristics>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Before the battle begins, a model may use this item to grant a shotgun that they are equipped with the FIRE keyword until the end of the battle.</characteristic>
               </characteristics>
             </profile>
@@ -444,6 +446,7 @@
             <selectionEntry type="upgrade" import="true" name="Combat Helmet" hidden="false" id="2af0-008a-a7f6-f51c" sortIndex="1">
               <infoLinks>
                 <infoLink name="Combat Helmet" id="a615-e3e4-d40f-c1f5" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
+                <infoLink name="Negate [Keyword]" id="8fa1-91f2-f23e-dcbc" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
               </infoLinks>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
@@ -488,6 +491,9 @@
                 </modifier>
                 <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5" affects="profiles.Unit" scope="model"/>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Negate [Keyword]" id="31be-e4ca-dd4c-2676" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -528,7 +534,7 @@
             <infoLink name="Shrapnel" id="81b7-6957-58aa-4421" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
             <infoLink name="Assault" id="9dea-f234-c1b8-982e" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Blast" id="d3ff-e47c-4727-7562" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
-            <infoLink name="Grenade" id="563e-4ec8-e1da-f938" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+            <infoLink name="Ignore [Modifier]" id="8d2f-d572-8b84-7790" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="abad-acfc-9a8e-7e7e" includeChildSelections="false"/>
@@ -563,7 +569,8 @@
             </infoLink>
             <infoLink name="Assault" id="e64b-08a1-9169-1a92" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Fire" id="8030-904d-0b00-0d93" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
-            <infoLink name="Grenade" id="c4bb-e742-33d6-29ae" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+            <infoLink name="Ignore [Modifier]" id="b39c-1fb9-bc6b-6956" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Ignore Armour" id="849d-cb1e-9fe3-d580" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6420-b027-ee30-306b" includeChildSelections="false"/>
@@ -600,8 +607,10 @@
             </infoLink>
             <infoLink name="Heavy" id="693f-391b-de26-9d21" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
             <infoLink name="Blast" id="4a59-d1d6-9301-ca8f" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
-            <infoLink name="Grenade" id="7575-b861-467e-1c79" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
             <infoLink name="Consumable" id="0049-21f8-80b3-0e3e" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+            <infoLink name="Ignore [Modifier]" id="fc3f-eb0d-c589-b121" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Scatter" id="4ffe-6d65-601c-ebef" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
+            <infoLink name="Ignore Armour" id="05c6-9c71-05d7-ce50" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3451-41f7-7fa3-c449" includeChildSelections="false"/>
@@ -651,7 +660,7 @@
             <infoLink name="Molotov Cocktail" id="60c7-cff1-cf1a-cb70" hidden="false" type="profile" targetId="b16a-e1fa-433f-efc0"/>
             <infoLink name="Assault" id="a386-1126-f387-4cca" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
             <infoLink name="Fire" id="5501-dfef-851d-93a6" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
-            <infoLink name="Grenade" id="fbe2-9f06-7a60-a9ce" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+            <infoLink name="Ignore [Modifier]" id="a4d3-51c3-1660-7184" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="35e8-486e-5c97-7eed" includeChildSelections="false"/>
@@ -709,7 +718,6 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
           <infoLinks>
             <infoLink name="Blast" id="5e37-ddf9-0172-5a7d" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Fire" id="100b-b764-9ea4-1d51" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
-            <infoLink name="Grenade" id="c69d-bf8f-72ed-8cbe" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
             <infoLink name="Heavy" id="a7c5-226b-99b2-ceb5" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
             <infoLink name="Consumable" id="65a1-ca87-4929-8cd8" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
             <infoLink name="Scatter" id="c0e7-6931-050d-e9d9" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
@@ -739,7 +747,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Knife" id="81fa-4564-fbca-a3c7" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
+            <infoLink name="Trench Knife" id="81fa-4564-fbca-a3c7" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sword/Axe" hidden="false" id="1773-d8e5-0ff7-65b8" sortIndex="3" collective="false">
@@ -775,7 +783,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL</characteristic>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Bypass Shield: The Shotel is specifically designed to overcome enemy shields. Ignore -INJURY DICE or -INJURY MODIFIERS for Shields against Melee Attacks made with a Shotel. Any other Keywords or special rules that apply to the Shield are used normally.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -834,7 +842,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Great Blunt Weapon" id="0fa0-9859-ed95-c628" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
+            <infoLink name="Great Hammer/Maul/Club/Mace" id="0fa0-9859-ed95-c628" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
             <infoLink name="Heavy" id="8a71-35c2-73c8-c57a" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <categoryLinks>
@@ -903,14 +911,15 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 INJURY DICE, BLOCK, CRITICAL, CUMBERSOME, HEAVY</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
             <infoLink name="Critical" id="6db5-a03a-0762-e3c5" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
-            <infoLink name="Cumbersome" id="82ce-11e4-4a07-a15b" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+            <infoLink name="Block" id="82ce-11e4-4a07-a15b" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
             <infoLink name="Heavy" id="1d7d-9d21-f545-812c" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Cumbersome" id="888d-cc47-b263-677e" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -952,7 +961,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
             </modifier>
           </modifiers>
           <constraints>
-            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="db3e-7b72-f006-1491" includeChildSelections="true"/>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="db3e-7b72-f006-1491" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Dane Axe" hidden="true" id="0084-2122-f8c1-537a" sortIndex="5">
@@ -1001,6 +1010,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
               <infoLinks>
                 <infoLink name="Polearm" id="1c41-37cc-8ccc-849b" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
                 <infoLink name="Cumbersome" id="d735-356e-f056-0f25" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+                <infoLink name="Block" id="a917-21ae-b058-c301" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Cumbersome" hidden="false" id="0529-2fcf-fcc6-7a76" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
@@ -1232,6 +1242,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Pistol" id="cf8d-9e77-9b5c-5eae" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Automatic Pistol" hidden="true" id="967c-6555-a460-6957" collective="false">
@@ -1249,6 +1260,9 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Assault" id="64c4-d017-0fff-270d" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Automatic" id="3454-a419-2258-fd36" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Pistol" id="1cae-84de-07f6-0058" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1352,7 +1366,8 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
             <infoLink name="Grenade Launcher" id="cb36-dc0c-d055-1599" hidden="false" type="profile" targetId="3113-d133-1726-05a0"/>
             <infoLink name="Blast" id="4d56-0edb-2888-fc92" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Heavy" id="2616-1e4a-1f60-ee11" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
-            <infoLink name="Shrapnel" id="76fb-4483-c86e-d8d4" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+            <infoLink name="Ignore [Modifier]" id="76fb-4483-c86e-d8d4" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Shrapnel" id="4ef8-46d5-c085-2493" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="c03c-d082-1a33-f450" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -1420,7 +1435,9 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
                 </modifierGroup>
               </modifierGroups>
             </infoLink>
-            <infoLink name="Heavy" id="88eb-9f01-840e-664a" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Automatic" id="88eb-9f01-840e-664a" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Heavy" id="3e7d-812d-9a85-9bfa" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Reload" id="7583-eed0-1ad2-75a1" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="afbb-021d-d979-9c2a" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -1470,7 +1487,9 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
           </constraints>
           <infoLinks>
             <infoLink name="Flamethrower" id="4e6a-99c2-019b-500f" hidden="false" type="profile" targetId="9b21-3223-c112-c65f"/>
-            <infoLink name="Fire" id="4a43-7f0b-9dcb-3e1d" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+            <infoLink name="Ignore Armour" id="4a43-7f0b-9dcb-3e1d" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+            <infoLink name="Flamethrower" id="cdb6-21f3-1006-2fa2" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+            <infoLink name="Fire" id="407d-5a8a-cf96-e1ef" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
           </infoLinks>
           <modifiers>
             <modifier type="increment" value="1" field="fb10-90a7-24f8-26e9">
@@ -1497,7 +1516,10 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
           <infoLinks>
             <infoLink name="Heavy Flamethrower" id="6633-3340-0c1f-d4d3" hidden="false" type="profile" targetId="2fc0-bc43-b366-5b95"/>
             <infoLink name="Fire" id="8f43-1936-6f86-4f83" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
-            <infoLink name="Heavy" id="6f59-ea29-d843-4329" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Automatic" id="6f59-ea29-d843-4329" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Flamethrower" id="f120-1e0d-1a35-a706" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+            <infoLink name="Ignore Armour" id="6f1d-cbc8-682e-a70d" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+            <infoLink name="Heavy" id="b801-6af4-454b-5b57" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="0864-a70f-1468-6ec7" targetId="70c9-988d-71a7-7654" primary="false"/>
@@ -1547,7 +1569,8 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink name="Assault" id="8758-2cc6-923e-10ae" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+            <infoLink name="Automatic" id="8758-2cc6-923e-10ae" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <infoLink name="Assault" id="b507-36d1-3493-917a" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
           </infoLinks>
           <modifiers>
             <modifier type="increment" value="1" field="f637-3855-63ea-598c">
@@ -1658,6 +1681,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
               <infoLinks>
                 <infoLink name="Heavy Shotgun" id="ad64-cd0b-1a44-d987" hidden="false" type="profile" targetId="c5ac-8d24-4060-8655"/>
                 <infoLink name="Heavy" id="5291-8566-b38e-e403" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+                <infoLink name="Shotgun" id="70ac-e2ce-2048-3d22" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink targetId="70c9-988d-71a7-7654" id="5616-3a39-808e-eae7" primary="false" name="Heavy"/>
@@ -1700,6 +1724,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
               <infoLinks>
                 <infoLink name="Automatic Shotgun" id="4919-4006-9065-5a8f" hidden="false" type="profile" targetId="a19d-90ab-da9f-95ff"/>
                 <infoLink name="Assault" id="f9b7-3d31-6625-4306" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+                <infoLink name="Shotgun" id="5e1b-7ba2-f509-9a0c" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
               </infoLinks>
               <constraints>
                 <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="7cc9-16f0-0a5c-a098" includeChildSelections="true"/>
@@ -1732,6 +1757,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
               </entryLinks>
               <infoLinks>
                 <infoLink name="Shotgun" id="028b-5e13-cc06-428e" hidden="false" type="profile" targetId="0924-0647-1366-9d85"/>
+                <infoLink name="Shotgun" id="e913-c460-f074-5da2" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
@@ -1833,9 +1859,9 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
           <profiles>
             <profile name="Red Banner" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1818-099d-77ef-0ad7">
               <characteristics>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">1-Handed</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">Melee</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">BLOCK, HELD</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This is the only banner the Red Brigade Warband can buy. As long as the model carrying this banner is not taken Out of Action, the Red Brigade will never retreat from combat. If they lose a Morale test, they will become Shaken instead. If the Standard bearer is taken Out of Action, the Warband takes Morale tests as normal.</characteristic>
               </characteristics>
             </profile>
@@ -1854,14 +1880,18 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Block" id="70b6-477e-93df-2d34" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
+            <infoLink name="Held" id="418b-1729-0b88-c545" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Atonement Bell" hidden="true" id="0de4-111f-503c-60f9" sortIndex="3">
           <profiles>
             <profile name="Atonement Bell" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a7b5-4e6d-1d0e-de50">
               <characteristics>
-                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This bell always takes the use of one hand of the Communicant. The Communicant can make an off-hand attack with the Bell. It causes no damage, but any enemy on a 40mm base or smaller hit with an Atonenment Bell can be moved D3 inches from the Communicant into any direction the Communicant chooses. This can break them out of melee combat (allowing free attacks), falling down, into hazardous terrain etc. It cannot be made to move the model into another Melee combat, however.</characteristic>
               </characteristics>
             </profile>
@@ -1989,7 +2019,6 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
                         <condition type="lessThan" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
                       </conditions>
                       <conditionGroups>
@@ -2024,7 +2053,6 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true"/>
@@ -2074,7 +2102,6 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
                       <conditions>
                         <condition type="lessThan" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true"/>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
                       </conditions>
                       <conditionGroups>
                         <conditionGroup type="or">
@@ -2096,9 +2123,9 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
               <profiles>
                 <profile name="Bagpipes" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d777-d95f-f173-9c07">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">4&quot;</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD</characteristic>
                     <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Any friendly models within 4” of the musician are immune to fear, and those who are not Down can add +1 DICE to their Dash ACTIONS. Bagpipes take one hand to use at all times as if it were a weapon.</characteristic>
                   </characteristics>
                 </profile>
@@ -2145,8 +2172,9 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
               <profiles>
                 <profile name="War Horn" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bf4f-e324-29c3-1527">
                   <characteristics>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">4&quot;</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD</characteristic>
                     <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model causes FEAR. Any friendly models within 4” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. War Horns take one hand to use at all times as if it were a weapon.</characteristic>
                     <characteristic name="Description" typeId="4834-43a9-1c93-9062">Your army can purchase a special War Horn instead of a generic musical instrument, but only a Varagian Guard may equip it. This horn is identical to a musical instrument (including equipment restrictions and sharing a LIMIT with the regular Musical Instrument), except the model carrying it causes FEAR.</characteristic>
                     <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
@@ -2196,9 +2224,9 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
               <profiles>
                 <profile name="Carnyx " typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2ddb-f3e4-5ad4-7d7e">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">4&quot;</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD</characteristic>
                     <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model causes FEAR. Any friendly models within 4” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Carnyces take one hand to use at all times as if it were a weapon.</characteristic>
                   </characteristics>
                 </profile>
