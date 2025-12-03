@@ -972,10 +972,12 @@ with a Tormentor Chain.</characteristic>
     </profile>
     <profile name="Marid Shovel" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="20a6-1425-0331-7e02">
       <characteristics>
-        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Marid Shovel has the Keyword HEAVY which allows a Brazen Bull to use it. Otherwise, it works exactly like a normal shovel.</characteristic>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Marid Shovel has the Keyword HEAVY which allows a Brazen Bull to use it. Otherwise, it works exactly like a normal shovel.
+
+Shovel: A model equipped with a Shovel that starts the game on Open terrain has the COVER Keyword until it moves away from its starting position. In addition, a model equipped with a Shovel can use it as a 2-Handed Melee Weapon instead of using any other Melee Weapons it has.</characteristic>
       </characteristics>
     </profile>
     <profile name="Gavel of Justice" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="ddce-0973-220d-51e0">
