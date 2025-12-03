@@ -1240,12 +1240,12 @@
                 <infoLink name="Armour Piercing" id="0f62-2a8b-0116-b491" hidden="false" type="rule" targetId="ba7a-64b6-e87b-0ecd"/>
               </infoLinks>
               <modifiers>
-                <modifier type="set" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+                <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
             </entryLink>
             <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="f7c6-2f2f-ee6e-4964" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
               <modifiers>
-                <modifier type="set" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+                <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
             </entryLink>
           </entryLinks>
