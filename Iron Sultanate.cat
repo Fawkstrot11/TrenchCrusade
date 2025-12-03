@@ -114,28 +114,23 @@
               <comment>Both units start with a free shovel</comment>
             </modifier>
           </modifiers>
-          <profiles>
-            <profile name="Weaponized Shovel" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="a0de-34a1-4d10-d4b5">
-              <characteristics>
-                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
-              </characteristics>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="model" childId="bfe3-326a-87ad-256f" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="model" childId="41a5-7586-9820-990b" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </profile>
-          </profiles>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Include Weapon Profile?" hidden="false" id="ee36-9db0-002e-7fe4">
+              <profiles>
+                <profile name="Weaponized Shovel" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="a0de-34a1-4d10-d4b5">
+                  <characteristics>
+                    <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+                    <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                    <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
+                    <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fdd8-6e19-28af-bae4" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Mountaineer Kit" hidden="false" id="f8ac-d279-6eaa-ab96" sortIndex="7">
           <costs>
@@ -169,6 +164,23 @@
               </conditions>
             </modifier>
           </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Include Weapon Profile?" hidden="false" id="2177-9bd9-1473-1786">
+              <profiles>
+                <profile name="Weaponized Marid Shovel" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="bb71-83f8-e3a8-048f">
+                  <characteristics>
+                    <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+                    <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                    <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
+                    <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0fd4-3e48-db52-67bb" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Wind Amulet" hidden="false" id="f9dd-df87-c671-55e5" sortIndex="10">
           <costs>
@@ -2430,7 +2442,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
                   </conditions>
                   <conditionGroups>
@@ -2601,7 +2612,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="b621-24b3-db53-b09a" shared="true" includeChildSelections="true"/>
                   </conditions>
                   <conditionGroups>
@@ -4404,7 +4414,7 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Janissaries" hidden="false" id="58c8-0815-71a7-27fb">
+    <selectionEntry type="model" import="true" name="Janissary" hidden="false" id="58c8-0815-71a7-27fb">
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="55"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -4451,7 +4461,7 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Janissaries" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="16b9-d9fd-6c2d-68f9">
+        <profile name="Janissary" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="16b9-d9fd-6c2d-68f9">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 Dice</characteristic>

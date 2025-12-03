@@ -101,28 +101,23 @@
               </conditions>
             </modifier>
           </modifiers>
-          <profiles>
-            <profile name="Weaponized Shovel" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="6710-9a15-f39d-2063">
-              <characteristics>
-                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
-              </characteristics>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="model" childId="20db-0edb-9d5e-17c9" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="model" childId="8b4c-c5f4-f53b-fe48" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </profile>
-          </profiles>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Include Weapon Profile?" hidden="false" id="09e5-b7c0-90e4-5505">
+              <profiles>
+                <profile name="Weaponized Shovel" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="a3ed-f9a2-be4a-81af">
+                  <characteristics>
+                    <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+                    <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                    <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
+                    <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f7f5-11e6-2b9a-e68c" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Mountaineer Kit" hidden="false" id="4b93-17b7-dbd2-0ca3" sortIndex="7">
           <costs>
@@ -299,7 +294,7 @@
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Blood Cloak" hidden="true" id="114b-97a7-6011-55c2" sortIndex="12">
           <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <profiles>
@@ -4334,9 +4329,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Sniper Priests" hidden="false" id="dd59-a783-dbb5-242f">
+    <selectionEntry type="model" import="true" name="Sniper Priest" hidden="false" id="dd59-a783-dbb5-242f">
       <profiles>
-        <profile name="Sniper Priests" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="1edc-6a6e-cd50-f841">
+        <profile name="Sniper Priest" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="1edc-6a6e-cd50-f841">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+2 Dice</characteristic>
@@ -6040,7 +6035,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Specialization" id="5165-30c7-d39e-e66b" hidden="false">
+        <selectionEntryGroup name="Specialization" id="5165-30c7-d39e-e66b" hidden="false" sortIndex="4">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Guard Dog" hidden="false" id="4f32-2acd-646e-b2c5">
               <profiles>
@@ -6128,6 +6123,326 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f8b-5b8f-742b-a71c" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Fireteams" id="305e-6f51-7e12-fa17" hidden="false" collapsible="true" flatten="false" sortIndex="3">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Fireteam Alpha" hidden="false" id="3863-802b-f84f-d11c" sortIndex="1">
+              <profiles>
+                <profile name="Fireteam Alpha" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="dd85-f021-dec5-7a53">
+                  <characteristics>
+                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Alpha.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="f515-434e-c65b-ecc0" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fireteam Beta" hidden="false" id="8881-81fe-3192-2bdc" sortIndex="2">
+              <profiles>
+                <profile name="Fireteam Beta" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5f27-71d6-0e5a-d7e7">
+                  <characteristics>
+                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Beta.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="3cc6-37ea-45fb-2d05" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fireteam Charlie" hidden="true" id="e928-ba8b-f70c-6edc" sortIndex="3">
+              <profiles>
+                <profile name="Fireteam Charlie" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1c48-5a77-bd9c-4678">
+                  <characteristics>
+                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model is a member of Fireteam Charlie.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="ad91-d9d4-7b38-b6ff" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="440a-e3aa-60d7-7d9c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mamluk-Guarded" hidden="true" id="22d5-9278-17b3-d250" sortIndex="4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2ccc-7bdf-bd69-ba84" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Mamluk-Guarded" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4b9e-5284-97ed-af1b">
+                  <characteristics>
+                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with its Mamluk Faris bodyguard.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a41a-bff7-3736-d3c7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="First Friend of the Brigade&apos;s Dogs" hidden="true" id="f17c-a19b-da5d-c86f" sortIndex="8">
+              <profiles>
+                <profile name="First Friend of Dog" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1b7b-167c-e0d7-94df">
+                  <characteristics>
+                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with its dog friend.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b629-dd71-c863-5db4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0f67-faf0-a4d7-70ba" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Second Friend of the Brigade&apos;s Dogs" hidden="true" id="38bb-90bc-633b-12c8" sortIndex="9">
+              <profiles>
+                <profile name="Second Friend of Dog" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="277a-0208-cd17-f687">
+                  <characteristics>
+                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This unit is forming a fireteam with the other dog friend.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="roster" childId="b629-dd71-c863-5db4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4748-7c07-3a7b-4ad0" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Dog&apos;s Friend" hidden="true" id="13f8-9670-e273-7581" sortIndex="7">
+              <modifiers>
+                <modifier type="increment" value="1" field="285d-1452-a9ad-6827">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="roster" childId="5f45-ffc2-6635-0f8c" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="5f45-ffc2-6635-0f8c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="285d-1452-a9ad-6827" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="model" shared="true" id="8ade-e6ea-c430-df3a" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mind Linked" hidden="true" id="da2b-9808-47a6-f51d">
+              <profiles>
+                <profile name="Mind Linked" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1d9f-bbe2-474b-b25f">
+                  <characteristics>
+                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model has formed a Fireteam with a Homunculus.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9119-3917-7d3e-0847" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="155f-9854-c740-da37" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cataphract Formation Alpha" hidden="true" id="1fac-077c-a663-f4f4" sortIndex="5">
+              <profiles>
+                <profile name="Catphract Formation Alpha" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1f8d-1b65-1dd2-9853">
+                  <characteristics>
+                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model is a member of Catphract Formation Alpha.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="c300-52bd-949b-cec2" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="7e92-a9c9-240d-6179" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="3133-240a-a0cc-9cb4" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cataphract Formation Beta" hidden="true" id="389b-6e56-7a02-f47f" sortIndex="6">
+              <profiles>
+                <profile name="Catphract Formation Beta" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bd30-a567-830c-3ef6">
+                  <characteristics>
+                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model is a member of Catphract Formation Beta.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="2156-dd01-74e4-4561" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="7e92-a9c9-240d-6179" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="3133-240a-a0cc-9cb4" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1200" field="limit::8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="atLeast" value="1200" field="8d43-33fd-332d-17a6" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="e517-fc8b-79f8-eb38" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da97-9453-07d9-9b4a" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Concerted Attack" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7156-30e7-2538-f23c">
+              <characteristics>
+                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">If a model in the FIRETEAM makes any kind of Attack ACTION (ranged or melee) against an opponent, where the other member of their FIRETEAM has already hit it with an attack ACTION during the same activation, the cost of a Bloodbath is reduced to three BLOOD MARKERS against this opponent, whether the model is standing or Down.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7d15-6383-16ed-4313">
+              <characteristics>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You can Activate friendly models that are part of the same Fireteam simultaneously. If you do so, you can take their ACTIONS in any order you wish, and you can switch between the two models freely. However, if the Activation of either member of the Fireteam ends during a simultaneous Activation (due to a failed Risky Success Roll for example), it immediately ends for the other model that is in the Fireteam too.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Grenadier Dog" id="b7a4-2e79-5773-0a6e" hidden="false" sortIndex="2">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Grenade Carrier" hidden="false" id="5589-fa94-48a5-1d7f">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Shrapnel" id="e03b-a525-6f8c-c9f1" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+                <infoLink name="Assault" id="3af7-82f6-d8cf-63f7" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+                <infoLink name="Blast" id="15c0-4ec2-c441-85db" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+                <infoLink name="Grenade" id="070b-096f-14e7-7eaa" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a036-eeeb-e581-92c6" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Carried Grenades" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="f580-8b00-a18a-0d48">
+                  <characteristics>
+                    <characteristic name="Type" typeId="f90e-171a-4ca6-3845">GRENADE</characteristic>
+                    <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
+                    <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, BLAST 2&quot;, IGNORE COVER, IGNORE LONG RANGE, SHRAPNEL </characteristic>
+                    <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Molotov Carrier" hidden="false" id="b173-4099-33bd-41b5">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Shrapnel" id="e733-4ea4-c087-384d" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+                <infoLink name="Assault" id="146e-7e70-7c6d-f3c5" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+                <infoLink name="Blast" id="83d5-fc46-06e3-1ca4" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+                <infoLink name="Grenade" id="bb07-d6d8-b0ff-3e06" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5139-c6dc-fea6-36dc" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Carried Molotov" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="ba2c-f56a-e419-764f">
+                  <characteristics>
+                    <characteristic name="Type" typeId="f90e-171a-4ca6-3845">GRENADE</characteristic>
+                    <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">6&quot;</characteristic>
+                    <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-1 INJURY DICE, ASSAULT, FIRE, IGNORE COVER, IGNORE LONG RANGE</characteristic>
+                    <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Liquid Fire: If the Success Roll for a Ranged Attack made with a Molotov Cocktail is a Critical Success then the Injury Roll for the attack has the IGNORE ARMOUR Keyword.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="3a95-7008-37de-42a9" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <constraints>
         <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="8ad8-a1f0-ebd3-34ff" includeChildSelections="false"/>
@@ -6207,32 +6522,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <categoryLink targetId="2cfb-73f8-0df3-30e8" id="0a9c-c632-bb40-c707" primary="false" name="New Antioch"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Grenade Carrier" hidden="false" id="5589-fa94-48a5-1d7f">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Shrapnel" id="e03b-a525-6f8c-c9f1" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
-            <infoLink name="Assault" id="3af7-82f6-d8cf-63f7" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
-            <infoLink name="Blast" id="15c0-4ec2-c441-85db" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
-            <infoLink name="Grenade" id="070b-096f-14e7-7eaa" hidden="false" type="rule" targetId="1c58-0dce-e86e-b0dc"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a036-eeeb-e581-92c6" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Carried Grenades" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="f580-8b00-a18a-0d48">
-              <characteristics>
-                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">GRENADE</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, SHRAPNEL, BLAST 2&quot;</characteristic>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Man&apos;s Best Friend" hidden="false" id="b629-dd71-c863-5db4">
+        <selectionEntry type="upgrade" import="true" name="Man&apos;s Best Friend" hidden="false" id="b629-dd71-c863-5db4" sortIndex="5">
           <profiles>
             <profile name="Man&apos;s Best Friend" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="109e-695b-e73d-e9f5">
               <characteristics>
