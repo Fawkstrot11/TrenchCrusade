@@ -260,7 +260,7 @@ first BLOOD MARKER placed on the model is ignored.
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="15cf-bee7-aa7e-cd95" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Field Shrine" hidden="false" id="e6f1-8965-19f9-ee33" sortIndex="11">
+        <selectionEntry type="upgrade" import="true" name="Field Shrine" hidden="false" id="e6f1-8965-19f9-ee33" sortIndex="12">
           <costs>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
           </costs>
@@ -392,12 +392,13 @@ first BLOOD MARKER placed on the model is ignored.
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Horn of Joshua" hidden="false" id="0620-8c6a-c05d-e36d" type="selectionEntry" targetId="d954-b3b8-db5f-0026" sortIndex="12"/>
+        <entryLink import="true" name="Horn of Joshua" hidden="false" id="0620-8c6a-c05d-e36d" type="selectionEntry" targetId="d954-b3b8-db5f-0026" sortIndex="13"/>
         <entryLink import="true" name="Blasphemous Banner" hidden="true" id="d0e0-774c-120f-eb89" type="selectionEntry" targetId="ac5b-0ae8-e0cd-5fda"/>
         <entryLink import="true" name="Curative Fluids" hidden="true" id="eced-e795-aa11-ed5a" type="selectionEntry" targetId="0e49-dfa5-4190-ee69"/>
         <entryLink import="true" name="Lock of Samson&apos;s Hair" hidden="false" id="f264-2ade-c985-d3d7" type="selectionEntry" targetId="9b61-d0a4-dd30-2d32"/>
         <entryLink import="true" name="Saints Reliquary" hidden="true" id="5d29-e0b3-1ac1-c9ae" type="selectionEntry" targetId="cf19-f306-c26c-1537"/>
         <entryLink import="true" name="Dog Food" hidden="false" id="5e90-ed78-533d-3a9b" type="selectionEntry" targetId="05f3-2ee4-36c0-8c25" sortIndex="10"/>
+        <entryLink import="true" name="Rocket-Propelled Grenade" hidden="true" id="3508-a51d-ef3f-c1a1" type="selectionEntry" targetId="e365-c945-740f-e764" sortIndex="11"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Throwables" id="70c8-b7ed-f20b-8bd6" hidden="false">
@@ -460,15 +461,6 @@ first BLOOD MARKER placed on the model is ignored.
             </modifier>
           </modifiers>
           <entryLinks>
-            <entryLink import="true" name="Rocket-Propelled Grenade" hidden="true" id="3508-a51d-ef3f-c1a1" type="selectionEntry" targetId="e365-c945-740f-e764" sortIndex="4">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model" childId="a77d-7d78-27b2-13b0" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
             <entryLink import="true" name="Holy Grenade" hidden="false" id="7f08-e0ae-4222-3ff9" type="selectionEntry" targetId="cd8e-22a5-02c4-ab9a" sortIndex="3"/>
           </entryLinks>
         </selectionEntryGroup>

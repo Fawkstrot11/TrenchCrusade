@@ -576,7 +576,8 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2a4-5514-5559-42c0" includeChildSelections="false"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Dog Food" hidden="false" id="812b-50f4-8c25-dda9" type="selectionEntry" targetId="05f3-2ee4-36c0-8c25" sortIndex="13"/>
+        <entryLink import="true" name="Dog Food" hidden="false" id="812b-50f4-8c25-dda9" type="selectionEntry" targetId="05f3-2ee4-36c0-8c25" sortIndex="12"/>
+        <entryLink import="true" name="Rocket-Propelled Grenade" hidden="true" id="853c-941f-0253-5dbb" type="selectionEntry" targetId="e365-c945-740f-e764" sortIndex="17"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Grenades" id="52e3-49c7-5f3b-d5c9" hidden="false">
@@ -760,17 +761,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
           </modifiers>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink import="true" name="Rocket-Propelled Grenade" hidden="true" id="853c-941f-0253-5dbb" type="selectionEntry" targetId="e365-c945-740f-e764">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model" childId="7ab7-6dce-ddb6-94f3" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1366-80b5-c17a-a2e8" includeChildSelections="false"/>
       </constraints>

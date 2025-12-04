@@ -219,7 +219,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Holy Water of Lalibela" hidden="true" id="b4d4-3da2-7157-f15b" sortIndex="16">
+        <selectionEntry type="upgrade" import="true" name="Holy Water of Lalibela" hidden="true" id="b4d4-3da2-7157-f15b" sortIndex="17">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="3"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -246,7 +246,7 @@
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Tabot" hidden="true" id="ffda-4bec-1b59-f267" sortIndex="17">
+        <selectionEntry type="upgrade" import="true" name="Tabot" hidden="true" id="ffda-4bec-1b59-f267" sortIndex="18">
           <costs>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="4"/>
           </costs>
@@ -489,18 +489,19 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Sniper Scope" hidden="true" id="ff38-50c0-2451-836c" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="15"/>
-        <entryLink import="true" name="Battlefield Title" hidden="true" id="f5cf-f56e-1756-e867" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="21"/>
-        <entryLink import="true" name="Resurrection Engine" hidden="true" id="c6da-3d4a-3dae-8e8a" type="selectionEntry" targetId="28c1-351c-12d0-1f26" sortIndex="24"/>
-        <entryLink import="true" name="Book of Battle Prayers" hidden="true" id="1ae8-3911-e885-b448" type="selectionEntry" targetId="2958-0f21-a1a5-74fb" sortIndex="22"/>
-        <entryLink import="true" name="Salvage Golem" hidden="true" id="1c98-df0a-2814-f1b1" type="selectionEntry" targetId="a9ef-f6d0-107c-2441" sortIndex="18"/>
-        <entryLink import="true" name="Field Hospital" hidden="true" id="2ffa-83b2-4c28-d014" type="selectionEntry" targetId="eb62-f33b-0d57-cd92" sortIndex="23"/>
-        <entryLink import="true" name="Smoke Screen" hidden="true" id="acc4-e923-3870-52de" type="selectionEntry" targetId="6db3-6176-dc20-c6b8" sortIndex="20"/>
-        <entryLink import="true" name="Knighthood" hidden="true" id="3c71-bc76-c2da-6589" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="19"/>
+        <entryLink import="true" name="Battlefield Title" hidden="true" id="f5cf-f56e-1756-e867" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="22"/>
+        <entryLink import="true" name="Resurrection Engine" hidden="true" id="c6da-3d4a-3dae-8e8a" type="selectionEntry" targetId="28c1-351c-12d0-1f26" sortIndex="25"/>
+        <entryLink import="true" name="Book of Battle Prayers" hidden="true" id="1ae8-3911-e885-b448" type="selectionEntry" targetId="2958-0f21-a1a5-74fb" sortIndex="23"/>
+        <entryLink import="true" name="Salvage Golem" hidden="true" id="1c98-df0a-2814-f1b1" type="selectionEntry" targetId="a9ef-f6d0-107c-2441" sortIndex="19"/>
+        <entryLink import="true" name="Field Hospital" hidden="true" id="2ffa-83b2-4c28-d014" type="selectionEntry" targetId="eb62-f33b-0d57-cd92" sortIndex="24"/>
+        <entryLink import="true" name="Smoke Screen" hidden="true" id="acc4-e923-3870-52de" type="selectionEntry" targetId="6db3-6176-dc20-c6b8" sortIndex="21"/>
+        <entryLink import="true" name="Knighthood" hidden="true" id="3c71-bc76-c2da-6589" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="20"/>
         <entryLink import="true" name="Curative Fluids" hidden="true" id="c53b-797a-a746-74ed" type="selectionEntry" targetId="0e49-dfa5-4190-ee69"/>
         <entryLink import="true" name="Lock of Samson&apos;s Hair" hidden="false" id="8ed1-2abd-94fe-13be" type="selectionEntry" targetId="9b61-d0a4-dd30-2d32"/>
         <entryLink import="true" name="Blasphemous Banner" hidden="true" id="8a3a-c966-249a-7019" type="selectionEntry" targetId="ac5b-0ae8-e0cd-5fda"/>
         <entryLink import="true" name="Saints Reliquary" hidden="true" id="1401-cf1d-2185-062e" type="selectionEntry" targetId="cf19-f306-c26c-1537"/>
         <entryLink import="true" name="Dog Food" hidden="false" id="067f-da92-d473-c2d0" type="selectionEntry" targetId="05f3-2ee4-36c0-8c25" sortIndex="14"/>
+        <entryLink import="true" name="Rocket-Propelled Grenade" hidden="true" id="6c64-46a8-8a5f-f8ab" type="selectionEntry" targetId="e365-c945-740f-e764" sortIndex="16"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Grenades" id="9c37-58de-3fa2-bfd2" hidden="false">
@@ -711,17 +712,6 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink import="true" name="Rocket-Propelled Grenade" hidden="true" id="6c64-46a8-8a5f-f8ab" type="selectionEntry" targetId="e365-c945-740f-e764">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model" childId="8b4c-c5f4-f53b-fe48" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9e74-3698-22e8-18b4" includeChildSelections="false"/>
       </constraints>
