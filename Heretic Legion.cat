@@ -249,15 +249,6 @@
         <entryLink import="true" name="Advancement" hidden="true" id="19ee-1b7e-6a83-5ba4" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="2"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="9202-d14d-0c83-e2cb" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="9620-c67c-bd46-ba6a" type="selectionEntryGroup" targetId="7bcd-ee92-0f03-ae73" sortIndex="4"/>
-        <entryLink import="true" name="Leader" hidden="false" id="417b-9bb4-b0b6-3e76" type="selectionEntry" targetId="daff-1b9d-5ec1-d81e" sortIndex="1">
-          <profiles>
-            <profile name="Leader" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2a2a-ff7c-5061-5b1f">
-              <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Heretic Priest is the leader of the Warband.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </entryLink>
       </entryLinks>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="e878-a54e-5461-5f68-min" includeChildSelections="true"/>
@@ -274,15 +265,7 @@
           </modifiers>
         </infoLink>
         <infoLink name="Tough" id="63b0-914b-9373-dbba" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
-        <infoLink name="Leader" id="c134-9935-13a7-1b27" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Leader" id="c134-9935-13a7-1b27" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
       </infoLinks>
       <modifiers>
         <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
@@ -290,9 +273,14 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="61b5-8cd2-9946-22fd" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="remove" value="afb9-39f5-82d9-46ed" field="category">
+        <modifier type="set" value="0" field="e878-a54e-5461-5f68-min">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="e878-a54e-5461-5f68-max">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ac3e-734d-ddbe-d291" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2063,9 +2051,13 @@ However, instead of gaining ducats equal to their Exploration score x10, the Cad
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="0" field="f9fd-f8bb-f0a6-e390">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="8983-6564-96c7-fd33" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="e67f-f62c-426b-7bc7" includeChildSelections="true" includeChildForces="true"/>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f9fd-f8bb-f0a6-e390" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <categoryLinks>
@@ -2073,6 +2065,7 @@ However, instead of gaining ducats equal to their Exploration score x10, the Cad
         <categoryLink targetId="7ba1-f516-e8cf-3957" id="6396-f2b6-4026-bdb9" primary="false" name="Heretic"/>
         <categoryLink targetId="4180-5377-2d83-48ba" id="d0ea-a00e-867e-bfee" primary="false" name="Artificial"/>
         <categoryLink targetId="914f-0020-0d97-e217" id="7ac2-e2db-6d28-3628" primary="false" name="Tough"/>
+        <categoryLink targetId="afb9-39f5-82d9-46ed" id="5d11-9f91-6968-7d2d" primary="false" name="Leader"/>
       </categoryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="80"/>
@@ -2086,15 +2079,6 @@ However, instead of gaining ducats equal to their Exploration score x10, the Cad
         <entryLink import="true" name="Armour" hidden="false" id="67d5-0e37-fcff-ef99" type="selectionEntryGroup" targetId="d8da-8812-463a-5a3a"/>
         <entryLink import="true" name="Equipment" hidden="false" id="834f-6359-80e0-636c" type="selectionEntryGroup" targetId="5adc-fb98-76b8-c105" collapsible="true"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="8fe5-5d47-ae9b-95b0" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
-        <entryLink import="true" name="Leader" hidden="false" id="31e8-8312-16de-c987" type="selectionEntry" targetId="daff-1b9d-5ec1-d81e" sortIndex="1">
-          <profiles>
-            <profile name="Leader" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ba78-2b7d-a35e-251c">
-              <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Technomancer is the leader of the Warband.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </entryLink>
       </entryLinks>
       <profiles>
         <profile name="Technomancer" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="7d0c-f87e-d843-b52e">
@@ -2170,7 +2154,15 @@ However, instead of gaining ducats equal to their Exploration score x10, the Cad
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">As an ACTION, the Technomancer assumes direct control over any friendly CADAVER CORPS ARTIFICIAL model within 12” that has not been Activated this turn. If successful, the Technomancer’s Activation immediately ends and the target’s Activation begins immediately after.</characteristic>
           </characteristics>
         </profile>
+        <profile name="Leader" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b486-a9b6-fb1d-efc4">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Technomancer is the leader of the Warband.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Leader" id="a52f-6f7b-cb40-5115" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Witch Coven Matriarch" hidden="true" id="eeba-3e20-1de2-32d2">
       <categoryLinks>
@@ -5145,7 +5137,20 @@ Melee Chassis counts as two one handed melee weapons for the purposes of equippi
     <forceEntry name="Warband" id="3952-da7e-8ceb-60d9" hidden="false">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="8d8e-7f30-a1cc-11bc" targetId="705b-e23f-e9c2-58ab"/>
-        <categoryLink name="Elite" hidden="false" id="ca65-9830-167a-dcd3" targetId="3de0-192c-3ec2-51be"/>
+        <categoryLink name="Elite" hidden="false" id="ca65-9830-167a-dcd3" targetId="3de0-192c-3ec2-51be">
+          <modifiers>
+            <modifier type="add" value="Minimum 1 Leader (Heretic Priest or Technomancer)" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="8983-6564-96c7-fd33" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="ac3e-734d-ddbe-d291" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </categoryLink>
         <categoryLink name="Troop" hidden="false" id="62bf-5f9a-6f05-d089" targetId="bd43-ddb1-262d-4489"/>
         <categoryLink name="Mercenary" hidden="false" id="5b2e-880e-b9a3-6e0b" targetId="3dfb-701d-e89c-eba2"/>
       </categoryLinks>
