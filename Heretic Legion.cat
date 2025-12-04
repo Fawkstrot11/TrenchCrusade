@@ -249,7 +249,15 @@
         <entryLink import="true" name="Advancement" hidden="true" id="19ee-1b7e-6a83-5ba4" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="2"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="9202-d14d-0c83-e2cb" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="9620-c67c-bd46-ba6a" type="selectionEntryGroup" targetId="7bcd-ee92-0f03-ae73" sortIndex="4"/>
-        <entryLink import="true" name="Leader" hidden="false" id="417b-9bb4-b0b6-3e76" type="selectionEntry" targetId="daff-1b9d-5ec1-d81e" sortIndex="1"/>
+        <entryLink import="true" name="Leader" hidden="false" id="417b-9bb4-b0b6-3e76" type="selectionEntry" targetId="daff-1b9d-5ec1-d81e" sortIndex="1">
+          <profiles>
+            <profile name="Leader" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2a2a-ff7c-5061-5b1f">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Heretic Priest is the leader of the Warband.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
       </entryLinks>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="e878-a54e-5461-5f68-min" includeChildSelections="true"/>
@@ -266,12 +274,25 @@
           </modifiers>
         </infoLink>
         <infoLink name="Tough" id="63b0-914b-9373-dbba" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
-        <infoLink name="Leader" id="c134-9935-13a7-1b27" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
+        <infoLink name="Leader" id="c134-9935-13a7-1b27" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="self" childId="61b5-8cd2-9946-22fd" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="remove" value="afb9-39f5-82d9-46ed" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -881,7 +902,7 @@
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="b0b0-1549-d4ec-7b5f" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2065,7 +2086,15 @@ However, instead of gaining ducats equal to their Exploration score x10, the Cad
         <entryLink import="true" name="Armour" hidden="false" id="67d5-0e37-fcff-ef99" type="selectionEntryGroup" targetId="d8da-8812-463a-5a3a"/>
         <entryLink import="true" name="Equipment" hidden="false" id="834f-6359-80e0-636c" type="selectionEntryGroup" targetId="5adc-fb98-76b8-c105" collapsible="true"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="8fe5-5d47-ae9b-95b0" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
-        <entryLink import="true" name="Leader" hidden="false" id="31e8-8312-16de-c987" type="selectionEntry" targetId="daff-1b9d-5ec1-d81e" sortIndex="1"/>
+        <entryLink import="true" name="Leader" hidden="false" id="31e8-8312-16de-c987" type="selectionEntry" targetId="daff-1b9d-5ec1-d81e" sortIndex="1">
+          <profiles>
+            <profile name="Leader" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ba78-2b7d-a35e-251c">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Technomancer is the leader of the Warband.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
       </entryLinks>
       <profiles>
         <profile name="Technomancer" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="7d0c-f87e-d843-b52e">
@@ -5856,13 +5885,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Leader" hidden="true" id="daff-1b9d-5ec1-d81e">
-      <profiles>
-        <profile name="Leader" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ba78-2b7d-a35e-251c">
-          <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Matagot Hag is the leader of the Warband.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <modifiers>
         <modifier type="add" value="afb9-39f5-82d9-46ed" field="category" scope="model"/>
         <modifier type="set" value="false" field="hidden">
@@ -5876,6 +5898,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="9aa4-37ae-4687-c37b" includeChildSelections="true" includeChildForces="true"/>
         <constraint type="max" value="1" field="selections" scope="self" shared="true" id="09d2-be39-fb5a-8047" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
+      <infoLinks>
+        <infoLink name="Leader" id="fe96-9819-8673-10d0" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
