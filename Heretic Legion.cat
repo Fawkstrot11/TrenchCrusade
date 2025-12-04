@@ -4276,8 +4276,8 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="3de0-192c-3ec2-51be" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
@@ -4329,8 +4329,8 @@ If a Byzantinium Heart is ever removed or lost from the model that has it equipp
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="3de0-192c-3ec2-51be" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
@@ -4414,8 +4414,8 @@ The corpses of those who have undergone Artificial Rebirth refund 1 glory when S
                       <conditionGroups>
                         <conditionGroup type="and">
                           <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="7ba1-f516-e8cf-3957" shared="true" includeChildSelections="true"/>
-                            <condition type="lessThan" value="1" field="selections" scope="primary-category" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="7ba1-f516-e8cf-3957" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true" includeChildForces="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -4425,9 +4425,9 @@ The corpses of those who have undergone Artificial Rebirth refund 1 glory when S
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="add" value="4180-5377-2d83-48ba" field="category"/>
-                <modifier type="add" value="7877-788b-2d58-c844" field="category"/>
-                <modifier type="add" value="d935-8238-a3f7-8ab0" field="category"/>
+                <modifier type="add" value="4180-5377-2d83-48ba" field="category" scope="model"/>
+                <modifier type="add" value="7877-788b-2d58-c844" field="category" scope="model"/>
+                <modifier type="add" value="d935-8238-a3f7-8ab0" field="category" scope="model"/>
               </modifiers>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
@@ -4440,14 +4440,14 @@ The corpses of those who have undergone Artificial Rebirth refund 1 glory when S
                 <infoLink name="Negate [Keyword]" id="5401-85a0-546e-cc28" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
               </infoLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Thermal Shielding" hidden="false" id="2ee4-7f35-8086-2f2a">
+            <selectionEntry type="upgrade" import="true" name="Thermal Shielding" hidden="true" id="2ee4-7f35-8086-2f2a">
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </modifier>
-                <modifier type="add" value="f0ef-ba0d-8963-331a" field="category"/>
+                <modifier type="add" value="f0ef-ba0d-8963-331a" field="category" scope="model"/>
               </modifiers>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
@@ -4470,14 +4470,13 @@ The corpses of those who have undergone Artificial Rebirth refund 1 glory when S
                 <infoLink name="Negate [Keyword]" id="96cd-0b51-7e2a-365a" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
               </infoLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Sonomatic Sculpture" hidden="false" id="6b11-a83d-8aba-872a">
+            <selectionEntry type="upgrade" import="true" name="Sonomatic Sculpture" hidden="true" id="6b11-a83d-8aba-872a">
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </modifier>
-                <modifier type="add" value="f0ef-ba0d-8963-331a" field="category"/>
               </modifiers>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
@@ -4500,14 +4499,13 @@ The corpses of those who have undergone Artificial Rebirth refund 1 glory when S
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0605-51ff-8ddf-250c"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Enhanced Agility" hidden="false" id="732a-29eb-ad77-d384">
+            <selectionEntry type="upgrade" import="true" name="Enhanced Agility" hidden="true" id="732a-29eb-ad77-d384">
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </modifier>
-                <modifier type="add" value="f0ef-ba0d-8963-331a" field="category"/>
               </modifiers>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
@@ -4527,14 +4525,13 @@ The corpses of those who have undergone Artificial Rebirth refund 1 glory when S
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2379-c59c-9f58-6e3c"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Unstoppable" hidden="false" id="2ea9-6b43-8872-1f15">
+            <selectionEntry type="upgrade" import="true" name="Unstoppable" hidden="true" id="2ea9-6b43-8872-1f15">
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </modifier>
-                <modifier type="add" value="f0ef-ba0d-8963-331a" field="category"/>
               </modifiers>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
@@ -4554,14 +4551,13 @@ The corpses of those who have undergone Artificial Rebirth refund 1 glory when S
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d756-14d7-626a-bd90"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Melee Chassis" hidden="false" id="4194-478c-0584-06db">
+            <selectionEntry type="upgrade" import="true" name="Melee Chassis" hidden="true" id="4194-478c-0584-06db">
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </modifier>
-                <modifier type="add" value="f0ef-ba0d-8963-331a" field="category"/>
               </modifiers>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
@@ -4590,7 +4586,7 @@ Melee Chassis counts as two one handed melee weapons for the purposes of equippi
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </modifier>
               </modifiers>
