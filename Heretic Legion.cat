@@ -38,6 +38,18 @@
             </modifier>
           </modifiers>
         </profile>
+        <profile name="Incandescent" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="197e-2053-38ac-cce8">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Weapons with the FIRE keyword that this model has equipped gain +1 INJURY DICE.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
       </profiles>
       <entryLinks>
         <entryLink import="true" name="Grenades" hidden="false" id="0b18-18b1-58f2-2d15" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" sortIndex="5" collapsible="true"/>
@@ -54,6 +66,20 @@
       <infoLinks>
         <infoLink name="Strong" id="d490-8c8c-0f7e-f806" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
         <infoLink name="Reinforced Armour" id="fad8-546d-9f91-bc38" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
+        <infoLink name="Infernal Brand" id="9dba-4213-0300-bb8d" hidden="false" type="profile" targetId="e973-f445-e1c5-92ec">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="eee9-35a4-9eda-70e9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="2ee4-7f35-8086-2f2a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="2" field="2daf-dded-85a2-f21a">
@@ -72,6 +98,19 @@
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="unset-primary" value="bd43-ddb1-262d-4489" field="category"/>
+            <modifier type="add" value="3de0-192c-3ec2-51be" field="category"/>
+            <modifier type="set-primary" value="3de0-192c-3ec2-51be" field="category"/>
+            <modifier type="remove" value="bd43-ddb1-262d-4489" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Heretic Priest" hidden="false" id="8983-6564-96c7-fd33" publicationId="c658-4a10-e1fe-befc" page="20">
       <costs>
@@ -147,7 +186,7 @@
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Goetic Power" id="313a-7f25-cc7e-920c" hidden="false" sortIndex="4">
+        <selectionEntryGroup name="Goetic Power" id="313a-7f25-cc7e-920c" hidden="false" sortIndex="5">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9a62-abe5-e0a5-8b6d-max-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a62-abe5-e0a5-8b6d-max-max" includeChildSelections="false"/>
@@ -195,9 +234,9 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Grenades" hidden="false" id="4286-540c-2fee-9525" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" sortIndex="6" collapsible="true"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="4286-540c-2fee-9525" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" sortIndex="7" collapsible="true"/>
         <entryLink import="true" name="Equipment" hidden="false" id="0f51-e51b-67fc-6868" type="selectionEntryGroup" targetId="5adc-fb98-76b8-c105" collapsible="true"/>
-        <entryLink import="true" name="Weapons" hidden="false" id="80bd-768e-721c-a113" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="5"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="80bd-768e-721c-a113" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="6"/>
         <entryLink import="true" name="Armour" hidden="false" id="7a5b-e868-bc9c-ea71" type="selectionEntryGroup" targetId="d8da-8812-463a-5a3a">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -207,9 +246,10 @@
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Advancement" hidden="true" id="19ee-1b7e-6a83-5ba4" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
+        <entryLink import="true" name="Advancement" hidden="true" id="19ee-1b7e-6a83-5ba4" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="2"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="9202-d14d-0c83-e2cb" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
-        <entryLink import="true" name="Fireteams" hidden="false" id="9620-c67c-bd46-ba6a" type="selectionEntryGroup" targetId="7bcd-ee92-0f03-ae73" sortIndex="3"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="9620-c67c-bd46-ba6a" type="selectionEntryGroup" targetId="7bcd-ee92-0f03-ae73" sortIndex="4"/>
+        <entryLink import="true" name="Leader" hidden="false" id="417b-9bb4-b0b6-3e76" type="selectionEntry" targetId="daff-1b9d-5ec1-d81e" sortIndex="1"/>
       </entryLinks>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="e878-a54e-5461-5f68-min" includeChildSelections="true"/>
@@ -236,7 +276,7 @@
         </modifier>
       </modifiers>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Tank Palanquin" hidden="true" id="61b5-8cd2-9946-22fd" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Tank Palanquin" hidden="true" id="61b5-8cd2-9946-22fd" sortIndex="3">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="60"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -2018,13 +2058,14 @@ However, instead of gaining ducats equal to their Exploration score x10, the Cad
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Advancement" hidden="true" id="9e47-2d4c-d04a-add7" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
-        <entryLink import="true" name="Fireteams" hidden="false" id="3798-c61f-821c-1ae2" type="selectionEntryGroup" targetId="7bcd-ee92-0f03-ae73" sortIndex="2"/>
-        <entryLink import="true" name="Weapons" hidden="false" id="552f-427c-ef93-10f8" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="5"/>
-        <entryLink import="true" name="Grenades" hidden="false" id="a7d3-55f8-35ef-2067" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" collapsible="true" sortIndex="6"/>
+        <entryLink import="true" name="Advancement" hidden="true" id="9e47-2d4c-d04a-add7" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="2"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="3798-c61f-821c-1ae2" type="selectionEntryGroup" targetId="7bcd-ee92-0f03-ae73" sortIndex="3"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="552f-427c-ef93-10f8" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="4"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="a7d3-55f8-35ef-2067" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" collapsible="true" sortIndex="5"/>
         <entryLink import="true" name="Armour" hidden="false" id="67d5-0e37-fcff-ef99" type="selectionEntryGroup" targetId="d8da-8812-463a-5a3a"/>
         <entryLink import="true" name="Equipment" hidden="false" id="834f-6359-80e0-636c" type="selectionEntryGroup" targetId="5adc-fb98-76b8-c105" collapsible="true"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="8fe5-5d47-ae9b-95b0" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Leader" hidden="false" id="31e8-8312-16de-c987" type="selectionEntry" targetId="daff-1b9d-5ec1-d81e" sortIndex="1"/>
       </entryLinks>
       <profiles>
         <profile name="Technomancer" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="7d0c-f87e-d843-b52e">
@@ -3093,7 +3134,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
               </conditions>
             </modifier>
-            <modifier type="replace" value="" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" join=", " arg="-1 INJURY DICE, ">
+            <modifier type="replace" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" join=", " arg="-1 INJURY DICE, ">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="15bf-43f1-0650-1070" shared="true"/>
               </conditions>
@@ -3150,7 +3191,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
-            <modifier type="replace" value="" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" join=", " arg="-1 INJURY DICE, ">
+            <modifier type="replace" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" join=", " arg="-1 INJURY DICE, ">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="15bf-43f1-0650-1070" shared="true"/>
               </conditions>
@@ -3798,7 +3839,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
     </selectionEntryGroup>
     <selectionEntryGroup name="Equipment" id="5adc-fb98-76b8-c105" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Gas Mask" hidden="false" id="a16f-6866-66e3-e84c" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Gas Mask" hidden="false" id="a16f-6866-66e3-e84c" sortIndex="4">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -3811,7 +3852,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3396-636c-640f-5dc9" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Unholy Trinket" hidden="false" id="cf41-6d5d-0721-e337" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Unholy Trinket" hidden="false" id="cf41-6d5d-0721-e337" sortIndex="6">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -3824,7 +3865,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3e03-ba06-0d8d-e7c5" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Unholy Relic" hidden="false" id="ff32-5416-a4fa-08c7" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Unholy Relic" hidden="false" id="ff32-5416-a4fa-08c7" sortIndex="7">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -3837,7 +3878,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d83-5b66-de46-01af" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Incendiary Ammunition" hidden="false" id="c45f-a2c7-3b95-caa4" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Incendiary Ammunition" hidden="false" id="c45f-a2c7-3b95-caa4" sortIndex="8">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -3869,7 +3910,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Shovel" hidden="false" id="fa1f-59c8-3f39-3ff0" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Shovel" hidden="false" id="fa1f-59c8-3f39-3ff0" sortIndex="9">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -3898,7 +3939,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Hellbound Soul Contract" hidden="true" id="095e-7a3d-0538-1d4a" sortIndex="17">
+        <selectionEntry type="upgrade" import="true" name="Hellbound Soul Contract" hidden="true" id="095e-7a3d-0538-1d4a" sortIndex="21">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -3924,7 +3965,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Mountaineer Kit" hidden="false" id="b611-946c-0c0f-dbfc" sortIndex="16">
+        <selectionEntry type="upgrade" import="true" name="Mountaineer Kit" hidden="false" id="b611-946c-0c0f-dbfc" sortIndex="20">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="3"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -3949,7 +3990,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Infernal Brand" hidden="false" id="fbf4-745c-c4b1-be37" sortIndex="7">
+        <selectionEntry type="upgrade" import="true" name="Infernal Brand" hidden="false" id="fbf4-745c-c4b1-be37" sortIndex="10">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -3963,29 +4004,19 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="5b74-f842-4c65-c211" includeChildSelections="false"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="1" field="5b74-f842-4c65-c211">
+            <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
                     <condition type="instanceOf" value="1" field="selections" scope="model" childId="15bf-43f1-0650-1070" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="eee9-35a4-9eda-70e9" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="2ee4-7f35-8086-2f2a" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="eee9-35a4-9eda-70e9" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="0" field="8d43-33fd-332d-17a6">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="15bf-43f1-0650-1070" shared="true"/>
-              </conditions>
-            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Medi-Kit" hidden="true" id="5f28-57da-5cdf-6323" sortIndex="11">
+        <selectionEntry type="upgrade" import="true" name="Medi-Kit" hidden="true" id="5f28-57da-5cdf-6323" sortIndex="15">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -4009,7 +4040,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Martyrdom Pills" hidden="true" id="eb3f-ac83-9f60-6fe1" sortIndex="10">
+        <selectionEntry type="upgrade" import="true" name="Martyrdom Pills" hidden="true" id="eb3f-ac83-9f60-6fe1" sortIndex="14">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="1"/>
@@ -4035,7 +4066,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Binoculars" hidden="true" id="928a-9b8d-f725-79cf" sortIndex="13">
+        <selectionEntry type="upgrade" import="true" name="Binoculars" hidden="true" id="928a-9b8d-f725-79cf" sortIndex="17">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -4068,7 +4099,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Field Shrine" hidden="true" id="b59b-8601-bbe5-e216" sortIndex="15">
+        <selectionEntry type="upgrade" import="true" name="Field Shrine" hidden="true" id="b59b-8601-bbe5-e216" sortIndex="19">
           <costs>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
           </costs>
@@ -4086,7 +4117,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Holy Relic" hidden="true" id="1594-678f-a5d2-5b87" sortIndex="9">
+        <selectionEntry type="upgrade" import="true" name="Holy Relic" hidden="true" id="1594-678f-a5d2-5b87" sortIndex="13">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
@@ -4111,7 +4142,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Wind Amulet" hidden="true" id="568b-286b-99cd-574a" sortIndex="12">
+        <selectionEntry type="upgrade" import="true" name="Wind Amulet" hidden="true" id="568b-286b-99cd-574a" sortIndex="16">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
           </costs>
@@ -4129,7 +4160,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Cloak of Alamut" hidden="true" id="53b0-204c-024e-acc6" sortIndex="8">
+        <selectionEntry type="upgrade" import="true" name="Cloak of Alamut" hidden="true" id="53b0-204c-024e-acc6" sortIndex="12">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="25"/>
           </costs>
@@ -4152,7 +4183,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Golden Calf Altar" hidden="true" id="c9ba-7a03-eaae-1c00" sortIndex="18">
+        <selectionEntry type="upgrade" import="true" name="Golden Calf Altar" hidden="true" id="c9ba-7a03-eaae-1c00" sortIndex="22">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -4210,7 +4241,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="035e-c926-5d74-2483" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Tempered Filigree" hidden="true" id="face-4873-48fa-9183">
+        <selectionEntry type="upgrade" import="true" name="Tempered Filigree" hidden="true" id="face-4873-48fa-9183" sortIndex="11">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditionGroups>
@@ -4223,6 +4254,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="-2" field="5de9-d70e-9021-6f71" scope="parent" affects="profiles.Unit"/>
           </modifiers>
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="40"/>
@@ -4243,9 +4275,66 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="84dd-a1fb-1012-ce84"/>
           </constraints>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Byzantinium Hearth" hidden="true" id="c62c-1407-efc1-a7d6" sortIndex="5">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="573d-8d74-da65-b5f1" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a351-f281-bd4b-2ef8"/>
+          </constraints>
+          <profiles>
+            <profile name="Byzantinium Hearth" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5ade-9e4c-4b08-9237">
+              <characteristics>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model treats any DOWN INJURY result as a MINOR INJURY instead, unless it is as a result of the TOUGH keyword converting an OUT OF ACTION to a DOWN result.
+If a Byzantinium Heart is ever removed or lost from the model that has it equipped for any reason, the model instantly dies.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="3de0-192c-3ec2-51be" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Vessel of Original Sin" hidden="true" id="e13c-e295-3a8e-34dd" sortIndex="3">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="1"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="220c-cc20-c6a7-16b5" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="12d0-60cf-3d82-204b"/>
+          </constraints>
+          <profiles>
+            <profile name="Vessel of Original Sin" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a854-4a9d-a500-f54f">
+              <characteristics>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">A model equipped with a Vessel of Original Sin can choose to decrease the result of a roll made by a model within 6” of them by 1, BEFORE it is rolled. Doing so consumes the Vessel.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Consumable" id="2d41-9442-c639-7f94" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Headgear" id="0ff3-f218-8676-1288" hidden="false" sortIndex="1">
+        <selectionEntryGroup name="Headgear" id="0ff3-f218-8676-1288" hidden="false" sortIndex="2">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="582e-dd4d-b968-a2ba" includeChildSelections="false"/>
           </constraints>
@@ -4262,7 +4351,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Enhancement" id="28eb-dcfc-b1fe-1831" hidden="true" sortIndex="-1">
+        <selectionEntryGroup name="Enhancement" id="28eb-dcfc-b1fe-1831" hidden="true" sortIndex="1">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -4340,14 +4429,17 @@ The corpses of those who have undergone Artificial Rebirth refund 1 glory when S
                   <characteristics>
                     <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
                     <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model does not suffer additional BLOOD MARKERS from the Keyword FIRE. Attacks or effects from friendly sources with the FIRE keyword suffer a -2 DICE penalty to injure the model.</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE FIRE</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Attacks or effects from friendly sources with the FIRE keyword suffer a -2 DICE penalty to injure the model.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="68ef-c1f9-ffc1-7496"/>
               </constraints>
+              <infoLinks>
+                <infoLink name="Negate [Keyword]" id="96cd-0b51-7e2a-365a" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Sonomatic Sculpture" hidden="false" id="6b11-a83d-8aba-872a">
               <modifiers>
@@ -4492,66 +4584,22 @@ Melee Chassis counts as two one handed melee weapons for the purposes of equippi
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Byzantinium Hearth" hidden="false" id="c62c-1407-efc1-a7d6">
-              <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="573d-8d74-da65-b5f1" includeChildSelections="true" includeChildForces="true"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a351-f281-bd4b-2ef8"/>
-              </constraints>
-              <profiles>
-                <profile name="Byzantinium Hearth" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5ade-9e4c-4b08-9237">
-                  <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model treats any DOWN INJURY result as a MINOR INJURY instead, unless it is as a result of the TOUGH keyword converting an OUT OF ACTION to a DOWN result.
-If a Byzantinium Heart is ever removed or lost from the model that has it equipped for any reason, the model instantly dies.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Vessel of Original Sin" hidden="false" id="e13c-e295-3a8e-34dd">
-              <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="1"/>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="220c-cc20-c6a7-16b5" includeChildSelections="true" includeChildForces="true"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="12d0-60cf-3d82-204b"/>
-              </constraints>
-              <profiles>
-                <profile name="Vessel of Original Sin" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a854-4a9d-a500-f54f">
-                  <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">A model equipped with a Vessel of Original Sin can choose to decrease the result of a roll made by a model within 6” of them by 1, BEFORE it is rolled. Doing so consumes the Vessel.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Consumable" id="2d41-9442-c639-7f94" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
-              </infoLinks>
-            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Sniper Scope" hidden="false" id="42f5-fa6d-819e-2c9d" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="19">
+        <entryLink import="true" name="Sniper Scope" hidden="false" id="42f5-fa6d-819e-2c9d" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="23">
           <infoLinks>
             <infoLink name="Ignore [Modifier]" id="51ac-1f91-8c42-b675" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
           </infoLinks>
         </entryLink>
-        <entryLink import="true" name="The Mark of Cain" hidden="false" id="e7aa-1b0b-c234-c2b9" type="selectionEntry" targetId="446f-35b5-6d7e-5fb2" sortIndex="20"/>
-        <entryLink import="true" name="Knighthood" hidden="false" id="58a8-8222-f959-021c" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="21"/>
-        <entryLink import="true" name="Battlefield Title" hidden="false" id="ac73-89fb-59cd-b519" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="22"/>
+        <entryLink import="true" name="The Mark of Cain" hidden="false" id="e7aa-1b0b-c234-c2b9" type="selectionEntry" targetId="446f-35b5-6d7e-5fb2" sortIndex="24"/>
+        <entryLink import="true" name="Knighthood" hidden="false" id="58a8-8222-f959-021c" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="25"/>
+        <entryLink import="true" name="Battlefield Title" hidden="false" id="ac73-89fb-59cd-b519" type="selectionEntry" targetId="8beb-299d-e303-63c8" sortIndex="26"/>
         <entryLink import="true" name="Lock of Samson&apos;s Hair" hidden="false" id="85c7-3489-4852-ee41" type="selectionEntry" targetId="9b61-d0a4-dd30-2d32"/>
         <entryLink import="true" name="Curative Fluids" hidden="true" id="b95d-0bf9-8d0c-b60b" type="selectionEntry" targetId="0e49-dfa5-4190-ee69"/>
         <entryLink import="true" name="Saints Reliquary" hidden="true" id="bee3-bf8d-7c29-81f2" type="selectionEntry" targetId="cf19-f306-c26c-1537"/>
-        <entryLink import="true" name="Dog Food" hidden="false" id="fa09-0e16-35a4-0f1b" type="selectionEntry" targetId="05f3-2ee4-36c0-8c25" sortIndex="14"/>
+        <entryLink import="true" name="Dog Food" hidden="false" id="fa09-0e16-35a4-0f1b" type="selectionEntry" targetId="05f3-2ee4-36c0-8c25" sortIndex="18"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Utility Hand" id="3676-db5e-8076-8b90" hidden="false">
@@ -5001,6 +5049,13 @@ If a Byzantinium Heart is ever removed or lost from the model that has it equipp
       <entryLinks>
         <entryLink import="true" name="Armour of Cobar" hidden="false" id="a4a9-4340-7070-9861" type="selectionEntry" targetId="4a11-8e06-0271-3973"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="face-4873-48fa-9183" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Fireteams" id="7bcd-ee92-0f03-ae73" hidden="false">
       <selectionEntries>
@@ -5797,8 +5852,30 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="c45f-a2c7-3b95-caa4" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
-        <modifier type="replace" value="" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", " arg="-,"/>
+        <modifier type="replace" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", " arg="-,"/>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Leader" hidden="true" id="daff-1b9d-5ec1-d81e">
+      <profiles>
+        <profile name="Leader" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ba78-2b7d-a35e-251c">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Matagot Hag is the leader of the Warband.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="add" value="afb9-39f5-82d9-46ed" field="category" scope="model"/>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="16ac-45cb-6ee3-54fc" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="9aa4-37ae-4687-c37b" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="09d2-be39-fb5a-8047" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
