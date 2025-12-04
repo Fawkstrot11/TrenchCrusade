@@ -1115,6 +1115,10 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
+              <entryLinks>
+                <entryLink import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="false" id="f53c-3482-a39e-afdb" type="selectionEntry" targetId="d5f6-0471-e4b8-8670"/>
+                <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="992c-ad99-9cca-a3a9" type="selectionEntry" targetId="6298-be97-6c32-1dc2"/>
+              </entryLinks>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -1899,7 +1903,7 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
           </modifiers>
           <comment>Nomads of Al-Badia</comment>
           <entryLinks>
-            <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="095a-49d9-f8b7-f332" type="selectionEntry" targetId="6298-be97-6c32-1dc2" sortIndex=""/>
+            <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="095a-49d9-f8b7-f332" type="selectionEntry" targetId="6298-be97-6c32-1dc2"/>
             <entryLink import="true" name="Heavy Bore Ammuntion (Loaded)" hidden="false" id="67e2-2a8c-8ebb-9dc5" type="selectionEntry" targetId="a0c5-9830-2779-89ef"/>
           </entryLinks>
         </selectionEntry>
@@ -2189,6 +2193,11 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <entryLinks>
+                <entryLink import="true" name="Heavy Bore Ammuntion (Loaded)" hidden="false" id="6fef-b2ad-cb1c-e8ce" type="selectionEntry" targetId="a0c5-9830-2779-89ef"/>
+                <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="ad9c-5f0d-aeef-c3e3" type="selectionEntry" targetId="6298-be97-6c32-1dc2"/>
+                <entryLink import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="false" id="75f5-8485-8bd2-ada7" type="selectionEntry" targetId="d5f6-0471-e4b8-8670"/>
+              </entryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4020,7 +4029,7 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="8ccf-c0b6-efff-4c4f" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
-        <modifier type="replace" value="" field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
+        <modifier type="replace" field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
 " arg="-"/>
         <modifier type="append" value="1 Pound Lead Ball: When a model is hit by this weapon, it moves D3” away from the attacker in a straight line, stopping if it hits anything it cannot pass through, such as other models, impassable terrain or walls. (N.B, this does not provoke a Free Attack if the model is pushed out of melee engagement.)
 " field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
@@ -4046,7 +4055,7 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
         <modifier type="append" value="Flash: If a model is hit by this weapon, all Attacks it makes have -1 DICE until the end of its next activation. This does not stack.
 " field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
 "/>
-        <modifier type="replace" value="" field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
+        <modifier type="replace" field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
 " arg="-"/>
       </modifiers>
     </selectionEntry>
@@ -4069,7 +4078,7 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
         <modifier type="append" value="Irradiating: If you hit with this weapon, do not make an Injury Roll as normal. Instead, the cost of a Bloodbath against the model that was just hit is reduced to 3 Blood Markers, for the rest of the turn.
 " field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
 "/>
-        <modifier type="replace" value="" field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
+        <modifier type="replace" field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
 " arg="-"/>
       </modifiers>
     </selectionEntry>
