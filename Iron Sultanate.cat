@@ -57,7 +57,19 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Shovel" hidden="false" id="207d-76d1-b643-e54f" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Alchemical Ammunition" hidden="false" id="954d-3d50-257d-a78a" sortIndex="8">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="3"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe0c-193c-db3f-46af" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Alchemical Ammunition" id="40a3-e74d-fc72-7d9c" hidden="false" type="profile" targetId="c296-2021-0947-c6c7"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Shovel" hidden="false" id="207d-76d1-b643-e54f" sortIndex="4">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -988,36 +1000,11 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Halberd-Gun" id="0a0b-c38c-a0d7-6996" hidden="false" type="profile" targetId="c403-4b36-5fd6-5c95">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="954d-3d50-257d-a78a" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink name="Halberd-Gun" id="0a0b-c38c-a0d7-6996" hidden="false" type="profile" targetId="c403-4b36-5fd6-5c95"/>
             <infoLink name="Block" id="ef32-5c75-b4b8-cc15" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
             <infoLink name="Cumbersome" id="8946-47f7-7bbc-b48b" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
             <infoLink name="Assault" id="d983-745a-9ddd-94d3" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
           </infoLinks>
-          <profiles>
-            <profile name="Alchemical Halberd-Gun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="true" id="b403-8915-ec25-37b4">
-              <characteristics>
-                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee/24&quot;</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, CUMBERSOME</characteristic>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
-              </characteristics>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="954d-3d50-257d-a78a" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </profile>
-          </profiles>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditionGroups>
@@ -1039,6 +1026,13 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
           <categoryLinks>
             <categoryLink targetId="f87d-5ea3-e505-6a9f" id="c87e-29c3-4cd0-0036" primary="false" name="Cumbersome"/>
           </categoryLinks>
+          <entryLinks>
+            <entryLink import="true" name="Alchemical Ammuntion (Loaded)" hidden="false" id="1be1-acfd-ff82-79ce" type="selectionEntry" targetId="6eea-1e21-53b1-4ce2">
+              <modifiers>
+                <modifier type="prepend" value="+1 DICE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Anti-Tank Hammer" hidden="true" id="b0ec-20ff-7d2a-ce73" collective="false" sortIndex="4">
           <costs>
@@ -1434,11 +1428,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
           <infoLinks>
             <infoLink name="Siege Jezzail" id="fcd3-5e72-0bcc-5f29" hidden="false" type="profile" targetId="59d6-227d-0859-a162">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="954d-3d50-257d-a78a" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
                 <modifier type="increment" value="6" field="31a7-b5e8-41dc-5fd1">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="model" childId="4467-39c5-0252-1b2d" shared="true" includeChildSelections="true"/>
@@ -1451,25 +1440,10 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="a329-48e6-9af2-cdec" targetId="70c9-988d-71a7-7654" primary="false"/>
           </categoryLinks>
-          <profiles>
-            <profile name="Alchemical Siege Jezzail" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="true" id="d4b5-c842-b8e7-e551">
-              <characteristics>
-                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">30&quot;</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
-              </characteristics>
+          <entryLinks>
+            <entryLink import="true" name="Alchemical Ammuntion (Loaded)" hidden="false" id="b359-f6cb-471c-fd12" type="selectionEntry" targetId="6eea-1e21-53b1-4ce2">
               <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="954d-3d50-257d-a78a" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" value="6" field="31a7-b5e8-41dc-5fd1">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model" childId="4467-39c5-0252-1b2d" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
+                <modifier type="prepend" value="+1 DICE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
             </profile>
           </profiles>
@@ -1489,11 +1463,6 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
           <infoLinks>
             <infoLink name="Jezzail" id="fd32-b31d-4036-2de8" hidden="false" type="profile" targetId="6d28-673b-5fe7-849e">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="954d-3d50-257d-a78a" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
                 <modifier type="increment" value="6" field="31a7-b5e8-41dc-5fd1">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="model" childId="4467-39c5-0252-1b2d" shared="true" includeChildSelections="true"/>
@@ -1509,28 +1478,13 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
               </conditions>
             </modifier>
           </modifiers>
-          <profiles>
-            <profile name="Alchemical Jezzail" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="true" id="7e92-dfb0-513e-9415">
-              <characteristics>
-                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">18&quot;</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
-              </characteristics>
+          <entryLinks>
+            <entryLink import="true" name="Alchemical Ammuntion (Loaded)" hidden="false" id="3d55-3b27-db42-b48e" type="selectionEntry" targetId="6eea-1e21-53b1-4ce2">
               <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="954d-3d50-257d-a78a" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" value="6" field="31a7-b5e8-41dc-5fd1">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model" childId="4467-39c5-0252-1b2d" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
+                <modifier type="set" value="+1 DICE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
-            </profile>
-          </profiles>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="true" id="f21b-e8c4-e383-5760" sortIndex="9">
           <costs>
@@ -1972,15 +1926,7 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <infoLinks>
-                <infoLink name="Alaybozan" id="b058-5dbb-313e-4fb7" hidden="false" type="profile" targetId="6dbb-ba95-c903-3c8c">
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="954d-3d50-257d-a78a" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </infoLink>
+                <infoLink name="Alaybozan" id="b058-5dbb-313e-4fb7" hidden="false" type="profile" targetId="6dbb-ba95-c903-3c8c"/>
                 <infoLink name="Shrapnel" id="ffe3-d939-b26b-f9ab" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
               </infoLinks>
               <modifiers>
@@ -2002,23 +1948,13 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
                   </conditionGroups>
                 </modifier>
               </modifiers>
-              <profiles>
-                <profile name="Alchemical Alaybozan" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="true" id="1073-820c-6d30-87ac">
-                  <characteristics>
-                    <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
-                    <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;</characteristic>
-                    <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">SHRAPNEL</characteristic>
-                    <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
-                  </characteristics>
+              <entryLinks>
+                <entryLink import="true" name="Alchemical Ammuntion (Loaded)" hidden="false" id="ba88-f253-2b2f-777a" type="selectionEntry" targetId="6eea-1e21-53b1-4ce2">
                   <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="954d-3d50-257d-a78a" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
+                    <modifier type="prepend" value="+1 DICE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
                   </modifiers>
-                </profile>
-              </profiles>
+                </entryLink>
+              </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Automatic Shotgun" hidden="true" id="ae0f-da0b-a1c2-2c2e" collective="false" sortIndex="3">
               <costs>
@@ -4065,6 +4001,24 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
         <categoryLink name="Pile" hidden="false" id="c53d-707a-fbc3-d116" targetId="ce28-ad9a-bbc1-f1dc" primary="false"/>
         <categoryLink targetId="0934-cc68-ca08-7e2b" id="d5ea-d8a6-88d8-85a8" primary="false" name="Bull"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Alchemical Ammuntion (Loaded)" hidden="true" id="6eea-1e21-53b1-4ce2">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="5b27-1871-4cfe-3b4d"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="f698-1248-a829-c65a" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model" childId="954d-3d50-257d-a78a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="f698-1248-a829-c65a">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="954d-3d50-257d-a78a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <forceEntries>
