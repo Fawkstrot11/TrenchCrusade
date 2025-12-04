@@ -124,23 +124,6 @@
             <infoLink name="Fire" id="c50a-fd06-a4a6-9cfc" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
           </infoLinks>
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="a730-386c-6e54-fab6" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="5d98-e97f-9486-21b7" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="667c-c2ec-b859-5424" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="e2e6-fb40-05e9-b0e5" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="7e7d-82f7-5f9f-d356" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="edab-d409-975f-bf55" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="3f0b-203c-e0b5-70bc" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="e366-d9c6-ce77-a783" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="2f90-6201-f141-1426" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
             <modifier type="increment" value="1" field="c3c9-e4ef-13be-a9b4">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="9f0d-ef38-4de7-41a8" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
@@ -965,6 +948,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="4e3b-d097-668a-8f73" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Automatic Pistol" hidden="true" id="5d98-e97f-9486-21b7" collective="false" sortIndex="2">
           <costs>
@@ -995,6 +981,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="e442-1370-7dcd-8752" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Automatic Pistol" hidden="true" id="e2e6-fb40-05e9-b0e5" collective="false" sortIndex="3">
           <costs>
@@ -1023,6 +1012,9 @@
             <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="0e62-4825-a10d-ebc1" includeChildSelections="true"/>
           </constraints>
           <comment>antioch</comment>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="ada4-6885-84bb-9a94" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -1044,6 +1036,24 @@
               </conditions>
             </modifier>
           </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Incendiary Ammuntion (Loaded)" hidden="true" id="5403-a6be-201d-5826">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70bb-2d34-0f08-82e8"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fire" id="eb21-fb18-0dad-1cfa" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="append" value="FIRE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=","/>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="1fbd-a3e3-9d76-432b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Serpent Assault Gun" hidden="false" id="606a-58a8-4fe9-59ef" sortIndex="14">
           <costs>
@@ -1221,6 +1231,17 @@
               </repeats>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="00e1-48f1-7103-493c" type="selectionEntry" targetId="ddfe-9432-d825-077a">
+              <profiles>
+                <profile name="Incendiary Ammuntion (Loaded)" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="839c-abfb-8136-fca8">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Incendiary</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Musket" hidden="true" id="6a3b-cda6-a47c-39b3" sortIndex="1">
           <costs>
@@ -1242,6 +1263,24 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Incendiary Ammuntion (Loaded)" hidden="true" id="fa3f-b198-8d1e-dad8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="84e7-f572-a6c4-abd7"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fire" id="5972-1983-50a3-13a5" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="append" value="FIRE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=","/>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="1fbd-a3e3-9d76-432b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bolt Action Rifle" hidden="true" id="edab-d409-975f-bf55" sortIndex="4">
           <costs>
@@ -1271,6 +1310,24 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Incendiary Ammuntion (Loaded)" hidden="true" id="0c2c-0f83-2838-25ca">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f8dc-ad27-f57a-7c93"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fire" id="3fd9-4ef8-20eb-938a" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="append" value="FIRE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=","/>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="1fbd-a3e3-9d76-432b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Semi-Automatic Rifle" hidden="true" id="3f0b-203c-e0b5-70bc" sortIndex="5">
           <costs>
@@ -1306,6 +1363,24 @@
               </conditions>
             </modifier>
           </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Incendiary Ammuntion (Loaded)" hidden="true" id="5949-9adc-06d6-83fa">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="013c-f961-579e-f9a6"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fire" id="5f6e-7977-2210-a5cb" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="append" value="FIRE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=","/>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="1fbd-a3e3-9d76-432b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Machine Gun" hidden="true" id="5042-317e-8cbe-6433" sortIndex="17">
           <costs>
@@ -1327,6 +1402,24 @@
               </conditions>
             </modifier>
           </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Incendiary Ammuntion (Loaded)" hidden="true" id="b5be-cbbb-18c7-72a9">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d3b6-077f-b536-1859"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fire" id="3906-99f1-cc59-40ec" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="append" value="FIRE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=","/>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="1fbd-a3e3-9d76-432b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="true" id="e366-d9c6-ce77-a783" sortIndex="16">
           <costs>
@@ -1356,6 +1449,24 @@
               </conditions>
             </modifier>
           </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Incendiary Ammuntion (Loaded)" hidden="true" id="ca75-de0a-7d8e-eb3f">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d49-a8a5-2243-29a8"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fire" id="42d5-3bc7-bdfd-0f8e" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="append" value="FIRE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=","/>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="1fbd-a3e3-9d76-432b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Punt Gun" hidden="true" id="cccc-a38f-b13e-4a4e" sortIndex="6">
           <costs>
@@ -1404,6 +1515,24 @@
               </conditions>
             </modifier>
           </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Incendiary Ammuntion (Loaded)" hidden="true" id="5b25-44a0-1c4c-1d13">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a840-b4be-b107-cf6d"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fire" id="180d-dd1e-f247-23e3" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="append" value="FIRE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=","/>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="1fbd-a3e3-9d76-432b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Siege Jezzail" hidden="true" id="431a-ec2e-04c8-5040" sortIndex="8">
           <costs>
@@ -1432,6 +1561,24 @@
               </conditions>
             </modifier>
           </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Incendiary Ammuntion (Loaded)" hidden="true" id="f391-f24a-64f8-e8a8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7f4a-6d2d-2123-0f32"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fire" id="6464-8738-66b6-41b4" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="append" value="FIRE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=","/>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="1fbd-a3e3-9d76-432b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="true" id="2f90-6201-f141-1426" sortIndex="11">
           <costs>
@@ -1467,6 +1614,24 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Incendiary Ammuntion (Loaded)" hidden="true" id="e2c9-dd7e-d858-5e98">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f3c7-a299-3ff6-9ab2"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fire" id="116e-6662-77aa-9803" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="append" value="FIRE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=","/>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="1fbd-a3e3-9d76-432b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Machine Gun" hidden="true" id="81e3-dfd1-da8a-508f" sortIndex="13">
           <costs>
@@ -1492,6 +1657,24 @@
               </conditions>
             </modifier>
           </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Incendiary Ammuntion (Loaded)" hidden="true" id="66ec-fdc9-52bc-e35e">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d983-69b6-5088-9c0a"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fire" id="5f7d-27b8-472d-aacc" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="append" value="FIRE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=","/>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="1fbd-a3e3-9d76-432b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Grenade Launcher" hidden="true" id="2209-c397-c8cb-e407" sortIndex="9">
           <costs>
@@ -1548,6 +1731,24 @@
               </conditions>
             </modifier>
           </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Incendiary Ammuntion (Loaded)" hidden="true" id="e786-c95c-ce78-8a9f">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ffe3-6aea-e6d7-dbe4"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fire" id="0007-2934-d16b-f080" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="append" value="FIRE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=","/>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="1fbd-a3e3-9d76-432b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -4173,6 +4374,28 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <constraints>
         <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="2a61-c8bc-53c0-3b27" includeChildSelections="true"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Incendiary Ammuntion (Loaded)" hidden="true" id="ddfe-9432-d825-077a">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="1e4d-9b5a-5bc9-bba9"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="5f35-b196-26be-84ef" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Fire" id="9b47-08af-841d-ac81" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="append" value="FIRE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model" childId="1fbd-a3e3-9d76-432b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="5f35-b196-26be-84ef">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="1fbd-a3e3-9d76-432b" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>

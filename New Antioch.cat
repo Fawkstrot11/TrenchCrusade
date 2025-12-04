@@ -376,7 +376,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Dum-Dum Ammunition" hidden="true" id="8b0b-b48b-c82a-f71e" sortIndex="11">
+        <selectionEntry type="upgrade" import="true" name="Dum-Dum Bullets" hidden="true" id="8b0b-b48b-c82a-f71e" sortIndex="11">
           <infoLinks>
             <infoLink name="Consumable" id="618f-dcd1-4705-b41c" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
             <infoLink name="Dum-Dum Bullets" id="7a2c-3fec-ff85-c0fc" hidden="false" type="profile" targetId="b51b-0a4a-8aa8-e5ae"/>
@@ -1234,6 +1234,21 @@
             </infoLink>
             <infoLink name="Pistol" id="cf8d-9e77-9b5c-5eae" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
           </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="9256-99e4-ace1-9c80" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+              <infoLinks>
+                <infoLink name="Armour Piercing" id="0f62-2a8b-0116-b491" hidden="false" type="rule" targetId="ba7a-64b6-e87b-0ecd"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="f7c6-2f2f-ee6e-4964" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+              <modifiers>
+                <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Automatic Pistol" hidden="true" id="967c-6555-a460-6957" collective="false">
           <costs>
@@ -1287,6 +1302,18 @@
           <constraints>
             <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="03ac-cec0-6b1f-9f07" includeChildSelections="true"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="7fc4-188e-9a63-53be" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+              <modifiers>
+                <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="aeed-4829-ffa0-ac94" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+              <modifiers>
+                <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -1299,6 +1326,16 @@
           </costs>
           <entryLinks>
             <entryLink import="true" name="Bayonet Lug" hidden="false" id="6dce-571f-38a2-52c2" type="selectionEntry" targetId="1abf-9449-4b03-2761"/>
+            <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="9c44-5bc3-efd8-0c09" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+              <modifiers>
+                <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="6efc-2790-81e5-ef77" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+              <modifiers>
+                <modifier type="set" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <modifierGroups>
             <modifierGroup type="and">
@@ -1329,7 +1366,17 @@
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Bayonet Lug" hidden="false" id="ea91-c4a2-80ce-3ebf" type="selectionEntry" targetId="1abf-9449-4b03-2761"/>
+            <entryLink import="true" name="Bayonet Lug" hidden="false" id="ea91-c4a2-80ce-3ebf" type="selectionEntry" targetId="1abf-9449-4b03-2761" sortIndex="-1"/>
+            <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="69ce-0935-2c58-2d11" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+              <modifiers>
+                <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="2053-dbcb-78f7-7843" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+              <modifiers>
+                <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Semi-Automatic Rifle" id="0ca8-fe44-03a1-da98" hidden="false" type="profile" targetId="1d82-fcc9-aeda-b03a">
@@ -1466,6 +1513,18 @@
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="c72a-e63d-17dc-7649" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+              <modifiers>
+                <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="92ac-0824-ecbd-282a" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+              <modifiers>
+                <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Flamethrower" hidden="false" id="6bf3-048f-cdb5-e16c" sortIndex="3">
           <costs>
@@ -1545,6 +1604,16 @@
           </costs>
           <entryLinks>
             <entryLink import="true" name="Bayonet Lug" hidden="false" id="40dc-2d60-5a8f-8b96" type="selectionEntry" targetId="1abf-9449-4b03-2761"/>
+            <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="8d5a-2480-eac7-dca8" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+              <modifiers>
+                <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="2e42-0523-ee94-1afb" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+              <modifiers>
+                <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f637-3855-63ea-598c" includeChildSelections="true"/>
@@ -1620,6 +1689,18 @@
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="39bc-c19c-6794-38e6" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+              <modifiers>
+                <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="c966-3eb2-d507-97df" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+              <modifiers>
+                <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1634,7 +1715,17 @@
                 <infoLink name="Assault" id="a07c-82ee-b40a-54fd" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
               </infoLinks>
               <entryLinks>
-                <entryLink import="true" name="Bayonet Lug" hidden="false" id="58c6-803a-f1e7-4e3d" type="selectionEntry" targetId="1abf-9449-4b03-2761"/>
+                <entryLink import="true" name="Bayonet Lug" hidden="false" id="58c6-803a-f1e7-4e3d" type="selectionEntry" targetId="1abf-9449-4b03-2761" sortIndex="-1"/>
+                <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="8c78-61db-fe6a-1ebe" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+                  <modifiers>
+                    <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="3fe3-834d-853f-31d3" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+                  <modifiers>
+                    <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <constraints>
                 <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="b355-ead4-7e5d-0927" includeChildSelections="true"/>
@@ -1703,13 +1794,35 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <entryLinks>
+                <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="eebe-28fe-9bdd-648d" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+                  <modifiers>
+                    <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="6b54-6e3c-646d-29fb" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+                  <modifiers>
+                    <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Automatic Shotgun" hidden="false" id="98a4-00df-aef0-4f48">
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Bayonet Lug" hidden="false" id="f775-e73b-efa8-df63" type="selectionEntry" targetId="1abf-9449-4b03-2761"/>
+                <entryLink import="true" name="Bayonet Lug" hidden="false" id="f775-e73b-efa8-df63" type="selectionEntry" targetId="1abf-9449-4b03-2761" sortIndex="-1"/>
+                <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="4dd8-7a8b-87d7-cb54" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+                  <modifiers>
+                    <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="3a96-00f1-06dc-2558" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+                  <modifiers>
+                    <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <infoLinks>
                 <infoLink name="Automatic Shotgun" id="4919-4006-9065-5a8f" hidden="false" type="profile" targetId="a19d-90ab-da9f-95ff"/>
@@ -1743,7 +1856,17 @@
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Bayonet Lug" hidden="false" id="5497-d745-52a1-04b1" type="selectionEntry" targetId="1abf-9449-4b03-2761"/>
+                <entryLink import="true" name="Bayonet Lug" hidden="false" id="5497-d745-52a1-04b1" type="selectionEntry" targetId="1abf-9449-4b03-2761" sortIndex="-1"/>
+                <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="9acd-fdc8-2e92-820e" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+                  <modifiers>
+                    <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="9ea1-a2b4-1aec-2eb0" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+                  <modifiers>
+                    <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <infoLinks>
                 <infoLink name="Shotgun" id="028b-5e13-cc06-428e" hidden="false" type="profile" targetId="0924-0647-1366-9d85"/>
@@ -3592,6 +3715,48 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dum-Dum Bullets (Loaded)" hidden="true" id="3cc8-6ca0-9a71-6fce">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="534e-234f-e22a-352c"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="0c1a-4b0d-fc15-d40c" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Critical" id="088f-82d2-9335-eddb" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model" childId="8b0b-b48b-c82a-f71e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="0c1a-4b0d-fc15-d40c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="8b0b-b48b-c82a-f71e" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Armour-Piercing Bullets (Loaded)" hidden="true" id="9ba7-ace7-d1a9-b292">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="1952-8f9d-7661-55e5"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="7c5e-8edc-4288-14da" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model" childId="8e13-6e55-df3a-2fe7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="7c5e-8edc-4288-14da">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="8e13-6e55-df3a-2fe7" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink name="Critical" id="9be2-4bf4-0fbb-f4b3" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
     <selectionEntry type="model" import="true" name="Lieutenant" hidden="false" id="e578-1122-47cb-10ad">
@@ -5210,7 +5375,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <categoryLink targetId="bd43-ddb1-262d-4489" id="ac32-9ca3-335c-e2f0" primary="false" name="Troop"/>
               </categoryLinks>
             </entryLink>
-            <entryLink import="true" name="Sniper Priests" hidden="false" id="56d6-2116-0dca-8881" type="selectionEntry" targetId="dd59-a783-dbb5-242f" collapsible="true"/>
+            <entryLink import="true" name="Sniper Priest" hidden="false" id="56d6-2116-0dca-8881" type="selectionEntry" targetId="dd59-a783-dbb5-242f" collapsible="true"/>
             <entryLink import="true" name="Trench Cleric" hidden="false" id="3401-dc21-faf0-48d7" type="selectionEntry" targetId="f8bc-5df8-1768-a72a" collapsible="true"/>
             <entryLink import="true" name="Yeoman" hidden="false" id="453b-b4ca-41be-a430" type="selectionEntry" targetId="f2c3-86d1-5924-093f" collapsible="true"/>
           </entryLinks>
@@ -5297,7 +5462,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <selectionEntryGroups>
         <selectionEntryGroup name="Elite Ally" id="3f45-7074-d35b-9022" hidden="false">
           <entryLinks>
-            <entryLink import="true" name="Sniper Priests" hidden="false" id="0926-2fc4-4a7a-381a" type="selectionEntry" targetId="dd59-a783-dbb5-242f"/>
+            <entryLink import="true" name="Sniper Priest" hidden="false" id="0926-2fc4-4a7a-381a" type="selectionEntry" targetId="dd59-a783-dbb5-242f"/>
             <entryLink import="true" name="Lieutenant" hidden="false" id="2d23-f1ab-7dd9-2db1" type="selectionEntry" targetId="e578-1122-47cb-10ad"/>
             <entryLink import="true" name="Trench Cleric" hidden="false" id="099f-e1d7-a188-fa31" type="selectionEntry" targetId="f8bc-5df8-1768-a72a"/>
           </entryLinks>
@@ -5465,7 +5630,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
                     <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                     <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Models in an Eire Ranger Warband can have Armour- Piercing Bullets (▶ see Battlekit in the Trench Crusade Digital Rulebook) at a cost of 5 Ducats each. The Armour-Piercing Bullets have the Limit: 2 stipulation.</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Models in an Eire Ranger Warband can have Armour-Piercing Bullets (▶ see Battlekit in the Trench Crusade Digital Rulebook) at a cost of 5 Ducats each. The Armour-Piercing Bullets have the Limit: 2 stipulation.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6398,7 +6563,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                   <characteristics>
                     <characteristic name="Type" typeId="f90e-171a-4ca6-3845">GRENADE</characteristic>
                     <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
-                    <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, BLAST 2&quot;, IGNORE COVER, IGNORE LONG RANGE, SHRAPNEL </characteristic>
+                    <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, BLAST 2&quot;, IGNORE COVER, IGNORE LONG RANGE, SHRAPNEL</characteristic>
                     <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
                   </characteristics>
                 </profile>
