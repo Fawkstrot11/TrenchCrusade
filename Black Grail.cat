@@ -429,7 +429,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Shield Combo" id="f814-fff7-c6a0-e673" hidden="false">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Polearm" hidden="true" id="6e0e-b8a9-8093-0fb9">
+            <selectionEntry type="upgrade" import="true" name="Polearm" hidden="false" id="6e0e-b8a9-8093-0fb9">
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="7"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -1905,7 +1905,7 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Compound Eyes Helmet" hidden="false" id="698c-0858-ccf4-a63d">
+            <selectionEntry type="upgrade" import="true" name="Compound Eyes Helmet" hidden="true" id="698c-0858-ccf4-a63d">
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -1925,7 +1925,7 @@
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="atLeast" value="0" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atMost" value="0" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
                       <conditionGroups>
                         <conditionGroup type="or">
@@ -3834,24 +3834,8 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </rule>
       </rules>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Hounds of the Black Grail" hidden="false" id="5df2-ef54-85ea-adfe">
+    <selectionEntry type="model" import="true" name="Hound of the Black Grail" hidden="false" id="5df2-ef54-85ea-adfe">
       <profiles>
-        <profile name="Wailer" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="true" id="5e98-af2a-d53d-787a">
-          <characteristics>
-            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">8&quot;/Infantry</characteristic>
-            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">N/A</characteristic>
-            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 Dice</characteristic>
-            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
-            <characteristic name="Base" typeId="73ae-cc17-596e-0481">30x60mm</characteristic>
-          </characteristics>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
         <profile name="Teeths &amp; Claws" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="aa15-64a9-87eb-87c8">
           <characteristics>
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
@@ -3877,7 +3861,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If an enemy model is Activated while it is within 1&quot; of a Hound of the Cult of the Black Grail, place 1 INFECTION MARKER next to the enemy model before it carries out any Actions.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Hounds of the Black Grail" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="8fc4-805a-2894-01ad">
+        <profile name="Hound of the Black Grail" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="8fc4-805a-2894-01ad">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">8&quot;/Infantry</characteristic>
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">N/A</characteristic>
@@ -3886,9 +3870,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">30x60mm</characteristic>
           </characteristics>
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
+            <modifier type="set" value="Wailer" field="name">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Prowler" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3945,6 +3934,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <modifier type="set" value="2" field="e5df-0eb4-a3c5-8cf7">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="Prowler" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
