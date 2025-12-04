@@ -3,7 +3,7 @@
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Equipment" id="6fa6-9678-f5af-3bf2" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Gas Mask" hidden="false" id="3e7c-60b1-49a0-1133" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Gas Mask" hidden="false" id="3e7c-60b1-49a0-1133" sortIndex="4">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -15,7 +15,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f72b-5f05-c552-cee6" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Cloak of Alamut" hidden="true" id="a157-044b-338e-ded8" sortIndex="9">
+        <selectionEntry type="upgrade" import="true" name="Cloak of Alamut" hidden="true" id="a157-044b-338e-ded8" sortIndex="10">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="25"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -39,7 +39,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Holy Relic" hidden="true" id="79cb-5695-8623-2fbb" sortIndex="13">
+        <selectionEntry type="upgrade" import="true" name="Holy Relic" hidden="true" id="79cb-5695-8623-2fbb" sortIndex="14">
           <costs>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
           </costs>
@@ -53,38 +53,6 @@
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Alchemical Ammunition" hidden="false" id="954d-3d50-257d-a78a" sortIndex="8">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="3"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe0c-193c-db3f-46af" includeChildSelections="true"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Alchemical Ammunition" id="40a3-e74d-fc72-7d9c" hidden="false" type="profile" targetId="c296-2021-0947-c6c7"/>
-          </infoLinks>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="2b27-3653-e972-8d5a" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ab06-4025-36da-4e62" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="4f0f-a0cf-e8e8-b332" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="dc52-7d54-ed37-7b20" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <comment>Nomads of Al-Badia</comment>
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -132,7 +100,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Mountaineer Kit" hidden="false" id="f8ac-d279-6eaa-ab96" sortIndex="7">
+        <selectionEntry type="upgrade" import="true" name="Mountaineer Kit" hidden="false" id="f8ac-d279-6eaa-ab96" sortIndex="8">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="3"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -145,7 +113,7 @@
             <infoLink name="Mountaineer Kit" id="0098-93f1-3617-8489" hidden="false" type="profile" targetId="603a-ae82-9f91-4a29"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Marid Shovel" hidden="true" id="b749-592d-a7c0-aa2e" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Marid Shovel" hidden="true" id="b749-592d-a7c0-aa2e" sortIndex="6">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -182,7 +150,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Wind Amulet" hidden="false" id="f9dd-df87-c671-55e5" sortIndex="10">
+        <selectionEntry type="upgrade" import="true" name="Wind Amulet" hidden="false" id="f9dd-df87-c671-55e5" sortIndex="11">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -201,7 +169,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Binoculars" hidden="true" id="00d1-c230-ef2d-8d48" sortIndex="11">
+        <selectionEntry type="upgrade" import="true" name="Binoculars" hidden="true" id="00d1-c230-ef2d-8d48" sortIndex="12">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -220,7 +188,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="79a7-3229-dbcb-ff60" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Medi-Kit" hidden="false" id="a9e5-7741-1546-d5ba" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Medi-Kit" hidden="false" id="a9e5-7741-1546-d5ba" sortIndex="7">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -239,7 +207,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Hashashin Leaf" hidden="true" id="fdd0-11e7-0db6-acb2" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Hashashin Leaf" hidden="true" id="fdd0-11e7-0db6-acb2" sortIndex="3">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -270,7 +238,7 @@
             <constraint type="max" value="4" field="selections" scope="roster" shared="true" id="015d-4cb5-9047-ea3f" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Elixer of Al-Khidr" hidden="true" id="e4a9-be6a-c7fe-9d16" sortIndex="16">
+        <selectionEntry type="upgrade" import="true" name="Elixer of Al-Khidr" hidden="true" id="e4a9-be6a-c7fe-9d16" sortIndex="17">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -326,7 +294,7 @@
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9ac6-fe18-ef71-64f8" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Explosive Charges" hidden="true" id="b535-89b0-70c0-a86f" sortIndex="14">
+        <selectionEntry type="upgrade" import="true" name="Explosive Charges" hidden="true" id="b535-89b0-70c0-a86f" sortIndex="15">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="35"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -371,7 +339,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Takwin Anqā Bird" hidden="false" id="3f63-ae26-fd5d-3411" sortIndex="20">
+        <selectionEntry type="upgrade" import="true" name="Takwin Anqā Bird" hidden="false" id="3f63-ae26-fd5d-3411" sortIndex="21">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
@@ -397,169 +365,7 @@
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Sparkpowder Ammunition" hidden="true" id="3be9-5225-347c-c8f5" sortIndex="8">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <comment>Nomads of Al-Badia</comment>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ab06-4025-36da-4e62" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="2b27-3653-e972-8d5a" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="dc52-7d54-ed37-7b20" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="f21b-e8c4-e383-5760" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="f5fe-26c3-c542-2bcb" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="d039-5982-7011-334e" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="8ccf-c0b6-efff-4c4f" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="7f27-bb98-20d0-0a10" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile name="Sparkpowder Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="71fb-43b5-da89-15f1">
-              <characteristics>
-                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">If a model is hit by a weapon using Sparkpowder Ammunition, all Attacks it makes are at -1D to hit until the end of its next activation. This does not stack.
-
-
-Can only be used with Jezzails, Alaybozan, Halberd-Guns, Siege Jezzails and Machineguns.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db8d-e39d-2f09-8927" includeChildSelections="true"/>
-            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="f52b-98e9-cb9a-1d80" includeChildSelections="true" includeChildForces="true"/>
-          </constraints>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Heavy Bore Ammunition" hidden="true" id="8ccf-c0b6-efff-4c4f" sortIndex="8">
-          <comment>Nomads of Al-Badia</comment>
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ab06-4025-36da-4e62" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="4f0f-a0cf-e8e8-b332" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ffb6-34ac-c895-4d37" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="d039-5982-7011-334e" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="7f27-bb98-20d0-0a10" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="3be9-5225-347c-c8f5" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile name="Heavy Bore Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2bfa-f76b-086f-249e">
-              <characteristics>
-                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When a model is hit by a weapon using Heavy Bore Ammunition, it moves d3” away from the attacker in a straight line, stopping if it hits anything it cannot pass through, such as other models, impassable terrain or walls. (N.B, this does not provoke a Free Attack if the model is pushed out of melee engagement.)
-
-
-Can only be used with Alaybozan and Siege Jezzails.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="f1b1-5287-8474-47f5" includeChildSelections="true" includeChildForces="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d61a-66e5-d78d-b88b" includeChildSelections="true"/>
-          </constraints>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Shayṭānic Shard Ammunition" hidden="true" id="7f27-bb98-20d0-0a10" sortIndex="8">
-          <comment>Nomads of Al-Badia</comment>
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="1"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ab06-4025-36da-4e62" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="2b27-3653-e972-8d5a" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="dc52-7d54-ed37-7b20" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="f21b-e8c4-e383-5760" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="f5fe-26c3-c542-2bcb" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="d039-5982-7011-334e" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="3be9-5225-347c-c8f5" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="8ccf-c0b6-efff-4c4f" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b27-f514-658f-899d" includeChildSelections="true"/>
-            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="5f47-4e37-0642-6eca" includeChildSelections="true" includeChildForces="true"/>
-          </constraints>
-          <profiles>
-            <profile name="Shayṭānic Shard Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ece5-a8b9-b42e-cdfe">
-              <characteristics>
-                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">If you hit with a weapon using Shayṭānic Shard Ammunition, do not make an Injury Roll as normal. Instead, the cost of a Bloodbath against the model that was just hit is reduced to 3 Blood Markers, for the rest of the turn.
-
-
-Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Nomads R.P.G." hidden="true" id="d93a-0370-2f55-2f63" sortIndex="8">
+        <selectionEntry type="upgrade" import="true" name="Nomads R.P.G." hidden="true" id="d93a-0370-2f55-2f63" sortIndex="9">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -609,16 +415,138 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Special Ammunitions" id="897c-698f-bcb4-f05b" hidden="false" sortIndex="2">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Sparkpowder Ammunition" hidden="true" id="3be9-5225-347c-c8f5" sortIndex="2">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <comment>Nomads of Al-Badia</comment>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Sparkpowder Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="71fb-43b5-da89-15f1">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">If a model is hit by a weapon using Sparkpowder Ammunition, all Attacks it makes are at -1D to hit until the end of its next activation. This does not stack.
+
+Can only be used with Jezzails, Alaybozan, Halberd-Guns, Siege Jezzails and Machineguns.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db8d-e39d-2f09-8927" includeChildSelections="true"/>
+                <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="f52b-98e9-cb9a-1d80" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Bore Ammunition" hidden="true" id="8ccf-c0b6-efff-4c4f" sortIndex="3">
+              <comment>Nomads of Al-Badia</comment>
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Heavy Bore Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2bfa-f76b-086f-249e">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When a model is hit by a weapon using Heavy Bore Ammunition, it moves d3” away from the attacker in a straight line, stopping if it hits anything it cannot pass through, such as other models, impassable terrain or walls. (N.B, this does not provoke a Free Attack if the model is pushed out of melee engagement.)
+
+Can only be used with Alaybozan and Siege Jezzails.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="f1b1-5287-8474-47f5" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d61a-66e5-d78d-b88b" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Shayṭānic Shard Ammunition" hidden="true" id="7f27-bb98-20d0-0a10" sortIndex="4">
+              <comment>Nomads of Al-Badia</comment>
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="1"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b27-f514-658f-899d" includeChildSelections="true"/>
+                <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="5f47-4e37-0642-6eca" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Shayṭānic Shard Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ece5-a8b9-b42e-cdfe">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">If you hit with a weapon using Shayṭānic Shard Ammunition, do not make an Injury Roll as normal. Instead, the cost of a Bloodbath against the model that was just hit is reduced to 3 Blood Markers, for the rest of the turn.
+
+Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Alchemical Ammunition" hidden="false" id="8a1e-a662-247a-2c2b" sortIndex="1">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="3"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe0c-193c-db3f-46af" includeChildSelections="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Alchemical Ammunition" id="40a3-e74d-fc72-7d9c" hidden="false" type="profile" targetId="c296-2021-0947-c6c7"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <comment>Nomads of Al-Badia</comment>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb2e-e1a1-8edc-6cf6"/>
+          </constraints>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Knighthood" hidden="false" id="ad38-0de3-a57a-ea91" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="18"/>
-        <entryLink import="true" name="Sniper Scope" hidden="false" id="4509-3ae3-feeb-4383" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="17"/>
-        <entryLink import="true" name="Field Hospital" hidden="false" id="5219-3d98-1ede-39ea" type="selectionEntry" targetId="eb62-f33b-0d57-cd92" sortIndex="19"/>
+        <entryLink import="true" name="Knighthood" hidden="false" id="ad38-0de3-a57a-ea91" type="selectionEntry" targetId="639d-bf8f-60b5-1585" sortIndex="19"/>
+        <entryLink import="true" name="Sniper Scope" hidden="false" id="4509-3ae3-feeb-4383" type="selectionEntry" targetId="4ada-fe73-318e-83f2" sortIndex="18"/>
+        <entryLink import="true" name="Field Hospital" hidden="false" id="5219-3d98-1ede-39ea" type="selectionEntry" targetId="eb62-f33b-0d57-cd92" sortIndex="20"/>
         <entryLink import="true" name="Blasphemous Banner" hidden="true" id="5369-0d51-2680-964c" type="selectionEntry" targetId="ac5b-0ae8-e0cd-5fda"/>
         <entryLink import="true" name="Curative Fluids" hidden="true" id="928d-45ba-596e-7bda" type="selectionEntry" targetId="0e49-dfa5-4190-ee69"/>
         <entryLink import="true" name="Lock of Samson&apos;s Hair" hidden="false" id="2a72-9776-8f00-2aaa" type="selectionEntry" targetId="9b61-d0a4-dd30-2d32"/>
         <entryLink import="true" name="Saints Reliquary" hidden="true" id="a1bd-acc5-5a74-0431" type="selectionEntry" targetId="cf19-f306-c26c-1537"/>
-        <entryLink import="true" name="Anqā Guard" hidden="false" id="6efd-509d-9c19-6426" type="selectionEntry" targetId="20ec-9e12-6cdf-abe2" sortIndex="15">
+        <entryLink import="true" name="Anqā Guard" hidden="false" id="6efd-509d-9c19-6426" type="selectionEntry" targetId="20ec-9e12-6cdf-abe2" sortIndex="16">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditionGroups>
@@ -648,7 +576,7 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2a4-5514-5559-42c0" includeChildSelections="false"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Dog Food" hidden="false" id="812b-50f4-8c25-dda9" type="selectionEntry" targetId="05f3-2ee4-36c0-8c25" sortIndex="12"/>
+        <entryLink import="true" name="Dog Food" hidden="false" id="812b-50f4-8c25-dda9" type="selectionEntry" targetId="05f3-2ee4-36c0-8c25" sortIndex="13"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Grenades" id="52e3-49c7-5f3b-d5c9" hidden="false">
@@ -855,7 +783,7 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Knife" id="d891-e4d1-da5e-e372" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
+            <infoLink name="Trench Knife" id="d891-e4d1-da5e-e372" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -978,7 +906,7 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Scourge" id="2d01-f2b5-57c6-2d77" hidden="false" type="profile" targetId="f469-b712-2233-ac79"/>
+            <infoLink name="Scourge/Battle Whip/Flail" id="2d01-f2b5-57c6-2d77" hidden="false" type="profile" targetId="f469-b712-2233-ac79"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1033,7 +961,7 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Great Blunt Weapon" id="9095-643a-d8e7-71dc" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
+            <infoLink name="Great Hammer/Maul/Club/Mace" id="9095-643a-d8e7-71dc" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
             <infoLink name="Heavy" id="eb79-a692-d9dc-9019" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <categoryLinks>
@@ -1092,6 +1020,8 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
                 <modifier type="prepend" value="+1 DICE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
             </entryLink>
+            <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="7557-db6a-1262-8f13" type="selectionEntry" targetId="6298-be97-6c32-1dc2"/>
+            <entryLink import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="false" id="70d7-07c1-f1b4-c598" type="selectionEntry" targetId="d5f6-0471-e4b8-8670"/>
           </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Anti-Tank Hammer" hidden="true" id="b0ec-20ff-7d2a-ce73" collective="false" sortIndex="4">
@@ -1459,6 +1389,9 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="820a-2610-1a0a-1443" targetId="70c9-988d-71a7-7654" primary="false"/>
           </categoryLinks>
+          <entryLinks>
+            <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="6783-afc3-0a13-6fdb" type="selectionEntry" targetId="6298-be97-6c32-1dc2"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Flamethrower" hidden="false" id="f996-ff6a-181f-d68a" sortIndex="8">
           <costs>
@@ -1505,8 +1438,11 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
               <modifiers>
                 <modifier type="prepend" value="+1 DICE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
-            </profile>
-          </profiles>
+            </entryLink>
+            <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="f55a-48eb-46b2-cb2c" type="selectionEntry" targetId="6298-be97-6c32-1dc2"/>
+            <entryLink import="true" name="Heavy Bore Ammuntion (Loaded)" hidden="false" id="e3d6-d960-46e9-61b0" type="selectionEntry" targetId="a0c5-9830-2779-89ef"/>
+            <entryLink import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="false" id="eb90-3164-075e-82d5" type="selectionEntry" targetId="d5f6-0471-e4b8-8670"/>
+          </entryLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <comment>Hidden for Nomads shield combo selected</comment>
@@ -1544,6 +1480,8 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
                 <modifier type="set" value="+1 DICE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
             </entryLink>
+            <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="0f8a-c442-22e6-69bb" type="selectionEntry" targetId="6298-be97-6c32-1dc2"/>
+            <entryLink import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="false" id="7e36-7bcd-e79a-a19a" type="selectionEntry" targetId="d5f6-0471-e4b8-8670"/>
           </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="true" id="f21b-e8c4-e383-5760" sortIndex="9">
@@ -1585,6 +1523,9 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="false" id="6e8c-08b5-5335-c901" type="selectionEntry" targetId="d5f6-0471-e4b8-8670"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bow of Alamut" hidden="true" id="b9c5-9ea8-b9e0-00ac" sortIndex="12">
           <costs>
@@ -1957,6 +1898,10 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             </modifier>
           </modifiers>
           <comment>Nomads of Al-Badia</comment>
+          <entryLinks>
+            <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="095a-49d9-f8b7-f332" type="selectionEntry" targetId="6298-be97-6c32-1dc2" sortIndex=""/>
+            <entryLink import="true" name="Heavy Bore Ammuntion (Loaded)" hidden="false" id="67e2-2a8c-8ebb-9dc5" type="selectionEntry" targetId="a0c5-9830-2779-89ef"/>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2014,6 +1959,8 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
                     <modifier type="prepend" value="+1 DICE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
                   </modifiers>
                 </entryLink>
+                <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="170c-b1a9-3155-4795" type="selectionEntry" targetId="6298-be97-6c32-1dc2"/>
+                <entryLink import="true" name="Heavy Bore Ammuntion (Loaded)" hidden="false" id="0f9f-3d49-3d11-626f" type="selectionEntry" targetId="a0c5-9830-2779-89ef"/>
               </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Automatic Shotgun" hidden="true" id="ae0f-da0b-a1c2-2c2e" collective="false" sortIndex="3">
@@ -2247,30 +2194,7 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Masterwork Jezzail" hidden="false" id="8932-3855-0e85-ac5e" type="selectionEntry" targetId="9857-a324-046f-5d41" sortIndex="14">
-          <profiles>
-            <profile name="Alchemical Masterwork Jezzail" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="true" id="f055-4a6e-75df-e43a">
-              <characteristics>
-                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">Critical</characteristic>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
-              </characteristics>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="954d-3d50-257d-a78a" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" value="6" field="31a7-b5e8-41dc-5fd1">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model" childId="4467-39c5-0252-1b2d" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </profile>
-          </profiles>
-        </entryLink>
+        <entryLink import="true" name="Masterwork Jezzail" hidden="false" id="8932-3855-0e85-ac5e" type="selectionEntry" targetId="9857-a324-046f-5d41" sortIndex="14"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Ranged Weapons" id="4b72-c05a-0060-c590" hidden="false">
@@ -4070,14 +3994,83 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="model" childId="954d-3d50-257d-a78a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="model" childId="8a1e-a662-247a-2c2b" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
         <modifier type="increment" value="1" field="f698-1248-a829-c65a">
           <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="roster" childId="954d-3d50-257d-a78a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="8a1e-a662-247a-2c2b" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Bore Ammuntion (Loaded)" hidden="true" id="a0c5-9830-2779-89ef">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="a79e-b3d4-a5b6-a8e0"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="6526-55bb-94b2-f453" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model" childId="8ccf-c0b6-efff-4c4f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="6526-55bb-94b2-f453">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="8ccf-c0b6-efff-4c4f" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="replace" value="" field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
+" arg="-"/>
+        <modifier type="append" value="1 Pound Lead Ball: When a model is hit by this weapon, it moves D3” away from the attacker in a straight line, stopping if it hits anything it cannot pass through, such as other models, impassable terrain or walls. (N.B, this does not provoke a Free Attack if the model is pushed out of melee engagement.)
+" field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
+"/>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="true" id="6298-be97-6c32-1dc2">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="3f17-29ae-7946-a060"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="657b-672b-12c4-6308" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model" childId="3be9-5225-347c-c8f5" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="657b-672b-12c4-6308">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="3be9-5225-347c-c8f5" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="append" value="Flash: If a model is hit by this weapon, all Attacks it makes have -1 DICE until the end of its next activation. This does not stack.
+" field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
+"/>
+        <modifier type="replace" value="" field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
+" arg="-"/>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="true" id="d5f6-0471-e4b8-8670">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="834d-d4f0-62f8-bbaf"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="79dd-518a-b9bf-6dc9" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model" childId="7f27-bb98-20d0-0a10" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="79dd-518a-b9bf-6dc9">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="7f27-bb98-20d0-0a10" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="append" value="Irradiating: If you hit with this weapon, do not make an Injury Roll as normal. Instead, the cost of a Bloodbath against the model that was just hit is reduced to 3 Blood Markers, for the rest of the turn.
+" field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
+"/>
+        <modifier type="replace" value="" field="87f0-637b-734a-22eb" affects="profiles.Weapon" scope="parent" join="
+" arg="-"/>
       </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
