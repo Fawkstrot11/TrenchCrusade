@@ -3270,28 +3270,23 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="51fe-888d-77d2-0e51" includeChildSelections="false"/>
           </constraints>
-          <profiles>
-            <profile name="Weaponized Shovel" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="bacd-d8b3-519c-fbd6">
-              <characteristics>
-                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-                <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
-              </characteristics>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="model" childId="d2cb-f99a-d244-0f6d" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="model" childId="3676-db5e-8076-8b90" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </profile>
-          </profiles>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Include Weapon Profile?" hidden="false" id="fde6-983d-9823-2204">
+              <profiles>
+                <profile name="Weaponized Shovel" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="0b51-6e83-25c5-3ff5">
+                  <characteristics>
+                    <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+                    <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                    <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
+                    <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="372b-7ed0-baf8-2975" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Hellbound Soul Contract" hidden="true" id="095e-7a3d-0538-1d4a" sortIndex="17">
           <costs>

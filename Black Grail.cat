@@ -429,7 +429,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Shield Combo" id="f814-fff7-c6a0-e673" hidden="false">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Polearm" hidden="true" id="6e0e-b8a9-8093-0fb9">
+            <selectionEntry type="upgrade" import="true" name="Polearm" hidden="false" id="6e0e-b8a9-8093-0fb9">
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="7"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -1905,7 +1905,7 @@
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Compound Eyes Helmet" hidden="false" id="698c-0858-ccf4-a63d">
+            <selectionEntry type="upgrade" import="true" name="Compound Eyes Helmet" hidden="true" id="698c-0858-ccf4-a63d">
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -1925,7 +1925,7 @@
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="atLeast" value="0" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atMost" value="0" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
                       <conditionGroups>
                         <conditionGroup type="or">
@@ -2606,7 +2606,7 @@
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="a657-8944-aecd-713d" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="a657-8944-aecd-713d" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2693,7 +2693,7 @@
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2d13-c531-c8e2-9468" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
@@ -3628,6 +3628,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <condition type="atLeast" value="1" field="selections" scope="self" childId="2a4f-c258-5d70-a3c5" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="Butcher Knight" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <modifierGroups>
             <modifierGroup type="and">
@@ -3777,6 +3782,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <condition type="atLeast" value="1" field="selections" scope="self" childId="b044-cbf6-a7c5-e2b3" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="Butcher Knight" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="f025-ee7a-4125-ce80" includeChildSelections="true"/>
@@ -3824,24 +3834,8 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </rule>
       </rules>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Hounds of the Black Grail" hidden="false" id="5df2-ef54-85ea-adfe">
+    <selectionEntry type="model" import="true" name="Hound of the Black Grail" hidden="false" id="5df2-ef54-85ea-adfe">
       <profiles>
-        <profile name="Wailer" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="true" id="5e98-af2a-d53d-787a">
-          <characteristics>
-            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">8&quot;/Infantry</characteristic>
-            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">N/A</characteristic>
-            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 Dice</characteristic>
-            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
-            <characteristic name="Base" typeId="73ae-cc17-596e-0481">30x60mm</characteristic>
-          </characteristics>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
         <profile name="Teeths &amp; Claws" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="aa15-64a9-87eb-87c8">
           <characteristics>
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
@@ -3867,7 +3861,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If an enemy model is Activated while it is within 1&quot; of a Hound of the Cult of the Black Grail, place 1 INFECTION MARKER next to the enemy model before it carries out any Actions.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Hounds of the Black Grail" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="8fc4-805a-2894-01ad">
+        <profile name="Hound of the Black Grail" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="8fc4-805a-2894-01ad">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">8&quot;/Infantry</characteristic>
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">N/A</characteristic>
@@ -3876,9 +3870,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">30x60mm</characteristic>
           </characteristics>
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
+            <modifier type="set" value="Wailer" field="name">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Prowler" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3937,6 +3936,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="Prowler" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="ea30-8361-ba0b-65f5" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776" sortIndex="3"/>
@@ -3959,26 +3963,13 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </profile>
           </profiles>
         </entryLink>
+        <entryLink import="true" name="Grasping Maw" hidden="false" id="8669-3ce1-9c7a-98bd" type="selectionEntry" targetId="d484-5f11-acd1-1aa9"/>
       </entryLinks>
       <rules>
         <rule name="Negate Gas" id="7d2b-1539-7f16-01aa" hidden="false">
           <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
         </rule>
       </rules>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Equipment" id="b51b-e3eb-bf4d-c535" hidden="true" sortIndex="4">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="4ae9-6e62-b943-faeb" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <entryLinks>
-            <entryLink import="true" name="Grasping Maw" hidden="false" id="8669-3ce1-9c7a-98bd" type="selectionEntry" targetId="d484-5f11-acd1-1aa9"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grail Thrall" hidden="false" id="ec39-f328-bad6-a586">
       <profiles>
@@ -5136,7 +5127,7 @@ This ability cannot be used against attacks that have the BLAST Keyword.</charac
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Gregory Gula" hidden="true" id="6291-8d16-b2c8-d9a7">
+    <selectionEntry type="model" import="true" name="Gregori Gula" hidden="true" id="6291-8d16-b2c8-d9a7">
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="145"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -5149,7 +5140,7 @@ This ability cannot be used against attacks that have the BLAST Keyword.</charac
         </modifier>
       </modifiers>
       <profiles>
-        <profile name="Gregory Gula" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="cb0d-b71b-7cf1-b375">
+        <profile name="Gregori Gula" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="cb0d-b71b-7cf1-b375">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">9&quot;/Flying</characteristic>
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">-</characteristic>
