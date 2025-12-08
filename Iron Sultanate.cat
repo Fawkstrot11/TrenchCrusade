@@ -70,6 +70,20 @@
           <infoLinks>
             <infoLink name="Alchemical Ammunition" id="40a3-e74d-fc72-7d9c" hidden="false" type="profile" targetId="c296-2021-0947-c6c7"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="2b27-3653-e972-8d5a" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="ab06-4025-36da-4e62" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="4f0f-a0cf-e8e8-b332" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="dc52-7d54-ed37-7b20" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Shovel" hidden="false" id="207d-76d1-b643-e54f" sortIndex="4">
           <costs>

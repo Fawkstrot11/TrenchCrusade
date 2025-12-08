@@ -355,10 +355,10 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Armour-Piercing Bullets" hidden="true" id="8e13-6e55-df3a-2fe7" sortIndex="10">
+        <selectionEntry type="upgrade" import="true" name="Armour-Piercing Ammunition" hidden="true" id="8e13-6e55-df3a-2fe7" sortIndex="10">
           <infoLinks>
             <infoLink name="Armour Piercing" id="3127-ded9-fd3c-5af5" hidden="false" type="rule" targetId="ba7a-64b6-e87b-0ecd"/>
-            <infoLink name="Armour-Piercing Bullets" id="a4bd-049a-de66-b9c4" hidden="false" type="profile" targetId="90fa-0eaa-3d49-be2c"/>
+            <infoLink name="Armour-Piercing Ammunition" id="a4bd-049a-de66-b9c4" hidden="false" type="profile" targetId="90fa-0eaa-3d49-be2c"/>
             <infoLink name="Consumable" id="5e7e-088d-1424-098c" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
           </infoLinks>
           <costs>
@@ -373,10 +373,31 @@
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="not">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="af78-678d-fbe7-2b39" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="967c-6555-a460-6957" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="299c-d1ce-293a-d7d9" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="723a-4dfd-90f6-1631" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="d70a-f3e2-204f-774f" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="b110-7128-319d-5762" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="f6d3-e219-d597-fb25" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="ff3d-b1b4-9d3c-855c" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="98a4-00df-aef0-4f48" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="6986-2c13-6717-0f1b" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="9e88-87bd-bff3-0778" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Dum-Dum Bullets" hidden="true" id="8b0b-b48b-c82a-f71e" sortIndex="11">
+        <selectionEntry type="upgrade" import="true" name="Dum-Dum Ammunition" hidden="true" id="8b0b-b48b-c82a-f71e" sortIndex="11">
           <infoLinks>
             <infoLink name="Consumable" id="618f-dcd1-4705-b41c" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
             <infoLink name="Dum-Dum Bullets" id="7a2c-3fec-ff85-c0fc" hidden="false" type="profile" targetId="b51b-0a4a-8aa8-e5ae"/>
@@ -394,6 +415,27 @@
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="c92f-74bc-9acb-69b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="not">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="af78-678d-fbe7-2b39" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="967c-6555-a460-6957" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="299c-d1ce-293a-d7d9" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="723a-4dfd-90f6-1631" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="d70a-f3e2-204f-774f" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="b110-7128-319d-5762" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="f6d3-e219-d597-fb25" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="ff3d-b1b4-9d3c-855c" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="98a4-00df-aef0-4f48" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="6986-2c13-6717-0f1b" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="9e88-87bd-bff3-0778" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -3715,7 +3757,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Dum-Dum Bullets (Loaded)" hidden="true" id="3cc8-6ca0-9a71-6fce">
+    <selectionEntry type="upgrade" import="true" name="Dum-Dum Ammunition (Loaded)" hidden="true" id="3cc8-6ca0-9a71-6fce">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="self" shared="true" id="534e-234f-e22a-352c"/>
         <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="0c1a-4b0d-fc15-d40c" includeChildSelections="true" includeChildForces="true"/>
@@ -3734,9 +3776,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="8b0b-b48b-c82a-f71e" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
+        <modifier type="replace" value="" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", " arg="-"/>
+        <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Armour-Piercing Bullets (Loaded)" hidden="true" id="9ba7-ace7-d1a9-b292">
+    <selectionEntry type="upgrade" import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="true" id="9ba7-ace7-d1a9-b292">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="self" shared="true" id="1952-8f9d-7661-55e5"/>
         <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="7c5e-8edc-4288-14da" includeChildSelections="true" includeChildForces="true"/>
@@ -3752,9 +3796,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="8e13-6e55-df3a-2fe7" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
+        <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+        <modifier type="replace" value="" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", " arg="-"/>
       </modifiers>
       <infoLinks>
-        <infoLink name="Critical" id="9be2-4bf4-0fbb-f4b3" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+        <infoLink name="Armour Piercing" id="9be2-4bf4-0fbb-f4b3" hidden="false" type="rule" targetId="ba7a-64b6-e87b-0ecd"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>

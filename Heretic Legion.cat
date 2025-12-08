@@ -2956,6 +2956,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="Bayonet Lug" hidden="false" id="9154-09a9-b183-ac37" type="selectionEntry" targetId="3348-ed1b-adf7-af00"/>
+                <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="e945-93be-001a-f669" type="selectionEntry" targetId="4b53-eb99-9060-213f"/>
               </entryLinks>
               <modifierGroups>
                 <modifierGroup type="and">
@@ -2982,6 +2983,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </costs>
               <entryLinks>
                 <entryLink import="true" name="Bayonet Lug" hidden="false" id="a36a-e4dd-a26c-122c" type="selectionEntry" targetId="3348-ed1b-adf7-af00"/>
+                <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="142d-eb79-732e-57f2" type="selectionEntry" targetId="4b53-eb99-9060-213f"/>
               </entryLinks>
               <infoLinks>
                 <infoLink name="Shotgun" id="58d9-83d6-bcd8-6562" hidden="false" type="profile" targetId="0924-0647-1366-9d85"/>
@@ -2994,6 +2996,7 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </costs>
               <entryLinks>
                 <entryLink import="true" name="Bayonet Lug" hidden="false" id="2baf-42e9-0eee-2c23" type="selectionEntry" targetId="3348-ed1b-adf7-af00"/>
+                <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="4bcb-0d3f-16f0-45a0" type="selectionEntry" targetId="4b53-eb99-9060-213f"/>
               </entryLinks>
               <infoLinks>
                 <infoLink name="Automatic Shotgun" id="81f6-3be0-4126-1976" hidden="false" type="profile" targetId="a19d-90ab-da9f-95ff"/>
@@ -3030,6 +3033,40 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="8be5-7527-c6fa-2bf7" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <entryLinks>
+                <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="fc47-c341-8f8f-c6fa" type="selectionEntry" targetId="4b53-eb99-9060-213f"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sub-Machine Gun" hidden="false" id="595c-fbcc-db98-5229" sortIndex="4">
+              <costs>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Submachine Gun" id="29a1-c727-7a98-565b" hidden="false" type="profile" targetId="f366-4889-0ac5-375d"/>
+                <infoLink name="Assault" id="4652-e784-dbb4-5e6b" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink import="true" name="Bayonet Lug" hidden="false" id="650a-7428-47ee-407a" type="selectionEntry" targetId="3348-ed1b-adf7-af00"/>
+                <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="e96b-2f4c-03d3-70c9" type="selectionEntry" targetId="4b53-eb99-9060-213f"/>
+              </entryLinks>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="0" field="f3bb-a7e6-d476-f60b"/>
+                    <modifier type="set" value="25" field="8d43-33fd-332d-17a6"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d05-603e-4b5a-aed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
                     <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
@@ -3275,20 +3312,43 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
             <infoLink name="Fire" id="f7f4-2ca9-1157-b2a1" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
           </infoLinks>
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="f2d9-0f99-61a1-fce5" shared="true"/>
-              </conditions>
-            </modifier>
             <modifier type="increment" value="1" field="aad2-b959-74e8-44fe">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="c66f-56e1-c379-0f1c" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="ad38-8f81-37fb-3e0e" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="e126-07c8-283d-a9c0" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="b7bf-8ec7-b267-ac60" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="4dbb-8d84-16cf-9605" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="ad74-e8b9-57f5-c0d1" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="3395-b3e7-e89b-6bea" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="aa40-8ddf-b94d-fe96" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="7ab6-280f-5116-f532" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="1b22-3636-d509-ff19" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="e5a6-8f21-f476-cc75" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="5c4c-5169-0e5e-b35b" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="8292-a94f-828f-955e" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="3b88-7bdf-2370-d7e4" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="b729-c409-1ae1-3e76" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="f118-2787-2eed-84fd" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="669d-4a56-7875-17ed" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="f350-1594-69d3-e36b" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="f2d9-0f99-61a1-fce5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
