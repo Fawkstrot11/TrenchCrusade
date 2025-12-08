@@ -143,6 +143,26 @@
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="fc51-aa96-f4ec-7947" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="0793-1101-3216-f9c7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="3e1b-b310-c000-bb5d" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="028f-f870-3b2e-f353" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="1b96-05e8-2c85-c3d9" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="a8ac-1e12-a8f3-5a8e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="08a4-7ba1-10f3-a1b5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="7995-a97c-4a75-5dee" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="c759-3ebc-7675-af42" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="27b2-16db-0506-6048" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="9d61-b51a-dafb-c031" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="d14e-7ee5-3c98-ee83" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="6012-79c2-36b7-b158" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Medi-kit" hidden="false" id="bdd7-148f-3e74-b2f4" sortIndex="7">
@@ -714,6 +734,9 @@ first BLOOD MARKER placed on the model is ignored.
             </infoLink>
             <infoLink name="Pistol" id="4249-2de0-e90b-76dd" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
           </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="9ef9-4c9b-d0f5-3169" type="selectionEntry" targetId="7131-70c4-895c-6e5f"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Automatic Pistol" hidden="false" id="3e1b-b310-c000-bb5d" collective="false" sortIndex="2">
           <costs>
@@ -741,6 +764,9 @@ first BLOOD MARKER placed on the model is ignored.
               </repeats>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="2c37-dd5c-e96d-0d4a" type="selectionEntry" targetId="7131-70c4-895c-6e5f"/>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -753,6 +779,7 @@ first BLOOD MARKER placed on the model is ignored.
           </costs>
           <entryLinks>
             <entryLink import="true" name="Bayonet Lug" hidden="false" id="5629-ca3a-9622-2ad2" type="selectionEntry" targetId="780a-82e9-b0f2-9caf"/>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="3ed7-7e2e-974a-1f71" type="selectionEntry" targetId="7131-70c4-895c-6e5f"/>
           </entryLinks>
           <infoLinks>
             <infoLink name="Semi-Automatic Rifle" id="fd82-4714-aa9c-0ccd" hidden="false" type="profile" targetId="1d82-fcc9-aeda-b03a">
@@ -792,6 +819,9 @@ first BLOOD MARKER placed on the model is ignored.
               </conditionGroups>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="1373-dba6-05b3-6d37" type="selectionEntry" targetId="7131-70c4-895c-6e5f"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Flamethrower" hidden="false" id="1a75-5edf-0fc9-a1b6" sortIndex="5">
           <costs>
@@ -845,6 +875,7 @@ first BLOOD MARKER placed on the model is ignored.
           </costs>
           <entryLinks>
             <entryLink import="true" name="Bayonet Lug" hidden="false" id="982d-a7c6-4d33-5e94" type="selectionEntry" targetId="780a-82e9-b0f2-9caf"/>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="1601-aafe-2021-db15" type="selectionEntry" targetId="7131-70c4-895c-6e5f"/>
           </entryLinks>
           <infoLinks>
             <infoLink name="Bolt Action Rifle" id="300e-a3d5-94ea-4542" hidden="false" type="profile" targetId="408d-d56e-71c4-f3c4">
@@ -878,6 +909,9 @@ first BLOOD MARKER placed on the model is ignored.
           <categoryLinks>
             <categoryLink name="Heavy" hidden="false" id="d242-7a8f-08ed-d3d2" targetId="70c9-988d-71a7-7654" primary="false"/>
           </categoryLinks>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="2a45-bf31-9b01-433d" type="selectionEntry" targetId="7131-70c4-895c-6e5f"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Machine Gun" hidden="true" id="c759-3ebc-7675-af42" sortIndex="6">
           <costs>
@@ -903,6 +937,9 @@ first BLOOD MARKER placed on the model is ignored.
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="6e86-1df2-2d13-8a8c" includeChildSelections="true"/>
           </constraints>
           <comment>methodius</comment>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="0034-5486-d7ef-e568" type="selectionEntry" targetId="7131-70c4-895c-6e5f"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Automatic Rifle" hidden="true" id="08a4-7ba1-10f3-a1b5" sortIndex="6">
           <costs>
@@ -936,6 +973,9 @@ first BLOOD MARKER placed on the model is ignored.
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0991-fcb1-ee05-149b" includeChildSelections="true"/>
           </constraints>
           <comment>methodius</comment>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="b81b-bb35-0b98-4cf0" type="selectionEntry" targetId="7131-70c4-895c-6e5f"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Musket" hidden="false" id="028f-f870-3b2e-f353" sortIndex="1">
           <costs>
@@ -944,6 +984,7 @@ first BLOOD MARKER placed on the model is ignored.
           </costs>
           <entryLinks>
             <entryLink import="true" name="Bayonet Lug" hidden="false" id="d86c-39e7-f53f-f267" type="selectionEntry" targetId="780a-82e9-b0f2-9caf"/>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="0e8d-22d0-7029-c2fb" type="selectionEntry" targetId="7131-70c4-895c-6e5f"/>
           </entryLinks>
           <infoLinks>
             <infoLink name="Musket" id="722e-9a97-534c-be00" hidden="false" type="profile" targetId="b5e4-35bd-ba00-55c0"/>
@@ -963,6 +1004,7 @@ first BLOOD MARKER placed on the model is ignored.
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="Bayonet Lug" hidden="false" id="5f2a-bb56-4a74-4b04" type="selectionEntry" targetId="780a-82e9-b0f2-9caf"/>
+                <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="d0b3-cd6f-40e1-fe4c" type="selectionEntry" targetId="7131-70c4-895c-6e5f"/>
               </entryLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -978,6 +1020,7 @@ first BLOOD MARKER placed on the model is ignored.
               </costs>
               <entryLinks>
                 <entryLink import="true" name="Bayonet Lug" hidden="false" id="f522-6e06-ec88-4ff1" type="selectionEntry" targetId="780a-82e9-b0f2-9caf"/>
+                <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="82fd-2b43-78d4-c646" type="selectionEntry" targetId="7131-70c4-895c-6e5f"/>
               </entryLinks>
               <infoLinks>
                 <infoLink name="Shotgun" id="5088-97f5-95a0-2187" hidden="false" type="profile" targetId="0924-0647-1366-9d85"/>
@@ -995,6 +1038,7 @@ first BLOOD MARKER placed on the model is ignored.
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="Bayonet Lug" hidden="false" id="8282-971f-06f1-5d60" type="selectionEntry" targetId="780a-82e9-b0f2-9caf"/>
+                <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="ab5b-9803-64e7-c027" type="selectionEntry" targetId="7131-70c4-895c-6e5f"/>
               </entryLinks>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f0d8-9279-33db-d24b" includeChildSelections="true"/>
@@ -2468,6 +2512,29 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Incendiary Ammuntion (Loaded)" hidden="true" id="7131-70c4-895c-6e5f">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="ac01-3574-9808-1678"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="a184-e27d-26bf-2c41" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Fire" id="4da6-12df-a036-8712" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="append" value="FIRE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model" childId="a9ac-52e3-8dcc-21e0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="a184-e27d-26bf-2c41">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="a9ac-52e3-8dcc-21e0" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="replace" value="" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", " arg="-"/>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
