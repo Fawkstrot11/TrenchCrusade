@@ -842,7 +842,7 @@ with a Tormentor Chain.</characteristic>
         <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Abyssal Blade: When you make an Injury Roll for an attack made with this weapon, roll 3D6 and add all 3 dice together. Any +INJURY DICE or -INJURY DICE that applied to the Injury Roll will apply normally, except that you pick the 3 highest or lowest dice in the roll instead of the 2 highest or lowest.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Armour-Piercing Bullets" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="90fa-0eaa-3d49-be2c" publicationId="c658-4a10-e1fe-befc" page="118">
+    <profile name="Armour-Piercing Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="90fa-0eaa-3d49-be2c" publicationId="c658-4a10-e1fe-befc" page="118">
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
@@ -1004,7 +1004,7 @@ Shovel: A model equipped with a Shovel that starts the game on Open terrain has 
         <characteristic name="Rules" typeId="4834-43a9-1c93-9062">-</characteristic>
       </characteristics>
     </profile>
-    <profile name="Dum-Dum Bullets" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b51b-0a4a-8aa8-e5ae">
+    <profile name="Dum-Dum Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b51b-0a4a-8aa8-e5ae">
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>

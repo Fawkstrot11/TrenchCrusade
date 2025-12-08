@@ -3905,20 +3905,43 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             <infoLink name="Fire" id="f7f4-2ca9-1157-b2a1" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
           </infoLinks>
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="f2d9-0f99-61a1-fce5" shared="true"/>
-              </conditions>
-            </modifier>
             <modifier type="increment" value="1" field="aad2-b959-74e8-44fe">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="c66f-56e1-c379-0f1c" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="ad38-8f81-37fb-3e0e" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="e126-07c8-283d-a9c0" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="b7bf-8ec7-b267-ac60" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="4dbb-8d84-16cf-9605" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="ad74-e8b9-57f5-c0d1" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="3395-b3e7-e89b-6bea" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="aa40-8ddf-b94d-fe96" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="7ab6-280f-5116-f532" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="1b22-3636-d509-ff19" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="e5a6-8f21-f476-cc75" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="5c4c-5169-0e5e-b35b" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="8292-a94f-828f-955e" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="3b88-7bdf-2370-d7e4" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="b729-c409-1ae1-3e76" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="f118-2787-2eed-84fd" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="669d-4a56-7875-17ed" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="f350-1594-69d3-e36b" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="f2d9-0f99-61a1-fce5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
