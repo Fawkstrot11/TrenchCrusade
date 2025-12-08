@@ -2607,11 +2607,13 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="self" childId="b32b-6d55-9163-8486" shared="true"/>
               </conditions>
+              <comment>Martyred</comment>
             </modifier>
             <modifier type="set" value="Martyr-Penitent" field="name">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="self" childId="b32b-6d55-9163-8486" shared="true"/>
               </conditions>
+              <comment>Martyred</comment>
             </modifier>
           </modifiers>
           <modifierGroups>
@@ -2755,7 +2757,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </conditions>
           <modifiers>
             <modifier type="set" value="Martyr-Penitent" field="name"/>
-            <modifier type="set" value="+1 DICE" field="12e8-ff8c-c933-9eb5" affects="profiles.Unit"/>
+            <modifier type="replace" value="+1 DICE" field="12e8-ff8c-c933-9eb5" affects="profiles.Unit"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
