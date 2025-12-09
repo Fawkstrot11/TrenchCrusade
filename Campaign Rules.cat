@@ -6,7 +6,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3818-d0e9-d926-6897" includeChildSelections="true"/>
       </constraints>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Enable Campaign Rules?" id="7268-f2f3-a0fc-70e4" hidden="false">
+        <selectionEntryGroup name="Enable Campaign Rules?" id="7268-f2f3-a0fc-70e4" hidden="false" sortIndex="1">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Disabled" hidden="false" id="7131-4bf6-d01a-d823" sortIndex="1">
               <profiles>
@@ -713,6 +713,13 @@ The saint guides your troops before each battle. The model with the skull gains 
       <categoryLinks>
         <categoryLink targetId="705b-e23f-e9c2-58ab" id="e16e-8a39-2dcb-daa7" primary="true" name="Configuration"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Allow Third-Party Mercenaries?" hidden="false" id="8397-95ab-8729-eb60" sortIndex="2">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab31-3a72-0908-6969"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Organizational Skills" hidden="true" id="70ac-6006-ea0c-54f1">
       <selectionEntryGroups>
