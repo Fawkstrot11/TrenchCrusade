@@ -75,7 +75,7 @@
             </modifier>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="2ee4-7f35-8086-2f2a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb9f-a973-1114-dc21" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3863,6 +3863,13 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3396-636c-640f-5dc9" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb9f-a973-1114-dc21" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Unholy Trinket" hidden="false" id="cf41-6d5d-0721-e337" sortIndex="6">
           <costs>
@@ -4045,6 +4052,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
                   <conditions>
                     <condition type="instanceOf" value="1" field="selections" scope="model" childId="15bf-43f1-0650-1070" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="2ee4-7f35-8086-2f2a" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb9f-a973-1114-dc21" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
