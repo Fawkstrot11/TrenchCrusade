@@ -1065,7 +1065,7 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
                 <infoLink name="Standard Armour" id="33a7-4a9e-8980-2b00" hidden="false" type="profile" targetId="6fa6-650d-4136-bc70"/>
               </infoLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mechanised Armour" hidden="false" id="a1a3-ab0f-8d5c-e5ff">
+            <selectionEntry type="upgrade" import="true" name="Machine Armour" hidden="false" id="a1a3-ab0f-8d5c-e5ff">
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -1076,6 +1076,10 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
               <constraints>
                 <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="6d85-765b-aadb-1126" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="replace" value="40" field="73ae-cc17-596e-0481" scope="model" affects="profiles.Unit" arg="32"/>
+                <modifier type="replace" value="40" field="73ae-cc17-596e-0481" scope="model" affects="profiles.Unit" arg="25"/>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -1701,9 +1705,9 @@ While a model is captured, the model wielding the Crook may only make Melee Atta
             <condition type="atLeast" value="1" field="selections" scope="self" childId="a1a3-ab0f-8d5c-e5ff" shared="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="40mm" field="73ae-cc17-596e-0481" affects="profiles.Unit">
+        <modifier type="set" value="40mm" field="73ae-cc17-596e-0481" affects="profiles.Unit" scope="model">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="parent" childId="a1a3-ab0f-8d5c-e5ff" shared="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="a1a3-ab0f-8d5c-e5ff" shared="true"/>
           </conditions>
         </modifier>
         <modifier type="set" value="false" field="hidden">
