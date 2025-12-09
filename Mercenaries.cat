@@ -1009,6 +1009,730 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
       </entryLinks>
       <comment>Knights of Avarice Version</comment>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Disciple of St. Roch" hidden="true" id="ef8a-5dfd-41a0-5b8d">
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+      </costs>
+      <comment>St.Roch are Westfalia&apos;s mercenary. Usual third party rules appliy</comment>
+      <profiles>
+        <profile name="Third Party" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ba8e-b887-69dd-fad3">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">These mercenaries are not fully official. They are officially condoned by Factory Fortress, but no assurances are made to balance or consistency with rules. They are included here for the benefit of the community. Please only use these factions with permission from all involved players.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Field Sample" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="be68-b5bd-eaeb-a272">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Whenever a Disciple of St. Roch is within 1” of a model with at least one BLOOD MARKER on it, it may take a Gather Sample Action. If they do so, take a Risky Success Roll for the model. If the roll is a Failure, the Disciple of St. Roch&apos;s Activation ends immediately. If the roll is a Success or a Critical Success, the Disciple extracts a sample from the interesting specimen, gaining a Blessing Marker to represent its newfound understanding of either the enemy’s weapons, or the enemy themselves.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Chemical Conditioning" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="67fc-c6de-5fd9-72db">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If a Disciple of St. Roch is wearing Machine Armour, they gain the keyword STRONG and their base size changes to 40mm.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Disciple of St. Roch" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="2a1b-d09e-f965-06c9">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantery</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 DICE</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 DICE</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Advancement" hidden="true" id="a7d9-5c29-4b3f-996b" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="9549-149b-9c1f-7eaf" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Armour" id="7688-5804-8a2d-ec25" hidden="false" sortIndex="4">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Standard Armour" hidden="false" id="6ea2-e2ec-9896-375a" sortIndex="1">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Standard Armour" id="33a7-4a9e-8980-2b00" hidden="false" type="profile" targetId="6fa6-650d-4136-bc70"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Machine Armour" hidden="false" id="a1a3-ab0f-8d5c-e5ff">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Machine Armour" id="19f8-57b6-2bcc-7b21" hidden="false" type="profile" targetId="2558-23f8-cfa8-40f4"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="6d85-765b-aadb-1126" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="replace" value="40" field="73ae-cc17-596e-0481" scope="model" affects="profiles.Unit" arg="32"/>
+                <modifier type="replace" value="40" field="73ae-cc17-596e-0481" scope="model" affects="profiles.Unit" arg="25"/>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a0d-5699-c27a-08eb" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Equipment" id="6231-df29-6006-d22b" hidden="false" sortIndex="5">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Shovel" hidden="false" id="47ce-23c4-71d4-039d" sortIndex="2">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Shovel" id="918a-047b-7720-3c86" hidden="false" type="profile" targetId="d829-4d67-52aa-baaf"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Purgation Ammunition" hidden="true" id="9f3e-f682-ff22-8184" sortIndex="3">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dcde-a57e-cc93-0c63" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Gas" id="8d0e-0873-36f5-b8f5" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
+                <infoLink name="Consumable" id="5c57-14db-9029-e976" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+              </infoLinks>
+              <profiles>
+                <profile name="Purgation Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="0a72-3d4c-48ea-dd92">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Before the battle begins, a model with Purgation Ammunition may use this item to grant up to 2 Pistol that they have equipped with the GAS keyword until the end of the battle.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="009f-4ce2-5466-c35c" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Headgear" id="0b81-106d-effb-d171" hidden="false" sortIndex="1">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Combat Helmet" hidden="false" id="108c-8938-cee7-90f4">
+                  <infoLinks>
+                    <infoLink name="Combat Helmet" id="254b-84f8-b8cd-1386" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                    <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e311-06c9-2907-077e"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Weapons" id="84f1-5505-cbea-e72f" hidden="false" sortIndex="3">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Utility Hand" id="18ee-705f-fd85-458a" hidden="false">
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Shield" id="1772-d449-0b3f-9655" hidden="false" sortIndex="1">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Trench Shield" hidden="false" id="14a1-dbde-df33-66be">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3bbf-c829-2078-f1a4" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Shield" id="14a3-d86c-f046-5cc8" hidden="false" type="profile" targetId="c2a5-72b6-355d-0356"/>
+                      </infoLinks>
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="atLeast" value="1" field="selections" scope="model" childId="03eb-5358-03ae-8046" shared="true" includeChildSelections="true"/>
+                                <condition type="atLeast" value="1" field="selections" scope="model" childId="a1a3-ab0f-8d5c-e5ff" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Winged Staff" hidden="false" id="932a-0ad5-c74c-3593" sortIndex="2">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8af7-4ef3-2808-63f9" includeChildSelections="true" includeChildForces="true"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Held" id="73fd-1ef2-b9ae-71dc" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
+                    <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                  </costs>
+                  <profiles>
+                    <profile name="Winged Staff" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="652b-a2bf-a330-c9ba">
+                      <characteristics>
+                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD</characteristic>
+                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The wielder of a Wingstaff confers a +1 DICE to any Risky Actions other than attacks to itself and any friendly model within 4”.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Melee" id="da2e-4d6a-1365-797e" hidden="false">
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Melee (One-Handed)" id="c743-c9ca-6888-59f6" hidden="false">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Misericordia" hidden="false" id="9c3f-aeb6-c52b-f4cc">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Misericordia" id="797d-a6da-0954-03c1" hidden="false" type="profile" targetId="d82e-4c7b-28ac-1413"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Sword/Axe" hidden="false" id="17c8-ac11-40da-4ef6">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="4"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Critical" id="cb18-ea7b-aacc-3e29" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+                        <infoLink name="Sword/Axe" id="5b5e-591b-3ce5-08c3" hidden="false" type="profile" targetId="e938-b0dc-418c-0924"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Trench Club" hidden="false" id="0e4d-48ea-b54c-3b9e">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="3"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Trench Club" id="faa6-0d1e-49a6-dd3d" hidden="false" type="profile" targetId="b242-1242-be3a-d232"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Trench Knife" hidden="false" id="05d2-80c2-6050-fb9b">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="1"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Trench Knife" id="41b5-cb78-cc28-44d9" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Melee (Two-Handed)" id="758a-a9d3-5bd4-85f7" hidden="false">
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Shield Combo" id="bb19-32ae-18dd-f529" hidden="false">
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Polearm" hidden="false" id="e217-5712-c68b-89f4">
+                          <costs>
+                            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="7"/>
+                            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                          </costs>
+                          <infoLinks>
+                            <infoLink name="Block" id="2318-684d-cfdd-f6c7" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
+                            <infoLink name="Cumbersome" id="6c48-d371-4b2f-1ecf" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+                            <infoLink name="Polearm" id="42d5-35c0-232a-4119" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
+                          </infoLinks>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ff5-79d1-d89b-9e0e" includeChildSelections="false"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="decrement" value="0" field="9ff5-79d1-d89b-9e0e">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="18ee-705f-fd85-458a" shared="true"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="notEqualTo" value="1" field="selections" scope="model" childId="1772-d449-0b3f-9655" shared="true"/>
+                                <condition type="notEqualTo" value="1" field="selections" scope="model" childId="bb19-32ae-18dd-f529" shared="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="afcc-5f24-1c7c-63c4" shared="true" includeChildForces="false"/>
+                                <condition type="atLeast" value="1" field="selections" scope="model" childId="f87d-5ea3-e505-6a9f" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                              <comment>Strong is overwritten by Cumbersome</comment>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <comment>original, just in case</comment>
+                    </modifier>
+                    <modifier type="decrement" value="1" field="9ff5-79d1-d89b-9e0e">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="18ee-705f-fd85-458a" shared="true"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="notEqualTo" value="1" field="selections" scope="model" childId="1772-d449-0b3f-9655" shared="true"/>
+                                <condition type="notEqualTo" value="1" field="selections" scope="model" childId="bb19-32ae-18dd-f529" shared="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="afcc-5f24-1c7c-63c4" shared="true" includeChildForces="false"/>
+                              </conditions>
+                              <comment>Strong is overwritten by Cumbersome</comment>
+                              <conditionGroups>
+                                <conditionGroup type="or">
+                                  <conditionGroups>
+                                    <conditionGroup type="and">
+                                      <conditions>
+                                        <condition type="greaterThan" value="0" field="selections" scope="self" childId="f87d-5ea3-e505-6a9f" shared="true" includeChildSelections="true"/>
+                                        <condition type="equalTo" value="1" field="selections" scope="model" childId="758a-a9d3-5bd4-85f7" shared="true"/>
+                                      </conditions>
+                                      <comment>one 2 handed, none can be cumbersome</comment>
+                                    </conditionGroup>
+                                    <conditionGroup type="and">
+                                      <conditions>
+                                        <condition type="greaterThan" value="1" field="selections" scope="self" childId="f87d-5ea3-e505-6a9f" shared="true" includeChildSelections="true"/>
+                                        <condition type="equalTo" value="2" field="selections" scope="model" childId="758a-a9d3-5bd4-85f7" shared="true"/>
+                                      </conditions>
+                                      <comment>two 2 handed, one can be cumbersome</comment>
+                                    </conditionGroup>
+                                  </conditionGroups>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <comment>stolen from sultans to account for the homonculus</comment>
+                    </modifier>
+                  </modifiers>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Crook" hidden="false" id="8e13-f6ad-46a4-9853">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="25"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Shrapnel" id="ae0d-8b9f-d038-a769" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+                        <infoLink name="Cumbersome" id="39a3-6d0d-8826-a869" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+                      </infoLinks>
+                      <profiles>
+                        <profile name="Crook" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="9d4d-bc41-82dc-c18a">
+                          <characteristics>
+                            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+                            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">SHRAPNEL, CUMBERSOME</characteristic>
+                            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">If a model wielding a Crook is within 1” of any model (friend or foe) that is Downed, it may make its Melee Attack a Risky Action. If the roll is a Failure, the model’s Activation immediately ends. If the roll is a Success or a Critical Success, it captures the model. The captured model cannot Stand nor move for any reason. It is instead moved with the wielder whenever they move for any reason, without triggering free attacks should the captured model is moved away from 1” of an enemy model. The model remains captured until the model wielder is Downed, taken Out of Action or chooses to release them, which can be done freely at any point during the wielder’s activation.
+
+While a model is captured, the model wielding the Crook may only make Melee Attacks against the captured model.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="0927-912b-6898-93bf" includeChildSelections="true" includeChildForces="true"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ad8e-fe7d-49e1-6c21" includeChildSelections="false"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="increment" value="1" field="ad8e-fe7d-49e1-6c21">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="1772-d449-0b3f-9655" shared="true"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="atLeast" value="1" field="selections" scope="model" childId="bb19-32ae-18dd-f529" shared="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <comment>shield combo refun</comment>
+                    </modifier>
+                    <modifier type="decrement" value="1" field="ad8e-fe7d-49e1-6c21">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="6ffb-5ac2-a05a-8c44" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="increment" value="1" field="ad8e-fe7d-49e1-6c21">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="758a-a9d3-5bd4-85f7" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="afcc-5f24-1c7c-63c4" shared="true" includeChildForces="false"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditionGroups>
+                                <conditionGroup type="and">
+                                  <conditions>
+                                    <condition type="lessThan" value="1" field="selections" scope="self" childId="f87d-5ea3-e505-6a9f" shared="true" includeChildSelections="true"/>
+                                    <condition type="equalTo" value="1" field="selections" scope="model" childId="758a-a9d3-5bd4-85f7" shared="true"/>
+                                  </conditions>
+                                  <comment>one 2 handed, none can be cumbersome</comment>
+                                </conditionGroup>
+                                <conditionGroup type="and">
+                                  <conditions>
+                                    <condition type="lessThan" value="2" field="selections" scope="self" childId="f87d-5ea3-e505-6a9f" shared="true" includeChildSelections="true"/>
+                                    <condition type="equalTo" value="2" field="selections" scope="model" childId="758a-a9d3-5bd4-85f7" shared="true"/>
+                                  </conditions>
+                                  <comment>two 2 handed, one can be cumbersome</comment>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <comment>strength refund</comment>
+                    </modifier>
+                    <modifier type="decrement" value="1" field="ad8e-fe7d-49e1-6c21">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="model" childId="758a-a9d3-5bd4-85f7" shared="true" roundUp="false"/>
+                        <repeat value="1" repeats="1" field="selections" scope="model" childId="18ee-705f-fd85-458a" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Ranged" id="db2a-6e4b-14be-a99c" hidden="false" sortIndex="1">
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Ranged (One-Handed)" id="c6f8-5b86-186b-ec35" hidden="false">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Pistol" hidden="false" id="009f-4ce2-5466-c35c">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="6"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Pistol" id="294a-e103-a2c7-033f" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
+                        <infoLink name="Pistol" id="bf04-292f-acb5-8267" hidden="false" type="profile" targetId="ae18-4990-fc3c-78ce"/>
+                      </infoLinks>
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="60b6-078d-d9ae-109e"/>
+                      </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="Purgation Ammunition (Loaded)" hidden="false" id="9c08-85b4-f5ee-274d" type="selectionEntry" targetId="89a0-7ad7-4a13-551d"/>
+                      </entryLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Ranged (Two-Handed)" id="182c-8ecd-f9fd-d99c" hidden="false">
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Shield Combo" id="a8b8-575c-16f2-61db" hidden="false">
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Shotgun" hidden="false" id="c4ff-b074-e31f-666d">
+                          <costs>
+                            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+                            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                          </costs>
+                          <infoLinks>
+                            <infoLink name="Shotgun" id="eaff-3f4b-87eb-7af5" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
+                            <infoLink name="Shotgun" id="5145-9701-a4a4-7eed" hidden="false" type="profile" targetId="0924-0647-1366-9d85"/>
+                          </infoLinks>
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Bayonet Lug" hidden="false" id="ce95-ea6c-b3e6-fdb6">
+                              <costs>
+                                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="2"/>
+                                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                              </costs>
+                              <infoLinks>
+                                <infoLink name="Bayonet" id="6190-95ac-9512-ba77" hidden="false" type="profile" targetId="aa9b-a7a1-69a4-05f4"/>
+                              </infoLinks>
+                              <categoryLinks>
+                                <categoryLink name="Cumbersome" hidden="false" id="a552-e363-e938-ae08" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
+                              </categoryLinks>
+                              <constraints>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cacf-de80-1cf4-cb9f" includeChildSelections="false"/>
+                              </constraints>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Heavy Shotgun" hidden="false" id="efb5-d8d5-b811-3a21">
+                          <costs>
+                            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+                            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                          </costs>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7c32-c6c0-2449-a63e" includeChildSelections="true"/>
+                          </constraints>
+                          <infoLinks>
+                            <infoLink name="Heavy Shotgun" id="70ce-5156-dc67-a87e" hidden="false" type="profile" targetId="c5ac-8d24-4060-8655"/>
+                            <infoLink name="Heavy" id="e752-72f6-94cc-e33f" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+                          </infoLinks>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e541-11ec-ce05-7afe" includeChildSelections="false"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="decrement" value="1" field="e541-11ec-ce05-7afe">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="6ffb-5ac2-a05a-8c44" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="false" id="a037-9e9a-98e4-31ce">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="35"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0029-b748-6967-72bf" includeChildSelections="true" includeChildForces="true"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Critical" id="2611-05a8-1ae3-00dd" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+                        <infoLink name="Risky" id="1afe-05db-a4d7-7e86" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+                        <infoLink name="Sniper Rifle" id="fed0-e30a-b5b5-7610" hidden="false" type="profile" targetId="6eb2-c600-98e7-16d3"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Bolt Action Rifle" hidden="false" id="7fd3-8c0f-dabc-b0b1">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Bayonet Lug" hidden="false" id="a9b2-fc73-9365-ef86">
+                          <costs>
+                            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="2"/>
+                            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                          </costs>
+                          <infoLinks>
+                            <infoLink name="Bayonet" id="ddc4-6979-1ce0-99e2" hidden="false" type="profile" targetId="aa9b-a7a1-69a4-05f4"/>
+                          </infoLinks>
+                          <categoryLinks>
+                            <categoryLink name="Cumbersome" hidden="false" id="6f44-11af-5895-5fa1" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
+                          </categoryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e5d7-d272-9468-dd40" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
+                      <infoLinks>
+                        <infoLink name="Bolt Action Rifle" id="8d83-5e71-e880-e2bd" hidden="false" type="profile" targetId="408d-d56e-71c4-f3c4"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Fumigator" hidden="false" id="ad6c-4635-f9a7-8115">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="25"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="3188-fbb7-94b7-3759" includeChildSelections="true" includeChildForces="true"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Ignore Armour" id="eec4-62fa-fc8a-638e" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+                        <infoLink name="Flamethrower" id="203a-2545-b729-7215" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+                        <infoLink name="Gas" id="1942-571a-804e-f788" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
+                      </infoLinks>
+                      <profiles>
+                        <profile name="Fumigator" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="c289-b180-d583-04b0">
+                          <characteristics>
+                            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+                            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
+                            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-1 INJURY DICE, IGNORE ARMOUR, GAS, FLAMETHROWER</characteristic>
+                            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Heavy Fumigator" hidden="false" id="087b-32d3-0503-70bb">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="45"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Automatic" id="e74f-1faa-8bb5-6b0d" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+                        <infoLink name="Heavy" id="dcc2-3cf4-782e-10a7" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+                        <infoLink name="Gas" id="a233-38e4-6c74-7d72" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
+                        <infoLink name="Flamethrower" id="0739-0720-a92b-3239" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+                        <infoLink name="Ignore Armour" id="2498-4fc9-552c-bfc9" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+                      </infoLinks>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="601d-c6a0-72ff-86f9" includeChildSelections="true" includeChildForces="true"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Heavy Fumigator" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="9c1c-2178-d6c0-cf6a">
+                          <characteristics>
+                            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+                            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">10&quot;</characteristic>
+                            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">AUTOMATIC 2,HEAVY, IGNORE ARMOUR, GAS, FLAMETHROWER</characteristic>
+                            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Semi-Automatic Rifle" hidden="false" id="9fff-e8eb-1e6d-4fe9">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Assault" id="2338-3c4a-244a-d1a3" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+                        <infoLink name="Semi-Automatic Rifle" id="81a3-4543-5eb7-2d30" hidden="false" type="profile" targetId="1d82-fcc9-aeda-b03a"/>
+                      </infoLinks>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Bayonet Lug" hidden="false" id="4411-7b7e-4144-d1ef">
+                          <costs>
+                            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="2"/>
+                            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+                          </costs>
+                          <infoLinks>
+                            <infoLink name="Bayonet" id="1e60-69ca-8cf5-22e2" hidden="false" type="profile" targetId="aa9b-a7a1-69a4-05f4"/>
+                          </infoLinks>
+                          <categoryLinks>
+                            <categoryLink name="Cumbersome" hidden="false" id="0b4d-a1c4-d206-6080" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
+                          </categoryLinks>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b299-fb4c-5d2b-f62d" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f468-f3c0-ab23-da5c" includeChildSelections="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="2832-2a5c-a8e7-bcf7" includeChildSelections="false"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="decrement" value="1" field="f468-f3c0-ab23-da5c">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="6ffb-5ac2-a05a-8c44" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="decrement" value="1" field="f468-f3c0-ab23-da5c">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="model" childId="18ee-705f-fd85-458a" shared="true" roundUp="false"/>
+                        <repeat value="1" repeats="1" field="selections" scope="model" childId="182c-8ecd-f9fd-d99c" shared="true" roundUp="false" includeChildSelections="false"/>
+                      </repeats>
+                    </modifier>
+                    <modifier type="increment" value="1" field="f468-f3c0-ab23-da5c">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="1772-d449-0b3f-9655" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="a8b8-575c-16f2-61db" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="0286-bdee-e6f9-c82a" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="add" value="Max 1 Heavy item on Non-Strong Unit" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="greaterThan" value="1" field="selections" scope="model" childId="70c9-988d-71a7-7654" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="afcc-5f24-1c7c-63c4" shared="true" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <comment>Errors out if 2 or more Heavy on non-</comment>
+            </modifier>
+            <modifier type="decrement" value="2" field="0286-bdee-e6f9-c82a">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model" childId="6ffb-5ac2-a05a-8c44" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <infoLinks>
+        <infoLink name="Negate [Keyword]" id="d835-78ee-3b3e-678e" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+        <infoLink name="Gas Mask" id="bc21-847d-bb87-033c" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
+        <infoLink name="Medi-kit" id="e2a6-a056-59b0-7b37" hidden="false" type="profile" targetId="aa88-1987-505a-13ca"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="a1a3-ab0f-8d5c-e5ff" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="40mm" field="73ae-cc17-596e-0481" affects="profiles.Unit" scope="model">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="a1a3-ab0f-8d5c-e5ff" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8397-95ab-8729-eb60" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="72ab-daa4-80ee-e9a5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d54d-055d-bbc0-a20f" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="3dfb-701d-e89c-eba2" id="0979-f917-ecfb-5f25" primary="true" name="Mercenary"/>
+      </categoryLinks>
+    </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Mamluk Faris" hidden="false" id="22b8-dc59-428d-87cd">
@@ -1262,6 +1986,29 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8530-2dc3-75e0-1a85" includeChildSelections="true"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Purgation Ammunition (Loaded)" hidden="true" id="89a0-7ad7-4a13-551d">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="98d4-874d-576d-9ab5"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="4feb-1381-e87e-e686" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model" childId="9f3e-f682-ff22-8184" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="2" field="4feb-1381-e87e-e686">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="9f3e-f682-ff22-8184" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="append" value="GAS" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+        <modifier type="replace" value="true" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", " arg="-"/>
+      </modifiers>
+      <infoLinks>
+        <infoLink name="Gas" id="0f05-8937-6f1f-f884" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
