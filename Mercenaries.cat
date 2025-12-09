@@ -1040,24 +1040,6 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
           </characteristics>
         </profile>
-        <profile name="Gas Mask" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a6ba-0f98-f503-e424">
-          <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE GAS</characteristic>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062"/>
-          </characteristics>
-        </profile>
-        <profile name="Medi-kit" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f2ae-b952-7418-9e90">
-          <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Treat ACTION: A model with this Keyword can take a Treat ACTION. If it does so, take a Risky Success Roll for the model. If the roll is a Failure, the model’s Activation ends immediately. If it is a Success or a Critical Success, you can do one of the following things:
-- Remove 1 BLOOD MARKER from the model or a friendly model within 1&quot; of the model.
-- Stand up a friendly model that is Down and within 1&quot; of the model.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <entryLinks>
         <entryLink import="true" name="Advancement" hidden="true" id="a7d9-5c29-4b3f-996b" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1">
@@ -1468,6 +1450,9 @@ While a model is captured, the model wielding the Crook may only make Melee Atta
                       <constraints>
                         <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="60b6-078d-d9ae-109e"/>
                       </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="Purgation Ammunition (Loaded)" hidden="false" id="9c08-85b4-f5ee-274d" type="selectionEntry" targetId="89a0-7ad7-4a13-551d"/>
+                      </entryLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -1707,6 +1692,8 @@ While a model is captured, the model wielding the Crook may only make Melee Atta
       </selectionEntryGroups>
       <infoLinks>
         <infoLink name="Negate [Keyword]" id="d835-78ee-3b3e-678e" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+        <infoLink name="Gas Mask" id="bc21-847d-bb87-033c" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
+        <infoLink name="Medi-kit" id="e2a6-a056-59b0-7b37" hidden="false" type="profile" targetId="aa88-1987-505a-13ca"/>
       </infoLinks>
       <modifiers>
         <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
@@ -2005,6 +1992,8 @@ While a model is captured, the model wielding the Crook may only make Melee Atta
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="9f3e-f682-ff22-8184" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
+        <modifier type="append" value="GAS" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+        <modifier type="replace" value="true" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", " arg="-"/>
       </modifiers>
       <infoLinks>
         <infoLink name="Gas" id="0f05-8937-6f1f-f884" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
