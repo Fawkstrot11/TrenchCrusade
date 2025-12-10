@@ -166,7 +166,7 @@ MARKERS caused by the Keyword FIRE.</description>
       <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
     </rule>
     <rule name="Pistol" id="845a-d3e1-69b8-687e" hidden="false">
-      <description>A pistol can be used as a Melee Weapon or a Ranged Weapon, and can be used as both in the same Activation. When it is used as a Ranged Weapon it has the Range shown on its Profile and uses the attacking model’s Ranged Characteristic. When used as a Melee Weapon it uses the attacking model’s Melee Characteristic and can be used as an Off-Hand Weapon if desired.</description>
+      <description>A pistol can be used as a Melee Weapon or a Ranged Weapon, and can be used as both in the same Activation. When it is used as a Ranged Weapon it has the Range shown on its Profile and uses the attacking model’s Ranged Characteristic. When used as a Melee Weapon it can use the attacking model’s Ranged or Melee Characteristic and can be used as an Off-Hand Weapon if desired.</description>
     </rule>
     <rule name="Reload" id="501f-a63a-e134-aab9" hidden="false">
       <description>If a model makes an attack with a Weapon that has this Keyword then its Activation ends after the ACTION that allowed the attack is completed.</description>
