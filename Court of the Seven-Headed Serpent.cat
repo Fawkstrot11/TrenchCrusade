@@ -124,27 +124,39 @@
             <infoLink name="Fire" id="c50a-fd06-a4a6-9cfc" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
           </infoLinks>
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="a730-386c-6e54-fab6" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="5d98-e97f-9486-21b7" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="667c-c2ec-b859-5424" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="e2e6-fb40-05e9-b0e5" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="7e7d-82f7-5f9f-d356" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="edab-d409-975f-bf55" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="3f0b-203c-e0b5-70bc" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="e366-d9c6-ce77-a783" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="2f90-6201-f141-1426" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
             <modifier type="increment" value="1" field="c3c9-e4ef-13be-a9b4">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="9f0d-ef38-4de7-41a8" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="a730-386c-6e54-fab6" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="5d98-e97f-9486-21b7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="e2e6-fb40-05e9-b0e5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="e2e6-fb40-05e9-b0e5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="6a3b-cda6-a47c-39b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="e9e7-840c-377e-3c85" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="e412-6109-7f4b-af37" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="edab-d409-975f-bf55" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="3f0b-203c-e0b5-70bc" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="7e7d-82f7-5f9f-d356" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="431a-ec2e-04c8-5040" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="2f90-6201-f141-1426" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="667c-c2ec-b859-5424" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="81e3-dfd1-da8a-508f" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="e366-d9c6-ce77-a783" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="5042-317e-8cbe-6433" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="a735-6fb4-a9bf-ef15" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="2512-f94e-3a3c-90be" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="a1db-7a30-cd96-c7f2" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="1f4c-9b05-b8ec-5b2f" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="85a5-ae83-0aa2-10f5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -965,6 +977,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="4e3b-d097-668a-8f73" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Automatic Pistol" hidden="true" id="5d98-e97f-9486-21b7" collective="false" sortIndex="2">
           <costs>
@@ -995,6 +1010,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="e442-1370-7dcd-8752" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Automatic Pistol" hidden="true" id="e2e6-fb40-05e9-b0e5" collective="false" sortIndex="3">
           <costs>
@@ -1023,6 +1041,9 @@
             <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="0e62-4825-a10d-ebc1" includeChildSelections="true"/>
           </constraints>
           <comment>antioch</comment>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="ada4-6885-84bb-9a94" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -1044,6 +1065,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="e872-2211-5e37-8977" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Serpent Assault Gun" hidden="false" id="606a-58a8-4fe9-59ef" sortIndex="14">
           <costs>
@@ -1221,6 +1245,17 @@
               </repeats>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="00e1-48f1-7103-493c" type="selectionEntry" targetId="ddfe-9432-d825-077a">
+              <profiles>
+                <profile name="Incendiary Ammuntion (Loaded)" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="839c-abfb-8136-fca8">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Incendiary</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Musket" hidden="true" id="6a3b-cda6-a47c-39b3" sortIndex="1">
           <costs>
@@ -1242,6 +1277,9 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="ae06-99bc-e249-96d3" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bolt Action Rifle" hidden="true" id="edab-d409-975f-bf55" sortIndex="4">
           <costs>
@@ -1271,6 +1309,9 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="2b3c-d737-18ab-bf59" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Semi-Automatic Rifle" hidden="true" id="3f0b-203c-e0b5-70bc" sortIndex="5">
           <costs>
@@ -1306,6 +1347,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="3910-c535-6cca-ccfa" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Machine Gun" hidden="true" id="5042-317e-8cbe-6433" sortIndex="17">
           <costs>
@@ -1327,6 +1371,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="ea9c-82ef-b0b1-dc6b" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="true" id="e366-d9c6-ce77-a783" sortIndex="16">
           <costs>
@@ -1356,6 +1403,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="cfd0-5e47-8e98-e6ad" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Punt Gun" hidden="true" id="cccc-a38f-b13e-4a4e" sortIndex="6">
           <costs>
@@ -1404,6 +1454,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="b775-6ae0-6b8b-e730" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Siege Jezzail" hidden="true" id="431a-ec2e-04c8-5040" sortIndex="8">
           <costs>
@@ -1432,6 +1485,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="575a-2ed6-eb97-fd00" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="true" id="2f90-6201-f141-1426" sortIndex="11">
           <costs>
@@ -1467,6 +1523,9 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="2084-099e-3664-dd58" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Machine Gun" hidden="true" id="81e3-dfd1-da8a-508f" sortIndex="13">
           <costs>
@@ -1492,6 +1551,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="c6eb-60ca-ff08-52ab" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Grenade Launcher" hidden="true" id="2209-c397-c8cb-e407" sortIndex="9">
           <costs>
@@ -1526,6 +1588,7 @@
           <entryLinks>
             <entryLink import="true" name="Assault" hidden="false" id="ad94-573e-be17-dc6c" type="rule" targetId="3136-7aab-4bde-9583"/>
             <entryLink import="true" name="Automatic" hidden="false" id="ba1b-1eee-716f-9e23" type="rule" targetId="c435-c893-2c72-e7c6"/>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="cfbc-594e-a3e2-70f0" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
           </entryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="be9e-b16d-78d9-0405" includeChildSelections="true"/>
@@ -1585,6 +1648,9 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <entryLinks>
+                <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="7849-8bee-cf96-2e3d" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+              </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Sub-Machine Gun" hidden="true" id="85a5-ae83-0aa2-10f5" sortIndex="6">
               <costs>
@@ -1601,6 +1667,9 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <entryLinks>
+                <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="f0aa-ee9e-7b68-ea41" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+              </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Heavy Shotgun" hidden="true" id="a1db-7a30-cd96-c7f2" sortIndex="4">
               <costs>
@@ -1625,6 +1694,9 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <entryLinks>
+                <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="af4c-0594-439b-9c70" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+              </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Automatic Shotgun" hidden="true" id="2512-f94e-3a3c-90be" sortIndex="3">
               <costs>
@@ -1645,6 +1717,9 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <entryLinks>
+                <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="3486-2785-fec1-f24d" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+              </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Sub-Machine Gun" hidden="true" id="1f4c-9b05-b8ec-5b2f" sortIndex="5">
               <costs>
@@ -1665,6 +1740,32 @@
                 </modifier>
               </modifiers>
               <comment>antioch</comment>
+              <entryLinks>
+                <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="09a2-dcb9-248b-b9e6" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sub-Machine Gun" hidden="true" id="1f64-ef71-fdf4-d932" sortIndex="5">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Submachine Gun" id="864a-b9bd-1358-522a" hidden="false" type="profile" targetId="f366-4889-0ac5-375d"/>
+                <infoLink name="Assault" id="7c3e-d2c5-a510-14c3" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="fa39-d681-bac4-9397" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="b5ef-3d46-9741-06c8" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <comment>antioch</comment>
+              <entryLinks>
+                <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="db28-84b2-981b-808d" type="selectionEntry" targetId="ddfe-9432-d825-077a"/>
+              </entryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4176,6 +4277,29 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </constraints>
       <modifiers>
         <modifier type="add" value="afb9-39f5-82d9-46ed" field="category" scope="model"/>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Incendiary Ammuntion (Loaded)" hidden="true" id="ddfe-9432-d825-077a">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="1e4d-9b5a-5bc9-bba9"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="5f35-b196-26be-84ef" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Fire" id="9b47-08af-841d-ac81" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="append" value="FIRE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model" childId="1fbd-a3e3-9d76-432b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="5f35-b196-26be-84ef">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="1fbd-a3e3-9d76-432b" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="replace" value="" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", " arg="-"/>
       </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
