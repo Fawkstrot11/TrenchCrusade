@@ -741,7 +741,7 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-2 INJURY DICE, HEAVY, INFECTION MARKERS</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 INJURY DICE, HEAVY, INFECTION MARKERS</characteristic>
         <characteristic name="Rules" typeId="87f0-637b-734a-22eb">-</characteristic>
       </characteristics>
     </profile>

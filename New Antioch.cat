@@ -678,6 +678,11 @@
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="6cc5-aa3d-59be-374f" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
+            <modifier type="increment" value="1" field="29bb-27d2-20de-cdc2">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Molotov Cocktail" hidden="true" id="638d-8d90-8b78-22af" sortIndex="1">
@@ -5093,6 +5098,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <repeats>
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="8edf-491a-c39e-1991" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
+        </modifier>
+        <modifier type="increment" value="2" field="daa3-c5e8-36e2-48c5">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6aa4-b38b-5146-4106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <infoLinks>
