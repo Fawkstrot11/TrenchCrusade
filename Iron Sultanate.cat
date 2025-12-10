@@ -377,7 +377,7 @@
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Nomads R.P.G." hidden="true" id="d93a-0370-2f55-2f63" sortIndex="9">
+        <selectionEntry type="upgrade" import="true" name="Rocket-Propelled Grenade" hidden="true" id="d93a-0370-2f55-2f63" sortIndex="9">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -387,7 +387,7 @@
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="a97b-4723-7109-8686" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <profiles>
-            <profile name="Nomads R.P.G." typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="c76e-7839-f61f-df09">
+            <profile name="Rocket-Propelled Grenade" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="c76e-7839-f61f-df09">
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Equipment</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
@@ -551,6 +551,24 @@
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="not">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="dc52-7d54-ed37-7b20" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="2b27-3653-e972-8d5a" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="ab06-4025-36da-4e62" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="4f0f-a0cf-e8e8-b332" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="d039-5982-7011-334e" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="f5fe-26c3-c542-2bcb" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="b481-84cd-1a42-8f6e" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="ffb6-34ac-c895-4d37" shared="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -580,9 +598,27 @@ Can only be used with Jezzails, Alaybozan, Halberd-Guns, Siege Jezzails and Mach
               </costs>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditionGroups>
+                        <conditionGroup type="not">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="ab06-4025-36da-4e62" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="4f0f-a0cf-e8e8-b332" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="d039-5982-7011-334e" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="ffb6-34ac-c895-4d37" shared="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <profiles>
@@ -610,9 +646,29 @@ Can only be used with Alaybozan and Siege Jezzails.</characteristic>
               </costs>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="not">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="ab06-4025-36da-4e62" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="d039-5982-7011-334e" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="2b27-3653-e972-8d5a" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="f21b-e8c4-e383-5760" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="f5fe-26c3-c542-2bcb" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="dc52-7d54-ed37-7b20" shared="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -649,6 +705,20 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="dc52-7d54-ed37-7b20" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="2b27-3653-e972-8d5a" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="ab06-4025-36da-4e62" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="4f0f-a0cf-e8e8-b332" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="d039-5982-7011-334e" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="f5fe-26c3-c542-2bcb" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -2010,6 +2080,49 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <entryLink import="true" name="Heavy Bore Ammuntion (Loaded)" hidden="false" id="67e2-2a8c-8ebb-9dc5" type="selectionEntry" targetId="a0c5-9830-2779-89ef"/>
           </entryLinks>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="true" id="fe1b-87b4-a09c-3068" sortIndex="9">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="35"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="1386-0ef3-e14f-afc1" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Sniper Rifle" id="20be-837b-e86e-b157" hidden="false" type="profile" targetId="6eb2-c600-98e7-16d3">
+              <modifiers>
+                <modifier type="increment" value="6" field="31a7-b5e8-41dc-5fd1">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="4467-39c5-0252-1b2d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Critical" id="d995-8630-40b9-c6e1" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+            <infoLink name="Risky" id="4884-99a4-dd9f-4a25" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="58c8-0815-71a7-27fb" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <comment>Nomads of Al-Badia</comment>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="false" id="a424-8100-584e-89c9" type="selectionEntry" targetId="d5f6-0471-e4b8-8670"/>
+          </entryLinks>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Shield Combos" id="7587-db79-b55f-f5d2" hidden="false" sortIndex="15">
@@ -2289,6 +2402,48 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
                 <entryLink import="true" name="Heavy Bore Ammuntion (Loaded)" hidden="false" id="6fef-b2ad-cb1c-e8ce" type="selectionEntry" targetId="a0c5-9830-2779-89ef"/>
                 <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="ad9c-5f0d-aeef-c3e3" type="selectionEntry" targetId="6298-be97-6c32-1dc2"/>
                 <entryLink import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="false" id="75f5-8485-8bd2-ada7" type="selectionEntry" targetId="d5f6-0471-e4b8-8670"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Shield-Paired Siege Jezzail" hidden="true" id="392f-6871-b6b0-d4c6">
+              <comment>Nomads shield training variant</comment>
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Heavy" id="943d-1e80-84cb-e45b" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+              </infoLinks>
+              <profiles>
+                <profile name="Shield-Paired Siege Jezzail" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="6116-076e-acd2-37fd">
+                  <characteristics>
+                    <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+                    <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">30&quot;</characteristic>
+                    <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, HEAVY</characteristic>
+                    <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="increment" value="6" field="31a7-b5e8-41dc-5fd1">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="4467-39c5-0252-1b2d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="2c5e-e97c-3df7-39d4" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <entryLinks>
+                <entryLink import="true" name="Heavy Bore Ammuntion (Loaded)" hidden="false" id="f909-0037-6c4c-2eda" type="selectionEntry" targetId="a0c5-9830-2779-89ef"/>
+                <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="0472-228b-4a51-85f5" type="selectionEntry" targetId="6298-be97-6c32-1dc2"/>
+                <entryLink import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="false" id="41d4-9adc-f7c5-13d4" type="selectionEntry" targetId="d5f6-0471-e4b8-8670"/>
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
@@ -6249,9 +6404,6 @@ Assassin makes the time slip.</characteristic>
                                         <infoLink name="Submachine Gun" id="ad88-6fe2-f55e-b361" hidden="false" type="profile" targetId="f366-4889-0ac5-375d"/>
                                         <infoLink name="Assault" id="cecd-51ce-851f-cd28" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
                                       </infoLinks>
-                                      <constraints>
-                                        <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="5b0e-abd1-5c20-227d" includeChildSelections="true"/>
-                                      </constraints>
                                     </selectionEntry>
                                     <selectionEntry type="upgrade" import="true" name="Heavy Shotgun" hidden="false" id="adc6-4c1c-4c18-892e">
                                       <costs>
