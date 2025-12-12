@@ -167,7 +167,7 @@ MARKERS caused by the Keyword FIRE.</description>
       <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
     </rule>
     <rule name="Pistol" id="845a-d3e1-69b8-687e" hidden="false">
-      <description>A pistol can be used as a Melee Weapon or a Ranged Weapon, and can be used as both in the same Activation. When it is used as a Ranged Weapon it has the Range shown on its Profile and uses the attacking model’s Ranged Characteristic. When used as a Melee Weapon it uses the attacking model’s Melee Characteristic and can be used as an Off-Hand Weapon if desired.</description>
+      <description>A pistol can be used as a Melee Weapon or a Ranged Weapon, and can be used as both in the same Activation. When it is used as a Ranged Weapon it has the Range shown on its Profile and uses the attacking model’s Ranged Characteristic. When used as a Melee Weapon it can use the attacking model’s Ranged or Melee Characteristic and can be used as an Off-Hand Weapon if desired.</description>
     </rule>
     <rule name="Reload" id="501f-a63a-e134-aab9" hidden="false">
       <description>If a model makes an attack with a Weapon that has this Keyword then its Activation ends after the ACTION that allowed the attack is completed.</description>
@@ -1068,6 +1068,14 @@ Rotten Splinters: If the Success Roll for a Melee Attack made with a Pestilent F
         <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Agonising Pangs: A model with this Battlekit adds +1” to their Movement Characteristic, and may target themselves with the Ravenous Infection Ability. In addition, if this model is more than 1” away from an enemy model, its first ACTION each Activation must be a Move, Charge or Dash ACTION, moving the maximum distance possible directly towards the nearest enemy model, and charging them if possible.
 
 Mutation: Once this Battlekit has been equipped, it cannot be removed or lost over the course of a campaign for any reason.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Restraining Muzzle" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6e43-1990-00c2-5159">
+      <characteristics>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Restrained: Add +1 DICE to rolls made for a Ranged Attack made by a Yoke Fiend that has a Restraining Muzzle. In addition, the Hateful ability does not apply to a Yoke Fiend that has a Restraining Muzzle.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
