@@ -86,9 +86,16 @@
           </constraints>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="d21f-81f7-cf6f-690e" shared="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="d21f-81f7-cf6f-690e" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="f28e-7b89-120d-f905" shared="true">
+                      <comment>They got one for free</comment>
+                    </condition>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -196,6 +203,12 @@
                 <repeat value="1" repeats="1" field="selections" scope="roster" childId="0d4c-f0ae-cd5a-6f83" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <comment>Hidden for CoY</comment>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Mountaineer Kit" hidden="false" id="035b-46ad-68c5-adf7" sortIndex="8">
@@ -292,6 +305,42 @@ first BLOOD MARKER placed on the model is ignored.
             </modifier>
           </modifiers>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Henbrane" hidden="true" id="5714-931f-09eb-f186" sortIndex="4">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Consumable" id="3677-d40b-26ef-ba60" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e8e7-3b8c-92f7-eb3d"/>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="e629-b6f0-458a-f9bc" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <comment>Option for CoY</comment>
+          <profiles>
+            <profile name="Henbrane" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="403b-687b-4044-77de">
+              <characteristics>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">As long as this model does not have any BLOOD MARKER on it, it is immune to the Minor Injury result, and thus does not take a BLOOD MARKER when suffering one. However, it will still take the additional blood from a weapon with a keyword such as SHRAPNEL. At the end of the battle, the model is then immediately taken Out of Action, and must roll to see if they survive as per the normal rules for Non-Elites being taken Out of Action.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Headgear" id="72b4-7141-542a-db35" hidden="false" sortIndex="1">
@@ -315,9 +364,47 @@ first BLOOD MARKER placed on the model is ignored.
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="model" childId="d21f-81f7-cf6f-690e" shared="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="0d88-774c-22af-e2fc" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Combat Helmet" hidden="true" id="1a57-891a-bedc-e26a">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <profiles>
+                <profile name="Combat Helmet" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="21e4-045c-1741-c68d">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE SHRAPNEL</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Negate [Keyword]" id="0742-57a7-0eb9-3a16" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa0f-fde7-a01d-fe60"/>
+              </constraints>
+              <comment>Option for CoY</comment>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="f28e-7b89-120d-f905" shared="true">
+                      <comment>They got one for free</comment>
+                    </condition>
+                  </conditions>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -555,6 +642,34 @@ first BLOOD MARKER placed on the model is ignored.
               <categoryLinks>
                 <categoryLink name="Cumbersome" hidden="false" id="bd93-d468-c69a-69f4" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
               </categoryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Geirr" hidden="true" id="3564-4f8d-d1e0-246c">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <comment>Option for CoY</comment>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink name="Cumbersome" id="2ed5-6def-455e-3f99" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+                <infoLink name="Block" id="4a9f-e353-d3be-70f4" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
+              </infoLinks>
+              <profiles>
+                <profile name="Geirr" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="986b-d504-38d0-832f">
+                  <characteristics>
+                    <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+                    <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                    <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CUMBERSOME, BLOCK</characteristic>
+                    <characteristic name="Rules" typeId="87f0-637b-734a-22eb">When this model is charged, it may make a Melee Attack ACTION. If the roll is a Failure, nothing happens. If the roll is a Success or a Critical Success, the enemy model charging it gains 1 BLOOD MARKER.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1151,6 +1266,11 @@ first BLOOD MARKER placed on the model is ignored.
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Musical Instrument" hidden="false" id="24ee-a215-8e5c-c707">
@@ -1191,6 +1311,47 @@ first BLOOD MARKER placed on the model is ignored.
             </modifier>
           </modifiers>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Blood Eagle Banner" hidden="true" id="3da5-afdc-ed33-d56a">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Held" id="80fa-48a8-e95d-effe" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6dab-b7df-284d-e2aa"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6af1-db8d-ec64-4f32" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>Option for CoY</comment>
+          <profiles>
+            <profile name="Blood Eagle Banner" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="55e3-793d-4961-e12f">
+              <characteristics>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Before the start of the battle, you may choose to either Punish the Villutrúarmaður or Offer unto the Gods.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Punish the Villutrúarmaður" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2308-4f6a-4c7b-16a4">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A still-living prisoner of the opposing faction is hung upon the Banner. When an enemy declares a Charge ACTION, an enemy model must choose a model that has Blood Eagle Banner as the target of the charge if the model is in its Line of Sight, not already within 1” of an enemy model, and can be reached without the charging model having to Climb, Jump, make a Diving Charge, or move across Dangerous terrain.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Offer unto the Gods" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b0f7-9667-9aa4-29d7">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">You may choose to hang another member of your warband at the Banner. The model you choose is permanently removed from your Warband, but you can redistribute their Battlekit to other models that would be allowed to have it. For the duration of the battle, your warband gains +1 DICE for all Morale tests as long as the model with the flag is not Down or Out of Action.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Shields" id="2bc5-1430-4c95-efe0" hidden="false" sortIndex="1">
@@ -1203,6 +1364,14 @@ first BLOOD MARKER placed on the model is ignored.
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <comment>Hidden for CoY</comment>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Holy Icon Shield" hidden="true" id="9263-1e94-1653-cfac">
               <infoLinks>
@@ -1261,6 +1430,61 @@ first BLOOD MARKER placed on the model is ignored.
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="374c-9b11-8530-d0af" shared="true" includeChildSelections="true"/>
                   </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Trench Shield (Nordic)" hidden="true" id="934a-994b-9a83-6663" sortIndex="1">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Trench Shield (Nordic)" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="fdd6-07ba-42a3-3578">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Shield</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Provides the benefit of cover at all times and a model equipped with a Trench Shield (Nordic) always count as having the defended obstacle bonus when charged.
+
+
+Additionally, a friendly model in base to base contact with a model equipped with a Trench Shield (Nordic) treats the shieldbearer as cover, following the normal rules for cover.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Stormbreaker Shield" hidden="true" id="2b6a-92de-ea42-85c4">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="35"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <comment>Huscarl unique option (CoY)</comment>
+              <profiles>
+                <profile name="Stormbreaker Shield" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7ab4-3db7-414c-ba96">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">A Stormbreaker Shield is a Trench Shield (Nordic). In addition, add -1 INJURY DICE to rolls for Ranged Attacks that hit the model.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="f28e-7b89-120d-f905" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -1788,6 +2012,212 @@ first BLOOD MARKER placed on the model is ignored.
       <entryLinks>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="true" id="c89e-a346-b884-134f" type="selectionEntry" targetId="1f47-9c34-ef9b-914b"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Sagas" id="3daa-befc-e742-d733" hidden="true">
+      <comment>CoY special gimmick</comment>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Giant Slayer" hidden="true" id="0291-cf87-b71d-44db" sortIndex="1">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5757-ec2d-8533-a46b" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Giant Slayer" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="be8f-bf34-4737-dbd9">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This model has a +1 INJURY DICE to injure models with 50mm or larger base</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="0d82-443e-9dab-c2b3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Hold the Line" hidden="true" id="cb47-e3bd-dd8e-d3c1" sortIndex="2">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Hold the Line" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="af44-7191-ec31-ac07">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This model gains the skill Hard as Nails.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Hard as Nails" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5bc8-211e-cba4-3a6b">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The following rules apply to a model with this Skill: the first time a model with this Skill suffers a Down result on the Injury table, it is treated as a No Effect result instead.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="54e2-caf8-e6c4-15eb" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5c15-8811-0649-288e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Flutterstring" hidden="true" id="30a8-187e-06ec-f7fb" sortIndex="3">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f85b-7f11-9ecd-2b2e" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Flutterstring" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="91f8-efec-4334-de8b">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This model gains IGNORE LONG RANGE and IGNORE COVER.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="895c-2afb-09b7-c606" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Headhunter" hidden="true" id="8ca1-fdb1-862f-667f" sortIndex="4">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7f84-d144-76a8-c02f" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Headhunter" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4ef6-94e6-2339-505e">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This model gains FEAR and gains +1 DICE to hit against models with the LEADER keyword.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d1e-67ff-4bec-460c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Eternal Onslaught" hidden="true" id="c3fa-7786-fe88-5809" sortIndex="5">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2746-95c0-d67e-950a" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Eternal Onslaught" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f01a-46f8-8063-d30c">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This model can neither Retreat, nor can enemy models Retreat from it. Additionally, this model gains IGNORE OFFHANDE PENALITY.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="04d9-3450-dc3a-c546" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Old Reliable" hidden="true" id="36ee-8526-0598-d8f2" sortIndex="6">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0fe8-0d8a-48d1-ff99" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Old Reliable" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="48f8-fc2f-2cee-f7b2">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This model has a +1 DICE to the chosen action.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="29f0-f033-ccb8-07eb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Storied" hidden="true" id="8547-f934-c787-8ae4" sortIndex="7">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="03eb-c982-3ca6-b8a6" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="War Stories" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="6596-a39c-490e-e4ab">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When you are recording the Experience Points earned by the models in your Warband in the Campaign Phase, you can give each model with the ELITE Keyword that does not also have this Skill +1 extra Experience Point. You can’t pick the model with the Skill itself.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Storied" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d7aa-3e05-a370-511e">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This model gains the skill War Stories.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d7b6-a96f-44d2-9ed1" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Fleet of Foot" hidden="true" id="491e-da83-e1ba-f95c" sortIndex="8">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Fleet of Foot" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8cf0-1586-6c76-19ba">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This model gains a +1 DICE to its Dash ACTION, and can reroll Dangerous Terrain checks.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7f7b-f012-ad9a-0ddf" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7f4c-ccc9-6417-30c2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
@@ -2525,7 +2955,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="a9ac-52e3-8dcc-21e0" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
-        <modifier type="replace" value="" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", " arg="-"/>
+        <modifier type="replace" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", " arg="-"/>
       </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -2610,6 +3040,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Advancement" hidden="true" id="5803-1bb7-717c-20b6" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="8d61-d9a6-e5dc-9e46" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="9a72-570f-6b02-7dfc" type="selectionEntryGroup" targetId="e18c-f0d9-1ca3-f7bb" sortIndex="2"/>
+        <entryLink import="true" name="Sagas" hidden="false" id="cb9e-94c9-f531-3680" type="selectionEntryGroup" targetId="3daa-befc-e742-d733" sortIndex="1"/>
       </entryLinks>
       <modifiers>
         <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
@@ -2745,6 +3176,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Advancement" hidden="true" id="14a0-4a51-c977-00d8" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="5903-7adf-5a6c-03ca" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="f286-995b-8b60-56bf" type="selectionEntryGroup" targetId="e18c-f0d9-1ca3-f7bb" sortIndex="2"/>
+        <entryLink import="true" name="Sagas" hidden="false" id="f8c4-fdde-1117-e2a3" type="selectionEntryGroup" targetId="3daa-befc-e742-d733" sortIndex="1"/>
       </entryLinks>
       <modifiers>
         <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
@@ -2939,9 +3371,14 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </modifierGroups>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="52bc-6b21-136a-608d" shared="true" includeChildSelections="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="52bc-6b21-136a-608d" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -3060,6 +3497,13 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <infoLinks>
         <infoLink name="Leader" id="0f0e-db8f-8786-a346" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Ecclesiastic Prisoner" hidden="false" id="a43e-f0e1-fb97-0291">
       <profiles>
@@ -3161,7 +3605,8 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="e167-3855-3d16-e85d" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776" sortIndex="3"/>
-        <entryLink import="true" name="Fireteams" hidden="false" id="2c3a-f47b-35c7-2877" type="selectionEntryGroup" targetId="e18c-f0d9-1ca3-f7bb" sortIndex="1"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="2c3a-f47b-35c7-2877" type="selectionEntryGroup" targetId="e18c-f0d9-1ca3-f7bb" sortIndex="2"/>
+        <entryLink import="true" name="Sagas" hidden="false" id="0e49-1ce4-d7db-241f" type="selectionEntryGroup" targetId="3daa-befc-e742-d733" sortIndex="1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Stigmatic Nun" hidden="false" id="caa2-22ce-1bc5-4d51">
@@ -3243,6 +3688,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Advancement" hidden="true" id="4245-a59d-c15c-3b80" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="7f66-84a0-d95e-ab9a" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="f3b8-7d9b-8808-69c6" type="selectionEntryGroup" targetId="e18c-f0d9-1ca3-f7bb" sortIndex="2"/>
+        <entryLink import="true" name="Sagas" hidden="false" id="b6bb-1983-9b90-250c" type="selectionEntryGroup" targetId="3daa-befc-e742-d733" sortIndex="1"/>
       </entryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
@@ -3413,6 +3859,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <repeats>
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="d493-9221-aee2-a4a8" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -3610,11 +4061,496 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               </profiles>
             </selectionEntry>
           </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Third Party" id="9e64-d0cb-9b5a-3df9" hidden="false" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Children of Yggdrasil" hidden="false" id="65bd-e9b5-eea8-5f65">
+                  <profiles>
+                    <profile name="Warrior of the North" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="087c-68ea-c5da-cf0a">
+                      <characteristics>
+                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Children of Yggdrasil cannot field War Prophets, Communicants or Anchorite shrines, but instead can field Chieftains, Huscarls and Captive Giants respectively.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Shieldwall" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="eb7d-c8c9-c9b8-c6b7">
+                      <characteristics>
+                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Trench shields equipped by the Children of Yggdrasil do not grant armour. Instead, they provide the benefit of cover at all times. Children of Yggdrasil equipped with Trench shields always count as having the defended obstacle bonus when charged.
+
+Additionally, a friendly model in base to base contact with a model equipped with a shield treats the shieldbearer as cover, following the normal rules.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Sagas" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="abd2-f992-66f0-ad92">
+                      <characteristics>
+                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Children of Yggdrasil often are granted visions in their dreams of great deeds that must be done to spread the glory of their gods. When you begin or join a campaign, you may choose 3 Sagas to make them Active.
+
+
+At the beginning of the game, declare a model that will attempt to complete each active Saga. At the end of the game, each model that completed their Saga’s Task is rewarded the Saga’s Boon. The Saga is then Completed and no longer active or able to be attempted by any other model until the current model with its Boon dies.
+
+
+The listed Ducat cost of the Completed saga is added to the model’s ducat cost as if a purchased upgrade, to reflect their newfound power. A model can only have one Saga attached to it at any point, Active or Completed.
+
+
+Alternatively, you may spend 1 Glory to replace one active Saga with an inactive one. Only your warband may complete these Sagas.
+
+
+In one off games, 3 Completed Sagas may be bought at the listed Ducat cost as if they were an upgrade for the unit, counting towards ducat threshold as normal.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Pagans" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3feb-324a-e4b2-8ea0">
+                      <characteristics>
+                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Children of Yggdrasil cannot purchase or equip Iron Capirotes or Martyrdom pills, but can purchase Combat Helmets for 5 Ducats.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Active Sagas" id="ef4d-9ff7-0f06-05c5" hidden="false">
+                      <constraints>
+                        <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="836e-2f88-2709-b352-min"/>
+                        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="836e-2f88-2709-b352-max"/>
+                      </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Giant Slayer" hidden="false" id="6115-2f03-9c58-084e" sortIndex="1">
+                          <profiles>
+                            <profile name="Giant Slayer" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e930-8c2c-62b8-6a7e">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Task: Take a model with a 50mm or larger base Out of Action.
+- Boon: This model has a +1 INJURY DICE to injure models with 50mm or larger base (Cost 10 ducats).</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bdec-8819-5858-afc7"/>
+                          </constraints>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Hold the Line" hidden="false" id="fa45-2a89-6fd5-a807" sortIndex="2">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="045e-9fde-5c2d-11e6"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Hold the Line" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="fb35-5fd0-e462-5a46">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Task: Take the Downed injury result twice without being taken out of action.
+- Boon: This model gains the skill Hard as Nails (Cost 20 ducats)</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Flutterstring" hidden="false" id="16dd-bd7f-fa44-3f44" sortIndex="3">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="37f1-2c57-fc33-3b04"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Flutterstring" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2816-fcd8-820e-ad0e">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Task: Kill 2 models that are both at long range and in cover
+- Boon: This model gains IGNORE LONG RANGE and IGNORE COVER (Cost 20 ducats).</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Headhunter" hidden="false" id="d972-a79d-0fad-7785" sortIndex="4">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e16e-196b-5f66-09dd"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Headhunter" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4236-e751-a130-1fee">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Task: Take the opponent’s LEADER Out of Action without any other model in your warband inflicting a Blood Marker on said LEADER.
+- Boon: This model gains FEAR and gains +1 DICE to hit against models with the LEADER keyword (Cost 15 ducats).</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Eternal Onslaught" hidden="false" id="a21d-1c84-ef9b-97fe" sortIndex="5">
+                          <profiles>
+                            <profile name="Eternal Onslaught" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1457-c38c-16c3-6db3">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Task: For the duration of the battle, this model can neither Retreat, nor can enemy models Retreat from it. Hit with both your main and offhand weapon 3 times.
+- Boon: This model can neither Retreat, nor can enemy models Retreat from it. Additionally, this model gains IGNORE OFFHANDE PENALITY (Cost 15 ducats).</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3b59-bdba-0d98-f152"/>
+                          </constraints>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Old Reliable" hidden="false" id="f3aa-1445-555c-2c26" sortIndex="6">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a25d-859f-fb09-5ebd"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Old Reliable" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b1eb-86d8-ef52-82e5">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Task: Complete a specific non dash, non attack Action (declare which action when you declare the model that’ll attempt this Saga) 4 times.
+- Boon: This model has a +1 DICE to the chosen action (Cost 15 ducats).</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Storied" hidden="false" id="3b40-cc04-b6db-f6b2" sortIndex="7">
+                          <profiles>
+                            <profile name="Storied" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="614d-6da9-aaea-d57d">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Task: Complete 2 Glorious Deeds with the model.
+- Boon: This model gains the skill War Stories (Cost 15 ducats).</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c2ab-0c59-7bef-d53d"/>
+                          </constraints>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Fleet of Foot" hidden="false" id="a0c5-a5c4-fbbd-3cff" sortIndex="8">
+                          <profiles>
+                            <profile name="Fleet of Foot" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ec78-2105-fcd9-5dc5">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Task: Successfully complete the Dash ACTION 3 consecutive times.
+- Boon: This model gains a +1 DICE to its Dash ACTION, and can reroll Dangerous Terrain checks (Cost 10 ducats).</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6b64-d2a9-e59e-4ed4"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Completed Sagas" id="86af-2308-aec6-a4af" hidden="false">
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Giant Slayer" hidden="false" id="0d82-443e-9dab-c2b3" sortIndex="1">
+                          <profiles>
+                            <profile name="Giant Slayer" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2d58-0890-4166-bdad">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Boon: This model has a +1 INJURY DICE to injure models with 50mm or larger base (Cost 10 ducats).</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="91e1-c9ab-5255-1020"/>
+                          </constraints>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Hold the Line" hidden="false" id="5c15-8811-0649-288e" sortIndex="2">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0147-4c66-d09c-9c60"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Hold the Line" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="be33-88ce-e46e-687b">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Boon: This model gains the skill Hard as Nails (Cost 20 ducats)</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Flutterstring" hidden="false" id="895c-2afb-09b7-c606" sortIndex="3">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7e3c-4439-296b-793d"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Flutterstring" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="07cf-fd33-a57e-77aa">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Boon: This model gains IGNORE LONG RANGE and IGNORE COVER (Cost 20 ducats).</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Headhunter" hidden="false" id="1d1e-67ff-4bec-460c" sortIndex="4">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="12db-3bd9-bde5-c3e0"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Headhunter" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1bf8-4d90-ed12-cf1e">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Boon: This model gains FEAR and gains +1 DICE to hit against models with the LEADER keyword (Cost 15 ducats).</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Eternal Onslaught" hidden="false" id="04d9-3450-dc3a-c546" sortIndex="5">
+                          <profiles>
+                            <profile name="Eternal Onslaught" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="241e-ab2e-875f-bcf9">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Boon: This model can neither Retreat, nor can enemy models Retreat from it. Additionally, this model gains IGNORE OFFHANDE PENALITY (Cost 15 ducats).</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="12d3-749e-238c-10cf"/>
+                          </constraints>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Old Reliable" hidden="false" id="29f0-f033-ccb8-07eb" sortIndex="6">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d186-3bd7-f105-bb8a"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Old Reliable" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="0c8b-6d72-578d-2f1f">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Boon: This model has a +1 DICE to the chosen action (Cost 15 ducats).</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Storied" hidden="false" id="d7b6-a96f-44d2-9ed1" sortIndex="7">
+                          <profiles>
+                            <profile name="Storied" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="7b17-56e1-0cd1-1595">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Boon: This model gains the skill War Stories (Cost 15 ducats).</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a4ff-5198-d7e3-9ef3"/>
+                          </constraints>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Fleet of Foot" hidden="false" id="7f4c-ccc9-6417-30c2" sortIndex="8">
+                          <profiles>
+                            <profile name="Fleet of Foot" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="db4d-ef3b-dc68-b37d">
+                              <characteristics>
+                                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">- Boon: This model gains a +1 DICE to its Dash ACTION, and can reroll Dangerous Terrain checks (Cost 10 ducats).</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4312-23ca-fdc4-b2ae"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                </selectionEntry>
+              </selectionEntries>
+              <profiles>
+                <profile name="Third Party Subfactions" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9e61-bd1d-33f1-f936">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">These subfactions are not fully official. They are officially condoned by Factory Forge, but no assurances are made to balance or consistency with rules. They are included here for the benefit of the community. Please only use these factions with permission from all involved players.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink targetId="705b-e23f-e9c2-58ab" id="a8be-d789-c0b8-cbad" primary="true" name="Configuration"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Chieftain" hidden="true" id="68a1-e013-8b08-e9e8">
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="80"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <comment>CoY Leader</comment>
+      <categoryLinks>
+        <categoryLink targetId="3de0-192c-3ec2-51be" id="bc0e-a8a8-1bbb-3902" primary="true" name="Elite"/>
+        <categoryLink targetId="afb9-39f5-82d9-46ed" id="d3cd-f958-1611-6229" primary="false" name="Leader"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Leader" id="dbb2-87c1-33aa-e09c" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="1aa4-9c3f-703d-8692" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="09cb-ba09-331c-6d03" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Advancement" hidden="true" id="e64b-a6ef-3935-f163" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="d5dc-1ee2-80f6-1005" type="selectionEntryGroup" targetId="e18c-f0d9-1ca3-f7bb" sortIndex="2"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="49b4-9894-1535-2386" type="selectionEntryGroup" targetId="43b1-aa6a-2357-1613" sortIndex="3"/>
+        <entryLink import="true" name="Throwables" hidden="false" id="4568-232b-3cc8-5b17" type="selectionEntryGroup" targetId="70c8-b7ed-f20b-8bd6" sortIndex="4"/>
+        <entryLink import="true" name="Armour" hidden="false" id="5f43-dd14-22d6-a189" type="selectionEntryGroup" targetId="664d-b970-6eef-b2d5" sortIndex="6"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="d6e6-7d0e-3f08-f700" type="selectionEntryGroup" targetId="8a14-be13-d97b-2a39"/>
+        <entryLink import="true" name="Exploration Upgrades" hidden="false" id="a6e1-0369-9c72-9729" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Sagas" hidden="false" id="f30d-f0d5-d8bb-90dc" type="selectionEntryGroup" targetId="3daa-befc-e742-d733" sortIndex="1"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Chieftain" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="b489-b17e-d6dd-1975">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantery</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+2 DICE</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+2 DICE</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">32mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Foretold" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5c1a-f3d5-6315-5ce2">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Chieftain has been spoken to by the Gods in a dream and knows the day they will die. The first time the Chieftain suffers an Out of Action result on the Injury Table, it is treated as a No Effect result instead.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="War horn" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e163-884b-a1e0-eef3">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Once per game, the Chieftain may blow their war horn to announce now is the time to strike. For the rest of the turn, your warband adds +1 DICE to Risky Success Roll when taking a Dash ACTION, and rolls 1 extra D6 when rolling the Charge Bonus, using the single highest die to determine the bonus.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Lead by example" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c7b7-69bf-7306-af6a">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Your opponent cannot spend the BLOOD MARKERS on any model within 3” of the Chieftain (including the Chieftain themselves), except for Injury rolls.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Huscarl" hidden="true" id="f28e-7b89-120d-f905">
+      <comment>Option for CoY</comment>
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="120"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="b768-7b40-dd27-88ce" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Advancement" hidden="true" id="d665-9545-5301-4685" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
+        <entryLink import="true" name="Fireteams" hidden="false" id="e4a9-b05a-6f76-0f69" type="selectionEntryGroup" targetId="e18c-f0d9-1ca3-f7bb" sortIndex="2"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="8cab-d19c-19be-1532" type="selectionEntryGroup" targetId="43b1-aa6a-2357-1613" sortIndex="3"/>
+        <entryLink import="true" name="Throwables" hidden="false" id="eecf-816b-55d7-5149" type="selectionEntryGroup" targetId="70c8-b7ed-f20b-8bd6" sortIndex="4"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="ebba-c3cd-75ea-138a" type="selectionEntryGroup" targetId="8a14-be13-d97b-2a39"/>
+        <entryLink import="true" name="Exploration Upgrades" hidden="false" id="4110-5751-ecf4-50fc" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Sagas" hidden="false" id="20fa-555c-eb9f-4039" type="selectionEntryGroup" targetId="3daa-befc-e742-d733" sortIndex="1"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Huscarl" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="da01-36e4-caeb-2440">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 DICE</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 DICE</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-2</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">40mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Combat Helmet" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b124-73a5-ad55-2b7f">
+          <characteristics>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">NEGATE SHRAPNEL</characteristic>
+            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Runeforged Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7e36-5ca4-b01e-f349">
+          <characteristics>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-2 INJURY MODIFIER</characteristic>
+            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">If an attack would normally ignore armour, Runeforged Armour still grants a -1 INJURY MODIFIER.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Bodyguard" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e54a-214b-36ef-b598">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If a friendly PILGRIM model within 1&quot; of a Huscarl is hit by a Ranged Attack or Melee Attack, you can say that the Huscarl will take the hit. If you do so, make an Injury Roll for the Huscarl instead of the original target. This ability cannot be used against attacks that have the BLAST Keyword.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink targetId="3de0-192c-3ec2-51be" id="e316-8c99-3a53-67b0" primary="true" name="Elite"/>
+        <categoryLink targetId="afcc-5f24-1c7c-63c4" id="9278-638a-ae94-fee3" primary="false" name="Strong"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Strong" id="c919-ae43-7ca6-d745" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
+        <infoLink name="Gas Mask" id="a687-704a-06de-6d95" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Captive Giant" hidden="true" id="f4ac-a238-b6de-4b57">
+      <comment>CoY Option</comment>
+      <categoryLinks>
+        <categoryLink targetId="afcc-5f24-1c7c-63c4" id="4a4d-b92a-a954-dbe8" primary="false" name="Strong"/>
+        <categoryLink targetId="914f-0020-0d97-e217" id="0e8e-c3f2-a17b-8c38" primary="false" name="Tough"/>
+        <categoryLink targetId="bd43-ddb1-262d-4489" id="d7cd-fd34-e801-f54a" primary="true" name="Troop"/>
+        <categoryLink targetId="4f5c-027d-253c-ffa3" id="838c-6825-5ee8-365d" primary="false" name="Fear"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="140"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9a61-62c8-7422-11a3" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bd-e9b5-eea8-5f65" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Captive Giant" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="822e-7e28-b8de-1cfc">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">N/A</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+2 DICE</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-3</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">60mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Improvised Melee Weapon" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="99b6-6b5c-398a-f1c1">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">RISKY, HEAVY, CRITICAL, +1 DICE</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Massive: The Improvised Melee Weapon rolls on the Injury Chart with 3D6 (instead of usual 2D6), adding all three dice together!</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Frost Breath" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1d5b-bd14-4508-be83">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">As an Action, the Captive Giant can use its lethally cold breath to attempt to freeze any model (friend or foe) within 8”. If the roll is a Failure, nothing happens. If the roll is a Success or a Critical Success, the targeted model is instantly Downed, but it is unable to gain any BLOOD MARKER until the start of its next activation.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Untamed" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="49fb-e233-f61a-f2ed">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">After Deployment, before the start of the game, designate another friendly model without the ELITE keyword and within 4” of the Captive Giant to be the Giant’s handler. At the beginning of its activation, if the handler is not within 4” of the Captive Giant, it follows the rules of Berserk for the turn. If instead the handler is dead at the beginning of the Giant’s activation, or if you did not or were unable to designate a handler at all, it follows the rules of Berserk for the rest of the game.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Berserk" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8432-6fd1-6413-cef8">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Captive Giant runs through the following actions in the order they’re listed below:
+
+
+- Movement: The Giant must move towards the closest visible model (friend or foe), charging if it is able to reach them with a charge action, and attempting a dash action after its move if not. If it begins its Activation Down it must attempt to stand.
+- Frost Breath: If there is a visible model (friend or foe) within 8” of the Giant, it must attempt to use its Frost Breath action on the closest model.
+- Melee Attacks: If the Giant is in melee range (i.e, within 1”) of any model, it must use its melee action to attack it, regardless of whether it is friend or foe.
+
+
+
+If two more more models are exactly the same distance and visible to the Captive Giant, use a dice roll to randomly determine which model the Giant targets.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Fireteams" hidden="false" id="ef36-30c2-9d03-862e" type="selectionEntryGroup" targetId="e18c-f0d9-1ca3-f7bb" sortIndex="2"/>
+        <entryLink import="true" name="Exploration Upgrades" hidden="false" id="332f-10a8-ea46-a109" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Sagas" hidden="false" id="ed97-24a4-6e21-075b" type="selectionEntryGroup" targetId="3daa-befc-e742-d733" sortIndex="1"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Fear" id="fb48-ebb4-e27a-eda0" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
+        <infoLink name="Tough" id="eea9-d8f8-bdf9-51fe" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
+        <infoLink name="Strong" id="04cd-ddeb-c51c-be4b" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
+        <infoLink name="Critical" id="8929-9bdb-a01a-6427" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+        <infoLink name="Risky" id="3333-e50b-305b-f0a6" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+      </infoLinks>
     </selectionEntry>
   </selectionEntries>
   <catalogueLinks>

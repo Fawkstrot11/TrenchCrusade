@@ -29,6 +29,7 @@
     <categoryEntry name="Pile" id="ce28-ad9a-bbc1-f1dc" hidden="true"/>
     <categoryEntry name="Negate Gas" id="d935-8238-a3f7-8ab0" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
     <categoryEntry name="Negate Fear" id="7877-788b-2d58-c844" hidden="false"/>
+    <categoryEntry name="Negate Fire" id="f0ef-ba0d-8963-331a" hidden="false"/>
   </categoryEntries>
   <costTypes>
     <costType name="Ducats" id="8d43-33fd-332d-17a6" defaultCostLimit="-1"/>
@@ -166,7 +167,7 @@ MARKERS caused by the Keyword FIRE.</description>
       <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
     </rule>
     <rule name="Pistol" id="845a-d3e1-69b8-687e" hidden="false">
-      <description>A pistol can be used as a Melee Weapon or a Ranged Weapon, and can be used as both in the same Activation. When it is used as a Ranged Weapon it has the Range shown on its Profile and uses the attacking model’s Ranged Characteristic. When used as a Melee Weapon it uses the attacking model’s Melee Characteristic and can be used as an Off-Hand Weapon if desired.</description>
+      <description>A pistol can be used as a Melee Weapon or a Ranged Weapon, and can be used as both in the same Activation. When it is used as a Ranged Weapon it has the Range shown on its Profile and uses the attacking model’s Ranged Characteristic. When used as a Melee Weapon it can use the attacking model’s Ranged or Melee Characteristic and can be used as an Off-Hand Weapon if desired.</description>
     </rule>
     <rule name="Reload" id="501f-a63a-e134-aab9" hidden="false">
       <description>If a model makes an attack with a Weapon that has this Keyword then its Activation ends after the ACTION that allowed the attack is completed.</description>
@@ -500,10 +501,9 @@ MARKERS caused by the Keyword FIRE.</description>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
         <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-3 INJURY MODIFIER</characteristic>
-        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Change the base size of a model that has Machine Armour to 40mm unless it is already 40mm or larger. In addition, a model with Machine Armour
-cannot be equipped with a Trench Shield and has a Charge Bonus of D3&quot; instead of D6&quot;.
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Change the base size of a model that has Machine Armour to 40mm unless it is already 40mm or larger. In addition, a model with Machine Armour cannot be equipped with a Trench Shield and has a Charge Bonus of D3&quot; instead of D6&quot;.
 
-* Standfast: When a model that has Machine Armour suffers a Down result on the Injury table, it is treated as a Minor Wound result instead.</characteristic>
+- Standfast: When a model that has Machine Armour suffers a Down result on the Injury table, it is treated as a Minor Wound result instead.</characteristic>
       </characteristics>
     </profile>
     <profile name="Standard Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6fa6-650d-4136-bc70" publicationId="c658-4a10-e1fe-befc" page="117">
@@ -1068,6 +1068,14 @@ Rotten Splinters: If the Success Roll for a Melee Attack made with a Pestilent F
         <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Agonising Pangs: A model with this Battlekit adds +1” to their Movement Characteristic, and may target themselves with the Ravenous Infection Ability. In addition, if this model is more than 1” away from an enemy model, its first ACTION each Activation must be a Move, Charge or Dash ACTION, moving the maximum distance possible directly towards the nearest enemy model, and charging them if possible.
 
 Mutation: Once this Battlekit has been equipped, it cannot be removed or lost over the course of a campaign for any reason.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Restraining Muzzle" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6e43-1990-00c2-5159">
+      <characteristics>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Restrained: Add +1 DICE to rolls made for a Ranged Attack made by a Yoke Fiend that has a Restraining Muzzle. In addition, the Hateful ability does not apply to a Yoke Fiend that has a Restraining Muzzle.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
