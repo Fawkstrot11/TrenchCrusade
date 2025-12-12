@@ -241,6 +241,41 @@
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a9fb-e59c-1bf5-650c" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Restraining Muzzle" hidden="false" id="781c-57cb-d01c-4b7a" sortIndex="8">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="668a-c6d4-ff8f-d286" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="125f-474f-e4fd-121b" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="658a-8247-8e8a-8f85" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200" scope="model" affects="profiles.Unit"/>
+            <modifier type="increment" value="1" field="668a-c6d4-ff8f-d286">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="a06c-42e9-323b-3094" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="af16-e7f1-b528-97b9" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Restraining Muzzle" id="adff-6d14-c872-4134" hidden="false" type="profile" targetId="6e43-1990-00c2-5159"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Headgear" id="355e-7945-29a1-f8e3" hidden="false" sortIndex="1">
@@ -282,12 +317,6 @@
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="Restraining Muzzle" hidden="false" id="a805-292c-3b37-bc40" type="selectionEntry" targetId="1a9c-7660-b193-7734" sortIndex="8">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-        </entryLink>
         <entryLink import="true" name="Piece of Silver" hidden="false" id="06ad-fd9c-5945-ac6b" type="selectionEntry" targetId="9e76-7d20-071d-c8cd" sortIndex="15">
           <entryLinks>
             <entryLink import="true" name="Goetic Powers" hidden="false" id="5e87-1567-03f8-92a4" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee">
@@ -325,6 +354,13 @@
           <costs>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="1"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="781c-57cb-d01c-4b7a" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>

@@ -1070,5 +1070,13 @@ Rotten Splinters: If the Success Roll for a Melee Attack made with a Pestilent F
 Mutation: Once this Battlekit has been equipped, it cannot be removed or lost over the course of a campaign for any reason.</characteristic>
       </characteristics>
     </profile>
+    <profile name="Restraining Muzzle" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6e43-1990-00c2-5159">
+      <characteristics>
+        <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Restrained: Add +1 DICE to rolls made for a Ranged Attack made by a Yoke Fiend that has a Restraining Muzzle. In addition, the Hateful ability does not apply to a Yoke Fiend that has a Restraining Muzzle.</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
 </gameSystem>
