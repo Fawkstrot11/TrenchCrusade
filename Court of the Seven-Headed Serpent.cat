@@ -2196,15 +2196,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true" includeChildForces="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="afdf-43aa-a03d-918b" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a895-2941-d90b-18ea" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="70e3-b854-c325-5f96" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -4847,6 +4839,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Advancement" hidden="true" id="17df-aec5-58b3-6a10" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="956a-58fe-17f5-3d77" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776" sortIndex="9"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="3975-3c6d-6040-c892" type="selectionEntryGroup" targetId="0e52-65c7-fba4-9113" sortIndex="2"/>
+        <entryLink import="true" name="Leader" hidden="false" id="c34e-0e5d-c821-c818" type="selectionEntry" targetId="423e-1aab-467c-6ed9" sortIndex="3"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5da1-9568-2d09-2030" includeChildSelections="true"/>
@@ -4924,16 +4917,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="115"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="e4d3-be45-0f9f-6f35" sortIndex="3">
-          <infoLinks>
-            <infoLink name="Leader" id="2456-ca43-ac37-a136" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="cc73-105a-21dd-d3d6" includeChildSelections="true"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Sorcerer" hidden="false" id="322d-1a69-dc2a-2e26">
       <categoryLinks>
@@ -5374,45 +5357,6 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
         <entryLink import="true" name="Equipment" hidden="false" id="4b2e-ef91-026c-72a8" type="selectionEntryGroup" targetId="1434-ae99-841b-041e" sortIndex="5"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="83b2-bdbd-7ede-4bf1" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="22dd-3046-4d8b-26a0" type="selectionEntryGroup" targetId="0e52-65c7-fba4-9113" sortIndex="2"/>
-        <entryLink import="true" name="Advancement" hidden="true" id="5223-9076-b329-4bbe" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="8ba8-5e95-71aa-24e8" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Embraced by the Void" hidden="true" id="2507-d262-2304-2ce8" sortIndex="-1">
-              <profiles>
-                <profile name="Embraced by the Void" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="968f-4362-d9a4-e3db">
-                  <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Void Cultists learn the Slavemaster Goetic Spell, and may purchase one more Goetic spell if it wishes to.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="bc33-e591-8f2e-a847" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9826-5085-35ab-c644"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </entryLink>
         <entryLink import="true" name="Goetic Powers" hidden="true" id="0229-3b1d-5553-8cc5" type="selectionEntryGroup" targetId="a863-9b82-2217-87ee" sortIndex="3">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="618c-da02-ecb5-b1bd" includeChildSelections="false"/>
@@ -5592,6 +5536,7 @@ Unlike Yoke Fiends, Cultists can be promoted to ELITE.</characteristic>
           <modifiers>
             <modifier type="set" value="Cultist" field="name"/>
             <modifier type="set" value="Cultist" field="name" affects="profiles.Unit"/>
+            <modifier type="remove" value="420c-0871-4283-b95b" field="category"/>
           </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
@@ -5608,7 +5553,7 @@ Unlike Yoke Fiends, Cultists can be promoted to ELITE.</characteristic>
             <conditionGroup type="and">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="self" childId="2507-d262-2304-2ce8" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="8ba8-5e95-71aa-24e8" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5645,6 +5590,7 @@ Unlike Yoke Fiends, Cultists can be promoted to ELITE.</characteristic>
                   <modifiers>
                     <modifier type="remove" value="bd43-ddb1-262d-4489" field="category" scope="model"/>
                     <modifier type="set-primary" value="3de0-192c-3ec2-51be" field="category" scope="model"/>
+                    <modifier type="add" value="3de0-192c-3ec2-51be" field="category" scope="model"/>
                   </modifiers>
                 </modifierGroup>
                 <modifierGroup type="and">
@@ -5888,6 +5834,11 @@ Unlike Yoke Fiends, Cultists can be promoted to ELITE.</characteristic>
             </conditionGroup>
           </conditionGroups>
           <comment>Errors out if 2 or more Heavy on non-</comment>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
     </selectionEntry>
