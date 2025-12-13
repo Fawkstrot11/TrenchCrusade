@@ -239,6 +239,27 @@
                         </profile>
                       </profiles>
                     </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Sheikh of No Man&apos;s Land" hidden="true" id="8c1c-720d-1254-88f1">
+                      <profiles>
+                        <profile name="Sheikh of No Man&apos;s Land" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="63d8-e563-bb16-86df">
+                          <characteristics>
+                            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Outside of the patronage of the great Akinji-Bey dynasties of the sublime gate, chieftains of old nomadic tribes outside of the wall commonly hire Ghazi companies as mercenaries and bodyguards..</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <modifiers>
+                        <modifier type="set" value="false" field="hidden">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="72ab-daa4-80ee-e9a5" shared="true"/>
+                                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
                 <selectionEntryGroup name="Exploration Rewards" id="6de0-2f63-f1b6-1824" hidden="false" sortIndex="1">
@@ -1517,6 +1538,66 @@ The saint guides your troops before each battle. The model with the skull gains 
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sheikh&apos;s Favor" hidden="true" id="df8b-9987-be24-ba7f">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Limit Increase" id="b52a-d87f-c8bf-0726" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Shirdal" hidden="false" id="40a7-c3a6-c5ce-9b14">
+              <profiles>
+                <profile name="Shirdal" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="63c9-fbde-1c37-9b86">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Your warband may employ an additional Shirdal</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a55e-6316-29a4-ca67" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Günahkâr" hidden="false" id="51e5-f4a9-dfa0-371d">
+              <profiles>
+                <profile name="Günahkâr" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9b72-73e1-33f2-145b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Your warband may employ an additional Günahkâr.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2452-0c55-ac36-cdcb" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sultanate Sapper" hidden="false" id="d0e7-c2c3-d5d0-4147">
+              <profiles>
+                <profile name="Sultanate Sapper" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="77ff-6fad-3dc2-14b8">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Your warband may employ an additional Sultanate Sapper.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="11a5-850c-f7de-72e9" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="67bf-c8d3-4a2c-ba28" includeChildSelections="true"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="eee2-81d6-656d-7c7e" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="eee2-81d6-656d-7c7e">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c324-4dab-f62a-28ee" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c324-4dab-f62a-28ee" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
@@ -3412,6 +3493,91 @@ The saint guides your troops before each battle. The model with the skull gains 
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ff1e-a89b-2dab-9529" includeChildSelections="false"/>
               </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Sheikh of No Man&apos;s Land" id="b419-c92d-f571-3724" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8c1c-720d-1254-88f1" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Scouting Parties" hidden="false" id="e5ea-9703-1181-1517" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="679f-72d4-8a42-d2c9" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Sword of Allah" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f6e3-8d9d-b961-034e">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">your warband gains the Set Dice exploration skill.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Stable logistics" hidden="false" id="3d05-4a22-6d65-fd5c" sortIndex="2">
+              <profiles>
+                <profile name="Stable logistics" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b570-e800-4b84-7748">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Through shrewd trade this model has made connections with the advanced caravan network of the wastelands, in the Exploration stage of the post battle sequence, you may add 1 piece of equipment, weapon or armor from your faction equipment list without cost. This item must have a value of 15 ducats or less.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ed92-01d3-3a30-bbad" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ghazwa" hidden="false" id="ed50-6d80-6474-b174" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0eac-1082-705f-d0cb" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Ghazwa" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="83c2-67cd-0721-0a46">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When rolling for ducats in the Exploration stage of the Post Battle Sequence, add 10 ducats to the total result for every enemy model that was taken Out of Action during the game.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mubaraza" hidden="false" id="a633-0a74-73ca-38a6" sortIndex="4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0102-fd22-ff35-c8b3" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Mubaraza" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9598-8f0b-1702-1512">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">all units in this warband (excluding Allies) gain +1 DICE to their melee characteristic when wielding a single melee weapon in only one hand. Units with offhand weapons do not gain this benefit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Scavengers Arsenal" hidden="false" id="0acf-68d0-c96d-b8a1" sortIndex="5">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="aac6-b23f-8bf2-fcd1" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Scavengers Arsenal" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="378f-b2b3-ef98-02b2">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add the following weapons permanently to your warband&apos;s purchasable Battlekit:
+- Submachine Gun | 2 Glory | Limit: 1
+- Misericordia | 1 Glory | Limit: 2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sheikh&apos;s Favor" hidden="false" id="c324-4dab-f62a-28ee" sortIndex="6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d62c-af7f-430d-f560" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Sheikh&apos;s Favor" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="324a-65c5-a1e7-553d">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Increase the Limit of one non-ELITE unit available to your warband by 1. </characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
