@@ -33,6 +33,7 @@
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -497,6 +498,43 @@
           </modifiers>
           <comment>New Antioch</comment>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Mardi Pelt" hidden="true" id="176e-55a7-5f50-3286" sortIndex="10">
+          <comment>Ghazi equipment</comment>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="25"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="58c8-0815-71a7-27fb" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="90f3-a839-8448-bbd8"/>
+            <constraint type="max" value="4" field="selections" scope="roster" shared="true" id="f9d4-b4a7-4b9e-2eb4" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Infiltrator" id="9a71-7b59-e78e-0c31" hidden="false" type="rule" targetId="154d-8072-ef87-e6c1"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Mardi Pelt" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4e9a-9a98-557d-c2d1">
+              <characteristics>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The model gains the keyword INFLITRATOR.
+In addition, all Attacks without the keyword BLAST against the wearer suffer a -1 DICE.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Headgear" id="5986-4ea2-d618-1a0b" hidden="false" sortIndex="1">
@@ -717,6 +755,52 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
                         <condition type="lessThan" value="1" field="selections" scope="parent" childId="d039-5982-7011-334e" shared="true"/>
                         <condition type="lessThan" value="1" field="selections" scope="parent" childId="f5fe-26c3-c542-2bcb" shared="true"/>
                       </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Scrap Shot" hidden="true" id="cb03-3d32-ca15-fd88">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <comment>Ghazi</comment>
+              <profiles>
+                <profile name="Scrap Shot" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1704-e9c5-80e1-74e5">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Adds the keyword ARMOR PIERCING to Jezzails, Alaybozan, Halberd-Guns or Siege Jezzails weared by the model. This equipment can be taken in place of Alchemical Ammo, and you cannot gain the benefit of both. In addition it cannot be taken on units or items that come equipped with Alchemical Ammunition, such as Masterwork Jezzails or the Mamluk Faris.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Armour Piercing" id="2b23-ffcd-13d9-ea93" hidden="false" type="rule" targetId="ba7a-64b6-e87b-0ecd"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="not">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="ab06-4025-36da-4e62" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="2b27-3653-e972-8d5a" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="4f0f-a0cf-e8e8-b332" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="dc52-7d54-ed37-7b20" shared="true"/>
+                                <condition type="equalTo" value="0" field="selections" scope="parent" childId="8a1e-a662-247a-2c2b" shared="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -946,6 +1030,35 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             </modifier>
           </modifiers>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Chain Kura" hidden="true" id="ff14-6bda-4958-a507">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="4" field="selections" scope="roster" shared="true" id="3cbe-5cee-f71e-963a" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acaa-0f67-7102-4e62"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>Ghazi weapon</comment>
+          <profiles>
+            <profile name="Chain Kura" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="3b60-009c-4bfb-6c75">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Grenade</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, CONSUMABLE, IGNORE RANGE, IGNORE COVER</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Weight of His Word: Minor Injuries caused by the Chain Kura are treated as Down results instead.
+Once a Ranged Attack has been made with this weapon, It cannot be used again.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1366-80b5-c17a-a2e8" includeChildSelections="false"/>
@@ -1124,6 +1237,34 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="aa0b-1af3-e4db-f39e" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Khyber Knife" hidden="true" id="0a63-27a9-9db3-5a32" sortIndex="1">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="8"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>Ghazi weapon</comment>
+          <profiles>
+            <profile name="Khyber Knife" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="1003-02a4-ae72-4503">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ARMOUR PIERCING, CRITICAL</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Grevious Wounds: Injury Rolls made with this weapon cause an additional BLOOD MARKER to the target, regardless of result of the roll.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Armour Piercing" id="6b40-de3d-8038-df66" hidden="false" type="rule" targetId="ba7a-64b6-e87b-0ecd"/>
+            <infoLink name="Critical" id="cb55-7193-abe3-7b1c" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="Kilij" hidden="false" id="1872-75dc-5858-1882" type="selectionEntry" targetId="f7fa-6048-8a05-53c8"/>
@@ -1226,6 +1367,42 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0d31-c7bd-4933-4ef2" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Kayanin Mace" hidden="true" id="6caf-ec1d-e1ed-66d3">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+          </costs>
+          <comment>Ghazi</comment>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="02f1-9b2e-5a95-decc" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Heavy" id="971a-38ed-fc22-365e" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Cumbersome" id="36cb-8761-76ac-613b" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Kayanin Mace" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="1779-f308-8bbc-5885">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CUMBERSOME, HEAVY, +2 INJURY MODIFIER</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">If the enemy model is equipped with Armour of any kind, the weapon gains the keyword SHARPNEL and BLAST 2&quot;. This blast does not affect the wearer of this weapon, and has no effect if the attack misses.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Shield Combo" id="9b27-e362-ed9f-0d18" hidden="false">
@@ -1284,6 +1461,43 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
                 <entryLink import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="false" id="f53c-3482-a39e-afdb" type="selectionEntry" targetId="d5f6-0471-e4b8-8670"/>
                 <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="992c-ad99-9cca-a3a9" type="selectionEntry" targetId="6298-be97-6c32-1dc2"/>
               </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Anaza Spear" hidden="true" id="c650-4b48-ccfb-899a">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <comment>Ghazi</comment>
+              <infoLinks>
+                <infoLink name="Cumbersome" id="0e8c-5696-e4f9-249b" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+                <infoLink name="Ignore Armour" id="4f4a-a102-5510-bb8e" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+                <infoLink name="Block" id="ab24-a0ca-17d6-25e8" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="54d2-3412-ddd2-cd7c" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Anaza Spear" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="8af2-2771-9c86-65f3">
+                  <characteristics>
+                    <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+                    <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                    <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CUMBERSOME, BLOCK, IGNORE ARMOUR</characteristic>
+                    <characteristic name="Rules" typeId="87f0-637b-734a-22eb">This weapon adds an additional +1 INJURY DICE against a model that is Downed.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -2123,6 +2337,38 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <entryLink import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="false" id="a424-8100-584e-89c9" type="selectionEntry" targetId="d5f6-0471-e4b8-8670"/>
           </entryLinks>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Abus Gun" hidden="true" id="61aa-fb82-8fe6-99db" sortIndex="7">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="3"/>
+          </costs>
+          <comment>Ghazi</comment>
+          <infoLinks>
+            <infoLink name="Heavy" id="8912-bda9-684a-3780" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Armour Piercing" id="20b2-bd6f-008c-0901" hidden="false" type="rule" targetId="ba7a-64b6-e87b-0ecd"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db80-5c56-b0b8-0238"/>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="7d38-c637-6ef3-fb26" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="5df2-4c17-7c8c-4f1e" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Abus Gun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="3d9f-050e-4682-7f81">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">30&quot;</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ARMOUR PIERCING, HEAVY, +2 INJURY DICE</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Shield Combos" id="7587-db79-b55f-f5d2" hidden="false" sortIndex="15">
@@ -2602,6 +2848,47 @@ In either case, do not immediately roll for Injury. Instead, the mine detonates 
             <infoLink name="Leader" id="d0fc-6b51-ab1e-732d" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
             <infoLink name="Held" id="7764-38e8-840f-8b34" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
           </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Banner of the Eagle" hidden="true" id="4377-b71d-92f5-3c05">
+          <comment>Ghazi</comment>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7e1e-2df9-3f44-3aa6" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Leader" id="c57d-51eb-c12e-563c" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
+            <infoLink name="Held" id="ad49-3ab0-c5c8-a058" hidden="false" type="rule" targetId="1220-c65a-89ed-96a7"/>
+          </infoLinks>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="35"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Banner of the Eagle" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f51d-4a48-6b34-7342">
+              <characteristics>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">LEADER, HELD</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Acts as a Troop Flag, Friendly models within 6&quot; of the wearer gain the keyword NEGATE FEAR.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="5df2-4c17-7c8c-4f1e" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="2f82-e47f-c162-9152" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="model" childId="e77a-39f7-7264-9008" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -4439,6 +4726,14 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
           <characteristics>
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Sultanate Sapper can take a Set Mine ACTION if they are in contact with a terrain piece that measures up to 8&quot; by 8&quot;. If they do so, take a Success Roll for the model and add +2 DICE to the roll. If the roll is a Failure, nothing happens. If the roll is a Success or a Critical Success, the terrain piece becomes Mined.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+              <comment>Ghazi got trap instead</comment>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Fortify" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2f66-3cf4-7424-cd4d">
           <characteristics>
@@ -4480,6 +4775,19 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
             </modifier>
           </modifiers>
         </profile>
+        <profile name="Improvised Trap" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="f851-26c0-c31f-c85d">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Sapper can take an Improvised Trap ACTION. If they do so, take a Success Roll with +2 DICE for the model. If the roll is a failure, nothing happens. If the roll is a Success or a Critical Success, the Sapper may place a single 2” trap marker within base contact of itself. When a unit comes within 1” of the marker they must immediately roll on the Injury chart. If the result of this roll is a Down, then the enemy unit is considered pinned, and cannot Stand or Move unless it succeeds on a Risky Success Roll at the start of its next Activation. Units with the keyword STRONG or on a 50mm or larger base make this roll with +1 DICE. A Sapper ignores the effects of its own set traps.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>Ghazi ability</comment>
+        </profile>
       </profiles>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
@@ -4502,6 +4810,11 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="+1 Dice" field="12e8-ff8c-c933-9eb5" affects="profiles.Unit">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4613,6 +4926,7 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="cd91-f171-98d6-423e" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4746,12 +5060,30 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <comment>Nomads of Al-Badia</comment>
+              <comment>Nomads of Al-Badia and Ghazi</comment>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Djinn Hunter" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="5735-d29f-69d9-6f6f">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Grants the model NEGATE FEAR</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
+          <comment>Ghazi ability</comment>
         </profile>
       </profiles>
       <modifiers>
@@ -4822,6 +5154,16 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
           </conditions>
           <comment>Iron Wall</comment>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="4" field="a33e-7153-a9b3-e446"/>
+            <modifier type="set" value="Günahkâr" field="name"/>
+            <modifier type="set" value="Günahkâr" field="name" affects="profiles.Unit"/>
+          </modifiers>
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
@@ -4938,6 +5280,7 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="cd91-f171-98d6-423e" shared="true" includeChildSelections="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5089,6 +5432,7 @@ Assassin makes the time slip.</characteristic>
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="c2b1-d49e-937b-2f87" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5184,6 +5528,7 @@ Assassin makes the time slip.</characteristic>
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="a0bc-2879-6cde-b11f" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -5286,6 +5631,26 @@ Assassin makes the time slip.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Raiding Dynasty" hidden="true" id="a0bc-2879-6cde-b11f" sortIndex="3">
+          <profiles>
+            <profile name="Guiding Strike" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="3147-3cb8-b5b3-159d">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The first time during a Turn this model successfully deals a BLOOD MARKER to an enemy model, all Ranged Attack and Melee Attack Success Rolls made by friendly models in your warband made against the same model gain +1 DICE until the end of the current round.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <comment>Ghazi alternative leader</comment>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1eac-6910-9b32-0f19"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <rules>
         <rule name="Negate Fear" id="3957-8233-b167-a048" hidden="false">
@@ -5323,6 +5688,11 @@ Assassin makes the time slip.</characteristic>
             </conditionGroup>
           </conditionGroups>
           <comment>Nomads shield training warning</comment>
+        </modifier>
+        <modifier type="set" value="Akinji-Bey" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="a0bc-2879-6cde-b11f" shared="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -5580,6 +5950,31 @@ Assassin makes the time slip.</characteristic>
                 </profile>
               </profiles>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Akinji" hidden="true" id="d750-f089-b0e0-f53d">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="6" field="selections" scope="roster" shared="true" id="8bfe-8149-0ad6-033e" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="self" shared="true" id="f71c-f9f0-6fd6-efa9"/>
+              </constraints>
+              <profiles>
+                <profile name="Çekilmek" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9306-6ffd-b3f0-a54e">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When an enemy model ends their activation within 8” of an Akinji, if the Akinji is not already in melee combat, it may move up to half of its movement speed in any direction as a reaction, once per round. 
+In addition when this unit take the Retreat Action, Melee Attack Success Roll made against it are made with -1 DICE to their roll.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -5684,6 +6079,7 @@ Assassin makes the time slip.</characteristic>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="cd91-f171-98d6-423e" shared="true" includeChildSelections="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -6599,6 +6995,40 @@ In exchange for losing their Counter-charge ability, Janissaries (and a Model th
                     </profile>
                   </profiles>
                 </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Ghazi of the Golden Path" hidden="false" id="5df2-4c17-7c8c-4f1e">
+                  <profiles>
+                    <profile name="Struggle by the Sword" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="a1f7-c505-9a92-1339">
+                      <characteristics>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Anytime a member of this warband would take a model with the keyword ELITE or TOUGH Out of Action, it gains a BLESSING marker.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="The Golden Path" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5b32-7af5-2db5-1eca">
+                      <characteristics>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The warband may not include any Brazen Bulls, Lions of Jabir, Jabirean Alchemists, Sultanate Assassins, or the Cloak of Alamut.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Raider Dynasties" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ed35-028f-b2bd-b7a6">
+                      <characteristics>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">You may optionally take an Akinji-Bey as the leader of your warband, these units use the same characteristic as a Yuzbasi Captain, however their Mubarizun ability is replaced with Guiding Strike.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Path for the Pathless" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="924c-a41e-c520-1a58">
+                      <characteristics>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This warband may take up to 4 units known as Günahkâr. These are special variants of the Janissary unit that replace them in the warband roster. Instead of Counter Charge, they gain the ability Djinn Hunter.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Raiding Party" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="fe4a-f2cd-7c95-5aa3">
+                      <characteristics>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">You may upgrade up to 6 Azeb into Akinji. Instead of the usual SKIRMISHER upgrade, an Akinji  gains the ability Çekilmek.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Forward Scout" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4c4f-5fb4-db03-cacd">
+                      <characteristics>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Sultanate Sappers recruited to a Ghazi of the Golden Path warband gain +1 dice their melee characteristic and the ability Mine-Setting is replaced with Improvised Trap.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
               </selectionEntries>
               <profiles>
                 <profile name="Third Party Subfactions" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3125-73d2-ed89-cc9b">
@@ -6606,7 +7036,7 @@ In exchange for losing their Counter-charge ability, Janissaries (and a Model th
                     <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
                     <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                     <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">These subfactions are not fully official. They are officially condoned by Factory Forge, but no assurances are made to balance or consistency with rules. They are included here for the benefit of the community. Please only use these factions with permission from all involved players.</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">These subfactions are not fully official. They are officially condoned by Factory Fortress, but no assurances are made to balance or consistency with rules. They are included here for the benefit of the community. Please only use these factions with permission from all involved players.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6908,6 +7338,236 @@ The first time in the game an enemy Model moves into contact with the Mined piec
       </entryLinks>
       <infoLinks>
         <infoLink name="Shovel" id="e334-65a6-265d-e355" hidden="false" type="profile" targetId="d829-4d67-52aa-baaf"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Teğmen" hidden="true" id="9bfc-c394-0056-4f3e" sortIndex="">
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="60"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="3de0-192c-3ec2-51be" id="c117-bb5f-cd3c-7b6a" primary="true" name="Elite"/>
+      </categoryLinks>
+      <comment>Ghazi</comment>
+      <constraints>
+        <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="2084-47b2-7fbb-7862" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="4f5c-027d-253c-ffa3" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="97b6-93af-0240-795d" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="508d-8edb-4c7f-2868" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Teğmen" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="3fce-74d0-c0b4-1ebd">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 Dice</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+2 Dice</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">32mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Counterattack" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4c80-17c0-acea-89c8">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When an enemy model misses the Teğmen, or a friendly model within 1” of a Teğmen, with a Melee Attack, the Teğmen may make a single Melee Attack against the enemy model as a reaction.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Mujaahid" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9f39-0732-bf94-d1c8">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When you first hire this model to your warband you may choose one of the listed Martial Disciplines for them. A Teğmen may only have one Martial Discipline and you may never change it out for any other.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Advancement" hidden="false" id="5713-a374-d585-3dc7" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" sortIndex="1"/>
+        <entryLink import="true" name="Fireteam" hidden="false" id="3df5-c2c9-7050-bb01" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="2"/>
+        <entryLink import="true" name="Weapons" hidden="false" id="5549-2cf4-e72d-3410" type="selectionEntryGroup" targetId="66f4-68d9-e3c5-f1f2" sortIndex="3"/>
+        <entryLink import="true" name="Grenades" hidden="false" id="a422-36cf-484f-aea0" type="selectionEntryGroup" targetId="52e3-49c7-5f3b-d5c9" sortIndex="4"/>
+        <entryLink import="true" name="Armour" hidden="false" id="b8bb-c308-9b8f-e706" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365" sortIndex="5"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="dc9c-5051-57ec-bd15" type="selectionEntryGroup" targetId="6fa6-9678-f5af-3bf2" sortIndex="6"/>
+        <entryLink import="true" name="Exploration Upgrades" hidden="false" id="e588-97d6-989e-650c" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Martial Disciplines" id="70fd-28ab-176a-3c94" hidden="false" sortIndex="3">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc4a-ceec-84c7-82a5"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Mubarak" hidden="false" id="c9c1-1a6e-8bed-e375">
+              <profiles>
+                <profile name="Mubarak" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="da85-0dae-dd72-6db2">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">All Injury Rolls made against this model suffer -1 Dice to their roll.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Deliler" hidden="false" id="97b6-93af-0240-795d">
+              <profiles>
+                <profile name="Deliler" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="98d5-3dec-59a8-236f">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This unit adds +1 DICE to the Risky Success Roll when taking a Dash Action and the FEAR keyword.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Fear" id="b125-0a7e-df58-0b67" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Pahlavan" hidden="false" id="508d-8edb-4c7f-2868">
+              <profiles>
+                <profile name="Pahlavan" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2ad4-248e-713b-7965">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This model gains the keyword STRONG.
+In addition, any BLOOD MARKER this model gains may not be used to incur penalties on Actions it may take. BLOOD MARKERS may still be used on Injury Rolls as standard.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Strong" id="3ef4-bb29-bb87-95a8" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Shirdal" hidden="true" id="d021-f84d-78e4-f486">
+      <comment>Ghazi</comment>
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="140"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="bd43-ddb1-262d-4489" id="3a4b-83cc-a5c7-c674" primary="true" name="Troop"/>
+        <categoryLink targetId="4f5c-027d-253c-ffa3" id="ae5c-1559-a4b8-71f1" primary="false" name="Fear"/>
+        <categoryLink targetId="914f-0020-0d97-e217" id="0040-12d6-689d-9ba9" primary="false" name="Tough"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3731-98ea-d19a-d813" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Shirdal" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="aed0-3d61-c331-fd51">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">8&quot;/Flying</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">n/a</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+2 DICE</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-2</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">50mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Chimeric Vitality" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e144-884a-e38f-f8e7">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE to Injury Rolls for a Shirdal unless the weapon has the keyword FIRE or GAS.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Winged Beast" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5e9a-d92f-0c5f-cf07">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add +1 DICE to Risky Success Roll when a Shirdal makes a Diving Charge or takes a Dash ACTION.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Damascus Talons" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="e292-e8a8-eaa9-2d0d">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 INJURY MODIFIER</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+        <profile name="Crushing Beak" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="6245-5f1b-848b-a5c1">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1"/>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+        <profile name="Assault Beast" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="a838-cd2e-48a0-258a">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Shirdal  is armed with two Melee Weapons (its Damascus Talons and Crushing Beak). When it makes a Melee Attack, it can attack once using either its Damascus Talons or Crushing Beak, or twice, first with the Damascus Talons and second with its Crushing Beak (the Off-Hand Weapon modifier applies to the attack made with the Crushing Beak).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Reinforced Armour" id="1d9a-af2c-8f69-9864" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
+        <infoLink name="Wind Amulet" id="bdc4-df2b-1fb5-59b5" hidden="false" type="profile" targetId="cb4d-4771-6cd2-240b"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Pairika" hidden="true" id="a98c-24cc-6885-daaa">
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="7"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="3dfb-701d-e89c-eba2" id="2359-7ec5-603a-d94f" primary="true" name="Mercenary"/>
+        <categoryLink targetId="914f-0020-0d97-e217" id="c2ab-db62-ab3c-896c" primary="false" name="Tough"/>
+        <categoryLink targetId="4f5c-027d-253c-ffa3" id="b5f3-213e-598f-29af" primary="false" name="Fear"/>
+      </categoryLinks>
+      <comment>Ghazi</comment>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4bd8-dab8-a6d7-c16c" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="5df2-4c17-7c8c-4f1e" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Pairika" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="ee61-1ca1-89ee-f657">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Flying</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">n/a</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 DICE</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">40mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Bident" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="0cf5-d84b-e1fe-ce92">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CUMBERSOME, BLOCK</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Attacks made against model with the keywords DEMONIC, HERETIC, and BLACK GRAIL add +1 INJURY DICE.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Nur Crest" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="6840-de3c-a380-dcc5">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Pairika can take a Nur Crest ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure, the Pairika’s Activation ends immediately. If the roll is a Success, you may choose a friendly unit within 3” of the Pairika and remove 1 BLOOD or INFECTION MARKER from the targeted model. If the roll is a Critical Success, remove up to 3 BLOOD OR INFECTION MARKER instead.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="His Mercy" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5a0b-170e-5ed3-360f">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Once per Turn when an other friendly unit would suffer an injury result, you may automatically set one of the Injury Dice results to a 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Celestial Vitality" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="af9b-3d2c-6807-c322">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -2 INJURY DICE to Injury Rolls for a Pairika.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Combat Helmet" id="1c94-9769-aaed-f705" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
       </infoLinks>
     </selectionEntry>
   </selectionEntries>
