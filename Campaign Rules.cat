@@ -889,19 +889,14 @@ The saint guides your troops before each battle. The model with the skull gains 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="aa23-6f90-d94e-6193" includeChildSelections="true"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="aa23-6f90-d94e-6193" includeChildSelections="true"/>
         <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="b447-f995-b3c3-6e93" includeChildSelections="true"/>
       </constraints>
       <modifiers>
-        <modifier type="set" value="1" field="b447-f995-b3c3-6e93">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="70ac-6006-ea0c-54f1" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9ca5-5cff-d382-8821" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="increment" value="1" field="b447-f995-b3c3-6e93">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="9ca5-5cff-d382-8821" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
         </modifier>
         <modifier type="set" value="false" field="hidden">
           <conditionGroups>
@@ -917,6 +912,11 @@ The saint guides your troops before each battle. The model with the skull gains 
           <conditions>
             <condition type="lessThan" value="1" field="selections" scope="roster" childId="9ca5-5cff-d382-8821" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="aa23-6f90-d94e-6193">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="9ca5-5cff-d382-8821" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -2026,6 +2026,7 @@ The saint guides your troops before each battle. The model with the skull gains 
               </profiles>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e89-23ae-672a-2a89" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8b75-e990-adb2-6351" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Limit Increase" id="09ed-062f-a585-2443" hidden="false">
@@ -2812,7 +2813,7 @@ The saint guides your troops before each battle. The model with the skull gains 
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6954-73bd-4777-c69a" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3db9-9e39-02ae-5a54" includeChildSelections="false"/>
               </constraints>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Healing Arts" hidden="false" id="597d-ddc5-d1fa-8cd2" sortIndex="6">

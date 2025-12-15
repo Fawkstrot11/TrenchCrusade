@@ -2704,7 +2704,7 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Bayonet Lug" id="b01a-4a98-5a49-8f77" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Butcher Bayonet" hidden="false" id="e356-1538-2f43-e792">
+        <selectionEntry type="upgrade" import="true" name="Butcher Bayonet" hidden="true" id="e356-1538-2f43-e792">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
@@ -2716,6 +2716,13 @@
           <infoLinks>
             <infoLink name="Butcher Bayonet" id="9eca-f201-bccc-2f48" hidden="false" type="profile" targetId="1063-b1d1-807f-91ec"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bayonet" hidden="false" id="d376-efbb-a316-cee6">
           <costs>
