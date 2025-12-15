@@ -679,7 +679,15 @@
       </profiles>
       <infoLinks>
         <infoLink name="Risky" id="c72d-781c-e31d-d28e" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
-        <infoLink name="Tough" id="91bd-c95c-1b81-6801" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
+        <infoLink name="Tough" id="91bd-c95c-1b81-6801" hidden="false" type="rule" targetId="3c75-701d-e708-1438">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Fear" id="e09c-5bf5-dc63-cf8c" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
         <infoLink name="Cumbersome" id="5714-23f4-28e3-f924" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
         <infoLink name="Ignore Armour" id="8f61-3348-fb48-c7c2" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
@@ -737,10 +745,11 @@
           <modifiers>
             <modifier type="set" value="War Hyena" field="name" affects="profiles.Unit"/>
             <modifier type="set" value="140" field="8d43-33fd-332d-17a6"/>
-            <modifier type="set" value="-2" field="5de9-d70e-9021-6f71" scope="unit" affects="profiles.Unit"/>
+            <modifier type="set" value="-2" field="5de9-d70e-9021-6f71" affects="profiles.Unit"/>
             <modifier type="set" value="War Hyena" field="name"/>
-            <modifier type="set" value="40mm" field="73ae-cc17-596e-0481" scope="unit" affects="profiles.Unit"/>
+            <modifier type="set" value="40mm" field="73ae-cc17-596e-0481" affects="profiles.Unit"/>
             <modifier type="increment" value="1" field="105c-8780-b389-2f18"/>
+            <modifier type="remove" value="914f-0020-0d97-e217" field="category"/>
           </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
