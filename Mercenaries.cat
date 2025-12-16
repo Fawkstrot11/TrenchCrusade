@@ -363,24 +363,16 @@
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="eee9-35a4-9eda-70e9" shared="true" includeChildSelections="true"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="eee9-35a4-9eda-70e9" shared="true" includeChildSelections="true"/>
-          </conditions>
         </modifier>
       </modifiers>
       <entryLinks>
-        <entryLink import="true" name="Advancement" hidden="true" id="e858-99d7-d563-0eb2" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="Advancement" hidden="true" id="e858-99d7-d563-0eb2" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="ebd5-1c11-f16f-ade3" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
     </selectionEntry>
@@ -1008,15 +1000,7 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
         </modifier>
       </modifiers>
       <entryLinks>
-        <entryLink import="true" name="Advancement" hidden="true" id="99ff-9676-a927-e22e" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="Advancement" hidden="true" id="99ff-9676-a927-e22e" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="d65d-2367-7868-a3bf" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
       </entryLinks>
       <comment>Knights of Avarice Version</comment>
@@ -1026,7 +1010,9 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
       </costs>
-      <comment>St.Roch are Westfalia&apos;s mercenary. Usual third party rules appliy</comment>
+      <comment>St.Roch are Westfalia&apos;s mercenary.
+
+</comment>
       <profiles>
         <profile name="Third Party" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ba8e-b887-69dd-fad3">
           <characteristics>
@@ -1933,6 +1919,10 @@ While a model is captured, the model wielding the Crook may only make Melee Atta
         <infoLink name="Golem" id="fad7-90e0-f1c8-36df" hidden="false" type="rule" targetId="d70f-081c-259b-6cb6"/>
         <infoLink name="Combat Helmet" id="3d9a-69c2-083a-2444" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Advancement" hidden="true" id="7a59-a1e9-d426-8035" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
+        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="f20d-1b65-47e5-c5bc" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Dog&apos;s Friend" hidden="true" id="1f47-9c34-ef9b-914b">
       <profiles>
