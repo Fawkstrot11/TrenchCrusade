@@ -4893,11 +4893,6 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="+1 Dice" field="12e8-ff8c-c933-9eb5" affects="profiles.Unit">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
         <modifier type="increment" value="1" field="b58f-20a0-c247-b933">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="d0e7-c2c3-d5d0-4147" shared="true" includeChildSelections="true" includeChildForces="true"/>
@@ -4907,6 +4902,19 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
       <infoLinks>
         <infoLink name="Shovel" id="4a27-a629-36e1-0c92" hidden="false" type="profile" targetId="d829-4d67-52aa-baaf"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>Ghazi Changes</comment>
+          <modifiers>
+            <modifier type="set" value="+1 Dice" field="12e8-ff8c-c933-9eb5" affects="profiles.Unit"/>
+            <modifier type="set" value="Abrek Sapper" field="name"/>
+            <modifier type="set" value="Abrek Sapper" field="name" affects="profiles.Unit"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Jabirean Alchemist" hidden="false" id="7c17-5f75-6fd9-73cf">
       <entryLinks>
@@ -5713,7 +5721,7 @@ Assassin makes the time slip.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Raider Dynasty" hidden="true" id="a0bc-2879-6cde-b11f" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Akinji-Bey" hidden="true" id="a0bc-2879-6cde-b11f" sortIndex="3">
           <profiles>
             <profile name="Guiding Strike" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="3147-3cb8-b5b3-159d">
               <characteristics>
@@ -7115,7 +7123,7 @@ In exchange for losing their Counter-charge ability, Janissaries (and a Model th
                     </profile>
                     <profile name="Forward Scout" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4c4f-5fb4-db03-cacd">
                       <characteristics>
-                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Sultanate Sappers recruited to a Ghazi of the Golden Path warband gain +1 dice their melee characteristic and the ability Mine-Setting is replaced with Improvised Trap.</characteristic>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Sultanate Sappers recruited to a Ghazi of the Golden Path are replaced by Abrek Sappers. An Abrek Sapper gains +1 dice to their melee characteristic and the ability Mine-Setting is replaced with Improvised Trap.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
