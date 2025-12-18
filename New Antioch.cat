@@ -398,7 +398,7 @@
         <selectionEntry type="upgrade" import="true" name="Dum-Dum Bullets" hidden="true" id="8b0b-b48b-c82a-f71e" sortIndex="11">
           <infoLinks>
             <infoLink name="Consumable" id="618f-dcd1-4705-b41c" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
-            <infoLink name="Dum-Dum Bullets" id="7a2c-3fec-ff85-c0fc" hidden="false" type="profile" targetId="b51b-0a4a-8aa8-e5ae"/>
+            <infoLink name="Dum-Dum Ammunition" id="7a2c-3fec-ff85-c0fc" hidden="false" type="profile" targetId="b51b-0a4a-8aa8-e5ae"/>
             <infoLink name="Critical" id="c4c5-cad8-d303-e377" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
           </infoLinks>
           <costs>
@@ -771,7 +771,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Knife" id="81fa-4564-fbca-a3c7" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
+            <infoLink name="Trench Knife" id="81fa-4564-fbca-a3c7" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sword/Axe" hidden="false" id="1773-d8e5-0ff7-65b8" sortIndex="3" collective="false">
@@ -866,7 +866,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Great Blunt Weapon" id="0fa0-9859-ed95-c628" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
+            <infoLink name="Great Hammer/Maul/Club/Mace" id="0fa0-9859-ed95-c628" hidden="false" type="profile" targetId="05b3-f5b2-f569-3082"/>
             <infoLink name="Heavy" id="8a71-35c2-73c8-c57a" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
           </infoLinks>
           <categoryLinks>
@@ -1091,11 +1091,23 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
                         <conditionGroup type="and">
                           <conditions>
                             <condition type="notEqualTo" value="1" field="selections" scope="parent" childId="bb5a-15df-dd97-52cb" shared="true"/>
-                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="0084-2122-f8c1-537a" shared="true" includeChildSelections="false"/>
-                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="db8d-f0cf-9959-273f" shared="true" includeChildSelections="false"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="579e-2810-d1cf-454b" shared="true"/>
-                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
                           </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="579e-2810-d1cf-454b" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                              </conditions>
+                              <conditionGroups>
+                                <conditionGroup type="and">
+                                  <conditions>
+                                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="0084-2122-f8c1-537a" shared="true" includeChildSelections="false"/>
+                                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="db8d-f0cf-9959-273f" shared="true" includeChildSelections="false"/>
+                                  </conditions>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </conditionGroup>
+                          </conditionGroups>
                         </conditionGroup>
                       </conditionGroups>
                     </conditionGroup>
@@ -1266,7 +1278,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
             </infoLink>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="9256-99e4-ace1-9c80" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="9256-99e4-ace1-9c80" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
               <infoLinks>
                 <infoLink name="Armour Piercing" id="0f62-2a8b-0116-b491" hidden="false" type="rule" targetId="ba7a-64b6-e87b-0ecd"/>
               </infoLinks>
@@ -1274,7 +1286,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
                 <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="f7c6-2f2f-ee6e-4964" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="f7c6-2f2f-ee6e-4964" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
               <modifiers>
                 <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
@@ -1331,12 +1343,12 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
             <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="03ac-cec0-6b1f-9f07" includeChildSelections="true"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="7fc4-188e-9a63-53be" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="7fc4-188e-9a63-53be" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
               <modifiers>
                 <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="aeed-4829-ffa0-ac94" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="aeed-4829-ffa0-ac94" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
               <modifiers>
                 <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
@@ -1354,12 +1366,12 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
           </costs>
           <entryLinks>
             <entryLink import="true" name="Bayonet Lug" hidden="false" id="6dce-571f-38a2-52c2" type="selectionEntry" targetId="1abf-9449-4b03-2761"/>
-            <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="9c44-5bc3-efd8-0c09" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="9c44-5bc3-efd8-0c09" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
               <modifiers>
                 <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="6efc-2790-81e5-ef77" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="6efc-2790-81e5-ef77" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
               <modifiers>
                 <modifier type="set" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
@@ -1395,12 +1407,12 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
           </costs>
           <entryLinks>
             <entryLink import="true" name="Bayonet Lug" hidden="false" id="ea91-c4a2-80ce-3ebf" type="selectionEntry" targetId="1abf-9449-4b03-2761" sortIndex="-1"/>
-            <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="69ce-0935-2c58-2d11" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="69ce-0935-2c58-2d11" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
               <modifiers>
                 <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="2053-dbcb-78f7-7843" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="2053-dbcb-78f7-7843" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
               <modifiers>
                 <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
@@ -1539,12 +1551,12 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
             </modifier>
           </modifiers>
           <entryLinks>
-            <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="c72a-e63d-17dc-7649" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="c72a-e63d-17dc-7649" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
               <modifiers>
                 <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="92ac-0824-ecbd-282a" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="92ac-0824-ecbd-282a" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
               <modifiers>
                 <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
@@ -1624,12 +1636,12 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
           </costs>
           <entryLinks>
             <entryLink import="true" name="Bayonet Lug" hidden="false" id="40dc-2d60-5a8f-8b96" type="selectionEntry" targetId="1abf-9449-4b03-2761"/>
-            <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="8d5a-2480-eac7-dca8" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="8d5a-2480-eac7-dca8" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
               <modifiers>
                 <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="2e42-0523-ee94-1afb" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="2e42-0523-ee94-1afb" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
               <modifiers>
                 <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
@@ -1709,12 +1721,12 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
             </modifier>
           </modifiers>
           <entryLinks>
-            <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="39bc-c19c-6794-38e6" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="39bc-c19c-6794-38e6" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
               <modifiers>
                 <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="c966-3eb2-d507-97df" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="c966-3eb2-d507-97df" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
               <modifiers>
                 <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
               </modifiers>
@@ -1735,12 +1747,12 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="Bayonet Lug" hidden="false" id="58c6-803a-f1e7-4e3d" type="selectionEntry" targetId="1abf-9449-4b03-2761" sortIndex="-1"/>
-                <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="8c78-61db-fe6a-1ebe" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+                <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="8c78-61db-fe6a-1ebe" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
                   <modifiers>
                     <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="3fe3-834d-853f-31d3" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+                <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="3fe3-834d-853f-31d3" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
                   <modifiers>
                     <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
                   </modifiers>
@@ -1813,12 +1825,12 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
                 </modifier>
               </modifiers>
               <entryLinks>
-                <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="eebe-28fe-9bdd-648d" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+                <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="eebe-28fe-9bdd-648d" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
                   <modifiers>
                     <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="6b54-6e3c-646d-29fb" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+                <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="6b54-6e3c-646d-29fb" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
                   <modifiers>
                     <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
                   </modifiers>
@@ -1831,12 +1843,12 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
               </costs>
               <entryLinks>
                 <entryLink import="true" name="Bayonet Lug" hidden="false" id="f775-e73b-efa8-df63" type="selectionEntry" targetId="1abf-9449-4b03-2761" sortIndex="-1"/>
-                <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="4dd8-7a8b-87d7-cb54" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+                <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="4dd8-7a8b-87d7-cb54" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
                   <modifiers>
                     <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="3a96-00f1-06dc-2558" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+                <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="3a96-00f1-06dc-2558" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
                   <modifiers>
                     <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
                   </modifiers>
@@ -1874,12 +1886,12 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
               </costs>
               <entryLinks>
                 <entryLink import="true" name="Bayonet Lug" hidden="false" id="5497-d745-52a1-04b1" type="selectionEntry" targetId="1abf-9449-4b03-2761" sortIndex="-1"/>
-                <entryLink import="true" name="Dum-Dum Bullets (Loaded)" hidden="false" id="9acd-fdc8-2e92-820e" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
+                <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="9acd-fdc8-2e92-820e" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce">
                   <modifiers>
                     <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="Armour-Piercing Bullets (Loaded)" hidden="false" id="9ea1-a2b4-1aec-2eb0" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
+                <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="9ea1-a2b4-1aec-2eb0" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292">
                   <modifiers>
                     <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
                   </modifiers>
@@ -3752,7 +3764,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="8b0b-b48b-c82a-f71e" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
-        <modifier type="replace" value="" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", " arg="-"/>
+        <modifier type="replace" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", " arg="-"/>
         <modifier type="append" value="CRITICAL" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
       </modifiers>
     </selectionEntry>
@@ -3773,7 +3785,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           </repeats>
         </modifier>
         <modifier type="append" value="ARMOUR-PIERCING" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
-        <modifier type="replace" value="" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", " arg="-"/>
+        <modifier type="replace" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", " arg="-"/>
       </modifiers>
       <infoLinks>
         <infoLink name="Armour Piercing" id="9be2-4bf4-0fbb-f4b3" hidden="false" type="rule" targetId="ba7a-64b6-e87b-0ecd"/>
@@ -4751,6 +4763,27 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="e16d-0563-0aca-babe" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="or"/>
+                      </conditionGroups>
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="self" childId="db8d-f0cf-9959-273f" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="self" childId="0084-2122-f8c1-537a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
         </profile>
         <profile name="Assault Drill" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="767a-8a41-50ae-1621">
@@ -4794,7 +4827,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Indomitable" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2513-db50-fb6b-e213">
+        <profile name="Indomitable" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="2513-db50-fb6b-e213">
           <characteristics>
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">These warriors are immune to FEAR.</characteristic>
           </characteristics>
@@ -4806,7 +4839,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Weapon Familiarity" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="fd74-ad2b-c80b-3e0b">
+        <profile name="Weapon Familiarity" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="fd74-ad2b-c80b-3e0b">
           <characteristics>
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Varangian Guards ignore the keyword HEAVY on all axes, and treat two-handed axes as having the Shield Combo indicator. They lose Shock Charge if they equip a shield together with a two-handed axe. They can still carry only one HEAVY item, unless they are STRONG.</characteristic>
           </characteristics>
