@@ -5601,12 +5601,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Papal States Intervention Force" hidden="false" id="7dda-8f8f-2120-65de">
               <profiles>
-                <profile name="Lector" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="fdac-9fd9-f409-f0ed">
+                <profile name="Lector" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="fdac-9fd9-f409-f0ed">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">A Papal States Warband must include a Trench Cleric but does not have to include a Lieutenant. Any Trench Cleric in the Papal Intervention Force gains the Arise and be Healed! Ability.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Papal States Intervention Force Warband must include 1 Trench Cleric, but does not have to include a Lieutenant. A Trench Cleric in a Papal States Intervention Force Warband has the following additional ability: 
+* Arise and be Healed! ACTION: A Papal States Intervention Force Trench Cleric can take an Arise and be Healed! ACTION. If they do so, take a Risky Success Roll for the Trench Cleric. If the roll is a Failure, nothing happens, and the Trench Cleric’s Activation ends. If the roll is a Success or Critical Success, pick the Trench Cleric or 1 friendly model within 3&quot; of the Trench Cleric. The model you pick can stand back up at no cost to their movement, and you can remove up to D3 BLOOD MARKERS and/or INFECTION MARKERS from the model.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Swiss Guard" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="867a-dbfe-62da-2e28">
@@ -5614,31 +5612,22 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                     <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
                     <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                     <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Lieutenant and up to 4 models in a Papal States Intervention Force Warband can have the NEGATE FEAR Keyword at no additional cost in Ducats.</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Lieutenant and up to 4 models in a Papal States Intervention Force Warband can have the NEGATE FEAR Keyword at no additional cost in ducats.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Far from Home" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ff9f-e15d-1fe7-38d0">
+                <profile name="Far from Home" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ff9f-e15d-1fe7-38d0">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Papal Intervention Force may have no Trench Moles</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Papal States Intervention Force Warband cannot include Trench Moles.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Supreme Blessing" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f293-f1e8-ec8b-f9a1">
+                <profile name="Supreme Blessing" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f293-f1e8-ec8b-f9a1">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">One model in the warband may carry the crucifix given by the Supreme Pontiff. This model can take further ACTIONS if it fails in an attempted RISKY ACTION. Note that the action fails, but you are allowed to try any other ACTIONS on your profile without losing the Activation. If the crucifix is lost, a new one can be acquired at the cost of 3 Glory Points.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When you recruit a Papal States Intervention Force Warband, you must give the Supreme Pontiff ’s Crucifix to one model in the Warband. The Supreme Pontiff ’s Crucifix taken when the Warband is created is free and does not cost any glory (if it is lost then the replacement must be paid for normally).</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Specialist Force" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c685-8b3d-a397-d5ff">
+                <profile name="Specialist Force" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c685-8b3d-a397-d5ff">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You have 500 Ducats and 11 Glory Points to recruit a Papal States Intervention Force Warband for a campaign. A Papal States Intervention Force gains 4 Glory Points each time it calls for Reinforcements.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">You have 500 ducats and 11 glory to recruit a Papal State Force Warband for a campaign (▶ see Starting a Warband). A Papal States Intervention Force gains 4 glory each time it calls for Reinforcements. In a campaign, their Threshold Value is reduced by 200 ducats.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5651,76 +5640,55 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ed5-de4a-b7b9-1fea" includeChildSelections="false"/>
               </constraints>
               <profiles>
-                <profile name="Berserker" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="98a6-cd84-26a9-cfce">
+                <profile name="Berserker" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="98a6-cd84-26a9-cfce">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">he Lieutenant or one of the Fianna in an Éire Rangers Warband can be upgraded to a Berserker for +15 Ducats. A Berserker cannot have Armour (they can have Shields). In addition, a Berserker has the NEGATE FEAR Keyword, and BLOOD MARKERS are never placed on them under any circumstances</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Lieutenant or one of the Fianna in an Éire Rangers Warband can be upgraded to a Berserker for +15 Ducats. A Berserker cannot have Armour (they can have Shields). In addition, a Berserker has the NEGATE FEAR Keyword, and BLOOD MARKERS are never placed on them under any circumstances</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Followers of St. Patrick" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="369e-cfea-3774-2a65">
+                <profile name="Followers of St. Patrick" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="369e-cfea-3774-2a65">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">If playing a Campaign, the patron of the warband is automatically Saint Patrick.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Patron of an Éire Rangers Warband is always a Learned Saint.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Carnyx" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ea0b-8b94-35f8-318a">
+                <profile name="Carnyx" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ea0b-8b94-35f8-318a">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">One Musical Instrument in an Éire Rangers Warband can have the FEAR Keyword at no additional cost in Ducats.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">One Musical Instrument in an Éire Rangers Warband can have the FEAR Keyword at no additional cost in Ducats.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Hit-and-run Tactics" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4045-4821-7c11-647a">
+                <profile name="Hit-and-run Tactics" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4045-4821-7c11-647a">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Add -1 DICE to the roll for a Melee Attack that targets a model from an Éire Rangers Warband that is making a Retreat.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 DICE to the roll for a Melee Attack that targets a model from an Éire Rangers Warband that is making a Retreat.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Loose Formation" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9d1b-0e96-253c-6925">
+                <profile name="Loose Formation" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9d1b-0e96-253c-6925">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Lieutenant in an Éire Rangers Warband replaces their Hold Your Fire! ability with the SKIRMISHER Keyword at no change to their cost in Ducats.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Lieutenant in an Éire Rangers Warband replaces their Hold Your Fire! ability with the SKIRMISHER Keyword at no change to their cost in ducats.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Strong in Faith" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="00bc-436c-70ff-ad74">
+                <profile name="Strong in Faith" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="00bc-436c-70ff-ad74">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Eire is a bastion of the Church, with many famed warrior-priests who travel to war. The warband may have up to two Trench Clerics and they can each choose to replace their Onwards, Christian Soldiers! ability with one from the list below</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Éire is a bastion of the Church, with many famed warrior-priests who travel to war. An Éire Rangers Warband can include 0-2 Trench Clerics. In addition, Trench Clerics in an Éire Rangers Warband replace the Onward Christian Soldiers ability with the following two abilities:
+* Arise and be Healed! ACTION: An Éire Rangers Trench Cleric can take an Arise and be Healed! ACTION. If they do so, take a Risky Success Roll for the Trench Cleric. If the roll is a Failure, nothing happens, and the Trench Cleric’s Activation ends. If the roll is a Success or Critical Success, pick the Trench Cleric or one friendly model within 3&quot; of the Trench Cleric. The model you pick can stand back up at no cost to their movement, and you can remove up to D3 BLOOD MARKERS and/or INFECTION MARKERS from the model.
+* Away Serpents! ACTION: An Éire Rangers Trench Cleric can take an Away Serpents! ACTION. If they do so, pick 1 enemy model within 12&quot; of the Trench Cleric and say that the Trench Cleric orders them to crawl on their belly like a snake. Then take a Risky Success Roll for the Trench Cleric. Add -1 DICE to the roll if the enemy model is mounted on a base that is 40mm or greater. If the roll is a Failure, nothing happens, and the Trench Cleric’s Activation ends. If the roll is a Success or Critical Success, the enemy model is taken Down.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Light Infantry" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9012-fe5f-5f78-89c6">
+                <profile name="Light Infantry" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9012-fe5f-5f78-89c6">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The warband is allowed to field only one Mechanized Heavy Infantry trooper. No model (save for the single Mechanized Heavy Infantry) may carry a HEAVY weapon or wear Heavy or Machine Armour. This does not apply to Combat Engineers’ Satchel Charges.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The following restrictions apply to an Éire Rangers Warband: 
+It can only include 1 Mechanized Heavy Infantry model but can have up to 4 Combat Engineers and the Limit on Satchel Charges is changed to 4.
+* It cannot include more than 3 models that have a Great Sword/Axe. In addition, Mechanized Heavy Infantry models cannot have a Great Sword/Axe.
+* With the exception of Great Axes, only the Mechanized Heavy Infantry model can have Ranged Weapons and Melee Weapons with the HEAVY Keyword. Combat Engineers can have Satchel Charges.
+* Only Mechanized Heavy Infantry can have Reinforced Armour or Machine Armour.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Fianna" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="154f-8115-36a2-f61a">
+                <profile name="Fianna" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="154f-8115-36a2-f61a">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Any Shocktroopers in an Eire Warband can be made a member of Fianna, the famed warrior-hunters. They cost +10 ducats each and have the Keywords SKIRMISHER and INFILTRATOR.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Fianna are famed warrior-hunters. Shock Troopers in an Éire Rangers Warband can have the INFILTRATOR and SKIRMISHER Keywords for +10 ducats per model.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Anointed Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9775-82ab-5461-70ed">
+                <profile name="Anointed Ammunition" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9775-82ab-5461-70ed">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Models in an Eire Ranger Warband can have Armour-Piercing Bullets (▶ see Battlekit in the Trench Crusade Digital Rulebook) at a cost of 5 Ducats each. The Armour-Piercing Bullets have the Limit: 2 stipulation.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in an Eire Ranger Warband can have Armour-Piercing Bullets (▶ see Battlekit in the Trench Crusade Digital Rulebook) at a cost of 5 Ducats each. The Armour-Piercing Bullets have the Limit: 2 stipulation.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5730,76 +5698,54 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fd07-d2db-4c69-edc6" includeChildSelections="false"/>
               </constraints>
               <profiles>
-                <profile name="Highland Strength" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8b76-b65f-6a20-618f">
+                <profile name="Highland Strength" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8b76-b65f-6a20-618f">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Lieutenant and any Shock Troopers in a Kingdom of Alba Assault Detachment Warband have the STRONG Keyword at no additional cost in Ducats.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Lieutenant and any Shock Troopers in a Kingdom of Alba Assault Detachment Warband have the STRONG Keyword at no additional cost in Ducats.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Rampant Charge" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="307d-830b-4eab-5ed2">
+                <profile name="Rampant Charge" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="307d-830b-4eab-5ed2">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Models in a Kingdom of Alba Assault Detachment Warband have the IGNORE DEFENDED OBSTACLE Keyword.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in a Kingdom of Alba Assault Detachment Warband have the IGNORE DEFENDED OBSTACLE Keyword.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Melee-Focused" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4aed-10a6-26e6-3861">
+                <profile name="Melee-Focused" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4aed-10a6-26e6-3861">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Mechanized Heavy Infantry in a Kingdom of Alba Assault Detachment Warband have a Melee Characteristic of +1 DICE and a Ranged Characteristic of +0 DICE.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Mechanized Heavy Infantry in a Kingdom of Alba Assault Detachment Warband have a Melee Characteristic of +1 DICE and a Ranged Characteristic of +0 DICE.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Brave" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3e73-fdd8-8f60-4ede">
+                <profile name="Brave" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="3e73-fdd8-8f60-4ede">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Add +1 DICE to the Success Rolls for a Morale Check for a Kingdom of Alba Assault Detachment Warband.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add +1 DICE to the Success Rolls for a Morale Check for a Kingdom of Alba Assault Detachment Warband.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Lightly Armoured" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="073d-ef2a-1546-b690">
+                <profile name="Lightly Armoured" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="073d-ef2a-1546-b690">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Only the Lieutenant and Mechanized Heavy Infantry models in a Kingdom of Alba Assault Detachment Warband can have Reinforced Armour or Machine Armour.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Only the Lieutenant and Mechanized Heavy Infantry models in a Kingdom of Alba Assault Detachment Warband can have Reinforced Armour or Machine Armour.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Strained Supply" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="06f8-2c98-360b-bf9d">
+                <profile name="Strained Supply" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="06f8-2c98-360b-bf9d">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Automatic Shotguns, Grenade Launchers, Machine Guns, Sniper Rifles, and Submachine Guns in a Kingdom of Alba have a Limit of 1</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Automatic Shotguns, Grenade Launchers, Machine Guns, Sniper Rifles, and Submachine Guns in a Kingdom of Alba have a Limit of 1.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Celtic Machine Armour" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e863-b9a0-ec7c-7a61">
+                <profile name="Celtic Machine Armour" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e863-b9a0-ec7c-7a61">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Models in a Kingdom of Alba Assault Detachment Warband with Machine Armour have a Charge Bonus of D6&quot; (it is not reduced to D3&quot; by Machine Armour).</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in a Kingdom of Alba Assault Detachment Warband with Machine Armour have a Charge Bonus of D6&quot; (it is not reduced to D3&quot; by Machine Armour).</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Claymore Smiths" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d1ab-3612-a27f-4d18">
+                <profile name="Claymore Smiths" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d1ab-3612-a27f-4d18">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Greatswords cost 7 ducats instead of 12 for models from a Kingdom of Alba Assault Detachment Warband.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Greatswords cost 7 ducats instead of 12 for models from a Kingdom of Alba Assault Detachment Warband.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Bagpipes" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="d5bb-99c8-85ef-adae">
+                <profile name="Bagpipes" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d5bb-99c8-85ef-adae">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">One Musical Instrument in a Kingdom of Alba Assault Detachment Warband can be upgraded to a set of Bagpipes at no additional cost in Ducats. Friendly models within 8&quot; of a model that has a set of Bagpipes have the NEGATE FEAR Keyword.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">One Musical Instrument in a Kingdom of Alba Assault Detachment Warband can be upgraded to a set of Bagpipes at no additional cost in Ducats. Friendly models within 8&quot; of a model that has a set of Bagpipes have the NEGATE FEAR Keyword.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Dum-Dum Ammunition" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8ee7-ff5d-adbc-d9d0">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in a Kingdom of Alba Assault Detachment Warband can have Dum-Dum Bullets (▶ see Battlekit in the Trench Crusade Digital Rulebook) at a cost of 5 ducats each. The Dum-Dum Bullets have the Limit: 3 stipulation.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5919,83 +5865,62 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                       </constraints>
                     </selectionEntry>
                   </selectionEntries>
+                  <profiles>
+                    <profile name="Cold Steel" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="3051-2122-7fb3-a691">
+                      <characteristics>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Halve the cost of a Melee Weapon the first time that is purchased for a Kingdom of Alba Assault Detachment Warband. For example, the first Sword/Axe purchased for a Warband would cost 2 ducats while any further Swords/Axes  would cost 4 ducats each.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Stoßtruppen of the Free State of Prussia" hidden="false" id="440a-e3aa-60d7-7d9c">
               <profiles>
-                <profile name="Lightly-Armoured" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="aedd-a29f-d5e6-41d2">
+                <profile name="Lightly-Armoured" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="aedd-a29f-d5e6-41d2">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Only the Lieutenant and Mechanized Heavy Infantry model in a Stosstruppen of the Free State of Prussia Warband can have Reinforced Armour or Machine Armour.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Only the Lieutenant and Mechanized Heavy Infantry model in a Stosstruppen of the Free State of Prussia Warband can have Reinforced Armour or Machine Armour.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Expert Fireteams" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3c4e-ba16-aefb-606f">
+                <profile name="Expert Fireteams" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="3c4e-ba16-aefb-606f">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">A Stosstruppen of the Free State of Prussia Warband can include up to 3 Fireteams instead of only 2.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Stosstruppen of the Free State of Prussia Warband can include up to 3 Fireteams instead of only 2.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Light Melee" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="08bb-d310-7f89-f059">
+                <profile name="Light Melee" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="08bb-d310-7f89-f059">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Shock Troopers in a Stosstruppen of the Free State of Prussia Warband do not have the Assault Drill ability. They still cost 45 Ducats.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">hock Troopers in a Stosstruppen of the Free State of Prussia Warband do not have the Assault Drill ability. They still cost 45 ducats.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Specialised Equipment" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="72d4-10ad-8eb7-a8f1">
+                <profile name="Specialised Equipment" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="72d4-10ad-8eb7-a8f1">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Submachine Guns in a Stosstruppen of the Free State of Prussia Warband have a Limit of 4, and Automatic Shotguns and Automatic Pistols do not have the ELITE only stipulation. However, Machine Guns in a Stosstruppen of the Free State of Prussia Warband have a Limit of 1, and models cannot have Grenade Launchers or Martyrdom Pills.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Submachine Guns in a Stosstruppen of the Free State of Prussia Warband have a Limit of 4, and Automatic Shotguns and Automatic Pistols do not have the ELITE only stipulation. However, Machine Guns in a Stosstruppen of the Free State of Prussia Warband have a Limit of 1, and models cannot have Grenade Launchers or Martyrdom Pills.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Masters of the Grenade" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="1708-d9eb-00c1-f415">
+                <profile name="Masters of the Grenade" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1708-d9eb-00c1-f415">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Add 4&quot; to the Range of all Grenades used by models from a Stosstruppen of the Free State of Prussia Warband.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add 4&quot; to the Range of all Grenades used by models from a Stosstruppen of the Free State of Prussia Warband.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Rapid Assault" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="60fa-5a76-8da3-9317">
+                <profile name="Rapid Assault" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="60fa-5a76-8da3-9317">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Lieutenant and Shock Troopers in a Stosstruppen of the Free State of Prussia Warband can have the Rapid Assault ability at a cost of +5 Ducats each.
-
-- Rapid Assault Ability: Add +1 DICE to the Risky Success Roll when a model with the Rapid Assault ability takes a Dash ACTION.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Lieutenant and Shock Troopers in a Stosstruppen of the Free State of Prussia Warband can have the Rapid Assault ability at a cost of +5 Ducats each.
+* Rapid Assault Ability: Add +1 DICE to the Risky Success Roll when a model with the Rapid Assault ability takes a Dash ACTION.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Forward Positions" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4f3f-c000-8e12-3278">
+                <profile name="Forward Positions" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4f3f-c000-8e12-3278">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Up to 2 Shock Troopers in a Stosstruppen of the Free State of Prussia Warband can have the INFILTRATOR Keyword at a cost of +10 Ducats each.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Up to 2 Shock Troopers in a Stosstruppen of the Free State of Prussia Warband can have the INFILTRATOR Keyword at a cost of +10 Ducats each.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Troop Selections" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7005-4d4e-ab80-c1b6">
+                <profile name="Troop Selections" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="7005-4d4e-ab80-c1b6">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">A Stosstruppen of the Free State of Prussia Warband must include 2-8 Shock Troopers and cannot include Trench Moles. In addition, it cannot have more than 1 Sniper Priest or 1 Mechanized Heavy Infantry model.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Stosstruppen of the Free State of Prussia Warband must include 2-8 Shock Troopers and cannot include Trench Moles. In addition, it cannot have more than 1 Sniper Priest or 1 Mechanized Heavy Infantry model.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Feldkaplane" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="40f5-ec48-d342-f1d3">
+                <profile name="Feldkaplane" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="40f5-ec48-d342-f1d3">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Trench Clerics in a Stosstruppen of the Free State of Prussia Warband can have 1 dose of Holy Smoke.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Trench Clerics in a Stosstruppen of the Free State of Prussia Warband can have 1 dose of Holy Smoke.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6005,74 +5930,48 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4425-1d31-9f06-8861" includeChildSelections="false"/>
               </constraints>
               <profiles>
-                <profile name="Chewa" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="6da0-ff38-8eed-a28b">
+                <profile name="Chewa" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="6da0-ff38-8eed-a28b">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Chewa are a traditional warrior-elite. Shock Troopers and models with the ELITE Keyword in an Expeditionary Forces of Abyssinia Warband can have the Chewa ability for +5 Ducats each.
-
-
-- Chewa Ability: Add +1 DICE to the Success Roll for a Melee Attack made by a model with the Chewa ability for each other friendly model within 1&quot; of the target, up to a maximum of +2 DICE.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Chewa are a traditional warrior-elite. Shock Troopers and models with the ELITE Keyword in an Expeditionary Forces of Abyssinia Warband can have the Chewa ability for +5 Ducats each.
+* Chewa Ability: Add +1 DICE to the Success Roll for a Melee Attack made by a model with the Chewa ability for each other friendly model within 1&quot; of the target, up to a maximum of +2 DICE.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Holy Warriors" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4caf-5f67-4e82-cc84">
+                <profile name="Holy Warriors" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4caf-5f67-4e82-cc84">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">An Expeditionary Forces of Abyssinia Warband can include 0-1Trench Cleric and 0-2 Holy Warriors. Use the Trench Clerics Warband Entry for Holy Warriors. In addition to the normal rules for a Trench Cleric, a Holy Warrior has the Blessed Psalm and Arise and be Healed! abilities:</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">An Expeditionary Forces of Abyssinia Warband can include 0-1 Trench Cleric and 0-2 Holy Warriors. Use the Trench Clerics Warband Entry for Holy Warriors. In addition to the normal rules for a Trench Cleric, a Holy Warrior has the following abilities:
+* Blessed Psalm ACTION: A Holy Warrior can take a Blessed Psalm ACTION. If they do so, you can remove 1 BLESSED MARKER from the Holy Warrior and place it beside a friendly model. A Success Roll is not required to carry out this Action.
+* Arise and be Healed! ACTION: A Holy Warrior can take an Arise and be Healed! ACTION. If they do so, take a Risky Success Roll for the Trench Cleric. If the roll is a Failure, nothing happens, and the Holy Warrior’s Activation ends. If the roll is a Success or Critical Success, pick the Holy Warrior or 1 friendly model within 3&quot; of the Holy Warrior. The model you pick can stand back up at no cost to their movement, and you can remove up to D3 BLOOD MARKERS and/or INFECTION MARKERS from the model.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Faith of Ethiopia" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="cf86-c95e-a355-5be8">
+                <profile name="Faith of Ethiopia" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="cf86-c95e-a355-5be8">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The sect of the Sniper Priests does not operate in the Solomonic Dynasty, so your warband cannot contain any Sniper Priests.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The sect of the Sniper Priests does not operate in the Solomonic Dynasty. An Expeditionary Forces of Abyssinia Warband cannot include Sniper Priests.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Short-Range Marksmanship" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5965-73d7-8c30-4fdf">
+                <profile name="Short-Range Marksmanship" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5965-73d7-8c30-4fdf">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Add +1 DICE to the Success Rolls for Ranged Attacks made at Short Range by the Lieutenant and any Yeomen in an Expeditionary Forces of Abyssinia Warband, unless the attacking Weapon is a Grenade or has the HEAVY Keyword.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add +1 DICE to the Success Rolls for Ranged Attacks made at Short Range by the Lieutenant and any Yeomen in an Expeditionary Forces of Abyssinia Warband, unless the attacking Weapon is a Grenade or has the HEAVY Keyword.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Weapons of Mobile Warfare" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="508d-e121-32d7-36ab">
+                <profile name="Weapons of Mobile Warfare" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="508d-e121-32d7-36ab">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">An Expeditionary Forces of Abyssinia Warband can have a maximum of 3 Ranged Weapons with the HEAVY Keyword, not counting Satchel Charges.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">An Expeditionary Forces of Abyssinia Warband can have a maximum of 3 Ranged Weapons with the HEAVY Keyword, not counting Satchel Charges.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Vanguard Forces" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4ad7-982b-e2d1-2bf2">
+                <profile name="Vanguard Forces" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4ad7-982b-e2d1-2bf2">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">An Expeditionary Forces of Abyssinia Warband cannot include Trench Moles. Instead, up to 4 Yeomen in an Expeditionary Forces of Abyssinia Warband can have the Flanking ability for +5 Ducats each.
-
-
-- Flanking Ability: When a model with this ability is deployed for the first time in a game, it can be deployed normally in its own deployment zone or in contact with any edge of the battlefield and at least 8&quot; away from any enemy models. Models with this ability are deployed before models with the INFILTRATOR Keyword, but after all other models. If a scenario has a special rule that says that models with the INFILTRATOR Keyword must deploy normally, then models with this ability must also deploy normally.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">An Expeditionary Forces of Abyssinia Warband cannot include Trench Moles. Instead, up to 4 Yeomen in an Expeditionary Forces of Abyssinia Warband can have the Flanking ability for +5 Ducats each.
+* Flanking Ability: When a model with this ability is deployed for the first time in a game, it can be deployed normally in its own deployment zone or in contact with any edge of the battlefield and at least 8&quot; away from any enemy models. Models with this ability are deployed before models with the INFILTRATOR Keyword, but after all other models. If a scenario has a special rule that says that models with the INFILTRATOR Keyword must deploy normally, then models with this ability must also deploy normally.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Abyssinian Healers" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="0b5a-5aa3-7ed5-a176">
+                <profile name="Abyssinian Healers" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="0b5a-5aa3-7ed5-a176">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">An Expeditionary Forces of Abyssinia Warband can include 0-2 Combat Medics and Misericordia have the (Limit: 2) stipulation instead of (Limit: 1).</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">An Expeditionary Forces of Abyssinia Warband can include 0-2 Combat Medics and Misericordia have the (Limit: 2) stipulation instead of (Limit: 1).</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Chieftain Panoply" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5e30-1611-ee61-521f">
+                <profile name="Chieftain Panoply" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5e30-1611-ee61-521f">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Mechanized Infantry of the warband cannot be upgraded to use Machine Armour.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Mechanized Heavy Infantry in an Expeditionary Forces of Abyssinia Warband cannot have Machine Armour.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6091,68 +5990,44 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="The Red Brigade" hidden="false" id="ea95-2310-99f0-6e97">
               <profiles>
-                <profile name="Wear and Tear" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9fb5-a8fc-0b91-acac">
+                <profile name="Wear and Tear" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9fb5-a8fc-0b91-acac">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Red Brigade Warband starts every game with 1 BLOOD MARKER for each 200 full ducats of the total Warband cost. Your opponent can distribute these between your troops, but not can only give 1 BLOOD MARKER per model as long as there are troops with no BLOOD MARKERs left. Max BLOOD MARKERs per model is 2.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Red Brigade Warband starts every game with 1 BLOOD MARKER for each 200 full ducats of the total Warband cost. Your opponent can distribute these between your troops, but not can only give 1 BLOOD MARKER per model as long as there are troops with no BLOOD MARKERs left. Max BLOOD MARKERs per model is 2.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="No Retreat" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f5d3-dd47-0e32-c9a7">
+                <profile name="No Retreat" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f5d3-dd47-0e32-c9a7">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">No member of this Warband can ever leave melee combat voluntarily, except Mercy Dogs and those who they drag along them (see below).</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">No member of this Warband can ever leave melee combat voluntarily, except Mercy Dogs and those who they drag along them (see below).</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Trench Dogs" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f65c-42a1-f89f-cc00">
+                <profile name="Trench Dogs" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f65c-42a1-f89f-cc00">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Red Brigade may buy several different types of Trench Dogs as detailed below.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Red Brigade may buy several different types of Trench Dogs as detailed below.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Glory Hounds" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f293-ff40-03f9-3485">
+                <profile name="Glory Hounds" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f293-ff40-03f9-3485">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Soldiers of New Antioch love heroic stories and improbable tall tales. Any dog that is part of the Red Brigade earns 2 Glory Points instead of 1 when they perform any Glorious Deed.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Soldiers of New Antioch love heroic stories and improbable tall tales. Any dog that is part of the Red Brigade earns 2 Glory Points instead of 1 when they perform any Glorious Deed.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Remember the Fallen" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="980b-6ba6-daad-222c">
+                <profile name="Remember the Fallen" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="980b-6ba6-daad-222c">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">After the battle, instead of taking the Exploration option of Reinforcement Option, the Red Brigade may recover all the weapons, armour and equipment of all the warriors of their own Warband who died in the battle. This does not include Allies &amp; Mercenaries since they are not Blood Pledges.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">After the battle, instead of taking the Exploration option of Reinforcement Option, the Red Brigade may recover all the weapons, armour and equipment of all the warriors of their own Warband who died in the battle. This does not include Allies &amp; Mercenaries since they are not Blood Pledges.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Live off the Land" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e43c-488e-c0d8-a80a">
+                <profile name="Live off the Land" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e43c-488e-c0d8-a80a">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Most of the time the Red Brigade operates deep within hostile territory. When playing campaigns, the Red Brigade cannot call for Reinforcements if it did so after their last game. Instead they must choose the Exploration or Rememeber the Fallen option.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Most of the time the Red Brigade operates deep within hostile territory. When playing campaigns, the Red Brigade cannot call for Reinforcements if it did so after their last game. Instead they must choose the Exploration or Rememeber the Fallen option.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Guns Blazing" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2513-5bb0-3625-f737">
+                <profile name="Guns Blazing" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2513-5bb0-3625-f737">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">It is the tradition of the Brigade officers to pratice the two-pistol fighting style of St. Ernest. Lieutenant of the Warband can buy Gunslinger Skill (see Campaign rules) for the cost of +5 ducats.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">It is the tradition of the Brigade officers to pratice the two-pistol fighting style of St. Ernest. Lieutenant of the Warband can buy Gunslinger Skill (see Campaign rules) for the cost of +5 ducats.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Displeasure of the Church" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="af12-1ba2-d5da-0249">
+                <profile name="Displeasure of the Church" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="af12-1ba2-d5da-0249">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Only few members of the clergy are willing to serve in the unit due the disregard of their lives they show. Your warband can have a maximum of two such characters, so you can have either 1 Trench Cleric and 1 Sniper Priest, or 2 Sniper Priests but no Trench Cleric.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Only few members of the clergy are willing to serve in the unit due the disregard of their lives they show. Your warband can have a maximum of two such characters, so you can have either 1 Trench Cleric and 1 Sniper Priest, or 2 Sniper Priests but no Trench Cleric.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6179,76 +6054,49 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Remnants of Byzantium" hidden="false" id="a911-0ba3-a9f7-17b7">
                   <profiles>
-                    <profile name="Variable Leadership" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="501c-974c-c93f-1be7">
+                    <profile name="Variable Leadership" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="501c-974c-c93f-1be7">
                       <characteristics>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Warband does not have a regular Lieutenant as a leader. You may choose either a Menaulatoi Princeps or a Varangian Warlord to lead your soldiers. Your roster can never contain both at the same time. Should your current leader have died, you may recruit a replacement and choose between the two again.</characteristic>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Warband does not have a regular Lieutenant as a leader. You may choose either a Menaulatoi Princeps or a Varangian Warlord to lead your soldiers. Your roster can never contain both at the same time. Should your current leader have died, you may recruit a replacement and choose between the two again.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile name="Orthodox Patriarch" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2092-3a45-c439-9204">
+                    <profile name="Orthodox Patriarch" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2092-3a45-c439-9204">
                       <characteristics>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Only one Sniper Priest can join the warband at first, but this limit rises to two in games with a threshold of 1200 or more.</characteristic>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Only one Sniper Priest can join the warband at first, but this limit rises to two in games with a threshold of 1200 or more.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile name="Byzantine Battle Order" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="94ef-3265-6af8-798b">
+                    <profile name="Byzantine Battle Order" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="94ef-3265-6af8-798b">
                       <characteristics>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This warband may neither buy Machine Armour, nor field any Mechanized Heavy Infantry or Shock Troopers, nor promote Yeoman to Trench Moles.</characteristic>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This warband may neither buy Machine Armour, nor field any Mechanized Heavy Infantry or Shock Troopers, nor promote Yeoman to Trench Moles.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile name="Cataphract Formations" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="0a55-ca85-bf84-f3d2">
+                    <profile name="Cataphract Formations" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="0a55-ca85-bf84-f3d2">
                       <characteristics>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Two Cataphracti may form one additional FIRETEAM with each other, beyond the two regular ones. A second FIRETEAM between two other Cataphracti may be formed in games with a threshold of 1200 or more.</characteristic>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Two Cataphracti may form one additional FIRETEAM with each other, beyond the two regular ones. A second FIRETEAM between two other Cataphracti may be formed in games with a threshold of 1200 or more.s</characteristic>
                       </characteristics>
                     </profile>
-                    <profile name="Lightly Armoured" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="91df-03cb-7045-706d">
+                    <profile name="Lightly Armoured" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="91df-03cb-7045-706d">
                       <characteristics>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Apart from a Menaulatoi Princeps, no model in the Warband can be equipped with Reinforced Armour.</characteristic>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Apart from a Menaulatoi Princeps, no model in the Warband can be equipped with Reinforced Armour.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile name="Disciplined Fighting Force" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="dbc4-0286-58b2-1e45">
+                    <profile name="Disciplined Fighting Force" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="dbc4-0286-58b2-1e45">
                       <characteristics>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">When failing a Morale Test and choosing to stay in the fight, the onset of Shaken is delayed by one turn. The Remnants do not roll for Morale the following turn and become Shaken instead. If they fail the next Morale Test, they flee as normal.</characteristic>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When failing a Morale Test and choosing to stay in the fight, the onset of Shaken is delayed by one turn. The Remnants do not roll for Morale the following turn and become Shaken instead. If they fail the next Morale Test, they flee as normal.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile name="Divergent Armoury" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="728d-7b05-1cb8-7573">
+                    <profile name="Divergent Armoury" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="728d-7b05-1cb8-7573">
                       <characteristics>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Grenades are LIMIT:2. Incendiary Grenades are replaced by Molotovs for 5 ducats. The warband has no access to Automatic Shotguns, Automatic Pistols, Satchel Charges, or Grenade Launchers, but looting after Heretic assaults raised Automatic Rifles to LIMIT:2.</characteristic>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Grenades are LIMIT:2. Incendiary Grenades are replaced by Molotovs for 5 ducats. The warband has no access to Automatic Shotguns, Automatic Pistols, Satchel Charges, or Grenade Launchers, but looting after Heretic assaults raised Automatic Rifles to LIMIT:2.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile name="On the Move" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="892d-7b46-de44-4684">
+                    <profile name="On the Move" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="892d-7b46-de44-4684">
                       <characteristics>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">For +5 ducats per model, up to four Yeomen or Varangian Guards may be promoted to Vanguards, at any point during the campaign. They can be deployed on any board edge, as long as they are at least 8&quot; away from enemies. This only applies if INFILTRATORS are allowed in the battle. Vanguards are deployed after them. They can also be placed in your own deployment area as per usual.</characteristic>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">For +5 ducats per model, up to four Yeomen or Varangian Guards may be promoted to Vanguards, at any point during the campaign. They can be deployed on any board edge, as long as they are at least 8&quot; away from enemies. This only applies if INFILTRATORS are allowed in the battle. Vanguards are deployed after them. They can also be placed in your own deployment area as per usual.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile name="Longspear Doctrine" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="05a8-d636-2a06-6bce">
+                    <profile name="Longspear Doctrine" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="05a8-d636-2a06-6bce">
                       <characteristics>
-                        <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                        <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                        <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Menaulatoi Princeps and Yeomen treat Short Range as +4&quot; longer than usual.</characteristic>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Menaulatoi Princeps and Yeomen treat Short Range as +4&quot; longer than usual.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
