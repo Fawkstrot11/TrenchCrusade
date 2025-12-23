@@ -1091,11 +1091,23 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
                         <conditionGroup type="and">
                           <conditions>
                             <condition type="notEqualTo" value="1" field="selections" scope="parent" childId="bb5a-15df-dd97-52cb" shared="true"/>
-                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="0084-2122-f8c1-537a" shared="true" includeChildSelections="false"/>
-                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="db8d-f0cf-9959-273f" shared="true" includeChildSelections="false"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="model" childId="579e-2810-d1cf-454b" shared="true"/>
-                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
                           </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="579e-2810-d1cf-454b" shared="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                              </conditions>
+                              <conditionGroups>
+                                <conditionGroup type="and">
+                                  <conditions>
+                                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="0084-2122-f8c1-537a" shared="true" includeChildSelections="false"/>
+                                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="db8d-f0cf-9959-273f" shared="true" includeChildSelections="false"/>
+                                  </conditions>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </conditionGroup>
+                          </conditionGroups>
                         </conditionGroup>
                       </conditionGroups>
                     </conditionGroup>
@@ -4751,6 +4763,27 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a911-0ba3-a9f7-17b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="e16d-0563-0aca-babe" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="or"/>
+                      </conditionGroups>
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="self" childId="db8d-f0cf-9959-273f" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="self" childId="0084-2122-f8c1-537a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
         </profile>
         <profile name="Assault Drill" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="767a-8a41-50ae-1621">
@@ -4794,7 +4827,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Indomitable" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2513-db50-fb6b-e213">
+        <profile name="Indomitable" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="2513-db50-fb6b-e213">
           <characteristics>
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">These warriors are immune to FEAR.</characteristic>
           </characteristics>
@@ -4806,7 +4839,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Weapon Familiarity" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="fd74-ad2b-c80b-3e0b">
+        <profile name="Weapon Familiarity" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="fd74-ad2b-c80b-3e0b">
           <characteristics>
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Varangian Guards ignore the keyword HEAVY on all axes, and treat two-handed axes as having the Shield Combo indicator. They lose Shock Charge if they equip a shield together with a two-handed axe. They can still carry only one HEAVY item, unless they are STRONG.</characteristic>
           </characteristics>
