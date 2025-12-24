@@ -679,7 +679,15 @@
       </profiles>
       <infoLinks>
         <infoLink name="Risky" id="c72d-781c-e31d-d28e" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
-        <infoLink name="Tough" id="91bd-c95c-1b81-6801" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
+        <infoLink name="Tough" id="91bd-c95c-1b81-6801" hidden="false" type="rule" targetId="3c75-701d-e708-1438">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Fear" id="e09c-5bf5-dc63-cf8c" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
         <infoLink name="Cumbersome" id="5714-23f4-28e3-f924" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
         <infoLink name="Ignore Armour" id="8f61-3348-fb48-c7c2" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
@@ -737,10 +745,11 @@
           <modifiers>
             <modifier type="set" value="War Hyena" field="name" affects="profiles.Unit"/>
             <modifier type="set" value="140" field="8d43-33fd-332d-17a6"/>
-            <modifier type="set" value="-2" field="5de9-d70e-9021-6f71" scope="unit" affects="profiles.Unit"/>
+            <modifier type="set" value="-2" field="5de9-d70e-9021-6f71" affects="profiles.Unit"/>
             <modifier type="set" value="War Hyena" field="name"/>
-            <modifier type="set" value="40mm" field="73ae-cc17-596e-0481" scope="unit" affects="profiles.Unit"/>
+            <modifier type="set" value="40mm" field="73ae-cc17-596e-0481" affects="profiles.Unit"/>
             <modifier type="increment" value="1" field="105c-8780-b389-2f18"/>
+            <modifier type="remove" value="914f-0020-0d97-e217" field="category"/>
           </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
@@ -1315,71 +1324,39 @@
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Trench Ghosts" hidden="false" id="eee9-35a4-9eda-70e9">
               <profiles>
-                <profile name="Horror" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b72c-5ef3-e8a1-8570">
+                <profile name="Semi-corporeal" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="dbc1-d8d1-1fed-a2c7">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">All models in the Warband cause FEAR.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE for Injury Rolls caused by Ranged Attacks that hit a model from a Trench Ghost Warband.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Slow" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="fd1e-a345-6501-0bbc">
+                <profile name="Barbed Wire Banshee" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="cb8a-130c-0c1d-607c">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">All models in Trench Ghost warband have a half Dash distance (i.e. 3”), and they suffer -1 DICE to all attacks against models Retreating from Melee combat.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Trench Ghost Warband can include a Barbed Wire Banshee instead of a Chorister. The Barbed Wire Banshee has the same Profile and Cost as a Chorister, but instead of the Unholy Hymns Ability add +1 INJURY DICE to rolls for enemy models that are within 8&quot; of a Barbed Wire Banshee.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Lost Souls" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9114-91ec-d19a-e386">
+                <profile name="Enemies of All" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="bf7b-4fea-79d7-8714">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Since only mortals who have souls become ghosts, this warband may not have any War Wolves or Artillery Witches, since they are artificial beings. In addition, no model in the warband may have a Hellbound Soul Contract or an Infernal Brand Mark. Any model that has one of these pieces of equipment in their base profile will not have it, although its price remains the same.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Trench Ghost Warband cannot include Mercenaries.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Semi-Corporeal" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="725a-28dc-8da5-dd4a">
+                <profile name="Lost Souls" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="cef4-269b-ecd6-1024">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Any Ranged attacks against all models in the Trench Ghost Warband roll injuries with -1 DICE – the undead are hard to kill with bullets! Melee Attacks do not suffer this penalty.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Trench Ghost Warband cannot include models with the ARTIFICIAL Keyword, and models in a Trench Ghost Warband cannot have Hellbound Soul Contracts or Infernal Brands. The Warband can include Anointed Heavy Infantry, but they do not have their Infernal Brand and still cost 95 ducats.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Spectral" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="50f6-0785-3b36-7392">
+                <profile name="Spectral" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="bdd7-971f-f836-fa10">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">All models in the warband ignore movement penalties caused by Difficult Terrain, though they cannot move through any objects/terrain. Dangerous terrain affects them as normal.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in a Trench Ghost Warband ignore the penalty for moving through Difficult terrain (other terrain affects them normally).</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Undead" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c139-9280-6e25-113a">
+                <profile name="Slow" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c070-3eaa-a33f-f290">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">All models in the Trench Ghost warband do not suffer additional BLOOD MARKERS from attacks with the Keyword GAS.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Halve the Movement Characteristic of a Trench Ghost model when they take a Dash ACTION. In addition, add -1 DICE to the Success Roll for an attack made by a Trench Ghost model on an enemy model that is making a Retreat.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Enemies of All" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="dbc1-d8d1-1fed-a2c7">
+                <profile name="Undead Horror" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="6c74-49bd-6371-4cfd">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Trench Ghosts cannot use Mercenaries.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Sarcophagus Mines" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="60ef-93e4-4922-1ada">
-                  <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">At the cost of +30 ducats, up to two of the Troopers can be turned into Sarcophagus Mines. They gain an armour characteristic of -3, but can carry no other weapons or any other items from Armoury. In addition, Whenever an enemy comes within 3” of the Mine, you can trigger a detonation as described below. Alternatively, you can forgo this and explode the mine during your own Activation of the model with a successful RISKY ACTION with +1 DICE.
-
-
-When detonated, the mine explosion is treated as a BLAST 3” weapon targeting the Sargophagus model with Keyword SHRAPNEL. Models within 1” of the Prisoner hit by the explosion roll their injuries with +1 DICE. The Mine itself is taken Out of Action.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in this Warband have the FEAR and NEGATE GAS Keywords.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1388,9 +1365,10 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
               </constraints>
               <infoLinks>
                 <infoLink name="Fear" id="6d70-4b74-fca1-9c10" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
+                <infoLink name="Negate [Keyword]" id="729f-43c4-c35b-cc67" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
               </infoLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Battlefield Looters" id="8c80-7d04-2b96-a3d1" hidden="false">
+                <selectionEntryGroup name="Battlefield Looters" id="8c80-7d04-2b96-a3d1" hidden="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c8e8-20f3-0f9d-685b-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c8e8-20f3-0f9d-685b-max" includeChildSelections="false"/>
@@ -1541,53 +1519,35 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                       </profiles>
                     </selectionEntry>
                   </selectionEntries>
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden"/>
-                  </modifiers>
                   <comment>im not implementing this again, so hiding rather than removing.</comment>
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Heretic Naval Raiders" hidden="false" id="4d05-603e-4b5a-aed4">
               <profiles>
-                <profile name="Close Assault Weapons" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9ef5-9c37-2db2-8bb9">
+                <profile name="Close Assault Weapons" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9ef5-9c37-2db2-8bb9">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The warband can buy Submachine Guns for 25 ducats per weapon.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Submachine Guns cost 25 ducats for a Heretic Naval Raiders Warband.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Unseen Advance" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="be89-20dd-8e06-9309">
+                <profile name="Unseen Advance" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="be89-20dd-8e06-9309">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Up to three models without ELITE Keyword can be upgraded into INFILTRATORS at the cost of 10 ducats per Model</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Up to three models without the ELITE Keyword in a Heretic Naval Raiders Warband can be given the INFILTRATOR Keyword at a cost of +10 ducats each.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Light Troops" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4e2e-e5c2-c100-0a16">
+                <profile name="Light Troops" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4e2e-e5c2-c100-0a16">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The force may only include 0-1 Annointed and 0-1 Artillery Witch.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Heretic Naval Raiders Warband cannot have more than two Anointed models or more than 1 Artillery Witch (even if the Warband has a value of 1,000 ducats or more).</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Let Sleeping Dogs Lie" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2bfc-ba39-b280-debb">
+                <profile name="Let Sleeping Dogs Lie" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2bfc-ba39-b280-debb">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The warband may not include a War Wolf</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2"> This Warband cannot include a War Wolf.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Fast as Lightning" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="84f7-b619-cba1-b824">
+                <profile name="Fast as Lightning" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="84f7-b619-cba1-b824">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">All Models have +1 DICE when taking their Dash ACTIONS.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add +1 DICE to the Risky Success Roll for models from a Heretic Naval Raiders Warband that are taking a Dash ACTION.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1603,52 +1563,45 @@ When detonated, the mine explosion is treated as a BLAST 3” weapon targeting t
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="38f6-437b-f3f3-e4d3" includeChildSelections="false"/>
               </constraints>
               <profiles>
-                <profile name="Debtors to Mammon" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4b0d-65aa-4b45-bacb">
+                <profile name="Mammon&apos;s Chosen" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="0388-f845-438e-c865">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Wretched of the warband are not tied by Mammon’s Chosen rule.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Knights of Avarice Warband cannot include a model if the cost of the model and its Battlekit is less than 80 ducats, unless the model is a Wretched.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Mammon&apos;s Chosen" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="0388-f845-438e-c865">
+                <profile name="Goetic Warlock" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="11ef-3d53-6389-6d76">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Knights of Avarice allow only the wealthiest and the best-equipped candidates to join their ranks. Your force may have no models that cost less than 80 ducats (including their equipment).</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Goetic Warlocks are creations of Mammon. A Knights of Avarice Warband can include up to 1 Goetic Warlock for 110 ducats. The Goetic Warlock is a Mercenary </characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Goetic Warlock" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="11ef-3d53-6389-6d76">
+                <profile name="Infernal Rivalry" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="3a61-fd62-4f66-e489">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Goetic Warlocks are creations of Mammon. This warband may include one for the price of 110 ducats. This Warlock is still a mercenary and obeys all of the rules associated with being a mercenary (such as having fixed equipment and not being able to be promoted to an ELITE throughout the course of a campaign).</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Mammon is a rival of Beleth, who is the Patron of Death Commandos. A Knights of Avarice Warband cannot include Death Commandos.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Infernal Rivalry" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3a61-fd62-4f66-e489">
+                <profile name="Corrupt Merchants" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e4ed-2af9-d2cf-a93a">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Mammon is a rival of Beruth, the great devil of wrath and murder, who is the Patron of Death Commandos. Knights of Avarice may include no Death Commandos.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When you create your starting Warband, you can purchase 1 piece of Battlekit from the New Antioch Armoury, and 1 piece of Battlekit from the Iron Sultanate Armoury. Any stipulations that apply to it must still be followed (so there is little point in taking the Assassin’s Dagger, for example, as it can only be used by Assassins). You can repurchase the Battlekit later during the campaign if it is lost for any reason.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Preserve the Loot" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="260b-e416-8459-c504">
+                <profile name="Gas Bombs" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="08d6-7f43-daaf-f09a">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Knights of Avarice greatly dislike using weapons that could damage the amount of wealth that can be extracted from the fallen. No weapon with the Keyword FIRE or SHRAPNEL can be used by any model in this warband. In addition, the Artillery Witches of this warband use Gas Bombs: They have the Keyword GAS instead of SHRAPNEL and they ignore armour. Injuries caused by a direct hit are rolled with 2D6 and models within a 3” blast radius are rolled with -1 DICE. In a similar vein, their Grenade Launchers have the GAS keyword instead of the SHRAPNEL keyword, have a -1 D to injury rolls and ignore armour</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Artillery Witches in a Knights of Avarice Warband replace their Infernal Bombs with Gas Bombs.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Corrupt Merchants" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="e4ed-2af9-d2cf-a93a">
+                <profile name="Preserve the Loot" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="084f-2d45-4317-119f">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Many merchants, traders and moneylenders within the Faithful nations are followers of Mammon and secretly supply the Knights of Avarice with their wares. When creating the warband, select one weapon, suit of armour or other piece of equipment from the New Antioch Armoury and one such item from the Iron Sultanate Armoury. You can acquire this gear exactly as the warband they come from. Any of these items in question must not be already available to the Heretic Warband. All the same limitations of the original lists apply, so there is little point in taking an Assassin’s Dagger (for example) since it can be only used by Assassins. These two selected additions are available to your warband throughout the campaign</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in a Knights of Avarice Warband cannot have Battlekit that has the FIRE and/or SHRAPNEL Keywords. Grenade Launchers can be taken, but replace the SHRAPNEL Keyword with the -1 INJURY DICE, GAS, and IGNORE ARMOUR Keywords.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Price of Greed" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b7f6-7059-d4be-f20e">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2"> A Heretic Priest in a Knights of Avarice Warband has the following Price of Greed ACTION instead of the Puppet Master ACTION.
+* Price of Greed ACTION: Worldly wealth becomes the target of this curse, gradually crushing its victim under its weight. A Knights of Avarice Heretic Priest can take a Price of Greed ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure, the Knights of Avarice Heretic Priest’s Activation ends immediately. If the roll is a Success or Critical Success, make an Injury Roll for an enemy model that is within 12&quot; of the model taking the Price of Greed ACTION and in its line of sight. Add +1 INJURY DICE to the roll if the Success Roll was a Critical Success, and add +1 DICE to the roll for each -1 INJURY MODIFIER that applies to the target (the -1 INJURY MODIFIER still applies). For example, if the target had Standard Armour with a -1 INJURY MODIFIER, you would add +1 INJURY DICE and a -1 INJURY MODIFIER to the roll.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Worship Mammon" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="63ba-85c9-c89d-122b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Patron of a Knights of Avarice Warband is always Mammon.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2554,13 +2507,6 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
           <categoryLinks>
             <categoryLink targetId="70c9-988d-71a7-7654" id="da3b-7644-0d45-8cca" primary="false" name="Heavy"/>
           </categoryLinks>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Great Sword/Axe" hidden="false" id="84ac-8cad-49fa-ba48" sortIndex="2">
           <costs>
@@ -2579,11 +2525,6 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             <modifier type="set" value="true" field="hidden">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>

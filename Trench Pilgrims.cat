@@ -488,13 +488,6 @@ first BLOOD MARKER placed on the model is ignored.
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0575-d8fa-476d-4a46" includeChildSelections="false"/>
       </constraints>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="parent" childId="1a8c-d998-b42b-9e8b" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Melee (One-Handed)" id="393e-923b-83c6-dd5d" hidden="false" collective="false">
       <selectionEntries>
@@ -1376,6 +1369,7 @@ first BLOOD MARKER placed on the model is ignored.
             <selectionEntry type="upgrade" import="true" name="Holy Icon Shield" hidden="true" id="9263-1e94-1653-cfac">
               <infoLinks>
                 <infoLink name="Holy Icon Shield" id="0b60-8674-f9d3-9ae1" hidden="false" type="profile" targetId="c0ec-55b6-b5ef-09c3"/>
+                <infoLink name="Impervious" id="67cf-af80-91be-a90d" hidden="false" type="rule" targetId="00a9-ddfe-2a2b-078d"/>
               </infoLinks>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
@@ -1453,7 +1447,6 @@ first BLOOD MARKER placed on the model is ignored.
                     <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
                     <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Provides the benefit of cover at all times and a model equipped with a Trench Shield (Nordic) always count as having the defended obstacle bonus when charged.
 
-
 Additionally, a friendly model in base to base contact with a model equipped with a Trench Shield (Nordic) treats the shieldbearer as cover, following the normal rules for cover.</characteristic>
                   </characteristics>
                 </profile>
@@ -1492,9 +1485,6 @@ Additionally, a friendly model in base to base contact with a model equipped wit
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="705a-5247-841d-116c" includeChildSelections="false"/>
           </constraints>
-          <infoLinks>
-            <infoLink name="Impervious" id="67cf-af80-91be-a90d" hidden="false" type="rule" targetId="00a9-ddfe-2a2b-078d"/>
-          </infoLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -3880,182 +3870,115 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Procession of the Sacred Affliction" hidden="false" id="0d88-774c-22af-e2fc">
               <profiles>
-                <profile name="Face Thy Fears" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="bcd9-4d7d-fd27-9fc5">
+                <profile name="Face Thy Fears" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="bcd9-4d7d-fd27-9fc5">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">No model in the Procession of the Sacred Affliction can wear Iron Capirotes. Those troops with Capirotes in their base profile will not have them, though their cost remains the same.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in a Procession of the Sacred Affliction Warband cannot have Iron Capirotes. Ecclesiastic Prisoners in a Procession of the Sacred Affliction Warband do not have Iron Capirotes, but their cost remains the same.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Hammer and the Anvil" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="094b-0da3-d4d8-1979">
+                <profile name="Hammer and the Anvil" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="094b-0da3-d4d8-1979">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Anti-tank Hammers of this warband are not limited to ELITE</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Anti-Tank Hammers taken for a Procession of the Sacred Affliction Warband do not have the (ELITE only) restriction.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Reliquary Armoury" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5f54-da18-cb78-f4ee">
+                <profile name="Reliquary Armoury" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5f54-da18-cb78-f4ee">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">All models of this warband (save for the Anchorite) can buy Holy Icon Shields for 20 ducats, not just ELITE models. In addition, warband models with the ELITE Keyword may acquire Holy Icon Armour (see below).</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Holy Icon Shields cost 20 ducats for a Procession of the Sacred Affliction Warband and do not have the (ELITE only) restriction.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Punishing Millstones" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="aaa4-243f-d998-d366">
+                <profile name="Punishing Millstones" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="aaa4-243f-d998-d366">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">All models in the Procession of the Sacred Affliction (except Ecclesiastic Prisoners who are not worthy) add extra +1 DICE to injury rolls in melee against models that are Down.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add +1 INJURY DICE for Melee Attacks made by models from a Procession of the Sacred Affliction if the target is Down. This special rule does not apply to attacks made by Ecclesiastic Prisoners.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Melee-Focused" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a231-5d63-e5ee-e551">
+                <profile name="Melee-Focused" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="a231-5d63-e5ee-e551">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This warband may not have any Machine Guns and only one Punt Gun.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in a Procession of the Sacred Affliction Warband cannot have any Machine Guns, and Punt Guns have the (Limit: 1) stipulation.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Zealot Strength" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4353-c510-5d4e-63d1">
+                <profile name="Zealot Strength" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4353-c510-5d4e-63d1">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Up to three Trench Pilgrims may purchase the Zealot Strength upgrade.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Up to three Trench Pilgrims and/or Martyr-Penitents in a Procession of the Sacred Affliction Warband can have Zealot Strength instead of only one.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Wrath of God" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="86fd-13bd-28d2-a251">
+                <profile name="Wrath of God" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="86fd-13bd-28d2-a251">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Up to 1 Castigator, or Trench Pilgrim, or Martyr Penitent can have the Wrath of God special rule at a cost of 15 ducats. BLOOD MARKERS are never placed next to a model with the Wrath of God special rule, and it has the NEGATE FEAR Keyword. It cannot be Broken on the Wheel by an Anchorite Shrine. A model with the Wrath of God special rule cannot have Ranged Weapons or Armour (it can have a Shield)</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Up to 1 Castigator, or Trench Pilgrim, or Martyr Penitent can have the Wrath of God special rule at a cost of 15 ducats. BLOOD MARKERS are never placed next to a model with the Wrath of God special rule, and it has the NEGATE FEAR Keyword. It cannot be Broken on the Wheel by an Anchorite Shrine. A model with the Wrath of God special rule cannot have Ranged Weapons or Armour (it can have a Shield).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Cavalcade of the Tenth Plague" hidden="false" id="8b6b-5bd4-c742-bb12">
               <profiles>
-                <profile name="Day of His Wrath" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="0dce-bfc4-58eb-1d8e">
+                <profile name="Day of His Wrath" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="0dce-bfc4-58eb-1d8e">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The War Prophet of this Warband replaces their Laying on Hands ACTION with the following Day of his Wrath ACTION. 
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The War Prophet of this Warband replaces their Laying on Hands ACTION with the following Day of his Wrath ACTION. 
 
-* Day of His Wrath ACTION: A Cavalcade of the Tenth Plague War Prophet can take a Day of his Wrath ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure the War Prophet’s Activation ends immediately. If the roll is a Success, make an Injury Roll with the IGNORE ARMOUR Keyword for 1 enemy model within 3&quot; of the War Prophet. If the roll is a Critical Success, make an Injury Roll with +1 INJURY DICE and the IGNORE ARMOUR Keyword for 1 enemy model within 3&quot; of the War Prophet.</characteristic>
+
+* Day of His Wrath ACTION: A Cavalcade of the Tenth Plague War Prophet can take a Day of his Wrath ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure the War Prophet’s Activation ends immediately. If the roll is a Success, make an Injury Roll with the IGNORE ARMOUR Keyword for 1 enemy model within 3&quot; of the War Prophet. If the roll is a Critical Success, make an Injury Roll with +1 INJURY DICE and the IGNORE ARMOUR Keyword for 1 enemy model within 3&quot; of the War Prophet.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Stolen Communicants" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2869-0005-707a-063a">
+                <profile name="Stolen Communicants" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2869-0005-707a-063a">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Communicants cost 3 Glory Points instead of ducats for this warband due to the difficulty of acquiring and indoctrinating them.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Communicants cost 3 glory to recruit for a Cavalcade of the Tenth Plague Warband (they do not cost any ducats).</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Blood Sacrifice" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="f12b-c290-4800-54ba">
+                <profile name="Heaven Awaits" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="481f-ff6c-c433-5161">
                   <characteristics>
-                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Any model (except Ecclesiastic Prisoners who are not worthy) in the warband can purchase a Sacrificial Lamb.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Cavalcade rejects the doctrine of the Meta-Christ. Trench Pilgrims in a Cavalcade of the Tenth Plague Warband cannot be resurrected as Martyr-Penitents.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Heaven Awaits" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="481f-ff6c-c433-5161">
+                <profile name="The Unclean" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="a9d9-489e-9125-0212">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Cavalcade rejects the doctrine of the Meta-Christ. Their dead Pilgrims cannot be resurrected as Martyr-Penitents.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Cavalcade detests using the unclean Ecclesiastic Prisoners. A Cavalcade of the Tenth Plague Warband can only have 0-2 Ecclesiastic Prisoners</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="The Unclean" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="a9d9-489e-9125-0212">
+                <profile name="Favour of the Lord" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="28fc-4d05-7a78-80a3">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Cavalcade detests using the unclean Ecclesiastic Prisoners and may have only up to two of them.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">At the start of each Turn, you can place 1 BLESSING MARKER next to a model from this Warband.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Favour of the Lord" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="28fc-4d05-7a78-80a3">
+                <profile name="Blood of the Lamb" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="18b1-ea42-892b-6aeb">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">At the start of each turn, you can give any one model in the warband a BLESSING MARKER</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Castigators in a Cavalcade of the Tenth Plague Warband have the TOUGH Keyword at no additional cost in ducats.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="War Pilgrimage of Saint Methodius" hidden="false" id="52bc-6b21-136a-608d">
               <profiles>
-                <profile name="Chaste Order" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="cdda-3af7-349f-a8c7">
+                <profile name="Chaste Order" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="cdda-3af7-349f-a8c7">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">While they revere the holy stigmata of the nuns of the order, the fathers of the monasteries shun the ecstatic revelry of many Trench Pilgrims and insist on modest dress. All Stigmatic Nuns of the warband must wear Standard Armour. In addition, the warband may only have a maximum of three Stigmatic Nuns.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">While they revere the holy stigmata of the Nuns of the order, the fathers of the monastery shun the ecstatic revelry of many Trench Pilgrims and insist on modest dress. All Stigmatic Nuns in a War Pilgrimage of Saint Methodius Warband must have Standard Armour. Additionally, the Warband cannot include more than 3 Stigmatic Nuns.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Anchorite Cloister" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9f25-99b2-4762-022e">
+                <profile name="Anchorite Cloister" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9f25-99b2-4762-022e">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This warband may buy up to two Anchorite Shrines.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A War Pilgrimage of Saint Methodius Warband may include up to two Anchorite Shrines.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Communicant Heresy" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="992f-94f7-30a3-0b0b">
+                <profile name="Communicant Heresy" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="992f-94f7-30a3-0b0b">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Pilgrims of St. Methodius oppose the creation of Communicants and therefore cannot include them in their warbands. This includes Mercenaries.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Pilgrims of Saint Methodius oppose the creation of Communicants. Ammo Monks, Communicants and Communicant Anti-Tank Hunters cannot be included in a War Pilgrimage of Saint Methodius Warband.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Anchorite Armoury" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="2287-33e5-5788-b99c">
+                <profile name="Anchorite Armoury" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2287-33e5-5788-b99c">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This warband may alter the weaponry and equipment of their Anchorites as indicated below. Anchorites of St. Methodius have +0 DICE to their Ranged Characteristic.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Anchorite Shrines in a War Pilgrimage of Saint Methodius Warband have a Ranged Characteristic of +0 DICE instead of -, and can have Anchorite Ranged Weapons from the War Pilgrimage of Saint Methodius Armoury.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Followers of St. Methodius" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="b02a-d2c2-0e43-04dc">
+                <profile name="Followers of St. Methodius" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b02a-d2c2-0e43-04dc">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Patron of the warband is always a Learned Saint.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Patron of a War Pilgrimage of Saint Methodius Warband is always a Learned Saint.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Treasure in Heaven" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="81e7-1ec9-3936-33a3">
+                <profile name="Treasure in Heaven" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="81e7-1ec9-3936-33a3">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Trench Pilgrims of this warband cannot be resurrected as Martyr Penintents.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Trench Pilgrims in a War Pilgrimage of Saint Methodius Warband cannot be resurrected as Martyr Penitents.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Mortal Sin" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="954f-fd6b-c4fd-2585">
+                <profile name="Mortal Sin" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="954f-fd6b-c4fd-2585">
                   <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">No Ecclesiastic Prisoner of the warband may be equipped with a Martyrdom Device and no member of the warband can be Broken on the Wheel.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Gunsmith Monks" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="73cd-43a3-2889-3ce1">
-                  <characteristics>
-                    <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-                    <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-                    <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The warband can buy Machine Guns (LIMIT: 2) at a cost of 50 ducats each, an Automatic Rifle (LIMIT: 1) for 40 ducats and a Submachine Gun (LIMIT: 1) for 30 ducats.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Ecclesiastic Prisoners in a War Pilgrimage of Saint Methodius Warband cannot have a Martyrdom Device, and models in a War Pilgrimage of Saint Methodius Warband cannot be Broken on the Wheel of an Anchorite Shrine.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4066,33 +3989,26 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Children of Yggdrasil" hidden="false" id="65bd-e9b5-eea8-5f65">
                   <profiles>
-                    <profile name="Warrior of the North" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="087c-68ea-c5da-cf0a">
+                    <profile name="Warrior of the North" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="087c-68ea-c5da-cf0a">
                       <characteristics>
-                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Children of Yggdrasil cannot field War Prophets, Communicants or Anchorite shrines, but instead can field Chieftains, Huscarls and Captive Giants respectively.</characteristic>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Children of Yggdrasil cannot field War Prophets, Communicants or Anchorite shrines, but instead can field Chieftains, Huscarls and Captive Giants respectively.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile name="Shieldwall" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="eb7d-c8c9-c9b8-c6b7">
+                    <profile name="Shieldwall" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="eb7d-c8c9-c9b8-c6b7">
                       <characteristics>
-                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Trench shields equipped by the Children of Yggdrasil do not grant armour. Instead, they provide the benefit of cover at all times. Children of Yggdrasil equipped with Trench shields always count as having the defended obstacle bonus when charged.
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Trench shields equipped by the Children of Yggdrasil do not grant armour. Instead, they provide the benefit of cover at all times. Children of Yggdrasil equipped with Trench shields always count as having the defended obstacle bonus when charged.
+
 
 Additionally, a friendly model in base to base contact with a model equipped with a shield treats the shieldbearer as cover, following the normal rules.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile name="Sagas" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="abd2-f992-66f0-ad92">
+                    <profile name="Sagas" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="abd2-f992-66f0-ad92">
                       <characteristics>
-                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Children of Yggdrasil often are granted visions in their dreams of great deeds that must be done to spread the glory of their gods. When you begin or join a campaign, you may choose 3 Sagas to make them Active.
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Children of Yggdrasil often are granted visions in their dreams of great deeds that must be done to spread the glory of their gods. When you begin or join a campaign, you may choose 3 Sagas to make them Active.
 
 
 At the beginning of the game, declare a model that will attempt to complete each active Saga. At the end of the game, each model that completed their Saga’s Task is rewarded the Saga’s Boon. The Saga is then Completed and no longer active or able to be attempted by any other model until the current model with its Boon dies.
+
 
 
 The listed Ducat cost of the Completed saga is added to the model’s ducat cost as if a purchased upgrade, to reflect their newfound power. A model can only have one Saga attached to it at any point, Active or Completed.
@@ -4104,12 +4020,9 @@ Alternatively, you may spend 1 Glory to replace one active Saga with an inactive
 In one off games, 3 Completed Sagas may be bought at the listed Ducat cost as if they were an upgrade for the unit, counting towards ducat threshold as normal.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile name="Pagans" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="3feb-324a-e4b2-8ea0">
+                    <profile name="Pagans" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="3feb-324a-e4b2-8ea0">
                       <characteristics>
-                        <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
-                        <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                        <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">The Children of Yggdrasil cannot purchase or equip Iron Capirotes or Martyrdom pills, but can purchase Combat Helmets for 5 Ducats.</characteristic>
+                        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Children of Yggdrasil cannot purchase or equip Iron Capirotes or Martyrdom pills, but can purchase Combat Helmets for 5 Ducats.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
