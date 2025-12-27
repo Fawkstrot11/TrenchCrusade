@@ -1288,7 +1288,7 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
             </modifier>
           </modifiers>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="71e2-dd0d-424e-9e88" includeChildSelections="true"/>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="71e2-dd0d-424e-9e88" includeChildSelections="true"/>
           </constraints>
           <comment>Sheik&apos;s Favor</comment>
         </selectionEntry>
@@ -2637,6 +2637,35 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
                 <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="ad9c-5f0d-aeef-c3e3" type="selectionEntry" targetId="6298-be97-6c32-1dc2"/>
                 <entryLink import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="false" id="75f5-8485-8bd2-ada7" type="selectionEntry" targetId="d5f6-0471-e4b8-8670"/>
               </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Submachine Gun" hidden="true" id="8e68-1af5-7980-aa8a" collective="false" sortIndex="6">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Submachine Gun" id="84db-8027-dda4-25cf" hidden="false" type="profile" targetId="f366-4889-0ac5-375d"/>
+                <infoLink name="Assault" id="9a1e-5379-ea4d-ecec" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="e62d-c06e-ce35-428b" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="0acf-68d0-c96d-b8a1" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="faad-c780-5e04-f45b" includeChildSelections="true"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Bayonet Lug" hidden="false" id="cb5e-5c73-6053-4e1a" type="selectionEntry" targetId="0abf-e83d-51c2-9235"/>
+              </entryLinks>
+              <comment>Sheikhs Favor</comment>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
