@@ -1821,6 +1821,7 @@
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e134-b94a-cefd-503b"/>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="1203-b33c-33f4-90a1" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -4815,13 +4816,18 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
           <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
         </rule>
       </rules>
-      <modifiers>
-        <modifier type="set" value="Desiccated Husks" field="name">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="Desiccated Husks" field="name"/>
+            <modifier type="set" value="Desiccated Husks" field="name" affects="profiles.Unit"/>
+            <modifier type="set" value="2" field="d823-e8a8-3761-c40e"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Warband Variant" hidden="false" id="8f8d-e167-36d5-dcdf">
       <constraints>
