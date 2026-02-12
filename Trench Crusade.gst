@@ -30,6 +30,7 @@
     <categoryEntry name="Negate Gas" id="d935-8238-a3f7-8ab0" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
     <categoryEntry name="Negate Fear" id="7877-788b-2d58-c844" hidden="false"/>
     <categoryEntry name="Negate Fire" id="f0ef-ba0d-8963-331a" hidden="false"/>
+    <categoryEntry name="Negate Difficult Terrain" id="cf46-8390-3092-66cb" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
   </categoryEntries>
   <costTypes>
     <costType name="Ducats" id="8d43-33fd-332d-17a6" defaultCostLimit="-1"/>
@@ -436,8 +437,8 @@ MARKERS caused by the Keyword FIRE.</description>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL, CUMBERSOME</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Paired Weapon: This Weapon must be taken as a pair of two 1-Handed Melee Weapons (one for each hand). Melee Attacks made with the Paired Weapons do not suffer the Success Roll modifier for making an Off-Hand Attack. If the target is taken Down or Out of Action by a Melee Attack made with the Paired Weapons, you may immediately move the model up to 3&quot;. If the move takes it within 1&quot; another enemy model, it can take another Fight ACTION, but it cannot make the 3&quot; move again if the second attack takes the target Down or Out of Action.</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CLEAVE 2, CRITICAL, CUMBERSOME</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Harrowing Assault: If the target is taken Down or Out of Action by a Melee Attack made with Tartarus Claws, you can immediately move the model up to 3”. You can use this move to move within 1” another enemy model, and if you do so, this model can take another Fight ACTION. However, it cannot make the 3” move if the second attack takes the target Down or Out of Action.</characteristic>
       </characteristics>
     </profile>
     <profile name="Anti-Tank Hammer" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="8df3-f372-20a0-4a59" publicationId="c658-4a10-e1fe-befc" page="115">
