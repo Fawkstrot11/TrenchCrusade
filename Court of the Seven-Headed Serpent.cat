@@ -978,6 +978,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
           <infoLinks>
             <infoLink name="Malebranche Sword" id="f277-4ac2-1446-4e1d" hidden="false" type="profile" targetId="f41a-17c4-1d59-abac"/>
             <infoLink name="Heavy" id="82fa-6769-a15a-6851" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Deadly" id="c206-754c-614f-8693" hidden="false" type="rule" targetId="2a12-c6b9-9232-0584"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -3053,7 +3054,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
                     <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 2)</characteristic>
                     <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
                     <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order for it to cast this spell. If you do so, pick 1 enemy model that has not yet been Activated this Turn, and pick one piece of Equipment that the model has (note it must be Equipment, not a Weapon or Armour etc). The model chews on the Equipment, rendering it unusable for the rest of the game.</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order for it to cast this spell. If you do so, pick 1 enemy model that has not yet been Activated this Turn, and pick one piece of Equipment that the model has (note its Type must be Equipment, not Weapon or Special and so on). Equipment that has the CONSUMABLE Keyword cannot be picked as it has already been consumed, and Equipment that has the DEPLOYABLE Keyword cannot be picked if it is more than 1” away from the model. The model chews on the Equipment, rendering it unusable for the rest of the game.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3253,7 +3254,7 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
                     <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 1)</characteristic>
                     <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                     <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order for it to cast this spell. If you do so, if the next ACTION the spellcaster takes as part of this Activation requires a Success Roll or a Risky Success Roll, that roll is automatically a Success (do not roll any dice).</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You must take a Cast Spell ACTION with the spellcaster in order for it to cast this spell. If you do so, if the next ACTION the spellcaster takes as part of this Activation requires one or more Success Rolls or Risky Success Rolls for any part of it, the first roll is automatically a Success (do not roll any dice)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4939,6 +4940,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
             </modifier>
           </modifiers>
         </infoLink>
+        <infoLink name="Flying" id="bd0d-033e-78d5-4b81" hidden="false" type="rule" targetId="4b63-016a-bd78-52fd"/>
       </infoLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="115"/>
@@ -5042,6 +5044,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </profiles>
       <infoLinks>
         <infoLink name="Fear" id="f2b6-3b69-34c7-6299" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
+        <infoLink name="Flying" id="7ef5-99da-5a70-c9d9" hidden="false" type="rule" targetId="4b63-016a-bd78-52fd"/>
       </infoLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="75"/>
@@ -5238,7 +5241,7 @@ Special effects such as a Cultist’s Unstable may trigger as a result of paying
             <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Spell (Cost 2).</characteristic>
             <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
             <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You can cast this spell when the spellcaster moves into contact with a terrain piece. If you do so, you can interrupt the spellcaster&apos;s move to remove them from the battlefield and then deploy them in contact with another terrain piece more than 1&quot; from any enemy models, unless the spellcaster is making a charge. If the spell is cast during a charge, the spellcaster must deploy closer to the target than it was before it was removed from the battlefield. You can then carry on with the spellcaster&apos;s move as normal. This spell can be used for a normal move or a charge or a retreat, and can be cast more than once during the course of a single ACTION (you must pay its cost each time it is cast). If it is cast as part of a charge, the spellcaster must still start the charge within 12&quot; of the target model, and you will need to take a Risky Success Roll for the spellcaster if they do not have a Line of Sight to the target model.</characteristic>
+            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">You can cast this spell when the spellcaster takes a Move, Dash or Charge Action and moves into contact with a terrain piece. If you do so, you can interrupt the spellcaster&apos;s move to remove them from the battlefield and then deploy them in contact with another terrain piece more than 1&quot; from any enemy models, unless the spellcaster is making a charge. If the spell is cast during a charge, the spellcaster must deploy closer to the target than it was before it was removed from the battlefield. You can then carry on with the spellcaster&apos;s move as normal. This spell can be used for a normal move or a charge or a retreat, and can be cast more than once during the course of a single ACTION (you must pay its cost each time it is cast). If it is cast as part of a charge, the spellcaster must still start the charge within 12&quot; of the target model, and you will need to take a Risky Success Roll for the spellcaster if they do not have a Line of Sight to the target model.</characteristic>
           </characteristics>
         </profile>
         <profile name="Shadow Walker" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="c65a-d1b7-59d9-9d95">
@@ -5901,7 +5904,7 @@ Unlike Yoke Fiends, Cultists can be promoted to ELITE.</characteristic>
         </profile>
         <profile name="Poison Stingers" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c55c-f6f6-7100-7fac">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When a Pit Locust takes a Fight ACTION, it can make two Melee Attacks, one after the other, even though it does not have any Melee Weapons. The first attack is carried out as if it were being made with a Melee Weapon with the SHRAPNEL Keyword. The second attack is carried out as if it were being made with a Melee Weapon with the IGNORE OFF-HAND WEAPON Keyword.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Pit Locust can make a Melee Attack with the CLEAVE 2 and SHRAPNEL Keywords even though it does not have a Melee Weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5909,6 +5912,7 @@ Unlike Yoke Fiends, Cultists can be promoted to ELITE.</characteristic>
         <infoLink name="Reinforced Armour" id="64b2-d015-8f25-fe8c" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
         <infoLink name="Fear" id="a068-0b05-6baa-b3b6" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
         <infoLink name="Shrapnel" id="20f6-cae2-0807-0f60" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+        <infoLink name="Flying" id="0d14-061f-a720-4324" hidden="false" type="rule" targetId="4b63-016a-bd78-52fd"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Crown of Hellfire" hidden="false" id="2ebf-d4d5-a86a-4f13" type="selectionEntry" targetId="1234-6514-2ff2-5b93" sortIndex="3"/>

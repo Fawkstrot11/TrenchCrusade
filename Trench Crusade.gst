@@ -855,8 +855,8 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Abyssal Blade: When you make an Injury Roll for an attack made with this weapon, roll 3D6 and add all 3 dice together. Any +INJURY DICE or -INJURY DICE that applied to the Injury Roll will apply normally, except that you pick the 3 highest or lowest dice in the roll instead of the 2 highest or lowest.</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, DEADLY</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
       </characteristics>
     </profile>
     <profile name="Armour-Piercing Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="90fa-0eaa-3d49-be2c" publicationId="c658-4a10-e1fe-befc" page="118">
