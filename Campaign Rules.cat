@@ -1680,7 +1680,7 @@ The saint guides your troops before each battle. The model with the skull gains 
           <profiles>
             <profile name="Head Wound" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ea74-482d-64c2-1e9c">
               <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This model loses the Keyword ELITE. It can regain it in the future as normal via promotion, representing recovery</characteristic>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This model can no longer gain Experience Points. You can assign Promotion Dice to this model as if it were a Troop in the Promotions and Experience Step. If one of its assigned Promotion Dice rolls a “6”, it regains the ability to gain Experience Points, although the Battle Scar remains.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2107,7 +2107,7 @@ The saint guides your troops before each battle. The model with the skull gains 
               <profiles>
                 <profile name="Knowledge of the Sciences" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4765-472a-18e4-d047">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The limit of one item of Battlekit is increased by 1 if a model with this Skill is part of the Warband. Choose the Battlekit the bonus will apply to and write down your choice on your roster. A Warband can have only one model with this Skill.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The limit of one item of Battlekit (excluding Glory Items) is increased by 1 if a model with this Skill is part of the Warband. Choose the Battlekit the bonus will apply to and write down your choice on your roster. A Warband can have only one model with this Skill.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2895,7 +2895,7 @@ The saint guides your troops before each battle. The model with the skull gains 
               <profiles>
                 <profile name="Logistical Skills" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9eb9-6ae5-90c7-da12">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Warband that includes a model with this Skill can increase any Limits on the number of models it can include by 1, as long as the model does not have the ELITE Keyword and is not mounted on a 50mm or larger base. For example, if the Warband Entry for a model in the Warband had a limit of 0-2, the limit would be increased to 0-3. If the model with this Skill is killed or otherwise removed from the Warband, models in excess of the normal limits can be kept, but new models cannot be added to the Warband in excess of the normal limits.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Warband that includes a model with this Skill can increase any Limits on the number of models it can include by 1, as long as the model does not have the ELITE Keyword, is not mounted on a 50mm or larger base, and is not a Mercenary. For example, if the Warband Entry for a model in the Warband had a limit of 0-2, the limit would be increased to 0-3. If the model with this Skill is killed or otherwise removed from the Warband, models in excess of the normal limits can be kept, but new models cannot be added to the Warband in excess of the normal limits.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3025,11 +3025,11 @@ The saint guides your troops before each battle. The model with the skull gains 
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="331c-0ef1-92a9-ad23" includeChildSelections="false"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Exotic Wares" hidden="false" id="9c77-cebf-4d45-2c4c" sortIndex="2">
+            <selectionEntry type="upgrade" import="true" name="Imported Wares" hidden="false" id="9c77-cebf-4d45-2c4c" sortIndex="2">
               <profiles>
-                <profile name="Exotic Wares" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5f00-a453-cd7a-8217">
+                <profile name="Imported Wares" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5f00-a453-cd7a-8217">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">You can purchase 1 Weapon or 1 suit of Armour from the New Antioch Armoury for a model with this Skill. If this item is lost for any reason during the Campaign, you can repurchase it.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">You can purchase 1 Weapon or 1 suit of Armour from the New Antioch Armoury for a model with this Skill in the following Quartermaster Step. Choose the Weapon or suit of Armour and write down your choice on your Warband Roster. If this item is lost for any reason during the campaign, you can repurchase it.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3037,7 +3037,7 @@ The saint guides your troops before each battle. The model with the skull gains 
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1a56-2f17-eafa-e04a" includeChildSelections="false"/>
               </constraints>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Exotic Wares" id="1a7a-704e-cdf5-70bc" hidden="false">
+                <selectionEntryGroup name="Imported Wares" id="1a7a-704e-cdf5-70bc" hidden="false">
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Automatic Pistol" hidden="false" id="072b-a717-063b-88c5" defaultAmount="1">
                       <constraints>
@@ -3142,7 +3142,7 @@ The saint guides your troops before each battle. The model with the skull gains 
               <profiles>
                 <profile name="Sultan&apos;s Favour" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="946a-dba3-6931-dcd8">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Warband that includes a model with this Skill can increase any limits on the number of models it can include by 1, as long as the model does not have the ELITE Keyword and is mounted on a 50mm or larger base. For example, if the Warband Entry for a model in the Warband had a limit of 0-2, the limit would be increased to 0-3. If the model with this Skill is killed or otherwise removed from the Warband, models in excess of the normal limits can be kept, but new models cannot be added to the Warband in excess of the normal limits. A Warband can only have 1 model with this Skill.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Warband that includes a model with this Skill can increase any Limits on the number of models it can include by 1, as long as the model does not have the ELITE Keyword, is not mounted on a 50mm or larger base, and is not a Mercenary. For example, if the Warband Entry for a model in the Warband had a limit of 0-2, the limit would be increased to 0-3. If the model with this Skill is killed or otherwise removed from the Warband, models in excess of the normal limits can be kept, but new models cannot be added to the Warband in excess of the normal limits. A Warband can only have 1 model with this Skill.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3196,7 +3196,7 @@ The saint guides your troops before each battle. The model with the skull gains 
               <profiles>
                 <profile name="Wings of the Fly" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d8a1-f535-d2a8-e8ce">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A model with this Skill becomes a Flying model. If it can already fly there is no additional effect.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A model with this Skill gains the FLYING Keyword if it doesn’t already have it.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3255,7 +3255,7 @@ The saint guides your troops before each battle. The model with the skull gains 
               <profiles>
                 <profile name="Money can buy Anything" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2d35-38bb-ae07-44da">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Limit on any Battlekit is increased by 1 if a model with this Skill is part of the Warband. A Warband can have only one model with this Skill.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The limit of one item of Battlekit (excluding Glory Items) is increased by 1 if a model with this Skill is part of the Warband. A Warband can have only one model with this Skill.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3683,7 +3683,7 @@ The saint guides your troops before each battle. The model with the skull gains 
           <profiles>
             <profile name="Champion" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="93c1-3860-2560-b0f2">
               <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">After a model with this Skill makes a Melee Attack, it can immediately make a second Melee Attack. Add -1 DICE to the roll for the second attack.</characteristic>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Melee Weapons that do not have the CLEAVE Keyword which are used by a model with the skill gain the CLEAVE 2 Keyword. In addition, add -1 DICE to the Success Roll for the second Melee Attack made with each Melee Weapon that gains the CLEAVE 2 Keyword.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3723,13 +3723,10 @@ The saint guides your troops before each battle. The model with the skull gains 
           <profiles>
             <profile name="Gunslinger" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ff45-2e53-f79a-9c54">
               <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The following rules apply to a model with this Skill if it is armed with Ranged Weapons with the PISTOL Keyword.
-* If it is armed with 2 Weapons with the PISTOL Keyword, it can make a Ranged Attack with one and then immediately make a second Ranged
-Attack with the other. It can use one of the Weapons to make a Melee Attack during the same Activation.
-* If it is armed with 1 Weapon with the PISTOL Keyword, the Weapon
-has the IGNORE OFF-HAND WEAPON Keyword.
-* Add the ASSAULT Keyword to any weapons that have the PISTOL
-Keyword (unless they have it already).</characteristic>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The following rules apply to a model with this Skill if it is armed with Ranged Weapons with the PISTOL Keyword.
+If it is equipped with 2 Weapons with the PISTOL Keyword, it can take a Shoot ACTION with one and then immediately take a Shoot ACTION with the other.
+Add the ASSAULT and IGNORE OFF-HAND WEAPON Keywords to any weapons that have the PISTOL Keyword
+(unless they have them already).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3994,7 +3991,7 @@ Action Rifle, Assault Rifle etc).
           <profiles>
             <profile name="Skill &amp; Expertise" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="3ecd-5401-e50a-cbf8">
               <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add +1 DICE to rolls for a model with this Skill apart from rolls for Ranged or Melee Attacks.</characteristic>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When you give a model this Skill, choose 1 ACTION on that model’s Warband Entry, or 1 Common ACTION apart from Fight or Shoot ACTIONS, and write it on your Warband Roster. Add +1 DICE to rolls made as part of the chosen ACTION when they are taken by this model.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4267,6 +4264,7 @@ Action Rifle, Assault Rifle etc).
             <infoLink name="Tormentor Chain" id="57c8-b1cb-0df5-8045" hidden="false" type="profile" targetId="36d4-9b55-fd0a-150f"/>
             <infoLink name="Shrapnel" id="d494-ee1f-b6f3-429e" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
             <infoLink name="Ignore [Modifier]" id="25a6-e3a9-7af8-5e7d" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+            <infoLink name="Assault" id="d1e0-21a6-f007-d5d8" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="1bc6-fac8-ee95-c426" includeChildSelections="true"/>

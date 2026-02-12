@@ -103,7 +103,7 @@
         </profile>
         <profile name="Lightning Speed" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f6de-266a-b7d9-8541">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When an Observer takes a Fight ACTION, they can make 2 Melee Attacks with their Trench Polearm, one after the other.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">An Observer’s Polearm has the CLEAVE 2 Keyword.</characteristic>
           </characteristics>
         </profile>
         <profile name="Temporal Fugue" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="786d-5f14-e565-4d81">
@@ -121,6 +121,7 @@
         <infoLink name="Medi-kit" id="d110-b1e1-e577-c51b" hidden="false" type="profile" targetId="aa88-1987-505a-13ca"/>
         <infoLink name="Polearm" id="f2d3-4765-e297-a5f6" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
         <infoLink name="Standard Armour" id="be16-e96e-e2c5-788d" hidden="false" type="profile" targetId="6fa6-650d-4136-bc70"/>
+        <infoLink name="Cleave" id="895a-0931-5468-30a9" hidden="false" type="rule" targetId="2da7-e6f3-dc9d-4431"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2129-ccd3-56ef-6bcb" includeChildSelections="true"/>
@@ -167,17 +168,13 @@
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">40mm</characteristic>
           </characteristics>
         </profile>
-        <profile name="Miracle of Regeneration" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e067-a1da-7b23-212e">
-          <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When you Activate a Communicant Anti-Tank Hunter, before you carry out any ACTIONS, you can remove 1 BLOOD MARKER from the model.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Anti-Material Rifle" id="34f0-6d10-4c2e-bed7" hidden="false" type="profile" targetId="50ec-f075-494f-9dc5"/>
         <infoLink name="Combat Helmet" id="960c-e53a-8fa6-4946" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
         <infoLink name="Tough" id="3fed-7557-d6fb-b264" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
         <infoLink name="Strong" id="03d3-9666-edd9-6c47" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
+        <infoLink name="Regenerate" id="8d05-317c-f61f-1492" hidden="false" type="rule" targetId="aa24-5d3a-f4c5-0aab"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="956e-4c42-f303-0aca" includeChildSelections="true"/>
@@ -332,6 +329,7 @@
         <infoLink name="Reinforced Armour" id="f555-14fb-4322-b13f" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
         <infoLink name="Fear" id="97e7-67ff-2e43-bf76" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
         <infoLink name="Critical" id="801b-cab7-9b24-ecde" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+        <infoLink name="Cleave" id="2d92-431e-78a8-97b6" hidden="false" type="rule" targetId="2da7-e6f3-dc9d-4431"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Iron-Clawed Hands" hidden="false" id="36b3-8741-24f6-75da" sortIndex="3">
@@ -340,14 +338,14 @@
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">This does not count as a weapon.</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CLEAVE 2, CRITICAL</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">A Goetic Warlock can make a Melee Attack with the CLEAVE 2 and CRITICAL Keywords even though it does not have a Melee Weapon. In addition, the Off-Hand Weapon modifier applies to the second attack.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a38d-f876-e7d7-d667-min-min" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a38d-f876-e7d7-d667-min-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a38d-f876-e7d7-d667-min-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a38d-f876-e7d7-d667-min-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -1010,9 +1008,7 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
       </costs>
-      <comment>St.Roch are Westfalia&apos;s mercenary.
-
-</comment>
+      <comment>St.Roch are Westfalia&apos;s mercenary.</comment>
       <profiles>
         <profile name="Third Party" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ba8e-b887-69dd-fad3">
           <characteristics>

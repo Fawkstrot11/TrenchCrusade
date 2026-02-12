@@ -1778,7 +1778,7 @@
           <profiles>
             <profile name="Grail Devotee" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="a36b-0ca9-03de-492a">
               <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Up to 2 models can have up to 2 Grail Devotees each. Add +1 INJURY MODIFIER to Injury Rolls for Melee attacks made by the model for each Grail Devotee that it has. Each Grail Devotee can be represented by a model if you wish. Place them adjacent to the model that they are following but note that Grail Devotees are not treated as models for any rules purposes, just move them out of the way if they get in the way of a “proper” model.</characteristic>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Up to 2 models can have up to 2 Grail Devotees each. Add +1 INJURY MODIFIER to Injury Rolls for Melee attacks made by the model for each Grail Devotee that it has. Each Grail Devotee can be represented by a model if you wish. Place them adjacent to the model that they are following but note that Grail Devotees are not treated as models for any rules purposes, just move them out of the way if they get in the way of a “proper” model. Grail Devotees cannot be reallocated unless the model that had them is removed from the Warband Roster</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4127,6 +4127,9 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                   </modifiers>
                 </profile>
               </profiles>
+              <infoLinks>
+                <infoLink name="Flying" id="fe45-b51e-d06b-4ffc" hidden="false" type="rule" targetId="4b63-016a-bd78-52fd"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -4277,6 +4280,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <infoLinks>
         <infoLink name="Fear" id="5b8b-ac8d-3b9a-3829" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
         <infoLink name="Skirmisher" id="7e78-a73f-7313-80d2" hidden="false" type="rule" targetId="6ed7-68e8-34f7-393b"/>
+        <infoLink name="Flying" id="4dbc-9aed-aee4-1020" hidden="false" type="rule" targetId="4b63-016a-bd78-52fd"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Maddening Buzz" hidden="false" id="909e-f461-d379-1619" sortIndex="3">
@@ -4315,11 +4319,6 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Compound Eyes Helmet" hidden="false" id="041f-7a53-9db0-d801" type="selectionEntry" targetId="698c-0858-ccf4-a63d" sortIndex="6">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b60b-55a9-58d3-7d0f" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
-        <entryLink import="true" name="Grail Devotee" hidden="false" id="4514-bb2d-90a1-2ab1" type="selectionEntry" targetId="9bd2-da32-5500-22c7" sortIndex="7">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="38bb-aa00-4284-e173" includeChildSelections="false"/>
           </constraints>
         </entryLink>
         <entryLink import="true" name="Fireteams" hidden="false" id="b661-b35c-9c74-06f0" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
@@ -4629,7 +4628,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Crushing Blows" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="25bc-e870-f2a0-877a">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Lord of Tumours can make a Crushing Blows Melee Attack instead of using any Melee Weapons that it has. If does so, it can attack twice and the Off-Hand modifier does not apply to the second attack.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Lord of Tumours can make a Crushing Blows Melee Attack even if it does not have any Melee Weapons, or instead of using any Melee Weapons that it has. If it does so, this Melee Attack has the CLEAVE 2 Keyword.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4840,7 +4839,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <profiles>
                 <profile name="The Executor" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4d6f-c4e0-b73d-a4d4">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Dirge of the Great Hegemon Warband must include 1 Executor. The Executor uses the Plague Knight Warband Entry, except that it has a Ranged Characteristic of +1 DICE and the TOUGH Keyword, and has a cost of 80 ducats. The Warband can still include 0-2 Plague Knights.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Dirge of the Great Hegemon Warband must include 1 Executor. The Executor uses the Plague Knight Warband Entry, except that it has a Ranged Characteristic of +1 DICE and the LEADER and TOUGH Keywords, and has a cost of 80Ducats. The Warband can still include 0-2 Plague Knights.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Hegemon&apos;s Will" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1869-52af-1fa8-024e">

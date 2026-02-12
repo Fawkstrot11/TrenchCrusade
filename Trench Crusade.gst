@@ -30,6 +30,8 @@
     <categoryEntry name="Negate Gas" id="d935-8238-a3f7-8ab0" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
     <categoryEntry name="Negate Fear" id="7877-788b-2d58-c844" hidden="false"/>
     <categoryEntry name="Negate Fire" id="f0ef-ba0d-8963-331a" hidden="false"/>
+    <categoryEntry name="Regenerate 1" id="cf46-8390-3092-66cb" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
+    <categoryEntry name="Negate Difficult Terrain" id="716a-84dc-1167-5c6c" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
   </categoryEntries>
   <costTypes>
     <costType name="Ducats" id="8d43-33fd-332d-17a6" defaultCostLimit="-1"/>
@@ -78,7 +80,7 @@
       <description>Ranged Attacks made with Weapons that have this Keyword do not prevent a model from Charging or making a Melee Attack during the same Activation.</description>
     </rule>
     <rule name="Blast" id="263d-6520-5629-c027" hidden="false" publicationId="c658-4a10-e1fe-befc" page="12">
-      <description>A Ranged Weapon with BLAST (X”) has a blast radius in inches equal to X (including vertically). When you make an attack with the Weapon, you must pick a target point for the attack. The target point can either be a point on the Battlefield or an enemy model; whichever you choose must be within the attacking model’s Line of Sight and the Weapon’s range. If the Success Roll for the attack is a Failure, the attack misses and nothing happens unless the weapon also has the SCATTER Keyword. If the Success Roll for the attack is a Success or Critical Success, make an Injury Roll for every model within the Weapon’s blast radius as long as a line of sight exists between the model and the target point. Note that the Shooting into Melee rule does not apply to a BLAST (models within the blast radius are automatically hit whether they are within 1&quot; of an enemy model or not). If you roll a Critical Success, you only add +1 INJURY DICE to the roll for a model if it was chosen as the target point of the attack.</description>
+      <description>A Ranged Weapon with BLAST (X”) has a blast radius in inches equal to X (including vertically). When you make an attack with the Weapon, you must pick a target for the attack. The target can either be an enemy model or a visible point on the battlefield or on a terrain piece; whichever you choose must be within the attacking model’s Line of Sight and the Weapon’s range. If the Success Roll for the attack is a Failure, the attack misses and nothing happens unless the weapon also has the SCATTER Keyword (&gt; see SCATTER). If the Success Roll for the attack is a Success or Critical Success, every model that has a Line of Sight to the target of the attack and which is within the Weapon’s blast radius is hit. In addition, friendly models that are within 1” of an enemy model that was hit by the blast radius are also hit. Measure the blast radius from the centre of the target model’s base, or the centre of the visible point you picked, to the closest point on the other model’s base. Make an Injury Roll for every model that was hit. If you roll a Critical Success, only add the extra INJURY DICE to the roll for a model if it was chosen as the target of the attack</description>
     </rule>
     <rule name="Consumable" id="e98d-4bd1-3870-27b9" hidden="false" page="12" publicationId="c658-4a10-e1fe-befc">
       <description>n a Campaign, Battlekit with this Keyword is lost at the end of a game in which it is used.</description>
@@ -109,10 +111,10 @@
 Keyword. Models that cause FEAR are immune to FEAR themselves.</description>
     </rule>
     <rule name="Strong" id="6297-d0e0-1935-5cfd" hidden="false">
-      <description>A model with this Keyword is not affected by Battlekit with the Keyword HEAVY. In addition, it can use one 2-Handed Melee Weapon as if it were a 1-Handed Melee Weapon.</description>
+      <description>A model with this Keyword is not affected by Battlekit with the Keyword HEAVY. In addition, it can equip and use one 2-Handed Melee Weapon as if it were a 1-Handed Melee Weapon.</description>
     </rule>
     <rule name="Risky" id="df23-62bc-775e-fca1" hidden="false">
-      <description>If you must make a Success Roll for a model that is using a piece of Battlekit that has this Keyword, then the Success Roll becomes a Risky Success Roll (the model’s Activation will end if the Success Roll is a Failure). For example, the Success Roll for an attack made with a Weapon that has the RISKY Keyword would become a Risky Success Roll. This Effect is ignored if the Success Roll is already a Risky Success Roll.</description>
+      <description>If you must make a Success Roll for a model that is using a piece of Battlekit that has this Keyword, then the Success Roll becomes a Risky Success Roll (the model’s Activation or ACTION will end if the Risky Success Roll is a Failure). For example, the Success Roll for an attack made with a Weapon that has the RISKY Keyword would become a Risky Success Roll. This Effect is ignored if the Success Roll is already a Risky Success Roll.</description>
     </rule>
     <rule name="Infection Markers" id="884b-d2e7-31a6-f0b7" hidden="false">
       <description>Some attacks by the weaponry of the Black Grail causes their opponents to suffer INFECTION MARKERS. These work exactly like BLOOD MARKERS, except if a model has one or more INFECTION MARKERS when activated, it gains + 1 INFECTION MARKER.
@@ -121,7 +123,7 @@ Keyword. Models that cause FEAR are immune to FEAR themselves.</description>
 INFECTION MARKERS can be used to modify dice rolls exactly like BLOOD MARKERS. Use a different coloured dice (the more disgusting the better!) to indicate these markers and place them next to the infected model. A model may have up to six INFECTION MARKERS and six BLOOD MARKERS at the same time. If a model had any INFECTION MARKERS before, but has none when it is Activated, no new ones are added to the model – though it can still be re-infected by further attacks!</description>
     </rule>
     <rule name="Skirmisher" id="6ed7-68e8-34f7-393b" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13">
-      <description>If an enemy selects a model with this Keyword as the target of a Charge, you can choose to evade with your model before the Charge is made, as long as your model is not within 1&quot; of an enemy. When a model evades, roll a D3 and move the model that many inches. It must finish this move more than 1&quot; away from all enemy models.</description>
+      <description>If an enemy selects a friendly model with this Keyword as the target of a charge, you can choose to evade with your model before the charge is made, as long as your model is not within 1” of an enemy. When a model evades, roll a D3 and move the model that many inches. It must finish this move more than 1” away from all enemy models. If the move results in there being an interposing model between the evading model and the model that is making the charge, then the charging model must choose the interposing model as the target for its charge.</description>
     </rule>
     <rule name="Demonic" id="e1d1-9534-0d38-b1e8" hidden="false" publicationId="c658-4a10-e1fe-befc" page="12">
       <description>Due to their infernal origins, a model with this Keyword ignores any additional BLOOD
@@ -134,10 +136,10 @@ MARKERS caused by the Keyword FIRE.</description>
       <description>Add +1 DICE to Morale Checks if your Warband has at least 1 model with this Keyword on the battlefield that is not Down or Out of Action.</description>
     </rule>
     <rule name="Armour Piercing" id="ba7a-64b6-e87b-0ecd" hidden="false">
-      <description>A Weapon with this Keyword reduces the target’s total -INJURY MODIFIER from its Armour and/or Shields by 1, to a minimum of 0. For example, if a target had Standard Armour and a Trench Shield, the -INJURY MODIFIER would be lowered from -2 to -1.</description>
+      <description>A Weapon with this Keyword reduces the target’s total -INJURY MODIFIER from its Armour Characteristic, and/or any Armour or Shields it has, by 1, to a minimum of 0. For example, if a target had Standard Armour and a Trench Shield, the -INJURY MODIFIER would be lowered from -2 to -1.</description>
     </rule>
     <rule name="Automatic" id="c435-c893-2c72-e7c6" hidden="false">
-      <description>You can make a number of Ranged Attacks with this weapon equal to X, one after another. The attacks can target different enemy models, as long as they are all within 6&quot; of each other. Resolve each attack one at a time using steps 2 to 6 of the Ranged Attack Sequence. Any BLOOD MARKERS that are spent only modify the Injury Roll for the attack they are spent on, and do not modify Injury Rolls for subsequent attacks.</description>
+      <description>When you take a Shoot ACTION with a Ranged Weapon that has this Keyword, you can make a number of Ranged Attacks with this weapon equal to X, one after another. The attacks can target different enemy models, as long as they are all within 6&quot; of each other. Resolve each attack one at a time using steps 2 to 6 of the Ranged Attack Sequence. Any BLOOD MARKERS that are spent only modify the Injury Roll for the attack they are spent on, and do not modify Injury Rolls for subsequent attacks.</description>
     </rule>
     <rule name="Blessed" id="269c-81bd-f64b-737f" hidden="false">
       <description>When you deploy a model with this Keyword for the first time in a game, place a number of BLESSING MARKERS beside the model equal to X</description>
@@ -146,7 +148,7 @@ MARKERS caused by the Keyword FIRE.</description>
       <description>Add -1 DICE for Melee Attacks targeting a model with this Keyword, or that has a Weapon that has this Keyword, if the attacker made a Charge ACTION before making the attack this round.</description>
     </rule>
     <rule name="Fireteam" id="a3e2-4af7-ab99-e6b1" hidden="false">
-      <description>A model with this Keyword is part of a group of two models, both of which must have the FIRETEAM Keyword. Record which models are in Fireteams in your Warband on your Warband Roster. If you have more than one Fireteam, each must be given its own name. For example, you might say Carl and Gustav are in Fireteam 1 (or Alpha, or Swift Death), while Birgit and Ottokar are in Fireteam 2 (or Gamma, or Crushing Blow). Models that are part of the same Fireteam are Activated simultaneously. They can take their ACTIONS in any order you wish, and you can switch between the two models freely. However, if the Activation of either member of the Fireteam ends (due to a failed Risky Success Roll for example), it immediately ends for the other model that is in the Fireteam too.</description>
+      <description>A model with this Keyword is part of a group of two models, both of which must have the FIRETEAM Keyword. Record which models are in Fireteams in your Warband on your Warband Roster. If you have more than one Fireteam, each must be given its own name. For example, you might say Carl and Gustav are in Fireteam 1 (or Alpha, or Swift Death), while Birgit and Ottokar are in Fireteam 2 (or Gamma, or Crushing Blow). Models that are part of the same Fireteam are Activated simultaneously. They can take their ACTIONS in any order you wish, and you can switch between the two models freely. However, if the Activation of either member of the Fireteam ends (due to a failed Risky Success Roll for example), it immediately ends for the other model that is in the Fireteam too. A model cannot be in more than 1 Fireteam.</description>
     </rule>
     <rule name="Flamethrower" id="78ca-3b42-f65a-3db6" hidden="false">
       <description>When a Weapon with this Keyword is used to make a Ranged Attack it is automatically a Success. Do not make a Success Roll for the attack. Note that this means that the attack cannot achieve a Critical Success.</description>
@@ -173,7 +175,7 @@ MARKERS caused by the Keyword FIRE.</description>
       <description>If a model makes an attack with a Weapon that has this Keyword then its Activation ends after the ACTION that allowed the attack is completed.</description>
     </rule>
     <rule name="Scatter" id="9ee3-1276-01cc-fefb" hidden="false">
-      <description>Some Weapons with the BLAST Keyword also have the SCATTER Keyword. When you make an attack with the Weapon, pick a target point or model and carry out the attack as described in the rules for BLAST. However, if the Success Roll for the attack was a Failure, the target point will scatter instead of missing. To see where it scatters to, subtract the Success Roll from 7. For example, if the Success Roll was 4, then the target point would scatter (7 - 4 =) 3&quot;. Move the target point that many inches in a direction chosen by your opponent, and then make an Injury Roll for every model that is within the Weapon’s blast radius of the target point.</description>
+      <description>Some Weapons with the BLAST Keyword also have the SCATTER Keyword. When you make an attack with the Weapon, pick a target and carry out the attack as described in the rules for BLAST. However, if the Success Roll for the attack was a Failure, the attack will scatter instead of missing. To see where it scatters to, subtract the Success Roll from 7. For example, if the Success Roll was 4, then the target point would scatter (7–4=) 3”. Your opponent must move the attack exactly that many inches in a direction of their choice, to a point on the battlefield, on a terrain piece, or on the base of a model. There must be Line of Sight between the point that is chosen and the original target for the attack. If this is impossible for any reason, then treat the attack as a miss. Then, determine who is hit as described in the rules for BLAST.</description>
     </rule>
     <rule name="Shotgun" id="d313-4a6e-389b-eb38" hidden="false">
       <description>Add -1 INJURY DICE to rolls for attacks made at Long Range with a Weapon that has this Keyword instead of the usual Long Range modifier (-1 DICE).</description>
@@ -186,6 +188,24 @@ MARKERS caused by the Keyword FIRE.</description>
     </rule>
     <rule name="+/- Injury Modifier" id="3f79-aee7-2c3d-828f" hidden="false">
       <description>Modifiers that are applied to the result of an Injury Roll. If the Keyword applies to a Weapon, the modifier is only added to Injury Rolls for Attacks made with it.</description>
+    </rule>
+    <rule name="Flying" id="4b63-016a-bd78-52fd" hidden="false">
+      <description>When you make a move, retreat move or charge move with a model with this Keyword, you can measure the path on which it travels ‘through the air’. It must end the move on the battlefield or on a terrain piece. You must still take a Risky Success Roll for the model if it is Activated or ends its move on Dangerous terrain, and it cannot end its move on Impassable terrain. In addition do not make an Injury Roll if a model with this Keyword Falls.</description>
+    </rule>
+    <rule name="Regenerate" id="aa24-5d3a-f4c5-0aab" hidden="false">
+      <description>When you Activate a model with this Keyword, before carrying out any ACTIONS, you can remove up to X BLOOD MARKERS from the model.</description>
+    </rule>
+    <rule name="Ammunition (Keyword)" id="9a05-7b7b-6023-5523" hidden="false">
+      <description>If a model has a piece of Battlekit with this Keyword, it will use it in the next game that it takes part in. When the model is deployed, say which Ranged Weapon the Battlekit will be used for. It gains the (KEYWORD) until the end of the game. The Ranged Weapon you choose cannot have the BLAST, FIRE, GAS, or SHRAPNEL Keywords, and cannot have more than one type of AMMUNITION.</description>
+    </rule>
+    <rule name="Cleave" id="2da7-e6f3-dc9d-4431" hidden="false">
+      <description>When you take a Fight ACTION with a Weapon that has this Keyword, you can make a number of Melee Attacks with this weapon equal to X, one after another. The attacks can target different enemy models, as long as they are all within 1” of the model taking the Fight ACTION. Resolve each attack one at a time, using steps 2 to 4 of the Melee Attack Sequence. Any BLOOD MARKERS that are spent only modify the Injury Roll for the attack they are spent on, and do not modify Injury Rolls for subsequent attacks.</description>
+    </rule>
+    <rule name="Deadly" id="2a12-c6b9-9232-0584" hidden="false">
+      <description>When you make an Injury Roll for an attack made with a weapon with this Keyword, roll 3D6 and add all 3 dice together. Any +INJURY DICE or INJURY DICE are added to the roll normally, except that you pick the 3 highest or lowest dice in the roll instead of the 2 highest or lowest.</description>
+    </rule>
+    <rule name="Deployable" id="c458-a331-5541-0ad9" hidden="false">
+      <description>Battlekit that is represented by a model or terrain piece that can be set up during the game.</description>
     </rule>
   </sharedRules>
   <publications>
@@ -436,8 +456,8 @@ MARKERS caused by the Keyword FIRE.</description>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL, CUMBERSOME</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Paired Weapon: This Weapon must be taken as a pair of two 1-Handed Melee Weapons (one for each hand). Melee Attacks made with the Paired Weapons do not suffer the Success Roll modifier for making an Off-Hand Attack. If the target is taken Down or Out of Action by a Melee Attack made with the Paired Weapons, you may immediately move the model up to 3&quot;. If the move takes it within 1&quot; another enemy model, it can take another Fight ACTION, but it cannot make the 3&quot; move again if the second attack takes the target Down or Out of Action.</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CLEAVE 2, CRITICAL, CUMBERSOME</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Harrowing Assault: If the target is taken Down or Out of Action by a Melee Attack made with Tartarus Claws, you can immediately move the model up to 3”. You can use this move to move within 1” another enemy model, and if you do so, this model can take another Fight ACTION. However, it cannot make the 3” move if the second attack takes the target Down or Out of Action.</characteristic>
       </characteristics>
     </profile>
     <profile name="Anti-Tank Hammer" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="8df3-f372-20a0-4a59" publicationId="c658-4a10-e1fe-befc" page="115">
@@ -592,16 +612,16 @@ MARKERS caused by the Keyword FIRE.</description>
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
-        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Incendiary: When this Battlekit is taken, you must choose 1 Ranged Weapon that the model already has that does not have the BLAST, FIRE, GAS, or SHRAPNEL Keywords. The Weapon gains the FIRE Keyword.</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE, AMMUNITION (FIRE)</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062"/>
       </characteristics>
     </profile>
     <profile name="Tracer Bullets" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="37d1-6c76-e847-8a7a" publicationId="c658-4a10-e1fe-befc" page="119">
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
-        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Tracers: When this Battlekit is taken, you must choose 1 Ranged Weapon that the model already has that does not have the BLAST, FIRE, GAS, or SHRAPNEL Keywords. The Weapon gains the +1 DICE Keyword.</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE, AMMUNITION (+1 DICE)</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062"/>
       </characteristics>
     </profile>
     <profile name="Sniper Scope" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5a48-9735-499f-e394" publicationId="c658-4a10-e1fe-befc" page="119">
@@ -672,7 +692,7 @@ MARKERS caused by the Keyword FIRE.</description>
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">DEPLOYABLE</characteristic>
         <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Shrine: After you deploy a model that has Field Shrine, you must set up a Field Shrine terrain piece in the model’s deployment zone. The Field Shrine terrain piece must be at least ½&quot; tall and mounted on a 40mm base. The Field Shrine is Impassable terrain and cannot be picked up or moved in any way. In the Morale Phase, each friendly Field Shrine on the battlefield adds 3 to the number of models you have in your Warband that are not Down or Out of Action, up to a maximum bonus of 9 extra models.
 
 Tear It Down!: Models can attack a Field Shrine as if it were an enemy model. If it is hit by an attack or is in the blast radius of an attack made with a Weapon that has the BLAST Keyword, it is removed from the battlefield and crossed off the Warband Roster (no Injury Roll is required).</characteristic>
@@ -714,11 +734,10 @@ Tear It Down!: Models can attack a Field Shrine as if it were an enemy model. I
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">10&quot;</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">IGNORE COVER, IGNORE LONG RANGE, SHRAPNEL</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, IGNORE COVER, IGNORE LONG RANGE, SHRAPNEL</characteristic>
         <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Dragged Forwards: If an attack made with a Tormentor Chain is a Success or Critical Success, do not make an Injury Roll for the target. Instead, place 1 BLOOD MARKER next to the target, and then place a second BLOOD MARKER on the target because the Tormentor Chain has the SHRAPNEL Keyword. After placing the BLOOD MARKERS, you can move the target model up to 12&quot; in a straight line, but you must move it so that it finishes the move as close as possible to the attacking model.
 
-Deadly Embrace: Enemy models cannot retreat if they are within 1&quot; of a model
-with a Tormentor Chain.</characteristic>
+Deadly Embrace: Enemy models cannot retreat if they are within 1&quot; of a model with a Tormentor Chain.</characteristic>
       </characteristics>
     </profile>
     <profile name="Infested Rifle" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="088f-02cb-55b8-4bda" publicationId="c658-4a10-e1fe-befc" page="76">
@@ -837,16 +856,16 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Abyssal Blade: When you make an Injury Roll for an attack made with this weapon, roll 3D6 and add all 3 dice together. Any +INJURY DICE or -INJURY DICE that applied to the Injury Roll will apply normally, except that you pick the 3 highest or lowest dice in the roll instead of the 2 highest or lowest.</characteristic>
+        <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">HEAVY, DEADLY</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
       </characteristics>
     </profile>
     <profile name="Armour-Piercing Ammunition" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="90fa-0eaa-3d49-be2c" publicationId="c658-4a10-e1fe-befc" page="118">
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
-        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Armour-Piercing: When this Battlekit is taken, you must choose 1 Ranged Weapon that the model already has that does not have the BLAST, FIRE, GAS, or SHRAPNEL Keywords. The Weapon gains the ARMOURPIERCING Keyword.</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE, AMMUNITION (ARMOUR-PIERCING)</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062"/>
       </characteristics>
     </profile>
     <profile name="Blessed Icon" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ddb0-3689-bc81-7162" publicationId="c658-4a10-e1fe-befc" page="120">
@@ -902,7 +921,7 @@ with a Tormentor Chain.</characteristic>
         <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
         <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
         <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">BLAST 3&quot;, HEAVY, SCATTER</characteristic>
-        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Echoing Blast: When you make an Injury Roll for a model that was the target and hit by an M.U.R.A.D. Bombard, or if the attack scattered and the target point was on the model’s base, roll 3D6 and add all 3 dice together. Any +INJURY DICE or -INJURY DICE that applied to the Injury Roll will apply normally, except that you pick the 3 highest or lowest dice in the roll instead of the 2 highest or lowest. All other models caught in the M.U.R.A.D. Bombard’s blast radius are taken Down but do not suffer any other injuries (do not make an Injury Roll for them).</characteristic>
+        <characteristic name="Rules" typeId="87f0-637b-734a-22eb">If the Success Roll for a Ranged Attack with an M.U.R.A.D Bombard that targets an enemy model is a Success or a Critical Success, or if the attack is a Failure and the target point scatters onto a model’s base, apply the effect of the DEADLY Keyword to the Injury Roll for that model. All other models caught in the M.U.R.A.D. Bombard’s blast radius, or that are in the M.U.R.A.D. Bombard’s blast radius if it did not hit the target model or scatter onto a model’s base, are taken Down (do not make an Injury Roll for them)</characteristic>
       </characteristics>
     </profile>
     <profile name="Flame Cannon" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="ac5c-14a9-8462-8ddd">
@@ -949,8 +968,8 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
-        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Adds +1 DICE to Ranged Attack rolls on the Action Success Chart. Can only be used with Jezzails, Alaybozan, Halberd-Guns and Siege Jezzails.</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">AMMUNITION (+1 DICE)</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Alchemical Ammunition can only be used with an Alaybozan, Halberd-Gun, Jezzail or Siege Jezzail (even though the Alaybozan has the SHRAPNEL Keyword). In a campaign, you cannot reallocate Alchemical Ammunition to another model.</characteristic>
       </characteristics>
     </profile>
     <profile name="Cloak of Alamut" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="fc84-ca32-2672-c684">
@@ -1007,8 +1026,8 @@ Shovel: A model equipped with a Shovel that starts the game on Open terrain has 
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
-        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Dum-Dums: When this Battlekit is taken, you must choose 1 Ranged Weapon that the model already has that does not have the BLAST, FIRE, GAS, or SHRAPNEL Keywords. The Weapon gains the CRITICAL Keyword</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE, AMMUNITION (CRITICAL)</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062"/>
       </characteristics>
     </profile>
     <profile name="Black Spot Rifle" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="e476-2dae-7eb7-f469">

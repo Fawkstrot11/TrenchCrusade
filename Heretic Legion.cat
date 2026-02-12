@@ -196,7 +196,7 @@
               <profiles>
                 <profile name="Puppet Master" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="7b33-345f-cdc7-913e">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Select a target model, friend or foe (including the Priest), within 12”. As a RISKY ACTION you can move the model D6” in any one direction, including forcing it to jump/fall down or enter into melee combat with any enemy model (as if it had Charged), or leave Combat (as if it had Retreated, including granting any enemies within range free attacks).</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Heretic Priest can take a Puppet Master ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure, the Heretic Priest’s Activation ends immediately. If the roll is a Success or Critical Success, pick 1 model (friend or foe) that is within 12” of the Heretic Priest and in their Line of Sight, apart from the Heretic Priest themselves. You can move the model D6”. The move must be in a straight line, but can be in any direction, and can be used to make the model move within 1” of an enemy, make a retreat move, Climb, Jump, or Jump Down. The model cannot make a Diving Charge and does not count as charging if it finishes the move within 1” of an enemy model.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -390,7 +390,7 @@
         </profile>
         <profile name="Stealth Generator" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1110-b5e7-9966-1383">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 DICE to Ranged Attacks that target a Death Commando.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 DICE to rolls for Ranged Attacks that target a Death Commando.</characteristic>
           </characteristics>
         </profile>
         <profile name="Hide" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1191-44c6-b786-d49d">
@@ -723,6 +723,7 @@
         <categoryLink targetId="914f-0020-0d97-e217" id="d43c-15d8-e34f-cf5b" primary="false" name="Tough"/>
         <categoryLink targetId="4f5c-027d-253c-ffa3" id="c0f6-4160-1d96-486e" primary="false" name="Fear"/>
         <categoryLink targetId="bd43-ddb1-262d-4489" id="7057-3183-59fa-13d3" primary="true" name="Troop"/>
+        <categoryLink targetId="716a-84dc-1167-5c6c" id="0604-5e25-7c23-28a8" primary="false" name="Negate Difficult Terrain"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -832,11 +833,9 @@
             <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">BLAST 3&quot;, IGNORE COVER, IGNORE ELEVATED POSITION, IGNORE LONG RANGE, RELOAD, SCATTER SHRAPNEL</characteristic>
             <characteristic name="Rules" typeId="87f0-637b-734a-22eb">* Duck: Add -1 INJURY DICE to the roll for a model that is hit by an Infernal Bomb if it is in contact with a terrain piece that is at least ½&quot; tall and that lies in between it and the target point. 
 
+* Infernal Strike: If the Success Roll for a Ranged Attack with an Infernal Bomb that targets an enemy model is a Success or a Critical Success, or if the attack is a Failure and the target point scatters onto a model&apos;s base, apply the effect of the DEADLY Keyword to the Injury Roll for that model. Injury Rolls for other models caught in the Infernal Bomb’s BLAST are made normally.
 
-* Infernal Strike: If a model was the target for an Infernal Bomb and hit by it, or if an Infernal Bomb scatters and the target point lands on a model&apos;s base, when you make the Injury Roll for that model, roll 3D6 and add all 3 dice together. Any +INJURY DICE or -INJURY DICE that applied to the Injury Roll will apply normally, except that you pick the 3 highest or lowest dice in the roll instead of the 2 highest or lowest. Injury Rolls for other models caught in the Infernal Bomb’s BLAST are made normally.
-
-
-* Mighty Explosion: If a model that has been hit by an Infernal Bomb is not taken Out of Action by the Injury Roll, it is blown away D3&quot; in a straight line by the explosion. Roll separately for each model to see how far it is blown away by an Infernal Bomb. If the model was the target of the attack, it is blown directly away from the Artillery Witch. If the model was caught in the Blast of the weapon, it is blown directly away from the target point. The model stops if it is blown into another model, Impassable terrain, or terrain it cannot cross without having to Climb.</characteristic>
+* Mighty Explosion:  If a model that has been hit by an Infernal Bomb is not taken Out of Action by the Injury Roll, it is blown away D3” in a straight line by the explosion, even if the model has been taken Down by the Injury Roll. Roll separately for each model to see how far it is blown away by an Infernal Bomb. If the model was the target of the attack, it is blown directly away from the Artillery Witch. If the model was caught in the Blast of the weapon, it is blown directly away from the target point. The model stops if it is blown into another model, Impassable terrain, or terrain it cannot cross without having to Climb.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -958,6 +957,9 @@
         <infoLink name="Phosphor Bomb" id="eaa4-7d36-3470-e644" hidden="false" type="profile" targetId="65dd-6f03-4ee5-f07f"/>
         <infoLink name="Abiotic Life" id="7de9-9716-9265-c18e" hidden="false" type="profile" targetId="d1b2-a241-f2a8-0c21"/>
         <infoLink name="Levitate" id="acad-a6bf-9bb4-9489" hidden="false" type="profile" targetId="8b96-bf2d-9318-f8b8"/>
+        <infoLink name="Ignore Armour" id="e4ba-cc10-b4e9-f13d" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+        <infoLink name="Deadly" id="6158-857f-3de8-2461" hidden="false" type="rule" targetId="2a12-c6b9-9232-0584"/>
+        <infoLink name="Ignore [Modifier]" id="71bd-ce38-a97c-4de7" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
       </infoLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -1344,19 +1346,15 @@
                     <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Trench Ghost Warband cannot include models with the ARTIFICIAL Keyword, and models in a Trench Ghost Warband cannot have Hellbound Soul Contracts or Infernal Brands. The Warband can include Anointed Heavy Infantry, but they do not have their Infernal Brand and still cost 95 ducats.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Spectral" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="bdd7-971f-f836-fa10">
+                <profile name="Slow and Creeping" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c070-3eaa-a33f-f290">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in a Trench Ghost Warband ignore the penalty for moving through Difficult terrain (other terrain affects them normally).</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Slow" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c070-3eaa-a33f-f290">
-                  <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Halve the Movement Characteristic of a Trench Ghost model when they take a Dash ACTION. In addition, add -1 DICE to the Success Roll for an attack made by a Trench Ghost model on an enemy model that is making a Retreat.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Treat a Trench Ghost model as having a Movement
+Characteristic of 3”/Infantry when it takes a Dash ACTION. In addition, add -1 DICE to the Success Roll for an attack made by a Trench Ghost model on an enemy model that is making a Retreat.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Undead Horror" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="6c74-49bd-6371-4cfd">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in this Warband have the FEAR and NEGATE GAS Keywords.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in this Warband have the FEAR, NEGATE DIFFICULT TERRAIN, and NEGATE GAS Keywords.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1542,7 +1540,7 @@
                 </profile>
                 <profile name="Let Sleeping Dogs Lie" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2bfc-ba39-b280-debb">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2"> This Warband cannot include a War Wolf.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Warband cannot include a War Wolf.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Fast as Lightning" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="84f7-b619-cba1-b824">
@@ -1570,7 +1568,8 @@
                 </profile>
                 <profile name="Goetic Warlock" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="11ef-3d53-6389-6d76">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Goetic Warlocks are creations of Mammon. A Knights of Avarice Warband can include up to 1 Goetic Warlock for 110 ducats. The Goetic Warlock is a Mercenary </characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Goetic Warlocks are creations of Mammon. A Knights of
+Avarice Warband can include up to 2 Goetic Warlocks as Mercenaries (▶ see Goetic Warlock). In addition, the first Goetic Warlock to be recruited in a Knights of Avarice Warband costs 110 ducats instead of its normal cost in glory.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Infernal Rivalry" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="3a61-fd62-4f66-e489">
@@ -1590,12 +1589,13 @@
                 </profile>
                 <profile name="Preserve the Loot" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="084f-2d45-4317-119f">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in a Knights of Avarice Warband cannot have Battlekit that has the FIRE and/or SHRAPNEL Keywords. Grenade Launchers can be taken, but replace the SHRAPNEL Keyword with the -1 INJURY DICE, GAS, and IGNORE ARMOUR Keywords.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in a Knights of Avarice Warband cannot have
+Battlekit that has, or would give another piece of Battlekit, the FIRE and/or SHRAPNEL Keywords. Grenade Launchers can be taken, but replace the SHRAPNEL Keyword with the -1 INJURY DICE, GAS, and IGNORE ARMOUR Keywords.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Price of Greed" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b7f6-7059-d4be-f20e">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2"> A Heretic Priest in a Knights of Avarice Warband has the following Price of Greed ACTION instead of the Puppet Master ACTION.
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Heretic Priest in a Knights of Avarice Warband has the following Price of Greed ACTION instead of the Puppet Master ACTION.
 * Price of Greed ACTION: Worldly wealth becomes the target of this curse, gradually crushing its victim under its weight. A Knights of Avarice Heretic Priest can take a Price of Greed ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure, the Knights of Avarice Heretic Priest’s Activation ends immediately. If the roll is a Success or Critical Success, make an Injury Roll for an enemy model that is within 12&quot; of the model taking the Price of Greed ACTION and in its line of sight. Add +1 INJURY DICE to the roll if the Success Roll was a Critical Success, and add +1 DICE to the roll for each -1 INJURY MODIFIER that applies to the target (the -1 INJURY MODIFIER still applies). For example, if the target had Standard Armour with a -1 INJURY MODIFIER, you would add +1 INJURY DICE and a -1 INJURY MODIFIER to the roll.</characteristic>
                   </characteristics>
                 </profile>
@@ -2580,6 +2580,9 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
           </costs>
           <infoLinks>
             <infoLink name="Tartarus Claws" id="69a7-509e-e8a3-2ccc" hidden="false" type="profile" targetId="0999-4c6b-539f-d1b2"/>
+            <infoLink name="Critical" id="d64f-c83a-3391-9eb8" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+            <infoLink name="Cumbersome" id="4dfa-8114-c9e8-add4" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+            <infoLink name="Cleave" id="d30c-9822-add3-4d3a" hidden="false" type="rule" targetId="2da7-e6f3-dc9d-4431"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -2666,7 +2669,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, HEAVY</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Rune of Mammon: If the Injury Roll for an attack made by a Coin Hammer results in 1 or more BLOOD MARKERS being placed on the target, place 1 BLESSING MARKER on the model using the Coin Hammer.</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Rune of Mammon: If the Injury Roll for an attack made by a Coin Hammer results in 1 or more BLOOD MARKERS being placed next to the target, place 1 BLESSING MARKER next to the model using the Coin Hammer.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4177,11 +4180,14 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HEAVY, CONSUMABLE</characteristic>
-                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">* Illusions: Enemy models treat open ground and all terrain within 3” of a model with a Golden Calf Altar as being Difficult terrain (if it is not already), even if they can Fly.
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">DEPLOYABLE, HEAVY</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">A Golden Calf Altar, if deployed, is represented by a terrain piece that is about ½”
+high and which is mounted on a 25mm base. It is Impassable terrain.
 
 
-* Place Altar ACTION: A model with a Golden Calf Altar can take a Place Altar ACTION. If they do so, the model no longer counts as having a Golden Calf Altar, and you must place a Golden Calf Altar terrain piece on a 25mm base on the ground within 1” of the model taking the ACTION. The Golden Calf Altar has the Illusions special rule, is Impassable terrain, and cannot be picked up again or moved in any way.</characteristic>
+* Illusions: Enemy models treat Open ground and all terrain within 3” of a model with a Golden Calf Altar or a Golden Calf Altar terrain piece as being Difficult terrain (if it is not already), even if they have the FLYING Keyword.
+
+* Place Altar ACTION:A model with a Golden Calf Altar can take a Place Altar ACTION. If they do so, deploy the Golden Calf Altar anywhere within 1”of the model. Once deployed, the model that had the Golden Calf Altar is not considered to be carrying it for the rest of the game. In addition, the Golden Calf Altar is lost at the end of the game and removed from your Warband Roster.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5927,7 +5933,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
     </profile>
     <profile name="Abiotic Life" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d1b2-a241-f2a8-0c21">
       <characteristics>
-        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE for an Artillery Witch that has been hit by an attack with the GAS Keyword.</characteristic>
+        <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE to rolls for an Artillery Witch that has been hit by an attack with the GAS Keyword.</characteristic>
       </characteristics>
     </profile>
     <profile name="Levitate" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8b96-bf2d-9318-f8b8">
