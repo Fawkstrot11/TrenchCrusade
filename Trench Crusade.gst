@@ -610,16 +610,16 @@ MARKERS caused by the Keyword FIRE.</description>
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
-        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Incendiary: When this Battlekit is taken, you must choose 1 Ranged Weapon that the model already has that does not have the BLAST, FIRE, GAS, or SHRAPNEL Keywords. The Weapon gains the FIRE Keyword.</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE, AMMUNITION (FIRE)</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062"/>
       </characteristics>
     </profile>
     <profile name="Tracer Bullets" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="37d1-6c76-e847-8a7a" publicationId="c658-4a10-e1fe-befc" page="119">
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
-        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Tracers: When this Battlekit is taken, you must choose 1 Ranged Weapon that the model already has that does not have the BLAST, FIRE, GAS, or SHRAPNEL Keywords. The Weapon gains the +1 DICE Keyword.</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE, AMMUNITION (+1 DICE)</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062"/>
       </characteristics>
     </profile>
     <profile name="Sniper Scope" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="5a48-9735-499f-e394" publicationId="c658-4a10-e1fe-befc" page="119">
@@ -690,7 +690,7 @@ MARKERS caused by the Keyword FIRE.</description>
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">DEPLOYABLE</characteristic>
         <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Shrine: After you deploy a model that has Field Shrine, you must set up a Field Shrine terrain piece in the model’s deployment zone. The Field Shrine terrain piece must be at least ½&quot; tall and mounted on a 40mm base. The Field Shrine is Impassable terrain and cannot be picked up or moved in any way. In the Morale Phase, each friendly Field Shrine on the battlefield adds 3 to the number of models you have in your Warband that are not Down or Out of Action, up to a maximum bonus of 9 extra models.
 
 Tear It Down!: Models can attack a Field Shrine as if it were an enemy model. If it is hit by an attack or is in the blast radius of an attack made with a Weapon that has the BLAST Keyword, it is removed from the battlefield and crossed off the Warband Roster (no Injury Roll is required).</characteristic>
@@ -863,8 +863,8 @@ with a Tormentor Chain.</characteristic>
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
-        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Armour-Piercing: When this Battlekit is taken, you must choose 1 Ranged Weapon that the model already has that does not have the BLAST, FIRE, GAS, or SHRAPNEL Keywords. The Weapon gains the ARMOURPIERCING Keyword.</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE, AMMUNITION (ARMOUR-PIERCING)</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062"/>
       </characteristics>
     </profile>
     <profile name="Blessed Icon" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ddb0-3689-bc81-7162" publicationId="c658-4a10-e1fe-befc" page="120">
@@ -1025,8 +1025,8 @@ Shovel: A model equipped with a Shovel that starts the game on Open terrain has 
       <characteristics>
         <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
         <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE</characteristic>
-        <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Dum-Dums: When this Battlekit is taken, you must choose 1 Ranged Weapon that the model already has that does not have the BLAST, FIRE, GAS, or SHRAPNEL Keywords. The Weapon gains the CRITICAL Keyword</characteristic>
+        <characteristic name="Keywords" typeId="5093-5528-b08f-1496">CONSUMABLE, AMMUNITION (CRITICAL)</characteristic>
+        <characteristic name="Rules" typeId="4834-43a9-1c93-9062"/>
       </characteristics>
     </profile>
     <profile name="Black Spot Rifle" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="e476-2dae-7eb7-f469">
