@@ -963,7 +963,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
                 <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, CRITICAL, CUMBERSOME</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Tank-Splitter: When you make an Injury Roll for an attack made with a Tank-Splitter Sword against a target wearing Armour or carrying a Shield, before rolling the dice for the Success Roll, put one dice aside and turn it so that it shows a roll of ‘6’. Roll the rest of the dice, and then return the dice you put to one side; it counts as having rolled a 6. In addition, attacks made with a Tank-Splitter Sword are not affected by the Dragonslayer Patron Skill.</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">When you make an Injury Roll for an attack made with a Tank-Splitter Sword, determine if the target has an Armour Characteristic that is -1 or greater, or if it is wearing Armour or carrying a Shield. If it does, before rolling the dice for the Injury Roll, put one dice aside and turn it so that it shows a “6”. Roll the rest of the dice, then return the dice you put to one side; it counts as having rolled a 6. In addition, attacks made with a Tank-Splitter Sword are not affected by the Dragonslayer Patron Skill.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5056,7 +5056,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         </profile>
         <profile name="Defuse Mine" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2aa0-f08e-8ff5-a137">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When you move a Combat Engineer into contact with a terrain piece that has been mined, you can say the Combat Engineer will try to defuse the mine before it detonates. If you do so, take a Risky Success Roll for the model. If the roll is a Failure the mine detonates and the Combat Engineer’s Activation ends. If the roll is a Success or a Critical Success, the mine does not detonate, and the terrain piece is no longer considered mined.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When you move a Combat Engineer into contact with a Marker or terrain piece with the MINED Keyword, you can say the Combat Engineer will halt and try to defuse the mine before it detonates. If you do so, take a Risky Success Roll for the model. If the roll is a Failure, the mine detonates anyway and the Combat Engineer’s Activation ends. If the roll is a Success or a Critical Success, the mine does not detonate and the Marker or terrain piece loses the MINED Keyword. A model that sets a mine on a terrain piece can defuse the mine automatically if it moves into contact with the terrain piece (do not take a Risky Success Roll).</characteristic>
           </characteristics>
         </profile>
         <profile name="Battlefield Demolition" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f039-f03d-2c1c-4d58">
@@ -5096,6 +5096,16 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               </conditionGroups>
             </modifier>
           </modifiers>
+        </profile>
+        <profile name="Set Mine" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f5bd-98e6-fece-1e3d">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Combat Engineer can take a Set Mine ACTION if they are in contact with a terrain piece that measures up to 8” by 8” that doesn’t have the MINED Keyword. If they do so, take a Success Roll for the model and add +2 DICE to the roll. If the roll is a Failure, nothing happens. If the roll is a Success or a Critical Success, the terrain piece gains the MINED Keyword.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Negate Mined" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2bb9-7311-ef80-96f4">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2"/>
+          </characteristics>
         </profile>
       </profiles>
       <entryLinks>
@@ -5139,6 +5149,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       </modifiers>
       <infoLinks>
         <infoLink name="Shovel" id="80fc-eb2f-d1c1-40f4" hidden="false" type="profile" targetId="d829-4d67-52aa-baaf"/>
+        <infoLink name="Negate [Keyword]" id="ca97-84df-6dd1-2f14" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Combat Medic" hidden="false" id="3523-c775-3603-dbeb">
@@ -5432,10 +5443,10 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <profiles>
         <profile name="Concerted Attack" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="997b-3cb7-7dee-c67d">
           <characteristics>
-            <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
-            <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
-            <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">If a model in the FIRETEAM makes any kind of Attack ACTION (ranged or melee) against an opponent, where the other member of their FIRETEAM has already hit it with an attack ACTION during the same activation, the cost of a Bloodbath is reduced to three BLOOD MARKERS against this opponent, whether the model is standing or Down.</characteristic>
+            <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+            <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">If a model from a Fireteam hits a target that had been hit by an attack made by the other member of their Fireteam earlier in the same joint Activation, then you can spend 3 BLOOD MARKERS to convert the Injury Roll for the second attack to a Bloodbath Roll, even if the target is not Down.</characteristic>
           </characteristics>
         </profile>
         <profile name="Coordinated Engagement" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="34c8-dd0b-8701-b04f">
@@ -5597,7 +5608,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
               <profiles>
                 <profile name="Lector" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="fdac-9fd9-f409-f0ed">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Papal States Intervention Force Warband must include 1 Trench Cleric, but does not have to include a Lieutenant. A Trench Cleric in a Papal States Intervention Force Warband has the following additional ability: 
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Papal States Intervention Force Warband must include 1 Trench Cleric, but does not have to include a Lieutenant. A Trench Cleric in a Papal States Intervention Force Warband has the LEADER Keyword and the following additional ability:: 
 * Arise and be Healed! ACTION: A Papal States Intervention Force Trench Cleric can take an Arise and be Healed! ACTION. If they do so, take a Risky Success Roll for the Trench Cleric. If the roll is a Failure, nothing happens, and the Trench Cleric’s Activation ends. If the roll is a Success or Critical Success, pick the Trench Cleric or 1 friendly model within 3&quot; of the Trench Cleric. The model you pick can stand back up at no cost to their movement, and you can remove up to D3 BLOOD MARKERS and/or INFECTION MARKERS from the model.</characteristic>
                   </characteristics>
                 </profile>
@@ -5621,7 +5632,7 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
                 </profile>
                 <profile name="Specialist Force" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c685-8b3d-a397-d5ff">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">You have 500 ducats and 11 glory to recruit a Papal State Force Warband for a campaign (▶ see Starting a Warband). A Papal States Intervention Force gains 4 glory each time it calls for Reinforcements. In a campaign, their Threshold Value is reduced by 200 ducats.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">You have 500 Ducats and 11 Glory to recruit a Papal State Force Warband for a campaign.  A Papal States Intervention Force gains 4 Glory each time it calls for Reinforcements. In a campaign, its Threshold Value is reduced by 200 Ducats. When recruiting models for a one-off game, after agreeing upon the size of the game, reduce the amount of Ducats a Papal States Intervention Force Warband has to spend by 200 Ducats and increase the amount of Glory they have to spend by 11 Glory.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
