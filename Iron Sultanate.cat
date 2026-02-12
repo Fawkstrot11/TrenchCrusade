@@ -739,6 +739,7 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
               </constraints>
               <infoLinks>
                 <infoLink name="Alchemical Ammunition" id="40a3-e74d-fc72-7d9c" hidden="false" type="profile" targetId="c296-2021-0947-c6c7"/>
+                <infoLink name="Ammunition (Keyword)" id="0935-8bb0-c97e-2c30" hidden="false" type="rule" targetId="9a05-7b7b-6023-5523"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -1186,8 +1187,8 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY MODIFIER</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Attack Twice: You can make 2 Melee Attacks with this Weapon, one after the other, when it is used as a Melee Weapon. Note that if you spend BLOOD MARKERS to modify the Injury Rolls for one attack, they do not modify Injury Rolls for any of the subsequent attacks.</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY MODIFIER, CLEAVE 2</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
               </characteristics>
             </profile>
           </profiles>
@@ -1574,6 +1575,7 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
             <infoLink name="Scatter" id="9613-a449-1d54-947e" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
             <infoLink name="Blast" id="32e3-3264-c86f-4a19" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Heavy" id="c54d-e093-1c21-ca50" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Deadly" id="5747-7d5e-db75-5b6c" hidden="false" type="rule" targetId="2a12-c6b9-9232-0584"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1970,13 +1972,14 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
           <infoLinks>
             <infoLink name="Critical" id="2315-cfde-81b6-7798" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
             <infoLink name="Ignore Armour" id="65db-14e9-b074-fabb" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+            <infoLink name="Assault" id="ad09-a98a-e104-ba6f" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
           </infoLinks>
           <profiles>
             <profile name="Bow of Alamut" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="1bff-0694-c7a5-a7f8">
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">40&quot;</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL, IGNORE ARMOUR</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, CRITICAL, IGNORE ARMOUR</characteristic>
                 <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Temporal Slipstream: If a Ranged Attack made with this Weapon causes any BLOOD MARKERS to be placed on the target model, you can immediately redeploy the attacking model within 1&quot; of the target model, regardless of the distance or any intervening obstacles. Note that if the attack takes the target Out of Action, no BLOOD MARKERS are placed and this ability cannot be used.</characteristic>
               </characteristics>
             </profile>
@@ -2815,7 +2818,7 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HELD, LEADER</characteristic>
-                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Sandstorm: Subtract 1 from the Movement Characteristic of enemy models within 24&quot; of a model with the Banner of Desert Wind, unless the model with the Banner of Desert Wind is Down.</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Models that start an Activation within 24” of an enemy model that has the Banner of the Desert Wind have 1 subtracted from their Movement Characteristic until the end of the Activation. This rule does not apply if the model with the Banner of Desert Wind is Down.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3317,7 +3320,7 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemis
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
-                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">At the start of the first Turn of the game, before any models have been Activated, you can set up an Elemental Obstacle terrain piece that is up to 2&quot; wide and 6&quot; long. It must be set up more than 1&quot; away from any other terrain pieces and more than 6&quot; from any models. After setting it up, you must say if it has the FIRE, GAS, or SHRAPNEL Keyword. The Elemental Obstacle is Difficult and Dangerous terrain. Any Injury Rolls caused by the Dangerous terrain rule have the Keywords you chose when you set the terrain up.</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">At the start of the first Turn of the game, before any models have been Activated, you can set up an Elemental Obstacle terrain piece that is up to 2” wide and 6” long. It must be set up more than 1” away from any other terrain pieces and more than 6” from any models. The Elemental Obstacle has the DIFFICULT TERRAIN and DANGEROUS TERRAIN (X) Keywords. After setting it up, you must say if X is the FIRE, GAS, or SHRAPNEL Keyword.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3531,7 +3534,7 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemis
               <characteristics>
                 <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-handed</characteristic>
                 <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">48&quot;</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 INJURY DICE, HEAVY IGNORE ARMOUR</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+2 INJURY DICE, HEAVY IGNORE ARMOUR, DEPLOYABLE</characteristic>
                 <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Unstoppable Object: If a model that has been hit by a Sultanate Grand Cannon is not taken Out of Action by the Injury Roll, it is pushed D6&quot; in a straight line directly away from the attacking model. The model stops if it pushed into another model, Impassable terrain or a terrain piece it cannot cross without having to Climb.</characteristic>
               </characteristics>
             </profile>
@@ -3542,6 +3545,7 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemis
           <infoLinks>
             <infoLink name="Heavy" id="c48e-165e-9aaa-1b63" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
             <infoLink name="Ignore Armour" id="6659-8fec-9124-8b48" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+            <infoLink name="Deployable" id="83b8-8d2b-a886-1919" hidden="false" type="rule" targetId="c458-a331-5541-0ad9"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Anqā Guard" hidden="true" id="20ec-9e12-6cdf-abe2">
@@ -3550,7 +3554,7 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemis
               <characteristics>
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
-                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">HEAVY</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">DEPLOYABLE, HEAVY</characteristic>
                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">An Anqā Guard is represented by a model of a shield that is about 1&quot; high and which is mounted on a 40mm base.
 
 * Pre-battle Deployment: At the start of each game, after Deployment, you can say that a model that has an Anqā Guard is going to deploy it. If you do so, deploy the Anqā Guard anywhere wholly within your deployment zone. 
@@ -3566,6 +3570,7 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemis
           </costs>
           <infoLinks>
             <infoLink name="Heavy" id="4b81-9d97-ddf3-e795" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+            <infoLink name="Deployable" id="8dc3-e04f-edb3-4498" hidden="false" type="rule" targetId="c458-a331-5541-0ad9"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -3893,7 +3898,7 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemis
               <profiles>
                 <profile name="Wings" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="dcc1-4b2d-69a9-224d">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Change this Takwin Homunculus’s Movement Characteristic to 8&quot;/Flying. A Homunculus cannot have the Wings Alchemical Formula if it has the Massive Size Alchemical Formula.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Change this Takwin Homunculus’s Movement Characteristic to 8”/Flying and give it the FLYING Keyword. A Homunculus cannot have the Wings Alchemical Formula if it has the Massive Size Alchemical Formula.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3907,6 +3912,9 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemis
                   </conditions>
                 </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Flying" id="6ebf-edfa-45c7-13e8" hidden="false" type="rule" targetId="4b63-016a-bd78-52fd"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Elemental Resistance" hidden="false" id="f500-e61c-b740-703c" sortIndex="2">
               <costs>
@@ -4040,7 +4048,7 @@ This Alchemist cannot have a Medi-kit. Instead, when you Activate this Alchemis
               <profiles>
                 <profile name="Additional Arm" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d227-b378-83da-84ac">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Takwin Homunculus can make 2 Melee Attacks, one after the other, when it takes a Fight ACTION. Note that if you spend BLOOD MARKERS to modify the Injury Rolls for one attack, they do not modify Injury Rolls for any of the subsequent attacks.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Takwin Homunculus adds the CLEAVE 2 Keyword to attacks made with its Pummelling Blows Ability.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4130,7 +4138,7 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
               <profiles>
                 <profile name="Regenerative" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="30b8-b72a-077c-fb93">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When you Activate this Takwin Homunculus, before carrying out any ACTIONS you can remove up to 1 BLOOD MARKER from the model.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Takwin Homunculus gains the REGENERATE 1 Keyword.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4141,6 +4149,9 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="25"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Regenerate" id="1281-1142-208e-3794" hidden="false" type="rule" targetId="aa24-5d3a-f4c5-0aab"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
@@ -5392,13 +5403,12 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
         </profile>
         <profile name="Temporal Assassin" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="fd33-0f29-cf19-2244">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">After determining the Charge Bonus for an Assassin that has not already carried out a Fight ACTION in its Activation, you can say that the Assassin will split itself through time. If you do so, choose two different enemy models that the Assassin can reach with its Charge, move the Assassin to within1&quot; of one of the enemy models you picked as normal, and then make a Melee Attack with the enemy model as the target. After resolving the Melee Attack, you can immediately redeploy the Assassin to within 1&quot; of the other model that you picked, and then make a second Melee Attack with the other enemy model as the target. The Assassin must use the same Melee Weapon for both attacks, and cannot take a Fight ACTION later in the same Activation.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">After determining the Charge Bonus for a Sultanate Assassin that has not already carried out a Fight ACTION in its Activation, you can say that the Sultanate Assassin will split itself through time. If you do so, choose an additional enemy model as the target of the Charge (the normal rules for picking a target apply, but do not count targets of the Charge as interposing enemy models). Then make a charge move with the Sultanate Assassin which finishes within 1” of the first enemy model you picked as a target, and then take a Fight ACTION with the enemy model as the target. After resolving the Fight ACTION, you must immediately remove the Sultanate Assassin from the battlefield and redeploy it to within 1” of the other model that you picked. Then take a second Fight ACTION with the other enemy model as the target. The Sultanate Assassin must use the same Melee Weapon for both attacks, and cannot take a Fight ACTION later in the same Activation.</characteristic>
           </characteristics>
         </profile>
         <profile name="Time Slip" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8f81-f60e-60f7-ea89">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If your opponent fails their Success Roll for an attack targeting an Assassin, you can say the Assassin will slip into a moment in the future. If you do so, you can redeploy it anywhere within 6&quot; of its original location (measured from the centre of its base to the centre of its base), and more than 1&quot; away from any enemy models. Note that if the Assassin starts within 1&quot; of an enemy model, this is not treated as a Retreat, so the enemy model cannot make a Melee Attack before the
-Assassin makes the time slip.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If your opponent fails their Success Roll for an attack targeting a Sultanate Assassin, you can say the Sultanate Assassin will slip into a moment in the future. If you do so, you can redeploy it anywhere within 6” of its original location (measured from the centre of its base to the centre of its base), and more than 1” away from any enemy models. If the failed attack took place because the Sultanate Assassin is retreating, the retreat move ends after you redeploy the model.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6265,7 +6275,7 @@ In addition when this unit take the Retreat Action, Melee Attack Success Roll ma
                 </profile>
                 <profile name="Master Assassin" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c60c-6586-f12b-ae15">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Fida’i of Alamut Warband must include 1 Master Assassin. The Master Assassin uses the Sultanate Assassin Warband Entry, except that it has the TOUGH Keyword and has a cost of 95 ducats.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Fida’i of Alamut Warband must include 1 Master Assassin. The Master Assassin uses the Sultanate Assassin Warband Entry, except that it has the LEADER and TOUGH Keywords and has a cost of 95 Ducats.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Killing Squad" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="dd1c-d845-6105-e745">
