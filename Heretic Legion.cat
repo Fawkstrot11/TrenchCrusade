@@ -1063,6 +1063,7 @@
             <constraint type="min" value="1" field="selections" scope="self" shared="true" id="a446-37c8-07e4-476c" includeChildSelections="true"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Grenades" hidden="false" id="67ba-c597-e878-deac" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" sortIndex="4"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Heretic Trooper" hidden="false" id="3844-b41c-9ecc-85b9" publicationId="c658-4a10-e1fe-befc" page="22">
@@ -3740,9 +3741,14 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
           </constraints>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="append" value="+1 INJURY DICE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" join=",">
               <conditions>
@@ -3783,11 +3789,24 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="767d-1b1d-79b4-5765" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Demonic Aura Grenade" hidden="false" id="3c73-26ef-2873-2cc2" type="selectionEntry" targetId="b537-34fb-bae6-2cbb" sortIndex="6"/>
+        <entryLink import="true" name="Demonic Aura Grenade" hidden="false" id="3c73-26ef-2873-2cc2" type="selectionEntry" targetId="b537-34fb-bae6-2cbb" sortIndex="6">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b0b5-1ab7-adf9-2a34" includeChildSelections="false"/>
