@@ -1220,29 +1220,6 @@ This model gains 1” to its movement characteristic and the SKIRMISHER keyword.
             </modifier>
           </modifiers>
         </modifierGroup>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="1" field="7ce1-a420-e615-a5cb">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="7ce1-a420-e615-a5cb">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="d604-bc3a-680b-cbd8" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <comment>Scripture Guardian Exceptions</comment>
-        </modifierGroup>
       </modifierGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Ranged (One-Handed)" id="cd2d-89be-32a4-afa5" hidden="false" collective="false">

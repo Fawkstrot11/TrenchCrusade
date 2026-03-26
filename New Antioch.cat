@@ -1234,29 +1234,6 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
             </modifier>
           </modifiers>
         </modifierGroup>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="1" field="1d98-dac9-12f0-e194">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="1d98-dac9-12f0-e194">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="08cc-f1b9-e991-e191" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="196d-0066-9adb-ef69" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <comment>Scripture Guardian Exceptions</comment>
-        </modifierGroup>
       </modifierGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Ranged (One-Handed)" id="3411-73dc-01fa-1c73" hidden="false" collective="false">

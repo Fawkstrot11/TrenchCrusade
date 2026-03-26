@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="0b26-15c1-cebd-0077" name="Black Grail" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="4" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="0b26-15c1-cebd-0077" name="Black Grail" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="4" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Weapons" id="4f10-6941-6de8-d8a6" hidden="false" collapsible="false">
       <constraints>
@@ -577,26 +577,6 @@
           </modifiers>
         </modifierGroup>
         <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="1" field="177f-a178-7493-1958">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="49df-7901-867a-c267" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="177f-a178-7493-1958">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="49df-7901-867a-c267" shared="true"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="49df-7901-867a-c267" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="f4c1-28c9-773f-c192" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <comment>Scripture Guardian Exceptions</comment>
         </modifierGroup>
       </modifierGroups>
