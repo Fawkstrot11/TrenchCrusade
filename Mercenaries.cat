@@ -90,7 +90,7 @@
         </profile>
         <profile name="Eye of God" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9132-9fba-fcbb-0a0a">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If a Success Roll or Risky Success Roll for an Observer is a Failure, you can re-roll all the dice you used to make the roll. If you do so and the re-roll is also a Failure, place 1 BLOOD MARKER next to the model and mark them as being Down. If the model is already Down, place 2 BLOOD MARKERS next to the model instead of 1.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">You can re-roll failed Success Rolls and Risky Success Rolls for an Observer. If you do so and any of the re-rolled dice show a 1, then the roll is treated as a Failure, the Observer is taken Down and their Activation immediately ends.</characteristic>
           </characteristics>
         </profile>
         <profile name="Oculus Helm" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="fec0-1360-af63-dd6c">
@@ -262,6 +262,8 @@
       </constraints>
       <categoryLinks>
         <categoryLink targetId="3dfb-701d-e89c-eba2" id="fd46-1ce3-976b-5923" primary="true" name="Mercenary"/>
+        <categoryLink targetId="3de0-192c-3ec2-51be" id="1224-e123-c70d-d594" primary="false" name="Elite"/>
+        <categoryLink targetId="7877-788b-2d58-c844" id="2350-9638-ba4f-7566" primary="false" name="Negate Fear"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="ee0a-e491-f584-e14d" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>

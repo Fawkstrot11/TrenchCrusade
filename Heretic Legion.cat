@@ -1063,6 +1063,7 @@
             <constraint type="min" value="1" field="selections" scope="self" shared="true" id="a446-37c8-07e4-476c" includeChildSelections="true"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Grenades" hidden="false" id="e6c4-29a7-1e40-164c" type="selectionEntryGroup" targetId="daa0-54c9-7e0a-4d14" sortIndex="4"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Heretic Trooper" hidden="false" id="3844-b41c-9ecc-85b9" publicationId="c658-4a10-e1fe-befc" page="22">
@@ -1918,6 +1919,21 @@ Battlekit that has, or would give another piece of Battlekit, the FIRE and/or SH
                                 <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                                 <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
                                 <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Binoculars as though they were from New Antioch</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Grenade Launcher" hidden="false" id="cd9d-ad28-a47d-168d">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce5d-b101-b85e-2b2e" includeChildSelections="false"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Stolen: Grenade Launcher" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="7de6-ffe0-bad3-043e">
+                              <characteristics>
+                                <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                                <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This Warband can use Grenade Launcher as though they were from New Antioch</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -2978,6 +2994,11 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
+            <modifier type="increment" value="1" field="cd27-b4cb-862c-a11f">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cd9d-ad28-a47d-168d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Machine Gun" hidden="false" id="5c4c-5169-0e5e-b35b" sortIndex="11">
@@ -3134,9 +3155,14 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
               </conditions>
             </modifier>
             <modifier type="replace" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" join=", " arg="-1 INJURY DICE, ">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="15bf-43f1-0650-1070" shared="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="15bf-43f1-0650-1070" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -3726,6 +3752,11 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Satchel Charge" hidden="true" id="1938-e49a-2a89-e72a" sortIndex="4">
@@ -3758,6 +3789,11 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="767d-1b1d-79b4-5765" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="cf02-7a3e-ffbf-d7f9" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
