@@ -3098,9 +3098,14 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
               </conditions>
             </modifier>
             <modifier type="replace" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" join=", " arg="-1 INJURY DICE, ">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="15bf-43f1-0650-1070" shared="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="15bf-43f1-0650-1070" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
