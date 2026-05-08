@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="6941-ec54-3001-8288" name="Heretic Legion" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="1" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="6941-ec54-3001-8288" name="Heretic Legion" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="1" revision="23" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="model" import="true" name="Anointed Heavy Infantry" hidden="false" id="15bf-43f1-0650-1070" publicationId="c658-4a10-e1fe-befc" page="22">
       <costs>
@@ -57,7 +57,7 @@
         <entryLink import="true" name="Weapons" hidden="false" id="3104-500f-a1df-d5c0" type="selectionEntryGroup" targetId="e24e-229d-3831-76f4" sortIndex="4"/>
         <entryLink import="true" name="Unseen Infiltrator" hidden="false" id="8024-508c-cad2-74e3" type="selectionEntry" targetId="7b92-190b-f8c3-531a" sortIndex="3"/>
         <entryLink import="true" name="Advancement" hidden="true" id="6acf-33ac-df3b-e1d6" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
-        <entryLink import="true" name="Exploration Upgrades" hidden="false" id="ab5d-1b44-36ce-6e75" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Exploration Upgrades" hidden="false" id="ab5d-1b44-36ce-6e75" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776" sortIndex="7"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="0238-9b91-d433-3d1f" type="selectionEntryGroup" targetId="7bcd-ee92-0f03-ae73" sortIndex="2"/>
       </entryLinks>
       <constraints>
@@ -2953,7 +2953,7 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             <infoLink name="Grenade Launcher" id="0ce4-534b-f0c1-0f35" hidden="false" type="profile" targetId="3113-d133-1726-05a0"/>
             <infoLink name="Blast" id="8927-28ee-d962-296d" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
             <infoLink name="Heavy" id="48de-5525-50ae-8769" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
-            <infoLink name="Shrapnel" id="56cc-870d-b0e0-b091" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232">
+            <infoLink name="Sharpnel" id="56cc-870d-b0e0-b091" hidden="false" type="rule" targetId="0b97-e3d4-03cf-e426">
               <modifiers>
                 <modifier type="set" value="true" field="hidden"/>
               </modifiers>
@@ -3827,6 +3827,9 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
               </conditions>
             </modifier>
           </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="d935-8238-a3f7-8ab0" id="baf7-b82f-4954-c12a" primary="false" name="Negate Gas"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Unholy Trinket" hidden="false" id="cf41-6d5d-0721-e337" sortIndex="6">
           <costs>
@@ -4015,6 +4018,9 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
               </conditionGroups>
             </modifier>
           </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="f0ef-ba0d-8963-331a" id="81e6-fdd8-180d-616d" primary="false" name="Negate Fire"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Medi-Kit" hidden="true" id="5f28-57da-5cdf-6323" sortIndex="15">
           <costs>
@@ -4344,13 +4350,26 @@ If a Byzantinium Heart is ever removed or lost from the model that has it equipp
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Combat Helmet" hidden="false" id="7831-876a-742a-e89a">
               <infoLinks>
-                <infoLink name="Combat Helmet" id="8efb-6c87-58b6-cd6d" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
+                <infoLink name="Combat Helmet" id="8efb-6c87-58b6-cd6d" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f" publicationId="c658-4a10-e1fe-befc" page="81"/>
                 <infoLink name="Negate [Keyword]" id="b397-d90d-b2fd-7863" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
               </infoLinks>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
+              <profiles>
+                <profile name="Combat Helmet" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="8317-1700-7b8f-ba16">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642"/>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496"/>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink targetId="baee-43b9-2e20-9755" id="d1b6-994f-25ee-16f6" primary="false" name="Negate Sharpnel"/>
+              </categoryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
