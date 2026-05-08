@@ -9,9 +9,7 @@
     <categoryEntry name="Heretic" id="7ba1-f516-e8cf-3957" hidden="false" publicationId="c658-4a10-e1fe-befc"/>
     <categoryEntry name="Pilgrim" id="afb7-d895-f4b4-73f3" hidden="false" publicationId="c658-4a10-e1fe-befc"/>
     <categoryEntry name="Strong" id="afcc-5f24-1c7c-63c4" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13">
-      <description>A model with this Keyword is not affected by Battlekit with
-the Keyword HEAVY. In addition, it can use one 2-Handed Melee Weapon as if
-it were a 1-Handed Melee Weapon.</description>
+      <description>A model with this Keyword is not affected by Battlekit with the Keyword HEAVY. In addition, it can use one 2-Handed Melee Weapon as if it were a 1-Handed Melee Weapon.</description>
     </categoryEntry>
     <categoryEntry name="Tough" id="914f-0020-0d97-e217" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
     <categoryEntry name="Sultanate" id="fd8d-e9e0-2540-a257" hidden="false" publicationId="c658-4a10-e1fe-befc"/>
@@ -40,7 +38,7 @@ it were a 1-Handed Melee Weapon.</description>
     </categoryEntry>
     <categoryEntry name="Regenerate 1" id="cf46-8390-3092-66cb" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
     <categoryEntry name="Negate Difficult Terrain" id="716a-84dc-1167-5c6c" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
-    <categoryEntry name="Negate Sharpnel" id="baee-43b9-2e20-9755" hidden="false" publicationId="c658-4a10-e1fe-befc" page="">
+    <categoryEntry name="Negate Shrapnel" id="baee-43b9-2e20-9755" hidden="false" publicationId="c658-4a10-e1fe-befc">
       <description>Do not take a blood markers from sharpnel keyword</description>
     </categoryEntry>
   </categoryEntries>
@@ -217,11 +215,6 @@ MARKERS caused by the Keyword FIRE.</description>
     </rule>
     <rule name="Deployable" id="c458-a331-5541-0ad9" hidden="false">
       <description>Battlekit that is represented by a model or terrain piece that can be set up during the game.</description>
-    </rule>
-    <rule name="Sharpnel" id="0b97-e3d4-03cf-e426" hidden="false" publicationId="c658-4a10-e1fe-befc" page="56">
-      <description>After making the Injury Roll for a Weapon with this
-Keyword, place 1 extra BLOOD MARKER next to the target model (even if the
-Injury Roll has No Effect)</description>
     </rule>
   </sharedRules>
   <publications>
