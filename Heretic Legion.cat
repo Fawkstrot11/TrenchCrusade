@@ -3098,9 +3098,14 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
               </conditions>
             </modifier>
             <modifier type="replace" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" join=", " arg="-1 INJURY DICE, ">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="15bf-43f1-0650-1070" shared="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="15bf-43f1-0650-1070" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -3176,9 +3181,14 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
             <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="52cc-35c1-9f09-9169" type="selectionEntry" targetId="4b53-eb99-9060-213f">
               <modifiers>
                 <modifier type="prepend" value="+1 INJURY DICE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", ">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="15bf-43f1-0650-1070" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="15bf-43f1-0650-1070" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </entryLink>
@@ -5269,9 +5279,19 @@ Melee Chassis counts as two one handed melee weapons for the purposes of equippi
             </modifierGroup>
           </modifierGroups>
         </profile>
-        <profile name="Re-creation" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="26cb-315c-d838-d06a">
+        <profile name="Pummeling Blows" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e75c-925c-ceba-ce35">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If the Homunculus is taken Out of Action during battle, and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats at any time between battles to bring it back to life with all of its weapons and abilities</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Takwin Homunculus can make a Melee Attack even though it does not have any Melee Weapons.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Artificial Life" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="62db-eeca-4b31-652a">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 DICE to Injury Rolls for a Tawkin Homunculus.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Re-creation" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d56e-0659-faa2-3c46">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If a Takwin Homunculus is killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats in the following Quartermaster Step to leave it on the Roster.</characteristic>
           </characteristics>
         </profile>
       </profiles>
