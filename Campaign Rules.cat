@@ -140,7 +140,7 @@
                             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Your patron is one of the high-ranking nobles of the Sultanate such as an Emir, Pasha, Vizier or even the Sultan himself. Such Patrons bestow martial prowess, access to exotic weapons, armour, superior training and of course, the favour of the Sultan.</characteristic>
+                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Your patron is one of the high-ranking nobles of the Sultanate such as an Emir, Pasha, Vizier or even the Sultan himself. Such Patrons bestow martial prowess, access to exotic weapons, armour, superior training and of course, the favour of the Sultan.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -159,7 +159,7 @@
                             <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
                             <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
                             <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
-                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Your patron is a powerful infernal noble of the Order of the Fly, such as Enlil, Prince Vassago or even Beelzebub the Lord of the Flies himself. Through you, these putrid and mighty devils unleash a tidal wave of corruption upon the mortal world.</characteristic>
+                            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Your patron is a powerful infernal noble of the Order of the Fly, such as Enlil, Prince Vassago or even Beelzebub the Lord of the Flies himself. Through you, these putrid and mighty devils unleash a tidal wave of corruption upon the mortal world.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1991,6 +1991,28 @@ The saint guides your troops before each battle. The model with the skull gains 
           <constraints>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="99b2-b93a-37b6-54da"/>
           </constraints>
+          <comment>34</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Bitter Lessons [65]" hidden="false" id="3a7e-38ae-c6d1-687f" sortIndex="17">
+          <comment>65</comment>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3336-8ed4-427f-13a1"/>
+          </constraints>
+          <rules>
+            <rule name="Bitter Lessons" id="e320-51f5-8ba1-412f" hidden="false">
+              <description>This model gains D3 extra Experience Points. It does not receive an Injury or a Battle Scar.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Scar(s)" hidden="false" id="ccdc-a47d-d05e-7318" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="99b2-b93a-37b6-54da"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Scar(s)" hidden="false" id="ccdc-a47d-d05e-7318" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="99b2-b93a-37b6-54da"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -2967,7 +2989,7 @@ The saint guides your troops before each battle. The model with the skull gains 
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ae0-89a2-0343-d524" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ae0-89a2-0343-d524" includeChildSelections="false" includeChildForces="false" childId="any"/>
               </constraints>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Lash of Acheron" hidden="false" id="d87c-7bd0-b132-5a3b" sortIndex="6">
@@ -3624,7 +3646,7 @@ The saint guides your troops before each battle. The model with the skull gains 
     </selectionEntryGroup>
     <selectionEntryGroup name="Melee &amp; Strength Skills" id="f04b-40da-ca56-b233" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Stand Firm" hidden="false" id="03ac-c426-6f9e-5616" sortIndex="1">
+        <selectionEntry type="upgrade" import="true" name="Stand Firm [3]" hidden="false" id="03ac-c426-6f9e-5616" sortIndex="1">
           <profiles>
             <profile name="Stand Firm" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1214-88e2-acdb-e74a">
               <characteristics>
@@ -3633,10 +3655,10 @@ The saint guides your troops before each battle. The model with the skull gains 
             </profile>
           </profiles>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2d4-d06a-28d1-b703" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="e01c-f1e9-f8ca-e6c9" shared="true" id="b2d4-d06a-28d1-b703" includeChildSelections="false" childId="any"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Parry" hidden="false" id="3970-e2b3-e503-7dd0" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Parry [4]" hidden="false" id="3970-e2b3-e503-7dd0" sortIndex="2">
           <profiles>
             <profile name="Parry" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="bdca-df78-c8d7-008b">
               <characteristics>
@@ -3648,7 +3670,7 @@ The saint guides your troops before each battle. The model with the skull gains 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="40c4-75a2-f724-7f72" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Close Quarters Combat" hidden="false" id="fb96-054f-26fb-93c9" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Close Quarters Combat [5]" hidden="false" id="fb96-054f-26fb-93c9" sortIndex="3">
           <profiles>
             <profile name="Close Quarters Combat" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5095-ee67-b041-66ab">
               <characteristics>
@@ -3660,7 +3682,7 @@ The saint guides your troops before each battle. The model with the skull gains 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8789-cb44-fa15-13c7" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Relentless Charge" hidden="false" id="0b5d-bcb0-c5c4-91aa" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Relentless Charge [6]" hidden="false" id="0b5d-bcb0-c5c4-91aa" sortIndex="5">
           <profiles>
             <profile name="Relentless Charge" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="54b5-a8fe-1bd1-a6e3">
               <characteristics>
@@ -3672,7 +3694,7 @@ The saint guides your troops before each battle. The model with the skull gains 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="07a4-26d9-ac94-ff0a" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Melee Proficiency" hidden="false" id="2a4f-c258-5d70-a3c5" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Melee Proficiency [7]" hidden="false" id="2a4f-c258-5d70-a3c5" sortIndex="5">
           <profiles>
             <profile name="Melee Proficiency" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8445-d117-db3d-f65d">
               <characteristics>
@@ -3684,7 +3706,7 @@ The saint guides your troops before each battle. The model with the skull gains 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="afbe-ca8d-ec45-70dc" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Strength of Samson" hidden="false" id="4bc1-923b-2699-5719" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Strength of Samson [8]" hidden="false" id="4bc1-923b-2699-5719" sortIndex="6">
           <profiles>
             <profile name="Strength of Samson" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="6c32-650e-d37b-30f9">
               <characteristics>
@@ -3699,7 +3721,7 @@ The saint guides your troops before each battle. The model with the skull gains 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c326-9bb9-efce-be6f" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Hard as Nails" hidden="false" id="e6fa-5b37-8409-cafa" sortIndex="7">
+        <selectionEntry type="upgrade" import="true" name="Hard as Nails [9]" hidden="false" id="e6fa-5b37-8409-cafa" sortIndex="7">
           <profiles>
             <profile name="Hard as Nails" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c867-8aeb-b29c-b42c">
               <characteristics>
@@ -3711,7 +3733,7 @@ The saint guides your troops before each battle. The model with the skull gains 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2646-af81-1253-7200" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Champion" hidden="false" id="3f64-2b31-14a2-9a53" sortIndex="8">
+        <selectionEntry type="upgrade" import="true" name="Champion [10]" hidden="false" id="3f64-2b31-14a2-9a53" sortIndex="8">
           <profiles>
             <profile name="Champion" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="93c1-3860-2560-b0f2">
               <characteristics>
@@ -3723,7 +3745,7 @@ The saint guides your troops before each battle. The model with the skull gains 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="54f9-a28e-0d25-b87c" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Surgical Strike" hidden="false" id="378b-0409-56ed-84c9" sortIndex="9">
+        <selectionEntry type="upgrade" import="true" name="Surgical Strike [11]" hidden="false" id="378b-0409-56ed-84c9" sortIndex="9">
           <profiles>
             <profile name="Surgical Strike" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ea3b-49cf-c7f4-e1ae">
               <characteristics>
@@ -3739,7 +3761,7 @@ The saint guides your troops before each battle. The model with the skull gains 
     </selectionEntryGroup>
     <selectionEntryGroup name="Ranged Skills" id="e0c1-7f5b-4309-4b3f" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Hunter" hidden="false" id="4c74-f611-ed8f-715a" sortIndex="1">
+        <selectionEntry type="upgrade" import="true" name="Hunter [3]" hidden="false" id="4c74-f611-ed8f-715a" sortIndex="1">
           <profiles>
             <profile name="Hunter" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="edbd-e2e4-8548-67b8">
               <characteristics>
@@ -3751,7 +3773,7 @@ The saint guides your troops before each battle. The model with the skull gains 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="812f-b573-5b75-da8d" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Gunslinger" hidden="false" id="63ec-d339-90fc-e206" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Gunslinger [4]" hidden="false" id="63ec-d339-90fc-e206" sortIndex="2">
           <profiles>
             <profile name="Gunslinger" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ff45-2e53-f79a-9c54">
               <characteristics>
@@ -3766,7 +3788,7 @@ Add the ASSAULT and IGNORE OFF-HAND WEAPON Keywords to any weapons that have the
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="38d4-dd1c-1b9a-d455" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Far Shot" hidden="false" id="4467-39c5-0252-1b2d" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Far Shot [5]" hidden="false" id="4467-39c5-0252-1b2d" sortIndex="3">
           <profiles>
             <profile name="Far Shot" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="404a-680d-5e47-8f09">
               <characteristics>
@@ -3782,7 +3804,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2100-9a43-5504-16b6" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Sharp Eyes" hidden="false" id="8280-5e97-040d-6849" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Sharp Eyes [6]" hidden="false" id="8280-5e97-040d-6849" sortIndex="4">
           <profiles>
             <profile name="Sharp Eyes" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="816c-f682-6d26-79a8">
               <characteristics>
@@ -3794,7 +3816,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5403-d0ea-7a69-f4e1" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Ranged Proficiency" hidden="false" id="3564-70ed-8e9e-6ee8" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Ranged Proficiency [7]" hidden="false" id="3564-70ed-8e9e-6ee8" sortIndex="5">
           <profiles>
             <profile name="Ranged Proficiency" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b2a8-68b1-1d37-ac17">
               <characteristics>
@@ -3806,7 +3828,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ec97-2857-2f77-3013" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Sniper&apos;s Nest" hidden="false" id="90e2-ac93-2fe3-02a3" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Sniper&apos;s Nest [8]" hidden="false" id="90e2-ac93-2fe3-02a3" sortIndex="6">
           <profiles>
             <profile name="Sniper&apos;s Nest" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="6eda-d841-6cb8-4ead">
               <characteristics>
@@ -3818,7 +3840,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1dab-dd8c-8871-4ee5" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Point Blank" hidden="false" id="026d-2011-be12-b126" sortIndex="7">
+        <selectionEntry type="upgrade" import="true" name="Point Blank [9]" hidden="false" id="026d-2011-be12-b126" sortIndex="7">
           <profiles>
             <profile name="Point Blank" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d5b7-c00d-d1fa-7f37">
               <characteristics>
@@ -3830,7 +3852,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ff4-ec22-e7fa-dafe" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Hip Shot" hidden="false" id="e4a5-0430-ee98-305a" sortIndex="8">
+        <selectionEntry type="upgrade" import="true" name="Hip Shot [10]" hidden="false" id="e4a5-0430-ee98-305a" sortIndex="8">
           <profiles>
             <profile name="Hip Shot" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="a3c5-1bda-eb2c-efca">
               <characteristics>
@@ -3842,7 +3864,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d7bb-ab84-c334-27eb" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Head Shot" hidden="false" id="7186-59ac-ae87-1374" sortIndex="9">
+        <selectionEntry type="upgrade" import="true" name="Head Shot [11]" hidden="false" id="7186-59ac-ae87-1374" sortIndex="9">
           <profiles>
             <profile name="Head Shot" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="879e-60f5-762b-8fcd">
               <characteristics>
@@ -3858,7 +3880,7 @@ Action Rifle, Assault Rifle etc).
     </selectionEntryGroup>
     <selectionEntryGroup name="Stealth &amp; Speed Skills" id="733a-cb63-2e8a-acdb" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Sixth Sense" hidden="false" id="b5b6-5de2-7f0d-a00a" sortIndex="1">
+        <selectionEntry type="upgrade" import="true" name="Sixth Sense [3]" hidden="false" id="b5b6-5de2-7f0d-a00a" sortIndex="1">
           <profiles>
             <profile name="Sixth Sense" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="6be5-85b1-7cf2-8620">
               <characteristics>
@@ -3870,7 +3892,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ae35-bdab-aa8e-7124" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Assassinate" hidden="false" id="0fe6-c222-41ec-9957" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Assassinate [4]" hidden="false" id="0fe6-c222-41ec-9957" sortIndex="2">
           <profiles>
             <profile name="Assassinate" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4096-5d8c-c8d3-17b5">
               <characteristics>
@@ -3882,7 +3904,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acec-65fb-2a3b-578d" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Shadow Walker" hidden="false" id="ce17-07a0-b98b-ce0d" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Shadow Walker [5]" hidden="false" id="ce17-07a0-b98b-ce0d" sortIndex="3">
           <profiles>
             <profile name="Shadow Walker" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="bcfb-6db3-1db6-8086">
               <characteristics>
@@ -3894,7 +3916,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="685e-c820-03b8-f5f4" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Athletic" hidden="false" id="d418-5ec2-d86f-9d46" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Athletic [6]" hidden="false" id="d418-5ec2-d86f-9d46" sortIndex="4">
           <profiles>
             <profile name="Athletic" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1569-40d1-e9e9-58d5">
               <characteristics>
@@ -3906,7 +3928,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac12-e12c-2397-c210" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Sprinter" hidden="false" id="6feb-bced-e2b7-9d62" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Sprinter [7]" hidden="false" id="6feb-bced-e2b7-9d62" sortIndex="5">
           <profiles>
             <profile name="Sprinter" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="0444-adc8-9057-4332">
               <characteristics>
@@ -3918,7 +3940,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c82f-894d-de9a-ba70" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Disengage" hidden="false" id="9f9f-3f2b-8dac-32b2" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Disengage [8]" hidden="false" id="9f9f-3f2b-8dac-32b2" sortIndex="6">
           <profiles>
             <profile name="Disengage" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="0137-ec50-c3e7-c1fc">
               <characteristics>
@@ -3930,7 +3952,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="250e-070d-c43e-737f" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Incoming" hidden="false" id="6ad2-eb18-b214-a09c" sortIndex="7">
+        <selectionEntry type="upgrade" import="true" name="Incoming [9]" hidden="false" id="6ad2-eb18-b214-a09c" sortIndex="7">
           <profiles>
             <profile name="Incoming" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="6655-ee7a-72aa-e848">
               <characteristics>
@@ -3942,7 +3964,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f7d8-334c-6bf7-a2f1" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Nimble" hidden="false" id="0061-7f67-f77a-7f4c" sortIndex="8">
+        <selectionEntry type="upgrade" import="true" name="Nimble [10]" hidden="false" id="0061-7f67-f77a-7f4c" sortIndex="8">
           <profiles>
             <profile name="Nimble" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="c5bd-da0a-f74a-4f20">
               <characteristics>
@@ -3954,7 +3976,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="40b6-e49e-1641-7bd3" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Dodge" hidden="false" id="713a-6278-3ae1-daa7" sortIndex="9">
+        <selectionEntry type="upgrade" import="true" name="Dodge [11]" hidden="false" id="713a-6278-3ae1-daa7" sortIndex="9">
           <profiles>
             <profile name="Dodge" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="db96-1889-8094-fbad">
               <characteristics>
@@ -3970,7 +3992,7 @@ Action Rifle, Assault Rifle etc).
     </selectionEntryGroup>
     <selectionEntryGroup name="Wildcard Skills" id="1c98-e985-326d-501c" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="War-Luck" hidden="false" id="2fe5-b521-02c3-3a75" sortIndex="1">
+        <selectionEntry type="upgrade" import="true" name="War-Luck [3]" hidden="false" id="2fe5-b521-02c3-3a75" sortIndex="1">
           <profiles>
             <profile name="War-Luck" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d00a-bcc6-9afc-ab51">
               <characteristics>
@@ -3982,7 +4004,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e2bc-cf33-e56a-b54d" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="&apos;Tis but a Scratch" hidden="false" id="f973-8802-14c0-b4ea" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="&apos;Tis but a Scratch [4]" hidden="false" id="f973-8802-14c0-b4ea" sortIndex="2">
           <profiles>
             <profile name="&apos;Tis but a Scratch" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2ecf-6284-b7d5-d003">
               <characteristics>
@@ -3994,7 +4016,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa7b-68e0-8de4-db7d" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Bad Company" hidden="false" id="eda3-efab-e4be-450c" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Bad Company [5]" hidden="false" id="eda3-efab-e4be-450c" sortIndex="3">
           <profiles>
             <profile name="Bad Company" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d39d-f290-f372-7db9">
               <characteristics>
@@ -4006,7 +4028,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="49bb-b762-3267-47d8" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Scavenger" hidden="false" id="07a5-bbea-333a-1b81" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Scavenger [6]" hidden="false" id="07a5-bbea-333a-1b81" sortIndex="4">
           <profiles>
             <profile name="Scavenger" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f106-710d-c2f9-2356">
               <characteristics>
@@ -4019,7 +4041,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1fb0-4be0-0167-9f04" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Skill &amp; Expertise" hidden="false" id="203b-5169-8490-e7f5" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Skill &amp; Expertise [7]" hidden="false" id="203b-5169-8490-e7f5" sortIndex="5">
           <profiles>
             <profile name="Skill &amp; Expertise" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="3ecd-5401-e50a-cbf8">
               <characteristics>
@@ -4031,7 +4053,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4692-bb27-3fbf-2689" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Show-Off" hidden="false" id="41b8-8a2e-a56a-f990" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Show-Off [8]" hidden="false" id="41b8-8a2e-a56a-f990" sortIndex="6">
           <profiles>
             <profile name="Show-Off" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="78b9-5458-2c4a-24d5">
               <characteristics>
@@ -4043,7 +4065,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23ca-f3c6-460c-25e9" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Friends in High Places" hidden="false" id="9af6-4234-0996-6316" sortIndex="7">
+        <selectionEntry type="upgrade" import="true" name="Friends in High Places [9]" hidden="false" id="9af6-4234-0996-6316" sortIndex="7">
           <profiles>
             <profile name="Friends in High Places" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="108e-8fd0-1ff4-e13f">
               <characteristics>
@@ -4056,7 +4078,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="86d3-6bc3-e88c-7d4b" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Glory Hound" hidden="false" id="ab03-690d-313d-f6f7" sortIndex="8">
+        <selectionEntry type="upgrade" import="true" name="Glory Hound [10]" hidden="false" id="ab03-690d-313d-f6f7" sortIndex="8">
           <profiles>
             <profile name="Glory Hound" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="90ce-f62d-202c-4bc6">
               <characteristics>
@@ -4068,7 +4090,7 @@ Action Rifle, Assault Rifle etc).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fd48-a672-af74-5f5e" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="War Stories" hidden="false" id="4212-93c6-c333-67bb" sortIndex="9">
+        <selectionEntry type="upgrade" import="true" name="War Stories [11]" hidden="false" id="4212-93c6-c333-67bb" sortIndex="9">
           <profiles>
             <profile name="War Stories" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1039-32b5-9179-40d6">
               <characteristics>
