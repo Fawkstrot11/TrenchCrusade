@@ -141,26 +141,6 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Wind Amulet" hidden="false" id="f9dd-df87-c671-55e5" sortIndex="10">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Wind Amulet" id="6f39-6e8a-c454-b100" hidden="false" type="profile" targetId="cb4d-4771-6cd2-240b"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="6686-299c-96a6-940f" includeChildSelections="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ee6-7025-9898-b10d"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Binoculars" hidden="true" id="00d1-c230-ef2d-8d48" sortIndex="11">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
@@ -855,6 +835,18 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink import="true" name="Wind Amulet" hidden="false" id="f9dd-df87-c671-55e5" type="selectionEntry" targetId="e89c-c62f-d3e0-6dfc" sortIndex="10">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Grenades" id="52e3-49c7-5f3b-d5c9" hidden="false">
@@ -1326,49 +1318,6 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
             <categoryLink name="Heavy" hidden="false" id="3a0f-e03a-2c27-adaf" targetId="70c9-988d-71a7-7654" primary="false"/>
           </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Halberd-Gun" hidden="true" id="dc52-7d54-ed37-7b20" sortIndex="3">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Halberd-Gun" id="0a0b-c38c-a0d7-6996" hidden="false" type="profile" targetId="c403-4b36-5fd6-5c95"/>
-            <infoLink name="Block" id="ef32-5c75-b4b8-cc15" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
-            <infoLink name="Cumbersome" id="8946-47f7-7bbc-b48b" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
-            <infoLink name="Assault" id="d983-745a-9ddd-94d3" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
-          </infoLinks>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="e62d-c06e-ce35-428b" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <comment>Hidden for Nomads shield combo selected</comment>
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="2c5e-e97c-3df7-39d4" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <categoryLinks>
-            <categoryLink targetId="f87d-5ea3-e505-6a9f" id="c87e-29c3-4cd0-0036" primary="false" name="Cumbersome"/>
-          </categoryLinks>
-          <entryLinks>
-            <entryLink import="true" name="Alchemical Ammuntion (Loaded)" hidden="false" id="1be1-acfd-ff82-79ce" type="selectionEntry" targetId="6eea-1e21-53b1-4ce2">
-              <modifiers>
-                <modifier type="prepend" value="+1 DICE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="7557-db6a-1262-8f13" type="selectionEntry" targetId="6298-be97-6c32-1dc2"/>
-            <entryLink import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="false" id="70d7-07c1-f1b4-c598" type="selectionEntry" targetId="d5f6-0471-e4b8-8670"/>
-            <entryLink import="true" name="Scrap Shot (Loaded)" hidden="false" id="9455-2ae1-3200-6b58" type="selectionEntry" targetId="3df0-a6cf-2aad-121c"/>
-          </entryLinks>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Anti-Tank Hammer" hidden="true" id="b0ec-20ff-7d2a-ce73" collective="false" sortIndex="4">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="35"/>
@@ -1537,6 +1486,41 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
           </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Halberd-Gun" hidden="false" id="dc52-7d54-ed37-7b20" type="selectionEntry" targetId="efd3-b269-006c-46a3" sortIndex="3">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="Alchemical Ammuntion (Loaded)" hidden="false" id="f173-109c-aa93-3793" type="selectionEntry" targetId="6eea-1e21-53b1-4ce2">
+              <modifiers>
+                <modifier type="prepend" value="+1 DICE" field="8cd6-8018-f2da-5ede" affects="profiles.Weapon" scope="parent" join=", "/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Scrap Shot (Loaded)" hidden="false" id="783f-4ed8-072c-830a" type="selectionEntry" targetId="3df0-a6cf-2aad-121c"/>
+            <entryLink import="true" name="Shayṭānic Shard Ammuntion (Loaded)" hidden="false" id="16ac-a182-6113-a98b" type="selectionEntry" targetId="d5f6-0471-e4b8-8670"/>
+            <entryLink import="true" name="Sparkpowder Ammuntion (Loaded)" hidden="false" id="8420-a315-6e9c-8a62" type="selectionEntry" targetId="6298-be97-6c32-1dc2"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="e62d-c06e-ce35-428b" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <comment>Hidden for Nomads shield combo selected</comment>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="2c5e-e97c-3df7-39d4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Ranged (One-Handed)" id="12b2-a2c1-dcf8-980c" hidden="false" collective="false">
       <selectionEntries>
@@ -3125,37 +3109,6 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b7b8-c006-efab-099e" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Alchemist Armour" hidden="true" id="a2de-13d5-ab9c-8c93" sortIndex="3">
-          <infoLinks>
-            <infoLink name="Alchemist Armour" id="2501-18d0-d32d-df6d" hidden="false" type="profile" targetId="68e2-bde3-19a9-2980"/>
-            <infoLink name="Negate [Keyword]" id="174a-9ccb-3b1d-a868" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
-          </infoLinks>
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="d8dd-a5b7-721e-039a">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c2b1-d49e-937b-2f87" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <comment>Nomads of Al-Badia</comment>
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d8dd-a5b7-721e-039a" includeChildSelections="true"/>
-          </constraints>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Machine Armour" hidden="true" id="c1fa-c327-3411-9462" sortIndex="4">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
@@ -3193,6 +3146,24 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Damascus Armour" hidden="false" id="cb77-5e52-9716-6bc2" type="selectionEntry" targetId="54b8-464a-88c3-3244" sortIndex="5"/>
+        <entryLink import="true" name="Alchemist Armour" hidden="false" id="a2de-13d5-ab9c-8c93" type="selectionEntry" targetId="869a-c7e7-7319-c17b" sortIndex="3">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="1" field="e728-0cc5-2085-13f4">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c2b1-d49e-937b-2f87" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <comment>Nomads of Al-Badia</comment>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Arts of Assassination" id="10c9-aab8-b0a9-1ec8" hidden="true">
@@ -4641,6 +4612,51 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7563-e85e-571d-99e5" includeChildSelections="true"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Alchemist Armour" hidden="true" id="869a-c7e7-7319-c17b">
+      <infoLinks>
+        <infoLink name="Alchemist Armour" id="a2e1-209e-ad0b-794f" hidden="false" type="profile" targetId="68e2-bde3-19a9-2980"/>
+        <infoLink name="Negate [Keyword]" id="788b-b0a0-2501-b6a3" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+      </infoLinks>
+      <costs>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e728-0cc5-2085-13f4" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Wind Amulet" hidden="false" id="e89c-c62f-d3e0-6dfc">
+      <costs>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Wind Amulet" id="2a14-0ce9-599c-2276" hidden="false" type="profile" targetId="cb4d-4771-6cd2-240b"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="9887-b25b-717e-2cbc" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="72f9-8b44-a786-a835"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Halberd-Gun" hidden="true" id="efd3-b269-006c-46a3">
+      <costs>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Halberd-Gun" id="3b9d-a8c6-7a91-1749" hidden="false" type="profile" targetId="c403-4b36-5fd6-5c95"/>
+        <infoLink name="Block" id="0ced-3d17-b1e7-6f74" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
+        <infoLink name="Cumbersome" id="c032-e838-0e9d-3191" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+        <infoLink name="Assault" id="c598-6712-df91-23f7" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Cumbersome" hidden="false" id="3496-56e6-9ba1-fa7e" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <forceEntries>
     <forceEntry name="Warband" id="98e5-edfc-8e10-0865" hidden="false">
@@ -6004,10 +6020,14 @@ In addition when this unit take the Retreat Action, Melee Attack Success Roll ma
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Armour" hidden="false" id="1374-b153-d240-f4ed" type="selectionEntryGroup" targetId="fa38-f4fd-c529-2365"/>
-        <entryLink import="true" name="Wind Amulet" hidden="false" id="3fd1-e13c-728e-51a2" type="selectionEntry" targetId="f9dd-df87-c671-55e5" sortIndex="3"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="45d5-0f29-64e0-22cc" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteam" hidden="false" id="6a89-79a5-2e61-4b71" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="2"/>
         <entryLink import="true" name="Advancement" hidden="false" id="18b7-2453-fabe-c0c1" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" sortIndex="1"/>
+        <entryLink import="true" name="Wind Amulet" hidden="false" id="7125-2902-65e9-f560" type="selectionEntry" targetId="e89c-c62f-d3e0-6dfc" sortIndex="3">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <profiles>
         <profile name="Lion of Jabir" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="2ce6-a5e6-fd5e-9b11">
