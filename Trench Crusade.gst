@@ -60,16 +60,46 @@
       <characteristicTypes>
         <characteristicType name="Type" id="f90e-171a-4ca6-3845"/>
         <characteristicType name="Range" id="31a7-b5e8-41dc-5fd1"/>
-        <characteristicType name="Keywords" id="8cd6-8018-f2da-5ede"/>
-        <characteristicType name="Rules" id="87f0-637b-734a-22eb"/>
+        <characteristicType name="Keywords" id="8cd6-8018-f2da-5ede">
+          <formatRules>
+            <formatRule name="New Format Rule" id="9d7b-ed83-5c46-815c" hidden="false" type="regex" match="^$" replace="-">
+              <comment>Empty → -</comment>
+            </formatRule>
+          </formatRules>
+        </characteristicType>
+        <characteristicType name="Rules" id="87f0-637b-734a-22eb">
+          <formatRules>
+            <formatRule name="New Format Rule" id="c818-19b2-82d2-5e69" hidden="false" type="regex" match="^$" replace="-">
+              <comment>Empty → -</comment>
+            </formatRule>
+          </formatRules>
+        </characteristicType>
       </characteristicTypes>
     </profileType>
     <profileType name="Battlekit" id="7079-589c-df69-fa7e" hidden="false" sortIndex="3">
       <characteristicTypes>
         <characteristicType name="Type" id="3f15-74a1-4d35-3642"/>
-        <characteristicType name="Range" id="2b32-2f45-9c06-7a77"/>
-        <characteristicType name="Keywords" id="5093-5528-b08f-1496"/>
-        <characteristicType name="Rules" id="4834-43a9-1c93-9062"/>
+        <characteristicType name="Range" id="2b32-2f45-9c06-7a77">
+          <formatRules>
+            <formatRule name="New Format Rule" id="9d28-864d-706b-d580" hidden="false" type="regex" match="^$" replace="-">
+              <comment>Empty → -</comment>
+            </formatRule>
+          </formatRules>
+        </characteristicType>
+        <characteristicType name="Keywords" id="5093-5528-b08f-1496">
+          <formatRules>
+            <formatRule name="New Format Rule" id="8bcc-1e9e-5d9b-7b0f" hidden="false" type="regex" match="^$" replace="-">
+              <comment>Empty → -</comment>
+            </formatRule>
+          </formatRules>
+        </characteristicType>
+        <characteristicType name="Rules" id="4834-43a9-1c93-9062">
+          <formatRules>
+            <formatRule name="New Format Rule" id="d849-c0d7-c0d5-7e38" hidden="false" type="regex" match="^$" replace="-">
+              <comment>Empty → -</comment>
+            </formatRule>
+          </formatRules>
+        </characteristicType>
       </characteristicTypes>
     </profileType>
     <profileType name="Ability" id="058c-866b-6487-ccc4" hidden="false" sortIndex="4">

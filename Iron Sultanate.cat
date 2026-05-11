@@ -18,31 +18,6 @@
             <categoryLink targetId="d935-8238-a3f7-8ab0" id="40e1-f847-e383-ff93" primary="false" name="Negate Gas"/>
           </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Cloak of Alamut" hidden="true" id="a157-044b-338e-ded8" sortIndex="9">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="25"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Cloak of Alamut" id="8888-26ce-0d67-e2de" hidden="false" type="profile" targetId="fc84-ca32-2672-c684"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="822c-f4e3-e4f4-07ce" includeChildSelections="true"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Holy Relic" hidden="true" id="79cb-5695-8623-2fbb" sortIndex="13">
           <costs>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
@@ -862,6 +837,24 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
         </entryLink>
         <entryLink import="true" name="Dog Food" hidden="false" id="812b-50f4-8c25-dda9" type="selectionEntry" targetId="05f3-2ee4-36c0-8c25" sortIndex="12"/>
         <entryLink import="true" name="Rocket-Propelled Grenade" hidden="true" id="853c-941f-0253-5dbb" type="selectionEntry" targetId="e365-c945-740f-e764" sortIndex="18"/>
+        <entryLink import="true" name="Cloak of Alamut" hidden="false" id="8561-d28d-a281-0b5b" type="selectionEntry" targetId="e4e4-ca27-aa27-d93b" sortIndex="9">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="25"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="5df2-4c17-7c8c-4f1e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Grenades" id="52e3-49c7-5f3b-d5c9" hidden="false">
@@ -4637,6 +4630,17 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
 " arg="-"/>
       </modifiers>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Cloak of Alamut" hidden="true" id="e4e4-ca27-aa27-d93b">
+      <costs>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Cloak of Alamut" id="1b82-fda4-bcb1-3b4b" hidden="false" type="profile" targetId="fc84-ca32-2672-c684"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7563-e85e-571d-99e5" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
   </sharedSelectionEntries>
   <forceEntries>
     <forceEntry name="Warband" id="98e5-edfc-8e10-0865" hidden="false">
@@ -7219,6 +7223,12 @@ In exchange for losing their Counter-charge ability, Janissaries (and a Model th
         <entryLink import="true" name="Advancement" hidden="false" id="9f7c-fc45-82c5-cb4f" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" sortIndex="1"/>
         <entryLink import="true" name="Fireteam" hidden="false" id="821b-26a9-e08a-fca5" type="selectionEntryGroup" targetId="09f8-fd32-af0a-a131" sortIndex="2"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="4438-6723-65b7-8a13" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
+        <entryLink import="true" name="Cloak of Alamut" hidden="false" id="c842-40b6-66b0-8b75" type="selectionEntry" targetId="e4e4-ca27-aa27-d93b">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="52a7-9567-a65f-7bd3-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="52a7-9567-a65f-7bd3-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Sniper Rifle" id="d274-8829-0899-580e" hidden="false" type="profile" targetId="6eb2-c600-98e7-16d3">
@@ -7232,7 +7242,6 @@ In exchange for losing their Counter-charge ability, Janissaries (and a Model th
         </infoLink>
         <infoLink name="Critical" id="5aeb-7e93-d14c-d065" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
         <infoLink name="Risky" id="eaae-7c1d-da66-0262" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
-        <infoLink name="Cloak of Alamut" id="7877-5ae6-d9ad-1192" hidden="false" type="profile" targetId="fc84-ca32-2672-c684"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink targetId="bd43-ddb1-262d-4489" id="6301-1b7a-36cf-3a66" primary="true" name="Troop"/>
