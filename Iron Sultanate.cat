@@ -908,7 +908,7 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
                 <constraint type="max" value="5" field="selections" scope="roster" shared="true" id="54bc-5e65-01c4-329e" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Alchemical Ammunition" id="27ee-8099-3983-f37f" hidden="false" type="profile" targetId="c296-2021-0947-c6c7"/>
+                <infoLink name="Corrosive Ammunition" id="27ee-8099-3983-f37f" hidden="false" type="profile" targetId="c296-2021-0947-c6c7"/>
                 <infoLink name="Ammunition (Keyword)" id="6159-9149-5767-e4ff" hidden="false" type="rule" targetId="9a05-7b7b-6023-5523"/>
               </infoLinks>
               <modifiers>
@@ -4774,7 +4774,7 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
 " arg="-"/>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Corosive Ammuntion (Loaded)" hidden="true" id="782c-2ed3-305d-d6ca">
+    <selectionEntry type="upgrade" import="true" name="Corrosive Ammuntion (Loaded)" hidden="true" id="782c-2ed3-305d-d6ca">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="self" shared="true" id="8b28-d180-b8fe-3027"/>
         <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="17db-3d3b-f62a-224f" includeChildSelections="true" includeChildForces="true"/>
@@ -4782,7 +4782,7 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="model" childId="8a1e-a662-247a-2c2b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="model" childId="b488-3687-c999-2610" shared="true" includeChildSelections="true" includeChildForces="true" childName="Corrosive Ammunition"/>
           </conditions>
         </modifier>
         <modifier type="increment" value="1" field="17db-3d3b-f62a-224f">
