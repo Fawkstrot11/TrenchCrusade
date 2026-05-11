@@ -1916,6 +1916,9 @@
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
+              <categoryLinks>
+                <categoryLink targetId="baee-43b9-2e20-9755" id="2f57-7bda-5717-dd0f" primary="false" name="Negate Shrapnel"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Compound Eyes Helmet" hidden="true" id="698c-0858-ccf4-a63d">
               <costs>
@@ -2890,7 +2893,17 @@
         </profile>
         <profile name="Re-creation" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="920a-c4f1-99e2-1104">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If the Homunculus is taken Out of Action during battle, and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats at any time between battles to bring it back to life with all of its weapons and abilities</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If a Takwin Homunculus is killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats in the following Quartermaster Step to leave it on the Roster.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Artificial Life" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e793-0ece-1b8f-1d00">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 DICE to Injury Rolls for a Tawkin Homunculus.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Pummeling Blows" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f175-b124-9cce-c875">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Takwin Homunculus can make a Melee Attack even though it does not have any Melee Weapons.</characteristic>
           </characteristics>
         </profile>
       </profiles>

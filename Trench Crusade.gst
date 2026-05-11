@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-4f3d-c5c9-7df1-ad01" name="Trench Crusade" battleScribeVersion="2.03" authorName="Fawkstrot" authorUrl="https://github.com/Fawkstrot11" revision="16" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-4f3d-c5c9-7df1-ad01" name="Trench Crusade" battleScribeVersion="2.03" authorName="Fawkstrot" authorUrl="https://github.com/Fawkstrot11" revision="17" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Artificial" id="4180-5377-2d83-48ba" hidden="false" publicationId="c658-4a10-e1fe-befc"/>
     <categoryEntry name="Elite" id="3de0-192c-3ec2-51be" hidden="false" publicationId="c658-4a10-e1fe-befc"/>
@@ -8,7 +8,9 @@
     <categoryEntry name="New Antioch" id="2cfb-73f8-0df3-30e8" hidden="false" publicationId="c658-4a10-e1fe-befc"/>
     <categoryEntry name="Heretic" id="7ba1-f516-e8cf-3957" hidden="false" publicationId="c658-4a10-e1fe-befc"/>
     <categoryEntry name="Pilgrim" id="afb7-d895-f4b4-73f3" hidden="false" publicationId="c658-4a10-e1fe-befc"/>
-    <categoryEntry name="Strong" id="afcc-5f24-1c7c-63c4" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
+    <categoryEntry name="Strong" id="afcc-5f24-1c7c-63c4" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13">
+      <description>A model with this Keyword is not affected by Battlekit with the Keyword HEAVY. In addition, it can use one 2-Handed Melee Weapon as if it were a 1-Handed Melee Weapon.</description>
+    </categoryEntry>
     <categoryEntry name="Tough" id="914f-0020-0d97-e217" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
     <categoryEntry name="Sultanate" id="fd8d-e9e0-2540-a257" hidden="false" publicationId="c658-4a10-e1fe-befc"/>
     <categoryEntry name="Infiltrator" id="9b36-57f6-1887-7bea" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
@@ -27,11 +29,18 @@
     <categoryEntry name="Golem" id="c15a-8839-8c4e-c312" hidden="false" publicationId="c658-4a10-e1fe-befc" page="12"/>
     <categoryEntry name="Leader" id="afb9-39f5-82d9-46ed" hidden="false"/>
     <categoryEntry name="Pile" id="ce28-ad9a-bbc1-f1dc" hidden="true"/>
-    <categoryEntry name="Negate Gas" id="d935-8238-a3f7-8ab0" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
+    <categoryEntry name="Negate Gas" id="d935-8238-a3f7-8ab0" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13">
+      <description>Do not take a blood markers from gas keyword</description>
+    </categoryEntry>
     <categoryEntry name="Negate Fear" id="7877-788b-2d58-c844" hidden="false"/>
-    <categoryEntry name="Negate Fire" id="f0ef-ba0d-8963-331a" hidden="false"/>
+    <categoryEntry name="Negate Fire" id="f0ef-ba0d-8963-331a" hidden="false">
+      <description>Do not take a blood markers from fire keyword</description>
+    </categoryEntry>
     <categoryEntry name="Regenerate 1" id="cf46-8390-3092-66cb" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
     <categoryEntry name="Negate Difficult Terrain" id="716a-84dc-1167-5c6c" hidden="false" publicationId="c658-4a10-e1fe-befc" page="13"/>
+    <categoryEntry name="Negate Shrapnel" id="baee-43b9-2e20-9755" hidden="false" publicationId="c658-4a10-e1fe-befc">
+      <description>Do not take a blood markers from sharpnel keyword</description>
+    </categoryEntry>
   </categoryEntries>
   <costTypes>
     <costType name="Ducats" id="8d43-33fd-332d-17a6" defaultCostLimit="-1"/>
