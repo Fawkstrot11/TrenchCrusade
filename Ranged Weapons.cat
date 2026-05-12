@@ -18,9 +18,18 @@
         <infoLink name="Heavy" id="c002-d719-0e2a-9f78" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
         <infoLink name="Ignore Armour" id="8277-6385-a967-9ca4" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="73bb-f913-c177-6a7d" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ammunitions" id="20bb-39b4-d10c-4a2e" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="73bb-f913-c177-6a7d" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="5641-6043-a181-af45" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="df9c-4fd1-a694-defa" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a96a-625c-6a96-bd74"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Automatic Pistol" hidden="false" id="f294-f3b2-5577-bc17">
       <profiles>
@@ -41,9 +50,18 @@
       <costs>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
-      <entryLinks>
-        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="7a3b-9228-0a85-b09e" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ammunitions" id="e747-b0dc-8ef4-eebd" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="23c7-8f00-5e3b-9c36" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="051a-4f44-0b09-17fb" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="62ac-c860-5a8f-d65c" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="99c9-b361-32ed-7778"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Automatic Rifle" hidden="false" id="46cb-36ae-c7ea-cdd0">
       <profiles>
@@ -61,16 +79,27 @@
         <infoLink name="Automatic" id="1130-3e5d-d735-c57d" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="Bayonet" hidden="false" id="36f8-0be4-2eac-91a8" type="selectionEntry" targetId="2a56-df62-c8c1-9bc0">
+        <entryLink import="true" name="Bayonet" hidden="false" id="36f8-0be4-2eac-91a8" type="selectionEntry" targetId="2a56-df62-c8c1-9bc0" sortIndex="-1">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="2"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="08cd-8086-aac1-2005" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
       </entryLinks>
       <costs>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ammunitions" id="a4e3-6641-122f-3fd5" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="78cd-0f0e-e21a-8f4b" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="d3b8-6a20-0d88-66a0" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="ec19-0aa7-9e2b-820e" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="859b-6f5b-f05f-18d3"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Automatic Shotgun" hidden="false" id="f8bd-481c-8364-3eb3">
       <profiles>
@@ -89,16 +118,27 @@
         <infoLink name="Shotgun" id="5744-d137-7a9e-ee63" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="Bayonet" hidden="false" id="6963-380e-99c0-ef56" type="selectionEntry" targetId="2a56-df62-c8c1-9bc0">
+        <entryLink import="true" name="Bayonet" hidden="false" id="6963-380e-99c0-ef56" type="selectionEntry" targetId="2a56-df62-c8c1-9bc0" sortIndex="-1">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="2"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="f5f7-aa1a-dfcb-7b5d" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
       </entryLinks>
       <costs>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ammunitions" id="51d2-5928-ce1e-beec" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="f9fc-696e-9de2-7b40" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="14fb-e58c-e0ea-695c" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="64eb-effc-2170-78bd" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b1a1-6b31-d86e-1926"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Blunderbuss" hidden="false" id="fe85-959c-0d7a-ca0b">
       <profiles>
@@ -127,13 +167,24 @@
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Bayonet" hidden="false" id="fcc2-238e-0710-c865" type="selectionEntry" targetId="2a56-df62-c8c1-9bc0">
+        <entryLink import="true" name="Bayonet" hidden="false" id="fcc2-238e-0710-c865" type="selectionEntry" targetId="2a56-df62-c8c1-9bc0" sortIndex="-1">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="2"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="4ecb-4479-671e-2654" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
       </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ammunitions" id="a554-82fa-5466-a6a6" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="17a1-2d89-4e32-a573" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="3e2c-978f-520d-9aff" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="1eb0-0aad-d191-ce18" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="51b4-1a31-5589-11f4"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Flamethrower" hidden="false" id="985f-e0c3-b0e9-5f89">
       <profiles>
@@ -208,13 +259,22 @@
         <infoLink name="Shotgun" id="2e8c-d14c-4bc6-f69f" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
         <infoLink name="+/- Dice" id="8943-13e4-cfee-06e9" hidden="false" type="rule" targetId="8b7a-8f2d-dda6-b671"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="db53-dfd3-f70f-e7f9" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ammunitions" id="fcb6-85b4-46e9-a553" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="4179-3ba7-0fdb-f1b6" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="460b-9fe7-21b4-46bf" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="c8bd-400e-7f96-bb52" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fedd-2a6b-3240-1633"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Machin Gun" hidden="false" id="45c3-9d88-09fa-ee11">
+    <selectionEntry type="upgrade" import="true" name="Machine Gun" hidden="false" id="45c3-9d88-09fa-ee11">
       <profiles>
-        <profile name="Machin Gun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="057c-08d9-c23f-7b47">
+        <profile name="Machine Gun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="057c-08d9-c23f-7b47">
           <characteristics>
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
             <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
@@ -228,9 +288,18 @@
         <infoLink name="Heavy" id="33bb-7536-076b-338a" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
         <infoLink name="Reload" id="9b37-3d0d-1824-fbdf" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="1c2e-fd41-56a5-d3da" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ammunitions" id="e147-2f85-ce54-6f06" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="6062-e61a-11e3-c446" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="c5f6-3623-8642-6127" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="0f65-dc9d-dd18-95a2" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="032c-3d07-0bab-f0bc"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Musket" hidden="false" id="d4e5-27cf-6c0d-1dad">
       <profiles>
@@ -246,9 +315,18 @@
       <infoLinks>
         <infoLink name="+/- Injury Dice" id="aa8f-174e-f40e-b596" hidden="false" type="rule" targetId="9880-1ec6-9767-4698"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="a0e2-4fa2-4b64-0bd0" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ammunitions" id="759b-7f88-1155-1621" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="5730-f205-439c-73e6" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="ffe2-9b86-befd-b603" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="42f7-3f33-fbf7-b560" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="80ae-1123-9e7b-4e4d"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Silenced Pistol" hidden="false" id="92fc-7eaf-8c33-3f87">
       <profiles>
@@ -265,9 +343,18 @@
         <infoLink name="Assault" id="502b-608c-2d3c-cbba" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
         <infoLink name="Pistol" id="c606-877e-f925-d11b" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="59fe-4284-a472-69cd" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ammunitions" id="dc12-8db3-3629-b50c" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="1aff-8ec2-437d-837d" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="2444-35c0-2767-0846" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="8b6b-53cd-f00b-a9d2" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d4ab-1604-01e3-0219"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Semi-Automatic Rifle" hidden="false" id="4111-f437-2e81-899f">
       <profiles>
@@ -284,13 +371,24 @@
         <infoLink name="Assault" id="6d2e-300d-7703-bff5" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="Bayonet" hidden="false" id="828f-fb54-468e-1cd1" type="selectionEntry" targetId="2a56-df62-c8c1-9bc0">
+        <entryLink import="true" name="Bayonet" hidden="false" id="828f-fb54-468e-1cd1" type="selectionEntry" targetId="2a56-df62-c8c1-9bc0" sortIndex="-1">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="2"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="05cc-79c0-5e4e-e84a" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
       </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ammunitions" id="cf55-979c-705c-c240" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="660d-0720-1ac2-e10d" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="ee4b-3483-8516-6897" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="aeb5-ebb5-c7c2-ae68" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c0d6-6510-d89b-000a"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Shotgun" hidden="false" id="b5a3-faec-7613-ef0f">
       <profiles>
@@ -308,13 +406,24 @@
         <infoLink name="Shotgun" id="2ce7-a193-eb0f-77d7" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="Bayonet" hidden="false" id="2867-aab9-d6dc-e3bc" type="selectionEntry" targetId="2a56-df62-c8c1-9bc0">
+        <entryLink import="true" name="Bayonet" hidden="false" id="2867-aab9-d6dc-e3bc" type="selectionEntry" targetId="2a56-df62-c8c1-9bc0" sortIndex="-1">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="2"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="2943-7d26-6f59-f650" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
       </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ammunitions" id="8e6b-8aa7-51e2-4ffa" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="acee-c3be-9c3e-9603" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="89cf-f94c-a632-43b1" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="2426-2283-dfe8-b8da" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="15e7-e377-1ced-849a"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Pistol" hidden="false" id="48be-3a36-f9c0-a465">
       <profiles>
@@ -330,9 +439,18 @@
       <infoLinks>
         <infoLink name="Pistol" id="ce70-59e1-8b3b-76d5" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="6661-f002-43f1-dc88" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ammunitions" id="b1a7-c9e8-289b-8282" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="9075-92d4-6e90-ee9b" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="342c-2275-27f8-150c" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="6da0-566d-2fdc-f412" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="08e4-c220-b9ea-2750"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="false" id="808a-f077-4fec-ef82">
       <profiles>
@@ -351,9 +469,18 @@
         <infoLink name="Risky" id="06e4-a56e-46b9-5a42" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
         <infoLink name="Critical" id="89a6-0d80-1812-03ee" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="c9aa-ca3b-355e-dd13" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ammunitions" id="28bc-9cee-9064-8788" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="37a4-c34b-cd24-14f5" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="386e-c1c0-6b43-11cd" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="daec-66f7-cfad-2251" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58c4-c132-979e-6f9a"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Submachine Gun" hidden="false" id="0754-f896-3f97-65c7">
       <profiles>
@@ -370,13 +497,24 @@
         <infoLink name="Assault" id="a71e-4ce9-f58b-bcb2" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="Bayonet" hidden="false" id="c2cb-2ba5-0d75-43ba" type="selectionEntry" targetId="2a56-df62-c8c1-9bc0">
+        <entryLink import="true" name="Bayonet" hidden="false" id="c2cb-2ba5-0d75-43ba" type="selectionEntry" targetId="2a56-df62-c8c1-9bc0" sortIndex="-1">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="2"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="d901-246b-8ad8-1008" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
       </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ammunitions" id="3f28-97cb-90de-afd9" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="7d52-23c0-7696-335a" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+            <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="09eb-07fa-e7dd-6c92" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+            <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="a3ef-020b-6637-fbef" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5c1-f7e7-3a05-851f"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Frag Grenades" hidden="false" id="7f07-3b1b-85e7-6802">
       <profiles>
