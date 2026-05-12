@@ -4084,7 +4084,7 @@ Action Rifle, Assault Rifle etc).
     </selectionEntryGroup>
     <selectionEntryGroup name="Glory Items" id="582e-f111-0ac4-3a8a" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Sniper Scope" hidden="true" id="4ada-fe73-318e-83f2" sortIndex="1">
+        <selectionEntry type="upgrade" import="true" name="Sniper Scope" hidden="false" id="4ada-fe73-318e-83f2" sortIndex="1">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
             <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
@@ -5726,6 +5726,38 @@ A Hunter of the Left-Hand Path cannot cast the Oracle Beast Cloak Goetic Spell 
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Sniper Scope" hidden="true" id="52d1-94eb-79a1-37a7" type="selectionEntry" targetId="e639-5100-6786-414f" sortIndex="1">
+          <costs>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+          </costs>
+          <modifiers>
+            <modifier type="increment" value="1" field="3f34-086b-4f6b-999b">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="0d8e-6131-5ba9-43cd" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="e144-fd65-dd37-8ba2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="afdf-43aa-a03d-918b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="59d9-81ac-d75d-abed" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="3f34-086b-4f6b-999b" includeChildSelections="true"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Advancement" id="bc33-e591-8f2e-a847" hidden="true" collapsible="true">
       <selectionEntries>
@@ -6511,6 +6543,15 @@ A Hunter of the Left-Hand Path cannot cast the Oracle Beast Cloak Goetic Spell 
         <categoryLink targetId="705b-e23f-e9c2-58ab" id="98cd-2e35-fb95-4b49" primary="true" name="Configuration"/>
       </categoryLinks>
       <comment>NA/Pilgrims. Lazy copy paste solution.</comment>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sniper Scope" hidden="true" id="e639-5100-6786-414f">
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Sniper Scope" id="18fa-84e8-dd0a-ddb4" hidden="false" type="profile" targetId="5a48-9735-499f-e394"/>
+        <infoLink name="Ignore [Modifier]" id="dbee-5f81-4d25-2626" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
