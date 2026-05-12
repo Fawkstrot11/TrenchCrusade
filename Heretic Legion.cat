@@ -2439,65 +2439,6 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
       </modifierGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Melee (One-Handed)" id="2316-99d3-0e3a-3771" hidden="false" collective="false">
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Sacrificial Blade" hidden="true" id="7834-9330-b4a1-1c98" sortIndex="4" collective="false">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="23"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Sacrificial Blade" id="63e9-79bf-dc36-33fb" hidden="false" type="profile" targetId="1459-550f-ed53-b276"/>
-            <infoLink name="Risky" id="4835-8827-480f-df41" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
-          </infoLinks>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="c3ba-a27c-b5cb-93e2">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="e9ef-e201-bd31-38c6" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="c3ba-a27c-b5cb-93e2">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="3ff6-3412-b7f3-b0a4" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="c3ba-a27c-b5cb-93e2">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="roster" childId="c7fe-69f0-1ac0-f61a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="c3ba-a27c-b5cb-93e2" includeChildSelections="true"/>
-          </constraints>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Blasphemous Staff" hidden="true" id="6e18-eb53-a42f-9368" sortIndex="4" collective="false">
-          <costs>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Blasphemous Staff" id="48dd-de82-5956-ffc1" hidden="false" type="profile" targetId="6efb-9e82-7136-f983"/>
-            <infoLink name="Critical" id="be20-dff1-1628-8f93" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
-            <infoLink name="Fire" id="22b4-7442-7373-be45" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
-          </infoLinks>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-      </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="Trench Knife" hidden="false" id="ea66-7429-6450-4e68" type="selectionEntry" targetId="daaa-b1ef-7908-82a7" sortIndex="1">
           <costs>
@@ -2513,6 +2454,53 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="4"/>
           </costs>
+        </entryLink>
+        <entryLink import="true" name="Blasphemous Staff" hidden="true" id="f972-03e2-d293-84d1" type="selectionEntry" targetId="9f94-7ffa-1b5c-0935" sortIndex="4">
+          <costs>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Sacrificial Blade" hidden="true" id="fb9b-102a-0477-c7fc" type="selectionEntry" targetId="8a11-d2f8-755a-3cc9" sortIndex="5">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="23"/>
+          </costs>
+          <modifiers>
+            <modifier type="increment" value="1" field="fac4-e5de-502e-3101">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="c7fe-69f0-1ac0-f61a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="fac4-e5de-502e-3101">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="3ff6-3412-b7f3-b0a4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="fac4-e5de-502e-3101">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="e9ef-e201-bd31-38c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="fac4-e5de-502e-3101" includeChildSelections="true"/>
+          </constraints>
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
@@ -5253,6 +5241,25 @@ If a Byzantinium Heart is ever removed or lost from the model that has it equipp
           </constraints>
         </entryLink>
       </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Blasphemous Staff" hidden="false" id="9f94-7ffa-1b5c-0935" collective="false">
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Blasphemous Staff" id="5f14-9f07-1c9a-a8f1" hidden="false" type="profile" targetId="6efb-9e82-7136-f983"/>
+        <infoLink name="Critical" id="0c0b-3faf-4e82-8bd1" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+        <infoLink name="Fire" id="fce3-b391-34fa-76f7" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sacrificial Blade" hidden="false" id="8a11-d2f8-755a-3cc9" collective="false">
+      <costs>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Sacrificial Blade" id="62f3-c07d-8a1c-216f" hidden="false" type="profile" targetId="1459-550f-ed53-b276"/>
+        <infoLink name="Risky" id="0c3b-b873-7ff8-0785" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
