@@ -1137,4 +1137,14 @@ Mutation: Once this Battlekit has been equipped, it cannot be removed or lost ov
       </characteristics>
     </profile>
   </sharedProfiles>
+  <forceEntries>
+    <forceEntry name="Warband" id="eef8-974d-98a4-8d2e" hidden="false">
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="a1ec-c1a7-67f1-3c3d" targetId="705b-e23f-e9c2-58ab"/>
+        <categoryLink name="Elite" hidden="false" id="d674-9dad-3a52-6f42" targetId="3de0-192c-3ec2-51be"/>
+        <categoryLink name="Troop" hidden="false" id="8ece-5350-0612-123a" targetId="bd43-ddb1-262d-4489"/>
+        <categoryLink name="Mercenary" hidden="false" id="a7d4-1035-32a8-15c4" targetId="3dfb-701d-e89c-eba2"/>
+      </categoryLinks>
+    </forceEntry>
+  </forceEntries>
 </gameSystem>
