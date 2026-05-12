@@ -5558,20 +5558,6 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Tough" id="933f-f858-b8f9-2bcc" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
-        <infoLink name="Strong" id="900a-9494-0743-50e7" hidden="true" type="rule" targetId="6297-d0e0-1935-5cfd">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6032-5543-8548-b9ac" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="self" childId="3fdd-747a-7297-115a" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink name="Leader" id="76a5-f7d4-5385-919a" hidden="false" type="rule" targetId="9130-09e0-3351-8c4c"/>
       </infoLinks>
       <costs>
@@ -5594,22 +5580,6 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
           </conditions>
           <comment>Iron Wall</comment>
         </modifierGroup>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category"/>
-          </modifiers>
-          <comment>Janissary Training</comment>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="self" childId="0f27-f803-965a-e559" shared="true">
-                  <comment>Nomads version</comment>
-                </condition>
-                <condition type="atLeast" value="1" field="selections" scope="self" childId="3fdd-747a-7297-115a" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifierGroup>
       </modifierGroups>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Janissary Veteran" hidden="false" id="3fdd-747a-7297-115a" sortIndex="2">
@@ -5621,7 +5591,13 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3298-41bc-1cf3-7dfb"/>
           </constraints>
           <profiles>
-            <profile name="Counter-Charge" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="0561-6d7c-1c61-ecb5">
+            <profile name="Janissary Veteran" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8f21-dc64-88f6-1183">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">You can make the Yüzbaşı a Janissary Veteran with the STRONG Keyword and the Janissary Counter-
+Charge ability at a cost of +10 👑.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Counter-Charge" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="0561-6d7c-1c61-ecb5" noindex="false">
               <characteristics>
                 <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If the first ACTION a Yüzbaşı makes during their Activation is a Charge, add +1 DICE to Melee Attacks made by the Yüzbaşı for the rest of the Activation.</characteristic>
               </characteristics>
@@ -5635,6 +5611,9 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
               <comment>Hide normal training for Nomads</comment>
             </modifier>
           </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="afcc-5f24-1c7c-63c4" id="2e38-cf25-f46d-ddf7" primary="false" name="Strong"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Akinji-Bey" hidden="true" id="a0bc-2879-6cde-b11f" sortIndex="3">
           <profiles>
@@ -5655,6 +5634,36 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
               </conditions>
             </modifier>
           </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Janissary Veteran" hidden="true" id="0f27-f803-965a-e559" sortIndex="2">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Janissary Veteran" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f37a-4529-5e64-5407">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Nomads of Al-Badia&apos;s Yüzbaşı gains the STRONG Keyword and choose between two abilities: Counter-Charge or Shield Training.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5e63-70f2-ea45-5ef1"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Training Choice" hidden="false" id="185d-3f13-bbc9-86f2" type="selectionEntryGroup" targetId="11d9-8ed4-b950-3fb4"/>
+          </entryLinks>
+          <comment>Nomads version</comment>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="afcc-5f24-1c7c-63c4" id="4fd9-75b4-7e51-04e0" primary="false" name="Strong"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
       <rules>
@@ -5742,37 +5751,6 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="359d-9cfc-0cb3-7003"/>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5057-f4e9-aba8-08cf"/>
           </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Janissary Veteran" id="9fae-e2df-0383-6420" hidden="true" sortIndex="2">
-          <comment>Nomads version</comment>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Janissary Veteran" hidden="false" id="0f27-f803-965a-e559">
-              <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Janissary Veteran" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f37a-4529-5e64-5407">
-                  <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Nomads of Al-Badia&apos;s Yüzbaşı gains the STRONG Keyword and choose between two abilities: Counter-Charge or Shield Training.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5e63-70f2-ea45-5ef1"/>
-              </constraints>
-              <entryLinks>
-                <entryLink import="true" name="Training Choice" hidden="false" id="185d-3f13-bbc9-86f2" type="selectionEntryGroup" targetId="11d9-8ed4-b950-3fb4"/>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
