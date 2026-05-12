@@ -1114,20 +1114,6 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
     </selectionEntryGroup>
     <selectionEntryGroup name="Melee (Two-Handed)" id="af54-cab2-68ba-5a8d" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Great Sword/Axe" hidden="false" id="91e9-b456-33c9-cba4" sortIndex="2">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="12"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Great Sword/Axe" id="f3fe-acb5-ff37-4239" hidden="false" type="profile" targetId="2257-4155-dd7d-8641"/>
-            <infoLink name="Critical" id="6657-7675-bd67-bf90" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
-            <infoLink name="Heavy" id="c07f-e1e2-35a5-1e15" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
-          </infoLinks>
-          <categoryLinks>
-            <categoryLink name="Heavy" hidden="false" id="3a0f-e03a-2c27-adaf" targetId="70c9-988d-71a7-7654" primary="false"/>
-          </categoryLinks>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Kayanin Mace" hidden="true" id="6caf-ec1d-e1ed-66d3">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
@@ -2142,6 +2128,9 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="3133-9970-b89c-d1c7" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="Automatic Rifle" hidden="true" id="fed6-af7a-87df-e038" type="selectionEntry" targetId="46cb-36ae-c7ea-cdd0" sortIndex="10">
           <costs>
@@ -2193,6 +2182,9 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
           </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="accf-b317-9bff-d3a4" includeChildSelections="true"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="Heavy Flamethrower" hidden="true" id="739f-fa71-cafc-f7c5" type="selectionEntry" targetId="b754-bcf6-152f-69e7" sortIndex="13">
           <costs>

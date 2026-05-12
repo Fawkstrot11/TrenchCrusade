@@ -521,7 +521,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9e74-3698-22e8-18b4" includeChildSelections="false"/>
       </constraints>
       <entryLinks>
-        <entryLink import="true" name="Molotov Cocktail" hidden="false" id="f6c7-9102-38fd-adb9" type="selectionEntry" targetId="6e1a-f31f-a4a9-58df" sortIndex="1">
+        <entryLink import="true" name="Molotov Cocktail" hidden="true" id="f6c7-9102-38fd-adb9" type="selectionEntry" targetId="6e1a-f31f-a4a9-58df" sortIndex="1">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
           </costs>
@@ -1337,7 +1337,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Machin Gun" hidden="false" id="f6d3-e219-d597-fb25" type="selectionEntry" targetId="45c3-9d88-09fa-ee11" sortIndex="7">
+        <entryLink import="true" name="Machine Gun" hidden="false" id="f6d3-e219-d597-fb25" type="selectionEntry" targetId="45c3-9d88-09fa-ee11" sortIndex="7">
           <constraints>
             <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="a525-44ef-1327-59e9" includeChildSelections="true"/>
           </constraints>
@@ -3159,6 +3159,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
       <modifiers>
         <modifier type="replace" value="40" field="73ae-cc17-596e-0481" scope="model" affects="profiles.Unit" arg="32"/>
         <modifier type="replace" value="40" field="73ae-cc17-596e-0481" scope="model" affects="profiles.Unit" arg="25"/>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true" childName="Elite"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="52c8-c3aa-d60d-1805" includeChildSelections="true"/>

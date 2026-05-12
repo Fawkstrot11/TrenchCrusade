@@ -944,7 +944,7 @@
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Machine Gun" hidden="false" id="9a19-cb25-cf12-5a4e" type="selectionEntry" targetId="45c3-9d88-09fa-ee11" sortIndex="11">
+        <entryLink import="true" name="Machine Gun" hidden="true" id="9a19-cb25-cf12-5a4e" type="selectionEntry" targetId="45c3-9d88-09fa-ee11" sortIndex="11">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
           </costs>
@@ -958,13 +958,9 @@
               </conditions>
             </modifier>
             <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="036b-eb9f-9b58-fa7e" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="036b-eb9f-9b58-fa7e" shared="true"/>
+              </conditions>
             </modifier>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -1129,37 +1125,6 @@
       </modifierGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Utility Hand" id="4974-c044-9d11-53cb" hidden="false">
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Troop Flag" hidden="false" id="b2a2-acb3-26ba-b7ec">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="83f3-323b-97d1-27bc" includeChildSelections="true"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Troop Flag" id="22d9-00d3-1dfc-e182" hidden="false" type="profile" targetId="e86e-146a-65b7-09f2"/>
-          </infoLinks>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="feab-369d-5285-ea19" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="a48e-e8a0-773e-e318" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Shields" id="780c-f898-6d4b-cfe7" hidden="false" sortIndex="1">
           <selectionEntries>
