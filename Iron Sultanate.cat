@@ -2625,6 +2625,11 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Standard Armour" hidden="false" id="f03e-c896-c2ad-c3da" type="selectionEntry" targetId="fc21-c383-cc54-c15c" sortIndex="1">
@@ -4138,13 +4143,6 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
       <costs>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e728-0cc5-2085-13f4" includeChildSelections="true"/>
       </constraints>
