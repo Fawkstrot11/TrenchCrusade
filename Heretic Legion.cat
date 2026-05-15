@@ -751,6 +751,9 @@
             <modifier type="set" value="40mm" field="73ae-cc17-596e-0481" affects="profiles.Unit"/>
             <modifier type="increment" value="1" field="105c-8780-b389-2f18"/>
             <modifier type="remove" value="914f-0020-0d97-e217" field="category"/>
+            <modifier type="add" value="f0ef-ba0d-8963-331a" field="category"/>
+            <modifier type="add" value="aa2f-f4b3-3003-4b43" field="category"/>
+            <modifier type="add" value="06fd-4005-6444-7e19" field="category"/>
           </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="b0b0-1549-d4ec-7b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
@@ -3866,6 +3869,13 @@ Due to the torrent of flame, sulphur and detritus surrounding the Matriarch whil
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d83-5b66-de46-01af" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="add" value="4f5c-027d-253c-ffa3" field="category">
+              <conditions>
+                <condition type="notEqualTo" value="1" field="selections" scope="parent" childId="any" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Incendiary Ammunition" hidden="false" id="c45f-a2c7-3b95-caa4" sortIndex="8">
           <costs>
@@ -4315,8 +4325,7 @@ high and which is mounted on a 25mm base. It is Impassable terrain.
                 <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Equipment</characteristic>
                 <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
                 <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
-                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model treats any DOWN INJURY result as a MINOR INJURY instead, unless it is as a result of the TOUGH keyword converting an OUT OF ACTION to a DOWN result.
-If a Byzantinium Heart is ever removed or lost from the model that has it equipped for any reason, the model instantly dies.</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">If a Byzantinium Heart is ever removed or lost from the model that has it equipped for any reason, the model instantly dies.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4333,6 +4342,9 @@ If a Byzantinium Heart is ever removed or lost from the model that has it equipp
               </conditionGroups>
             </modifier>
           </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="06fd-4005-6444-7e19" id="faad-99f3-be4c-404c" primary="false" name="Byzant. Heart "/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Vessel of Original Sin" hidden="true" id="e13c-e295-3a8e-34dd" sortIndex="3">
           <costs>
@@ -4374,7 +4386,7 @@ If a Byzantinium Heart is ever removed or lost from the model that has it equipp
                 <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
               </costs>
               <categoryLinks>
-                <categoryLink targetId="baee-43b9-2e20-9755" id="d1b6-994f-25ee-16f6" primary="false" name="Negate Sharpnel"/>
+                <categoryLink targetId="baee-43b9-2e20-9755" id="d1b6-994f-25ee-16f6" primary="false" name="Negate Shrapnel"/>
               </categoryLinks>
             </selectionEntry>
           </selectionEntries>
@@ -4438,6 +4450,14 @@ The corpses of those who have undergone Artificial Rebirth refund 1 glory when S
               <infoLinks>
                 <infoLink name="Negate [Keyword]" id="5401-85a0-546e-cc28" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
               </infoLinks>
+              <rules>
+                <rule name="Recoverable Glory" id="04d4-341a-d1fa-70ab" hidden="false">
+                  <description>The corpses of those who have undergone Artificial Rebirth refund 1 glory when Scavenged, the Corps know well how to use the precious metal and flesh invested into their own.</description>
+                </rule>
+                <rule name="Gas Resistant" id="8003-c5c8-5866-7f00" hidden="false">
+                  <description>Attacks with the Keyword GAS suffer a -1 DICE penalty to injure the model and they do not suffer additional BLOOD MARKERS from the Keyword GAS.</description>
+                </rule>
+              </rules>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Thermal Shielding" hidden="true" id="2ee4-7f35-8086-2f2a">
               <modifiers>
@@ -4446,7 +4466,6 @@ The corpses of those who have undergone Artificial Rebirth refund 1 glory when S
                     <condition type="instanceOf" value="1" field="selections" scope="model" childId="4180-5377-2d83-48ba" shared="true" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </modifier>
-                <modifier type="add" value="f0ef-ba0d-8963-331a" field="category" scope="model"/>
               </modifiers>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
@@ -4468,6 +4487,9 @@ The corpses of those who have undergone Artificial Rebirth refund 1 glory when S
               <infoLinks>
                 <infoLink name="Negate [Keyword]" id="96cd-0b51-7e2a-365a" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
               </infoLinks>
+              <categoryLinks>
+                <categoryLink targetId="f0ef-ba0d-8963-331a" id="2a33-6d3a-f8fa-c690" primary="false" name="Negate Fire"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Sonomatic Sculpture" hidden="true" id="6b11-a83d-8aba-872a">
               <modifiers>

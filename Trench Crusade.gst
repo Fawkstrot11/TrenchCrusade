@@ -41,6 +41,12 @@
     <categoryEntry name="Negate Shrapnel" id="baee-43b9-2e20-9755" hidden="false" publicationId="c658-4a10-e1fe-befc">
       <description>Do not take a blood markers from sharpnel keyword</description>
     </categoryEntry>
+    <categoryEntry name="Negate Barbed wire" id="aa2f-f4b3-3003-4b43" hidden="false">
+      <description>Negate difficult and dangerous terrain caused by barbed wire</description>
+    </categoryEntry>
+    <categoryEntry name="Byzantinium Heart " id="06fd-4005-6444-7e19" hidden="false">
+      <description>The model treats any DOWN INJURY result as a MINOR INJURY instead, unless it is a result of the TOUGH keyword converting an OUT OF ACTION to a DOWN result</description>
+    </categoryEntry>
   </categoryEntries>
   <costTypes>
     <costType name="Ducats" id="8d43-33fd-332d-17a6" defaultCostLimit="-1"/>
