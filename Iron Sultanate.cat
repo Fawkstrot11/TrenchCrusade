@@ -5164,8 +5164,7 @@ Hypnotic Eyes Alchemical Formulas.</characteristic>
           <profiles>
             <profile name="Janissary Veteran" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8f21-dc64-88f6-1183">
               <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">You can make the Yüzbaşı a Janissary Veteran with the STRONG Keyword and the Janissary Counter-
-Charge ability at a cost of +10 👑.</characteristic>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">You can make the Yüzbaşı a Janissary Veteran with the STRONG Keyword and the Janissary Counter-Charge ability at a cost of +10 Ducats.</characteristic>
               </characteristics>
             </profile>
             <profile name="Counter-Charge" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="0561-6d7c-1c61-ecb5" noindex="false">
@@ -5180,6 +5179,9 @@ Charge ability at a cost of +10 👑.</characteristic>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
               <comment>Hide normal training for Nomads</comment>
+            </modifier>
+            <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category" scope="model">
+              <comment>Required to not break weapon logic</comment>
             </modifier>
           </modifiers>
           <categoryLinks>
@@ -5230,6 +5232,9 @@ Charge ability at a cost of +10 👑.</characteristic>
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="7091-3f28-368f-eace" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
+            </modifier>
+            <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category" scope="model">
+              <comment>Required to not break weapon logic</comment>
             </modifier>
           </modifiers>
           <categoryLinks>
