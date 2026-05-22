@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="true" id="8ef4-3a38-8adb-53ba" name="Ranged Weapons" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="16" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <sharedSelectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Anti-Material Rifle" hidden="false" id="19f3-086f-a5ad-f662">
+      <profiles>
+        <profile name="Anti-Material Rifle" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="037f-15ba-8ef3-332e">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, CRITICAL, HEAVY, IGNORE ARMOUR</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="+/- Injury Dice" id="6771-96d3-2474-2ace" hidden="false" type="rule" targetId="9880-1ec6-9767-4698"/>
+        <infoLink name="Critical" id="930b-55fe-b2e9-34e6" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+        <infoLink name="Heavy" id="c002-d719-0e2a-9f78" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+        <infoLink name="Ignore Armour" id="8277-6385-a967-9ca4" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Ammunitions" hidden="false" id="8091-24a5-543e-d657" type="selectionEntryGroup" targetId="a7db-7c08-54bb-880e"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Automatic Pistol" hidden="false" id="f294-f3b2-5577-bc17">
+      <profiles>
+        <profile name="Automatic Pistol" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="b71e-ef7c-e836-72ec">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;/Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, AUTOMATIC 2, PISTOL</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Assault" id="8de4-bdf7-50f7-f8a5" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+        <infoLink name="Automatic" id="ba0b-2481-bd38-848a" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+        <infoLink name="Pistol" id="8b42-76eb-74e1-9fd9" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
+      </infoLinks>
+      <costs>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Ammunitions" hidden="false" id="6e14-ea2d-e26c-a6df" type="selectionEntryGroup" targetId="a7db-7c08-54bb-880e"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Automatic Rifle" hidden="false" id="46cb-36ae-c7ea-cdd0">
+      <profiles>
+        <profile name="Automatic Rifle" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="057b-c114-772f-299c">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">24&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, AUTOMATIC 2</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">**Focused Fire**: When this weapon is used to make 2 Ranged Attacks, the same enemy model must be the target of both attacks</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Assault" id="33df-5fbc-3192-33d5" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+        <infoLink name="Automatic" id="1130-3e5d-d735-c57d" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Ammunitions" hidden="false" id="afd2-4f36-d5c8-5e53" type="selectionEntryGroup" targetId="a7db-7c08-54bb-880e"/>
+        <entryLink import="true" name="Bayonet" hidden="false" id="87d2-204f-93cc-4aec" type="selectionEntryGroup" targetId="aaf9-7a80-a920-1711" sortIndex="-1"/>
+      </entryLinks>
+      <costs>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Automatic Shotgun" hidden="false" id="f8bd-481c-8364-3eb3">
+      <profiles>
+        <profile name="Automatic Shotgun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="5b1a-ebaa-4d59-f2d7">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, ASSAULT, SHOTGUN</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="+/- Dice" id="7c18-dc8e-b6d6-4aeb" hidden="false" type="rule" targetId="8b7a-8f2d-dda6-b671"/>
+        <infoLink name="Assault" id="2c60-6df1-175f-0bac" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+        <infoLink name="Shotgun" id="5744-d137-7a9e-ee63" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Ammunitions" hidden="false" id="4d26-dac5-1402-e470" type="selectionEntryGroup" targetId="a7db-7c08-54bb-880e"/>
+        <entryLink import="true" name="Bayonet" hidden="false" id="51e2-0239-52a1-1cde" type="selectionEntryGroup" targetId="aaf9-7a80-a920-1711" sortIndex="-1"/>
+      </entryLinks>
+      <costs>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Blunderbuss" hidden="false" id="fe85-959c-0d7a-ca0b">
+      <profiles>
+        <profile name="Blunderbuss" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="2f82-6dd2-69c2-2fea">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">10&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">SHRAPNEL</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Shrapnel" id="2fc2-7ef1-c057-ca13" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Bayonet" hidden="false" id="6840-1e40-ff35-3676" type="selectionEntryGroup" targetId="aaf9-7a80-a920-1711" sortIndex="-1"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Bolt-Action Rifle" hidden="false" id="4c87-312e-7aa1-4de0">
+      <profiles>
+        <profile name="Bolt-Action Rifle" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="2af8-2638-a777-f84e">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">24&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede"/>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Ammunitions" hidden="false" id="2830-5724-08ab-6bd0" type="selectionEntryGroup" targetId="a7db-7c08-54bb-880e"/>
+        <entryLink import="true" name="Bayonet" hidden="false" id="9884-4e95-7451-112b" type="selectionEntryGroup" targetId="aaf9-7a80-a920-1711" sortIndex="-1"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Flamethrower" hidden="false" id="985f-e0c3-b0e9-5f89">
+      <profiles>
+        <profile name="Flamethrower" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="4c15-195e-0fd4-6f54">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-1 INJURY DICE, FIRE, FLAMETHROWER, IGNORE ARMOUR</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="+/- Injury Dice" id="d774-b682-cfe9-5ca6" hidden="false" type="rule" targetId="9880-1ec6-9767-4698"/>
+        <infoLink name="Fire" id="5008-60e6-c0b3-62b0" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+        <infoLink name="Flamethrower" id="28df-f028-8182-8868" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+        <infoLink name="Ignore Armour" id="237a-ab77-54cf-c457" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Grenade Launcher" hidden="false" id="65c0-a52a-03c8-575a">
+      <profiles>
+        <profile name="Grenade Launcher" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="a828-6f96-7eb8-7934">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">BLAST 3&quot;, HEAVY, IGNORE COVER, SHRAPNEL</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Blast" id="4fbb-a49f-9895-460f" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+        <infoLink name="Heavy" id="4993-6e70-e1a1-53ec" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+        <infoLink name="Ignore [Modifier]" id="0e8b-90e3-4add-98e1" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+        <infoLink name="Shrapnel" id="fd77-7b8e-523f-2f95" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="70c9-988d-71a7-7654" id="3fed-7853-5274-93c7" primary="false" name="Heavy"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Flamethrower" hidden="false" id="b754-bcf6-152f-69e7">
+      <profiles>
+        <profile name="Heavy Flamethrower" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="b8e5-9d0c-ebd4-8208">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-1 INJURY DICE, AUTOMATIC 2, FIRE, FLAMETHROWER, HEAVY, IGNORE ARMOUR</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="+/- Injury Dice" id="8f42-9627-900c-77aa" hidden="false" type="rule" targetId="9880-1ec6-9767-4698"/>
+        <infoLink name="Fire" id="18b8-2f76-2ce8-3c69" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+        <infoLink name="Heavy" id="65c6-0b42-e832-7a67" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+        <infoLink name="Ignore Armour" id="0cc8-95e8-f317-3029" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+        <infoLink name="Automatic" id="0ed3-52b0-ad2d-0712" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+        <infoLink name="Flamethrower" id="5a1f-d5f4-b26c-075e" hidden="false" type="rule" targetId="78ca-3b42-f65a-3db6"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Shotgun" hidden="false" id="d16f-f704-d17a-ebc6">
+      <profiles>
+        <profile name="Heavy Shotgun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="7bbb-8b13-8f13-49dd">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, +1 INJURY DICE, HEAVY, SHOTGUN</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">**Tungsten-orichalcum Alloy Shot**: Add +1 INJURY DICE to rolls for Ranged Attacks made by this Weapon at Short Range.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="+/- Injury Dice" id="f2ae-a95d-71d0-18e3" hidden="false" type="rule" targetId="9880-1ec6-9767-4698"/>
+        <infoLink name="Heavy" id="4835-ee29-cdf9-3c73" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+        <infoLink name="Shotgun" id="2e8c-d14c-4bc6-f69f" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
+        <infoLink name="+/- Dice" id="8943-13e4-cfee-06e9" hidden="false" type="rule" targetId="8b7a-8f2d-dda6-b671"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Ammunitions" hidden="false" id="7aa1-9b9e-5998-dda9" type="selectionEntryGroup" targetId="a7db-7c08-54bb-880e"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Machine Gun" hidden="false" id="45c3-9d88-09fa-ee11">
+      <profiles>
+        <profile name="Machine Gun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="057c-08d9-c23f-7b47">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">36&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">AUTOMATIC 3, HEAVY, RELOAD</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Automatic" id="949b-99f7-9c77-e0c8" hidden="false" type="rule" targetId="c435-c893-2c72-e7c6"/>
+        <infoLink name="Heavy" id="33bb-7536-076b-338a" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+        <infoLink name="Reload" id="9b37-3d0d-1824-fbdf" hidden="false" type="rule" targetId="501f-a63a-e134-aab9"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Ammunitions" hidden="false" id="a6c9-5e59-b9c5-95dc" type="selectionEntryGroup" targetId="a7db-7c08-54bb-880e"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Musket" hidden="false" id="d4e5-27cf-6c0d-1dad">
+      <profiles>
+        <profile name="Musket" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="86be-7c29-216e-66b8">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">18&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-1 INJURY DICE</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="+/- Injury Dice" id="aa8f-174e-f40e-b596" hidden="false" type="rule" targetId="9880-1ec6-9767-4698"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Ammunitions" hidden="false" id="c25c-6c2d-330f-6e63" type="selectionEntryGroup" targetId="a7db-7c08-54bb-880e"/>
+        <entryLink import="true" name="Bayonet" hidden="false" id="a970-271f-6056-1545" type="selectionEntryGroup" targetId="aaf9-7a80-a920-1711" sortIndex="-1"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Silenced Pistol" hidden="false" id="92fc-7eaf-8c33-3f87">
+      <profiles>
+        <profile name="Silenced Pistol" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="ad8a-00d3-726b-b10c">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;/Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, PISTOL</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">**Silent**: Add +1 DICE to the roll if the attacker is in contact with a terrain piece that is at least 1/2&quot; tall and that lies in between it and the target model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Assault" id="502b-608c-2d3c-cbba" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+        <infoLink name="Pistol" id="c606-877e-f925-d11b" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Ammunitions" hidden="false" id="623d-c414-a730-b175" type="selectionEntryGroup" targetId="a7db-7c08-54bb-880e"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Semi-Automatic Rifle" hidden="false" id="4111-f437-2e81-899f">
+      <profiles>
+        <profile name="Semi-Automatic Rifle" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="d44a-c775-04b2-e644">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">24&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Assault" id="6d2e-300d-7703-bff5" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Ammunitions" hidden="false" id="2712-403c-39e4-2d60" type="selectionEntryGroup" targetId="a7db-7c08-54bb-880e"/>
+        <entryLink import="true" name="Bayonet" hidden="false" id="757f-088e-c097-da6a" type="selectionEntryGroup" targetId="aaf9-7a80-a920-1711" sortIndex="-1"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Shotgun" hidden="false" id="b5a3-faec-7613-ef0f">
+      <profiles>
+        <profile name="Shotgun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="c339-21cd-0b06-15fe">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, SHOTGUN</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="+/- Dice" id="cee7-1bfa-b9d5-60e8" hidden="false" type="rule" targetId="8b7a-8f2d-dda6-b671"/>
+        <infoLink name="Shotgun" id="2ce7-a193-eb0f-77d7" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Ammunitions" hidden="false" id="75c6-8e63-67be-de80" type="selectionEntryGroup" targetId="a7db-7c08-54bb-880e"/>
+        <entryLink import="true" name="Bayonet" hidden="false" id="294f-c931-d33f-e38a" type="selectionEntryGroup" targetId="aaf9-7a80-a920-1711" sortIndex="-1"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Pistol" hidden="false" id="48be-3a36-f9c0-a465">
+      <profiles>
+        <profile name="Pistol" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="917f-2532-74e9-33ed">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">12&quot;/Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">PISTOL</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Pistol" id="ce70-59e1-8b3b-76d5" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Ammunitions" hidden="false" id="af6c-275f-43fb-13cc" type="selectionEntryGroup" targetId="a7db-7c08-54bb-880e"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="false" id="808a-f077-4fec-ef82">
+      <profiles>
+        <profile name="Sniper Rifle" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="b5a1-e8c3-24e5-a742">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">48&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE, CRITICAL, RISKY</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">**Bull&apos;s Eye**: If the Success Roll for a Ranged Attack made with a Sniper Rifle is a Critical Success then the Injury Roll for the attack has the IGNORE ARMOUR Keyword.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="+/- Dice" id="ba50-e419-430c-a70a" hidden="false" type="rule" targetId="8b7a-8f2d-dda6-b671"/>
+        <infoLink name="Ignore Armour" id="3c9c-21d3-6168-00b0" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+        <infoLink name="Risky" id="06e4-a56e-46b9-5a42" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+        <infoLink name="Critical" id="89a6-0d80-1812-03ee" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Ammunitions" hidden="false" id="9ae2-b267-a929-25a6" type="selectionEntryGroup" targetId="a7db-7c08-54bb-880e"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Submachine Gun" hidden="false" id="0754-f896-3f97-65c7">
+      <profiles>
+        <profile name="Submachine Gun" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="f536-9890-8f44-99d7">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">16&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">**Quick Bursts: A model armed with a Submachine Gun can take two Shoot ACTIONS during the same Activation, as long as the Submachine Gun is used to make both attacks. The Shoot ACTIONS can be taken one after the other, or other ACTIONS can be taken between the Shoot ACTIONS.**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Assault" id="a71e-4ce9-f58b-bcb2" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Ammunitions" hidden="false" id="36ee-c725-37d0-a470" type="selectionEntryGroup" targetId="a7db-7c08-54bb-880e"/>
+        <entryLink import="true" name="Bayonet" hidden="false" id="dea8-232f-dcc7-e653" type="selectionEntryGroup" targetId="aaf9-7a80-a920-1711" sortIndex="-1"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Frag Grenades" hidden="false" id="7f07-3b1b-85e7-6802">
+      <profiles>
+        <profile name="Frag Grenades" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="00d3-c557-3993-f094">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Grenade</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, BLAST 2”, IGNORE COVER, IGNORE LONG RANGE, SHRAPNEL</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Assault" id="9669-1357-734d-16a1" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+        <infoLink name="Blast" id="490a-a9d1-98bc-675a" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+        <infoLink name="Ignore [Modifier]" id="aff4-2e93-6ada-90d3" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+        <infoLink name="Shrapnel" id="4e35-bd4b-f166-01a7" hidden="false" type="rule" targetId="200f-a7a6-f8a7-8232"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="62e7-14eb-3b39-7515" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Gas Grenades" hidden="false" id="ed69-d081-68a5-999e">
+      <profiles>
+        <profile name="Gas Grenades" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="5f7a-f61c-c4cc-98ad">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Grenade</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-1 INJURY DICE, ASSAULT, BLAST 3”, GAS, IGNORE ARMOUR, IGNORE COVER, IGNORE LONG RANGE</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Assault" id="f307-4bef-23ba-bf87" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+        <infoLink name="Blast" id="3d05-5240-6eac-f1cf" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+        <infoLink name="Ignore Armour" id="ee36-8640-430d-de20" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+        <infoLink name="Gas" id="8f0b-f4e6-bd80-0942" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
+        <infoLink name="Ignore [Modifier]" id="eed1-9b37-b6e5-18dd" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a212-db8f-1c0f-432f" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Incendiary Grenades" hidden="false" id="8adc-0183-0ef9-12a4">
+      <profiles>
+        <profile name="Incendiary Grenades" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="316b-d210-767e-e340">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Grenade</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">ASSAULT, FIRE, IGNORE COVER, IGNORE LONG RANGE</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">**Liquid Fire**: If the Success Roll for a Ranged Attack made with an Incendiary Grenade is a Critical Success then the Injury Roll for the attack has the IGNORE ARMOUR Keyword</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Assault" id="a925-e2b3-4d93-c138" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+        <infoLink name="Ignore [Modifier]" id="3079-3172-4ec8-49f1" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+        <infoLink name="Fire" id="f4cc-32b1-ccbf-7ae9" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+        <infoLink name="Ignore Armour" id="a279-8366-4e0d-431b" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="82ef-33c4-3316-d7b7" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Molotov Cocktail" hidden="false" id="6e1a-f31f-a4a9-58df">
+      <profiles>
+        <profile name="Molotov Cocktail" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="414f-af63-666d-59d1">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Grenade</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">6&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-1 INJURY DICE, ASSAULT, FIRE, IGNORE COVER, IGNORE LONG RANGE</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">**Liquid Fire**: If the Success Roll for a Ranged Attack made with an Incendiary Grenade is a Critical Success then the Injury Roll for the attack has the IGNORE ARMOUR Keyword</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Assault" id="82b5-eee0-e7ac-16e6" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
+        <infoLink name="Ignore [Modifier]" id="6245-96bf-d587-4540" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+        <infoLink name="Fire" id="37b9-d1d6-a35a-94a7" hidden="false" type="rule" targetId="3f12-9eb3-07f7-03bb"/>
+        <infoLink name="Ignore Armour" id="76f1-5918-c91c-83dd" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+        <infoLink name="+/- Injury Dice" id="5e46-4c0b-8dbb-889c" hidden="false" type="rule" targetId="9880-1ec6-9767-4698"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c97-1aa7-54a5-62de" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Satchel Charge" hidden="false" id="f58e-81b4-c972-ed32">
+      <infoLinks>
+        <infoLink name="+/- Injury Dice" id="c2a9-9c83-e311-2c92" hidden="false" type="rule" targetId="9880-1ec6-9767-4698"/>
+        <infoLink name="Blast" id="1b25-90bb-803a-d5ee" hidden="false" type="rule" targetId="263d-6520-5629-c027"/>
+        <infoLink name="Consumable" id="9cd0-5518-ff4d-f4e7" hidden="false" type="rule" targetId="e98d-4bd1-3870-27b9"/>
+        <infoLink name="Heavy" id="ded6-9356-0360-712c" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+        <infoLink name="Ignore Armour" id="2bd0-c60b-5ea8-519f" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+        <infoLink name="Ignore [Modifier]" id="3076-8d0c-8bff-b383" hidden="false" type="rule" targetId="fd2f-4a14-7db4-8ec9"/>
+        <infoLink name="Scatter" id="57ad-a08d-5527-d734" hidden="false" type="rule" targetId="9ee3-1276-01cc-fefb"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Satchel Charge" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="d07c-55fe-e41d-a57f">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Grenade</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">6&quot;</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, BLAST 3”, CONSUMABLE, HEAVY, IGNORE ARMOUR, IGNORE COVER, SCATTER</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">**Heavy Explosive**: Once during a game, a model with a Satchel Charge can use it to make a Ranged Attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <catalogueLinks>
+    <catalogueLink type="catalogue" name="Melee Weapons" id="11d7-c183-f9d4-980e" targetId="7595-974a-7451-6c2e"/>
+    <catalogueLink type="catalogue" name="Campaign Rules" id="4038-1c50-6932-e1a6" targetId="ba52-3616-d7f9-8d0c"/>
+    <catalogueLink type="catalogue" name="Battlekits" id="7b47-3254-65c1-5f1b" targetId="f044-03b4-6607-1152"/>
+  </catalogueLinks>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Ammunitions" id="a7db-7c08-54bb-880e" hidden="false" flatten="true">
+      <entryLinks>
+        <entryLink import="true" name="Incendiary Ammuntion (Loaded)" hidden="false" id="45e4-4a06-f5f4-896a" type="selectionEntry" targetId="cf01-321c-4dd0-79a4"/>
+        <entryLink import="true" name="Dum-Dum Ammunition (Loaded)" hidden="false" id="fcf0-9c51-8287-d8dd" type="selectionEntry" targetId="3cc8-6ca0-9a71-6fce"/>
+        <entryLink import="true" name="Armour-Piercing Ammunition (Loaded)" hidden="false" id="bfbe-01e4-01ed-d11c" type="selectionEntry" targetId="9ba7-ace7-d1a9-b292"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa94-3ef6-7c72-7492"/>
+      </constraints>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
+</catalogue>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="true" id="7595-974a-7451-6c2e" name="Melee Weapons" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="16" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <sharedSelectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Anti-Tank Hammer" hidden="false" id="0f6a-12ab-facd-4972">
+      <profiles>
+        <profile name="Anti-Tank Hammer" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="328e-9d8a-0a2c-47c6">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, CRITICAL, IGNORE ARMOUR, RISKY</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">**Dangerous**: Place 1 BLOOD MARKER next to the model using this Weapon if it makes a Melee Attack and the Success Roll is a Success or a Critical Success.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="+/- Injury Dice" id="0be0-36ca-2c32-70ff" hidden="false" type="rule" targetId="9880-1ec6-9767-4698"/>
+        <infoLink name="Critical" id="3683-26f7-e4fb-ce29" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+        <infoLink name="Ignore Armour" id="be54-3894-5d5c-2431" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+        <infoLink name="Risky" id="e66e-1d03-3f84-25b9" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Bayonet" hidden="false" id="2a56-df62-c8c1-9bc0">
+      <profiles>
+        <profile name="Bayonet" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="77d0-35f2-b3d3-4022">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CUMBERSOME</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Cumbersome" id="116c-f7cc-d7c2-5645" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="f37e-2447-0629-fe82" includeChildSelections="false" childId="any"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Flail/Scourge" hidden="false" id="ee65-c18f-650e-cce9">
+      <profiles>
+        <profile name="Flail/Scourge" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="9e8c-dc75-19ab-36b0">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 DICE</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">**Unwieldy**: The +1 DICE Keyword does not apply when this Weapon is used as an Off- Hand Weapon.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="+/- Dice" id="1183-9d55-3fc8-94d5" hidden="false" type="rule" targetId="8b7a-8f2d-dda6-b671"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Great Hammer/Maul" hidden="false" id="df88-b7a2-1a01-1b56">
+      <profiles>
+        <profile name="Great Hammer/Maul" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="a6cd-257b-508a-11b9">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY MODIFIER, HEAVY</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="+/- Injury Modifier" id="85ec-fddd-09be-9d6d" hidden="false" type="rule" targetId="3f79-aee7-2c3d-828f"/>
+        <infoLink name="Heavy" id="8f21-42e5-08c9-14af" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Great Sword/Axe" hidden="false" id="43b5-20ac-4f52-3ce5">
+      <profiles>
+        <profile name="Great Sword/Axe" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="f11f-a0c6-d658-dcb6">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, CRITICAL, HEAVY</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="+/- Injury Dice" id="cc2e-b03e-d0ac-03dd" hidden="false" type="rule" targetId="9880-1ec6-9767-4698"/>
+        <infoLink name="Critical" id="081b-7245-b591-132a" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+        <infoLink name="Heavy" id="68a7-f895-a658-78c4" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Misericordia" hidden="false" id="1fac-60d6-f476-9c4d">
+      <profiles>
+        <profile name="Misericordia" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="bd4b-593e-5a79-09fd">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede"/>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb">**Despatch**: This weapon has the IGNORE ARMOUR Keyword if the target is Down.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Armour" id="7a10-efdc-6234-cd38" hidden="false" type="rule" targetId="f745-3388-e51a-0637"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Polearm" hidden="false" id="80dd-5d7c-c33e-a950">
+      <profiles>
+        <profile name="Polearm" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="1c55-92d4-5367-2e27">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">2-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">BLOCK, CUMBERSOME</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Block" id="2783-fd65-2da8-d70c" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
+        <infoLink name="Cumbersome" id="0cb7-68f7-76d5-5df8" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sword/Axe" hidden="false" id="8ad7-a2d8-fa56-0a09">
+      <infoLinks>
+        <infoLink name="Critical" id="a907-31ce-21e7-0d32" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Sword/Axe" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="ef6c-14c0-f6f6-4859">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Trench Club" hidden="false" id="bd07-8e58-85a3-71f0">
+      <profiles>
+        <profile name="Trench Club" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="53b3-b3f8-2109-1505">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede"/>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Trench Knife" hidden="false" id="daaa-b1ef-7908-82a7">
+      <profiles>
+        <profile name="Trench Knife" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="c93b-27f6-78c1-68fa">
+          <characteristics>
+            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">1-Handed</characteristic>
+            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-1 DICE</characteristic>
+            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="+/- Dice" id="3a22-e13b-e1fd-63ab" hidden="false" type="rule" targetId="8b7a-8f2d-dda6-b671"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Butcher Bayonet" hidden="true" id="32a4-70a4-fd79-c4e7">
+      <costs>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="366d-3022-ff99-b51a" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2091-646f-6ff7-18b7" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Butcher Bayonet" id="89a8-aafa-46de-161f" hidden="false" type="profile" targetId="1063-b1d1-807f-91ec"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Bayonet" id="aaf9-7a80-a920-1711" hidden="false" flatten="true">
+      <entryLinks>
+        <entryLink import="true" name="Bayonet" hidden="false" id="ca4d-901f-1037-1cb1" type="selectionEntry" targetId="2a56-df62-c8c1-9bc0">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="2"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Butcher Bayonet" hidden="false" id="9c7f-8b99-3a0e-fd3d" type="selectionEntry" targetId="32a4-70a4-fd79-c4e7">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="758e-ce98-787c-996a"/>
+      </constraints>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
+</catalogue>

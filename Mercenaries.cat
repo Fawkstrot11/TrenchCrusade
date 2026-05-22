@@ -39,12 +39,6 @@
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink name="Misericordia" id="3f44-e731-dc0e-872d" hidden="false" type="profile" targetId="d82e-4c7b-28ac-1413"/>
-        <infoLink name="Gas Mask" id="f1e4-957d-2d33-7c28" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
-        <infoLink name="Medi-kit" id="9a0d-b7db-b077-263e" hidden="false" type="profile" targetId="aa88-1987-505a-13ca"/>
-        <infoLink name="Standard Armour" id="5953-697c-85c5-d974" hidden="false" type="profile" targetId="6fa6-650d-4136-bc70"/>
-      </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="28e8-6cb9-21c3-edca" includeChildSelections="true"/>
       </constraints>
@@ -54,6 +48,30 @@
       <entryLinks>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="ba39-7da3-156a-30ec" type="selectionEntry" targetId="1f47-9c34-ef9b-914b"/>
         <entryLink import="true" name="Advancement" hidden="true" id="249b-6dc8-17ad-a33c" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
+        <entryLink import="true" name="Gas Mask" hidden="false" id="d6ed-d4a1-2ecd-c528" type="selectionEntry" targetId="8927-946d-c993-14ee">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c30d-b26b-0e7e-c4d6-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c30d-b26b-0e7e-c4d6-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Medikit" hidden="false" id="8c08-ffc6-d6f3-883c" type="selectionEntry" targetId="05b0-3aaa-2e29-c69f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="353a-f84c-b07a-174c-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="353a-f84c-b07a-174c-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Misericordia" hidden="false" id="4faa-7dbe-7dd7-18cc" type="selectionEntry" targetId="1fac-60d6-f476-9c4d">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="417f-ec3b-b396-d717-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="417f-ec3b-b396-d717-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Standard Armour" hidden="false" id="20f5-a215-4825-ba90" type="selectionEntry" targetId="fc21-c383-cc54-c15c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f78b-724e-f073-02b4-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f78b-724e-f073-02b4-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <rules>
         <rule name="Negate Fear" id="20cb-9390-aad3-4616" hidden="false">
@@ -118,9 +136,6 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Medi-kit" id="d110-b1e1-e577-c51b" hidden="false" type="profile" targetId="aa88-1987-505a-13ca"/>
-        <infoLink name="Polearm" id="f2d3-4765-e297-a5f6" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
-        <infoLink name="Standard Armour" id="be16-e96e-e2c5-788d" hidden="false" type="profile" targetId="6fa6-650d-4136-bc70"/>
         <infoLink name="Cleave" id="895a-0931-5468-30a9" hidden="false" type="rule" targetId="2da7-e6f3-dc9d-4431"/>
       </infoLinks>
       <constraints>
@@ -132,6 +147,24 @@
       <entryLinks>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="07f3-d1e4-3850-55f2" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
         <entryLink import="true" name="Advancement" hidden="true" id="345c-45bd-9a1d-88fa" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
+        <entryLink import="true" name="Polearm" hidden="false" id="169f-cebd-c348-ca47" type="selectionEntry" targetId="80dd-5d7c-c33e-a950">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d744-7fdd-e47b-48ae-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d744-7fdd-e47b-48ae-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Medikit" hidden="false" id="f7a7-4df7-21da-ee25" type="selectionEntry" targetId="05b0-3aaa-2e29-c69f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="12c2-1c37-5b32-d676-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="12c2-1c37-5b32-d676-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Standard Armour" hidden="false" id="7809-7f97-7607-9641" type="selectionEntry" targetId="fc21-c383-cc54-c15c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="420f-b536-28b5-0ad5-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="420f-b536-28b5-0ad5-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Communicant Anti-Tank Hunter" hidden="true" id="f1b3-1797-9928-0a6f">
@@ -159,19 +192,22 @@
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="5"/>
       </costs>
       <profiles>
-        <profile name="Communicant" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="8e7d-f104-423a-2b4a">
+        <profile name="Communicant Anti-Tank Hunter" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="8e7d-f104-423a-2b4a">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
-            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1D</characteristic>
-            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1D</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 DICE</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 DICE</characteristic>
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-1</characteristic>
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">40mm</characteristic>
           </characteristics>
         </profile>
+        <profile name="Iron Fists" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5be7-4349-72d7-b75b">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The flesh of a Communicant Anti-Tank Hunter is as hard as iron, which makes their fists deadly weapons in their own right. A Communicant Anti-Tank Hunter can make a Melee Attack with the CLEAVE 2 Keyword even though it does not have a Melee Weapon. In addition, the Off-Hand Weapon modifier applies to the second attack.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Anti-Material Rifle" id="34f0-6d10-4c2e-bed7" hidden="false" type="profile" targetId="50ec-f075-494f-9dc5"/>
-        <infoLink name="Combat Helmet" id="960c-e53a-8fa6-4946" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
         <infoLink name="Tough" id="3fed-7557-d6fb-b264" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
         <infoLink name="Strong" id="03d3-9666-edd9-6c47" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
         <infoLink name="Regenerate" id="8d05-317c-f61f-1492" hidden="false" type="rule" targetId="aa24-5d3a-f4c5-0aab"/>
@@ -184,27 +220,21 @@
         <categoryLink targetId="afcc-5f24-1c7c-63c4" id="71e4-e13c-cd78-6122" primary="false" name="Strong"/>
         <categoryLink targetId="914f-0020-0d97-e217" id="e7f4-0a90-d560-2a89" primary="false" name="Tough"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Deadly Fists" hidden="false" id="fb5a-a6d4-50ea-81e9">
-          <profiles>
-            <profile name="Deadly Fists" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="d5f5-114e-db34-3f4f">
-              <characteristics>
-                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">This does not count as a weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="2a7a-bfbb-4aa5-4406-min" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="2a7a-bfbb-4aa5-4406-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="7fbc-5e1a-3d4d-c6aa" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
         <entryLink import="true" name="Advancement" hidden="true" id="f9d6-d92e-ce30-51bc" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
+        <entryLink import="true" name="Anti-Material Rifle" hidden="false" id="0cf4-fd19-22e5-922b" type="selectionEntry" targetId="19f3-086f-a5ad-f662">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f970-56e9-0ae4-6073-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f970-56e9-0ae4-6073-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Combat Helmet" hidden="false" id="19a1-10da-27eb-1334" type="selectionEntry" targetId="dd63-2453-14d7-7e00">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dbd6-db21-77d6-b2d5-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dbd6-db21-77d6-b2d5-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Witchburner" hidden="true" id="fb45-9c9c-7cf1-6745">
@@ -253,8 +283,6 @@
       </profiles>
       <infoLinks>
         <infoLink name="Gavel of Justice" id="2036-770b-7d27-da58" hidden="false" type="profile" targetId="ddce-0973-220d-51e0"/>
-        <infoLink name="Combat Helmet" id="51fb-8920-832d-b03b" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
-        <infoLink name="Reinforced Armour" id="5def-a135-da3b-9f06" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
         <infoLink name="Critical" id="7781-6954-769a-4bdd" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
       </infoLinks>
       <constraints>
@@ -268,113 +296,24 @@
       <entryLinks>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="ee0a-e491-f584-e14d" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
         <entryLink import="true" name="Advancement" hidden="true" id="31b7-f640-af53-4fe8" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
+        <entryLink import="true" name="Combat Helmet" hidden="false" id="1499-1226-a279-9d0c" type="selectionEntry" targetId="dd63-2453-14d7-7e00">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6f46-90ca-ba8d-b0c2-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6f46-90ca-ba8d-b0c2-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Reinforced Armour" hidden="false" id="4ae1-2b09-8682-b1f2" type="selectionEntry" targetId="a535-4fb6-c587-691a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e8d5-c56f-9878-d667-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e8d5-c56f-9878-d667-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <rules>
         <rule name="Negate Fear" id="904d-0755-801c-5c54" hidden="false">
           <description>A model with the NEGATE Keyword is not affected by the specified Keyword’s Effect. For example, a model with NEGATE SHRAPNEL ignores the Effect of the SHRAPNEL Keyword.</description>
         </rule>
       </rules>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Goetic Warlock" hidden="true" id="1281-b425-81b2-7ed9">
-      <categoryLinks>
-        <categoryLink targetId="3dfb-701d-e89c-eba2" id="d185-1209-2dcf-cfd4" primary="true" name="Mercenary"/>
-        <categoryLink targetId="420c-0871-4283-b95b" id="8850-4441-149e-ceb6" primary="false" name="Demonic"/>
-        <categoryLink targetId="4180-5377-2d83-48ba" id="cca4-cc48-db98-dc59" primary="false" name="Artificial"/>
-        <categoryLink targetId="4f5c-027d-253c-ffa3" id="7caf-e23c-0a04-c27a" primary="false" name="Fear"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b08b-66af-f3e1-291a" includeChildSelections="true"/>
-      </constraints>
-      <costs>
-        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="4"/>
-      </costs>
-      <profiles>
-        <profile name="Goetic Warlock" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="4a65-25f1-2268-917a">
-          <characteristics>
-            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
-            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 Dice</characteristic>
-            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 Dice</characteristic>
-            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-2</characteristic>
-            <characteristic name="Base" typeId="73ae-cc17-596e-0481">40mm</characteristic>
-          </characteristics>
-          <modifiers>
-            <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="self" childId="3564-70ed-8e9e-6ee8" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="self" childId="2a4f-c258-5d70-a3c5" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile name="Barbed Embrace" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="fa62-4d41-74e9-b543">
-          <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">An enemy model within 1&quot; of a Goetic Warlock cannot take a Retreat ACTION.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Goetic Portal" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="90bb-2e34-4ff6-264a">
-          <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">ACTION: A Goetic Warlock can take a Goetic Portal ACTION. If they do so, take a Risky Success Roll for the Goetic Warlock with +1 DICE. If the roll is a Failure, the Goetic Warlock’s Activation ends. If the roll is a Success or Critical Success, you can pick up the Goetic Warlock and deploy them on the battlefield anywhere within 6&quot; of the location they originally occupied (measured from the centre of its base to the centre of its base). If this is impossible for any reason, the Goetic Warlock must stay in their original position. Note that the Goetic Warlock can redeploy even if they are down or within 1&quot; of an enemy model (in which case the enemy model cannot make a Melee Attack before the Goetic Warlock is redeployed), and can deploy within 1&quot; of an enemy model. In addition, if the roll is a Success or Critical Success and the Goetic Warlock is within 1&quot; of any enemy models mounted on a 32mm base or smaller, then the Goetic Warlock can take 1 of the enemy models with them. If they do so, you must deploy the Goetic Warlock first and then deploy the enemy model within 1&quot; of the Goetic Warlock. If you cannot deploy the enemy model within 1&quot; of the Goetic Warlock, then the enemy model stays in its original position.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Goetic Gaze" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="6fd1-affa-e7aa-8870">
-          <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">ACTION: A Goetic Warlock can take a Goetic Gaze ACTION. If they do so, take a Success Roll for the Goetic Warlock. If the roll is a Failure, nothing happens. If the roll is a Success, place 1 BLOOD MARKER next to an enemy model within 24&quot; of the Goetic Warlock and in their Line of Sight. If the roll is a Critical Success, place 2 BLOOD MARKERS next to an enemy model within 24&quot; of the Goetic Warlock and in their Line of Sight instead of only 1.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Demonic" id="e949-0976-38d7-c7f3" hidden="false" type="rule" targetId="e1d1-9534-0d38-b1e8"/>
-        <infoLink name="Reinforced Armour" id="f555-14fb-4322-b13f" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
-        <infoLink name="Fear" id="97e7-67ff-2e43-bf76" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
-        <infoLink name="Critical" id="801b-cab7-9b24-ecde" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
-        <infoLink name="Cleave" id="2d92-431e-78a8-97b6" hidden="false" type="rule" targetId="2da7-e6f3-dc9d-4431"/>
-      </infoLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Iron-Clawed Hands" hidden="false" id="36b3-8741-24f6-75da" sortIndex="3">
-          <profiles>
-            <profile name="Reaping Claws" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="7d25-fae7-c629-94ef">
-              <characteristics>
-                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CLEAVE 2, CRITICAL</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">A Goetic Warlock can make a Melee Attack with the CLEAVE 2 and CRITICAL Keywords even though it does not have a Melee Weapon. In addition, the Off-Hand Weapon modifier applies to the second attack.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a38d-f876-e7d7-d667-min-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a38d-f876-e7d7-d667-min-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="44b9-e92b-2dc0-6820" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="eee9-35a4-9eda-70e9" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Advancement" hidden="true" id="e858-99d7-d563-0eb2" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
-        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="ebd5-1c11-f16f-ade3" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
-      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Sin Eater" hidden="true" id="4703-d968-d52d-46b5">
       <categoryLinks>
@@ -421,10 +360,8 @@ A Sin Eater that has a devoured model inside it can take a Purge ACTION.If it d
       <infoLinks>
         <infoLink name="Strong" id="cc1d-bd13-0869-c708" hidden="false" type="rule" targetId="6297-d0e0-1935-5cfd"/>
         <infoLink name="Fear" id="4238-f636-6b44-5809" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
-        <infoLink name="Combat Helmet" id="1e4b-a2a2-fdf4-7e26" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
         <infoLink name="Tough" id="32ba-93de-8904-bbe8" hidden="false" type="rule" targetId="3c75-701d-e708-1438"/>
         <infoLink name="Heavy" id="3fe6-bf2c-869a-04a4" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
-        <infoLink name="Reinforced Armour" id="13b9-e8cd-ffe1-446c" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Tenderizer Maul" hidden="false" id="4d1c-67e3-95cf-1169">
@@ -475,6 +412,18 @@ A Sin Eater that has a devoured model inside it can take a Purge ACTION.If it d
       <entryLinks>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="955c-8ddf-4497-3bc1" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
         <entryLink import="true" name="Advancement" hidden="true" id="47ed-f468-718a-d8dc" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
+        <entryLink import="true" name="Combat Helmet" hidden="false" id="b03d-f733-2457-b34c" type="selectionEntry" targetId="dd63-2453-14d7-7e00">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ad2d-b08f-f841-c2e4-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad2d-b08f-f841-c2e4-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Reinforced Armour" hidden="false" id="c023-df32-c909-8a46" type="selectionEntry" targetId="a535-4fb6-c587-691a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1fe9-14cc-3657-01bd-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1fe9-14cc-3657-01bd-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Mendelist Ammo Monk " hidden="true" id="0923-5700-c9f0-2ef6">
@@ -502,7 +451,7 @@ A Sin Eater that has a devoured model inside it can take a Purge ACTION.If it d
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
       </costs>
       <profiles>
-        <profile name="Monk" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="031a-a689-a059-6278">
+        <profile name="Mendelist Ammo Monk " typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="031a-a689-a059-6278">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">-1 Dice</characteristic>
@@ -527,9 +476,6 @@ A Sin Eater that has a devoured model inside it can take a Purge ACTION.If it d
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink name="Gas Mask" id="e366-6cbe-5133-0759" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
-      </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5aff-b082-b12a-a7a5" includeChildSelections="true"/>
       </constraints>
@@ -539,6 +485,12 @@ A Sin Eater that has a devoured model inside it can take a Purge ACTION.If it d
       <entryLinks>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="33e1-f989-e1a3-65c7" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
         <entryLink import="true" name="Advancement" hidden="true" id="101a-7797-9e72-bb52" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
+        <entryLink import="true" name="Gas Mask" hidden="false" id="2725-a0ce-236e-31ff" type="selectionEntry" targetId="8927-946d-c993-14ee">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="449b-e357-84bb-72dc-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="449b-e357-84bb-72dc-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Trench Dog" hidden="true" id="52e5-2006-85e1-a7c7">
@@ -885,16 +837,10 @@ A Sin Eater that has a devoured model inside it can take a Purge ACTION.If it d
             <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">BLOCK, CUMBERSOME</characteristic>
             <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Pain Amplifier: Lower the roll needed to achieve a Critical Success for a Melee Attack made by this weapon by 1 for each BLOOD MARKER next to the target by 1 (so an enemy with 1 BLOOD MARKER will suffer a Critical Success on a roll of 11+).
 
-
 Inflict Pain: If an attack made by this weapon against a target, without the ARTIFICIAL Keyword and mounted on a 40mm base or smaller is, a Critical Success, but the target is not taken Out of Action, then the target will move D3&quot; in a straight line directly away from the attacking model. It will stop if it moves into a friendly model, Impassable Terrain, a terrain piece it cannot cross without having to Climb, or immediately before it would move within 1&quot; of an enemy model other than the attacker. If the target model would finish the move more than 1&quot; from the attacking model, then the attacking model and any other models within 1&quot; of the target model can make an additional Melee Attack on it before it is moved, as if the target were carrying out a retreat move. If this causes the model to move a second time, add D3&quot; to the distance it is moved but do not attack it again.</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink name="Gas Mask" id="9fb9-3e95-838c-e5bc" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
-        <infoLink name="Gas Grenades" id="e4c6-e1d4-6c28-d26f" hidden="false" type="profile" targetId="d0af-88cd-1c52-2114"/>
-        <infoLink name="Standard Armour" id="31d3-d71b-f922-df02" hidden="false" type="profile" targetId="6fa6-650d-4136-bc70"/>
-      </infoLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="3"/>
@@ -912,98 +858,22 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Advancement" hidden="true" id="4baa-48e6-c939-8081" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true"/>
-      </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Goetic Warlock" hidden="true" id="a08d-b6d2-d0de-8881">
-      <categoryLinks>
-        <categoryLink targetId="3dfb-701d-e89c-eba2" id="6ea0-81a6-8f01-4ef7" primary="true" name="Mercenary"/>
-        <categoryLink targetId="420c-0871-4283-b95b" id="8260-f756-2e77-3893" primary="false" name="Demonic"/>
-        <categoryLink targetId="4180-5377-2d83-48ba" id="6a0b-67a3-6dbc-18e1" primary="false" name="Artificial"/>
-        <categoryLink targetId="4f5c-027d-253c-ffa3" id="e1bf-4220-1203-b4c8" primary="false" name="Fear"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8f4e-c36c-2997-2647" includeChildSelections="true"/>
-      </constraints>
-      <costs>
-        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="110"/>
-      </costs>
-      <profiles>
-        <profile name="Goetic Warlock" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="9413-9e48-d7a2-71cc">
-          <characteristics>
-            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
-            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 Dice</characteristic>
-            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 Dice</characteristic>
-            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-2</characteristic>
-            <characteristic name="Base" typeId="73ae-cc17-596e-0481">40mm</characteristic>
-          </characteristics>
-          <modifiers>
-            <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="self" childId="3564-70ed-8e9e-6ee8" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="self" childId="2a4f-c258-5d70-a3c5" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile name="Barbed Embrace" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="ace5-dd31-4235-ec1f">
-          <characteristics>
-            <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
-            <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
-            <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
-            <characteristic name="Rules" typeId="4834-43a9-1c93-9062">An enemy model within 1&quot; of a Goetic Warlock cannot take a Retreat ACTION.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Goetic Portal" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f953-cc7c-b427-d6e7">
-          <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">ACTION: A Goetic Warlock can take a Goetic Portal ACTION. If they do so, take a Risky Success Roll for the Goetic Warlock with +1 DICE. If the roll is a Failure, the Goetic Warlock’s Activation ends. If the roll is a Success or Critical Success, you can pick up the Goetic Warlock and deploy them on the battlefield anywhere within 6&quot; of the location they originally occupied (measured from the centre of its base to the centre of its base). If this is impossible for any reason, the Goetic Warlock must stay in their original position. Note that the Goetic Warlock can redeploy even if they are down or within 1&quot; of an enemy model (in which case the enemy model cannot make a Melee Attack before the Goetic Warlock is redeployed), and can deploy within 1&quot; of an enemy model. In addition, if the roll is a Success or Critical Success and the Goetic Warlock is within 1&quot; of any enemy models mounted on a 32mm base or smaller, then the Goetic Warlock can take 1 of the enemy models with them. If they do so, you must deploy the Goetic Warlock first and then deploy the enemy model within 1&quot; of the Goetic Warlock. If you cannot deploy the enemy model within 1&quot; of the Goetic Warlock, then the enemy model stays in its original position.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Goetic Gaze" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="f6e6-fc55-c2ba-a52c">
-          <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">ACTION: A Goetic Warlock can take a Goetic Gaze ACTION. If they do so, take a Success Roll for the Goetic Warlock. If the roll is a Failure, nothing happens. If the roll is a Success, place 1 BLOOD MARKER next to an enemy model within 24&quot; of the Goetic Warlock and in their Line of Sight. If the roll is a Critical Success, place 2 BLOOD MARKERS next to an enemy model within 24&quot; of the Goetic Warlock and in their Line of Sight instead of only 1.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Demonic" id="ab0a-88bc-86b9-5177" hidden="false" type="rule" targetId="e1d1-9534-0d38-b1e8"/>
-        <infoLink name="Reinforced Armour" id="112a-935c-9354-69a9" hidden="false" type="profile" targetId="f6aa-583c-a14b-0ee9"/>
-        <infoLink name="Fear" id="6699-92c7-080b-74ab" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
-        <infoLink name="Critical" id="01b1-9230-d0d6-9870" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
-      </infoLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Iron-Clawed Hands" hidden="false" id="27fe-8310-ef1e-e0fa" sortIndex="3">
-          <profiles>
-            <profile name="Reaping Claws" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="65a7-7c7f-b6bb-7337">
-              <characteristics>
-                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
-                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
-                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CRITICAL</characteristic>
-                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">This does not count as a weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+        <entryLink import="true" name="Gas Grenades" hidden="false" id="1304-f5fe-7fd4-42eb" type="selectionEntry" targetId="ed69-d081-68a5-999e">
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="5ab4-49a5-15fa-55a1" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="dd36-835b-1544-7403" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="31f2-b63b-d61f-e87f"/>
           </constraints>
-        </selectionEntry>
-      </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c323-0c33-e628-56f0" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Advancement" hidden="true" id="99ff-9676-a927-e22e" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
-        <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="d65d-2367-7868-a3bf" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
+        </entryLink>
+        <entryLink import="true" name="Gas Mask" hidden="false" id="6daf-76ad-db19-b5be" type="selectionEntry" targetId="8927-946d-c993-14ee">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="75ab-bba1-2969-e349"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Standard Armour" hidden="false" id="ed7a-c8e3-3f55-bbaf" type="selectionEntry" targetId="fc21-c383-cc54-c15c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7f8a-8475-b203-d7f3"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
-      <comment>Knights of Avarice Version</comment>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Disciple of St. Roch" hidden="true" id="ef8a-5dfd-41a0-5b8d">
       <costs>
@@ -1048,19 +918,22 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="9549-149b-9c1f-7eaf" type="selectionEntry" targetId="1f47-9c34-ef9b-914b" sortIndex="2"/>
+        <entryLink import="true" name="Gas Mask" hidden="false" id="677d-7821-1588-dad8" type="selectionEntry" targetId="8927-946d-c993-14ee">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f1a0-c6ac-2d25-7e7c-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f1a0-c6ac-2d25-7e7c-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Medikit" hidden="false" id="ea2a-d67c-a1fd-1362" type="selectionEntry" targetId="05b0-3aaa-2e29-c69f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="44c8-fa00-bff5-405f-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="44c8-fa00-bff5-405f-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Armour" id="7688-5804-8a2d-ec25" hidden="false" sortIndex="4">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Standard Armour" hidden="false" id="6ea2-e2ec-9896-375a" sortIndex="1">
-              <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Standard Armour" id="33a7-4a9e-8980-2b00" hidden="false" type="profile" targetId="6fa6-650d-4136-bc70"/>
-              </infoLinks>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Machine Armour" hidden="false" id="a1a3-ab0f-8d5c-e5ff">
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
@@ -1081,18 +954,12 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a0d-5699-c27a-08eb" includeChildSelections="false"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Standard Armour" hidden="false" id="3668-212d-e0d2-1368" type="selectionEntry" targetId="fc21-c383-cc54-c15c"/>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup name="Equipment" id="6231-df29-6006-d22b" hidden="false" sortIndex="5">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Shovel" hidden="false" id="47ce-23c4-71d4-039d" sortIndex="2">
-              <costs>
-                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Shovel" id="918a-047b-7720-3c86" hidden="false" type="profile" targetId="d829-4d67-52aa-baaf"/>
-              </infoLinks>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Purgation Ammunition" hidden="true" id="9f3e-f682-ff22-8184" sortIndex="3">
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
@@ -1118,7 +985,7 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model" childId="009f-4ce2-5466-c35c" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="ad48-d8bd-6c14-8a47" shared="true" childName="Pistol"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1126,54 +993,38 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
           </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup name="Headgear" id="0b81-106d-effb-d171" hidden="false" sortIndex="1">
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Combat Helmet" hidden="false" id="108c-8938-cee7-90f4">
-                  <infoLinks>
-                    <infoLink name="Combat Helmet" id="254b-84f8-b8cd-1386" hidden="false" type="profile" targetId="f9d1-44f2-f4d7-442f"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
-                    <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e311-06c9-2907-077e"/>
               </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Combat Helmet" hidden="false" id="eb2f-05fb-1011-9b09" type="selectionEntry" targetId="dd63-2453-14d7-7e00">
+                  <costs>
+                    <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <entryLinks>
+            <entryLink import="true" name="Shovel" hidden="false" id="d8fb-db2b-b133-d0b8" type="selectionEntry" targetId="d0a8-ad68-ad47-83f5" sortIndex="2">
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup name="Weapons" id="84f1-5505-cbea-e72f" hidden="false" sortIndex="3">
           <selectionEntryGroups>
             <selectionEntryGroup name="Utility Hand" id="18ee-705f-fd85-458a" hidden="false">
               <selectionEntryGroups>
                 <selectionEntryGroup name="Shield" id="1772-d449-0b3f-9655" hidden="false" sortIndex="1">
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Trench Shield" hidden="false" id="14a1-dbde-df33-66be">
+                  <entryLinks>
+                    <entryLink import="true" name="Trench Shield" hidden="false" id="31d2-bdf9-7d30-6b2a" type="selectionEntry" targetId="ab45-1e00-df56-dbda">
                       <costs>
                         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
-                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                       </costs>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3bbf-c829-2078-f1a4" includeChildSelections="false"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink name="Shield" id="14a3-d86c-f046-5cc8" hidden="false" type="profile" targetId="c2a5-72b6-355d-0356"/>
-                      </infoLinks>
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden">
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition type="atLeast" value="1" field="selections" scope="model" childId="03eb-5358-03ae-8046" shared="true" includeChildSelections="true"/>
-                                <condition type="atLeast" value="1" field="selections" scope="model" childId="a1a3-ab0f-8d5c-e5ff" shared="true" includeChildSelections="true"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                      </modifiers>
-                    </selectionEntry>
-                  </selectionEntries>
+                    </entryLink>
+                  </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <selectionEntries>
@@ -1204,62 +1055,39 @@ Inflict Pain: If an attack made by this weapon against a target, without the AR
             <selectionEntryGroup name="Melee" id="da2e-4d6a-1365-797e" hidden="false">
               <selectionEntryGroups>
                 <selectionEntryGroup name="Melee (One-Handed)" id="c743-c9ca-6888-59f6" hidden="false">
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Misericordia" hidden="false" id="9c3f-aeb6-c52b-f4cc">
+                  <entryLinks>
+                    <entryLink import="true" name="Misericordia" hidden="false" id="1bfa-b57f-5ae9-8e7e" type="selectionEntry" targetId="1fac-60d6-f476-9c4d">
                       <costs>
                         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
-                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                       </costs>
-                      <infoLinks>
-                        <infoLink name="Misericordia" id="797d-a6da-0954-03c1" hidden="false" type="profile" targetId="d82e-4c7b-28ac-1413"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Sword/Axe" hidden="false" id="17c8-ac11-40da-4ef6">
+                    </entryLink>
+                    <entryLink import="true" name="Sword/Axe" hidden="false" id="da92-8fdc-a3e4-0fd8" type="selectionEntry" targetId="8ad7-a2d8-fa56-0a09">
                       <costs>
                         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="4"/>
-                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                       </costs>
-                      <infoLinks>
-                        <infoLink name="Critical" id="cb18-ea7b-aacc-3e29" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
-                        <infoLink name="Sword/Axe" id="5b5e-591b-3ce5-08c3" hidden="false" type="profile" targetId="e938-b0dc-418c-0924"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Trench Club" hidden="false" id="0e4d-48ea-b54c-3b9e">
+                    </entryLink>
+                    <entryLink import="true" name="Trench Club" hidden="false" id="2afb-3d55-80a7-2fd2" type="selectionEntry" targetId="bd07-8e58-85a3-71f0">
                       <costs>
                         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="3"/>
-                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                       </costs>
-                      <infoLinks>
-                        <infoLink name="Trench Club" id="faa6-0d1e-49a6-dd3d" hidden="false" type="profile" targetId="b242-1242-be3a-d232"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Trench Knife" hidden="false" id="05d2-80c2-6050-fb9b">
+                    </entryLink>
+                    <entryLink import="true" name="Trench Knife" hidden="false" id="90c1-9e8d-0f6e-8df1" type="selectionEntry" targetId="daaa-b1ef-7908-82a7">
                       <costs>
                         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="1"/>
-                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                       </costs>
-                      <infoLinks>
-                        <infoLink name="Trench Knife" id="41b5-cb78-cc28-44d9" hidden="false" type="profile" targetId="fa68-ef06-9caa-e49e"/>
-                      </infoLinks>
-                    </selectionEntry>
-                  </selectionEntries>
+                    </entryLink>
+                  </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup name="Melee (Two-Handed)" id="758a-a9d3-5bd4-85f7" hidden="false">
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Shield Combo" id="bb19-32ae-18dd-f529" hidden="false">
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Polearm" hidden="false" id="e217-5712-c68b-89f4">
+                      <entryLinks>
+                        <entryLink import="true" name="Polearm" hidden="false" id="17db-e615-1a10-f9cd" type="selectionEntry" targetId="80dd-5d7c-c33e-a950">
                           <costs>
                             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="7"/>
-                            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                           </costs>
-                          <infoLinks>
-                            <infoLink name="Block" id="2318-684d-cfdd-f6c7" hidden="false" type="rule" targetId="cdfd-aca9-c615-20e1"/>
-                            <infoLink name="Cumbersome" id="6c48-d371-4b2f-1ecf" hidden="false" type="rule" targetId="5613-c861-daeb-156a"/>
-                            <infoLink name="Polearm" id="42d5-35c0-232a-4119" hidden="false" type="profile" targetId="50eb-2990-0b48-1a8d"/>
-                          </infoLinks>
-                        </selectionEntry>
-                      </selectionEntries>
+                        </entryLink>
+                      </entryLinks>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <constraints>
@@ -1437,70 +1265,38 @@ While a model is captured, the model wielding the Crook may only make Melee Atta
             <selectionEntryGroup name="Ranged" id="db2a-6e4b-14be-a99c" hidden="false" sortIndex="1">
               <selectionEntryGroups>
                 <selectionEntryGroup name="Ranged (One-Handed)" id="c6f8-5b86-186b-ec35" hidden="false">
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Pistol" hidden="false" id="009f-4ce2-5466-c35c">
+                  <entryLinks>
+                    <entryLink import="true" name="Pistol" hidden="false" id="ad48-d8bd-6c14-8a47" type="selectionEntry" targetId="48be-3a36-f9c0-a465">
+                      <entryLinks>
+                        <entryLink import="true" name="Purgation Ammunition (Loaded)" hidden="false" id="5132-aaed-fa92-1e18" type="selectionEntry" targetId="89a0-7ad7-4a13-551d"/>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="1dee-7716-b98b-6cf7"/>
+                      </constraints>
                       <costs>
                         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="6"/>
-                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                       </costs>
-                      <infoLinks>
-                        <infoLink name="Pistol" id="294a-e103-a2c7-033f" hidden="false" type="rule" targetId="845a-d3e1-69b8-687e"/>
-                        <infoLink name="Pistol" id="bf04-292f-acb5-8267" hidden="false" type="profile" targetId="ae18-4990-fc3c-78ce"/>
-                      </infoLinks>
-                      <constraints>
-                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="60b6-078d-d9ae-109e"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink import="true" name="Purgation Ammunition (Loaded)" hidden="false" id="9c08-85b4-f5ee-274d" type="selectionEntry" targetId="89a0-7ad7-4a13-551d"/>
-                      </entryLinks>
-                    </selectionEntry>
-                  </selectionEntries>
+                    </entryLink>
+                  </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup name="Ranged (Two-Handed)" id="182c-8ecd-f9fd-d99c" hidden="false">
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Shield Combo" id="a8b8-575c-16f2-61db" hidden="false">
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Shotgun" hidden="false" id="c4ff-b074-e31f-666d">
-                          <costs>
-                            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
-                            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-                          </costs>
-                          <infoLinks>
-                            <infoLink name="Shotgun" id="eaff-3f4b-87eb-7af5" hidden="false" type="rule" targetId="d313-4a6e-389b-eb38"/>
-                            <infoLink name="Shotgun" id="5145-9701-a4a4-7eed" hidden="false" type="profile" targetId="0924-0647-1366-9d85"/>
-                          </infoLinks>
-                          <selectionEntries>
-                            <selectionEntry type="upgrade" import="true" name="Bayonet Lug" hidden="false" id="ce95-ea6c-b3e6-fdb6">
-                              <costs>
-                                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="2"/>
-                                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-                              </costs>
-                              <infoLinks>
-                                <infoLink name="Bayonet" id="6190-95ac-9512-ba77" hidden="false" type="profile" targetId="aa9b-a7a1-69a4-05f4"/>
-                              </infoLinks>
-                              <categoryLinks>
-                                <categoryLink name="Cumbersome" hidden="false" id="a552-e363-e938-ae08" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
-                              </categoryLinks>
-                              <constraints>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cacf-de80-1cf4-cb9f" includeChildSelections="false"/>
-                              </constraints>
-                            </selectionEntry>
-                          </selectionEntries>
-                        </selectionEntry>
-                        <selectionEntry type="upgrade" import="true" name="Heavy Shotgun" hidden="false" id="efb5-d8d5-b811-3a21">
-                          <costs>
-                            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
-                            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-                          </costs>
+                      <entryLinks>
+                        <entryLink import="true" name="Heavy Shotgun" hidden="false" id="82f5-d99e-05db-f5c3" type="selectionEntry" targetId="d16f-f704-d17a-ebc6">
                           <constraints>
                             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7c32-c6c0-2449-a63e" includeChildSelections="true"/>
                           </constraints>
-                          <infoLinks>
-                            <infoLink name="Heavy Shotgun" id="70ce-5156-dc67-a87e" hidden="false" type="profile" targetId="c5ac-8d24-4060-8655"/>
-                            <infoLink name="Heavy" id="e752-72f6-94cc-e33f" hidden="false" type="rule" targetId="fbac-638f-ff95-d704"/>
-                          </infoLinks>
-                        </selectionEntry>
-                      </selectionEntries>
+                          <costs>
+                            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="20"/>
+                          </costs>
+                        </entryLink>
+                        <entryLink import="true" name="Shotgun" hidden="false" id="e46c-51cb-13d5-f5f8" type="selectionEntry" targetId="b5a3-faec-7613-ef0f">
+                          <costs>
+                            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <constraints>
@@ -1514,46 +1310,6 @@ While a model is captured, the model wielding the Crook may only make Melee Atta
                     </modifier>
                   </modifiers>
                   <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="false" id="a037-9e9a-98e4-31ce">
-                      <costs>
-                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="35"/>
-                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-                      </costs>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0029-b748-6967-72bf" includeChildSelections="true" includeChildForces="true"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink name="Critical" id="2611-05a8-1ae3-00dd" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
-                        <infoLink name="Risky" id="1afe-05db-a4d7-7e86" hidden="false" type="rule" targetId="df23-62bc-775e-fca1"/>
-                        <infoLink name="Sniper Rifle" id="fed0-e30a-b5b5-7610" hidden="false" type="profile" targetId="6eb2-c600-98e7-16d3"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Bolt Action Rifle" hidden="false" id="7fd3-8c0f-dabc-b0b1">
-                      <costs>
-                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
-                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-                      </costs>
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Bayonet Lug" hidden="false" id="a9b2-fc73-9365-ef86">
-                          <costs>
-                            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="2"/>
-                            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-                          </costs>
-                          <infoLinks>
-                            <infoLink name="Bayonet" id="ddc4-6979-1ce0-99e2" hidden="false" type="profile" targetId="aa9b-a7a1-69a4-05f4"/>
-                          </infoLinks>
-                          <categoryLinks>
-                            <categoryLink name="Cumbersome" hidden="false" id="6f44-11af-5895-5fa1" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
-                          </categoryLinks>
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e5d7-d272-9468-dd40" includeChildSelections="false"/>
-                          </constraints>
-                        </selectionEntry>
-                      </selectionEntries>
-                      <infoLinks>
-                        <infoLink name="Bolt Action Rifle" id="8d83-5e71-e880-e2bd" hidden="false" type="profile" targetId="408d-d56e-71c4-f3c4"/>
-                      </infoLinks>
-                    </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Fumigator" hidden="false" id="ad6c-4635-f9a7-8115">
                       <costs>
                         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="25"/>
@@ -1604,34 +1360,24 @@ While a model is captured, the model wielding the Crook may only make Melee Atta
                         </profile>
                       </profiles>
                     </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Semi-Automatic Rifle" hidden="false" id="9fff-e8eb-1e6d-4fe9">
+                  </selectionEntries>
+                  <entryLinks>
+                    <entryLink import="true" name="Bolt-Action Rifle" hidden="false" id="9904-79e7-bd7d-30ba" type="selectionEntry" targetId="4c87-312e-7aa1-4de0">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Semi-Automatic Rifle" hidden="false" id="0ead-ba3f-ed10-bd19" type="selectionEntry" targetId="4111-f437-2e81-899f">
                       <costs>
                         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
-                        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
                       </costs>
-                      <infoLinks>
-                        <infoLink name="Assault" id="2338-3c4a-244a-d1a3" hidden="false" type="rule" targetId="3136-7aab-4bde-9583"/>
-                        <infoLink name="Semi-Automatic Rifle" id="81a3-4543-5eb7-2d30" hidden="false" type="profile" targetId="1d82-fcc9-aeda-b03a"/>
-                      </infoLinks>
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Bayonet Lug" hidden="false" id="4411-7b7e-4144-d1ef">
-                          <costs>
-                            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="2"/>
-                            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-                          </costs>
-                          <infoLinks>
-                            <infoLink name="Bayonet" id="1e60-69ca-8cf5-22e2" hidden="false" type="profile" targetId="aa9b-a7a1-69a4-05f4"/>
-                          </infoLinks>
-                          <categoryLinks>
-                            <categoryLink name="Cumbersome" hidden="false" id="0b4d-a1c4-d206-6080" targetId="f87d-5ea3-e505-6a9f" primary="false"/>
-                          </categoryLinks>
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b299-fb4c-5d2b-f62d" includeChildSelections="false"/>
-                          </constraints>
-                        </selectionEntry>
-                      </selectionEntries>
-                    </selectionEntry>
-                  </selectionEntries>
+                    </entryLink>
+                    <entryLink import="true" name="Sniper Rifle" hidden="false" id="91e2-1043-a067-471f" type="selectionEntry" targetId="808a-f077-4fec-ef82">
+                      <costs>
+                        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="35"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <constraints>
@@ -1692,8 +1438,6 @@ While a model is captured, the model wielding the Crook may only make Melee Atta
       </selectionEntryGroups>
       <infoLinks>
         <infoLink name="Negate [Keyword]" id="d835-78ee-3b3e-678e" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
-        <infoLink name="Gas Mask" id="bc21-847d-bb87-033c" hidden="false" type="profile" targetId="ba17-1e71-ee46-ee0f"/>
-        <infoLink name="Medi-kit" id="e2a6-a056-59b0-7b37" hidden="false" type="profile" targetId="aa88-1987-505a-13ca"/>
       </infoLinks>
       <modifiers>
         <modifier type="add" value="afcc-5f24-1c7c-63c4" field="category">
@@ -2010,8 +1754,174 @@ While a model is captured, the model wielding the Crook may only make Melee Atta
         <infoLink name="Gas" id="0f05-8937-6f1f-f884" hidden="false" type="rule" targetId="2c6e-81c8-6c20-b5b7"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Goetic Warlock" hidden="true" id="e9cd-3848-885f-bdac">
+      <categoryLinks>
+        <categoryLink name="Mercenary" hidden="false" id="976f-20a8-d4f5-0a37" targetId="3dfb-701d-e89c-eba2" primary="true"/>
+        <categoryLink name="Demonic" hidden="false" id="f727-236d-fd0a-9415" targetId="420c-0871-4283-b95b" primary="false"/>
+        <categoryLink name="Artificial" hidden="false" id="8f1c-e502-9774-7dba" targetId="4180-5377-2d83-48ba" primary="false"/>
+        <categoryLink name="Fear" hidden="false" id="63c5-a256-a7dd-57ca" targetId="4f5c-027d-253c-ffa3" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1333-7410-bbe0-6aea" includeChildSelections="true"/>
+      </constraints>
+      <costs>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+      </costs>
+      <profiles>
+        <profile name="Goetic Warlock" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="1a28-719d-fbd0-5bf0">
+          <characteristics>
+            <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
+            <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">+1 Dice</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+1 Dice</characteristic>
+            <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">-2</characteristic>
+            <characteristic name="Base" typeId="73ae-cc17-596e-0481">40mm</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="3564-70ed-8e9e-6ee8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="2a4f-c258-5d70-a3c5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Barbed Embrace" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="fa5c-f8eb-7439-8da9">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">An enemy model within 1&quot; of a Goetic Warlock cannot take a Retreat ACTION.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Goetic Portal" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="7e69-bf1d-40d7-7b3c">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">ACTION: A Goetic Warlock can take a Goetic Portal ACTION. If they do so, take a Risky Success Roll for the Goetic Warlock with +1 DICE. If the roll is a Failure, the Goetic Warlock’s Activation ends. If the roll is a Success or Critical Success, you can pick up the Goetic Warlock and deploy them on the battlefield anywhere within 6&quot; of the location they originally occupied (measured from the centre of its base to the centre of its base). If this is impossible for any reason, the Goetic Warlock must stay in their original position. Note that the Goetic Warlock can redeploy even if they are down or within 1&quot; of an enemy model (in which case the enemy model cannot make a Melee Attack before the Goetic Warlock is redeployed), and can deploy within 1&quot; of an enemy model. In addition, if the roll is a Success or Critical Success and the Goetic Warlock is within 1&quot; of any enemy models mounted on a 32mm base or smaller, then the Goetic Warlock can take 1 of the enemy models with them. If they do so, you must deploy the Goetic Warlock first and then deploy the enemy model within 1&quot; of the Goetic Warlock. If you cannot deploy the enemy model within 1&quot; of the Goetic Warlock, then the enemy model stays in its original position.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Goetic Gaze" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2aad-9b8c-b329-c74e">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">ACTION: A Goetic Warlock can take a Goetic Gaze ACTION. If they do so, take a Success Roll for the Goetic Warlock. If the roll is a Failure, nothing happens. If the roll is a Success, place 1 BLOOD MARKER next to an enemy model within 24&quot; of the Goetic Warlock and in their Line of Sight. If the roll is a Critical Success, place 2 BLOOD MARKERS next to an enemy model within 24&quot; of the Goetic Warlock and in their Line of Sight instead of only 1.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Demonic" id="66cc-cd34-0cb5-6578" hidden="false" type="rule" targetId="e1d1-9534-0d38-b1e8"/>
+        <infoLink name="Fear" id="eb2d-9a28-0178-cfd0" hidden="false" type="rule" targetId="8c95-78a1-d88d-5f8e"/>
+        <infoLink name="Critical" id="f514-58b9-cc87-202e" hidden="false" type="rule" targetId="7c40-254f-6d33-854c"/>
+        <infoLink name="Cleave" id="9d75-0221-828e-d5bd" hidden="false" type="rule" targetId="2da7-e6f3-dc9d-4431"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Iron-Clawed Hands" hidden="false" id="1e63-fd87-a6a7-eb5e" sortIndex="3">
+          <profiles>
+            <profile name="Reaping Claws" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="e8d8-c2a3-9a3e-b3b8">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">Melee</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">CLEAVE 2, CRITICAL</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">A Goetic Warlock can make a Melee Attack with the CLEAVE 2 and CRITICAL Keywords even though it does not have a Melee Weapon. In addition, the Off-Hand Weapon modifier applies to the second attack.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9ee1-4f8f-3f7c-bdbe" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c80e-9024-f120-0c7f" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Dog&apos;s Friend" hidden="true" id="1f47-9c34-ef9b-914b" sortIndex="2">
+          <profiles>
+            <profile name="Dog&apos;s Friend" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="4b3d-28cf-cb23-aeba">
+              <characteristics>
+                <characteristic typeId="3f15-74a1-4d35-3642" name="Type"/>
+                <characteristic typeId="2b32-2f45-9c06-7a77" name="Range"/>
+                <characteristic typeId="5093-5528-b08f-1496" name="Keywords"/>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">This model is forming a Fireteam with a Trench Dog</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Concerted Attack" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="true" id="d455-9d26-0f2d-3b30">
+              <characteristics>
+                <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Ability</characteristic>
+                <characteristic name="Range" typeId="2b32-2f45-9c06-7a77">-</characteristic>
+                <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-</characteristic>
+                <characteristic name="Rules" typeId="4834-43a9-1c93-9062">If a model from a Fireteam hits a target that has already been hit by an attack made by the other member of their Fireteam, then you can spend 3 BLOOD MARKERS to convert the Injury Roll for the second attack to a Bloodbath Roll, even if the target is not Down.</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="707d-5bdf-586e-f704" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5f45-ffc2-6635-0f8c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="938d-ae71-035c-aff9">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="5f45-ffc2-6635-0f8c" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="model" shared="true" id="8434-a8f9-fe1c-0893" includeChildSelections="false"/>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="938d-ae71-035c-aff9" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Fireteam" id="86e8-b620-bee3-5b60" hidden="false" type="rule" targetId="a3e2-4af7-ab99-e6b1"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6941-ec54-3001-8288" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="44b9-e92b-2dc0-6820" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1fda-e6a9-7628-9c49" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="eee9-35a4-9eda-70e9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Advancement" hidden="true" id="44a4-1a0d-7dbc-c290" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
+        <entryLink import="true" name="Reinforced Armour" hidden="false" id="c0ad-7629-2013-6cb3" type="selectionEntry" targetId="a535-4fb6-c587-691a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="be6b-efb6-5161-7f5e-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="be6b-efb6-5161-7f5e-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Campaign Rules" id="328d-52d6-aeeb-4d02" targetId="ba52-3616-d7f9-8d0c"/>
+    <catalogueLink type="catalogue" name="Ranged Weapons" id="eea8-2a77-1b38-63d6" targetId="8ef4-3a38-8adb-53ba" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="Battlekits" id="83f0-e7a3-b77d-3c04" targetId="f044-03b4-6607-1152" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="Melee Weapons" id="49b5-0911-9254-8f43" targetId="7595-974a-7451-6c2e" importRootEntries="true"/>
   </catalogueLinks>
+  <entryLinks>
+    <entryLink import="true" name="Goetic Warlock" hidden="false" id="b52e-7ede-7f63-012d" type="selectionEntry" targetId="e9cd-3848-885f-bdac">
+      <costs>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="4"/>
+      </costs>
+    </entryLink>
+    <entryLink import="true" name="Goetic Warlock" hidden="false" id="7271-c3ff-6f25-e0ad" type="selectionEntry" targetId="e9cd-3848-885f-bdac">
+      <costs>
+        <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="110"/>
+      </costs>
+    </entryLink>
+  </entryLinks>
 </catalogue>
