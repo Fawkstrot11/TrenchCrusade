@@ -327,6 +327,9 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <categoryLinks>
+            <categoryLink targetId="70c9-988d-71a7-7654" id="9a56-908b-0f8b-b25b" primary="false" name="Heavy"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1385,44 +1388,6 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Devouring Jaws" hidden="true" id="6011-8b98-1e15-0b5a" sortIndex="8">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
-            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e134-b94a-cefd-503b"/>
-            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="1203-b33c-33f4-90a1" includeChildSelections="true" includeChildForces="true"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <infoLinks>
-            <infoLink name="Devouring Jaws" id="984f-40b8-dd31-6ae5" hidden="false" type="profile" targetId="f5c3-6c1d-c0b8-98ae"/>
-          </infoLinks>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Grasping Maw" hidden="true" id="d484-5f11-acd1-1aa9" sortIndex="4">
-          <costs>
-            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="20bc-c313-7cdc-9e40"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <infoLinks>
-            <infoLink name="Grasping Maw" id="9f50-dab1-84db-c039" hidden="false" type="profile" targetId="3dd1-198c-9222-d273"/>
-          </infoLinks>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Unending Starvation" hidden="true" id="be7b-e976-b743-e039" sortIndex="-1">
           <costs>
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
@@ -2301,7 +2266,7 @@
           <profiles>
             <profile name="Butcher King" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ac68-983e-58cf-7e16">
               <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">At the end of a battle, if this Plague Knight is not Out of Action and it has taken at least one enemy model Out of Action with a Melee Attack, gain 1 Glory.</characteristic>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">At the end of a battle, if this Plague Knight is not Out of Action and it has taken at least one enemy model Out of Action with a Melee Attack, gain 1 Glory.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2310,7 +2275,7 @@
           <profiles>
             <profile name="Knight Companion of the Feast" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="91d7-add3-1a56-27b5">
               <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add +1 DICE to Risky Success Roll for a Ravenous Infection ACTION (see below) if the model taking the ACTION is this Plague Knight or is a friendly model within 3” of this Plague Knight.</characteristic>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add +1 DICE to Risky Success Roll for a Ravenous Infection ACTION (see Ravenous) if the model taking the ACTION is a friendly model within 3” of this Plague Knight.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2323,7 +2288,7 @@
           <profiles>
             <profile name="Knight of Twin Cleavers" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b111-b7fe-888e-3532">
               <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Plague Knight has the IGNORE OFF-HAND Keyword, and its Melee Attacks have the SHRAPNEL Keyword.</characteristic>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Plague Knight has the IGNORE OFF-HAND Keyword, and its Melee Attacks have the SHRAPNEL Keyword.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2336,6 +2301,162 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="self" shared="true" id="4785-f2eb-7e67-c0bc" includeChildSelections="false"/>
       </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Strains" id="8025-188a-51cc-239b" hidden="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0087-82f2-3bc8-b07c"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="3" field="0087-82f2-3bc8-b07c">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="model" childId="ec39-f328-bad6-a586" shared="true" childName="Grail Thrall"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" childName="The Great Hunger" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Devouring Jaws" hidden="true" id="6011-8b98-1e15-0b5a">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e134-b94a-cefd-503b"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1203-b33c-33f4-90a1" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true" includeChildSelections="true" childName="Elite"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Devouring Jaws" id="984f-40b8-dd31-6ae5" hidden="false" type="profile" targetId="f5c3-6c1d-c0b8-98ae"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Grasping Maw" hidden="false" id="d484-5f11-acd1-1aa9">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="20bc-c313-7cdc-9e40"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Grasping Maw" id="9f50-dab1-84db-c039" hidden="false" type="profile" targetId="3dd1-198c-9222-d273"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Hellfly Host" hidden="true" id="cb53-aa4b-07e7-ce87">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="ec39-f328-bad6-a586" shared="true" childName="Grail Thrall"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Hellfly Host" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="222a-bcc4-64d3-9e3a">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A model with the Hellfly Host Strain replaces their Movement Characteristic with 6”/Flying and gains the FLYING Keyword. In addition, a model with the Hellfly Host Strain loses the Undead Fortitude ability.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lockjaw Bite" hidden="false" id="3c6d-4652-2b90-2eba">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="15"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Lockjaw Bite" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8e2f-6206-f002-ca2d">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When an enemy model takes a Retreat ACTION within 1” of a model with the Lockjaw Bite Strain, place 1 INFECTION MARKER next to the model taking the retreat (before any melee attacks are made against the retreating model).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Papillal Hide" hidden="true" id="4ccd-c6f5-49a7-2def">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="ec39-f328-bad6-a586" shared="true" childName="Grail Thrall"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="5df2-ef54-85ea-adfe" shared="true" childName="Hound of the Black Grail"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="5"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Papillal Hide" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="fa1f-dfd1-8a56-e3d7">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A model with the Papillal Hide Strain does not need to have Line of Sight to a target when it takes a Charge ACTION (other restrictions still apply).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Rotten Cutters" hidden="true" id="6d9c-b966-ac02-308d">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="ec39-f328-bad6-a586" shared="true" childName="Grail Thrall"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="a657-8944-aecd-713d" shared="true" childName="Matagot Hag"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Rotten Cutters" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="996d-e33e-37da-be95">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A model with the Rotten Cutters Strain adds the CLEAVE 2 Keyword to Melee Attacks it makes.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Unending Starvation" hidden="true" id="e562-cf16-fb43-a408">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="10"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="ec39-f328-bad6-a586" shared="true" childName="Grail Thrall"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="a657-8944-aecd-713d" shared="true" childName="Matagot Hag"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="80e3-313d-1c13-05a0" shared="true" childName="Lord of Tumours"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="43b9-c7fd-4680-3e7a" shared="true" childName="Plague Knight"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Unending Starvation" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="3940-d73e-4b94-8caa">
+              <characteristics>
+                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A model with the Unending Starvation Strain adds +1” to their Movement Characteristic.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
@@ -2974,16 +3095,28 @@
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="3a3c-7f8b-4ee4-d9d7" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="CRITICAL" field="8cd6-8018-f2da-5ede">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true" childName="The Great Hunger"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </profile>
         <profile name="Overwhelming Horde" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="b4a6-25a1-64e7-5dae">
           <characteristics>
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Grail Thrall or Fly Thrall can make a Melee Attack even though it does not have a Melee Weapon. In addition, add +1 DICE to the Success Roll for a Melee Attack made by a Grail Thrall or Fly Thrall for each other friendly model within 3&quot; of the attacking model (not including the attacking model itself).</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="4ae9-6e62-b943-faeb" shared="true" childName="The Great Hunger"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Ravenous Infection" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="77bc-921d-3de0-55b4">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Take a Risky Success Roll for the model. If the roll is a Failure, the model’s Activation ends immediately. If the roll is a Success or a Critical Success, you can place 1 INFECTION MARKER next to any other model within 1” of the model taking the Ravenous Infection ACTION. Then, the model taking the Ravenous Infection ACTION’s Activation ends immediately.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Ravenous Infection ACTION: A Ravenous can take a Ravenous Infection ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure, the model’s Activation ends immediately. If the roll is a Success or a Critical Success, you can place 1 INFECTION MARKER next to any other model within 1” of the model taking the Ravenous Infection ACTION. Then, the model taking the Ravenous Infection ACTION’s Activation ends immediately.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -2993,14 +3126,31 @@
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Cradle of Filth" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="76cf-fb3b-1f89-8e78">
+        <profile name="Undead Fortitude" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8cce-0a3c-fe8a-6cfa">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Melee Attacks gain the CRITICAL Keyword.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE to Injury Rolls for a Grail Thrall unless the attack has the FIRE Keyword.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="4173-8d52-ff32-03d8" shared="true" childName="Winged" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model" childId="cb53-aa4b-07e7-ce87" shared="true" childName="Hellfly Host"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Gluttonous Horde" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="3d88-4234-e03c-5cb6">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Ravenous can make a Melee Attack with the CRITICAL Keyword even though it does not have a Melee Weapon. In addition, add +1 DICE to the Success Roll for a Melee Attack made by a Ravenous for each other friendly model within 3&quot; of the attacking model (not including the attacking model itself).</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="4ae9-6e62-b943-faeb" shared="true" childName="The Great Hunger"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3051,11 +3201,6 @@
                       </conditions>
                     </modifier>
                   </modifiers>
-                </profile>
-                <profile name="Undead Fortitude" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8cce-0a3c-fe8a-6cfa">
-                  <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE to Injury Rolls for a Grail Thrall unless the attack has the FIRE Keyword.</characteristic>
-                  </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
@@ -3116,27 +3261,13 @@
           <categoryLinks>
             <categoryLink targetId="d935-8238-a3f7-8ab0" id="d37c-f11f-9e1c-1338" primary="false" name="Negate Gas"/>
           </categoryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Equipment" id="f813-6aff-0a04-253f" hidden="true" sortIndex="5">
           <modifiers>
-            <modifier type="set" value="false" field="hidden">
+            <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" childName="The Great Hunger" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
-          <entryLinks>
-            <entryLink import="true" name="Grasping Maw" hidden="false" id="18d5-da98-cef2-ad9d" type="selectionEntry" targetId="d484-5f11-acd1-1aa9"/>
-            <entryLink import="true" name="Unending Starvation" hidden="false" id="49c2-8d75-2923-4370" type="selectionEntry" targetId="be7b-e976-b743-e039">
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="increment" value="1" field="b725-e0a4-16ae-8df2" scope="model" affects="profiles.Unit"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-            </entryLink>
-          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
@@ -3199,6 +3330,7 @@
         </entryLink>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="a2e7-fa4e-fe98-575d" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="8b6e-3b4c-8b7c-eb03" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
+        <entryLink import="true" name="Strains" hidden="false" id="4663-a20b-9c10-6561" type="selectionEntryGroup" targetId="8025-188a-51cc-239b"/>
       </entryLinks>
       <rules>
         <rule name="Negate Gas" id="fc82-32ff-cff2-50d7" hidden="false">
@@ -3609,19 +3741,6 @@
         <entryLink import="true" name="Armour" hidden="false" id="d9fd-47a7-8c46-2d03" type="selectionEntryGroup" targetId="e8c4-5c09-11b6-1e3f"/>
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="9ad0-0e5b-e9ae-e0a8" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="0164-27c6-1afd-b9e1" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
-        <entryLink import="true" name="The Arcana Putrescere" hidden="true" id="9b42-138e-b239-1f82" type="selectionEntryGroup" targetId="a5cf-4787-ce69-8a48">
-          <constraints>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="1471-1a53-f5e6-83c7"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="53a6-4907-7223-9102"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
       </entryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="130"/>
@@ -3636,6 +3755,7 @@
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="14da-6cb8-f66e-7ad6" includeChildSelections="true"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="7385-348a-8951-199e" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="0" field="14da-6cb8-f66e-7ad6">
@@ -3644,8 +3764,18 @@
           </conditions>
         </modifier>
         <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" childName="The Great Hunger"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="1" field="7385-348a-8951-199e">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="bd82-c719-4abf-c104" shared="true" childName="Led by a Lord of Tumours"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3741,6 +3871,18 @@
         <profile name="Shredding" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="9efd-0157-4c7e-8f26">
           <characteristics>
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Melee Attacks gain the CRITICAL Keyword.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="More Worm than Man" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="true" id="ef85-5b2b-f1d9-aad3">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Your opponent cannot spend a Desiccated Husk’s INFECTION MARKERS, unless they are converting an Injury Roll into a Bloodbath Roll.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -3852,56 +3994,43 @@
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="The Great Hunger" hidden="false" id="4ae9-6e62-b943-faeb">
               <profiles>
-                <profile name="Arcana Putrescere" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8357-db47-4dfa-9b5c">
+                <profile name="Eternal Appetence" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4610-f98c-0576-52b3">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Some models in a Great Hunger Warband can have Arcana Putrescere Powers. A Matagot Hag can have up to 3 Arcana Putrescere Powers, a Lord of Tumours can have 1 Arcana Putrescere Power, and Gregori Gula can have 1 Arcana Putrescere Power each. All of the Arcana Putrescere Powers that are available are described in the Arcana Putrescere Powers List below.
-
-
-- Arcana Putrescere Powers are divided into Arcana Purtrescere Abilities and Arcana Putrescere Spells.
-Arcana Abilities: Arcana Putrescere Abilities are used in the same way as an Ability from the model’s Warband Entry.
-Arcana Putrescere Spells: Arcana Putrescere Spells must be cast in order for them to be used. The description description for the Spell will say how and when it can be cast. In addition, Arcana Putrescere Spells have a cost that must be paid in INFECTION MARKERS to cast the Spell (the cost is included in the title of the spell). Note that you do not have to take a Success Roll for a model in order to cast a spell.
-- To pay the cost of an Arcana Putrescere Spell, you must remove a number of INFECTION MARKERS from models within 12” of the Spellcaster equal to the spell’s Cost. You can remove the INFECTION MARKERS from any models (friend or foe) that do not have the ARTIFICIAL Keyword. The models can be anywhere on the battlefield and do not have to be in the spellcaster’s Line of Sight, and the spell cost can be paid by removing INFECTION MARKERS from more than one model if you wish.
-- If the cost of an Arcana Putrescere Spell’s Cost is a range of numbers, you must choose how many INFECTION MARKERS you will pay before the spell is cast. For example, if an Arcana Putrescere Spell had (Cost 1-3), you must pay a cost of 1, 2 or 3 INFECTION MARKERS before you cast the spell.
-- Some Arcana Putrescere Spells can only be cast if a model takes a Cast Spell ACTION. When it does so, you must pay the spell cost as described above, and you can then take the Cast Spell ACTION with the model. Note that a model cannot take more than one Cast Spell ACTION per Activation (as it cannot use an ACTION more than once per Activation).
-- A model that is casting a spell is called the spellcaster.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Great Hunger is an eternally evolving agony, where those infected fluctuate between festering famine and expulsive consumption. INFECTION MARKERS on models in a Great Hunger Warband represents their monstrous and dynamic appetite, making them more volatile on the battlefield. At the start of each Turn, you must choose one of the following effects of the Hunger for your Warband. Each effect lasts until the end of the Turn.
+• Agonised Churning: When you Activate a friendly model that is within 8” of a friendly Matagot Hag and has at least 2 INFECTION MARKERS, before carrying out any ACTIONS, you can remove 2 INFECTION MARKERS from the model and place them next to any enemy model within 1” of them that does not have the ARTIFICIAL or DEMONIC Keywords.
+• Ruinous Masticating: At the start of this Turn, place 1 INFECTION MARKER next to each other friendly model within 8” of a friendly Matagot Hag (excluding the Matagot Hag herself). Until the end of the Turn, your opponent cannot spend a friendly model’s INFECTION MARKERS to add -DICE to rolls for Melee Attacks they make if that friendly model has 2 or more INFECTION MARKERS.
+• Spasmodic Wretching: At the start of this Turn, place 1 INFECTION MARKER next to each other friendly model within 8” of a friendly Matagot Hag (excluding the Matagot Hag herself). Add -1 DICE to Success Rolls for Ranged Attacks that target friendly models with 2 or more INFECTON MARKERS until the end of the Turn.
+• Vile Craving: When you Activate a friendly model that is within 8” of a friendly Matagot Hag and has at least 2 INFECTION MARKERS, before carrying out any ACTIONS, you can remove 2 INFECTION MARKERS from the model and move them up to half of their Movement Characteristic (to a maximum of 4”) directly towards the nearest enemy model.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Butcher Knights" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e595-28e3-b0e9-5f8e">
+                <profile name="Butcher Knights" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="dab9-7279-495b-3d58">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Plague Knights in a Great Hunger Warband have the Ravenous Infection Ability (see below) at no additional cost in ducats, and can only be given one of the following Plague Knight Ranks instead of the ones listed in the Black Grail Special Rule:
-• Butcher King (10 ducats): At the end of a battle, if this Plague Knight is not Out of Action and it has taken at least one enemy model Out of Action with a Melee Attack, gain 1 Glory.
-• Knight Companion of the Feast (5 ducats): Add +1 DICE to Risky Success Roll for a Ravenous Infection ACTION (see below) if the model taking the ACTION is this Plague Knight or is a friendly model within 3” of this Plague Knight.
-• Knight of Twin Cleavers (5 ducats): This Plague Knight has the IGNORE OFF-HAND Keyword, and its Melee Attacks have the SHRAPNEL Keyword.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Great Hunger Warband can have 0-2 Plague Knights, which must be mounted on either 32mm or 40mm bases. These Plague Knights have the Ravenous Infection Ability (see the Ravenous Warband Entry) at no additional cost in ducats, and can only be given one Plague Knight Ranks instead of the ones listed in the Cult of the Black Grail Special Rules.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Cradle Thralls" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1c4c-9799-6ce5-3091">
+                <profile name="Dessicated Husks" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="ffbb-5bf4-3c9b-0cab">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Great Hunger Warband can include 0-3 Cradle Thralls. Cradle Thralls use The Ravenous Warband Entry, but do not count towards a Great Hunger Warband’s Maximum Field Strength, have the INFILTRATOR Keyword and cost 2 Glory to recruit (they do not cost any ducats)</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Great Hunger Warband can include 0-2 Desiccated Husks. Desiccated Husks use the Corpse Guard Warband Entry, but their Melee Attacks gain the CRITICAL Keyword, and they replace the Bodyguard Ability with the More Worm Than Man Ability</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Cradle of Filth" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="d72b-de62-6620-45a9">
+                <profile name="Cradle of Filth" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="a59e-b537-6caa-55d9">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Grail Thralls or Fly Thralls in a Great Hunger Warband are called The Ravenous. They have a Melee Characteristic of +0 DICE, their Melee Attacks gain the CRITICAL Keyword, they have the Ravenous Infection Ability, a cost of 35 ducats each and can have the Grasping Maw and Unending Starvation Battlekit from the Great Hunger Armoury.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Great Hunger Warband can include 0-3 Cradle Thralls. Cradle Thralls use the Ravenous Warband Entry, but do not count towards a Great Hunger Warband’s Maximum Field Strength, have the INFILTRATOR Keyword and cost 2 glory to recruit (they do not cost any ducats).</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Desiccated Husks" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="db59-9675-7f7f-bb2c">
+                <profile name="Excruciating Hunger" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="9915-d4c1-073b-1cf4">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Great Hunger Warband can include 0-2 Desiccated Husks. Desiccated Husks use the Corpse Guard Warband Entry, but replace the Bodyguard Ability with a Melee Characteristic of +2 DICE and their Melee Attacks gain the CRITICAL Keyword at no additional cost in ducats.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in a Great Hunger Warband cannot have Beelzebub’s Axe, Black Grail Shields, Bolt-Action Rifles, Blunderbusses, Compound Eyes Helmets, Corruption Belchers, Gas Grenades, Infested Rifles, Machine Guns, Musical Instruments, Muskets, Pistols, Troop Flags or Viscera Cannons.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Excruciating Hunger" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="bf24-529d-5686-6ad8">
+                <profile name="The Great Maw" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="a5a2-0ad3-eee4-4c94">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Models in a Great Hunger Warband cannot have Beelzebub’s Axe, Black Grail Shields, Bolt-Action Rifles, Blunderbusses, Compound Eyes Helmets, Corruption Belchers, Gas Grenades, Infested Rifles, Machine Guns, Musical Instruments, Muskets, Pistols, Troop Standards or Viscera Cannons. In addition, Grail Hounds in a Great Hunger Warband can have the Grasping Maw Battlekit from the Great Hunger Armoury.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">The Great Hunger moves as if a force of unholy nature, and when its carnage and consumption reaches a fever pitch, it attracts the loping cannibals known as Great Maws. If the total cost of all of the other models in the Warband (including their Battlekit, etc) adds up to 1000 ducats or higher, a Great Hunger Warband may recruit 0-1 Great Maws. A Great Maw uses the Lord of Tumours Warband Entry, but does not have the LEADER Keyword.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Ravenous Infection" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="987b-1b03-79fc-1e64">
+                <profile name="Spawn of Gluttony" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="4be7-f1ca-c0f9-cd7a">
                   <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Plague Knight, Ravenous, or Cradle Thrall (see above) can take a Ravenous Infection ACTION. If they do so, take a Risky Success Roll for the model. If the roll is a Failure, the model’s Activation ends immediately. If the roll is a Success or a Critical Success, you can place 1 INFECTION MARKER next to any other model within 1” of the model taking the Ravenous Infection ACTION. Then, the model taking the Ravenous Infection ACTION’s Activation ends immediately.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Spawn of Gluttony" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="2e9c-f463-a8c4-dbf5">
-                  <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Great Hunger Warband must include either 1 Matagot Hag or 1 Lord of Tumours (but not both), and can include 0-2 Plague Knights. It cannot include Corpse Guard, Heralds of Beelzebub or an Amalgam. In addition, Plague Knights must be mounted on 32mm or 40mm bases, and the Ravenous must be mounted on 25mm or 32mm bases.</characteristic>
+                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Great Hunger Warband must include 1 Matagot Hag. It cannot include a Lord of Tumours, Corpse Guards, Grail Thralls, Heralds of Beelzebub or an Amalgam.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3975,26 +4104,63 @@ Arcana Putrescere Spells: Arcana Putrescere Spells must be cast in order for the
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Matagot Hag" hidden="true" id="a657-8944-aecd-713d">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="642a-ff71-0b2e-76db" includeChildSelections="true"/>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="642a-ff71-0b2e-76db-min" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="642a-ff71-0b2e-76db-max" includeChildSelections="true"/>
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Advancement" hidden="true" id="6661-e6c8-361b-703e" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="e2ef-29c8-969d-377d" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
-        <entryLink import="true" name="The Arcana Putrescere" hidden="false" id="61ef-5a1c-27ba-566c" type="selectionEntryGroup" targetId="a5cf-4787-ce69-8a48" sortIndex="5">
-          <constraints>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="88fa-cf98-ac2d-51a7"/>
-          </constraints>
-        </entryLink>
+        <entryLink import="true" name="Strains" hidden="false" id="af9c-129b-a1a0-2f5b" type="selectionEntryGroup" targetId="8025-188a-51cc-239b"/>
       </entryLinks>
       <profiles>
         <profile name="Matagot Hag" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="9f3b-37db-7c86-c7ff">
           <characteristics>
             <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Infantry</characteristic>
             <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">-</characteristic>
-            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+3</characteristic>
+            <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">+2</characteristic>
             <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
             <characteristic name="Base" typeId="73ae-cc17-596e-0481">60mm</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="increment" value="1" field="1a4f-d2cd-c405-6200">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="3564-70ed-8e9e-6ee8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="12e8-ff8c-c933-9eb5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="2a4f-c258-5d70-a3c5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="decrement" value="1" field="5de9-d70e-9021-6f71">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="780c-f898-6d4b-cfe7" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="-1" field="5de9-d70e-9021-6f71">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="4e66-70be-9744-7ce6" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="83de-02a7-ba19-3570" shared="true" includeChildSelections="true" childName="Foetid Palanquin"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="-2" field="5de9-d70e-9021-6f71">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="self" childId="66c3-c1a5-004d-3c68" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="self" childId="54d7-7daa-ec1f-a328" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <comment>armour adjustments</comment>
+            </modifierGroup>
+          </modifierGroups>
         </profile>
         <profile name="Frenzied Followers" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="707a-ba10-7075-5ba2">
           <characteristics>
@@ -4003,8 +4169,7 @@ Arcana Putrescere Spells: Arcana Putrescere Spells must be cast in order for the
         </profile>
         <profile name="Cadre of Flesh" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="17b9-a73c-1eb7-5d15">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">If a friendly Matagot Hag within 4” of a friendly Ravenous model is hit by a Ranged Attack or Melee Attack, you can say that the Ravenous will take the hit. If you do so, make an Injury Roll for the Ravenous instead of the Matagot Hag.
-This ability cannot be used against attacks that have the BLAST Keyword.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2"> If a friendly Matagot Hag within 3” of a friendly Ravenous model is hit by a Ranged Attack or Melee Attack, you can say that the Ravenous will take the hit. If you do so, make an Injury Roll for the Ravenous instead of the Matagot Hag. If the Ranged Attack had the BLAST Keyword, make the Injury Roll for the Matagot Hag before any other models hit by the blast.</characteristic>
           </characteristics>
         </profile>
         <profile name="Pestilent" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="5af1-c71e-809e-c5f0">
@@ -4014,7 +4179,15 @@ This ability cannot be used against attacks that have the BLAST Keyword.</charac
         </profile>
         <profile name="Undead Fortitude" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="17d8-f634-2c3a-e881">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE to Injury Rolls for a Matagot Hag unless the attack has the FIRE Keyword.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE to Injury Rolls for a Matagot Hag unless the attack has the FIRE Keyword.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Mother&apos;s Call" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="a7f7-0729-500c-24c9">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Mother’s Call ACTION: A Matagot Hag can take a Mother’s Call ACTION. If it does so, you can remove any number of INFECTION MARKERS from any models (friend or foe) within 18” of the Matagot Hag. For each INFECTION MARKER you remove, you can then carry out one of the following Commands with a Ravenous that is within 8” of the Matagot Hag. A model cannot be given more than 1 Command each Turn, but carrying out a Command does not stop it from also being Activated in the same Turn (before or after the Command was issued).
+* Feast Command: The model carries out a Ravenous Infection ACTION (see Ravenous). Place an additional INFECTION MARKER next to the target if the Risky Success Roll is a Success or Critical Success.
+* Fight Command: The model carries out a Melee Attack, and adds +1 DICE to the Success Roll.
+* Follow Command: The model carries out a Move (it cannot Charge or Retreat).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4022,9 +4195,38 @@ This ability cannot be used against attacks that have the BLAST Keyword.</charac
         <selectionEntryGroup name="Equipment" id="c5f5-fb2f-bc8e-11f4" hidden="false" sortIndex="4">
           <entryLinks>
             <entryLink import="true" name="Grail Devotee" hidden="false" id="4209-3a5c-6110-be2f" type="selectionEntry" targetId="9bd2-da32-5500-22c7" sortIndex="1"/>
-            <entryLink import="true" name="Devouring Jaws" hidden="false" id="0533-d355-ae65-c82a" type="selectionEntry" targetId="6011-8b98-1e15-0b5a" sortIndex="3"/>
-            <entryLink import="true" name="Grasping Maw" hidden="false" id="2bbb-39de-c00d-f681" type="selectionEntry" targetId="d484-5f11-acd1-1aa9" sortIndex="2"/>
+            <entryLink import="true" name="Cup of Filth" hidden="false" id="9a31-982e-d1b7-776f" type="selectionEntry" targetId="9837-88e7-12ef-1be6"/>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Armour" id="04f3-4945-7e6e-6cac" hidden="false" sortIndex="3">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Foetid Palanquin" hidden="true" id="83de-02a7-ba19-3570">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="a657-8944-aecd-713d" shared="true" childName="Matagot Hag"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="0"/>
+                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="4"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="feea-99a0-d19e-74df" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Foetid Palanquin" typeId="7079-589c-df69-fa7e" typeName="Battlekit" hidden="false" id="9aa7-5a1a-cbf9-b1b5">
+                  <characteristics>
+                    <characteristic name="Type" typeId="3f15-74a1-4d35-3642">Armour</characteristic>
+                    <characteristic name="Range" typeId="2b32-2f45-9c06-7a77"/>
+                    <characteristic name="Keywords" typeId="5093-5528-b08f-1496">-1 INJURY MODIFIER</characteristic>
+                    <characteristic name="Rules" typeId="4834-43a9-1c93-9062">Bile Clot ACTION: Once per Turn, a Matagot Hag with a Foetid Palanquin can take a Bile Clot ACTION immediately before an Injury Roll is made for it. If it does so, you can remove any number of INFECTION MARKERS from any models (friend or foe) within 18” of the Matagot Hag. Add a -1 INJURY MODIFIER to the roll for every 2 INFECTION MARKERS that were removed in this way (this cannot exceed the standard maximum of -3 INJURY MODIFIER added to an Injury Roll).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
@@ -4033,6 +4235,7 @@ This ability cannot be used against attacks that have the BLAST Keyword.</charac
         <categoryLink targetId="4f5c-027d-253c-ffa3" id="480f-c93b-7ea6-f46b" primary="false" name="Fear"/>
         <categoryLink targetId="d935-8238-a3f7-8ab0" id="440e-3960-e601-a67e" primary="false" name="Negate Gas"/>
         <categoryLink targetId="914f-0020-0d97-e217" id="3a12-e3c6-383b-d700" primary="false" name="Tough"/>
+        <categoryLink targetId="afb9-39f5-82d9-46ed" id="aa60-e011-c772-f6e9" primary="false" name="Leader"/>
       </categoryLinks>
       <costs>
         <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="135"/>
@@ -4052,39 +4255,10 @@ This ability cannot be used against attacks that have the BLAST Keyword.</charac
           </conditions>
         </modifier>
       </modifiers>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Leader" hidden="true" id="9b2f-32cf-0dcc-8a17" sortIndex="3">
-          <profiles>
-            <profile name="Leader" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1d6b-ecda-351d-d9d6">
-              <characteristics>
-                <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">This Matagot Hag is the leader of the Warband.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <modifiers>
-            <modifier type="add" value="afb9-39f5-82d9-46ed" field="category" scope="model"/>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d0f7-e39a-0e33-413d" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="1" field="8b75-64fe-6017-5176">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d0f7-e39a-0e33-413d" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="98bd-c4a2-c180-4792" includeChildSelections="false"/>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="82f3-8adb-327c-2697" includeChildSelections="false" includeChildForces="true"/>
-            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="8b75-64fe-6017-5176" includeChildSelections="true" includeChildForces="true"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Gregori Gula" hidden="true" id="6291-8d16-b2c8-d9a7">
       <costs>
-        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="145"/>
+        <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="140"/>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
       </costs>
       <modifiers>
@@ -4106,31 +4280,29 @@ This ability cannot be used against attacks that have the BLAST Keyword.</charac
         </profile>
         <profile name="Gnashing and Tearing" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="8329-8ae4-3b45-4039">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">When a Gregori Gula takes a Fight ACTION, it can make two Melee Attacks even though it does not have a Melee Weapon. The first attack is carried out as if it were being made with a Melee Weapon with the +1 INJURY DICE Keyword. The second attack is carried out as if it were being made with a Melee Weapon with the +1 INJURY DICE and IGNORE OFF-HAND WEAPON Keywords. In addition, a Gregori Gula can make a third Melee Attack with the +1 INJURY DICE Keyword if it made a charge move earlier in the same Activation.</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">A Gregori Gula can make a Melee Attack with the +1 INJURY DICE, INFECTION MARKERS and CLEAVE 2 Keywords even though it does not have a Melee Weapon. In addition, if a Gregori Gula made a charge move earlier in the same Activation, replace the CLEAVE 2 Keyword with the CLEAVE 3 Keyword for any Melee Attacks it makes during that Activation</characteristic>
           </characteristics>
         </profile>
         <profile name="Dormant Hunger" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="6abe-0c6a-fa74-877c">
           <characteristics>
-            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Once per Turn, when a Gregori Gula would be taken Out of Action, it instead goes dormant. Remove all INFECTION MARKERS from the Gregori Gula and replace its model with a 60mm Marker to represent its dormant state. The Marker counts as dangerous terrain. The Marker cannot be attacked, or targeted by any Abilities that interact with Terrain, and it does not count as a model for  any purpose. If a friendly Ravenous model finishes a move within 1” of this Marker, remove the Marker and the Ravenous model, and set up the Gregori Gula model where the Marker was. A Gregori Gula set up in this way is Down, but can be Activated this Turn if it has not been Activated already. A Gregori Gula in a dormant state is treated as Out of Action for the purposes of Morale, and in the Trauma Step of the Campaign Phase if it is dormant at the end of a battle. If a Ravenous model was removed to revive the Gregori Gula, then the Ravenous is removed from the Warband Roster in the Trauma Step (it dies to save the Gregori Gula).</characteristic>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Once per Turn, when a Gregori Gula would be taken Out of Action, it instead goes dormant. Remove all INFECTION MARKERS from the Gregori Gula and replace its model with a 60mm piece of Impassable terrain to represent its dormant state. The Marker cannot be attacked, or targeted by any Abilities that interact with Terrain, and it does not count as a model for any Purpose.
+If a friendly Ravenous model finishes a move within 1” of this Marker, remove the Marker and the Ravenous model, and set up the Gregori Gula model where the Marker was. A Gregori Gula set up in this way is Down, but can be Activated this Turn if it has not been Activated already. A Gregori Gula in a dormant state is treated as Out of Action for the purposes of Morale, and in the Trauma Step of the Campaign Phase if it is dormant at the end of a battle. If a Ravenous model was removed to revive the Gregori Gula, then the Ravenous is removed from the Warband Roster in the Trauma Step (it dies to save the Gregori Gula).</characteristic>
           </characteristics>
         </profile>
         <profile name="Gnashing" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="df74-aebf-4b7c-d575">
           <characteristics>
             <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Melee</characteristic>
             <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">-</characteristic>
-            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE</characteristic>
+            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, CLEAVE 2, INFECTION MARKERS</characteristic>
             <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
           </characteristics>
         </profile>
-        <profile name="Tearing" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="0369-1a57-326e-1909">
+        <profile name="Vile Ferment" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="964a-af5c-29e6-8aac">
           <characteristics>
-            <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Melee</characteristic>
-            <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">-</characteristic>
-            <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY DICE, IGNORE OFF-HAND WEAPON</characteristic>
-            <characteristic name="Rules" typeId="87f0-637b-734a-22eb"/>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Before you make any Injury Rolls for models hit by a Ranged Attack made with Vomitus, you may remove 2 INFECTION MARKERS from the Gregori Gula that took the Shoot ACTION. If you do so, add +1 INJURY MODIFIER to the Injury Rolls for each model hit by this Vomitus attack.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Plague-Ridden Flesh" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="964a-af5c-29e6-8aac">
+        <profile name="Plague-Ridden Flesh" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1f48-ecab-918f-49d2">
           <characteristics>
             <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -2 INJURY DICE to Injury Rolls for a Gregory Gula unless the attack as the FIRE Keyword.</characteristic>
           </characteristics>
@@ -4139,19 +4311,8 @@ This ability cannot be used against attacks that have the BLAST Keyword.</charac
       <entryLinks>
         <entryLink import="true" name="Advancement" hidden="true" id="0ca5-2259-63b6-6d4b" type="selectionEntryGroup" targetId="bc33-e591-8f2e-a847" collapsible="true" sortIndex="1"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="44d2-9ec0-cf8b-629e" type="selectionEntryGroup" targetId="1ede-384e-2abd-0c45" sortIndex="2"/>
-        <entryLink import="true" name="The Arcana Putrescere" hidden="false" id="880a-b5a1-279c-a2ff" type="selectionEntryGroup" targetId="a5cf-4787-ce69-8a48" sortIndex="4">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f48-4d8c-5e33-47fd"/>
-          </constraints>
-        </entryLink>
+        <entryLink import="true" name="Strains" hidden="false" id="078f-10d5-5210-6e15" type="selectionEntryGroup" targetId="8025-188a-51cc-239b"/>
       </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Equipment" id="3581-8de0-55b7-8f59" hidden="false" sortIndex="3">
-          <entryLinks>
-            <entryLink import="true" name="Grasping Maw" hidden="true" id="ef1d-0eff-faba-dfec" type="selectionEntry" targetId="d484-5f11-acd1-1aa9" sortIndex="2"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <constraints>
         <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="7480-0914-6929-e8eb" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
@@ -4167,6 +4328,24 @@ This ability cannot be used against attacks that have the BLAST Keyword.</charac
         <infoLink name="Negate [Keyword]" id="9973-d06b-58c5-40bb" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
         <infoLink name="Infiltrator" id="503a-ce1a-6ef1-0f59" hidden="false" type="rule" targetId="154d-8072-ef87-e6c1"/>
       </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Vomitus" hidden="false" id="5a77-6daf-1d1d-261b">
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="40"/>
+            <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Vomitus" typeId="090c-b12e-592a-9874" typeName="Weapon" hidden="false" id="5e94-0f13-1aef-0338">
+              <characteristics>
+                <characteristic name="Type" typeId="f90e-171a-4ca6-3845">Special</characteristic>
+                <characteristic name="Range" typeId="31a7-b5e8-41dc-5fd1">8&quot;</characteristic>
+                <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">+1 INJURY MODIFIER, ASSAULT, INFECTION MARKERS</characteristic>
+                <characteristic name="Rules" typeId="87f0-637b-734a-22eb">Torrent of Bile: When Vomitus is used to make a Ranged Attack, do not make a Success Roll for the attack. Instead, measure a straight line 1mm wide and up to 8” long from the attacking model to a point on the ground or a model’s base. The line stops if it reaches a terrain piece that is taller than the model making the Attack. Make an Injury Roll for every model (friend or foe) that is touched by the line, apart from the attacking model itself.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Cradle Thrall" hidden="true" id="a6af-5458-9dbb-7dd4">
       <profiles>
@@ -4177,13 +4356,6 @@ This ability cannot be used against attacks that have the BLAST Keyword.</charac
             <characteristic name="Keywords" typeId="8cd6-8018-f2da-5ede">-</characteristic>
             <characteristic typeId="87f0-637b-734a-22eb" name="Rules"/>
           </characteristics>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="0618-3a85-ec87-5334" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </profile>
         <profile name="Overwhelming Horde" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="e6e1-bd44-f67d-7a90">
           <characteristics>
@@ -4219,114 +4391,28 @@ This ability cannot be used against attacks that have the BLAST Keyword.</charac
             </modifier>
           </modifiers>
         </profile>
+        <profile name="Undead Fortitude" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="1906-73ca-6483-a8f2">
+          <characteristics>
+            <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE to Injury Rolls for a Grail Thrall unless the attack has the FIRE Keyword.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="4173-8d52-ff32-03d8" shared="true" childName="Winged" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model" childId="cb53-aa4b-07e7-ce87" shared="true" childName="Hellfly Host"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
       </profiles>
       <costs>
         <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="2"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Thrall Type" id="cf92-df55-b8f0-8c1b" hidden="false" sortIndex="1">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Grounded" hidden="false" id="0618-3a85-ec87-5334">
-              <costs>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e5d1-bc89-7999-4f04" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Thrall" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="b837-79db-b04e-c4b3">
-                  <characteristics>
-                    <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">5&quot;/Infantry</characteristic>
-                    <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">N/A</characteristic>
-                    <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">-1 Dice</characteristic>
-                    <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
-                    <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
-                  </characteristics>
-                  <modifiers>
-                    <modifier type="set" value="+0 Dice" field="1a4f-d2cd-c405-6200">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="Bereaved" field="name">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="Ravenous" field="name">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="+0 Dice" field="12e8-ff8c-c933-9eb5">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </profile>
-                <profile name="Undead Fortitude" typeId="058c-866b-6487-ccc4" typeName="Ability" hidden="false" id="90df-0b6a-829f-3ab1">
-                  <characteristics>
-                    <characteristic name="Description" typeId="2ecd-b4ff-9e78-a8e2">Add -1 INJURY DICE to Injury Rolls for a Grail Thrall unless the attack has the FIRE Keyword.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Winged" hidden="false" id="70f4-a047-1e52-1ddf">
-              <costs>
-                <cost name="Glory Points" typeId="f3bb-a7e6-d476-f60b" value="0"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc3e-50fb-8101-8c1e" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Winged Thrall" typeId="b3af-94f9-2e35-d1c5" typeName="Unit" hidden="false" id="eee4-d3cf-8fcb-807f" publicationId="c658-4a10-e1fe-befc" page="80">
-                  <characteristics>
-                    <characteristic name="Movement" typeId="b725-e0a4-16ae-8df2">6&quot;/Flying</characteristic>
-                    <characteristic name="Ranged" typeId="1a4f-d2cd-c405-6200">N/A</characteristic>
-                    <characteristic name="Melee" typeId="12e8-ff8c-c933-9eb5">-1 Dice</characteristic>
-                    <characteristic name="Armour" typeId="5de9-d70e-9021-6f71">0</characteristic>
-                    <characteristic name="Base" typeId="73ae-cc17-596e-0481">25mm</characteristic>
-                  </characteristics>
-                  <modifiers>
-                    <modifier type="set" value="Winged Bereaved" field="name">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="decrement" value="1" field="5de9-d70e-9021-6f71">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="self" childId="7fb6-d318-1757-96a6" shared="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="+0 Dice" field="1a4f-d2cd-c405-6200">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="Winged Ravenous" field="name">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="+0 Dice" field="12e8-ff8c-c933-9eb5">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b965-3b91-5f9d-0a4f" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4efb-9e78-0b42-d5b9" includeChildSelections="false"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink targetId="d935-8238-a3f7-8ab0" id="3f3a-4c81-d8a8-d3f4" primary="false" name="Negate Gas"/>
-          </categoryLinks>
-        </selectionEntryGroup>
         <selectionEntryGroup name="Equipment" id="f335-70a0-ed4e-2670" hidden="true" sortIndex="5">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -4414,7 +4500,7 @@ This ability cannot be used against attacks that have the BLAST Keyword.</charac
     </entryLink>
     <entryLink import="true" name="Pile of Stuff" hidden="false" id="6043-1c6c-c7ff-9d8d" type="selectionEntry" targetId="97ad-20f9-1e4c-c96c"/>
     <entryLink import="true" name="Battlefield Title" hidden="false" id="f0cf-ddcc-51b6-b18a" type="selectionEntry" targetId="0175-e39b-7bab-aaaa"/>
-    <entryLink import="true" name="Homunculus" hidden="true" id="feab-369d-5285-ea19" type="selectionEntry" targetId="be87-2199-9bda-1a4f">
+    <entryLink import="true" name="Takwin Homunculus" hidden="true" id="feab-369d-5285-ea19" type="selectionEntry" targetId="be87-2199-9bda-1a4f">
       <entryLinks>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="31ad-863d-d8d1-c8d5" type="selectionEntry" targetId="1f47-9c34-ef9b-914b"/>
         <entryLink import="true" name="Equipment" hidden="true" id="fd08-d653-9660-ee51" type="selectionEntryGroup" targetId="4e14-77e1-ca51-7dc6">
