@@ -3636,6 +3636,7 @@
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="14da-6cb8-f66e-7ad6" includeChildSelections="true"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="7385-348a-8951-199e" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="0" field="14da-6cb8-f66e-7ad6">
@@ -3644,8 +3645,18 @@
           </conditions>
         </modifier>
         <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ae9-6e62-b943-faeb" shared="true" includeChildSelections="true" childName="The Great Hunger"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="1" field="7385-348a-8951-199e">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f19-7c79-420e-13bf" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="bd82-c719-4abf-c104" shared="true" childName="Led by a Lord of Tumours"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4414,7 +4425,7 @@ This ability cannot be used against attacks that have the BLAST Keyword.</charac
     </entryLink>
     <entryLink import="true" name="Pile of Stuff" hidden="false" id="6043-1c6c-c7ff-9d8d" type="selectionEntry" targetId="97ad-20f9-1e4c-c96c"/>
     <entryLink import="true" name="Battlefield Title" hidden="false" id="f0cf-ddcc-51b6-b18a" type="selectionEntry" targetId="0175-e39b-7bab-aaaa"/>
-    <entryLink import="true" name="Homunculus" hidden="true" id="feab-369d-5285-ea19" type="selectionEntry" targetId="be87-2199-9bda-1a4f">
+    <entryLink import="true" name="Takwin Homunculus" hidden="true" id="feab-369d-5285-ea19" type="selectionEntry" targetId="be87-2199-9bda-1a4f">
       <entryLinks>
         <entryLink import="true" name="Dog&apos;s Friend" hidden="false" id="31ad-863d-d8d1-c8d5" type="selectionEntry" targetId="1f47-9c34-ef9b-914b"/>
         <entryLink import="true" name="Equipment" hidden="true" id="fd08-d653-9660-ee51" type="selectionEntryGroup" targetId="4e14-77e1-ca51-7dc6">
