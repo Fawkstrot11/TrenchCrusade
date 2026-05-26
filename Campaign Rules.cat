@@ -5897,11 +5897,6 @@ A Hunter of the Left-Hand Path cannot cast the Oracle Beast Cloak Goetic Spell 
                 <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
               </conditions>
             </modifier>
-            <modifier type="set" value="7" field="82ed-905d-e8f3-91ae">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="71f8-ee29-0f90-59ec" shared="true"/>
-              </conditions>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint type="max" value="18" field="selections" scope="parent" shared="true" id="82ed-905d-e8f3-91ae" includeChildSelections="false"/>
@@ -5927,7 +5922,43 @@ A Hunter of the Left-Hand Path cannot cast the Oracle Beast Cloak Goetic Spell 
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Injuries" hidden="false" id="5dc0-3402-bf77-2cac" type="selectionEntryGroup" targetId="5bde-8a8f-302c-1431" sortIndex="4"/>
-        <entryLink import="true" name="Skills" hidden="false" id="621c-e24e-7182-f1ba" type="selectionEntryGroup" targetId="e01c-f1e9-f8ca-e6c9" sortIndex="3"/>
+        <entryLink import="true" name="Skills" hidden="false" id="621c-e24e-7182-f1ba" type="selectionEntryGroup" targetId="e01c-f1e9-f8ca-e6c9" sortIndex="3">
+          <modifiers>
+            <modifier type="set" value="1" field="4fc4-898c-c087-c2ea">
+              <conditions>
+                <condition type="greaterThan" value="1" field="selections" scope="parent" childId="bc33-e591-8f2e-a847" shared="true" includeChildSelections="false" childName="Advancement"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="2" field="4fc4-898c-c087-c2ea">
+              <conditions>
+                <condition type="greaterThan" value="3" field="selections" scope="parent" childId="bc33-e591-8f2e-a847" shared="true" includeChildSelections="false" childName="Advancement"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="3" field="4fc4-898c-c087-c2ea">
+              <conditions>
+                <condition type="greaterThan" value="6" field="selections" scope="parent" childId="bc33-e591-8f2e-a847" shared="true" includeChildSelections="false" childName="Advancement"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="4" field="4fc4-898c-c087-c2ea">
+              <conditions>
+                <condition type="greaterThan" value="9" field="selections" scope="parent" childId="bc33-e591-8f2e-a847" shared="true" includeChildSelections="false" childName="Advancement"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="5" field="4fc4-898c-c087-c2ea">
+              <conditions>
+                <condition type="greaterThan" value="13" field="selections" scope="parent" childId="bc33-e591-8f2e-a847" shared="true" includeChildSelections="false" childName="Advancement"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="6" field="4fc4-898c-c087-c2ea">
+              <conditions>
+                <condition type="greaterThan" value="17" field="selections" scope="parent" childId="bc33-e591-8f2e-a847" shared="true" includeChildSelections="false" childName="Advancement"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="4fc4-898c-c087-c2ea" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Skills" id="e01c-f1e9-f8ca-e6c9" hidden="true">
@@ -5938,9 +5969,6 @@ A Hunter of the Left-Hand Path cannot cast the Oracle Beast Cloak Goetic Spell 
         <entryLink import="true" name="Wildcard Skills" hidden="false" id="2745-5445-8558-9d07" type="selectionEntryGroup" targetId="1c98-e985-326d-501c" sortIndex="5"/>
         <entryLink import="true" name="Melee &amp; Strength Skills" hidden="false" id="9827-bca7-e042-bf84" type="selectionEntryGroup" targetId="f04b-40da-ca56-b233" sortIndex="2"/>
       </entryLinks>
-      <constraints>
-        <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="4fc4-898c-c087-c2ea" includeChildSelections="false"/>
-      </constraints>
       <modifiers>
         <modifier type="set" value="3" field="4fc4-898c-c087-c2ea">
           <conditions>
