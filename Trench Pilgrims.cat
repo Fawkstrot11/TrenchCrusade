@@ -664,7 +664,7 @@
               </modifiers>
             </entryLink>
             <entryLink import="true" name="Submachine Gun" hidden="true" id="6012-79c2-36b7-b158" type="selectionEntry" targetId="0754-f896-3f97-65c7">
-              <comment>Methodius</comment>              
+              <comment>Methodius</comment>
               <costs>
                 <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
               </costs>
@@ -675,6 +675,9 @@
                   </conditions>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="21f6-103d-6efd-1865" includeChildSelections="true"/>
+              </constraints>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -771,6 +774,9 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="b99f-9213-c82c-8540" includeChildSelections="true"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="Sniper Rifle" hidden="false" id="27b2-16db-0506-6048" type="selectionEntry" targetId="808a-f077-4fec-ef82">
           <costs>
