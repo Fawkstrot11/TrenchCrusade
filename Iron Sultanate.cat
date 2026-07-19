@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="72ab-daa4-80ee-e9a5" name="Iron Sultanate" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="10" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="72ab-daa4-80ee-e9a5" name="Iron Sultanate" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="10" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Equipment" id="6fa6-9678-f5af-3bf2" hidden="false">
       <selectionEntries>
@@ -18,7 +18,7 @@
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="e62d-c06e-ce35-428b" shared="true" childName="e62d-c06e-ce35-428b"/>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="e62d-c06e-ce35-428b" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -600,8 +600,8 @@ Can only be used with Jezzails, Sniper rifles, Halberd-Guns and Siege Jezzails.<
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="b13b-7b29-752f-ab2e" shared="true" childName="Archeologist"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="e874-ea2b-96ed-0f9a" shared="true" childName="Sultanate Sapper"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="b13b-7b29-752f-ab2e" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="e874-ea2b-96ed-0f9a" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2617,7 +2617,7 @@ Once a Ranged Attack has been made with this weapon, It cannot be used again.</c
             <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="50"/>
           </costs>
           <modifiers>
-            <modifier type="set" value="1" field="e728-0cc5-2085-13f4">
+            <modifier type="set" value="2" field="e728-0cc5-2085-13f4">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="c2b1-d49e-937b-2f87" shared="true" includeChildSelections="true"/>
               </conditions>

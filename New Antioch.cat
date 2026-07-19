@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="707d-5bdf-586e-f704" name="New Antioch" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="10" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="707d-5bdf-586e-f704" name="New Antioch" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="10" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Weapons" id="24ae-224b-0680-a9bd" hidden="false" collapsible="false">
       <constraints>
@@ -295,7 +295,7 @@
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3523-c775-3603-dbeb" shared="true" childName="Combat Medic"/>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3523-c775-3603-dbeb" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -319,7 +319,7 @@
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3523-c775-3603-dbeb" shared="true" childName="Combat Medic"/>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3523-c775-3603-dbeb" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -544,8 +544,8 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="a544-aa4c-64d9-1658" shared="true" includeChildSelections="true" includeChildForces="true" childName="Frag Grenades"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a544-aa4c-64d9-1658" shared="true" includeChildSelections="true" includeChildForces="true" childName="Frag Grenades"/>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="a544-aa4c-64d9-1658" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a544-aa4c-64d9-1658" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -687,7 +687,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3523-c775-3603-dbeb" shared="true" childName="Combat Medic"/>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3523-c775-3603-dbeb" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1238,6 +1238,9 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
               </conditions>
             </modifier>
           </modifiers>
+          <costs>
+            <cost name="Ducats" typeId="8d43-33fd-332d-17a6" value="30"/>
+          </costs>
         </entryLink>
         <entryLink import="true" name="Grenade Launcher" hidden="false" id="c904-6ed1-e92b-4533" type="selectionEntry" targetId="65c0-a52a-03c8-575a" sortIndex="4">
           <costs>
@@ -1930,7 +1933,7 @@ For the purpose of Battle Demolition on Combat Engineers, this item counts as a 
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true" childName="Elite"/>
+                <condition type="instanceOf" value="1" field="selections" scope="model" childId="3de0-192c-3ec2-51be" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5253,7 +5256,7 @@ It can only include 1 Mechanized Heavy Infantry model but can have up to 4 Comb
                       <modifiers>
                         <modifier type="set" value="true" field="hidden">
                           <conditions>
-                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2a56-df62-c8c1-9bc0" shared="true" includeChildSelections="true" includeChildForces="true" childName="Bayonet"/>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2a56-df62-c8c1-9bc0" shared="true" includeChildSelections="true" includeChildForces="true"/>
                           </conditions>
                         </modifier>
                       </modifiers>
