@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d54d-055d-bbc0-a20f" name="Trench Pilgrims" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="8" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d54d-055d-bbc0-a20f" name="Trench Pilgrims" gameSystemId="sys-4f3d-c5c9-7df1-ad01" gameSystemRevision="8" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Weapons" id="43b1-aa6a-2357-1613" hidden="false" collapsible="false">
       <constraints>
@@ -3176,13 +3176,11 @@ In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has 
         <entryLink import="true" name="Exploration Upgrades" hidden="false" id="e167-3855-3d16-e85d" type="selectionEntryGroup" targetId="6aaa-88b6-f64b-4776" sortIndex="3"/>
         <entryLink import="true" name="Fireteams" hidden="false" id="2c3a-f47b-35c7-2877" type="selectionEntryGroup" targetId="e18c-f0d9-1ca3-f7bb" sortIndex="2"/>
         <entryLink import="true" name="Sagas" hidden="false" id="0e49-1ce4-d7db-241f" type="selectionEntryGroup" targetId="3daa-befc-e742-d733" sortIndex="1"/>
-        <entryLink import="true" name="Iron Capirote" hidden="false" id="84b2-5fa9-1b1e-343c" type="selectionEntry" targetId="e4c4-8ccf-5973-7cfc">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="08fa-474e-0dee-6c01-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="08fa-474e-0dee-6c01-max" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
       </entryLinks>
+      <infoLinks>
+        <infoLink name="Iron Capirote" id="74e6-284c-eac9-25f4" hidden="false" type="profile" targetId="4813-2d95-702d-d646"/>
+        <infoLink name="Negate [Keyword]" id="870d-ce06-ae67-d5fb" hidden="false" type="rule" targetId="47f9-6914-172d-26a9"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Stigmatic Nun" hidden="false" id="caa2-22ce-1bc5-4d51">
       <profiles>
